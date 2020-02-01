@@ -1,0 +1,8 @@
+*.doctree
+*.pickle
+.vscode/*
+.idea
+*.iml
+_build/*
+public/*
+!public/pdf
