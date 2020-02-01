@@ -7,8 +7,8 @@ dist: xenial
 sudo: true
 
 stages:
-  - test-links
-  - build
+  #- test-links
+  #- build
   - name: deploy-html
     if: branch = master  # Deploy only on master commits
   #- name: deploy-pdf
@@ -44,7 +44,7 @@ jobs:
       script: make linkcheck
     - stage: build
       script: make html
-      #script: make latexpdf
+      script: make latexpdf
     - stage: deploy-html
       script: make html
       deploy:
