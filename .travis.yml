@@ -36,7 +36,7 @@ install:
   - echo "Install Java"
   - sudo dpkg --configure -a
   - mkdir -p /usr/share/man/man1
-  - sudo apt-get install -y openjdk-11-jre
+  - sudo apt-get install -y default-jdk
 
 jobs:
   include:
@@ -44,7 +44,7 @@ jobs:
       script: make linkcheck
     - stage: build
       script: make html
-      script: make latexpdf
+      #script: make latexpdf
     - stage: deploy-html
       script: make html
       deploy:
@@ -56,7 +56,7 @@ jobs:
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
     - stage: deploy-pdf
-      script: make latexpdf
+      #script: make latexpdf
       deploy:
         provider: pages
         skip-cleanup: true
