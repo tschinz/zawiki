@@ -18,7 +18,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 
    linux/index
    mac/index
-   windows/index
+   win/index
    tools/index
    coding/index
    writing/index
@@ -47,19 +47,3 @@ Known Issues / TODOs
 * Github CI not working for PDF creation
 * Missing pages from original Zawiki
 * missing pages from config repo
-
-Authors
--------
-
-* `tschinz - Github Profile <https://github.com/tschinz>`_
-
-Find me at
-----------
-
-* `Github <https://github.com/tschinz>`_
-* `Flickr <https://www.flickr.com/photos/tschinz/>`_
-* `Twitter @tschinz <https://twitter.com/tschinz>`_
-
-Icons made by `Freepik <https://www.flaticon.com/authors/freepik>`_ from `Flaticon <https://www.flaticon.com/>`_
-
-

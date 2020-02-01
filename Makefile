@@ -6,11 +6,12 @@ SPHINXOPTS    = -Dversion=$(shell git describe --tags)
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = _build
-OUTPUTDIR     = public
+OUTPUTDIR     = pdf
+FILENAME      = zawiki
 # IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
 IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/*)))
-IMAGEDIRS      = $(patsubst source/%/, %, $(IMAGEOBJS)) # remove source/ and last /
-
+IMAGEDIRS     = $(patsubst source/%/, %, $(IMAGEOBJS)) # remove source/ and last /
+IMAGEDIRS    += img/icons
 # SVG to PDF conversion
 SVG2PDF       = inkscape
 SVG2PDF_FLAGS = -C
@@ -70,8 +71,8 @@ html: # images-png
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-	mkdir -p $(OUTPUTDIR)/html/
-	cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)
+	#mkdir -p $(OUTPUTDIR)/html/
+	#cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)
 	@echo "html files copied; the html files are in $(OUTPUTDIR)/html/."
 
 
@@ -155,9 +156,9 @@ latexpdf: images-pdf
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "xelatex finished; the PDF files are in $(BUILDDIR)/latex."
-	mkdir -p $(OUTPUTDIR)/pdf/
-	cp $(BUILDDIR)/latex/zawiki.pdf $(OUTPUTDIR)/pdf/zawiki.pdf
-	@echo "pdf copied; the PDF files are in $(OUTPUTDIR)/pdf/zawiki.pdf."
+	mkdir -p $(OUTPUTDIR)/
+	cp $(BUILDDIR)/latex/$(FILENAME).pdf $(OUTPUTDIR)/$(FILENAME).pdf
+	@echo "pdf copied; the PDF files are in $(OUTPUTDIR)/$(FILENAME).pdf."
 
 .PHONY: latexpdfja
 latexpdfja: images-pdf

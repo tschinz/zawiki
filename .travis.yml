@@ -40,12 +40,12 @@ install:
 jobs:
   include:
     - stage: test-links
-      script: pipenv run make linkcheck
+      script: make linkcheck
     - stage: build
-      script: pipenv run make html
-      script: pipenv run make latexpdf
+      script: make html
+      script: make latexpdf
     - stage: deploy-html
-      script: pipenv run make html
+      script: make html
       deploy:
         provider: pages
         skip-cleanup: true
@@ -55,7 +55,7 @@ jobs:
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
     - stage: deploy-pdf
-      script: pipenv run make latexpdf
+      script: make latexpdf
       deploy:
         provider: pages
         skip-cleanup: true
@@ -63,7 +63,7 @@ jobs:
         keep-history: true
         # local-dir: public/pdf
         file:
-          - public/pdf/Cheatsheets.pdf
+          - pdf/Cheatsheets.pdf
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
 

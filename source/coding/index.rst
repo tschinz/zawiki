@@ -4,7 +4,7 @@ Coding
 
 .. figure:: img/logo.*
    :align: center
-   :width: 300px
+   :width: 150px
 
 .. toctree::
    :glob:
@@ -13,3 +13,11 @@ Coding
    :caption: Content
 
    *
+   ros/index
+
+..   python/index
+..   vhdl/index
+..   tcl_do/index
+..   spinal/index
+..   scala/index
+..   c_cpp/index

@@ -4,7 +4,7 @@ Multimedia
 
 .. figure:: img/logo.*
    :align: center
-   :width: 300px
+   :width: 150px
 
 .. toctree::
    :glob:

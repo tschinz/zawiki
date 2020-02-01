@@ -160,7 +160,7 @@ html_theme_options = {
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'vcs_pageview_mode': 'blob',
+    #'vcs_pageview_mode': 'blob',
     #'style_nav_header_background': '#da0066',
     # Toc options
     'collapse_navigation': False,

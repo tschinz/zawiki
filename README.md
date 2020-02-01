@@ -126,6 +126,4 @@ Before performing a commit the following steps are required:
 * Commit and push the changes [Continuous Integration (CI)](./README.md#Continuous_Integration(CI))
 
 ## Continuous Integration(CI)
-The [.gitlab-ci.yml](./.gitlab-ci.yml) will run on each `master` commit and create a `public/` folder which will be used by gitlab pages and displayed as static html pages.
-
-Waiting for Sinf to implement [Gitlab Pages](https://docs.gitlab.com/ee/user/project/pages/).
+The [.travis.yml](./.travis.yml) will run on each `master` commit and create a `_build/` folder which will be pushed onto the branch gh-pages and consequently be used by github to displayed static html pages.
