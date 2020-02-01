@@ -20,22 +20,23 @@ install:
   - pip install sphinxcontrib-wavedrom
   - pip install sphinxcontrib-plantuml
   - pip install recommonmark
-  - apt-get update
+  - pip install sphinxemoji
+  - sudo apt-get update
   - echo "Install build-essential"
-  - apt-get install -y build-essential
+  - sudo apt-get install -y build-essential
   - echo "Install git"
-  - apt-get install -y git
+  - sudo apt-get install -y git
   - echo "Install graphviz"
-  - apt-get install -y graphviz
+  - sudo apt-get install -y graphviz
   - echo "Install Inkscape"
-  - apt-get install -y inkscape
+  - sudo apt-get install -y inkscape
   - echo "Install texlive"
-  - apt-get install -y texlive-full
+  - sudo apt-get install -y texlive-full
   - chmod +x source/_static/plantuml.jar
   - echo "Install Java"
   - dpkg --configure -a
   - mkdir -p /usr/share/man/man1
-  - apt-get install -y openjdk-11-jre
+  - sudo apt-get install -y openjdk-11-jre
 
 jobs:
   include:

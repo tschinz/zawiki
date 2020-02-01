@@ -5,25 +5,68 @@ Welcome to Zawiki Knowledge Database
 .. figure:: img/logo.*
    :align: center
    :alt: Site Logo
-   :width: 300px
+   :width: 150px
 
 This Repo is a collection of markdown and ReStructuredText pages. Here you can find various informations about topics I've always forget. This pages let me help to remember less but know more.
+
+**Content**
 
 .. toctree::
    :hidden:
    :glob:
    :maxdepth: 2
    :titlesonly:
-   :caption: Content
+   :caption: Operating Systems
 
-   linux/index
-   mac/index
-   win/index
-   tools/index
-   coding/index
-   writing/index
+   os/linux/index
+   os/mac/index
+   os/win/index
+
+.. toctree::
+   :hidden:
+   :glob:
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Tools
+
+   tools/git/index
+   tools/jupyter/index
+   tools/pandoc/index
+
+.. toctree::
+   :hidden:
+   :glob:
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Coding
+
+   coding/ahk/index
+   coding/python/index
+   coding/ros/index
+   coding/licenses/index
+
+.. toctree::
+   :hidden:
+   :glob:
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Writing
+
+   writing/latex/index
+   writing/rst/index
+   writing/emoji/index
+   writing/md/index
+
+.. toctree::
+   :hidden:
+   :glob:
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Else
+
    multimedia/index
    security/index
+   pasttime/index
    about/index
 
 Site purpose and structure
@@ -36,9 +79,9 @@ Want to try it for yourself? Then jump to the :doc:`getting started <about/getti
 
 You can view the content as a:
 
-* `Webpage <http://tschinz.github.io/zawiki>`_
+* :zawiki_page:`Webpage <>`
 * `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/pdf/zawiki.pdf>`_
-* `Repo <https://github.com/tschinz/zawiki>`_
+* :zawiki_repo:`Repo <>`
 
 
 Known Issues / TODOs

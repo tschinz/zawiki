@@ -86,6 +86,25 @@ Internet
 
 http://www.python.org/
 
+Other Repo's
+^^^^^^^^^^^^
+The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
+
+.. code-block:: python
+
+   extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
+               'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None)
+              }
+
+
+.. code-block:: ReST
+
+   :config_repo:`jupyter config <tree/master/config/jupyter>`
+   :zawiki_repo:`zawiki link <>`
+
+:config_repo:`jupyter config <tree/master/config/jupyter>`
+:zawiki_repo:`zawiki link <>`
+
 Other Sphinx Pages
 ^^^^^^^^^^^^^^^^^^
 
@@ -240,7 +259,7 @@ Image Placement
    Caption of figure
 
 Inline Images
-----------------
+-------------
 For inline images to work, a substitution needs to be made
 
 .. code-block:: ReST
@@ -332,6 +351,54 @@ True   True   True
 
 .. code-block:: ReST
 
+   .. list-table::
+      :header-rows: 1
+      :widths: 1 1 2
+
+      * - Type
+        - Literal
+        - Description
+      * - Boolean
+        - true, false
+        -
+      * - Int
+        - 3, 0x32
+        - 32 bits integer
+      * - Float
+        - 3.14f
+        - 32 bits floating point
+      * - Double
+        - 3.14
+        - 64 bits floating point
+      * - String
+        - "Hello world"
+        - UTF-16 string
+
+.. list-table::
+   :header-rows: 1
+   :widths: 1 1 2
+
+   * - Type
+     - Literal
+     - Description
+   * - Boolean
+     - true, false
+     -
+   * - Int
+     - 3, 0x32
+     - 32 bits integer
+   * - Float
+     - 3.14f
+     - 32 bits floating point
+   * - Double
+     - 3.14
+     - 64 bits floating point
+   * - String
+     - "Hello world"
+     - UTF-16 string
+
+.. code-block:: ReST
+
    .. table:: Table caption
 
       =====  =====  ======
@@ -354,6 +421,8 @@ True   True   True
 
 Code
 ====
+
+see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html
 
 .. code-block:: ReST
 

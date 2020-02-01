@@ -37,14 +37,26 @@ release = VERSION
 extensions = [
     'sphinxcontrib.wavedrom',
     'sphinxcontrib.plantuml',
-    'sphinx.ext.graphviz',
     'recommonmark',
+    'sphinx.ext.graphviz',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.ifconfig',
     'sphinx.ext.todo',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.githubpages',
+    'sphinxemoji.sphinxemoji',
     # 'sphinx.ext.imgmath',
     # 'sphinx.ext.imgconverter',
 ]
+
+# emoij style
+#sphinxemoji_style = 'twemoji'
+
+# external Links
+extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
+            'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None),
+            'zawiki_page': ('http://tschinz.github.io/zawiki/%s', None),
+            }
 
 # Avoid warnings when different pages have the same titles
 autosectionlabel_prefix_document = True
@@ -69,7 +81,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -81,6 +93,7 @@ exclude_patterns = []
 pygments_style = 'monokai'
 #pygments_style = 'manni'
 #pygments_style = 'default'
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -113,33 +126,33 @@ html_static_path = ['_static']
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'xelatex'
 latex_elements = {
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'printindex': r'\footnotesize\raggedright\printindex',
-
+#    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+#    'printindex': r'\footnotesize\raggedright\printindex',
+#
     'papersize': 'a4paper',
-
+#
     'pointsize': '10pt',
     'extraclassoptions': 'onecolumn,oneside',
-
-    'fontpkg': r'''
-        \setmainfont{DejaVu Serif}
-        \setsansfont{DejaVu Sans}
-        \setmonofont{DejaVu Sans Mono}
-    ''',
-
+#
+#    'fontpkg': r'''
+#        \setmainfont{DejaVu Serif}
+#        \setsansfont{DejaVu Sans}
+#        \setmonofont{DejaVu Sans Mono}
+#    ''',
+#
     'preamble': r'''
         % !TeX program = xelatex
         \usepackage[utf8]{inputenc} % not needed utf8 by default
-        \usepackage[titles]{tocloft}
-        \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-        \setlength{\cftchapnumwidth}{0.75cm}
-        \setlength{\cftsecindent}{\cftchapnumwidth}
-        \setlength{\cftsecnumwidth}{1.25cm}
+        %\usepackage[titles]{tocloft}
+        %\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+        %\setlength{\cftchapnumwidth}{0.75cm}
+        %\setlength{\cftsecindent}{\cftchapnumwidth}
+        %\setlength{\cftsecnumwidth}{1.25cm}
     ''',
-
-    # Latex figure (float) alignment
-    #
-    'figure_align': 'htbp',
+#
+#    # Latex figure (float) alignment
+#    #
+#    'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -189,3 +202,7 @@ offline_wavedrom_js_path = "_static/wavedrom.min.js"
 
 # Option for linkcheck
 linkcheck_anchors=False
+
+# -- RST Epilog ----------------------------------------------------------
+rst_epilog = """
+"""
