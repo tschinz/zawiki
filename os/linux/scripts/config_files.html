@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Config Files &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/default.js"></script>
+        <script type="text/javascript" src="../../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Scripts" href="general.html" />
+    <link rel="prev" title="Scripts" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-1-g7edcc8e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/rsync.html">RSync</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Scripts</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/systemd.html">Systemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/books/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/jokes/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/quotes/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/fonts/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/icons/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">Scripts</a> &raquo;</li>
+        
+      <li>Config Files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/os/linux/scripts/config_files.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="config-files">
+<h1>Config Files<a class="headerlink" href="#config-files" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#etc-profile" id="id4"><code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#add-program-to-path" id="id5">Add Program to``PATH``</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bashrc-zshrc" id="id6"><code class="docutils literal notranslate"><span class="pre">~.bashrc</span></code> <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#create-a-cmd-alias" id="id7">Create a cmd alias</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#add-custom-functions" id="id8">Add custom functions</a></p></li>
+<li><p><a class="reference internal" href="#etc-fstab" id="id9"><code class="docutils literal notranslate"><span class="pre">etc/fstab</span></code></a></p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/tschinz/config/tree/master/config/linux/server">My linux configfiles</a></p></li>
+</ul>
+<div class="section" id="etc-profile">
+<span id="config-files-profile"></span><h2><a class="toc-backref" href="#id4"><code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code></a><a class="headerlink" href="#etc-profile" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code> contains Linux system wide environment and startup programs. It is used by all users with <code class="docutils literal notranslate"><span class="pre">bash</span></code>, <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, <code class="docutils literal notranslate"><span class="pre">sh</span></code> shell. Usually used to set <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable, user limits, and other settings for user. It only runs for login shell. If you wanted to make large changes or application specific changes use <code class="docutils literal notranslate"><span class="pre">/etc/profile.d</span></code> directory.</p>
+<p><a class="reference external" href="https://github.com/tschinz/config/blob/master/config/linux/server/profile">My profile</a></p>
+<div class="section" id="add-program-to-path">
+<h3><a class="toc-backref" href="#id5">Add Program to``PATH``</a><a class="headerlink" href="#add-program-to-path" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/sublime_text
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bashrc-zshrc">
+<span id="config-files-user"></span><h2><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">~.bashrc</span></code> <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code></a><a class="headerlink" href="#bashrc-zshrc" title="Permalink to this headline">¶</a></h2>
+<p>Execute commands at start of a shell instance for a given users only</p>
+<p><a class="reference external" href="https://github.com/tschinz/config/blob/master/config/linux/server/.bashrc">.bashrc</a>
+<a class="reference external" href="https://github.com/tschinz/config/blob/master/config/linux/server/.zshrc">.zshrc</a></p>
+<div class="section" id="create-a-cmd-alias">
+<h3><a class="toc-backref" href="#id7">Create a cmd alias</a><a class="headerlink" href="#create-a-cmd-alias" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">alias</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Common home locations</span>
+<span class="nb">alias</span> <span class="nv">home</span><span class="o">=</span><span class="s1">&#39;cd ~&#39;</span>
+<span class="nb">alias</span> <span class="nv">root</span><span class="o">=</span><span class="s1">&#39;cd /&#39;</span>
+<span class="nb">alias</span> <span class="nv">dtop</span><span class="o">=</span><span class="s1">&#39;cd ~/Desktop&#39;</span>
+<span class="nb">alias</span> <span class="nv">dwld</span><span class="o">=</span><span class="s1">&#39;cd ~/Downloads&#39;</span>
+<span class="nb">alias</span> <span class="nv">docs</span><span class="o">=</span><span class="s1">&#39;cd ~/Documents&#39;</span>
+<span class="nb">alias</span> <span class="nv">www</span><span class="o">=</span><span class="s1">&#39;cd /var/www/html&#39;</span>
+<span class="c1"># Common data directories</span>
+<span class="c1"># Common commands</span>
+<span class="nb">alias</span> <span class="nv">o</span><span class="o">=</span>open
+<span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+<span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ..; cd ..&#39;</span>
+<span class="nb">alias</span> ....<span class="o">=</span><span class="s1">&#39;cd ..; cd ..; cd ..&#39;</span>
+<span class="c1"># Common command shortcuts</span>
+<span class="nb">alias</span> <span class="nv">cls</span><span class="o">=</span>clear
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span> owner-wwwdata<span class="o">=</span><span class="s1">&#39;sudo chown -R www-data:www-data ./&#39;</span>
+<span class="nb">alias</span> permission-file<span class="o">=</span><span class="s1">&#39;sudo find . -type f -exec chmod 644 {} \;&#39;</span>
+<span class="nb">alias</span> permission-folder<span class="o">=</span><span class="s1">&#39;sudo find . -type d -exec chmod 755 {} \;&#39;</span>
+<span class="c1"># commands</span>
+<span class="nb">alias</span> <span class="nv">backup</span><span class="o">=</span><span class="s1">&#39;~/Documents/backup.bash&#39;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="add-custom-functions">
+<h2><a class="toc-backref" href="#id8">Add custom functions</a><a class="headerlink" href="#add-custom-functions" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">function</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Draw Mandelbrot Factral</span>
+<span class="k">function</span> mandelbrot_zsh <span class="o">{</span>
+  <span class="nb">local</span> lines columns colour a b p q i pnew
+  <span class="o">((</span><span class="nv">columns</span><span class="o">=</span>COLUMNS-1, <span class="nv">lines</span><span class="o">=</span>LINES-1, <span class="nv">colour</span><span class="o">=</span><span class="m">0</span><span class="o">))</span>
+  <span class="k">for</span> <span class="o">((</span><span class="nv">b</span><span class="o">=</span>-1.5<span class="p">;</span> b&lt;<span class="o">=</span><span class="m">1</span>.5<span class="p">;</span> <span class="nv">b</span><span class="o">+=</span><span class="m">3</span>.0/lines<span class="o">))</span> <span class="k">do</span>
+    <span class="k">for</span> <span class="o">((</span><span class="nv">a</span><span class="o">=</span>-2.0<span class="p">;</span> a&lt;<span class="o">=</span><span class="m">1</span><span class="p">;</span> <span class="nv">a</span><span class="o">+=</span><span class="m">3</span>.0/columns<span class="o">))</span> <span class="k">do</span>
+      <span class="k">for</span> <span class="o">((</span><span class="nv">p</span><span class="o">=</span><span class="m">0</span>.0, <span class="nv">q</span><span class="o">=</span><span class="m">0</span>.0, <span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> p*p+q*q &lt; <span class="m">4</span> <span class="o">&amp;&amp;</span> i &lt; <span class="m">32</span><span class="p">;</span> i++<span class="o">))</span> <span class="k">do</span>
+        <span class="o">((</span><span class="nv">pnew</span><span class="o">=</span>p*p-q*q+a, <span class="nv">q</span><span class="o">=</span><span class="m">2</span>*p*q+b, <span class="nv">p</span><span class="o">=</span>pnew<span class="o">))</span>
+      <span class="k">done</span>
+      <span class="o">((</span><span class="nv">colour</span><span class="o">=(</span>i/4<span class="o">)</span>%8<span class="o">))</span>
+      <span class="nb">echo</span> -n <span class="s2">&quot;\\e[4</span><span class="si">${</span><span class="nv">colour</span><span class="si">}</span><span class="s2">m &quot;</span>
+    <span class="k">done</span>
+    <span class="nb">echo</span>
+  <span class="k">done</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="etc-fstab">
+<span id="config-files-fstab"></span><h2><a class="toc-backref" href="#id9"><code class="docutils literal notranslate"><span class="pre">etc/fstab</span></code></a><a class="headerlink" href="#etc-fstab" title="Permalink to this headline">¶</a></h2>
+<p>There’s a file called /etc/fstab in your Linux system. Learn what its contents mean and how it’s used in conjunction with the mount command. When you learn to understand the fstab file, you’ll be able to edit its contents yourself, too.</p>
+<p><a class="reference external" href="https://github.com/tschinz/config/blob/master/config/linux/server/fstab">My fstab</a></p>
+<ol class="arabic simple">
+<li><p>column - Device</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">UUID=...</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/dev/hda2</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>column - Default mount point</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mnt/data</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">media/disk</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>column - Filesystem type</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ext2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ext4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ntfs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vfat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>column - Mount options</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">and</span> <span class="pre">noauto</span></code> - mounted automatically at bootup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">and</span> <span class="pre">nouser</span></code> - allows normal user to mount the device</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exec</span> <span class="pre">and</span> <span class="pre">noexec</span></code> - lets execute binaries from that partition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ro</span> <span class="pre">and</span> <span class="pre">rw</span></code> - <strong>R</strong> ead- <strong>O</strong> nly and <strong>R</strong> ead- <strong>W</strong> rite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sync</span> <span class="pre">and</span> <span class="pre">async</span></code> - data can be writte synchron or asynchron</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> - means <code class="docutils literal notranslate"><span class="pre">rw,suid,dev,exec,auto,nouser,async</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>column - Dump options</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>In most cases <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>column - fck options</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>In most cases <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</div></blockquote>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">fstab</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">UUID</span><span class="o">=</span>3d3920bb-91c7-4632-8fd0-1d87b110a496 /                 ext4    <span class="nv">errors</span><span class="o">=</span>remount-ro <span class="m">0</span>       <span class="m">1</span>
+/swapfile                                 none              swap    sw                <span class="m">0</span>       <span class="m">0</span>
+
+<span class="c1"># internal WD 1TB Harddisk on /dev/sda1</span>
+<span class="c1">#UUID=377d6d5c-3d62-4155-b7f1-3f07fe09a0c2 /mnt/data2        ext4    defaults          0       0</span>
+
+
+<span class="c1"># external Lacie Rugged 2TB Harddisk on /dev/sda1</span>
+<span class="nv">UUID</span><span class="o">=</span>0c6f2eed-3ec0-493e-9ab8-e954a9e3a25d /media/zas_backup ext3    nofail,nobootwait <span class="m">0</span>       <span class="m">0</span>
+
+<span class="c1"># external WD Passport 1TB Harddisk on /dev/sde1</span>
+<span class="nv">UUID</span><span class="o">=</span>20F605D47F5FE7AC                     /media/zas_media  ntfs    nofail,nobootwait <span class="m">0</span>       <span class="m">0</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="general.html" class="btn btn-neutral float-right" title="Scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

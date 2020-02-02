@@ -1,0 +1,1014 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cheatsheet &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/default.js"></script>
+        <script type="text/javascript" src="../../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Crontab" href="crontab.html" />
+    <link rel="prev" title="Commandline" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-1-g7edcc8e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Commandline</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rsync.html">RSync</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/systemd.html">Systemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/books/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/jokes/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/quotes/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/fonts/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/icons/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">Commandline</a> &raquo;</li>
+        
+      <li>Cheatsheet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/os/linux/commandline/cheatsheet.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cheatsheet">
+<h1>Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#admin-rights" id="id27">Admin rights</a></p></li>
+<li><p><a class="reference internal" href="#quit" id="id28">Quit</a></p></li>
+<li><p><a class="reference internal" href="#mounting" id="id29">Mounting</a></p></li>
+<li><p><a class="reference internal" href="#wipe-disk" id="id30">Wipe Disk</a></p></li>
+<li><p><a class="reference internal" href="#environment-variables" id="id31">Environment variables</a></p></li>
+<li><p><a class="reference internal" href="#user" id="id32">User</a></p></li>
+<li><p><a class="reference internal" href="#alias" id="id33">Alias</a></p></li>
+<li><p><a class="reference internal" href="#permissions" id="id34">Permissions</a></p></li>
+<li><p><a class="reference internal" href="#threads" id="id35">Threads</a></p></li>
+<li><p><a class="reference internal" href="#general" id="id36">General</a></p></li>
+<li><p><a class="reference internal" href="#find-which" id="id37">Find / Which</a></p></li>
+<li><p><a class="reference internal" href="#grep" id="id38">Grep</a></p></li>
+<li><p><a class="reference internal" href="#links" id="id39">Links</a></p></li>
+<li><p><a class="reference internal" href="#compression" id="id40">Compression</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tar-bz2-gz" id="id41">Tar, bz2, gz</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#rar" id="id42">RAR</a></p></li>
+<li><p><a class="reference internal" href="#in-outputs" id="id43">In Outputs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tail" id="id44">Tail</a></p></li>
+<li><p><a class="reference internal" href="#cat" id="id45">Cat</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#pgp-pretty-good-privacy-gpg" id="id46">PGP Pretty Good Privacy &amp; GPG</a></p>
+<ul>
+<li><p><a class="reference internal" href="#files" id="id47">Files</a></p></li>
+<li><p><a class="reference internal" href="#create-pgp-files" id="id48">Create PGP files</a></p></li>
+<li><p><a class="reference internal" href="#gpg-privacy" id="id49">GPG Privacy</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ssh" id="id50">SSH</a></p></li>
+<li><p><a class="reference internal" href="#scp" id="id51">SCP</a></p></li>
+</ul>
+</div>
+<div class="section" id="admin-rights">
+<h2><a class="toc-backref" href="#id27">Admin rights</a><a class="headerlink" href="#admin-rights" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to gain administrative rights, for a session or only for a command</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">admin</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
+sudo <span class="s2">&quot;command&quot;</span>
+sudo -s           <span class="c1"># Longtime root</span>
+su -              <span class="c1"># root preserved env</span>
+sudo !!           <span class="c1"># execute previous command as root</span>
+chsh -s /bin/zsh  <span class="c1"># change login shell to zsh</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quit">
+<h2><a class="toc-backref" href="#id28">Quit</a><a class="headerlink" href="#quit" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">quit</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo halt          <span class="c1"># Sleep</span>
+sudo reboot        <span class="c1"># Reboot</span>
+sudo shutdown now  <span class="c1"># Shutdown</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mounting">
+<h2><a class="toc-backref" href="#id29">Mounting</a><a class="headerlink" href="#mounting" title="Permalink to this headline">¶</a></h2>
+<p>For permanent mount see: <a class="reference internal" href="../scripts/config_files.html#config-files-fstab"><span class="std std-ref">/etc/fstab</span></a></p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">mounting</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/fstab             <span class="c1"># To edit default mount drives</span>
+sudo fdisk -l           <span class="c1"># Drive info</span>
+ls -l /dev/disk/by-uuid         <span class="c1"># get Drive UUID&#39;s</span>
+mkdir -p /media/d       <span class="c1"># make folder for HD</span>
+mount -t vfat -o iocharset-utf8, <span class="nv">umask</span><span class="o">=</span><span class="m">000</span> /dev/sda3 /media/d
+
+mkdir -p /mnt/mountplace
+mount /dev/sda1 /mnt/mountplace
+
+unmount /mnt/mountplace
+
+mount -U &lt;UUID&gt;                 <span class="c1"># mount drive according to fstab definition</span>
+
+df -k                           <span class="c1"># check partitions and the available space</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wipe-disk">
+<h2><a class="toc-backref" href="#id30">Wipe Disk</a><a class="headerlink" href="#wipe-disk" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">wipe disk</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># unmount disk</span>
+sudo umount /dev/sdXY -l
+
+<span class="c1"># use /dev/random to write Zeros on entire disk§</span>
+sudo dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>10M
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h2><a class="toc-backref" href="#id31">Environment variables</a><a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>They can be set permanently system wide <a class="reference internal" href="../scripts/config_files.html#config-files-profile"><span class="std std-ref">/etc/profile</span></a> or per user shell <a class="reference internal" href="../scripts/config_files.html#config-files-user"><span class="std std-ref">/etc/.bashrc /etc/.zshrc</span></a></p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">environment variables</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Licenses</span>
+<span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:portnumber@serverip
+
+<span class="c1"># Print Environmemt variables</span>
+printenv
+<span class="nb">echo</span> <span class="nv">$name_env_var</span>
+
+<span class="c1"># Set env var</span>
+setenv name value
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="user">
+<h2><a class="toc-backref" href="#id32">User</a><a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">user</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access to different PC with unknown Password</span>
+chroot path/of/new/systemroot    <span class="c1"># change root of FileSys</span>
+<span class="c1"># Useful for hacking another PC</span>
+<span class="c1"># 1. with LiveUSB / CD login</span>
+<span class="c1"># 2. mount HD</span>
+<span class="c1"># 3. chroot to his filessystem</span>
+<span class="c1"># 4. Change user / password and everything else you want</span>
+
+<span class="c1"># User information</span>
+who                              <span class="c1"># returns all users logged in</span>
+whoami                           <span class="c1"># return actual username</span>
+id &lt;username&gt;                    <span class="c1"># return groups &amp; id&#39;s of user</span>
+
+<span class="c1"># Change to user</span>
+sudo -u user2 bash               <span class="c1"># open bash of user2</span>
+
+<span class="c1"># Send info</span>
+write &lt;username&gt; &lt;tty&gt;           <span class="c1"># write to a logged user</span>
+                                 <span class="c1"># see command who output</span>
+
+<span class="c1"># Add user</span>
+sudo useradd -d /home/&lt;username&gt; -m &lt;username&gt;
+
+<span class="c1"># Add user to group</span>
+usermod -a -G &lt;groupname&gt; &lt;username&gt;
+
+<span class="c1"># Change user password</span>
+sudo passwd &lt;username&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="alias">
+<h2><a class="toc-backref" href="#id33">Alias</a><a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">alias</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up aliases</span>
+<span class="n">alias</span> <span class="o">&lt;</span><span class="n">aliasname</span><span class="o">&gt;=</span><span class="s2">&quot;&lt;command&gt;&quot;</span>
+<span class="n">alias</span> <span class="n">ll</span><span class="o">=</span><span class="s2">&quot;ls -la&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="permissions">
+<h2><a class="toc-backref" href="#id34">Permissions</a><a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">permissions</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod xxx file<span class="p">|</span>folder                <span class="c1"># xxx = rwx|xnumber</span>
+chmod -x  file <span class="p">|</span>folder               <span class="c1"># add only executable Flag</span>
+chown -R user:group file<span class="p">|</span>folder      <span class="c1"># change owner recursively</span>
+
+find . -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> <span class="se">\;</span> <span class="c1"># find dir&#39;s and set 755</span>
+find . -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> <span class="se">\;</span> <span class="c1"># find files and set 644</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p>Rights</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>read</p></th>
+<th class="head"><p>write</p></th>
+<th class="head"><p>execute</p></th>
+<th class="head"><p>Abreviation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>x</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>x</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>x</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>x</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>x</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="threads">
+<h2><a class="toc-backref" href="#id35">Threads</a><a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h2>
+<p><strong>PID = Process ID</strong></p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">threads</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps -x                             <span class="c1"># view executed threads</span>
+ps -ax <span class="p">|</span> grep name                <span class="c1"># search for specific process name</span>
+<span class="nb">kill</span> &lt;pidnumber&gt;                  <span class="c1"># kill thread with given PID</span>
+<span class="nb">kill</span> signal &lt;pidnumber&gt;           <span class="c1"># kill with a signal type see table below</span>
+</pre></div>
+</div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 41%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal Name</p></th>
+<th class="head"><p>Single Value</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SIGHUP</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>Hangup</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SIGINT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<td><p>Interrupt from keyboard</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SIGKILL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9</span></code></p></td>
+<td><p>Kill signal</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SIGTERM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">15</span></code></p></td>
+<td><p>Termination signal</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SIGSTOP</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">17</span></code>, <code class="docutils literal notranslate"><span class="pre">19</span></code>, <code class="docutils literal notranslate"><span class="pre">23</span></code></p></td>
+<td><p>Stop the process</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id36">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">general</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uname -a                           <span class="c1"># Distribution &amp; Kernel informations</span>
+whereis <span class="nb">command</span>                    <span class="c1"># returns location of command</span>
+
+mkdir /existing/path/dirname       <span class="c1"># creates a directory</span>
+mkdir -p /non/existing/path/name   <span class="c1"># creates a directory path</span>
+mkdir -p project/<span class="o">{</span>lib/ext,bin,src,doc/<span class="o">{</span>html,info,pdf<span class="o">}</span>,demo/stat/a<span class="o">}</span>
+                                   <span class="c1"># creates a tree structure</span>
+<span class="nb">pwd</span>                                <span class="c1"># print working directory</span>
+ls                                 <span class="c1"># list content</span>
+ls -la                             <span class="c1"># list flags</span>
+ll                                 <span class="c1"># short list flags</span>
+<span class="nb">cd</span>                                 <span class="c1"># change dir</span>
+rm name                            <span class="c1"># remove file</span>
+rm -r                              <span class="c1"># remove directory with content</span>
+rm -R name                         <span class="c1"># remove recursively folder with its content</span>
+rm !<span class="o">(</span>delete_all_but_this<span class="o">)</span>          <span class="c1"># delete all except !()</span>
+cp source/path /dest./path         <span class="c1"># copy file</span>
+cp -R source/path dest./path       <span class="c1"># copy directory with content</span>
+cp -R --preserve<span class="o">=</span>mode,ownership,timestamp  source/path dest/path
+                                   <span class="c1"># copy with preserving owner and permission and time</span>
+
+df                                 <span class="c1"># show disk sizes</span>
+df -H                              <span class="c1"># show disk sizes in KB, MB, GB</span>
+
+
+diff path/to/file1 path/to file2   <span class="c1"># compare file1&lt;-&gt;file2 and shows the difference</span>
+sdiff path/to/file1 path/to file2  <span class="c1"># compare file1&lt;-&gt;file2 and merge directly</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="find-which">
+<h2><a class="toc-backref" href="#id37">Find / Which</a><a class="headerlink" href="#find-which" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">find and which</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># finding and delete all folder with &lt;foldername&gt; and it&#39;s content</span>
+find -type d -iname <span class="s2">&quot;&lt;foldername&gt;&quot;</span> -exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
+<span class="c1"># finding and delete all files with &lt;filename&gt; and it&#39;s content</span>
+find -type f -iname <span class="s2">&quot;&lt;filename&gt;&quot;</span> -exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
+<span class="c1"># finding all files and directories within a directory</span>
+find /etc
+<span class="c1"># finding all files within a directory</span>
+find /etc -type f
+<span class="c1"># finding all files with a suffix</span>
+find /etc -type f -name <span class="s2">&quot;*.conf&quot;</span>
+
+<span class="c1"># Find location of a program</span>
+which zsh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="grep">
+<h2><a class="toc-backref" href="#id38">Grep</a><a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
+<p>Grep let you search for word in files and outputs the line it was found.</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">grep</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep boo /etc/passwd         <span class="c1"># search boo in for /etc/passwd</span>
+grep -r <span class="s2">&quot;192.168.1.5&quot;</span> /etc/  <span class="c1"># search recursivaly in /etc for 192.168.1.5</span>
+grep -w <span class="s2">&quot;boo&quot;</span> /path/to/file  <span class="c1"># search for word &quot;boo&quot; only</span>
+</pre></div>
+</div>
+</div>
+<p>grep is also often uses in pipes to search within the output of an other command</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">grep pipe</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /proc/cpuinfo <span class="p">|</span> grep -i <span class="s1">&#39;Model&#39;</span> <span class="c1"># display CPU Model name</span>
+ps -x <span class="p">|</span> grep vnc
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Flags</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> : search recursively in all files \</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-n</span></code> : display line number \</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-c</span></code> : count number of times found \</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--color</span></code> : colors the word searched in the results</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id39">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">links</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln target-filename symbolic-filename    <span class="c1"># create hardlink</span>
+ln -s target-filename symbolic-filename <span class="c1"># create softlink</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Hard Link vs Softlink</strong></p>
+<p>Symbolic links are different from hard links. Hard links may not normally point to directories, and they cannot link paths on different volumes or file systems. Hard links always refer to an existing file.</p>
+</div>
+</div>
+<div class="section" id="compression">
+<h2><a class="toc-backref" href="#id40">Compression</a><a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tar-bz2-gz">
+<h3><a class="toc-backref" href="#id41">Tar, bz2, gz</a><a class="headerlink" href="#tar-bz2-gz" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">compress</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar cfv name.tar /path/to/folder      <span class="c1"># Compression tar</span>
+tar xfv tarfile                       <span class="c1"># Decompression tar</span>
+
+tar cfvz name.tar.gz /path/to/folder  <span class="c1"># Compression tar.gz</span>
+tar xfvz tarfile                      <span class="c1"># Decompression tar.gz</span>
+
+tar cfvj name.tar.bz2 /path/to/folder <span class="c1"># Compression tar.bz2</span>
+tar xfvj tarfile                      <span class="c1"># Decompression tar.bz2</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Flags</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> = Compression | <code class="docutils literal notranslate"><span class="pre">x</span></code> = eXtraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = file/folder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> = Verbose</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">j</span></code> = bz2 | <code class="docutils literal notranslate"><span class="pre">z</span></code> = gz</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> = Preserve (keep permissions)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="rar">
+<h2><a class="toc-backref" href="#id42">RAR</a><a class="headerlink" href="#rar" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">compress rar</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># compress and split in files of 700MB</span>
+rar a -m5 -v700m rarname folder_or_file_to_compress
+
+<span class="c1"># uncompress, if a split rar uncompress the first</span>
+rar e rarname
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Flags</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">m5</span></code> = highest compression <code class="docutils literal notranslate"><span class="pre">m0</span></code> = lowest compression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">e</span></code> = extract in current folder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> = append to rar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">v&lt;SIZE&gt;m</span></code> = size of split files</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="in-outputs">
+<h2><a class="toc-backref" href="#id43">In Outputs</a><a class="headerlink" href="#in-outputs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tail">
+<h3><a class="toc-backref" href="#id44">Tail</a><a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">tail</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail file<span class="p">|</span>folder                <span class="c1"># give end of a file</span>
+./executable &gt; output.txt       <span class="c1"># redirect output to a file</span>
+./executable &gt; output.txt <span class="m">2</span>&lt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1"># redirect output to a file output 2 &amp; 1</span>
+                                <span class="c1"># 2 = Error output</span>
+                                <span class="c1"># 1 = Std output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="cat">
+<h3><a class="toc-backref" href="#id45">Cat</a><a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">cat</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; file1.txt                         <span class="c1"># To Create a new file</span>
+cat &gt;&gt; file1.txt                        <span class="c1"># To Append data into the file</span>
+cat file1.txt                           <span class="c1"># To display a file</span>
+cat file1.txt file2.txt                 <span class="c1"># Concatenate several files and display</span>
+cat file1.txt file2.txt &gt; file3.txt     <span class="c1"># To cat several files and transfer output to another file</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pgp-pretty-good-privacy-gpg">
+<h2><a class="toc-backref" href="#id46">PGP Pretty Good Privacy &amp; GPG</a><a class="headerlink" href="#pgp-pretty-good-privacy-gpg" title="Permalink to this headline">¶</a></h2>
+<p>see also <a class="reference internal" href="../../../security/gnupg.html"><span class="doc">GnuPg</span></a></p>
+<div class="section" id="files">
+<h3><a class="toc-backref" href="#id47">Files</a><a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">pgp files</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/user/.ssh
+pgp                             <span class="c1"># private key</span>
+pgp.pub                         <span class="c1"># public key</span>
+gpg_fingerprint.txt             <span class="c1"># Infos for the gpg fingerprint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-pgp-files">
+<h3><a class="toc-backref" href="#id48">Create PGP files</a><a class="headerlink" href="#create-pgp-files" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">create key’s</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t dsa -f filename   <span class="c1"># Create private and public key</span>
+gpg --gen-key                   <span class="c1"># Create gpg fingerprint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="gpg-privacy">
+<h3><a class="toc-backref" href="#id49">GPG Privacy</a><a class="headerlink" href="#gpg-privacy" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">gpg</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpg --gen-key               <span class="c1"># Create a key</span>
+gpg --export -a <span class="s2">&quot;User Name&quot;</span> &gt; public.key# Export a public key
+gpg --export-secret-key -a <span class="s2">&quot;User Name&quot;</span> &gt; private.key# Export private key
+gpg --import public.key         <span class="c1"># Import public key</span>
+gpg --allow-secret-key-import --import private.key# Import private key
+gpg --delete-key <span class="s2">&quot;User Name&quot;</span>        <span class="c1"># Delete public key</span>
+gpg --delete-secret-key <span class="s2">&quot;User Name&quot;</span> <span class="c1"># Delete private key</span>
+gpg --list-keys             <span class="c1"># List key in public key ring</span>
+gpg --list-secret-keys          <span class="c1"># Lsit key in private key ring</span>
+gpg --fingerprint &gt; fingerprint     <span class="c1"># Short list of numbers to verify public key</span>
+gpg -e -u <span class="s2">&quot;Sender User Name&quot;</span> -r <span class="s2">&quot;Receiver User Name&quot;</span> somefile <span class="c1"># Encrypt data</span>
+gpg -d mydata.tar.gpg           <span class="c1"># Decrypt data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ssh">
+<h2><a class="toc-backref" href="#id50">SSH</a><a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">ssh_config</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Edit config file</span>
+sudo vim /etc/ssh/sshd_config
+
+<span class="c1"># start, stop, restart SSH</span>
+sudo /etc/init.d/ssh start
+sudo /etc/init.d/ssh stop
+sudo /etc/init.d/ssh restart
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">ssh</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-agent bash          <span class="c1"># start new bash agent</span>
+ssh-add privatekey      <span class="c1"># key you want to use for that session</span>
+             <span class="c1"># without a given key he search for ~/.ssh/id_rsa</span>
+</pre></div>
+</div>
+</div>
+<p>Connect to another station by ssh by default a password is needed or if configured no password but with rsh keys</p>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">ssh connection</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -p &lt;portnumber&gt; -l &lt;username&gt; server.address.com
+
+<span class="c1"># or</span>
+ssh -p &lt;portnumber&gt; user@server.address.com
+
+<span class="c1"># or with port forward and no commandline</span>
+ssh -N -T -L &lt;port&gt;:localhost:&lt;port&gt; &lt;user&gt;@&lt;hostname&gt;
+-N <span class="o">=</span> No Output
+-T <span class="o">=</span> No Terminal access
+-L <span class="o">=</span> Port Forwarding
+
+<span class="c1"># or with port forward and commandline</span>
+ssh -L &lt;port&gt;:localhost:&lt;port&gt; &lt;user&gt;@&lt;hostname&gt;
+</pre></div>
+</div>
+</div>
+<p>How to set up ssh with rsa keys</p>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">ssh keys</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generating RSA Key pair</span>
+ssh-keygen -t rsa
+
+<span class="c1"># Copy key</span>
+ssh-copy-id -i ~/.ssh/id_rsa.pub <span class="s2">&quot;user@remote.machine.com -p &lt;portnumber&gt;&quot;</span>
+<span class="c1"># OR</span>
+scp id_rsa.pub user@host:~/.ssh/machine.pub
+
+<span class="c1"># Append key to file authorized_keys</span>
+cat ~/.ssh/*.pub <span class="p">|</span> ssh admin@server.machine.com -p &lt;portnumber&gt; <span class="s1">&#39;umask 077; cat &gt;&gt;.ssh/authorized_keys&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="scp">
+<h2><a class="toc-backref" href="#id51">SCP</a><a class="headerlink" href="#scp" title="Permalink to this headline">¶</a></h2>
+<p>Transferring file through SSH
+For these command you have to use either the PW or already bash started</p>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">scp</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Synchronising directories</span>
+rsync -avr -P --rsh<span class="o">=</span><span class="s1">&#39;ssh -p YYYY&#39;</span> /localpath/to/dir user@host:/remotepath/to/dir
+
+<span class="c1"># Host -&gt; Remote</span>
+scp sourceFile user@host:/directory/targetFile
+scp -R sourceFolder user@host:/directory/targetFolder
+scp -P port sourceFile user@host:/directory/targetFolder
+
+<span class="c1"># Remote -&gt; Host</span>
+scp user@host:/directory/sourceFile targetFile
+scp -R user@host:/directory/sourceFolder targetFolder
+scp -P port user@host:/directory/sourceFolder targetFolder
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="crontab.html" class="btn btn-neutral float-right" title="Crontab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Commandline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

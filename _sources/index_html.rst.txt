@@ -28,6 +28,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    :titlesonly:
    :caption: Tools
 
+   tools/index
    tools/git/index
    tools/jupyter/index
    tools/pandoc/index
@@ -65,7 +66,6 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 
    multimedia/index
    security/index
-   pasttime/index
    about/index
 
 Site purpose and structure

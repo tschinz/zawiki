@@ -9,6 +9,7 @@
    os/mac/index
    os/win/index
 
+   tools/index
    tools/git/index
    tools/jupyter/index
    tools/pandoc/index
@@ -24,7 +25,6 @@
 
    multimedia/index
    security/index
-   pasttime/index
    about/index
 
 .. Not Fit for Latex

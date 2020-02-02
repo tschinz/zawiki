@@ -2,10 +2,6 @@
 Introduction
 ============
 
-.. figure:: img/logo.*
-   :align: right
-   :width: 150px
-
 .. contents:: :local:
 
 Additional Informations
