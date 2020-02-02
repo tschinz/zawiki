@@ -264,13 +264,13 @@ For inline images to work, a substitution needs to be made
 
 .. code-block:: ReST
 
-   .. |folder| image:: /img/icons/folder.*
+   .. |folder_icon| image:: /img/icons/folder.*
 
-   After that the image |folder| can be integrated inline.
+   After that the image |folder_icon| can be integrated inline.
 
-.. |folder| image:: /img/icons/folder.*
+.. |folder_icon| image:: /img/icons/folder.*
 
-After that the image |folder| can be integrated inline.
+After that the image |folder_icon| can be integrated inline.
 
 Lists
 =====

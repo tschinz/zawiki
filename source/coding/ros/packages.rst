@@ -15,13 +15,6 @@ ROS software is organized into packages, which can contain source code, launch f
 
 A package need two things, its source code and the message definition. It is encouraging to place message definition into a separate folder.
 
-
-.. |folder| image:: /img/icons/folder.*
-
-.. |file| image:: /img/icons/file.*
-
-.. |sign-check| image:: /img/icons/success.*
-
 * |folder| ``package_name``
 
   * |folder| ``config`` - parameter files (``YAML``)

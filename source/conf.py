@@ -124,7 +124,7 @@ html_static_path = ['_static']
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-#latex_engine = 'xelatex'
+latex_engine = 'xelatex'
 latex_elements = {
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
@@ -133,21 +133,30 @@ latex_elements = {
 
     'pointsize': '10pt',
     'extraclassoptions': 'onecolumn,oneside',
+    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
 
-    #'fontpkg': r'''
-    #    \setmainfont{DejaVu Serif}
-    #    \setsansfont{DejaVu Sans}
-    #    \setmonofont{DejaVu Sans Mono}
-    #''',
+    'inputenc': '',
+    'fncychap': '',
+    'utf8extra': '',
+    'fontpkg': '',
+    'babel': '\\usepackage{polyglossia}',
+    'cmappkg': '',
+    'fontenc': '',
+    'releasename': '',
+
+    'fontpkg': r'''
+        \setmainfont{DejaVu Serif}
+        \setsansfont{DejaVu Sans}
+        \setmonofont{DejaVu Sans Mono}
+    ''',
 
     'preamble': r'''
-        % !TeX program = xelatex
-        \usepackage[utf8]{inputenc} % not needed utf8 by default
-        %\usepackage[titles]{tocloft}
-        %\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-        %\setlength{\cftchapnumwidth}{0.75cm}
-        %\setlength{\cftsecindent}{\cftchapnumwidth}
-        %\setlength{\cftsecnumwidth}{1.25cm}
+        % !Tex program = xelatex
+        \usepackage[titles]{tocloft}
+        \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+        \setlength{\cftchapnumwidth}{0.75cm}
+        \setlength{\cftsecindent}{\cftchapnumwidth}
+        \setlength{\cftsecnumwidth}{1.25cm}
     ''',
 
     # Latex figure (float) alignment
@@ -205,4 +214,27 @@ linkcheck_anchors=False
 
 # -- RST Epilog ----------------------------------------------------------
 rst_epilog = """
+.. |folder| image:: /img/icons/folder.*
+.. |file| image:: /img/icons/file.*
+.. |sign-check| image:: /img/icons/success.*
+
+.. |star5| image:: /img/icons/star-5.*
+.. |star4| image:: /img/icons/star-4.*
+.. |star3| image:: /img/icons/star-3.*
+.. |star2| image:: /img/icons/star-2.*
+.. |star1| image:: /img/icons/star-1.*
+.. |star| image:: /img/icons/star.*
+
+.. |ch| image:: /img/icons/switzerland.*
+.. |de| image:: /img/icons/germany.*
+.. |china| image:: /img/icons/china.*
+.. |uk| image:: /img/icons/uk.*
+.. |usa| image:: /img/icons/usa.*
+.. |it| image:: /img/icons/italy.*
+.. |jp| image:: /img/icons/japan.*
+.. |fr| image:: /img/icons/france.*
+
+.. |linux| image:: /img/icons/linux.*
+.. |mac| image:: /img/icons/apple.*
+.. |win| image:: /img/icons/windows.*
 """

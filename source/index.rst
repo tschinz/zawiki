@@ -1,6 +1,39 @@
+.. toctree::
+   :hidden:
+   :glob:
+   :maxdepth: 2
+   :titlesonly:
+   :caption: Content
+
+   os/linux/index
+   os/mac/index
+   os/win/index
+
+   tools/index
+   tools/git/index
+   tools/jupyter/index
+   tools/pandoc/index
+
+   coding/ahk/index
+   coding/python/index
+   coding/licenses/index
+   coding/ros/index
+
+   writing/latex/index
+   writing/rst/index
+   writing/md/index
+
+   multimedia/index
+   security/index
+   about/index
+
+.. Not Fit for Latex
+   writing/emoji/index
+
 ====================================
 Welcome to Zawiki Knowledge Database
 ====================================
+
 
 .. figure:: img/logo.*
    :align: center
@@ -8,65 +41,6 @@ Welcome to Zawiki Knowledge Database
    :width: 150px
 
 This Repo is a collection of markdown and ReStructuredText pages. Here you can find various informations about topics I've always forget. This pages let me help to remember less but know more.
-
-
-.. toctree::
-   :hidden:
-   :glob:
-   :maxdepth: 2
-   :titlesonly:
-   :caption: Operating Systems
-
-   os/linux/index
-   os/mac/index
-   os/win/index
-
-.. toctree::
-   :hidden:
-   :glob:
-   :maxdepth: 2
-   :titlesonly:
-   :caption: Tools
-
-   tools/git/index
-   tools/jupyter/index
-   tools/pandoc/index
-
-.. toctree::
-   :hidden:
-   :glob:
-   :maxdepth: 2
-   :titlesonly:
-   :caption: Coding
-
-   coding/ahk/index
-   coding/python/index
-   coding/ros/index
-   coding/licenses/index
-
-.. toctree::
-   :hidden:
-   :glob:
-   :maxdepth: 2
-   :titlesonly:
-   :caption: Writing
-
-   writing/latex/index
-   writing/rst/index
-   writing/emoji/index
-   writing/md/index
-
-.. toctree::
-   :hidden:
-   :glob:
-   :maxdepth: 2
-   :titlesonly:
-   :caption: Else
-
-   multimedia/index
-   security/index
-   pasttime/index
-   about/index
 
 Site purpose and structure
 ==========================

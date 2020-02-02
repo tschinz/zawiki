@@ -66,6 +66,10 @@ clean-images: clean-pdf clean-png
 clean: clean-images
 	rm -rf $(BUILDDIR)/*
 
+.PHONY: clean-quick
+clean-quick:
+	rm -rf $(BUILDDIR)/*
+
 .PHONY: html
 html: # images-png
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
