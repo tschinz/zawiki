@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,8 +301,15 @@
             
   <div class="section" id="pip">
 <h1>PIP<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#admin" id="id1">Admin</a></p></li>
+<li><p><a class="reference internal" href="#package" id="id2">Package</a></p></li>
+<li><p><a class="reference internal" href="#create-requirements-txt" id="id3">Create <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></p></li>
+</ul>
+</div>
 <div class="section" id="admin">
-<h2>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Admin</a><a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show pip help</span>
 pip --help
 
@@ -318,7 +325,7 @@ python -m pip install --upgrade pip
 </div>
 </div>
 <div class="section" id="package">
-<h2>Package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Package</a><a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search a package</span>
 pip search &lt;packagename&gt;
 
@@ -339,7 +346,7 @@ pip uninstall &lt;packagename&gt;
 </div>
 </div>
 <div class="section" id="create-requirements-txt">
-<h2>Create <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#create-requirements-txt" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Create <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a><a class="headerlink" href="#create-requirements-txt" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
 </pre></div>
 </div>

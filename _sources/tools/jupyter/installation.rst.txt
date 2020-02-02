@@ -2,6 +2,8 @@
 Installation
 ============
 
+.. contents:: :local:
+
 see also :config_repo:`jupyter config <tree/master/config/jupyter>`
 
 My Extension list
@@ -99,7 +101,7 @@ When starting anaconda-navigator produces the follwowing error.
 .. code-block:: bash
    :linenos:
 
-   λ anaconda-navigator.exe
+   $ anaconda-navigator.exe
    Traceback (most recent call last):
      File "c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py", line 202, in <module>
        from PySide import __version__ as PYSIDE_VERSION  # analysis:ignore

@@ -2,6 +2,8 @@
 Docstring
 =========
 
+.. contents:: :local:
+
 Python begin file
 =================
 

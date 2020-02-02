@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,15 +301,35 @@
             
   <div class="section" id="pandoc">
 <h1>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#additional-arguments" id="id1">Additional Arguments</a></p>
+<ul>
+<li><p><a class="reference internal" href="#highlight-styles" id="id2">Highlight Styles</a></p></li>
+<li><p><a class="reference internal" href="#pdf-output" id="id3">PDF Output</a></p>
+<ul>
+<li><p><a class="reference internal" href="#for-my-template-needed-packages" id="id4">For my template needed packages</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#template" id="id5">Template</a></p>
+<ul>
+<li><p><a class="reference internal" href="#windows" id="id6">Windows</a></p></li>
+<li><p><a class="reference internal" href="#linux" id="id7">Linux</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>If you need to convert files from one markup format into another, pandoc is your swiss-army knife.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pandoc.org/try/">Pandoc Online</a></p></li>
 <li><p><a class="reference external" href="https://pandoc.org/installing.html">Pandoc Download</a></p></li>
 </ul>
 <div class="section" id="additional-arguments">
-<h2>Additional Arguments<a class="headerlink" href="#additional-arguments" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Additional Arguments</a><a class="headerlink" href="#additional-arguments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="highlight-styles">
-<h3>Highlight Styles<a class="headerlink" href="#highlight-styles" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">Highlight Styles</a><a class="headerlink" href="#highlight-styles" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all Highlight Styles</span>
 pandoc --list-highlight-styles
 pygments
@@ -327,12 +347,12 @@ haddock
 </div>
 </div>
 <div class="section" id="pdf-output">
-<h3>PDF Output<a class="headerlink" href="#pdf-output" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">PDF Output</a><a class="headerlink" href="#pdf-output" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--pdf-engine<span class="o">=</span>xelatex
 </pre></div>
 </div>
 <div class="section" id="for-my-template-needed-packages">
-<h4>For my template needed packages<a class="headerlink" href="#for-my-template-needed-packages" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id4">For my template needed packages</a><a class="headerlink" href="#for-my-template-needed-packages" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>cm-super</p>
 <ul>
@@ -348,16 +368,16 @@ haddock
 </div>
 </div>
 <div class="section" id="template">
-<h3>Template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Template</a><a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
 <p>Latex Template needs to be in the following folders</p>
 <div class="section" id="windows">
-<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id6">Windows</a><a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\\</span>Users<span class="se">\\</span>&lt;username&gt;<span class="se">\\</span>AppData<span class="se">\\</span>Roaming<span class="se">\\</span>pandoc<span class="se">\\</span>templates
 </pre></div>
 </div>
 </div>
 <div class="section" id="linux">
-<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id7">Linux</a><a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/.pandoc/templates/
 </pre></div>
 </div>

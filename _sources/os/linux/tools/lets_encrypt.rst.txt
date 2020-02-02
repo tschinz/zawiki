@@ -2,6 +2,8 @@
 Let's Encrypt
 =============
 
+.. contents:: :local:
+
 Version
 =======
 

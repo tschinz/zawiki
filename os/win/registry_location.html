@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,44 +301,55 @@
             
   <div class="section" id="registry">
 <h1>Registry<a class="headerlink" href="#registry" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#login" id="id1">Login</a></p></li>
+<li><p><a class="reference internal" href="#datetime" id="id2">DateTime</a></p></li>
+<li><p><a class="reference internal" href="#shell-overlay-icons" id="id3">Shell Overlay Icons</a></p></li>
+<li><p><a class="reference internal" href="#context-menu" id="id4">Context Menu</a></p></li>
+<li><p><a class="reference internal" href="#new-context-menu" id="id5">New Context Menu</a></p></li>
+<li><p><a class="reference internal" href="#sap-shortcut-password" id="id6">SAP Shortcut Password</a></p></li>
+<li><p><a class="reference internal" href="#powerpoint-options" id="id7">PowerPoint Options</a></p></li>
+</ul>
+</div>
 <div class="section" id="login">
-<h2>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Login</a><a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 </pre></div>
 </div>
 </div>
 <div class="section" id="datetime">
-<h2>DateTime<a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">DateTime</a><a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DateTime\Servers
 </pre></div>
 </div>
 </div>
 <div class="section" id="shell-overlay-icons">
-<h2>Shell Overlay Icons<a class="headerlink" href="#shell-overlay-icons" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Shell Overlay Icons</a><a class="headerlink" href="#shell-overlay-icons" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
 </pre></div>
 </div>
 </div>
 <div class="section" id="context-menu">
-<h2>Context Menu<a class="headerlink" href="#context-menu" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Context Menu</a><a class="headerlink" href="#context-menu" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
 </pre></div>
 </div>
 </div>
 <div class="section" id="new-context-menu">
-<h2>New Context Menu<a class="headerlink" href="#new-context-menu" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">New Context Menu</a><a class="headerlink" href="#new-context-menu" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_CLASSES_ROOT\
 </pre></div>
 </div>
 </div>
 <div class="section" id="sap-shortcut-password">
-<h2>SAP Shortcut Password<a class="headerlink" href="#sap-shortcut-password" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">SAP Shortcut Password</a><a class="headerlink" href="#sap-shortcut-password" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_CURRENT_USER\Software\SAP\SAPShortcut\Security
 </pre></div>
 </div>
 </div>
 <div class="section" id="powerpoint-options">
-<h2>PowerPoint Options<a class="headerlink" href="#powerpoint-options" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">PowerPoint Options</a><a class="headerlink" href="#powerpoint-options" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options
   * ExportBitmapResolution =<span class="p">&gt;</span> DWORD 32bit =<span class="p">&gt;</span> 300 (ppi)
   * AutomaticPicturesCompressionDefault =<span class="p">&gt;</span> DWORD =<span class="p">&gt;</span> 0

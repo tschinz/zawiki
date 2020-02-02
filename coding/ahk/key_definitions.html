@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,8 +301,14 @@
             
   <div class="section" id="key-definitions">
 <h1>Key Definitions<a class="headerlink" href="#key-definitions" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#raw-keys" id="id1">Raw Keys</a></p></li>
+<li><p><a class="reference internal" href="#double-keypress-detection" id="id2">Double Keypress Detection</a></p></li>
+</ul>
+</div>
 <div class="section" id="raw-keys">
-<h2>Raw Keys<a class="headerlink" href="#raw-keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Raw Keys</a><a class="headerlink" href="#raw-keys" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ahk notranslate"><div class="highlight"><pre><span></span><span class="o">^</span><span class="c1">  ; Ctrl</span>
 <span class="n">#</span><span class="c1">  ; Win</span>
 <span class="o">&lt;</span><span class="n">#</span><span class="c1"> ; Left Win</span>
@@ -324,7 +330,7 @@
 </div>
 </div>
 <div class="section" id="double-keypress-detection">
-<h2>Double Keypress Detection<a class="headerlink" href="#double-keypress-detection" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Double Keypress Detection</a><a class="headerlink" href="#double-keypress-detection" title="Permalink to this headline">¶</a></h2>
 <p>Alt Key in the example</p>
 <div class="highlight-ahk notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">Alt</span><span class="o">::</span>
 <span class="n">DoubleAlt</span> <span class="o">:=</span> <span class="nv">A_PriorHotkey</span> <span class="o">=</span><span class="s">&quot;~Alt&quot;</span> <span class="n">AND</span> <span class="nv">A_TimeSincePriorHotkey</span> <span class="o">&lt;</span> <span class="mi">400</span>

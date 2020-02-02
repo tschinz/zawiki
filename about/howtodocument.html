@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,12 +301,23 @@
             
   <div class="section" id="hack-this-documentation">
 <h1>HACK this documentation<a class="headerlink" href="#hack-this-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#new-documentation-section" id="id1">New Documentation Section</a></p></li>
+<li><p><a class="reference internal" href="#example-section" id="id2">Example Section</a></p>
+<ul>
+<li><p><a class="reference internal" href="#section-images" id="id3">Section Images</a></p></li>
+<li><p><a class="reference internal" href="#write-the-contents" id="id4">Write the contents</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>If you want to add your page to this documentation you need to add your source file in the appropriate section.
 Every main section has its own folder structure and its own <code class="docutils literal notranslate"><span class="pre">img/</span></code> folder containing all images for this section.</p>
 <p>This documentation uses a recursive index tree: every folder have a special <a class="reference download internal" download="" href="../_downloads/34908d0b9bb342052cbea233ce2d4054/index.rst"><code class="xref download docutils literal notranslate"><span class="pre">index.rst</span></code></a> file that tell sphinx witch file, and in what order put it in the documentation tree.</p>
 <p>If you don’t have enough knowledge about ReStructuredText then you can also use the <a class="reference external" href="https://pandoc.org/try/">pandoc translator</a> or use the internal <a class="reference internal" href="../writing/rst/cheatsheet.html"><span class="doc">Cheatsheet</span></a></p>
 <div class="section" id="new-documentation-section">
-<h2>New Documentation Section<a class="headerlink" href="#new-documentation-section" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">New Documentation Section</a><a class="headerlink" href="#new-documentation-section" title="Permalink to this headline">¶</a></h2>
 <p>If you want to add a new section, you need to specify in the <a class="reference download internal" download="" href="../_downloads/db4b047b30ffef7855b12b527860ac2c/index.rst"><code class="xref download docutils literal notranslate"><span class="pre">main</span> <span class="pre">index.rst</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">section/index.rst</span></code> file of the new section.</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:hidden:</span>
@@ -329,7 +340,7 @@ Every main section has its own folder structure and its own <code class="docutil
 <p>The section name should be the same as the folder name, but for Sphinx this is not required. Sphinx will take the name of the section from the title of the <code class="docutils literal notranslate"><span class="pre">section/index.rst</span></code> file.</p>
 </div>
 <div class="section" id="example-section">
-<h2>Example Section<a class="headerlink" href="#example-section" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Example Section</a><a class="headerlink" href="#example-section" title="Permalink to this headline">¶</a></h2>
 <p>I want to document the new topic in SPL Knowhow repo, and want to create a section for it; let’s call it <code class="docutils literal notranslate"><span class="pre">Section</span></code></p>
 <p>So I need to create a folder named <code class="docutils literal notranslate"><span class="pre">section/</span></code> (name is not important), and in it create a <code class="docutils literal notranslate"><span class="pre">section/index.rst</span></code> file like:</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="gh">=============</span>
@@ -362,11 +373,11 @@ makes so you can use the <code class="docutils literal notranslate"><span class=
 </div>
 <p>Now I can add additional <code class="docutils literal notranslate"><span class="pre">ReST</span></code> files like <code class="docutils literal notranslate"><span class="pre">section/intro.rst</span></code> and other files like <code class="docutils literal notranslate"><span class="pre">section/section_part_1.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">ssection/ection_part_2.rst</span></code>, etc.</p>
 <div class="section" id="section-images">
-<h3>Section Images<a class="headerlink" href="#section-images" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Section Images</a><a class="headerlink" href="#section-images" title="Permalink to this headline">¶</a></h3>
 <p>Add an image folder in the section folder <code class="docutils literal notranslate"><span class="pre">section/img</span></code>, in case of additional documents ass a <code class="docutils literal notranslate"><span class="pre">section/docs</span></code> folder too.</p>
 </div>
 <div class="section" id="write-the-contents">
-<h3>Write the contents<a class="headerlink" href="#write-the-contents" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Write the contents</a><a class="headerlink" href="#write-the-contents" title="Permalink to this headline">¶</a></h3>
 <p>That’s it, now you can add all you want in the new section <code class="docutils literal notranslate"><span class="pre">section</span></code> and all pages will show up in the documentation automatically.</p>
 </div>
 </div>

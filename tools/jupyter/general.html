@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,8 +301,20 @@
             
   <div class="section" id="general">
 <h1>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#anaconda-conda-update" id="id1">Anaconda / Conda Update</a></p></li>
+<li><p><a class="reference internal" href="#nbconvert" id="id2">nbconvert</a></p>
+<ul>
+<li><p><a class="reference internal" href="#convert-to-python-for-linting" id="id3">Convert to python for linting</a></p></li>
+<li><p><a class="reference internal" href="#convert-to-html" id="id4">Convert to html</a></p></li>
+<li><p><a class="reference internal" href="#convert-to-pdf" id="id5">Convert to pdf</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="anaconda-conda-update">
-<h2>Anaconda / Conda Update<a class="headerlink" href="#anaconda-conda-update" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Anaconda / Conda Update</a><a class="headerlink" href="#anaconda-conda-update" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update all Conda packages</span>
 conda update --all
 
@@ -313,7 +325,7 @@ conda update anaconda
 </div>
 </div>
 <div class="section" id="nbconvert">
-<h2>nbconvert<a class="headerlink" href="#nbconvert" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">nbconvert</a><a class="headerlink" href="#nbconvert" title="Permalink to this headline">¶</a></h2>
 <p>Converts jupyter notebook to other formats</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to &lt;format&gt; notebook.ipynb
 </pre></div>
@@ -347,19 +359,19 @@ conda update anaconda
 <li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">notebook</span></code> -</p></li>
 </ul>
 <div class="section" id="convert-to-python-for-linting">
-<h3>Convert to python for linting<a class="headerlink" href="#convert-to-python-for-linting" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Convert to python for linting</a><a class="headerlink" href="#convert-to-python-for-linting" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to script test.ipynb
 </pre></div>
 </div>
 </div>
 <div class="section" id="convert-to-html">
-<h3>Convert to html<a class="headerlink" href="#convert-to-html" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Convert to html</a><a class="headerlink" href="#convert-to-html" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to html test.ipynb
 </pre></div>
 </div>
 </div>
 <div class="section" id="convert-to-pdf">
-<h3>Convert to pdf<a class="headerlink" href="#convert-to-pdf" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Convert to pdf</a><a class="headerlink" href="#convert-to-pdf" title="Permalink to this headline">¶</a></h3>
 <p>needs Latex installed see: <a class="reference internal" href="../../writing/latex/install.html"><span class="doc">LaTeX</span></a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to latex test.ipynb
 </pre></div>

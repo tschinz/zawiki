@@ -2,6 +2,8 @@
 Flake 8
 =======
 
+.. contents:: :local:
+
 :config_repo:`Python samples <tree/master/scripts/python>`
 
 .. code-block:: bash

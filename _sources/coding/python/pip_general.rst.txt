@@ -2,6 +2,8 @@
 PIP
 ===
 
+.. contents:: :local:
+
 Admin
 =====
 

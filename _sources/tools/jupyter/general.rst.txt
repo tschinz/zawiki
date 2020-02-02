@@ -2,6 +2,8 @@
 General
 =======
 
+.. contents:: :local:
+
 Anaconda / Conda Update
 =======================
 

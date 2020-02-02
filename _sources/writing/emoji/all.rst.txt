@@ -2,9 +2,10 @@
 All Emoji
 =========
 
+.. contents:: :local:
+
 People
 ======
-
 
 .. list-table::
    :header-rows: 0

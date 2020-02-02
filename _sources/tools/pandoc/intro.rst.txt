@@ -2,6 +2,8 @@
 Pandoc
 ======
 
+.. contents:: :local:
+
 If you need to convert files from one markup format into another, pandoc is your swiss-army knife.
 
 * `Pandoc Online <https://pandoc.org/try/>`_

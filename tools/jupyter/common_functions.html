@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.1-8-ga43f0f4
+                v0.11
               </div>
             
           
@@ -104,9 +104,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
@@ -115,6 +112,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -301,10 +301,25 @@
             
   <div class="section" id="common-functions">
 <h1>Common Functions<a class="headerlink" href="#common-functions" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#common-jupyterlab-and-nodejs-functions" id="id1">Common Jupyterlab and Nodejs functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#install-nvm" id="id2">install nvm</a></p></li>
+<li><p><a class="reference internal" href="#install-nodejs-via-conda" id="id3">Install nodejs via conda</a></p></li>
+<li><p><a class="reference internal" href="#update-npm" id="id4">update npm</a></p></li>
+<li><p><a class="reference internal" href="#rebuild-jupyterlab" id="id5">Rebuild Jupyterlab</a></p></li>
+<li><p><a class="reference internal" href="#remove-nodejs-and-npm" id="id6">Remove nodejs and npm</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#auto-import-of-libraries" id="id7">Auto import of Libraries</a></p></li>
+<li><p><a class="reference internal" href="#check" id="id8">Check</a></p></li>
+</ul>
+</div>
 <div class="section" id="common-jupyterlab-and-nodejs-functions">
-<h2>Common Jupyterlab and Nodejs functions<a class="headerlink" href="#common-jupyterlab-and-nodejs-functions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Common Jupyterlab and Nodejs functions</a><a class="headerlink" href="#common-jupyterlab-and-nodejs-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="install-nvm">
-<h3>install nvm<a class="headerlink" href="#install-nvm" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">install nvm</a><a class="headerlink" href="#install-nvm" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://github.com/creationix/nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh <span class="p">|</span> zsh
 <span class="c1">### Install latest nodejs</span>
@@ -313,32 +328,32 @@ nvm install node <span class="c1"># &quot;node&quot; is an alias for the latest 
 </div>
 </div>
 <div class="section" id="install-nodejs-via-conda">
-<h3>Install nodejs via conda<a class="headerlink" href="#install-nodejs-via-conda" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Install nodejs via conda</a><a class="headerlink" href="#install-nodejs-via-conda" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge nodejs
 </pre></div>
 </div>
 </div>
 <div class="section" id="update-npm">
-<h3>update npm<a class="headerlink" href="#update-npm" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">update npm</a><a class="headerlink" href="#update-npm" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo npm install -g npm
 </pre></div>
 </div>
 </div>
 <div class="section" id="rebuild-jupyterlab">
-<h3>Rebuild Jupyterlab<a class="headerlink" href="#rebuild-jupyterlab" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Rebuild Jupyterlab</a><a class="headerlink" href="#rebuild-jupyterlab" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab build
 </pre></div>
 </div>
 </div>
 <div class="section" id="remove-nodejs-and-npm">
-<h3>Remove nodejs and npm<a class="headerlink" href="#remove-nodejs-and-npm" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Remove nodejs and npm</a><a class="headerlink" href="#remove-nodejs-and-npm" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda remove nodejs npm
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="auto-import-of-libraries">
-<h2>Auto import of Libraries<a class="headerlink" href="#auto-import-of-libraries" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Auto import of Libraries</a><a class="headerlink" href="#auto-import-of-libraries" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">~/.ipython/profile_default</span></code></p></li>
 <li><p>Create a folder called <code class="docutils literal notranslate"><span class="pre">startup</span></code> if it’s not already there</p></li>
@@ -410,7 +425,7 @@ nvm install node <span class="c1"># &quot;node&quot; is an alias for the latest 
 </td></tr></table></div>
 </div>
 <div class="section" id="check">
-<h2>Check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Check</a><a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h2>
 <p>Confirm that Libraries are loaded with</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">globals</span><span class="p">()</span>
 </pre></div>
