@@ -124,22 +124,22 @@ html_static_path = ['_static']
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-latex_engine = 'xelatex'
+#latex_engine = 'xelatex'
 latex_elements = {
-#    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-#    'printindex': r'\footnotesize\raggedright\printindex',
-#
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    'printindex': r'\footnotesize\raggedright\printindex',
+
     'papersize': 'a4paper',
-#
+
     'pointsize': '10pt',
     'extraclassoptions': 'onecolumn,oneside',
-#
-#    'fontpkg': r'''
-#        \setmainfont{DejaVu Serif}
-#        \setsansfont{DejaVu Sans}
-#        \setmonofont{DejaVu Sans Mono}
-#    ''',
-#
+
+    #'fontpkg': r'''
+    #    \setmainfont{DejaVu Serif}
+    #    \setsansfont{DejaVu Sans}
+    #    \setmonofont{DejaVu Sans Mono}
+    #''',
+
     'preamble': r'''
         % !TeX program = xelatex
         \usepackage[utf8]{inputenc} % not needed utf8 by default
@@ -149,10 +149,10 @@ latex_elements = {
         %\setlength{\cftsecindent}{\cftchapnumwidth}
         %\setlength{\cftsecnumwidth}{1.25cm}
     ''',
-#
-#    # Latex figure (float) alignment
-#    #
-#    'figure_align': 'htbp',
+
+    # Latex figure (float) alignment
+    #
+    'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

@@ -9,7 +9,7 @@ BUILDDIR      = _build
 OUTPUTDIR     = pdf
 FILENAME      = zawiki
 # IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
-IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/*)))
+IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*)))
 IMAGEDIRS     = $(patsubst source/%/, %, $(IMAGEOBJS)) # remove source/ and last /
 IMAGEDIRS    += img/icons
 # SVG to PDF conversion
@@ -68,6 +68,8 @@ clean: clean-images
 
 .PHONY: html
 html: # images-png
+	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
+	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -144,6 +146,8 @@ epub:
 
 .PHONY: latex
 latex: images-pdf
+	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
+	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
@@ -152,6 +156,8 @@ latex: images-pdf
 
 .PHONY: latexpdf
 latexpdf: images-pdf
+	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
+	cp $(SOURCEDIR)/index_latex.rst $(SOURCEDIR)/index.rst
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf

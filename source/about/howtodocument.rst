@@ -2,6 +2,8 @@
 HACK this documentation
 =======================
 
+.. contents:: :local:
+
 If you want to add your page to this documentation you need to add your source file in the appropriate section.
 Every main section has its own folder structure and its own ``img/`` folder containing all images for this section.
 

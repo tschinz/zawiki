@@ -2,6 +2,8 @@
 Git General
 ===========
 
+.. contents:: :local:
+
 Global setup
 ============
 

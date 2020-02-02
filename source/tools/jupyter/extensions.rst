@@ -2,6 +2,8 @@
 Extensions
 ==========
 
+.. contents:: :local:
+
 Installed extensions
 ====================
 

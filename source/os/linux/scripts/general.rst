@@ -2,6 +2,8 @@
 General
 =======
 
+.. contents:: :local:
+
 Shell Bang
 ==========
 

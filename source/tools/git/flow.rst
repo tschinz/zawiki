@@ -2,6 +2,8 @@
 Git Flow
 ========
 
+.. contents:: :local:
+
 Branches
 ========
 

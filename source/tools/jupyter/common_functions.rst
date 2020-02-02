@@ -2,6 +2,8 @@
 Common Functions
 ================
 
+.. contents:: :local:
+
 Common Jupyterlab and Nodejs functions
 ======================================
 

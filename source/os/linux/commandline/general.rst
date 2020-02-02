@@ -2,6 +2,8 @@
 General Shell Commands
 ======================
 
+.. contents:: :local:
+
 Change permissions on type
 ==========================
 

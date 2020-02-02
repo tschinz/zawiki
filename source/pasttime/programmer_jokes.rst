@@ -2,6 +2,8 @@
 Programmer Jokes
 ================
 
+.. contents:: :local:
+
 Christmas and Halloween
 =======================
 

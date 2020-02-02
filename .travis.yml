@@ -7,12 +7,8 @@ dist: xenial
 sudo: true
 
 stages:
-  #- test-links
-  #- build
   - name: deploy-html
     if: branch = master  # Deploy only on master commits
-  #- name: deploy-pdf
-  #  if: branch = master  # Deploy only on master commits
 
 install:
   - echo "Install additional packages"
@@ -40,11 +36,6 @@ install:
 
 jobs:
   include:
-    - stage: test-links
-      script: make linkcheck
-    - stage: build
-      script: make html
-      script: make latexpdf
     - stage: deploy-html
       script: make html
       deploy:

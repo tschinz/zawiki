@@ -2,6 +2,8 @@
 Systemd
 =======
 
+.. contents:: :local:
+
 List services
 =============
 
