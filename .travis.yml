@@ -50,7 +50,7 @@ jobs:
       deploy:
         provider: pages
         skip-cleanup: true
-        github-token: ${{ secrets.travis_token }}  # Set in the settings page of your repository, as a secure variable
+        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
         keep-history: true
         local-dir: _build
         on:
@@ -60,7 +60,7 @@ jobs:
       deploy:
         provider: pages
         skip-cleanup: true
-        github-token: ${{ secrets.travis_token }}  # Set in the settings page of your repository, as a secure variable
+        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
         keep-history: true
         # local-dir: public/pdf
         file:

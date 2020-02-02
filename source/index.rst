@@ -9,7 +9,6 @@ Welcome to Zawiki Knowledge Database
 
 This Repo is a collection of markdown and ReStructuredText pages. Here you can find various informations about topics I've always forget. This pages let me help to remember less but know more.
 
-**Content**
 
 .. toctree::
    :hidden:
@@ -89,4 +88,4 @@ Known Issues / TODOs
 
 * Github CI not working for PDF creation
 * Missing pages from original Zawiki
-* missing pages from config repo
+* missing links to config repo
