@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./source/img/logo.svg" alt="Zawiki Logo" width="400">
+  <img src="./source/img/logo.svg" alt="Zawiki Logo" width="250">
   <br>
   Zawiki Knowledge Database
   <br>

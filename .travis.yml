@@ -50,9 +50,9 @@ jobs:
       deploy:
         provider: pages
         skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+        github-token: ${{ secrets.travis_token }}  # Set in the settings page of your repository, as a secure variable
         keep-history: true
-        local-dir: public
+        local-dir: _build
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
     - stage: deploy-pdf
@@ -60,11 +60,11 @@ jobs:
       deploy:
         provider: pages
         skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+        github-token: ${{ secrets.travis_token }}  # Set in the settings page of your repository, as a secure variable
         keep-history: true
         # local-dir: public/pdf
         file:
-          - pdf/Cheatsheets.pdf
+          - pdf/zawiki.pdf
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
 
