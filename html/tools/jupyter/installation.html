@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pandoc" href="../pandoc/index.html" />
+    <link rel="prev" title="Plotly Dash" href="install_plotly_dash.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.1-7-g6b55e23
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Jupyter</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pasttime/index.html">Past Time</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pasttime/programmer_jokes.html">Programmer Jokes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Jupyter</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/tools/jupyter/installation.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>see also <a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter config</a></p>
+<div class="section" id="my-extension-list">
+<h2>My Extension list<a class="headerlink" href="#my-extension-list" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install @jupyterlab/statusbar-extension
+jupyter labextension install @jupyterlab/geojson-extension
+jupyter labextension install @jupyterlab/git
+pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg<span class="o">=</span>jupyterlab_git
+jupyter serverextension <span class="nb">enable</span> --py jupyterlab_git --sys-prefix
+jupyter labextension install @jupyterlab/plotly-extension
+jupyter labextension install @jupyterlab/toc
+jupyter labextension install @deathbeds/jupyterlab_graphviz
+jupyter labextension install @ryantam626/jupyterlab_sublime
+jupyter labextension install jupyter-matplotlib
+jupyter labextension install jupyterlab_bokeh
+jupyter labextension install @mflevine/jupyterlab_html
+jupyter labextension install jupyterlab-drawio
+jupyter labextension install jupyterlab-flake8
+<span class="c1"># jupyter labextension install jupyterlab_nbmetadata</span>
+jupyter labextension install jupyterlab_hidecode
+jupyter labextension install @krassowski/jupyterlab_go_to_definition
+jupyter labextension install @lckr/jupyterlab_variableinspector
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="all-in-one-install">
+<h3>All in one install<a class="headerlink" href="#all-in-one-install" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib jupyterlab_bokeh @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
+pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg<span class="o">=</span>jupyterlab_git
+jupyter serverextension <span class="nb">enable</span> --py jupyterlab_git --sys-prefix
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="add-install-r-to-jupyter">
+<h3>Add install R to jupyter<a class="headerlink" href="#add-install-r-to-jupyter" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c r r-essentials
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-install-pandoc-and-inkscape-to-conda">
+<h3>Add install pandoc and inkscape to conda<a class="headerlink" href="#add-install-pandoc-and-inkscape-to-conda" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>conda install -c conda-forge pandoc
+conda install -c conda-forge inkscape
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="install-python-additional-stuff">
+<h2>Install Python Additional Stuff<a class="headerlink" href="#install-python-additional-stuff" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="graphviz">
+<h3>Graphviz<a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h3>
+<p>Install Graphviz from <a class="reference external" href="https://graphviz.gitlab.io/download/">https://graphviz.gitlab.io/download/</a>
+put Graphviz/bin in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install graphviz
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-python-libraries">
+<h3>Install python Libraries<a class="headerlink" href="#install-python-libraries" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install pixiedust
+pip install SchemDraw
+pip install nbwavedrom
+pip install flake8
+pip install pyflakes
+pip install nbconvert
+pip install watermark
+</pre></div>
+</td></tr></table></div>
+<p><strong>oneline</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pixiedust SchemDraw nbwavedrom flake8 pyflakes nbconvert graphviz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="problems">
+<h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="anaconda-navigator-not-starting">
+<h3>Anaconda Navigator not starting<a class="headerlink" href="#anaconda-navigator-not-starting" title="Permalink to this headline">¶</a></h3>
+<p>When starting anaconda-navigator produces the follwowing error.</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span>λ anaconda-navigator.exe
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">202</span>, in &lt;module&gt;
+    from PySide import __version__ as PYSIDE_VERSION  <span class="c1"># analysis:ignore</span>
+ModuleNotFoundError: No module named <span class="s1">&#39;PySide&#39;</span>
+
+During handling of the above exception, another exception occurred:
+
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\Scripts\anaconda-navigator-script.py&quot;</span>, line <span class="m">6</span>, in &lt;module&gt;
+    from anaconda_navigator.app.main import main
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\app\main.py&quot;</span>, line <span class="m">22</span>, in &lt;module&gt;
+    from anaconda_navigator.utils.conda import is_conda_available
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\utils\__init__.py&quot;</span>, line <span class="m">15</span>, in &lt;module&gt;
+    from qtpy.QtGui import QIcon
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">208</span>, in &lt;module&gt;
+    raise PythonQtError<span class="o">(</span><span class="s1">&#39;No Qt bindings could be found&#39;</span><span class="o">)</span>
+qtpy.PythonQtError: No Qt bindings could be found
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip uninstall PyQt5
+conda update conda
+conda update anaconda-navigator
+anaconda-navigator.exe
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="install-plotly-and-plotly-express">
+<h2>Install Plotly and Plotly Express<a class="headerlink" href="#install-plotly-and-plotly-express" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c plotly plotly_express plotly-orca
+</pre></div>
+</div>
+</div>
+<div class="section" id="better-pdf-export">
+<h2>Better PDF Export<a class="headerlink" href="#better-pdf-export" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo apt-get install texlive-xetex
+pip install jupyter_contrib_nbextensions
+pip install cite2c
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pandoc/index.html" class="btn btn-neutral float-right" title="Pandoc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install_plotly_dash.html" class="btn btn-neutral float-left" title="Plotly Dash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

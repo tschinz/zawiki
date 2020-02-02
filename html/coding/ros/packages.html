@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Packages &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="External Packages and Nodes" href="packages-ext.html" />
+    <link rel="prev" title="Lidar Driver" href="lidar-driver.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.1-7-g6b55e23
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ROS - Robot Operating System</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pasttime/index.html">Past Time</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pasttime/programmer_jokes.html">Programmer Jokes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">ROS - Robot Operating System</a> &raquo;</li>
+        
+      <li>Packages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/ros/packages.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="packages">
+<h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#package-structure" id="id4">Package Structure</a></p></li>
+<li><p><a class="reference internal" href="#package-files" id="id5">Package Files</a></p>
+<ul>
+<li><p><a class="reference internal" href="#file-package-xml" id="id6">file <code class="docutils literal notranslate"><span class="pre">package.xml</span></code></a></p></li>
+<li><p><a class="reference internal" href="#file-cmakelists-txt" id="id7">file <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#eclipse-integration" id="id8">Eclipse integration</a></p></li>
+<li><p><a class="reference internal" href="#c-client-library" id="id9">C++ Client Library</a></p>
+<ul>
+<li><p><a class="reference internal" href="#example" id="id10">Example</a></p></li>
+<li><p><a class="reference internal" href="#node-handle" id="id11">Node Handle</a></p></li>
+<li><p><a class="reference internal" href="#logging-ros-info" id="id12">Logging <code class="docutils literal notranslate"><span class="pre">ROS_INFO</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#severity-levels" id="id13">Severity Levels</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#subscriber" id="id14">Subscriber</a></p></li>
+<li><p><a class="reference internal" href="#publisher" id="id15">Publisher</a></p></li>
+<li><p><a class="reference internal" href="#oop" id="id16">OOP</a></p></li>
+<li><p><a class="reference internal" href="#parameter-server" id="id17">Parameter Server</a></p>
+<ul>
+<li><p><a class="reference internal" href="#c-api" id="id18">C++ API</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="package-structure">
+<h2><a class="toc-backref" href="#id4">Package Structure</a><a class="headerlink" href="#package-structure" title="Permalink to this headline">¶</a></h2>
+<p>ROS software is organized into packages, which can contain source code, launch files, configuration files, message definitions, data, and documentation. A package can depend on other packages called <em>dependencies</em>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg &lt;package_name&gt; <span class="o">{</span>dependencies<span class="o">}</span>
+</pre></div>
+</div>
+<p>A package need two things, its source code and the message definition. It is encouraging to place message definition into a separate folder.</p>
+<ul class="simple">
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">package_name</span></code></p>
+<ul>
+<li><p>​|folder| <code class="docutils literal notranslate"><span class="pre">config</span></code> - parameter files (<code class="docutils literal notranslate"><span class="pre">YAML</span></code>)</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">include/package_name</span></code> - C++ include headers</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">launch</span></code> - <code class="docutils literal notranslate"><span class="pre">*.launch</span></code> files</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">src</span></code> - Source files</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">test</span></code> - Unit and or ROS Tests</p></li>
+<li><p><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">CMakeList.txt</span></code> - CMake build file</p></li>
+<li><p><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> - Package information</p></li>
+</ul>
+</li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">package_name_msgs</span></code></p>
+<ul>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">action</span></code> - Action definitions</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">msg</span></code> - Message definitions</p></li>
+<li><p><img alt="folder" src="../../_images/folder.svg" /> <code class="docutils literal notranslate"><span class="pre">src</span></code> - Service definitions</p></li>
+<li><p><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">CMakeList.txt</span></code> - CMake build file</p></li>
+<li><p><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> - Package information</p></li>
+</ul>
+</li>
+</ul>
+<p>More info</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/Packages">http://wiki.ros.org/Packages</a></p></li>
+</ul>
+</div>
+<div class="section" id="package-files">
+<h2><a class="toc-backref" href="#id5">Package Files</a><a class="headerlink" href="#package-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-package-xml">
+<h3><a class="toc-backref" href="#id6"><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">package.xml</span></code></a><a class="headerlink" href="#file-package-xml" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> file defines the properties of the package</p>
+<ul>
+<li><p>Package name</p></li>
+<li><p>Version number</p></li>
+<li><p>Authors</p></li>
+<li><p>Dependencies on other packages</p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">package.xml</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;package</span> <span class="na">format=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>ros_package_template<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.1.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;description&gt;</span>A template for ROS packages.<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;maintainer</span> <span class="na">email=</span><span class="s">&quot;user@email.ch&quot;</span><span class="nt">&gt;</span>Firstname Lastname<span class="nt">&lt;/maintainer&gt;</span>
+    <span class="nt">&lt;license&gt;</span>BSD<span class="nt">&lt;/license&gt;</span>
+    <span class="nt">&lt;url</span> <span class="na">type=</span><span class="s">&quot;website&quot;</span><span class="nt">&gt;</span>https://github.com/link/ros_<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;author</span> <span class="na">email=</span><span class="s">&quot;user@email.ch&quot;</span><span class="nt">&gt;</span>Firstname Lastname<span class="nt">&lt;/author&gt;</span>
+
+    <span class="nt">&lt;buildtool_depend&gt;</span>catkin<span class="nt">&lt;/buildtool_depend&gt;</span>
+
+    <span class="nt">&lt;depend&gt;</span>roscpp<span class="nt">&lt;/depend&gt;</span>
+    <span class="nt">&lt;depend&gt;</span>sensor_msgs<span class="nt">&lt;/depend&gt;</span>
+<span class="nt">&lt;/package&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>More info</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/catkin/package.xml">http://wiki.ros.org/catkin/package.xml</a></p></li>
+</ul>
+</div>
+<div class="section" id="file-cmakelists-txt">
+<h3><a class="toc-backref" href="#id7"><img alt="file" src="../../_images/file.svg" /> <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code></a><a class="headerlink" href="#file-cmakelists-txt" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> is the input to the CMake build system</p>
+<ol class="arabic simple">
+<li><p>Required CMake Version <code class="docutils literal notranslate"><span class="pre">(cmake_minimum_required)</span></code></p></li>
+<li><p>Package Name <code class="docutils literal notranslate"><span class="pre">(project())</span></code></p></li>
+<li><p>Find other CMake/Catkin packages needed for build <code class="docutils literal notranslate"><span class="pre">(find_package())</span></code></p></li>
+<li><p>Message/Service/Action Generators <code class="docutils literal notranslate"><span class="pre">(add_message_files(),</span> <span class="pre">add_service_files(),</span> <span class="pre">add_action_files())</span></code></p></li>
+<li><p>Invoke message/service/action generation <code class="docutils literal notranslate"><span class="pre">(generate_messages())</span></code></p></li>
+<li><p>Specify package build info export <code class="docutils literal notranslate"><span class="pre">(catkin_package())</span></code></p></li>
+<li><p>Libraries/Executables to build <code class="docutils literal notranslate"><span class="pre">(add_library()/add_executable()/target_link_libraries())</span></code></p></li>
+<li><p>Tests to build <code class="docutils literal notranslate"><span class="pre">(catkin_add_gtest())</span></code></p></li>
+<li><p>Install rules <code class="docutils literal notranslate"><span class="pre">(install())</span></code></p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">CMakeLists.txt</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">2.8.3</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">husky_highlevel_controller</span><span class="p">)</span>
+<span class="nb">add_definitions</span><span class="p">(</span><span class="s">--std=c++11</span><span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">catkin</span> <span class="s">REQUIRED</span> <span class="s">COMPONENTS</span> <span class="s">roscpp</span> <span class="s">sensor_msgs</span> <span class="p">)</span>
+
+<span class="nb">catkin_package</span><span class="p">(</span>
+  <span class="s">INCLUDE_DIRS</span> <span class="s">include</span>
+  <span class="c"># LIBRARIES</span>
+  <span class="s">CATKIN_DEPENDS</span> <span class="s">roscpp</span>  <span class="s">sensor_msgs</span>
+  <span class="c"># DEPENDS</span>
+<span class="p">)</span>
+
+<span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span> <span class="o">${</span><span class="nv">catkin_INCLUDE_DIRS</span><span class="o">}</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="s">src/</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="s">_node.cpp</span> <span class="s">src/HuskyHighlevelController.cpp</span><span class="p">)</span>
+
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>More info</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/catkin/CMakeLists.txt">http://wiki.ros.org/catkin/CMakeLists.txt</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="eclipse-integration">
+<h2><a class="toc-backref" href="#id8">Eclipse integration</a><a class="headerlink" href="#eclipse-integration" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Build the Eclipse project files with additional build flags</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin build package_name --cmake-args -G<span class="s2">&quot;Eclipse CDT4 - Unix Makefiles” -D__cplusplus=201103L D__GXX_EXPERIMENTAL_CXX0X__=1</span>
+</pre></div>
+</div>
+</li>
+<li><p>To use flags by default in your catkin environment, use the <cite>catkin config</cite> command.</p></li>
+<li><p>The Eclipse project files will be generated in <cite>~/catkin_ws/build</cite></p></li>
+</ul>
+</div>
+<div class="section" id="c-client-library">
+<h2><a class="toc-backref" href="#id9">C++ Client Library</a><a class="headerlink" href="#c-client-library" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/roscpp">http://wiki.ros.org/roscpp</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview">http://wiki.ros.org/roscpp/Overview</a></p></li>
+</ul>
+<div class="section" id="example">
+<h3><a class="toc-backref" href="#id10">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ros/ros.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>                   <span class="c1">// ROS main head file</span>
+<span class="p">{</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;hello_world&quot;</span><span class="p">);</span>         <span class="c1">// has to be called before ROS func&#39;s</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nodeHandle</span><span class="p">;</span>                   <span class="c1">// access poiunt for communication</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loopRate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>                       <span class="c1">// ros:Rate runs loops at desired freq e.g. 10 = 10 Hz</span>
+
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span> <span class="p">{</span>                           <span class="c1">// checks if a node should continue running</span>
+        <span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;Hello World &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">count</span><span class="p">);</span> <span class="c1">// ROS_info() logs messages from fs</span>
+        <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>                          <span class="c1">// processes incommind msg via callbacks</span>
+        <span class="n">loopRate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="node-handle">
+<h3><a class="toc-backref" href="#id11">Node Handle</a><a class="headerlink" href="#node-handle" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview/NodeHandles">http://wiki.ros.org/roscpp/Overview/NodeHandles</a></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Default (public) node handle:      // Recommended</span>
+<span class="n">nh_</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="p">();</span>              <span class="c1">// /namespace/topic</span>
+
+<span class="c1">// Private node handle:               // Recommended</span>
+<span class="n">nh_private_</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">);</span>   <span class="c1">// /namespace/node/topic</span>
+
+<span class="c1">// Namespaced node handle:</span>
+<span class="n">nh_eth_</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="p">(</span><span class="s">&quot;hevs&quot;</span><span class="p">);</span>    <span class="c1">// /namespace/hevs/topic</span>
+
+<span class="c1">// Global node handle:                // NOT Recommended</span>
+<span class="n">nh_global_</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">);</span>    <span class="c1">// /topic</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logging-ros-info">
+<h3><a class="toc-backref" href="#id12">Logging <code class="docutils literal notranslate"><span class="pre">ROS_INFO</span></code></a><a class="headerlink" href="#logging-ros-info" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/rosconsole">http://wiki.ros.org/rosconsole</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview/Logging">http://wiki.ros.org/roscpp/Overview/Logging</a></p></li>
+</ul>
+<p>Send text to log files and console. Instead of <code class="docutils literal notranslate"><span class="pre">std::cout</span></code>, use e.g. <code class="docutils literal notranslate"><span class="pre">ROS_INFO</span></code>.</p>
+<div class="section" id="severity-levels">
+<h4><a class="toc-backref" href="#id13">Severity Levels</a><a class="headerlink" href="#severity-levels" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Debug</p></th>
+<th class="head"><p>Info</p></th>
+<th class="head"><p>Warn</p></th>
+<th class="head"><p>Error</p></th>
+<th class="head"><p>Fatal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>stdout</p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>stderr</p></td>
+<td></td>
+<td></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+</tr>
+<tr class="row-even"><td><p>Log file</p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>/rosout</cite></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+<td><p><img alt="sign-check" src="../../_images/success.svg" /></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Style</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROS_INFO</span><span class="p">(</span><span class="s">&quot;Result: %d&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>           <span class="c1">// printf style</span>
+<span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;Result: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">result</span><span class="p">);</span>    <span class="c1">// stream style</span>
+</pre></div>
+</div>
+<p><strong>Launchfile</strong></p>
+<p>To see the output in the console set configuration to <cite>screen</cite> in the launch file.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+    <span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;listener&quot;</span> <span class="na">more=</span><span class="s">&quot;stuff&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="subscriber">
+<h3><a class="toc-backref" href="#id14">Subscriber</a><a class="headerlink" href="#subscriber" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview/Publishers%20and%20Subscribers">http://wiki.ros.org/roscpp/Overview/Publishers%20and%20Subscribers</a></p>
+<p>Start listening to a topic by calling the method subscribe() of the node handle</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">subscriber</span> <span class="o">=</span> <span class="n">nodeHandle</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">queue_size</span><span class="p">,</span> <span class="n">callback_function</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">listener.cpp</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;std_msgs/String.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// callback function when a message is received</span>
+<span class="kt">void</span> <span class="nf">chatterCallback</span><span class="p">(</span><span class="k">const</span> <span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">ROS_INFO</span><span class="p">(</span><span class="s">&quot;I heard: [%s]&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;listener&quot;</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nodeHandle</span><span class="p">;</span>
+    <span class="c1">// Subscript to topic with a queue size of 10 (1-10 is recommended)</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">subscriber</span> <span class="o">=</span> <span class="n">nodeHandle</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">chatterCallback</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">spin</span><span class="p">();</span> <span class="c1">// stay&#39;s here forever</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="publisher">
+<h3><a class="toc-backref" href="#id15">Publisher</a><a class="headerlink" href="#publisher" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview/Publishers%20and%20Subscribers">http://wiki.ros.org/roscpp/Overview/Publishers%20and%20Subscribers</a></p>
+<p>Create a publisher with help of the node handle</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">publisher</span> <span class="o">=</span> <span class="n">nodeHandle</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">message_type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">queue_size</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="nl">caption</span><span class="p">:</span> <span class="n">talker</span><span class="p">.</span><span class="n">cpp</span>
+<span class="cp">#include</span> <span class="cpf">&lt;ros/ros.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;std_msgs/String.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;talker&quot;</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nh</span><span class="p">;</span>
+    <span class="c1">// Node handle queue size of 1</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">chatterPublisher</span> <span class="o">=</span> <span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loopRate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">std_msgs</span><span class="o">::</span><span class="n">String</span> <span class="n">message</span><span class="p">;</span>
+        <span class="c1">// Cretae message content</span>
+        <span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">&quot;hello world &quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+        <span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">data</span><span class="p">);</span>
+        <span class="n">chatterPublisher</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+        <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>
+        <span class="n">loopRate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="oop">
+<h3><a class="toc-backref" href="#id16">OOP</a><a class="headerlink" href="#oop" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks">http://wiki.ros.org/roscpp_tutorials/Tutorials/UsingClassMethodsAsCallbacks</a></p>
+<p><strong>Example</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">:</span><span class="nl">caption</span><span class="p">:</span> <span class="n">my_package_node</span><span class="p">.</span><span class="n">cpp</span>
+<span class="cp">#include</span> <span class="cpf">&lt;ros/ros.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;my_package/MyPackage.hpp&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;my_package&quot;</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nodeHandle</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">);</span>
+    <span class="c1">// Call</span>
+    <span class="n">my_package</span><span class="o">::</span><span class="n">MyPackage</span> <span class="n">myPackage</span><span class="p">(</span><span class="n">nodeHandle</span><span class="p">);</span>
+
+    <span class="n">ros</span><span class="o">::</span><span class="n">spin</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>class MyPackage</p></th>
+<th class="head"><p>class Algorithm</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Main node class providing ROS interface (subscribers, parameters, timers etc.)</p></td>
+<td><p>Class implementing the algorithmic part of the node</p>
+<p><strong>Note: The algorithmic part of the code could be separated in a (ROS-independent) library</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parameter-server">
+<h3><a class="toc-backref" href="#id17">Parameter Server</a><a class="headerlink" href="#parameter-server" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://wiki.ros.org/roscpp/Overview/Parameter%20Server">http://wiki.ros.org/roscpp/Overview/Parameter%20Server</a></p>
+<p><strong>Example Parameter File</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">:caption</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">config.yaml</span>
+
+<span class="nt">camera</span><span class="p">:</span>
+     <span class="nt">left</span><span class="p">:</span>
+             <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">left_camera</span>
+             <span class="nt">exposure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+     <span class="nt">right</span><span class="p">:</span>
+             <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">right_camera</span>
+             <span class="nt">exposure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.1</span>
+</pre></div>
+</div>
+<p><strong>Example Launch file</strong></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
+    <span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">pkg=</span><span class="s">&quot;package&quot;</span> <span class="na">type=</span><span class="s">&quot;node_type&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;rosparam</span> <span class="na">command=</span><span class="s">&quot;load&quot;</span> <span class="na">file=</span><span class="s">&quot;$(find package)/config/config.yaml&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/node&gt;</span>
+<span class="nt">&lt;/launch&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="c-api">
+<h4><a class="toc-backref" href="#id18">C++ API</a><a class="headerlink" href="#c-api" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">nodeHandle</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">topic</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">nodeHandle</span><span class="p">.</span><span class="n">getParam</span><span class="p">(</span><span class="s">&quot;topic&quot;</span><span class="p">,</span> <span class="n">topic</span><span class="p">))</span> <span class="p">{</span>
+     <span class="n">ROS_ERROR</span><span class="p">(</span><span class="s">&quot;Could not find topic parameter!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Get a parameter in C++ with</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nodeHandle</span><span class="p">.</span><span class="n">getParam</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Method returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if parameter was found, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p></li>
+<li><p>Global and relative parameter access:</p>
+<ul>
+<li><p>Global parameter name with preceding <code class="docutils literal notranslate"><span class="pre">/</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nodeHandle</span><span class="p">.</span><span class="n">getParam</span><span class="p">(</span><span class="s">&quot;/package/camera/left/exposure&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Relative parameter name (relative to the node handle)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nodeHandle</span><span class="p">.</span><span class="n">getParam</span><span class="p">(</span><span class="s">&quot;camera/left/exposure&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>For parameters, typically use the private node handle</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="packages-ext.html" class="btn btn-neutral float-right" title="External Packages and Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lidar-driver.html" class="btn btn-neutral float-left" title="Lidar Driver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
