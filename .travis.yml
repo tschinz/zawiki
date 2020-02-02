@@ -52,7 +52,7 @@ jobs:
         skip-cleanup: true
         github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
         keep-history: true
-        local-dir: _build
+        local-dir: _build/html
         on:
           branch: master  # You can't be safe enough <insert double condom joke here>
     - stage: deploy-pdf
