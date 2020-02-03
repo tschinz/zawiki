@@ -1,5 +1,7 @@
 # Github Markdown
 
+See also my git :config_repo:`css themes <tree/master/scripts/md>` in the config repo
+
 GFM is a variant of markdown developed by Github.
   * https://help.github.com/articles/github-flavored-markdown
   * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet

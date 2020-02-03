@@ -422,7 +422,7 @@ True   True   True
 Code
 ====
 
-see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html
+see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html and https://pygments.org/languages/
 
 .. code-block:: ReST
 

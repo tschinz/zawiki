@@ -18,6 +18,7 @@
    coding/python/index
    coding/licenses/index
    coding/ros/index
+   coding/fileheaders
 
    writing/latex/index
    writing/rst/index

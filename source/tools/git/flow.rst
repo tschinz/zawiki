@@ -15,7 +15,7 @@ Branches
 
 .. figure:: img/git-flow.*
    :align: center
-   :width: 150px
+   :width: 500px
 
    Git Flow
 

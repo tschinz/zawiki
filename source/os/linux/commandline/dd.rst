@@ -2,6 +2,8 @@
 dd and ddfldd
 =============
 
+.. contents:: :local:
+
 Use for creating and copying iso files from and to a medium.
 
 The ``dd`` command doesn't has a output during copy but ``dcfldd`` does. It gives an output all X blocks written. This means in the commands below you can also just replace ``dd`` with ``dcfldd``.

@@ -1,9 +1,6 @@
-=====
-Linux
-=====
-
-Linux
-=====
+============
+Raspberry Pi
+============
 
 .. figure:: img/logo.*
    :align: center
@@ -15,9 +12,4 @@ Linux
    :titlesonly:
    :caption: Content
 
-   commandline/index
-   scripts/index
-   tools/index
-   ubuntu/index
-   rpi/index
-   filesystem/index
+   *

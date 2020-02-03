@@ -4,6 +4,12 @@ Git Commands
 
 .. contents:: :local:
 
+.. figure:: img/git-cheatsheet.*
+   :align: center
+   :width: 500px
+
+   Git Cheatsheet
+
 Start a working area
 ====================
 +---------------+----------------------------------------------------------------+
@@ -14,10 +20,8 @@ Start a working area
 | ``init``      | Create an empty Git repository or reinitialize an existing one |
 +---------------+----------------------------------------------------------------+
 
-
 Work on the current change
 ==========================
-
 
 +---------------+--------------------------------------------------------+
 | Command       | Description                                            |
@@ -30,7 +34,6 @@ Work on the current change
 +---------------+--------------------------------------------------------+
 | ``rm``        | Remove files from the working tree and from the index  |
 +---------------+--------------------------------------------------------+
-
 
 Examine the history and state
 =============================

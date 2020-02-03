@@ -44,6 +44,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    coding/python/index
    coding/ros/index
    coding/licenses/index
+   coding/fileheaders
 
 .. toctree::
    :hidden:

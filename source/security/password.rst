@@ -6,60 +6,64 @@ Password
    :align: center
 
 
-Damit Sie ein sicheres Passwort haben müssen sie folgende Schritte
-erledigen
+In order to have a secure password you must do the following
+take care of
 
-#. Ihre Passwörter kontrollieren
-#. Neues sicheres Passwort erstellen und sich einprägen
-#. Regelmässig Passwort wechseln
+#. Control your passwords
+#. Create new secure password and memorize it
+#. Change password regularly
 
-Einleitung
-==========
+Introduction
+============
 
-Wer kennt das nicht: man hat sich bei einem neuen Service angemeldet, oder auf dem Server steht der monatliche Passwort-Wechsel an, und es fällt und fällt einem kein Passwort ein, das den Anforderungen des Sicherheits-Konzeptes genügt: entweder, es ist zu kurz, oder es ist nicht kryptisch genug, oder es ist zu kryptisch, und man kann es sich nicht merken. Schließlich, weil man keine Lust mehr hat, sucht man sich ein beliebiges, leider meist unsicheres Passwort aus.
+Who does not know this: you have registered with a new service, or on the server the monthly password change is pending, and you cannot and do not remember a password that meets the requirements of the security concept: either, it is too short, or it is not cryptic enough, or it is too cryptic and you cannot remember it. Finally, because you don't feel like it anymore, you choose any password you like, unfortunately mostly insecure ones.
 
-Mit diesem kleinen Artikel möchte ich sowohl etwas mehr Sicherheitsbewusstsein wecken, als auch die Wahl eines sicheren Passworts durch das Verständnis, wie so ein Passwort aufgebaut ist, erleichtern. Ich will jedoch gleich vorneweg sagen: die Vergabe von sicheren Passwörtern erfordert viel Disziplin vom User selbst!
+With this little article I would like to raise security awareness as well as make it easier to choose a secure password by understanding how such a password is constructed. However, I want to say right from the start: assigning secure passwords requires a lot of discipline from the user himself!
 
-Warum ein sicheres Passwort wichtig ist
-=======================================
 
-Viele Leute denken sich NICHTS bei der Vergabe von Passwörtern. Doch dabei ist dieser Vorgang enorm wichtig.
+Translated with www.DeepL.com/Translator (free version)
 
-Viel Computer-Kriminalität könnte vermieden werden, wenn mehr Endanwender ihren "inneren Schweinehund" überwinden und vernünftige Passwörter vergeben würden. Doch im gleichen Maß sind die Shop-Betreiber, Sicherheits-Beauftragten und andere, die für Passwortakzeptanz oder Passwortvorschläge zuständig sind, Schuld: ich habe bisher noch keinen Webshop mit Plausiblitätsprüfung des Passwortes gesehen. Ausserdem sollten auch bei Webshops die Generalpasswörter sicher gewählt werden um unerlaubtes Spionieren der Kundenpasswörter zu vermeiden.
+Why a secure password is important
+==================================
 
-Sicher werden jetzt viele sagen "Wer will schon ausgerechnet mir Böses?", oder "Wer will schon ausgerechnet meine E-Mails lesen?". Aber darum geht es ja gar nicht. Dem Angreifer ist es (meist) egal, wessen Account-Passwort er bekommt. Er interessiert sich auch nicht unbedingt für Ihre Mails. Ihn interessiert nur, wie er in das System hinein kommt. Denn hat er erstmal Zugriff, ist im Grunde der Krieg verloren. Es kann Sachen bestellen auf Ihren Namen und E-mail von Ihrem Namen aus senden.
+Many people think of NOTHING when assigning passwords. But this process is extremely important.
 
-Top 10: Passwörter
+A lot of computer crime could be avoided if more end users would overcome their "inner bastard" and assign reasonable passwords. But to the same extent the shop operators, security officers and others responsible for password acceptance or password suggestions are to blame: I have never seen a web shop with plausibility checks of the password. In addition, general passwords should also be chosen securely for webshops to avoid unauthorized spying of customer passwords.
+
+I am sure that many will say "Who would want to harm me of all people", or "Who would want to read my e-mails of all people". But that is not the point. The attacker does not (usually) care whose account password he gets. He is also not necessarily interested in your e-mails. He is only interested in how he gets into the system. Because once he has access, the war is basically lost. It can order things in your name and send e-mail from your name.
+
+Top 10: Passwords
 ==================
 
-Liste der 10 meistbenützten Passwörter
+List of the 10 most frequently used passwords
 
-- Platz Nr. 1: Einfache Zahlenkombinationen, wie 12345.
-- Platz Nr. 2: Zahlenkombinationen, die an ein Produkt erinnern, wie 4711, 911, X5, A6.
-- Platz Nr. 3: Das Wort Passwort selbst.
-- Platz Nr. 4: Kosenamen wie Schatz.
-- Platz Nr. 5: Das Wort Baby.
-- Platz Nr. 6: Jahreszeiten wie Sommer und Winter.
-- Platz Nr. 7: Das Wort Hallo.
-- Platz Nr. 8: Namen von Großstädten, wie Zürich, Paris oder NewYork.
-- Platz Nr. 9: Der eigenen Vornamen.
-- Platz Nr. 10: Der Vorname der Frau/FreundinFreund/Mann
+- Place no. 1: Simple combinations 12345.
+- Place no. 2: Number combinations, which remind of a product, such as 4711, 911, X5, A6.
+- Place no. 3: The word "Password" itself
+- Place no. 4: Pet names like treasure.
+- Place no. 5: The word "Baby".
+- Place no. 6: Seasons like summer and winter.
+- Place no. 7: The word hello.
+- Place No. 8: Names of big cities like Zurich, Paris or NewYork.
+- Place No. 9: Your own first names.
+- Place No. 10: The first name of your wife / girlfriend / husband
 
-Aufbau eines (relativ) sicheren Passworts
-=========================================
+Structure of a (relatively) secure password
+===========================================
 
-Ein sicheres Passwort besteht sinnvollerweise aus Groß- und Kleinbuchstaben sowie aus Ziffern. Es enthält keine (wahrnehmbare) Systematik und ist wenigstens 8 Zeichen lang. Es sollte kein Wort einer bekannten Sprache sein (z. B. Englisch, Deutsch oder Französisch).
+A secure password consists of upper and lower case letters and numbers. It contains no (perceptible) systematic and is at least 8 characters long. It should not be a word of a known language (e.g. English, German or French).
 
-Sicherheits-Freaks neigen dazu, sogenannte "Tastatur-Hacks" zum Erzeugen von Passwörtern zu verwenden. Dabei handelt es sich um ein einmaliges, sinnloses und blindes Zehnfinger-Einhacken auf die Tastatur - man merkt sich nicht das Passwort allgemein, sondern nur die Zeichenfolge wie es auf der Tastatur eingegeben wird. Solche Passwörter sind natürlich extrem "sicher". Denn wer z.B. in Anwesenheit anderer Personen ein Passwort eingeben muss, sollte das unauffällig und schnell tun können. Wer in einer solchen Situation auf das "Adlersystem" bei der Eingabe angewiesen ist, erleichtert den Anwesenden nur das unauffällige Mitverfolgen der eingegebenen Zeichenfolge.
+Security freaks tend to use so-called "keyboard hacks" to generate passwords. This is a one-time, pointless and blind ten-finger hack on the keyboard - you don't remember the password in general, but only the character string as it is entered on the keyboard. Such passwords are of course extremely "secure". Because if you have to enter a password in the presence of other people, for example, you should be able to do so unobtrusively and quickly. In such a situation, anyone who has to rely on the "eagle system" to enter a password will only make it easier for those present to unobtrusively follow the entered character string.
+
 
 .. note::
 
-   Gute Passwörter sollten also einen Mittelweg zwischen nicht erratbaren Zeichenfolgen und merkbaren Zeichenfolgen darstellen. Ein Tastaturhack ist eine einfaches und gutes Password.
+   Good passwords should therefore be a middle ground between strings that cannot be guessed and strings that can be remembered. A keyboard hack is a simple and good password.
 
 Password Generator
 ------------------
 
-Wer zu unkreativ ist sich ein eigenes "sicheres" Passwort auszudenken, kann mit folgender Seite einfach zu merkenden aber denoch sicherePasswörter von verschiedenen Längen, automatisch generieren lassen.
+If you are too uncreative to think up your own "secure" password, you can use the following page to automatically generate easy-to-remember but nevertheless secure passwords of different lengths.
 
 - `Keepass <https://keepass.info/>`_
 - `Safepasswd <http://www.safepasswd.com>`_
@@ -73,40 +77,40 @@ Wer zu unkreativ ist sich ein eigenes "sicheres" Passwort auszudenken, kann mit 
 Password Reuse
 --------------
 
-Pro Plattform sollte immer ein kompletes einzigartiges Password erstellen. Abwandlungen können relative schnell entdeckt und ausgebeutet werden.
+A complete unique password should always be created per platform. Variations can be detected and exploited relatively quickly.
 
 .. figure:: img/password_reuse.png
    :align: center
 
-Wie lang sollte ein Passwort sein
----------------------------------
+How long should a password be
+-----------------------------
 
-Die Frage ist so leicht nicht zu beantworten. Das hängt vom Sicherheitsbereich ab. Generell kann man sagen, eine Mindestlänge von 8 Zeichen ist sinnvoll: 8 Zeichen bedeuten 191707312997281 Kombinationen bei der Zeichenklasse a-zA-Z1-9 (= 61 Zeichen). Das würde bei einer Million Tastenanschläge pro Sekunde eine Maximalzeit von ca. 53252 Stunden (191707312,997281 Sekunden) bedeuten (fast 6 Jahre). Das ist schon mal eine ganz ordentliche Zeit :-)
+The question is not so easy to answer. That depends on the security area. Generally speaking, a minimum length of 8 characters is reasonable: 8 characters mean 191707312997281 combinations for character class a-zA-Z1-9 (= 61 characters). At one million keystrokes per second, this would mean a maximum time of about 53252 hours (191707312.997281 seconds) (almost 6 years). That is quite a respectable time :-)
 
-Zur Einschätzung mal eine kleine Tabelle: Mindestlänge maximal benötigte Zeit (bei angenommener 1 Million Tastaturanschlägen pro Sekunde)
+Let's have a small table for an estimation: Minimum length maximum time required (assuming 1 million keystrokes per second)
 
-+----------------+----------------------+
-| Anzahl Zeichen | Brute Force Zeit     |
-+================+======================+
-| 3 Zeichen      | 0,2 Sekunden         |
-+----------------+----------------------+
-| 5 Zeichen      | 14 Minuten           |
-+----------------+----------------------+
-| 8 Zeichen      | 53252 Stunden        |
-+----------------+----------------------+
-| 10 Zeichen     | 1179469 Wochen       |
-+----------------+----------------------+
-| 12 Zeichen     | 84168853 Jahre       |
-+----------------+----------------------+
-| 15 Zeichen     | 19104730610573 Jahre |
-+----------------+----------------------+
++-------------------+----------------------+
+| Number of Symbols | Brute Force Time     |
++===================+======================+
+| 3 Symbols         | 0,2 Seconds          |
++-------------------+----------------------+
+| 5 Symbols         | 14 Minutes           |
++-------------------+----------------------+
+| 8 Symbols         | 53252 Hours          |
++-------------------+----------------------+
+| 10 Symbols        | 1179469 Weeks        |
++-------------------+----------------------+
+| 12 Symbols        | 84168853 Year        |
++-------------------+----------------------+
+| 15 Symbols        | 19104730610573 Year  |
++-------------------+----------------------+
 
-Doch nun kommt die Ernüchterung. Alle diese Angaben sind sogenannte Maximalzeiten! Maximalzeit bedeutet: wenn jemand in der angegebenen Geschwindigkeit versucht, das Passwort zu knacken, und erst die allerletzte eingegebene Zeichenkombination die richtige ist, dann dauert es so lange wie angegeben. Aber theoretisch könnte ja auch schon die allererste eingegebene Zeichenkombination richtig sein. Dann hat es nur eine hunderttausendstel Sekunde gedauert, um das Passwort zu knacken - trotz 15 Zeichen. Es kann also durchaus sein, dass ein Angreifer ein Passwort innerhalb weniger Sekunden herausgefunden hat. Zufall eben. Deshalb sollte man sich bei 8 Zeichen durchaus nicht in Sicherheit wägen. Außerdem kommt es auch auf die Rechenleistung an: hier wurde mit einer Millionen Tanstenanschlägen pro Sekunde gerechnet. Andere, bessere, später gebaute Rechner schaffen Millionenfache. Dies drängt auch immer mehr in den vordergrund mit den Grafikkarten Brute-Force Attacken. Als Beispiel eine neue Nividia Grafikkarte mit CUDA verfügt über 256 Prozessor kerne, die Taktfrequenz eins solchen Kerns kann ungefähr 500MHz betragen. Damit kann die Grafikkarte pro Sekunde 128E9 = 128000000000 Passwörter testen.
+But now comes the disillusionment. All these are so-called maximum times! Maximum time means: if someone tries to crack the password at the specified speed and only the very last character combination entered is the correct one, then it takes as long as specified. But theoretically, the very first character combination entered could be correct. Then it took only a hundred thousandth of a second to crack the password - despite 15 characters. It is therefore quite possible that an attacker could have found out a password within a few seconds. Just coincidence. Therefore, 8 characters are not a good reason to be on the safe side. In addition, it also depends on the computing power: a million tansten strokes per second were expected. Other, better, later built computers can handle millions of times that. This also pushes more and more into the foreground with the graphics cards brute-force attacks. As an example a new Nividia graphics card with CUDA has 256 processor cores, the clock frequency of such a core can be about 500MHz. This allows the graphics card to test 128E9 = 128000000000 passwords per second.
 
-Natürlich sollte man auch noch hinzufügen, dass viele Zugangssysteme einen einloggenden Gast nach soundsoviel Fehlversuchen aus dem System werfen. Dann muss sich dieser, wenn er es wieder versuchen will, mit einer neuen Identität, im Internet z.B. manchmal auch mit einer anderen IP-Adresse anmelden. Solche Dinge kann ein Angreifer allerdings bis zu einem gewissen Grad automatisieren.
+Of course one should also add that many access systems throw a logging in guest out of the system after so many failed attempts. Then, if he wants to try again, he has to log in with a new identity, in the internet e.g. sometimes also with a different IP address. An attacker can automate such things to a certain extent, however.
 
 Links
 -----
 
-* `Wikipedia Artikel zum Thema Passwort <http://en.wikipedia.org/wiki/Password>`_
-* `Hilfreicher Artikel  <http://aktuell.de.selfhtml.org/artikel/gedanken/passwort/>`_
+* `Wikipedia article about password <http://en.wikipedia.org/wiki/Password>`_
+* `Helpful article <http://aktuell.de.selfhtml.org/artikel/gedanken/passwort/>`_
