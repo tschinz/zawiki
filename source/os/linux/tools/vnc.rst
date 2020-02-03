@@ -102,7 +102,7 @@ To connect to VNC over SSH in Linux you need a VNC Viewer like `UltraVNC <http:/
 Putty Config
 ^^^^^^^^^^^^
 
-see: :ref:`os/linux/tools/x11vnc:Putty`
+see: :ref:`os/linux/tools/vnc:Putty`
 
 Start VNC
 ^^^^^^^^^
@@ -140,7 +140,7 @@ Set up SSH Tunnel
 
 **Putty**
 
-see: :ref:`os/linux/tools/x11vnc:Putty`
+see: :ref:`os/linux/tools/vnc:Putty`
 
 Launch VNC Viewer in Mac
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -225,6 +225,7 @@ rst_epilog = """
 .. |star1| image:: /img/icons/star-1.*
 .. |star| image:: /img/icons/star.*
 
+.. |en| image:: /img/icons/uk.*
 .. |ch| image:: /img/icons/switzerland.*
 .. |de| image:: /img/icons/germany.*
 .. |china| image:: /img/icons/china.*
