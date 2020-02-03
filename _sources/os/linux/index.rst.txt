@@ -19,4 +19,5 @@ Linux
    scripts/index
    tools/index
    ubuntu/index
+   rpi/index
    filesystem/index

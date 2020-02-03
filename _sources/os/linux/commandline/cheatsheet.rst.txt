@@ -417,6 +417,8 @@ GPG Privacy
 SSH
 ===
 
+See also the dedicated :doc:`SSH page </os/linux/commandline/ssh>`
+
 .. code-block:: bash
    :caption: ssh_config
 
@@ -445,30 +447,20 @@ Connect to another station by ssh by default a password is needed or if configur
    # or
    ssh -p <portnumber> user@server.address.com
 
-   # or with port forward and no commandline
-   ssh -N -T -L <port>:localhost:<port> <user>@<hostname>
-   -N = No Output
-   -T = No Terminal access
-   -L = Port Forwarding
+   ssh -N -T -L <remoteport>:localhost:<localport> <user>@<hostname>
 
    # or with port forward and commandline
-   ssh -L <port>:localhost:<port> <user>@<hostname>
+   ssh -L <remoteport>:localhost:<localport> <user>@<hostname>
 
-How to set up ssh with rsa keys
+.. note::
 
-.. code-block:: bash
-   :caption: ssh keys
+   **Options**
 
-   # Generating RSA Key pair
-   ssh-keygen -t rsa
-
-   # Copy key
-   ssh-copy-id -i ~/.ssh/id_rsa.pub "user@remote.machine.com -p <portnumber>"
-   # OR
-   scp id_rsa.pub user@host:~/.ssh/machine.pub
-
-   # Append key to file authorized_keys
-   cat ~/.ssh/*.pub | ssh admin@server.machine.com -p <portnumber> 'umask 077; cat >>.ssh/authorized_keys'
+   * ``-p <port>`` - Custom port definition
+   * ``-l <username>`` - Custom username definition
+   * ``-N`` -  No Output
+   * ``-T`` -  No Terminal access
+   * ``-L <remoteport>:localhost:<localport>`` -  Port Forwarding
 
 SCP
 ===

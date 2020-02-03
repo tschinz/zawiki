@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Git Submodules" href="submodules.html" />
+    <link rel="next" title=".gitignore" href="gitignore.html" />
     <link rel="prev" title="Git Flow" href="flow.html" /> 
 </head>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-1-g7edcc8e
+                v0.11-2-gac98698
               </div>
             
           
@@ -99,9 +99,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
@@ -110,14 +112,27 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
@@ -147,6 +162,7 @@
 <li class="toctree-l2"><a class="reference internal" href="commands.html">Git Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flow.html">Git Flow</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gitignore.html">.gitignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submodules.html">Git Submodules</a></li>
 </ul>
 </li>
@@ -199,6 +215,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../coding/licenses/WTFPL.html">WTFPL</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/fileheaders.html">File Headers</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Writing</span></p>
 <ul>
@@ -320,69 +337,99 @@
 <h1>Git General<a class="headerlink" href="#git-general" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#global-setup" id="id1">Global setup</a></p>
+<li><p><a class="reference internal" href="#links" id="id2">Links</a></p></li>
+<li><p><a class="reference internal" href="#global-setup" id="id3">Global setup</a></p>
 <ul>
-<li><p><a class="reference internal" href="#check-setup" id="id2">Check setup</a></p></li>
-<li><p><a class="reference internal" href="#save-credentials" id="id3">Save Credentials</a></p></li>
-<li><p><a class="reference internal" href="#not-verify-https-certificates" id="id4">Not verify https Certificates</a></p></li>
+<li><p><a class="reference internal" href="#check-setup" id="id4">Check setup</a></p></li>
+<li><p><a class="reference internal" href="#save-credentials" id="id5">Save Credentials</a></p></li>
+<li><p><a class="reference internal" href="#not-verify-https-certificates" id="id6">Not verify https Certificates</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#git-repo-creation-cloning" id="id5">Git Repo Creation / Cloning</a></p>
+<li><p><a class="reference internal" href="#git-repo-creation-cloning" id="id7">Git Repo Creation / Cloning</a></p>
 <ul>
-<li><p><a class="reference internal" href="#create-new-repository" id="id6">Create new repository</a></p></li>
-<li><p><a class="reference internal" href="#clone-existing-repository" id="id7">Clone existing repository</a></p></li>
-<li><p><a class="reference internal" href="#existing-folder" id="id8">Existing folder</a></p></li>
-<li><p><a class="reference internal" href="#switch-to-new-remote" id="id9">Switch to new Remote</a></p></li>
-<li><p><a class="reference internal" href="#get-remote-information" id="id10">Get Remote Information</a></p></li>
-<li><p><a class="reference internal" href="#change-push-remote-url" id="id11">Change Push Remote URL</a></p></li>
+<li><p><a class="reference internal" href="#create-new-repo" id="id8">Create new repo</a></p></li>
+<li><p><a class="reference internal" href="#status-of-repo" id="id9">Status of repo</a></p></li>
+<li><p><a class="reference internal" href="#settings-of-repo" id="id10">Settings of repo</a></p></li>
+<li><p><a class="reference internal" href="#clone-existing-repo" id="id11">Clone existing repo</a></p></li>
+<li><p><a class="reference internal" href="#revert-to-last-commit-state" id="id12">Revert to last commit state</a></p></li>
+<li><p><a class="reference internal" href="#existing-folder" id="id13">Existing folder</a></p></li>
+<li><p><a class="reference internal" href="#switch-to-new-remote" id="id14">Switch to new Remote</a></p></li>
+<li><p><a class="reference internal" href="#get-remote-information" id="id15">Get Remote Information</a></p></li>
+<li><p><a class="reference internal" href="#change-push-remote-url" id="id16">Change Push Remote URL</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#git-repo-information" id="id12">Git Repo information</a></p></li>
-<li><p><a class="reference internal" href="#add-files" id="id13">Add Files</a></p></li>
-<li><p><a class="reference internal" href="#checkout" id="id14">Checkout</a></p></li>
-<li><p><a class="reference internal" href="#push" id="id15">Push</a></p></li>
-<li><p><a class="reference internal" href="#branch" id="id16">Branch</a></p>
+<li><p><a class="reference internal" href="#git-repo-information" id="id17">Git Repo information</a></p></li>
+<li><p><a class="reference internal" href="#add-files" id="id18">Add Files</a></p></li>
+<li><p><a class="reference internal" href="#checkout" id="id19">Checkout</a></p></li>
+<li><p><a class="reference internal" href="#push" id="id20">Push</a></p></li>
+<li><p><a class="reference internal" href="#branch" id="id21">Branch</a></p>
 <ul>
-<li><p><a class="reference internal" href="#merge" id="id17">Merge</a></p></li>
+<li><p><a class="reference internal" href="#merge" id="id22">Merge</a></p></li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/git-transport.png"><img alt="../../_images/git-transport.png" src="../../_images/git-transport.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Git Tansport</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id2">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://bitbucket.org/dashboard">Bitbucket</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tschinz">Github</a></p></li>
+<li><p><a class="reference external" href="https://gitlab.com/dashboard">Gitlab</a></p></li>
+<li><p><a class="reference external" href="http://git-scm.com/">Official Git Webpage</a></p></li>
+<li><p><a class="reference external" href="http://pcottle.github.com/learnGitBranching/?nodemo">Tutorial Git Branching</a></p></li>
 </ul>
 </div>
 <div class="section" id="global-setup">
-<h2><a class="toc-backref" href="#id1">Global setup</a><a class="headerlink" href="#global-setup" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Silvan Zahno&quot;</span>
-git config --global user.email <span class="s2">&quot;silvan.zahno@hevs.ch&quot;</span>
+<h2><a class="toc-backref" href="#id3">Global setup</a><a class="headerlink" href="#global-setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;username&quot;</span>
+git config --global user.email <span class="s2">&quot;your@email.com&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="check-setup">
-<h3><a class="toc-backref" href="#id2">Check setup</a><a class="headerlink" href="#check-setup" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Check setup</a><a class="headerlink" href="#check-setup" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --list
 </pre></div>
 </div>
 </div>
 <div class="section" id="save-credentials">
-<h3><a class="toc-backref" href="#id3">Save Credentials</a><a class="headerlink" href="#save-credentials" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Save Credentials</a><a class="headerlink" href="#save-credentials" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config credential.helper store
 </pre></div>
 </div>
 </div>
 <div class="section" id="not-verify-https-certificates">
-<h3><a class="toc-backref" href="#id4">Not verify https Certificates</a><a class="headerlink" href="#not-verify-https-certificates" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Not verify https Certificates</a><a class="headerlink" href="#not-verify-https-certificates" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global http.sslVerify <span class="nb">false</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="git-repo-creation-cloning">
-<h2><a class="toc-backref" href="#id5">Git Repo Creation / Cloning</a><a class="headerlink" href="#git-repo-creation-cloning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-new-repository">
-<h3><a class="toc-backref" href="#id6">Create new repository</a><a class="headerlink" href="#create-new-repository" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id7">Git Repo Creation / Cloning</a><a class="headerlink" href="#git-repo-creation-cloning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-new-repo">
+<h3><a class="toc-backref" href="#id8">Create new repo</a><a class="headerlink" href="#create-new-repo" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
 </pre></div>
 </div>
 </div>
-<div class="section" id="clone-existing-repository">
-<h3><a class="toc-backref" href="#id7">Clone existing repository</a><a class="headerlink" href="#clone-existing-repository" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="status-of-repo">
+<h3><a class="toc-backref" href="#id9">Status of repo</a><a class="headerlink" href="#status-of-repo" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+</pre></div>
+</div>
+</div>
+<div class="section" id="settings-of-repo">
+<h3><a class="toc-backref" href="#id10">Settings of repo</a><a class="headerlink" href="#settings-of-repo" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone-existing-repo">
+<h3><a class="toc-backref" href="#id11">Clone existing repo</a><a class="headerlink" href="#clone-existing-repo" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@gitlab.hevs.ch:course/ElN/eln_labs.git
 <span class="nb">cd</span> eln_labs
 touch README.md
@@ -392,8 +439,15 @@ git push -u origin master
 </pre></div>
 </div>
 </div>
+<div class="section" id="revert-to-last-commit-state">
+<h3><a class="toc-backref" href="#id12">Revert to last commit state</a><a class="headerlink" href="#revert-to-last-commit-state" title="Permalink to this headline">¶</a></h3>
+<p>go back to last committed servers state (can’t be undone)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard
+</pre></div>
+</div>
+</div>
 <div class="section" id="existing-folder">
-<h3><a class="toc-backref" href="#id8">Existing folder</a><a class="headerlink" href="#existing-folder" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Existing folder</a><a class="headerlink" href="#existing-folder" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> existing_folder
 git init
 git remote add origin git@gitlab.hevs.ch:course/ElN/eln_labs.git
@@ -404,7 +458,7 @@ git push -u origin master
 </div>
 </div>
 <div class="section" id="switch-to-new-remote">
-<h3><a class="toc-backref" href="#id9">Switch to new Remote</a><a class="headerlink" href="#switch-to-new-remote" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">Switch to new Remote</a><a class="headerlink" href="#switch-to-new-remote" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> existing_repo
 git remote rename origin old-origin
 git remote add origin git@gitlab.hevs.ch:course/ElN/eln_labs.git
@@ -414,20 +468,20 @@ git push -u origin --tags
 </div>
 </div>
 <div class="section" id="get-remote-information">
-<h3><a class="toc-backref" href="#id10">Get Remote Information</a><a class="headerlink" href="#get-remote-information" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Get Remote Information</a><a class="headerlink" href="#get-remote-information" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote show origin
 </pre></div>
 </div>
 </div>
 <div class="section" id="change-push-remote-url">
-<h3><a class="toc-backref" href="#id11">Change Push Remote URL</a><a class="headerlink" href="#change-push-remote-url" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">Change Push Remote URL</a><a class="headerlink" href="#change-push-remote-url" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote set-url --push &lt;new_repo_push_url&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="git-repo-information">
-<h2><a class="toc-backref" href="#id12">Git Repo information</a><a class="headerlink" href="#git-repo-information" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Git Repo information</a><a class="headerlink" href="#git-repo-information" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Status about current files ion folder</span>
 git status
 
@@ -437,7 +491,7 @@ git log --oneline
 </div>
 </div>
 <div class="section" id="add-files">
-<h2><a class="toc-backref" href="#id13">Add Files</a><a class="headerlink" href="#add-files" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Add Files</a><a class="headerlink" href="#add-files" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stage a File</span>
 git add README.md
 
@@ -447,7 +501,7 @@ git commit –m <span class="s2">&quot;Initial commit, add README file&quot;</sp
 </div>
 </div>
 <div class="section" id="checkout">
-<h2><a class="toc-backref" href="#id14">Checkout</a><a class="headerlink" href="#checkout" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Checkout</a><a class="headerlink" href="#checkout" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checkout certain commit</span>
 git checkout e006db0 -b inspectingPrev
 
@@ -457,13 +511,13 @@ git chekout master
 </div>
 </div>
 <div class="section" id="push">
-<h2><a class="toc-backref" href="#id15">Push</a><a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Push</a><a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push origin master
 </pre></div>
 </div>
 </div>
 <div class="section" id="branch">
-<h2><a class="toc-backref" href="#id16">Branch</a><a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Branch</a><a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create new branch</span>
 git branch dev_branch_1
 
@@ -478,7 +532,7 @@ git branch -d dev_branch_1
 </pre></div>
 </div>
 <div class="section" id="merge">
-<h3><a class="toc-backref" href="#id17">Merge</a><a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">Merge</a><a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checkout branch you want to merge into</span>
 git checkout master
 <span class="c1"># Merge the two branches</span>
@@ -503,7 +557,7 @@ git merge dev_branch_1
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="submodules.html" class="btn btn-neutral float-right" title="Git Submodules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gitignore.html" class="btn btn-neutral float-right" title=".gitignore" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="flow.html" class="btn btn-neutral float-left" title="Git Flow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

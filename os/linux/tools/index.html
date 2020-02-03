@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="dd and ddfldd" href="dd.html" />
+    <link rel="next" title="Apache" href="apache.html" />
     <link rel="prev" title="Scripts" href="../scripts/general.html" /> 
 </head>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-1-g7edcc8e
+                v0.11-2-gac98698
               </div>
             
           
@@ -99,9 +99,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../commandline/index.html">Commandline</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/cheatsheet.html">Cheatsheet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/dd.html">dd and ddfldd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/general.html">General Shell Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/network.html">Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/ssh.html">SSH</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scripts/index.html">Scripts</a><ul>
@@ -110,14 +112,27 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hw_sensors.html">Hardware Sensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsonic.html">Subsonic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vpn.html">VPN Virtual Private Network</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ubuntu/index.html">Ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ubuntu/install.html">Installation and Config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpi/setup.html">Setup Rpi</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../filesystem/index.html">Filesystem</a><ul>
@@ -147,6 +162,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/git/commands.html">Git Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/git/flow.html">Git Flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/gitignore.html">.gitignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/git/submodules.html">Git Submodules</a></li>
 </ul>
 </li>
@@ -199,6 +215,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/WTFPL.html">WTFPL</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/fileheaders.html">File Headers</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Writing</span></p>
 <ul>
@@ -319,14 +336,22 @@
   <div class="section" id="tools">
 <h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../../_images/logo10.svg"><img alt="../../../_images/logo10.svg" src="../../../_images/logo10.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../../_images/logo12.svg"><img alt="../../../_images/logo12.svg" src="../../../_images/logo12.svg" width="150px" /></a>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dd.html">dd and ddfldd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw_sensors.html">Hardware Sensors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raid.html">Raid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shairport.html">Shairport</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsonic.html">Subsonic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="systemd.html">Systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim.html">VIM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vpn.html">VPN Virtual Private Network</a></li>
 </ul>
 </div>
 </div>
@@ -345,7 +370,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dd.html" class="btn btn-neutral float-right" title="dd and ddfldd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="apache.html" class="btn btn-neutral float-right" title="Apache" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../scripts/general.html" class="btn btn-neutral float-left" title="Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

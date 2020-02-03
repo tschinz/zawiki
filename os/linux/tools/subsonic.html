@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Subsonic &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/default.js"></script>
+        <script type="text/javascript" src="../../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Systemd" href="systemd.html" />
+    <link rel="prev" title="Shairport" href="shairport.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-2-gac98698
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shairport.html">Shairport</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coding/licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/fileheaders.html">File Headers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/books/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/jokes/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/quotes/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/fonts/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/icons/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+        
+          <li><a href="index.html">Tools</a> &raquo;</li>
+        
+      <li>Subsonic</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/os/linux/tools/subsonic.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subsonic">
+<h1>Subsonic<a class="headerlink" href="#subsonic" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#installation" id="id3">Installation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#install-java" id="id4">Install Java</a></p></li>
+<li><p><a class="reference internal" href="#install-madsonic" id="id5">Install Madsonic</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#configuration-and-service" id="id6">Configuration and Service</a></p>
+<ul>
+<li><p><a class="reference internal" href="#add-transcoding" id="id7">Add Transcoding</a></p></li>
+<li><p><a class="reference internal" href="#if-somethings-goes-wrong" id="id8">If somethings goes wrong</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#jukebox" id="id9">Jukebox</a></p>
+<ul>
+<li><p><a class="reference internal" href="#selecting-the-soundcard" id="id10">Selecting the Soundcard</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>(Sub)Madsonic is a free, web-based media streamer, providing ubiquitous access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.</p>
+<p>(Sub)Madsonic is designed to handle very large music collections (hundreds of gigabytes). Although optimized for MP3 streaming, it works for any audio or video format that can stream over HTTP, for instance AAC and OGG. By using transcoder plug-ins, (Sub)Madsonic supports on-the-fly conversion and streaming of virtually any audio format, including WMA, FLAC, APE, Musepack, WavPack and Shorten.</p>
+<p>If you have constrained bandwidth, you may set an upper limit for the bitrate of the music streams. (Sub)Madsonic will then automatically resample the music to a suitable bitrate.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/madsonic.png"><img alt="Madsonic" src="../../../_images/madsonic.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">Madsonic Webinterface</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="installation">
+<h2><a class="toc-backref" href="#id3">Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>For installation instructions see also <a class="reference external" href="https://beta.madsonic.org/pages/help.jsp">here</a>. My madsonic configuration can be see in the config repo: <a class="reference external" href="https://github.com/tschinz/config/tree/master/config/madsonic">madsonic config</a></p>
+<div class="section" id="install-java">
+<h3><a class="toc-backref" href="#id4">Install Java</a><a class="headerlink" href="#install-java" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openjdk-8-jre
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-madsonic">
+<h3><a class="toc-backref" href="#id5">Install Madsonic</a><a class="headerlink" href="#install-madsonic" title="Permalink to this headline">¶</a></h3>
+<p>There are 2 good Subsonic versions. The official subsonic version, very stable, fast and reliable and the MadSonic Mod from MadEvil. It has several improvements and feature additions.</p>
+<ul class="simple">
+<li><p>Download the <a class="reference external" href="http://www.subsonic.org/pages/download.jsp">Subsonic .deb</a> package and install it:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dpkg -i subsonic-x.x.deb
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Download the <a class="reference external" href="http://beta.madsonic.org/pages/download.jsp">MadSonic .deb</a> package and install it:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dpkg -i Madsonic-x.x.xxxx.deb
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Test the system on a local browser with the address <a class="reference external" href="http://localhost:4040">http://localhost:4040</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="configuration-and-service">
+<h2><a class="toc-backref" href="#id6">Configuration and Service</a><a class="headerlink" href="#configuration-and-service" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Log into change the admin password first</p></li>
+<li><p>Recommended to change advanced settings as well, like Java Memory, Port Number, Startup Settings</p>
+<ul class="simple">
+<li><p>Edit the SUBSONIC_ARGS variable in <code class="docutils literal notranslate"><span class="pre">/etc/default/subsonic</span></code> or <code class="docutils literal notranslate"><span class="pre">/etc/default/madsonic</span></code></p></li>
+</ul>
+</li>
+<li><p>Restart the service</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo service subsonic restart
+<span class="c1"># or</span>
+sudo service madsonic restart
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="section" id="add-transcoding">
+<h3><a class="toc-backref" href="#id7">Add Transcoding</a><a class="headerlink" href="#add-transcoding" title="Permalink to this headline">¶</a></h3>
+<p>In order that Subsonic can use the powerful <a class="reference external" href="https://beta.madsonic.org/pages/transcoding.jsp">transcoding</a> feature you need to install some third-party transcoders:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install lame flac faad vorbis-tools
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="if-somethings-goes-wrong">
+<h3><a class="toc-backref" href="#id8">If somethings goes wrong</a><a class="headerlink" href="#if-somethings-goes-wrong" title="Permalink to this headline">¶</a></h3>
+<p>Check the logs in <code class="docutils literal notranslate"><span class="pre">/var/madsonic</span></code>.</p>
+</div>
+</div>
+<div class="section" id="jukebox">
+<h2><a class="toc-backref" href="#id9">Jukebox</a><a class="headerlink" href="#jukebox" title="Permalink to this headline">¶</a></h2>
+<p>In order to get the Jukebox to work, the soundcard needs to be set up first.</p>
+<p>The user that is running (Sub)Madsonic needs to have access to the soundcard. For Ubuntu this means adding that user to the <code class="docutils literal notranslate"><span class="pre">audio</span></code> group in <code class="docutils literal notranslate"><span class="pre">/etc/group</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>useradd -G audio username
+</pre></div>
+</div>
+<div class="section" id="selecting-the-soundcard">
+<h3><a class="toc-backref" href="#id10">Selecting the Soundcard</a><a class="headerlink" href="#selecting-the-soundcard" title="Permalink to this headline">¶</a></h3>
+<p>First you need to find out what your soundcards are named in the sound library used in Java.</p>
+<p>Create the following file</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">audioDevList.java</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.sound.sampled.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">audioDevList</span><span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+
+    <span class="c1">//Get and display a list of</span>
+    <span class="c1">// available mixers.</span>
+
+    <span class="n">Mixer</span><span class="p">.</span><span class="na">Info</span><span class="o">[]</span> <span class="n">mixerInfo</span> <span class="o">=</span> <span class="n">AudioSystem</span><span class="p">.</span><span class="na">getMixerInfo</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Available mixers:&quot;</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="n">mixerInfo</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">cnt</span><span class="o">++</span><span class="p">){</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mixerInfo</span><span class="o">[</span><span class="n">cnt</span><span class="o">]</span><span class="p">.</span>
+      <span class="nf">getName</span><span class="p">());</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>And then run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>javac audioDevList.java
+java audioDevList
+</pre></div>
+</div>
+<p>If you get an error about javac not found, you need to install the JDK (e.g. openjdk-8-jdk).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openjdk-8-jdk
+</pre></div>
+</div>
+<p>Here is a sample output of the script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Available</span> <span class="n">mixers</span><span class="p">:</span>
+<span class="n">NVidia</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">NVidia</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">NVidia</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">NVidia</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">Intel</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">CX8801</span> <span class="p">[</span><span class="n">plughw</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Port</span> <span class="n">NVidia</span> <span class="p">[</span><span class="n">hw</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Port</span> <span class="n">Intel</span> <span class="p">[</span><span class="n">hw</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Port</span> <span class="n">CX8801</span> <span class="p">[</span><span class="n">hw</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>&lt;/code&gt;
+Linux / Mac : Modify your <code class="docutils literal notranslate"><span class="pre">/usr/bin/subsonic/subsonic_run.sh</span></code> (for Ubuntu package install) and add the following line. Note the single quotes and the hash mark <code class="docutils literal notranslate"><span class="pre">#</span></code> before the sound card name. Those are required.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>&#39;-Djavax.sound.sampled.SourceDataLine=#PCH [plughw:0,0]&#39; \
+</pre></div>
+</div>
+<p>Restart the subsonic service</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo service subsonic restart
+<span class="c1"># or</span>
+sudo service madsonic restart
+</pre></div>
+</div>
+<p>Once Music is played in jukebox mode the audio is not available anymore to other programs. To cut this restart sub/madsonic as above shown.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="systemd.html" class="btn btn-neutral float-right" title="Systemd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shairport.html" class="btn btn-neutral float-left" title="Shairport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

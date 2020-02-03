@@ -4,13 +4,28 @@ Git General
 
 .. contents:: :local:
 
+.. figure:: img/git-transport.png
+   :align: center
+   :width: 400px
+
+   Git Tansport
+
+Links
+=====
+
+* `Bitbucket <https://bitbucket.org/dashboard>`_
+* `Github <https://github.com/tschinz>`_
+* `Gitlab <https://gitlab.com/dashboard>`_
+* `Official Git Webpage <http://git-scm.com/>`_
+* `Tutorial Git Branching <http://pcottle.github.com/learnGitBranching/?nodemo>`_
+
 Global setup
 ============
 
 .. code-block:: bash
 
-   git config --global user.name "Silvan Zahno"
-   git config --global user.email "silvan.zahno@hevs.ch"
+   git config --global user.name "username"
+   git config --global user.email "your@email.com"
 
 Check setup
 -----------
@@ -39,16 +54,29 @@ Not verify https Certificates
 Git Repo Creation / Cloning
 ===========================
 
-Create new repository
+Create new repo
 ---------------------
 
 .. code-block:: bash
 
    git init
 
+Status of repo
+--------------
 
-Clone existing repository
--------------------------
+.. code-block:: bash
+
+   git status
+
+Settings of repo
+----------------
+
+.. code-block:: bash
+
+   git remote -v
+
+Clone existing repo
+-------------------
 
 .. code-block:: bash
 
@@ -59,6 +87,13 @@ Clone existing repository
    git commit -m "add README"
    git push -u origin master
 
+Revert to last commit state
+---------------------------
+go back to last committed servers state (can't be undone)
+
+.. code-block:: bash
+
+   git reset --hard
 
 Existing folder
 ---------------
