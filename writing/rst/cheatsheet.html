@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-2-gac98698
+                v0.11-3-gd7864e5
               </div>
             
           
@@ -192,6 +192,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../coding/python/flake8.html">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/python/general.html">Flake 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../coding/tcl_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/tcl_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/tcl_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/tcl_do/syntex.html">Syntax</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../coding/ros/index.html">ROS - Robot Operating System</a><ul>
@@ -362,24 +369,28 @@
 <li><p><a class="reference internal" href="#images" id="id16">Images</a></p>
 <ul>
 <li><p><a class="reference internal" href="#image-placement" id="id17">Image Placement</a></p></li>
-<li><p><a class="reference internal" href="#inline-images" id="id18">Inline Images</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#lists" id="id19">Lists</a></p></li>
-<li><p><a class="reference internal" href="#tables" id="id20">Tables</a></p></li>
-<li><p><a class="reference internal" href="#code" id="id21">Code</a></p></li>
-<li><p><a class="reference internal" href="#infoboxes" id="id22">Infoboxes</a></p></li>
-<li><p><a class="reference internal" href="#special-formatting" id="id23">Special Formatting</a></p></li>
-<li><p><a class="reference internal" href="#math" id="id24">Math</a></p></li>
-<li><p><a class="reference internal" href="#exclude" id="id25">Exclude</a></p></li>
-<li><p><a class="reference internal" href="#graphviz" id="id26">GraphViz</a></p></li>
-<li><p><a class="reference internal" href="#wavedrom" id="id27">Wavedrom</a></p>
+<li><p><a class="reference internal" href="#inline-images" id="id18">Inline Images</a></p>
 <ul>
-<li><p><a class="reference internal" href="#timing-diagrams" id="id28">Timing Diagrams</a></p></li>
-<li><p><a class="reference internal" href="#register" id="id29">Register</a></p></li>
+<li><p><a class="reference internal" href="#predefined-images" id="id19">Predefined Images</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#plantuml" id="id30">PlantUML</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#lists" id="id20">Lists</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id21">Tables</a></p></li>
+<li><p><a class="reference internal" href="#code" id="id22">Code</a></p></li>
+<li><p><a class="reference internal" href="#infoboxes" id="id23">Infoboxes</a></p></li>
+<li><p><a class="reference internal" href="#special-formatting" id="id24">Special Formatting</a></p></li>
+<li><p><a class="reference internal" href="#math" id="id25">Math</a></p></li>
+<li><p><a class="reference internal" href="#exclude" id="id26">Exclude</a></p></li>
+<li><p><a class="reference internal" href="#graphviz" id="id27">GraphViz</a></p></li>
+<li><p><a class="reference internal" href="#wavedrom" id="id28">Wavedrom</a></p>
+<ul>
+<li><p><a class="reference internal" href="#timing-diagrams" id="id29">Timing Diagrams</a></p></li>
+<li><p><a class="reference internal" href="#register" id="id30">Register</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#plantuml" id="id31">PlantUML</a></p></li>
 </ul>
 </div>
 <div class="section" id="table-of-content">
@@ -482,12 +493,22 @@ http://www.python.org/
            <span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>:config_repo:<span class="nv">`jupyter config &lt;tree/master/config/jupyter&gt;`</span>
-:zawiki_repo:<span class="nv">`zawiki link &lt;&gt;`</span>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>:config_repo:<span class="nv">`jupyter folder &lt;tree/master/config/jupyter&gt;`</span>
+:config_repo:<span class="nv">`shell script &lt;blob/master/scripts/shell/christmas_tree.sh&gt;`</span>
+:zawiki_repo:<span class="nv">`zawiki link &lt;blob/master/source/conf.py&gt;`</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter config</a>
-<a class="reference external" href="https://github.com/tschinz/zawiki/">zawiki link</a></p>
+<p><a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter folder</a>
+<a class="reference external" href="https://github.com/tschinz/config/blob/master/scripts/shell/christmas_tree.sh">shell script</a>
+<a class="reference external" href="https://github.com/tschinz/zawiki/blob/master/source/conf.py">conf.py file</a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Tto access github files and folders you need to create the following link structure:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://">https://</a> + <code class="docutils literal notranslate"><span class="pre">github_repo_link</span></code> + <code class="docutils literal notranslate"><span class="pre">tree/master/</span></code> + <code class="docutils literal notranslate"><span class="pre">folder/location</span></code></p></li>
+<li><p><a class="reference external" href="https://">https://</a> + <code class="docutils literal notranslate"><span class="pre">github_repo_link</span></code> + <code class="docutils literal notranslate"><span class="pre">blob/master/</span></code> + <code class="docutils literal notranslate"><span class="pre">file/location.txt</span></code></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="other-sphinx-pages">
 <h4><a class="toc-backref" href="#id11">Other Sphinx Pages</a><a class="headerlink" href="#other-sphinx-pages" title="Permalink to this headline">¶</a></h4>
@@ -567,7 +588,7 @@ see <span class="na">:ref:</span><span class="nv">`ref-point`</span>
 </pre></div>
 </div>
 <div class="figure align-default">
-<img alt="../../_images/logo5.svg" src="../../_images/logo5.svg" /></div>
+<img alt="../../_images/logo6.svg" src="../../_images/logo6.svg" /></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Images should be either in <code class="docutils literal notranslate"><span class="pre">png</span></code> or <code class="docutils literal notranslate"><span class="pre">svg</span></code> format</p>
@@ -601,16 +622,16 @@ see <span class="na">:ref:</span><span class="nv">`ref-point`</span>
 </pre></div>
 </div>
 <div class="figure align-left">
-<a class="reference internal image-reference" href="../../_images/logo5.svg"><img alt="../../_images/logo5.svg" src="../../_images/logo5.svg" width="100px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo6.svg"><img alt="../../_images/logo6.svg" src="../../_images/logo6.svg" width="100px" /></a>
 </div>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo5.svg"><img alt="../../_images/logo5.svg" src="../../_images/logo5.svg" width="100px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo6.svg"><img alt="../../_images/logo6.svg" src="../../_images/logo6.svg" width="100px" /></a>
 </div>
 <div class="figure align-right">
-<a class="reference internal image-reference" href="../../_images/logo5.svg"><img alt="../../_images/logo5.svg" src="../../_images/logo5.svg" width="100px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo6.svg"><img alt="../../_images/logo6.svg" src="../../_images/logo6.svg" width="100px" /></a>
 </div>
 <div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/logo5.svg"><img alt="this is the knowhow logo" height="100px" src="../../_images/logo5.svg" width="100px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo6.svg"><img alt="this is the knowhow logo" height="100px" src="../../_images/logo6.svg" width="100px" /></a>
 <p class="caption"><span class="caption-text">Caption of figure</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -623,10 +644,58 @@ After that the image |folder_icon| can be integrated inline.
 </pre></div>
 </div>
 <p>After that the image <img alt="folder_icon" src="../../_images/folder.svg" /> can be integrated inline.</p>
+<div class="section" id="predefined-images">
+<h4><a class="toc-backref" href="#id19">Predefined Images</a><a class="headerlink" href="#predefined-images" title="Permalink to this headline">¶</a></h4>
+<p>There are some predefined images in <a class="reference external" href="https://github.com/tschinz/zawiki/blob/master/source/conf.py">conf.py file</a></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>|folder|
+|file|
+|sign-check|
+|star5|
+|star4|
+|star3|
+|star2|
+|star1|
+|star|
+|en|
+|ch|
+|de|
+|china|
+|uk|
+|usa|
+|it|
+|jp|
+|fr|
+|linux|
+|mac|
+|win|
+</pre></div>
+</div>
+<p><img alt="folder" src="../../_images/folder.svg" />
+<img alt="file" src="../../_images/file.svg" />
+<img alt="sign-check" src="../../_images/success.svg" />
+<img alt="star5" src="../../_images/star-5.svg" />
+<img alt="star4" src="../../_images/star-4.svg" />
+<img alt="star3" src="../../_images/star-3.svg" />
+<img alt="star2" src="../../_images/star-2.svg" />
+<img alt="star1" src="../../_images/star-1.svg" />
+<img alt="star" src="../../_images/star.svg" />
+<img alt="en" src="../../_images/uk.svg" />
+<img alt="ch" src="../../_images/switzerland.svg" />
+<img alt="de" src="../../_images/germany.svg" />
+<img alt="china" src="../../_images/china.svg" />
+<img alt="uk" src="../../_images/uk.svg" />
+<img alt="usa" src="../../_images/usa.svg" />
+<img alt="it" src="../../_images/italy.svg" />
+<img alt="jp" src="../../_images/japan.svg" />
+<img alt="fr" src="../../_images/france.svg" />
+<img alt="linux" src="../../_images/linux.svg" />
+<img alt="mac" src="../../_images/apple.svg" />
+<img alt="win" src="../../_images/windows.svg" /></p>
+</div>
 </div>
 </div>
 <div class="section" id="lists">
-<h2><a class="toc-backref" href="#id19">Lists</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Lists</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>item 1</p>
 <ul>
@@ -658,7 +727,7 @@ After that the image |folder_icon| can be integrated inline.
 </ol>
 </div>
 <div class="section" id="tables">
-<h2><a class="toc-backref" href="#id20">Tables</a><a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Tables</a><a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>+------------+------------+-----------+
 <span class="o">|</span> Header 1   | Header 2   | Header 3  |
 +============+============+===========+
@@ -847,7 +916,7 @@ True   True   True
 </table>
 </div>
 <div class="section" id="code">
-<h2><a class="toc-backref" href="#id21">Code</a><a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22">Code</a><a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
 <p>see also: <a class="reference external" href="https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html">https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html</a> and <a class="reference external" href="https://pygments.org/languages/">https://pygments.org/languages/</a></p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
 
@@ -922,7 +991,7 @@ True   True   True
 </td></tr></table></div>
 </div>
 <div class="section" id="infoboxes">
-<h2><a class="toc-backref" href="#id22">Infoboxes</a><a class="headerlink" href="#infoboxes" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23">Infoboxes</a><a class="headerlink" href="#infoboxes" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
    This is a Note Box
 </pre></div>
@@ -957,7 +1026,7 @@ True   True   True
 </div>
 </div>
 <div class="section" id="special-formatting">
-<h2><a class="toc-backref" href="#id23">Special Formatting</a><a class="headerlink" href="#special-formatting" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id24">Special Formatting</a><a class="headerlink" href="#special-formatting" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 2.5
    The <span class="ge">*spam*</span> parameter.
 
@@ -979,7 +1048,7 @@ True   True   True
 </div>
 </div>
 <div class="section" id="math">
-<h2><a class="toc-backref" href="#id24">Math</a><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">Math</a><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>Inline math <span class="na">:math:</span><span class="nv">`a^2 + b^2 = c^2`</span>.
 </pre></div>
 </div>
@@ -997,7 +1066,7 @@ g(x) &amp;= \frac{1}{x}\\
 F(x) &amp;= \int^a_b \frac{1}{3}x^3\end{split}\]</div>
 </div>
 <div class="section" id="exclude">
-<h2><a class="toc-backref" href="#id25">Exclude</a><a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id26">Exclude</a><a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h2>
 <p>In order to exclude some parts for a certain output use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">only::</span> <span class="pre">output</span></code> directive.</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html
 <span class="p">..</span> <span class="ow">only</span><span class="p">::</span> draft
@@ -1012,7 +1081,7 @@ F(x) &amp;= \int^a_b \frac{1}{3}x^3\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="graphviz">
-<h2><a class="toc-backref" href="#id26">GraphViz</a><a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">GraphViz</a><a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h2>
 <p>Get more samples herer: <a class="reference external" href="https://graphviz.gitlab.io/gallery/">https://graphviz.gitlab.io/gallery/</a></p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span>
 
@@ -1070,14 +1139,14 @@ F(x) &amp;= \int^a_b \frac{1}{3}x^3\end{split}\]</div>
 }" class="graphviz" /></div>
 </div>
 <div class="section" id="wavedrom">
-<h2><a class="toc-backref" href="#id27">Wavedrom</a><a class="headerlink" href="#wavedrom" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id28">Wavedrom</a><a class="headerlink" href="#wavedrom" title="Permalink to this headline">¶</a></h2>
 <p>For more information see:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/wavedrom/wavedrom/wiki/WaveJSON">Wavedrom JSON Wiki</a></p></li>
 <li><p><a class="reference external" href="https://wavedrom.com/tutorial.html">Wavedrom Tutorial</a></p></li>
 </ul>
 <div class="section" id="timing-diagrams">
-<h3><a class="toc-backref" href="#id28">Timing Diagrams</a><a class="headerlink" href="#timing-diagrams" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">Timing Diagrams</a><a class="headerlink" href="#timing-diagrams" title="Permalink to this headline">¶</a></h3>
 <p>This documentation makes use of the <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-wavedrom</span></code> plugin,
 So you can specify a timing diagram, or a register description with the <code class="docutils literal notranslate"><span class="pre">WaveJSON</span></code> syntax like so:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nx">wavedrom</span><span class="o">::</span>
@@ -1121,7 +1190,7 @@ long story short, no javascript code and use <code class="docutils literal notra
 </div>
 </div>
 <div class="section" id="register">
-<h3><a class="toc-backref" href="#id29">Register</a><a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30">Register</a><a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>
 <p>you can describe register mapping with the same syntax:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;reg&quot;</span><span class="o">:</span><span class="p">[</span>
   <span class="p">{</span><span class="s2">&quot;bits&quot;</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;things&quot;</span><span class="p">},</span>
@@ -1147,7 +1216,7 @@ long story short, no javascript code and use <code class="docutils literal notra
 </div>
 </div>
 <div class="section" id="plantuml">
-<h2><a class="toc-backref" href="#id30">PlantUML</a><a class="headerlink" href="#plantuml" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">PlantUML</a><a class="headerlink" href="#plantuml" title="Permalink to this headline">¶</a></h2>
 <p>This documentation makes use of the <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.plantuml</span></code> plugin, for more information see the <a class="reference external" href="https://pypi.org/project/sphinxcontrib-plantuml/">sphinxcontrib.plantuml plugin</a> and the <a class="reference external" href="https://plantuml.com/">PlantUML Webpage</a>.
 For a small Cheatsheet for PlantUML see <a class="reference external" href="https://ogom.github.io/draw_uml/plantuml/">https://ogom.github.io/draw_uml/plantuml/</a></p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>

@@ -99,11 +99,20 @@ The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
 
 .. code-block:: ReST
 
-   :config_repo:`jupyter config <tree/master/config/jupyter>`
-   :zawiki_repo:`zawiki link <>`
+   :config_repo:`jupyter folder <tree/master/config/jupyter>`
+   :config_repo:`shell script <blob/master/scripts/shell/christmas_tree.sh>`
+   :zawiki_repo:`zawiki link <blob/master/source/conf.py>`
 
-:config_repo:`jupyter config <tree/master/config/jupyter>`
-:zawiki_repo:`zawiki link <>`
+:config_repo:`jupyter folder <tree/master/config/jupyter>`
+:config_repo:`shell script <blob/master/scripts/shell/christmas_tree.sh>`
+:zawiki_repo:`conf.py file <blob/master/source/conf.py>`
+
+.. important::
+
+   Tto access github files and folders you need to create the following link structure:
+
+   * https:// + ``github_repo_link`` + ``tree/master/`` + ``folder/location``
+   * https:// + ``github_repo_link`` + ``blob/master/`` + ``file/location.txt``
 
 Other Sphinx Pages
 ^^^^^^^^^^^^^^^^^^
@@ -271,6 +280,57 @@ For inline images to work, a substitution needs to be made
 .. |folder_icon| image:: /img/icons/folder.*
 
 After that the image |folder_icon| can be integrated inline.
+
+Predefined Images
+^^^^^^^^^^^^^^^^^
+
+There are some predefined images in :zawiki_repo:`conf.py file <blob/master/source/conf.py>`
+
+.. code-block:: ReST
+
+   |folder|
+   |file|
+   |sign-check|
+   |star5|
+   |star4|
+   |star3|
+   |star2|
+   |star1|
+   |star|
+   |en|
+   |ch|
+   |de|
+   |china|
+   |uk|
+   |usa|
+   |it|
+   |jp|
+   |fr|
+   |linux|
+   |mac|
+   |win|
+
+|folder|
+|file|
+|sign-check|
+|star5|
+|star4|
+|star3|
+|star2|
+|star1|
+|star|
+|en|
+|ch|
+|de|
+|china|
+|uk|
+|usa|
+|it|
+|jp|
+|fr|
+|linux|
+|mac|
+|win|
 
 Lists
 =====
