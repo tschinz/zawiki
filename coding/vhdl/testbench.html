@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testbench &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Time" href="time.html" />
+    <link rel="prev" title="Syntax" href="syntax.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-5-g7b647ed
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VHDL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/syntex.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fileheaders.html">File Headers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/books/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/jokes/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/quotes/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/fonts/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/icons/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">VHDL</a> &raquo;</li>
+        
+      <li>Testbench</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/vhdl/testbench.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="testbench">
+<h1>Testbench<a class="headerlink" href="#testbench" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/tb_dut.svg"><img alt="../../_images/tb_dut.svg" src="../../_images/tb_dut.svg" width="600px" /></a>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#tests-severity" id="id12">Tests &amp; Severity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#stop-simulation" id="id13">Stop Simulation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#clock-generation" id="id14">Clock generation</a></p></li>
+<li><p><a class="reference internal" href="#reset" id="id15">Reset</a></p></li>
+<li><p><a class="reference internal" href="#wait-statement" id="id16">Wait statement</a></p></li>
+<li><p><a class="reference internal" href="#strings" id="id17">Strings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#simple-and-messy" id="id18">Simple and messy</a></p></li>
+<li><p><a class="reference internal" href="#complicated-and-pretty" id="id19">Complicated and pretty</a></p>
+<ul>
+<li><p><a class="reference internal" href="#put-string-into-line" id="id20">Put String into Line</a></p></li>
+<li><p><a class="reference internal" href="#get-string-from-line" id="id21">Get String from Line</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#shared-variables" id="id22">Shared Variables</a></p></li>
+</ul>
+</div>
+<div class="section" id="tests-severity">
+<h2><a class="toc-backref" href="#id12">Tests &amp; Severity</a><a class="headerlink" href="#tests-severity" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">severity</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span>signal sev_lvl : severity_level := note
+-- note | warning | error | failure
+
+assert ( a = b )
+report “a is not equal to b”
+severity severity_lvl;
+</pre></div>
+</div>
+</div>
+<div class="section" id="stop-simulation">
+<h3><a class="toc-backref" href="#id13">Stop Simulation</a><a class="headerlink" href="#stop-simulation" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">testbench stop</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">false</span> <span class="n">report</span> <span class="s">&quot;End of simulation&quot;</span> <span class="k">severity</span> <span class="n">failure</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clock-generation">
+<h2><a class="toc-backref" href="#id14">Clock generation</a><a class="headerlink" href="#clock-generation" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">clock</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">constant</span> <span class="n">sys_CLK_freq</span>   <span class="o">:</span> <span class="n">real</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">.</span><span class="mi">00</span><span class="n">E6</span><span class="p">;</span>
+<span class="k">constant</span> <span class="n">sys_CLK_period</span> <span class="o">:</span> <span class="kt">time</span> <span class="o">:=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">sys_CLK_freq</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span> <span class="n">sec</span><span class="p">;</span>
+
+<span class="k">signal</span> <span class="n">sys_CLK_int</span>      <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span> <span class="n">sys_CLK</span>          <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="c1">----------------------------</span>
+<span class="c1">-- Only signal</span>
+<span class="n">sys_CLK_int</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">sys_CLK</span>     <span class="o">&lt;=</span> <span class="k">transport</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">-- In a process</span>
+<span class="k">process</span>
+<span class="k">begin</span>
+    <span class="n">sys_CLK_int</span>    <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>   <span class="k">wait</span> <span class="k">for</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">sys_CLK_int</span>    <span class="o">&lt;=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span>   <span class="k">wait</span> <span class="k">for</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+<span class="n">sys_CLK</span>     <span class="o">&lt;=</span> <span class="k">transport</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reset">
+<h2><a class="toc-backref" href="#id15">Reset</a><a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">reset</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">tb_RESETn</span>   <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span> <span class="k">after</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span>
+               <span class="sc">&#39;1&#39;</span> <span class="k">after</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">sys_CLK_period</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wait-statement">
+<h2><a class="toc-backref" href="#id16">Wait statement</a><a class="headerlink" href="#wait-statement" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Has to be in process without List of sensitivity</p></li>
+<li><p>Every process without a list of sensitivity need at least on wait statement.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="strings">
+<h2><a class="toc-backref" href="#id17">Strings</a><a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">string</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Integer =&gt; String</span>
+<span class="n">string_sig</span> <span class="o">&lt;=</span> <span class="kt">integer</span><span class="na">&#39;image</span><span class="p">(</span><span class="n">integer_sig</span><span class="p">);</span>
+
+<span class="c1">-- String =&gt; Interger</span>
+<span class="n">integer_sig</span> <span class="o">&lt;=</span> <span class="kt">integer</span><span class="na">&#39;value</span><span class="p">(</span><span class="n">string_sig</span><span class="p">);</span>
+
+<span class="c1">-- String =&gt; Std_logic_vector</span>
+<span class="n">slv_sig</span> <span class="o">&lt;=</span> <span class="n">to_std_logic_vector</span><span class="p">(</span><span class="n">string_sig</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lf</span> <span class="o">-</span> <span class="n">linefeed</span>
+<span class="n">ht</span> <span class="o">-</span> <span class="n">tabluator</span>
+</pre></div>
+</div>
+<div class="section" id="simple-and-messy">
+<h3><a class="toc-backref" href="#id18">Simple and messy</a><a class="headerlink" href="#simple-and-messy" title="Permalink to this headline">¶</a></h3>
+<p>Make a string plenty wide enough. Then you can store each string in the appropriate slice of it.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">string simple</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">toto</span><span class="o">:</span> <span class="kt">string</span><span class="p">(</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">80</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="p">&#39;</span> <span class="p">&#39;);</span>
+<span class="c1">-- plenty wide enough, and full of spaces</span>
+
+<span class="p">...</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span>
+    <span class="n">toto</span><span class="p">(</span><span class="n">t1</span><span class="na">&#39;range</span><span class="p">)</span> <span class="o">:=</span> <span class="n">t1</span><span class="p">;</span>
+<span class="k">else</span>
+    <span class="n">toto</span><span class="p">(</span><span class="n">t2</span><span class="na">&#39;range</span><span class="p">)</span> <span class="o">:=</span> <span class="n">t2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<p>This is quite horrible, though, because you have no easy way to find out how many characters of <code class="docutils literal notranslate"><span class="pre">toto</span></code> are in use at any given time.</p>
+</div>
+<div class="section" id="complicated-and-pretty">
+<h3><a class="toc-backref" href="#id19">Complicated and pretty</a><a class="headerlink" href="#complicated-and-pretty" title="Permalink to this headline">¶</a></h3>
+<p>Make the string a variable of type <code class="docutils literal notranslate"><span class="pre">LINE</span></code>, from package <code class="docutils literal notranslate"><span class="pre">STD.TEXTIO</span></code>. Then you can copy any string into it using the <code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure:</p>
+<p><code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure adds things to the end of the string stored in <code class="docutils literal notranslate"><span class="pre">toto</span></code>, so that it grows ever longer. The <code class="docutils literal notranslate"><span class="pre">DEALLOCATE</span></code> procedure eliminates the spaces used by the line variable.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Each line variable need to be deallocated at the end, otherwise the memory space will not be released.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">string pretty 1</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">toto</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span> <span class="c1">-- initialised to empty!</span>
+<span class="p">...</span>
+<span class="k">if</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span> <span class="k">then</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">toto</span><span class="p">,</span> <span class="n">t1</span><span class="p">);</span>
+<span class="k">else</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">toto</span><span class="p">,</span> <span class="n">t2</span><span class="p">);</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<p>To reset it back to “empty” and free the memory, simply:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">string pretty 2</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">deallocate</span><span class="p">(</span><span class="n">toto</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="put-string-into-line">
+<h4><a class="toc-backref" href="#id20">Put String into Line</a><a class="headerlink" href="#put-string-into-line" title="Permalink to this headline">¶</a></h4>
+<p>Copying any string into a line variable, having first cleared that variable:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">string pretty 3</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">procedure</span> <span class="n">put</span><span class="p">(</span><span class="n">l</span><span class="o">:</span> <span class="k">inout</span> <span class="n">line</span><span class="p">;</span> <span class="n">s</span><span class="o">:</span> <span class="k">in</span> <span class="kt">string</span><span class="p">)</span> <span class="k">is</span>
+    <span class="k">begin</span>
+    <span class="n">deallocate</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-string-from-line">
+<h4><a class="toc-backref" href="#id21">Get String from Line</a><a class="headerlink" href="#get-string-from-line" title="Permalink to this headline">¶</a></h4>
+<p>Given a variable.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">string pretty 4</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">l</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span>
+<span class="k">variable</span> <span class="n">c</span><span class="o">:</span> <span class="kt">character</span><span class="p">;</span>
+<span class="k">variable</span> <span class="n">s</span><span class="o">:</span> <span class="kt">string</span><span class="p">(</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">80</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="p">&#39;</span> <span class="p">&#39;);</span>
+
+<span class="c1">-- put something into l</span>
+<span class="p">...</span>
+
+<span class="c1">-- take the whole string content</span>
+<span class="n">report</span> <span class="s">&quot;Message is &quot;</span> <span class="o">&amp;</span> <span class="n">l</span><span class="p">.</span><span class="k">all</span><span class="p">;</span>
+
+<span class="c1">-- take a slice of it, just like a string:</span>
+<span class="n">c</span> <span class="o">:=</span> <span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">s</span> <span class="o">:=</span> <span class="n">l</span><span class="p">.</span><span class="k">all</span><span class="p">;</span> <span class="p">(</span><span class="n">whole</span> <span class="n">line</span> <span class="k">to</span> <span class="kt">string</span><span class="p">)</span>
+
+<span class="c1">-- find its length:</span>
+<span class="k">if</span> <span class="n">l</span><span class="na">&#39;length</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="k">then</span>
+   <span class="p">...</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+
+<span class="c1">-- write it to a file (such as the console):</span>
+<span class="n">writeline</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="c1">-- also clears l to empty</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="shared-variables">
+<h2><a class="toc-backref" href="#id22">Shared Variables</a><a class="headerlink" href="#shared-variables" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">shared variables</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">architecture</span> <span class="nc">non_determinist</span> <span class="k">of</span> <span class="nc">example</span> <span class="k">is</span>
+
+    <span class="k">shared</span> <span class="k">variable</span> <span class="n">count</span> <span class="o">:</span> <span class="kt">integer</span><span class="p">;</span>
+
+<span class="k">begin</span>
+
+    <span class="n">p1</span> <span class="o">:</span> <span class="k">process</span>
+    <span class="k">begin</span>
+        <span class="n">count</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">wait</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">process</span> <span class="nc">p1</span><span class="p">;</span>
+
+    <span class="nc">p2</span><span class="o">:</span> <span class="k">process</span>
+    <span class="k">begin</span>
+        <span class="k">wait</span> <span class="mi">1</span> <span class="n">ps</span><span class="p">;</span>
+        <span class="n">count</span> <span class="o">:=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">wait</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">process</span> <span class="nc">p2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">architecture</span> <span class="nc">non_determinist</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="time.html" class="btn btn-neutral float-right" title="Time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="syntax.html" class="btn btn-neutral float-left" title="Syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
