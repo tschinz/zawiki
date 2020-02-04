@@ -4,5 +4,6 @@
 .idea
 *.iml
 _build/*
+source/index.rst
 public/*
 !public/pdf

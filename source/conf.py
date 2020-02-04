@@ -56,6 +56,7 @@ extensions = [
 extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
             'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None),
             'zawiki_page': ('http://tschinz.github.io/zawiki/%s', None),
+            'pdfviewer': ('https://nbviewer.jupyter.org/%s', None),
             }
 
 # Avoid warnings when different pages have the same titles
