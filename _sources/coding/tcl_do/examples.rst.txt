@@ -34,8 +34,6 @@ This scripts performs the following operations:
 #. Load do files for simulation
 #. Restart and Simulate
 
-
-
 Compilation
 ===========
 

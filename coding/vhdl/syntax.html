@@ -1,0 +1,1080 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Syntax &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tcl-Tk" href="../tcl_do/index.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-4-ge4af19e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VHDL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/syntex.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fileheaders.html">File Headers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/books/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/jokes/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/quotes/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/fonts/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/icons/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">VHDL</a> &raquo;</li>
+        
+      <li>Syntax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/vhdl/syntax.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#types" id="id22">Types</a></p>
+<ul>
+<li><p><a class="reference internal" href="#records" id="id23">Records</a></p>
+<ul>
+<li><p><a class="reference internal" href="#multiple-record-example" id="id24">Multiple record example</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#integer" id="id25">Integer</a></p></li>
+<li><p><a class="reference internal" href="#time" id="id26">Time</a></p></li>
+<li><p><a class="reference internal" href="#std-u-logic" id="id27"><code class="docutils literal notranslate"><span class="pre">STD_(U)logic</span></code></a></p></li>
+<li><p><a class="reference internal" href="#std-u-logic-vector" id="id28"><code class="docutils literal notranslate"><span class="pre">STD_(U)logic_vector</span></code></a></p></li>
+<li><p><a class="reference internal" href="#unsigned" id="id29">Unsigned</a></p></li>
+<li><p><a class="reference internal" href="#signed" id="id30">Signed</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#operators" id="id31">Operators</a></p>
+<ul>
+<li><p><a class="reference internal" href="#resulting-size" id="id32">Resulting size</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#functions" id="id33">Functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#edge-finding" id="id34">Edge finding</a></p></li>
+<li><p><a class="reference internal" href="#conversion" id="id35">Conversion</a></p></li>
+<li><p><a class="reference internal" href="#resize" id="id36">Resize</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#procedure" id="id37">Procedure</a></p></li>
+<li><p><a class="reference internal" href="#signal" id="id38">Signal</a></p>
+<ul>
+<li><p><a class="reference internal" href="#attributes" id="id39">Attributes</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#statements" id="id40">Statements</a></p>
+<ul>
+<li><p><a class="reference internal" href="#if" id="id41">If</a></p></li>
+<li><p><a class="reference internal" href="#case" id="id42">Case</a></p></li>
+<li><p><a class="reference internal" href="#with-select" id="id43">With Select</a></p></li>
+<li><p><a class="reference internal" href="#when" id="id44">When</a></p></li>
+<li><p><a class="reference internal" href="#for" id="id45">For</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fixed-floating-point-types" id="id46">Fixed &amp; Floating Point Types</a></p></li>
+<li><p><a class="reference internal" href="#fixed-point-types" id="id47">Fixed Point Types</a></p></li>
+<li><p><a class="reference internal" href="#floating-point-types" id="id48">Floating Point Types</a></p></li>
+</ul>
+</div>
+<p>You can also find nice comprehensive VHDL papers and courses at: <a class="reference external" href="http://www.synthworks.com">http://www.synthworks.com</a></p>
+<div class="section" id="types">
+<h2><a class="toc-backref" href="#id22">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 55%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Typename</p></th>
+<th class="head"><p>Possible Value(s)</p></th>
+<th class="head"><p>Package</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td><p>standard</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">std_ulogic</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">U</span></code>, <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">Z</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code>, <code class="docutils literal notranslate"><span class="pre">L</span></code>, <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>std_logic_1164</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">std_ulogic_vector</span></code></p></td>
+<td><p>array of std_ulogic</p></td>
+<td><p>std_logic_1164</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">std_logic</span></code></p></td>
+<td><p>resolved std_ulogic</p></td>
+<td><p>std_logic_1164</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">std_logic_vector</span></code></p></td>
+<td><p>array of std_logic</p></td>
+<td><p>std_logic_1164</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">unsigned</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(1 \: to \: 2^2{(n)} - 1\)</span></p></td>
+<td><p>numeric_std std_logic_arith</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">signed</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(-2^{(n-1)} \: to \: 2^{(n-1)} - 1\)</span> (2nd Complement)</p></td>
+<td><p>numeric_std std_logic_arith</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(-2147483648 \: to \: 2147483647\)</span>  (32bit)</p></td>
+<td><p>standard</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">real</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(-1.0E38 \: to \: 1.0E38\)</span></p></td>
+<td><p>standard</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">time</span></code></p></td>
+<td><p>1 fs to 1 hr</p></td>
+<td><p>standard</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">character</span></code></p></td>
+<td><p>191 / 256 characters</p></td>
+<td><p>standard</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>array of character</p></td>
+<td><p>standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="records">
+<h3><a class="toc-backref" href="#id23">Records</a><a class="headerlink" href="#records" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">record</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- record declaration</span>
+<span class="k">type</span> <span class="n">reg_type</span> <span class="k">is</span> <span class="k">record</span>
+    <span class="n">irq</span>  <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+    <span class="n">pend</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">7</span><span class="p">);</span>
+    <span class="n">mask</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">7</span><span class="p">);</span>
+<span class="k">end</span> <span class="k">record</span><span class="p">;</span>
+
+<span class="c1">-- signal of declared record</span>
+<span class="k">signal</span> <span class="n">r</span><span class="p">,</span> <span class="n">rin</span> <span class="o">:</span> <span class="n">reg_type</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-record-example">
+<h4><a class="toc-backref" href="#id24">Multiple record example</a><a class="headerlink" href="#multiple-record-example" title="Permalink to this headline">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">m_record</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="n">value_type</span> <span class="k">is</span> <span class="k">record</span>
+    <span class="n">holdtime</span>     <span class="o">:</span> <span class="kt">time</span><span class="p">;</span>
+    <span class="n">filename</span>     <span class="o">:</span> <span class="kt">string</span><span class="p">(</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="n">value</span>        <span class="o">:</span> <span class="kt">integer</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">record</span><span class="p">;</span>
+
+<span class="k">type</span> <span class="n">command_type</span> <span class="k">is</span> <span class="k">record</span>
+    <span class="n">action</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">value</span>  <span class="o">:</span> <span class="n">value_type</span><span class="p">;</span>
+    <span class="n">busy</span>   <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">record</span><span class="p">;</span>
+
+<span class="k">constant</span> <span class="n">init_value_type</span>   <span class="o">:</span> <span class="n">value_type</span>   <span class="o">:=</span> <span class="p">(</span><span class="mi">1</span> <span class="n">ps</span><span class="p">,</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="p">&#39;</span> <span class="p">&#39;),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">constant</span> <span class="n">init_command_type</span> <span class="o">:</span> <span class="n">command_type</span> <span class="o">:=</span> <span class="p">((</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">),</span> <span class="n">init_value_type</span><span class="p">,</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="integer">
+<h3><a class="toc-backref" href="#id25">Integer</a><a class="headerlink" href="#integer" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">type integer</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span>    <span class="kt">integer</span>  <span class="k">is</span> <span class="k">range</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="k">to</span> <span class="mi">2147483647</span>   <span class="c1">-- max 32bit</span>
+<span class="k">subtype</span> <span class="kt">natural</span>  <span class="k">is</span> <span class="k">range</span>           <span class="mi">0</span> <span class="k">to</span> <span class="kt">integer</span><span class="na">&#39;high</span> <span class="c1">-- max 32bit</span>
+<span class="k">subtype</span> <span class="kt">positive</span> <span class="k">is</span> <span class="k">range</span>           <span class="mi">1</span> <span class="k">to</span> <span class="kt">integer</span><span class="na">&#39;high</span> <span class="c1">-- max 32bit</span>
+
+<span class="k">signal</span> <span class="n">int_free</span> <span class="o">:</span> <span class="kt">integer</span><span class="p">;</span>                 <span class="c1">-- 32bit wide integer</span>
+<span class="k">signal</span> <span class="n">int_5bit</span> <span class="o">:</span> <span class="kt">integer</span> <span class="k">range</span> <span class="o">-</span><span class="mi">16</span> <span class="k">to</span> <span class="mi">15</span><span class="p">;</span> <span class="c1">-- 5bit integer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="time">
+<h3><a class="toc-backref" href="#id26">Time</a><a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">type time</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="kt">time</span>     <span class="k">is</span> <span class="k">range</span> <span class="o">-</span><span class="mi">2147483648</span> <span class="k">to</span> <span class="mi">2147483647</span> <span class="c1">-- neg also possible</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="std-u-logic">
+<h3><a class="toc-backref" href="#id27"><code class="docutils literal notranslate"><span class="pre">STD_(U)logic</span></code></a><a class="headerlink" href="#std-u-logic" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">type std</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- std_ulogic</span>
+<span class="c1">-- only one driver per signal</span>
+<span class="k">type</span> <span class="kt">std_ulogic</span> <span class="k">is</span> <span class="p">(</span><span class="sc">&#39;U&#39;</span><span class="p">,</span> <span class="c1">-- Unitialized</span>
+                    <span class="sc">&#39;X&#39;</span><span class="p">,</span> <span class="c1">-- Forcing Unknown</span>
+                    <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="c1">-- Forcing 0</span>
+                    <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="c1">-- Forcing 1</span>
+                    <span class="sc">&#39;Z&#39;</span><span class="p">,</span> <span class="c1">-- High Impedance</span>
+                    <span class="sc">&#39;W&#39;</span><span class="p">,</span> <span class="c1">-- Weak Unknown</span>
+                    <span class="sc">&#39;L&#39;</span><span class="p">,</span> <span class="c1">-- Weak 0</span>
+                    <span class="sc">&#39;H&#39;</span><span class="p">,</span> <span class="c1">-- Weak 1</span>
+                    <span class="sc">&#39;-&#39;</span><span class="p">,</span> <span class="c1">-- Don&#39;t care</span>
+<span class="c1">-- std_logic = resolved std_ulogic</span>
+<span class="c1">-- allows more than one driver for Bidirectional busses</span>
+<span class="k">subtype</span> <span class="kt">std_logic</span> <span class="k">is</span> <span class="n">resolved</span> <span class="kt">std_ulogic</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="std-u-logic-vector">
+<h3><a class="toc-backref" href="#id28"><code class="docutils literal notranslate"><span class="pre">STD_(U)logic_vector</span></code></a><a class="headerlink" href="#std-u-logic-vector" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">type std_vector</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span>  <span class="kt">std_ulogic_vector</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_ulogic</span><span class="p">;</span>
+<span class="k">type</span>  <span class="kt">std_logic_vector</span>  <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_logic</span><span class="p">;</span>
+
+<span class="n">std_logic_vector_sig</span> <span class="o">&lt;=</span> <span class="s">&quot;11&quot;</span><span class="p">;</span> <span class="c1">--  3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="unsigned">
+<h3><a class="toc-backref" href="#id29">Unsigned</a><a class="headerlink" href="#unsigned" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">type unsigned</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="kt">unsigned</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_logic</span><span class="p">;</span>
+
+<span class="n">unsigned_sig</span> <span class="o">&lt;=</span> <span class="s">&quot;11&quot;</span><span class="p">;</span> <span class="c1">--  3</span>
+<span class="n">unsigned_sig</span> <span class="o">&lt;=</span> <span class="n">unsigned_sig</span> <span class="o">+</span> <span class="n">unsigned_sig</span><span class="p">;</span>
+                             <span class="o">+</span> <span class="n">integer_sig</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="signed">
+<h3><a class="toc-backref" href="#id30">Signed</a><a class="headerlink" href="#signed" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">type signed</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="kt">signed</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_logic</span><span class="p">;</span>
+
+<span class="n">signed_sig</span>   <span class="o">&lt;=</span> <span class="s">&quot;11&quot;</span><span class="p">;</span> <span class="c1">-- -1</span>
+<span class="n">signed_sig</span>   <span class="o">&lt;=</span> <span class="n">signed_sig</span> <span class="o">+</span> <span class="n">signed_sig</span><span class="p">;</span>
+                           <span class="o">+</span> <span class="n">integer_sig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operators">
+<h2><a class="toc-backref" href="#id31">Operators</a><a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 36%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p><strong>Arithmetic</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>Addition</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>Substraction</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Multiplication</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p>Division</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">/</span> <span class="pre">1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">*</span></code></p></td>
+<td><p>Power / Potenz</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(2*</span> <span class="pre">*x'high</span> <span class="pre">DOWNTO</span> <span class="pre">0)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">abs</span></code></p></td>
+<td><p>absolute Value</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mod</span></code></p></td>
+<td><p>Module</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rem</span></code></p></td>
+<td><p>rest of Division</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p><strong>Just for vector types</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sla</span></code></p></td>
+<td><p>Arith shift left</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SHIFT_LEFT(BUS,nbr)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sra</span></code></p></td>
+<td><p>Arith shift right</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SHIFT_RIGHT(Bus,nbr)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sll</span></code></p></td>
+<td><p>Logic shift left</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">sll</span> <span class="pre">2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">srl</span></code></p></td>
+<td><p>Logic shift right</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">srl</span> <span class="pre">2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Comparison</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td><p>equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></td>
+<td><p>inequal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/=</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>smaller</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>larger</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>smaller equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>larger equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p><strong>Logic Operation on std_logic</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
+<td><p>&amp;</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nand</span></code></p></td>
+<td><p>!&amp;</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">nand</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+<td><p>or</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span>&#160;&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nor</span></code></p></td>
+<td><p>not or</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">nor</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">xor</span></code></p></td>
+<td><p>(+)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">xor</span>&#160; <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+<td><p>~</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not(x)</span></code></p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Else</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p></td>
+<td><p>Concatenation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">&amp;</span> <span class="pre">z</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/operator_usage.svg"><img alt="../../_images/operator_usage.svg" src="../../_images/operator_usage.svg" width="600px" /></a>
+<p class="caption"><span class="caption-text">Operator usage</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="resulting-size">
+<h3><a class="toc-backref" href="#id32">Resulting size</a><a class="headerlink" href="#resulting-size" title="Permalink to this headline">¶</a></h3>
+<p>The result size of an operation</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">operation result size</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Binary</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="s">&quot;1001&quot;</span><span class="p">;</span>         <span class="c1">-- 4 bits binary value</span>
+<span class="c1">-- Hexadecimal</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="mh">X&quot;F&quot;</span><span class="p">;</span>           <span class="c1">-- 1 Hexadigit = 4 binary bits</span>
+<span class="c1">-- Assignation</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="n">a</span><span class="p">;</span>              <span class="c1">-- a&#39;length = Length of array A</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="n">a</span> <span class="k">and</span> <span class="n">b</span><span class="p">;</span>        <span class="c1">-- a&#39;length = b&#39;Length</span>
+<span class="n">boolean_sig</span> <span class="o">&lt;=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>          <span class="c1">-- Boolean</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>          <span class="c1">-- Maximum (A&#39;Length, B&#39;Length)</span>
+<span class="n">vector_sig</span>  <span class="o">&lt;=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>          <span class="c1">-- A&#39;Length + B&#39;Length</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2><a class="toc-backref" href="#id33">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Functions are reusable pieces of code. A function cannot consume simulation time and has only one return parameter. See also <a class="reference internal" href="#procedure"><span class="std std-ref">Procedure</span></a></p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">parity</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">parity_generator</span><span class="p">(</span> <span class="n">din</span> <span class="o">:</span> <span class="kt">std_ulogic_vector</span> <span class="p">)</span>
+                           <span class="k">return</span> <span class="kt">std_ulogic</span> <span class="k">is</span>
+    <span class="k">variable</span> <span class="n">t</span> <span class="o">:</span> <span class="kt">std_ulogic</span> <span class="o">:=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+<span class="k">begin</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">din</span><span class="na">&#39;range</span> <span class="k">loop</span>
+        <span class="n">t</span> <span class="o">:=</span> <span class="n">t</span> <span class="k">xor</span> <span class="n">din</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">end</span> <span class="k">loop</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">;</span>
+<span class="k">end</span> <span class="nc">parity_generator</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="n">sig_par</span> <span class="o">&lt;=</span> <span class="n">paritiy_generator</span><span class="p">(</span><span class="n">data_bus</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="edge-finding">
+<h3><a class="toc-backref" href="#id34">Edge finding</a><a class="headerlink" href="#edge-finding" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">edge</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">rising_edge</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span>      <span class="p">(</span><span class="n">clk</span><span class="na">&#39;event</span> <span class="o">&amp;</span> <span class="n">clk</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span><span class="p">)</span>
+<span class="n">falling_edge</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span>     <span class="p">(</span><span class="n">clk</span><span class="na">&#39;event</span> <span class="o">&amp;</span> <span class="n">clk</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="conversion">
+<h3><a class="toc-backref" href="#id35">Conversion</a><a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">conversion functions</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">to_integer</span><span class="p">()</span>          <span class="c1">-- signed,unsigned return int</span>
+<span class="n">to_unsigned</span><span class="p">()</span>         <span class="c1">-- int             return unsigned</span>
+<span class="n">to_signed</span><span class="p">()</span>           <span class="c1">-- int             return signed</span>
+<span class="kt">signed</span><span class="p">()</span>              <span class="c1">-- slv             return signed</span>
+<span class="kt">unsigned</span><span class="p">()</span>            <span class="c1">-- slv             return unsigned</span>
+<span class="kt">std_logic_vector</span><span class="p">()</span>    <span class="c1">-- signed,unsigned return slv</span>
+<span class="n">std_match</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span> <span class="c1">--                 return bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="resize">
+<h3><a class="toc-backref" href="#id36">Resize</a><a class="headerlink" href="#resize" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">resize functions</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">resize</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>   <span class="c1">-- unsigned        return unsigned</span>
+<span class="n">resize</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>   <span class="c1">-- signed          return signed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="procedure">
+<h2><a class="toc-backref" href="#id37">Procedure</a><a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>A procedure allows to reuse a piece of code. It has to be written in a package or between the process and it’s beginning. A procedure can consume simulation time and can have as many in, out or inout signals/variables as wished. See also <a class="reference internal" href="#functions"><span class="std std-ref">Functions</span></a></p>
+<p>If in the parameter list is a parameter without signal in front, it means that it has to assigned to a direct value or a variable. Mostly signals are used if as the interface and variables are used to give input- or output data.</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">parity generator</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">procedure</span> <span class="n">parity_generator</span><span class="p">(</span> <span class="k">signal</span> <span class="n">din</span> <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_ulogic_vector</span><span class="p">;</span>
+                            <span class="k">signal</span> <span class="n">par</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">std_ulogic</span><span class="p">;</span>
+                            <span class="n">par_init</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_ulogic</span>
+                          <span class="p">)</span> <span class="k">is</span>
+    <span class="k">variable</span> <span class="n">t</span> <span class="o">:</span> <span class="kt">std_ulogic</span> <span class="o">:=</span> <span class="n">par_init</span><span class="p">;</span>
+<span class="k">begin</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="k">to</span> <span class="n">din</span><span class="na">&#39;range</span> <span class="k">loop</span>
+        <span class="n">t</span> <span class="o">:=</span> <span class="n">t</span> <span class="k">xor</span> <span class="n">din</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">end</span> <span class="k">loop</span><span class="p">;</span>
+    <span class="n">par</span> <span class="o">&lt;=</span> <span class="n">t</span><span class="p">;</span>
+<span class="k">end</span> <span class="nc">parity_generator</span><span class="p">;</span>
+
+<span class="k">signal</span> <span class="n">databus</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">31</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:=</span> <span class="mh">x&quot;3210&quot;</span>
+<span class="k">signal</span> <span class="n">par_bit</span> <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="n">parity_generator</span><span class="p">(</span><span class="n">databus</span><span class="p">,</span><span class="n">par_bit</span><span class="p">,</span> <span class="s">&quot;0&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="signal">
+<h2><a class="toc-backref" href="#id38">Signal</a><a class="headerlink" href="#signal" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">signal assign</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">DataOut</span> <span class="o">&lt;=</span> <span class="p">(</span> <span class="mi">7</span> <span class="k">downto</span> <span class="mi">4</span> <span class="o">=&gt;</span> <span class="mh">x&quot;A&quot;</span><span class="p">,</span>
+             <span class="mi">3</span> <span class="k">downto</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s">&quot;01&quot;</span><span class="p">,</span>
+             <span class="mi">1</span>          <span class="o">=&gt;</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span>
+             <span class="k">others</span>     <span class="o">=&gt;</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3><a class="toc-backref" href="#id39">Attributes</a><a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>More Attributes can be found at: <span class="xref std std-doc">/coding/vhdl/attibutes</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 51%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Decription</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p><strong>Type based</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(10</span> <span class="pre">DOWNTO</span> <span class="pre">0)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'base</span></code></p></td>
+<td><p>Base type of type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T'left</span></code></p></td>
+<td><p>Element left of type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'right</span></code></p></td>
+<td><p>Element right of type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T'high</span></code></p></td>
+<td><p>Highest element of type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'low</span></code></p></td>
+<td><p>Lowest element of type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T'pos(x)</span></code></p></td>
+<td><p>Place <code class="docutils literal notranslate"><span class="pre">x</span></code> in type <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'val(n)</span></code></p></td>
+<td><p>Value of element at place <code class="docutils literal notranslate"><span class="pre">n</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T'succ(x)</span></code></p></td>
+<td><p>Element after <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'pred(x)</span></code></p></td>
+<td><p>Element before <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T'leftOf(x)</span></code></p></td>
+<td><p>Element left of <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">T'rightOf(x)</span></code></p></td>
+<td><p>Element right of <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Vector based</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">V'left</span></code></p></td>
+<td><p>Element most left in vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">V'right</span></code></p></td>
+<td><p>Element most right in vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">V'high</span></code></p></td>
+<td><p>Highest element in vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">V'low</span></code></p></td>
+<td><p>Lowest element in vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">V'range</span></code></p></td>
+<td><p>range of vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">downto</span> <span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">V'reverse_range</span></code></p></td>
+<td><p>inversed range of vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">downto</span> <span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">V'length</span></code></p></td>
+<td><p>length of vector <code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">11</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="statements">
+<h2><a class="toc-backref" href="#id40">Statements</a><a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if">
+<h3><a class="toc-backref" href="#id41">If</a><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">if</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s0</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="k">and</span> <span class="n">s1</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="k">then</span>
+    <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in0</span><span class="p">;</span>
+<span class="k">elsif</span> <span class="n">s0</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">and</span> <span class="n">s1</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="k">then</span>
+    <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in1</span><span class="p">;</span>
+<span class="k">elsif</span> <span class="n">s0</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span> <span class="k">and</span> <span class="n">s1</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">then</span>
+    <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in2</span><span class="p">;</span>
+<span class="k">elsif</span> <span class="n">s0</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">and</span> <span class="n">s1</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">then</span>
+    <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in3</span><span class="p">;</span>
+<span class="k">else</span>
+    <span class="n">output</span> <span class="o">&lt;=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="case">
+<h3><a class="toc-backref" href="#id42">Case</a><a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">case</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="n">sel</span> <span class="k">is</span>
+  <span class="k">when</span>  <span class="s">&quot;00&quot;</span>  <span class="o">=&gt;</span>  <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in0</span><span class="p">;</span>
+  <span class="k">when</span>  <span class="s">&quot;01&quot;</span>  <span class="o">=&gt;</span>  <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in1</span><span class="p">;</span>
+  <span class="k">when</span>  <span class="s">&quot;10&quot;</span>  <span class="o">=&gt;</span>  <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in2</span><span class="p">;</span>
+  <span class="k">when</span>  <span class="s">&quot;11&quot;</span>  <span class="o">=&gt;</span>  <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in3</span><span class="p">;</span>
+  <span class="k">when</span> <span class="k">others</span> <span class="o">=&gt;</span>  <span class="n">output</span> <span class="o">&lt;=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">case</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="with-select">
+<h3><a class="toc-backref" href="#id43">With Select</a><a class="headerlink" href="#with-select" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">with</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">sel</span>  <span class="k">select</span>
+  <span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in0</span> <span class="k">when</span> <span class="s">&quot;00&quot;</span><span class="p">,</span>
+            <span class="n">in1</span> <span class="k">when</span> <span class="s">&quot;01&quot;</span><span class="p">,</span>
+            <span class="n">in2</span> <span class="k">when</span> <span class="s">&quot;10&quot;</span><span class="p">,</span>
+            <span class="n">in3</span> <span class="k">when</span> <span class="s">&quot;11&quot;</span><span class="p">,</span>
+            <span class="sc">&#39;X&#39;</span> <span class="k">when</span> <span class="k">others</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="when">
+<h3><a class="toc-backref" href="#id44">When</a><a class="headerlink" href="#when" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">when</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">output</span> <span class="o">&lt;=</span> <span class="n">in0</span> <span class="k">when</span> <span class="n">sel</span> <span class="o">=</span> <span class="s">&quot;00&quot;</span>
+     <span class="k">else</span> <span class="n">in1</span> <span class="k">when</span> <span class="n">sel</span> <span class="o">=</span> <span class="s">&quot;01&quot;</span>
+     <span class="k">else</span> <span class="n">in2</span> <span class="k">when</span> <span class="n">sel</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span>
+     <span class="k">else</span> <span class="n">in3</span> <span class="k">when</span> <span class="n">sel</span> <span class="o">=</span> <span class="s">&quot;11&quot;</span>
+     <span class="k">else</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="for">
+<h3><a class="toc-backref" href="#id45">For</a><a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">for loop</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span> <span class="k">to</span> <span class="mi">8</span> <span class="k">loop</span>
+  <span class="n">output</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">input</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">8</span><span class="p">);</span>
+<span class="k">end</span> <span class="k">loop</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">input</span><span class="na">&#39;range</span> <span class="k">loop</span>
+  <span class="n">output</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">input</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="k">end</span> <span class="k">loop</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fixed-floating-point-types">
+<h2><a class="toc-backref" href="#id46">Fixed &amp; Floating Point Types</a><a class="headerlink" href="#fixed-floating-point-types" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+</div>
+<div class="section" id="fixed-point-types">
+<h2><a class="toc-backref" href="#id47">Fixed Point Types</a><a class="headerlink" href="#fixed-point-types" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+</div>
+<div class="section" id="floating-point-types">
+<h2><a class="toc-backref" href="#id48">Floating Point Types</a><a class="headerlink" href="#floating-point-types" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tcl_do/index.html" class="btn btn-neutral float-right" title="Tcl-Tk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

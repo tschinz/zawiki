@@ -107,12 +107,28 @@ The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
 :config_repo:`shell script <blob/master/scripts/shell/christmas_tree.sh>`
 :zawiki_repo:`conf.py file <blob/master/source/conf.py>`
 
-.. important::
+.. note::
 
-   Tto access github files and folders you need to create the following link structure:
+   To access github files and folders you need to create the following link structure:
 
    * https:// + ``github_repo_link`` + ``tree/master/`` + ``folder/location``
    * https:// + ``github_repo_link`` + ``blob/master/`` + ``file/location.txt``
+
+.. important::
+
+   **Link to a pdf**
+
+   https://nbviewer.jupyter.org can be used to display a pdf from github without using the ``:download`` directive.
+
+   .. code-block:: ReST
+
+      https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf
+
+      :pdfviewer:`github/tschinz/zawiki/blob/master/pdf/zawiki.pdf`
+
+   https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf
+
+   :pdfviewer:`github/tschinz/zawiki/blob/master/pdf/zawiki.pdf`
 
 Other Sphinx Pages
 ^^^^^^^^^^^^^^^^^^
