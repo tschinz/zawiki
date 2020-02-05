@@ -12,11 +12,7 @@ Multimedia
    :titlesonly:
    :caption: Content
 
-   books/*
-   jokes/*
-   quotes/*
-   fonts/*
-   icons/*
-   videos/*
-   pictures/*
    audio/*
+   pictures/*
+   text/*
+   videos/*

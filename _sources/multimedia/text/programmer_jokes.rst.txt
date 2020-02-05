@@ -2,6 +2,11 @@
 Programmer Jokes
 ================
 
+
+.. figure:: img/joke.*
+   :align: center
+   :width: 150px
+
 .. contents:: :local:
 
 Christmas and Halloween
