@@ -2,6 +2,10 @@
 Fonts
 =====
 
+.. figure:: img/font.*
+   :align: center
+   :width: 150px
+
 * `Lato <https://github.com/latofonts/lato-source/>`_
 * `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 * `Source Sans Pro <https://github.com/adobe-fonts/source-sans-pro>`_

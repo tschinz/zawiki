@@ -2,6 +2,11 @@
 Book Review
 ===========
 
+.. figure:: img/book.*
+   :align: center
+   :width: 150px
+
+
 A list of my favorite books
 
 Crime

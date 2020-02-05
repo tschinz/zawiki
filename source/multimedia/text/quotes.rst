@@ -2,6 +2,11 @@
 Inspirational Quotes
 ====================
 
+
+.. figure:: img/quote.*
+   :align: center
+   :width: 150px
+
 .. list-table::
    :header-rows: 0
 

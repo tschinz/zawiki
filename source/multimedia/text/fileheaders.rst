@@ -2,6 +2,11 @@
 File Headers
 ============
 
+
+.. figure:: img/header.*
+   :align: center
+   :width: 150px
+
 .. code-block::
 
    # filename:          <filename>
