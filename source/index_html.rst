@@ -30,8 +30,10 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 
    tools/index
    tools/git/index
+   tools/anaconda/index
    tools/jupyter/index
    tools/pandoc/index
+   tools/sphinx/index
 
 .. toctree::
    :hidden:
@@ -47,7 +49,8 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    coding/tcl_do/index
    coding/spinal/index
    coding/scala/index
-   coding/cpp/index
+   coding/c_cpp/index
+   coding/make/index
    coding/ros/index
    coding/licenses/index
    coding/fileheaders

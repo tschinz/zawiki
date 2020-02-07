@@ -340,7 +340,7 @@ Signal
 Attributes
 ----------
 
-More Attributes can be found at: :doc:`/coding/vhdl/attibutes`
+More Attributes can be found at: :doc:`/coding/vhdl/attributes`
 
 +---------------------+------------------------------------------+--------------------+
 | Attribute           | Decription                               | Example            |

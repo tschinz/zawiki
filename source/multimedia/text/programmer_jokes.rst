@@ -125,3 +125,18 @@ Let it drop. Earth gravity accelerates it by 9.8m/s2
 
 **Answer**
 This joke has to do with SQL, which are commands used to control databases as well as a common hack used against insecure sites, called SQL Injection.
+
+Scripts Automation
+==================
+
+.. figure:: img/automation-win.png
+   :align: center
+   :width: 500px
+
+   Automation 1
+
+.. figure:: img/automation.png
+   :align: center
+   :width: 500px
+
+   Automation 2

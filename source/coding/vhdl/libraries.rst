@@ -2,6 +2,8 @@
 Libraries
 =========
 
+.. contents:: :local:
+
 Numeric Operations
 ==================
 

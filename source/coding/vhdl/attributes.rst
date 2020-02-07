@@ -127,8 +127,8 @@ VHDL 1076-1993 added three attributes that can be used to determine the precise 
 
 ``'Path_name`` returns a string value corresponding to the complete path (from the design hierarchy root) to the named entity specified in the prefix. The string returned by this attribute has a fixed format that is defined in the IEEE VHDL Language Reference Manual.
 
-Function kind attributes
-------------------------
+Function kind attributes 1
+--------------------------
 
 ``'Pos``, ``'Val``, ``'Succ``, ``'Pred``, ``'Leftof``, ``'Rightof``
 
@@ -157,7 +157,7 @@ Attributes that return information about a given type, signal, or array value ar
    variable V: state_type := state_type'val(2); -- V has the value of Strobe
 
 ``'succ(value)``
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 ``'Succ(value)`` returns the value corresponding to position number after a given type value.
 
@@ -173,6 +173,7 @@ Attributes that return information about a given type, signal, or array value ar
 ``'Pred(value)`` returns the value corresponding to position number preceding a given type value.
 
 .. code-block:: vhdl
+
    type state_type is (Init, Hold, Strobe, Read, Idle);
 
    variable V: state_type := state_type'pred(Hold); -- V has the value of Init
@@ -218,8 +219,8 @@ Function kind array attributes
 
 The function kind attributes that can be applied to array objects include:
 
-``'left``
-^^^^^^^^^
+``'left()``
+^^^^^^^^^^^
 
 ``'Left(value)`` returns the index value corresponding to the left bound of a given array range.
 
@@ -231,8 +232,8 @@ Example:
 
    variable I: integer := bit_array'left(bit_array'range); -- I has the value of 15
 
-``'right``
-^^^^^^^^^^
+``'right()``
+^^^^^^^^^^^^
 
 ``'Right(value)`` returns the index value corresponding to the right bound of a given array range.
 
@@ -242,8 +243,8 @@ Example:
 
    variable I: integer := bit_array'right(bit_array'range); -- I has the value of 0
 
-``'high``
-^^^^^^^^^
+``'high()``
+^^^^^^^^^^^
 
 ``'High(value)`` returns the index value corresponding to the upper-most bound of a given array range.
 
@@ -253,8 +254,8 @@ Example:
 
    variable I: integer := bit_array'high(bit_array'range); -- I has the value of 15
 
-``'low``
-^^^^^^^^
+``'low()``
+^^^^^^^^^^
 
 ``'Low(value)`` returns the index value corresponding to the lower bound of a given array range.
 
@@ -353,8 +354,8 @@ Active—returns true if any transaction (scheduled event) occurred on this sign
 
 Note: the ``'active``, ``'last_event``, ``'last_value`` and ``'last_active`` attributes are not generally supported in synthesis tools. Of the preceding five attributes, only ‘event should be used when describing synthesizable registered circuits. The ``‘active``, ``‘last_event``, ``‘last_value`` and ``‘last_active`` attributes should only be used to describe circuits for test purposes (such as for setup and hold checking). If they are encountered by a synthesis program, they will either be ignored, or the program will return an error and halt operation.
 
-Function kind attributes
-------------------------
+Function kind attributes 2
+--------------------------
 
 ``'Image``, ``'Value``
 
@@ -413,6 +414,7 @@ Signal kind attributes include the following:
 ``'Delayed(time)`` creates a delayed signal that is identical in waveform to the signal the attribute is applied to. (The time parameter is optional, and may be omitted.)
 
 .. code-block:: vhdl
+
    process(Clk'delayed(hold))
      -- Hold time check for input Data
    begin
