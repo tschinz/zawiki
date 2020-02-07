@@ -22,7 +22,7 @@ Multimedia
 Internet
 ========
   * `Madsonic <https://www.madsonic.org>`_ |linux|
-  * X11VNC |linux|
+  * :doc:`X11VNC </os/linux/tools/vnc>` |linux|
 
 Commandline
 ===========
@@ -38,19 +38,22 @@ Managment
   * `DCommander <https://devstorm-apps.com/dc/>`_ |mac|
   * `Hyperdock <http://hyperdock.bahoom.com/>`_ |mac|
   * `iStat Menu <http://bjango.com/mac/istatmenus/>`_ |mac|
-  * Virtualbox |linux| |mac| |win|
-  * Keepass |linux| |mac| |win|
+  * :doc:`Virtualbox </tools/virtualbox/index>` |linux| |mac| |win|
+  * `Keepass <https://keepass.info/>`_ |linux| |mac| |win|
 
 Programming
 ===========
-  * Sublime Text |linux| |mac| |win|
-  * Sublime Merge |linux| |mac| |win|
-  * git |linux| |mac| |win|
+  * :doc:`Sublime Text </tools/sublimetext/index>` |linux| |mac| |win|
+  * `Sublime Merge <https://www.sublimemerge.com/>`_ |linux| |mac| |win|
+  * :doc:`git </tools/git/index>` |linux| |mac| |win|
+  * :doc:`Anaconda </tools/anaconda/index>` |linux| |mac| |win|
+  * :doc:`Jupyterlab </tools/jupyter/index>` |linux| |mac| |win|
+  * :doc:`Sphinx </tools/sphinx/index>` |linux| |mac| |win|
+  * :doc:`Pandoc </tools/pandoc/index>` |linux| |mac| |win|
   * Mentor HDL Designer |linux| |win|
   * Mentor Modelsim |linux| |win|
   * Xilinx ISE |linux| |win|
   * Intel Quartus |win|
   * Intellij IDEA |linux| |mac| |win|
   * Intellij PyCharm |linux| |mac| |win|
-  * Jupyterlab |linux| |mac| |win|
-  * SpinalHDL |linux| |mac| |win|
+  * :doc:`SpinalHDL </coding/spinal/index>` |linux| |mac| |win|

@@ -11,13 +11,22 @@
 
    tools/index
    tools/git/index
+   tools/anaconda/index
    tools/jupyter/index
    tools/pandoc/index
+   tools/sphinx/index
 
    coding/ahk/index
    coding/python/index
-   coding/licenses/index
+   coding/regex/index
+   coding/vhdl/index
+   coding/tcl_do/index
+   coding/spinal/index
+   coding/scala/index
+   coding/c_cpp/index
+   coding/make/index
    coding/ros/index
+   coding/licenses/index
    coding/fileheaders
 
    writing/latex/index

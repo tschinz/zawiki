@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction Scala &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Coding Convention" href="coding_convention.html" />
+    <link rel="prev" title="Scala" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-7-g5eb68f1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scala</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Scala</a> &raquo;</li>
+        
+      <li>Introduction Scala</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/scala/intro.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-scala">
+<h1>Introduction Scala<a class="headerlink" href="#introduction-scala" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#basics" id="id1">Basics</a></p>
+<ul>
+<li><p><a class="reference internal" href="#types" id="id2">Types</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id3">Variables</a></p></li>
+<li><p><a class="reference internal" href="#constants" id="id4">Constants</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#return" id="id6">Return</a></p></li>
+<li><p><a class="reference internal" href="#return-type-inferation" id="id7">Return type inferation</a></p></li>
+<li><p><a class="reference internal" href="#function-that-returns-nothing-unit" id="id8">Function that returns nothing <code class="docutils literal notranslate"><span class="pre">Unit</span></code></a></p></li>
+<li><p><a class="reference internal" href="#arguements-default-value" id="id9">Arguements default value</a></p></li>
+<li><p><a class="reference internal" href="#apply" id="id10">Apply</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#object" id="id11">Object</a></p></li>
+<li><p><a class="reference internal" href="#entry-point-main" id="id12">Entry point (main)</a></p></li>
+<li><p><a class="reference internal" href="#class" id="id13">Class</a></p>
+<ul>
+<li><p><a class="reference internal" href="#inheritance-extends" id="id14">Inheritance <cite>extends</cite></a></p></li>
+<li><p><a class="reference internal" href="#case-class" id="id15">Case class</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#templates-type-parameterization" id="id16">Templates / Type parameterization</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/08474c9fa6e815820eed96b010b7fddf/scala-cheatsheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Scala</span> <span class="pre">Cheatsheet</span></code></a></p></li>
+</ul>
+<div class="section" id="basics">
+<h2><a class="toc-backref" href="#id1">Basics</a><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="types">
+<h3><a class="toc-backref" href="#id2">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<p>In Scala, there are 5 major types</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Literal</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Boolean</p></td>
+<td><p>true, false</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Int</p></td>
+<td><p>3, 0x32</p></td>
+<td><p>32 bits integer</p></td>
+</tr>
+<tr class="row-even"><td><p>Float</p></td>
+<td><p>3.14f</p></td>
+<td><p>32 bits floating point</p></td>
+</tr>
+<tr class="row-odd"><td><p>Double</p></td>
+<td><p>3.14</p></td>
+<td><p>64 bits floating point</p></td>
+</tr>
+<tr class="row-even"><td><p>String</p></td>
+<td><p>“Hello world”</p></td>
+<td><p>UTF-16 string</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h3><a class="toc-backref" href="#id3">Variables</a><a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<p>In scala, you can define a variable by using the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">number</span> <span class="k">=</span> <span class="mi">6</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">4</span>
+<span class="n">println</span><span class="o">(</span><span class="n">number</span><span class="o">)</span> <span class="c1">// 10</span>
+</pre></div>
+</div>
+<p>Scala is able to infer the type automatically. You don’t need to specify it if the variable is assigned at declaration:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">=</span> <span class="mi">0</span>   <span class="c1">//The type of &#39;number&#39; is inferred as a Int during the compilation.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="constants">
+<h3><a class="toc-backref" href="#id4">Constants</a><a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
+<p>But, in fact, it’s not very common to use <code class="docutils literal notranslate"><span class="pre">var</span></code> in Scala. Instead, constant values defined by <code class="docutils literal notranslate"><span class="pre">val</span></code> are often used:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">two</span>   <span class="k">=</span> <span class="mi">2</span>
+<span class="k">val</span> <span class="n">three</span> <span class="k">=</span> <span class="mi">3</span>
+<span class="k">val</span> <span class="n">six</span>   <span class="k">=</span> <span class="n">two</span> <span class="o">*</span> <span class="n">three</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h3><a class="toc-backref" href="#id5">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>For example, if you want to define a function which returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the sum of its two arguments is bigger than zero, you can do as follows:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then, to call this function, you can just write:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="mf">2.3f</span><span class="o">,</span> <span class="mf">5.4f</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>You can also specify arguements by name, which is useful if you have many arguements:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">sumBiggerThanZero</span><span class="o">(</span>
+  <span class="n">a</span> <span class="k">=</span> <span class="mf">2.3f</span><span class="o">,</span>
+  <span class="n">b</span> <span class="k">=</span> <span class="mf">5.4f</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<div class="section" id="return">
+<h4><a class="toc-backref" href="#id6">Return</a><a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword is not necessary. In absence of it, Scala takes the last statement of your function as the returned value.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="return-type-inferation">
+<h4><a class="toc-backref" href="#id7">Return type inferation</a><a class="headerlink" href="#return-type-inferation" title="Permalink to this headline">¶</a></h4>
+<p>Scala is able to automatically infer the return type. You don’t need to specify it:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-that-returns-nothing-unit">
+<h4><a class="toc-backref" href="#id8">Function that returns nothing <code class="docutils literal notranslate"><span class="pre">Unit</span></code></a><a class="headerlink" href="#function-that-returns-nothing-unit" title="Permalink to this headline">¶</a></h4>
+<p>If you want a function to return nothing, the return type should be set to <code class="docutils literal notranslate"><span class="pre">Unit</span></code>. It’s equivalent to the C/C++ void.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">printer</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">&quot;1234&quot;</span><span class="o">)</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">&quot;5678&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arguements-default-value">
+<h4><a class="toc-backref" href="#id9">Arguements default value</a><a class="headerlink" href="#arguements-default-value" title="Permalink to this headline">¶</a></h4>
+<p>You can specify a default value for each arguement of a function:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="apply">
+<h4><a class="toc-backref" href="#id10">Apply</a><a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h4>
+<p>Functions named apply are special because you can call them without having to type their name:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Array</span><span class="o">(){</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">index</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">array</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="n">array</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>   <span class="c1">//array(4) is interpreted as array.apply(4) and will return 7</span>
+</pre></div>
+</div>
+<p>This concept is also applicable for scala <code class="docutils literal notranslate"><span class="pre">object</span></code> (static)</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MajorityVote</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="nc">MajorityVote</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="c1">// Will call MajorityVote.apply(4)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="object">
+<h3><a class="toc-backref" href="#id11">Object</a><a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h3>
+<p>In scala, there is no <code class="docutils literal notranslate"><span class="pre">static</span></code> keyword. In place of that, there is <code class="docutils literal notranslate"><span class="pre">object</span></code>. Everything defined into an <code class="docutils literal notranslate"><span class="pre">object</span></code> is static.</p>
+<p>The following example defines a static function named <code class="docutils literal notranslate"><span class="pre">pow2</span></code> which takes a floating point value as parameter and returns a floating point as well.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MathUtils</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">pow2</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="n">value</span><span class="o">*</span><span class="n">value</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then you can call it by writing:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">MathUtils</span><span class="o">.</span><span class="n">pow2</span><span class="o">(</span><span class="mf">42.0f</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="entry-point-main">
+<h3><a class="toc-backref" href="#id12">Entry point (main)</a><a class="headerlink" href="#entry-point-main" title="Permalink to this headline">¶</a></h3>
+<p>The entry point of a Scala program (the main function) should be defined inside an object as a function named <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MyTopLevelMain</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello world&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="class">
+<h3><a class="toc-backref" href="#id13">Class</a><a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<p>The class syntax is very similar to Java. Imagine that you want to define a <code class="docutils literal notranslate"><span class="pre">Color</span></code> class which takes as construction parameters three Float values (r,g,b) :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Color</span><span class="o">(</span><span class="n">r</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">){</span>
+  <span class="k">def</span> <span class="n">getGrayLevel</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mf">0.3f</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="mf">0.4f</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span><span class="mf">0.4f</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then, to instantiate the class from the previous example and use its <code class="docutils literal notranslate"><span class="pre">getGrayLevel</span></code> function:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">grayLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">getGrayLevel</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>Be careful, if you want to access a construction parameter of the class from the outside, this construction parameter should be defined as a <code class="docutils literal notranslate"><span class="pre">val</span></code>:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Color</span><span class="o">(</span><span class="k">val</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">){</span> <span class="o">...</span> <span class="o">}</span>
+<span class="o">...</span>
+<span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">redLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">r</span>
+</pre></div>
+</div>
+<div class="section" id="inheritance-extends">
+<h4><a class="toc-backref" href="#id14">Inheritance <cite>extends</cite></a><a class="headerlink" href="#inheritance-extends" title="Permalink to this headline">¶</a></h4>
+<p>As an example, suppose that you want to define two classes, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> and <code class="docutils literal notranslate"><span class="pre">Square</span></code>, which extend the class <code class="docutils literal notranslate"><span class="pre">Shape</span></code>:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Shape</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Square</span><span class="o">(</span><span class="n">sideLength</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">sideLength</span> <span class="o">*</span> <span class="n">sideLength</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="case-class">
+<h4><a class="toc-backref" href="#id15">Case class</a><a class="headerlink" href="#case-class" title="Permalink to this headline">¶</a></h4>
+<p>Case class is an alternative way of declaring classes.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then there are some differences between <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> and <code class="docutils literal notranslate"><span class="pre">class</span></code> :</p>
+<ul class="simple">
+<li><p>case classes don’t need the <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword to be instantiated</p></li>
+<li><p>construction parameters are accessible from outside, you don’t need to define them as <code class="docutils literal notranslate"><span class="pre">val</span></code>.</p></li>
+</ul>
+<p>In SpinalHDL, this explains the reasoning behind the coding conventions: it’s in general recommended to use <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> instead of <code class="docutils literal notranslate"><span class="pre">class</span></code> in order to have less typing and more coherency.</p>
+</div>
+</div>
+<div class="section" id="templates-type-parameterization">
+<h3><a class="toc-backref" href="#id16">Templates / Type parameterization</a><a class="headerlink" href="#templates-type-parameterization" title="Permalink to this headline">¶</a></h3>
+<p>Imagine you want to design a class which is a queue of a given datatype, in that case you need to provide a type parameter to the class:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span>  <span class="nc">Queue</span><span class="o">[</span><span class="kt">T</span><span class="o">](){</span>
+  <span class="k">def</span> <span class="n">push</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">...</span>
+  <span class="k">def</span> <span class="n">pop</span><span class="o">()</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If you want to restrict the <code class="docutils literal notranslate"><span class="pre">T</span></code> type to be a sub class of a given type (for example <code class="docutils literal notranslate"><span class="pre">Shape</span></code>), you can use the <code class="docutils literal notranslate"><span class="pre">&lt;:</span> <span class="pre">Shape</span></code> syntax :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Shape</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span>
+<span class="o">}</span>
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+<span class="k">class</span>  <span class="nc">Queue</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Shape</span><span class="o">](){</span>
+  <span class="k">def</span> <span class="n">push</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">...</span>
+  <span class="k">def</span> <span class="n">pop</span><span class="o">()</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The same is possible for functions:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">doSomething</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Shape</span><span class="o">](</span><span class="n">shape</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">Something</span> <span class="o">=</span> <span class="o">{</span> <span class="n">shape</span><span class="o">.</span><span class="n">getArea</span><span class="o">()</span> <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="coding_convention.html" class="btn btn-neutral float-right" title="Coding Convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Scala" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+======================
+Introduction SpinalHDL
+======================
+
+.. contents:: :local:
+
+Some SpinalHDL helppages
+========================
+
+* `Offical Spinal HDL Documentation <https://spinalhdl.github.io/SpinalDoc-RTD>`_
+* :pdfviewer:`Cheatsheet Spinal HDL Core <github/tschinz/zawiki/blob/master/source/coding/spinal/docs/cheatSheet_core_oo.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Lib <github/tschinz/zawiki/blob/master/source/coding/spinal/docs/cheatSheet_lib_oo.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Symbolic <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/cheatSheet_symbolic.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Cheatsheet <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/CheatSheet_tips.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Presentation <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/presentation.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Presentation Fast <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/presentation_fast.pdf>`
+* :pdfviewer:`Cheatsheet Spinal HDL Presentation Very Fast <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/presentation_veryfast.pdf>`
+
+Community
+=========
+
+* `Gitter Channel <https://gitter.im/SpinalHDL/SpinalHDL>`_
+* `Issues <https://github.com/SpinalHDL/SpinalHDL/issues>`_
+* `Email <spinalhdl@gmail.com>`_

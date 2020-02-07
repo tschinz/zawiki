@@ -72,6 +72,7 @@ Wait statement
 
 .. code-block:: vhdl
    :caption: wait
+
    wait_PROC: process
        -- wait for a given TIME
        wait for <time>;
@@ -106,8 +107,7 @@ Strings
    -- String => Std_logic_vector
    slv_sig <= to_std_logic_vector(string_sig);
 
-Characters
-^^^^^^^^^^
+**Characters**
 
 .. code-block::
 

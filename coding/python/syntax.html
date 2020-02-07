@@ -1,0 +1,1359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Syntax &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RegEx" href="../regex/index.html" />
+    <link rel="prev" title="Standart libraries" href="stdlib.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-7-g5eb68f1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Python</a> &raquo;</li>
+        
+      <li>Syntax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/python/syntax.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#general" id="id3">General</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sourcefile" id="id4">Sourcefile</a></p></li>
+<li><p><a class="reference internal" href="#help-informations" id="id5">Help informations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#import" id="id6">Import</a></p>
+<ul>
+<li><p><a class="reference internal" href="#import-module" id="id7">import &lt;module&gt;</a></p></li>
+<li><p><a class="reference internal" href="#from-module-import-function" id="id8">from &lt;module&gt; import &lt;function&gt;</a></p>
+<ul>
+<li><p><a class="reference internal" href="#example" id="id9">Example</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#strings-and-numbers" id="id10">Strings and Numbers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#escape-characters" id="id11">Escape Characters</a></p></li>
+<li><p><a class="reference internal" href="#types" id="id12">Types</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#convertions" id="id13">Convertions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#string-bin-hex-convertions" id="id14">String Bin Hex convertions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#string-format-mini-language" id="id15">String Format Mini Language</a></p></li>
+<li><p><a class="reference internal" href="#operator" id="id16">Operator</a></p>
+<ul>
+<li><p><a class="reference internal" href="#priority" id="id17">Priority</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#statement" id="id18">Statement</a></p>
+<ul>
+<li><p><a class="reference internal" href="#if-elif-else" id="id19">if elif else</a></p></li>
+<li><p><a class="reference internal" href="#while" id="id20">while</a></p></li>
+<li><p><a class="reference internal" href="#for" id="id21">for</a></p></li>
+<li><p><a class="reference internal" href="#break" id="id22">break</a></p></li>
+<li><p><a class="reference internal" href="#continue" id="id23">continue</a></p></li>
+<li><p><a class="reference internal" href="#pass" id="id24">pass</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#functions" id="id25">Functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id26">General</a></p></li>
+<li><p><a class="reference internal" href="#global-variable" id="id27">Global variable</a></p></li>
+<li><p><a class="reference internal" href="#predefined-arguments" id="id28">Predefined Arguments</a></p></li>
+<li><p><a class="reference internal" href="#keywords-with-param" id="id29">Keywords with param</a></p></li>
+<li><p><a class="reference internal" href="#return" id="id30">Return</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modules" id="id31">Modules</a></p>
+<ul>
+<li><p><a class="reference internal" href="#definition-of-a-module" id="id32">Definition of a Module</a></p></li>
+<li><p><a class="reference internal" href="#usage-of-a-module" id="id33">Usage of a Module</a></p></li>
+<li><p><a class="reference internal" href="#from-import" id="id34">from .. import</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#data-structures" id="id35">Data structures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#list" id="id36">List</a></p></li>
+<li><p><a class="reference internal" href="#tuple" id="id37">Tuple</a></p></li>
+<li><p><a class="reference internal" href="#dictionaries" id="id38">Dictionaries</a></p></li>
+<li><p><a class="reference internal" href="#sequence" id="id39">Sequence</a></p></li>
+<li><p><a class="reference internal" href="#references-and-objects" id="id40">References and Objects</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#oriented-objects-programming" id="id41">Oriented Objects Programming</a></p>
+<ul>
+<li><p><a class="reference internal" href="#init-method" id="id42"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a></p></li>
+<li><p><a class="reference internal" href="#klassen-und-objekt-variablen" id="id43">Klassen und Objekt variablen</a></p></li>
+<li><p><a class="reference internal" href="#inherit" id="id44">inherit</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#input-output" id="id45">Input &amp; Output</a></p>
+<ul>
+<li><p><a class="reference internal" href="#file" id="id46">File</a></p></li>
+<li><p><a class="reference internal" href="#freeze-and-unfreeze" id="id47">Freeze and Unfreeze</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#exceptions" id="id48">Exceptions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#try-except" id="id49"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a></p></li>
+<li><p><a class="reference internal" href="#throw-exception" id="id50">throw exception</a></p></li>
+<li><p><a class="reference internal" href="#try-finally" id="id51"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#buildin-methods" id="id52">Buildin Methods</a></p>
+<ul>
+<li><p><a class="reference internal" href="#init" id="id53"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#del" id="id54"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#str" id="id55"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#it" id="id56"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#getitem" id="id57"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#len" id="id58"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general">
+<h2><a class="toc-backref" href="#id3">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sourcefile">
+<h3><a class="toc-backref" href="#id4">Sourcefile</a><a class="headerlink" href="#sourcefile" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">sourcefile</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># -*- coding: latin1 -*-</span>
+<span class="c1"># -*- coding: iso-8859-1 -*-</span>
+<span class="c1"># durch coding auch umlaut möglich</span>
+<span class="nb">print</span> <span class="s1">&#39;Hello Wörld&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="help-informations">
+<h3><a class="toc-backref" href="#id5">Help informations</a><a class="headerlink" href="#help-informations" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">command</span> <span class="ow">or</span> <span class="nb">object</span><span class="p">)</span>
+<span class="n">q</span> <span class="o">=&gt;</span> <span class="n">Exit</span> <span class="n">help</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="import">
+<h2><a class="toc-backref" href="#id6">Import</a><a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to import modules.</p>
+<div class="section" id="import-module">
+<h3><a class="toc-backref" href="#id7">import &lt;module&gt;</a><a class="headerlink" href="#import-module" title="Permalink to this headline">¶</a></h3>
+<p>You import the module. you have to call each time modulname.function to access each function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;.&lt;</span><span class="n">modulfunction</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="from-module-import-function">
+<h3><a class="toc-backref" href="#id8">from &lt;module&gt; import &lt;function&gt;</a><a class="headerlink" href="#from-module-import-function" title="Permalink to this headline">¶</a></h3>
+<p>In the second way you import one one or with * all functions of a module. But if you import the same function of two different modules, or if you import * from two modules which has common function names the interpreter won’t know which one you are calling.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="example">
+<h4><a class="toc-backref" href="#id9">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First way</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="c1"># Second way</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="c1"># Second way but import everything (need for math. anymore)</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="strings-and-numbers">
+<h2><a class="toc-backref" href="#id10">Strings and Numbers</a><a class="headerlink" href="#strings-and-numbers" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;&#39;</span> <span class="o">=&gt;</span> <span class="n">Spaces</span> <span class="ow">and</span> <span class="n">symbols</span> <span class="n">will</span> <span class="n">be</span> <span class="n">taken</span>
+<span class="s2">&quot;&quot;</span> <span class="o">=&gt;</span> <span class="n">Same</span> <span class="k">as</span> <span class="n">Strings</span> <span class="k">with</span> <span class="s1">&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39; &#39;&#39;&#39;</span> <span class="ow">or</span> <span class="s2">&quot;&quot;&quot; &quot;&quot;&quot;</span>
+<span class="n">Multiline</span> <span class="n">Strings</span><span class="p">,</span> <span class="n">inside</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="s2">&quot;&quot;</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span>
+<span class="s1">&#39;This is a String.&#39;</span> <span class="o">/</span> <span class="s2">&quot;This too!&quot;</span>
+<span class="sd">&#39;&#39;&#39; This is a Multiline String. Frist Line</span>
+<span class="sd">And this is the &quot;Second Line&quot;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="escape-characters">
+<h3><a class="toc-backref" href="#id11">Escape Characters</a><a class="headerlink" href="#escape-characters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>\<span class="s1">&#39;                  # = &#39;</span>
+\<span class="s2">&quot;                  # = &quot;</span>
+\\                  <span class="c1"># = \</span>
+\<span class="n">n</span>                  <span class="c1"># = New Line</span>
+\<span class="n">t</span>                  <span class="c1"># = Tabulator</span>
+\                   <span class="c1"># = Line feed</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="types">
+<h3><a class="toc-backref" href="#id12">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>long</p></td>
+<td><p>1.23</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>9.25e-3</p></td>
+</tr>
+<tr class="row-odd"><td><p>complex</p></td>
+<td><p>5.3+3j</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="convertions">
+<h2><a class="toc-backref" href="#id13">Convertions</a><a class="headerlink" href="#convertions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">()</span>               <span class="c1"># to int</span>
+<span class="nb">float</span><span class="p">()</span>             <span class="c1"># to float</span>
+<span class="nb">complex</span><span class="p">()</span>           <span class="c1"># to complex</span>
+<span class="n">long</span><span class="p">()</span>              <span class="c1"># to long</span>
+<span class="n">unichr</span><span class="p">()</span>            <span class="c1"># int to 1 char</span>
+<span class="nb">ord</span><span class="p">()</span>               <span class="c1"># 1 element string to int</span>
+<span class="nb">str</span><span class="p">()</span>               <span class="c1"># int to string</span>
+</pre></div>
+</div>
+<div class="section" id="string-bin-hex-convertions">
+<h3><a class="toc-backref" href="#id14">String Bin Hex convertions</a><a class="headerlink" href="#string-bin-hex-convertions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hex_bin</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">unhexlify</span><span class="p">(</span><span class="n">hex_string</span><span class="p">)</span>
+<span class="n">hex_string</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">hex_bin</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">hex2bin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="nb">bin</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0000&#39;</span><span class="p">,</span><span class="s1">&#39;0001&#39;</span><span class="p">,</span><span class="s1">&#39;0010&#39;</span><span class="p">,</span><span class="s1">&#39;0011&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;0100&#39;</span><span class="p">,</span><span class="s1">&#39;0101&#39;</span><span class="p">,</span><span class="s1">&#39;0110&#39;</span><span class="p">,</span><span class="s1">&#39;0111&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;1000&#39;</span><span class="p">,</span><span class="s1">&#39;1001&#39;</span><span class="p">,</span><span class="s1">&#39;1010&#39;</span><span class="p">,</span><span class="s1">&#39;1011&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;1100&#39;</span><span class="p">,</span><span class="s1">&#39;1101&#39;</span><span class="p">,</span><span class="s1">&#39;1110&#39;</span><span class="p">,</span><span class="s1">&#39;1111&#39;</span><span class="p">]</span>
+    <span class="n">aa</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">)):</span>
+        <span class="n">aa</span> <span class="o">+=</span> <span class="nb">bin</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">aa</span>
+
+<span class="c1"># END hex2bin</span>
+<span class="n">bin_string</span> <span class="o">=</span> <span class="n">hex2bin</span><span class="p">(</span><span class="n">hex_string</span><span class="p">)</span>
+
+<span class="n">hex_string</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">int_number</span><span class="p">)</span>
+<span class="n">int_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">hex_string</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># 2 digit hex string</span>
+<span class="n">hex_string</span> <span class="o">=</span> <span class="s2">&quot;0x</span><span class="si">%0.2X</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mi">255</span> <span class="c1"># = 0xFF</span>
+<span class="n">hex_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%0.2X</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="mi">255</span>   <span class="c1"># = FF</span>
+
+<span class="c1"># Format strings the easy way</span>
+<span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">firstReplacer</span> <span class="p">,</span> <span class="n">secondReplacer</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:03}</span><span class="s2"> </span><span class="si">{:3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nbr1</span> <span class="p">,</span> <span class="n">nbr2</span><span class="p">))</span>
+<span class="c1"># {:03} = right aligned 3 numbers filled with 0 e.g. 005 or 015</span>
+<span class="c1"># {:3}  = right aligned 3 numbers               e.g.   5     15</span>
+
+<span class="c1"># More examples</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0: &gt;6,.4}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nbr0</span><span class="p">,</span> <span class="n">nbr1</span><span class="p">)</span>
+<span class="c1"># print nbr0,  align right,  fill with &quot; &quot;, 6 places width, 4 digits precision</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="string-format-mini-language">
+<h2><a class="toc-backref" href="#id15">String Format Mini Language</a><a class="headerlink" href="#string-format-mini-language" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">format_spec</span> <span class="p">::</span><span class="o">=</span>  <span class="p">[[</span><span class="n">fill</span><span class="p">]</span><span class="n">align</span><span class="p">][</span><span class="n">sign</span><span class="p">][</span><span class="c1">#][0][width][,][.precision][type]</span>
+<span class="n">fill</span>        <span class="p">::</span><span class="o">=</span>  <span class="o">&lt;</span><span class="nb">any</span> <span class="n">character</span><span class="o">&gt;</span>
+<span class="n">align</span>       <span class="p">::</span><span class="o">=</span>  <span class="s2">&quot;&lt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;&gt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;=&quot;</span> <span class="o">|</span> <span class="s2">&quot;^&quot;</span>
+<span class="n">sign</span>        <span class="p">::</span><span class="o">=</span>  <span class="s2">&quot;+&quot;</span> <span class="o">|</span> <span class="s2">&quot;-&quot;</span> <span class="o">|</span> <span class="s2">&quot; &quot;</span>
+<span class="n">width</span>       <span class="p">::</span><span class="o">=</span>  <span class="n">integer</span>
+<span class="n">precision</span>   <span class="p">::</span><span class="o">=</span>  <span class="n">integer</span>
+<span class="nb">type</span>        <span class="p">::</span><span class="o">=</span>  <span class="s2">&quot;b&quot;</span> <span class="o">|</span> <span class="s2">&quot;c&quot;</span> <span class="o">|</span> <span class="s2">&quot;d&quot;</span> <span class="o">|</span> <span class="s2">&quot;e&quot;</span> <span class="o">|</span> <span class="s2">&quot;E&quot;</span> <span class="o">|</span> <span class="s2">&quot;f&quot;</span> <span class="o">|</span> <span class="s2">&quot;F&quot;</span> <span class="o">|</span> <span class="s2">&quot;g&quot;</span> <span class="o">|</span> <span class="s2">&quot;G&quot;</span> <span class="o">|</span> <span class="s2">&quot;n&quot;</span> <span class="o">|</span> <span class="s2">&quot;o&quot;</span> <span class="o">|</span> <span class="s2">&quot;s&quot;</span> <span class="o">|</span> <span class="s2">&quot;x&quot;</span> <span class="o">|</span> <span class="s2">&quot;X&quot;</span> <span class="o">|</span> <span class="s2">&quot;%&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       &quot;{&quot; [field_name] [&quot;!&quot; conversion] [&quot;:&quot; format_spec] &quot;}&quot;
+          /                  &quot;r&quot;|&quot;s&quot;                   \
+         /               (r)epr   (s)tr                 \
+arg_name                                                 \
+| (&quot;.&quot; attribute_name | &quot;[&quot; element_index &quot;]&quot;)*           \
+|        |                       |                         \
+|     identifier         integer | index_string            |
+|                                   (quotes                |
+[identifier                          not required)         |
+ |integer]                                                 |
+                                                           |
+ _________________________________________________________/ \________
+/                                                                    \
+      &quot;:&quot;
+         [[fill]align][sign][#][0][width][,][.precision][type]
+  [default]--&gt; &lt; left    +   |  |  (int)       (int)    b base 2
+  [default --&gt; &gt; right  [-]  |  |                       c character
+   for         ^ center &quot; &quot;  |  \                       d base 10
+   numbers]    =             |   `zero padding          e exponent (e)
+                             |                          E exponent (E)
+                            use 0b,0o,0x                f fixed point
+                             for 2  8 16                F ^^(same)^^
+  b base 2     c character                 [default]--&gt; g general (???)
+  o base 8     s string                                 G general 2 (?)
+  d base 10                                             n number (general 3)
+  x base 16                                             o base 8
+  X base 16                                             s string
+  e, E    exponent                         (lower case) x base 16
+  f, F, % fixed point                      (upper case) X base 16
+  g, G, n (general numbers)                   (x100, f) % percentage
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt;6.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>        <span class="c1"># right aligned to 6 digits, precision 5 (5 numbers including point e.g. 0.123)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:08}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>          <span class="c1"># filled up with 0 to 8 digits, 00001234</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0x</span><span class="si">{:0x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x4d2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0x</span><span class="si">{:0X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x4D2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:04x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x04d2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:04X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x04D2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operator">
+<h2><a class="toc-backref" href="#id16">Operator</a><a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+                   # Plus         3 + 5 = 8 &#39;a&#39; + &#39;b&#39; = &#39;ab&#39;
+-                   # Minus        -5.2 order 5 - 2
+*                   # Multiplcation 2 * 3 = 6
+**                  # Power        3 ** 4 = 3 * 3 * 3 * 3 = 81
+/                   # Division     4 / 3 = 1 oder 4.0/3 = 1.3333...
+//                  # Integer  Division 4 // 3.0 = 1.0
+%                   # Modulo       8 % 3 = 2
+&lt;&lt;                  # Bitwise left 2 &lt;&lt; 2 = 8   (in binary)
+&gt;&gt;                  # Bitwise right 11 &gt;&gt; 1 = 5 (in binary)
+&amp;                   # Bitwise AND  5 &amp; 3 = 1    (in binary)
+¦                   # Bitwise OR   5 | 3 = 7    (in binary)
+^                   # Bitwise XOR  5 ^ 3 = 6    (in binary)
+~                   # Bitwise NOT  ~5 = -6
+&lt;                   # Smaller as
+&gt;                   # Bigger as
+&lt;=                  # Smaller Equal
+&gt;=                  # Bigger Equal
+==                  # Equal
+!=                  # Not Equal
+not                 # log NOT
+and                 # log AND
+or                  # log OR
+</pre></div>
+</div>
+<div class="section" id="priority">
+<h3><a class="toc-backref" href="#id17">Priority</a><a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
+<p>A Line will be evaluated from left to right</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## High priority</span>
+<span class="k">lambda</span>              <span class="c1"># lambda function</span>
+<span class="ow">or</span>                  <span class="c1"># log OR</span>
+<span class="ow">and</span>                 <span class="c1"># log AND</span>
+<span class="ow">not</span> <span class="n">x</span>               <span class="c1"># log NOT</span>
+<span class="ow">in</span><span class="p">,</span> <span class="ow">not</span> <span class="ow">in</span>          <span class="c1"># Part of test (in Sequences)</span>
+<span class="ow">is</span><span class="p">,</span> <span class="ow">is</span> <span class="ow">not</span>          <span class="c1"># Identity test</span>
+<span class="o">&lt;</span><span class="p">,</span><span class="o">&lt;=</span><span class="p">,</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&gt;=</span><span class="p">,</span><span class="o">!=</span><span class="p">,</span><span class="o">==</span>     <span class="c1"># Comparison</span>
+<span class="o">|</span>                   <span class="c1"># Bitwise OR</span>
+<span class="o">^</span>                   <span class="c1"># Bitwise XOR</span>
+<span class="o">&amp;</span>                   <span class="c1"># Bitwise AND</span>
+<span class="o">&lt;&lt;</span><span class="p">,</span><span class="o">&gt;&gt;</span>               <span class="c1"># Bitwise Shift</span>
+<span class="o">+</span><span class="p">,</span><span class="o">-</span>                 <span class="c1"># Add, Sub</span>
+<span class="o">*</span><span class="p">,</span><span class="o">/</span><span class="p">,</span><span class="o">%</span>               <span class="c1"># Mul, Div, Mod</span>
+<span class="o">+</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">x</span>               <span class="c1"># pos-, neg-sign</span>
+<span class="o">~</span><span class="n">x</span>                  <span class="c1"># Bitwise NOT</span>
+<span class="o">**</span>                  <span class="c1"># Pow</span>
+<span class="n">x</span><span class="o">.</span><span class="n">attribut</span>          <span class="c1"># Attribut reference</span>
+<span class="n">x</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>            <span class="c1"># Index</span>
+<span class="n">x</span><span class="p">[</span><span class="n">index</span><span class="p">:</span><span class="n">index</span><span class="p">]</span>      <span class="c1"># range of a sequence</span>
+<span class="n">f</span><span class="p">(</span><span class="n">param</span> <span class="o">...</span><span class="p">)</span>        <span class="c1"># function call</span>
+<span class="p">(</span><span class="n">ausdruck</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>     <span class="c1"># brackets</span>
+<span class="p">[</span><span class="n">ausdruck</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>     <span class="c1"># List</span>
+<span class="p">{</span><span class="n">key</span><span class="p">:</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>    <span class="c1"># Dictionaries</span>
+<span class="s1">&#39;ausdruck, ...&#39;</span>     <span class="c1"># Umwandlung in Stringdarstellung</span>
+<span class="c1">## Low priority</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="statement">
+<h2><a class="toc-backref" href="#id18">Statement</a><a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-elif-else">
+<h3><a class="toc-backref" href="#id19">if elif else</a><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">zahl</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;YES&#39;</span>
+<span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Higher&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Lower&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="while">
+<h3><a class="toc-backref" href="#id20">while</a><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">nostop</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">nostop</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s1">&#39;Yes&#39;</span>
+    <span class="n">nostop</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># End of while</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s1">&#39;Higher&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="s1">&#39;Lower&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;End of while loop&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for">
+<h3><a class="toc-backref" href="#id21">for</a><a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">i</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;End of for loop&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="break">
+<h3><a class="toc-backref" href="#id22">break</a><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span> <span class="s1">&#39;The length of the string is&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="continue">
+<h3><a class="toc-backref" href="#id23">continue</a><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h3>
+<p>continue use for <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span> <span class="s1">&#39;Sufficient long&#39;</span>
+    <span class="c1"># Treat input here</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pass">
+<h3><a class="toc-backref" href="#id24">pass</a><a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># pass is used to create an empty block</span>
+<span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2><a class="toc-backref" href="#id25">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id26">General</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello cruel world!&#39;</span>
+<span class="c1"># End of function</span>
+<span class="n">hello_world</span><span class="p">()</span> <span class="c1"># function call</span>
+
+<span class="k">def</span> <span class="nf">printMax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span>
+<span class="n">printMax</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1"># function call with number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">printMax</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># function call with arguments</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="global-variable">
+<h3><a class="toc-backref" href="#id27">Global variable</a><a class="headerlink" href="#global-variable" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span>
+    <span class="nb">print</span> <span class="s1">&#39;x ist&#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="nb">print</span> <span class="s1">&#39;global x is now&#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">func</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;The value of x is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="c1"># x = 2 because of global var</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="predefined-arguments">
+<h3><a class="toc-backref" href="#id28">Predefined Arguments</a><a class="headerlink" href="#predefined-arguments" title="Permalink to this headline">¶</a></h3>
+<p>If a function parameter is not given, the default value will be used.
+All parameter with default values need to be at the end of the parameter list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sag</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">loops</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">message</span> <span class="o">*</span> <span class="n">loops</span>
+<span class="n">sag</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+<span class="n">sag</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keywords-with-param">
+<h3><a class="toc-backref" href="#id29">Keywords with param</a><a class="headerlink" href="#keywords-with-param" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;and c is&#39;</span><span class="p">,</span> <span class="n">c</span>
+<span class="n">func</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="return">
+<h3><a class="toc-backref" href="#id30">Return</a><a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y</span>
+<span class="nb">print</span> <span class="n">maximum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="modules">
+<h2><a class="toc-backref" href="#id31">Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-a-module">
+<h3><a class="toc-backref" href="#id32">Definition of a Module</a><a class="headerlink" href="#definition-of-a-module" title="Permalink to this headline">¶</a></h3>
+<p>Everything in Python is a module (almost)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="s1">&#39;Hello, this is a module&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage-of-a-module">
+<h3><a class="toc-backref" href="#id33">Usage of a Module</a><a class="headerlink" href="#usage-of-a-module" title="Permalink to this headline">¶</a></h3>
+<p>The Module need to be in the same folder</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">myModule</span>
+<span class="n">myModule</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">mmyModule</span><span class="o">.</span><span class="n">version</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="from-import">
+<h3><a class="toc-backref" href="#id34">from .. import</a><a class="headerlink" href="#from-import" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="n">hello</span><span class="p">,</span> <span class="n">version</span>
+<span class="c1"># OR:</span>
+<span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">hello</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">version</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="data-structures">
+<h2><a class="toc-backref" href="#id35">Data structures</a><a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list">
+<h3><a class="toc-backref" href="#id36">List</a><a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a list</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;I have &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="s1">&#39; to buy.&#39;</span>
+<span class="nb">print</span> <span class="s1">&#39;These things are:&#39;</span><span class="p">,</span> <span class="c1"># Don&#39;t forget the comma at the end</span>
+<span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">thing</span><span class="p">,</span>
+
+<span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">I also have to buy Bananas&#39;</span>
+<span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Banans&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span>
+
+<span class="nb">print</span> <span class="s1">&#39;Sort My list&#39;</span>
+<span class="nb">list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;The sorted list is &#39;</span><span class="p">,</span> <span class="nb">list</span>
+
+<span class="nb">print</span> <span class="s1">&#39;First I&#39;</span><span class="n">ll</span> <span class="n">buy</span><span class="s1">&#39;, list[0]</span>
+<span class="n">oldthing</span> <span class="o">=</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">del</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;I did buy &#39;</span><span class="p">,</span> <span class="n">oldthing</span>
+<span class="nb">print</span> <span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tuple">
+<h3><a class="toc-backref" href="#id37">Tuple</a><a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Wolf&#39;</span><span class="p">,</span> <span class="s1">&#39;Elefant&#39;</span><span class="p">,</span> <span class="s1">&#39;Pinguin&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;The number of animals in the Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">zoo</span><span class="p">)</span>
+<span class="n">new_zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ape&#39;</span><span class="p">,</span> <span class="s1">&#39;Delfin&#39;</span><span class="p">,</span> <span class="n">zoo</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;The number of animals in the new Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;All animals in the new Zoo are: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span>
+<span class="nb">print</span> <span class="s1">&#39;The animals from the old Zoo are&#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;The last animal is a: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3><a class="toc-backref" href="#id38">Dictionaries</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ab</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Swaroop&#39;</span>   <span class="p">:</span> <span class="s1">&#39;swaroopch@byteofpython.info&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Larry&#39;</span>     <span class="p">:</span> <span class="s1">&#39;larry@wall.org&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Matsumoto&#39;</span> <span class="p">:</span> <span class="s1">&#39;matz@ruby-lang.org&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Spammer&#39;</span>   <span class="p">:</span> <span class="s1">&#39;spammer@hotmail.com&#39;</span>
+     <span class="p">}</span>
+<span class="nb">print</span> <span class="s2">&quot;Swaroops Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">]</span>
+<span class="c1"># Ein Schluessel/Wert-Paar hinzufuegen</span>
+<span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;guido@python.org&#39;</span>
+<span class="c1"># Ein Schluessel/Wert-Paar loeschen</span>
+<span class="k">del</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Spammer&#39;</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Es gibt </span><span class="si">%d</span><span class="s1"> Kontakte im Adressbuch</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">ab</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">adresse</span> <span class="ow">in</span> <span class="n">ab</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> hat die Adresse </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">adresse</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;Guido&#39;</span> <span class="ow">in</span> <span class="n">ab</span><span class="p">:</span> <span class="c1"># oder: ab.has_key(&#39;Guido&#39;)</span>
+    <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Guidos Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequence">
+<h3><a class="toc-backref" href="#id39">Sequence</a><a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
+<span class="c1"># Index</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 0 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># Book</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>           <span class="c1"># Pencil</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>           <span class="c1"># Apple</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>           <span class="c1"># Glass</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>         <span class="c1"># Glass</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos -2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>         <span class="c1"># Apple</span>
+<span class="c1"># List range</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 1 to 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>    <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 2 to End is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>   <span class="c1"># [&#39;Apple&#39;, &#39;Glass&#39;]</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos 1 to -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
+<span class="nb">print</span> <span class="s1">&#39;Pos begin to is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[:]</span>    <span class="c1"># [&#39;Book&#39;, &#39;Pencil&#39;, &#39;Apple&#39;, &#39;Glass&#39;]</span>
+<span class="c1"># List range on a string</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;1234567&#39;</span>
+<span class="nb">print</span> <span class="s1">&#39;Chars 1 bis 3 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>    <span class="c1"># 23</span>
+<span class="nb">print</span> <span class="s1">&#39;Chars 2 bis Ende ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># 34567</span>
+<span class="nb">print</span> <span class="s1">&#39;Chars 1 bis -1 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 3456</span>
+<span class="nb">print</span> <span class="s1">&#39;Chars Begin to End&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[:]</span>     <span class="c1"># 1234567</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references-and-objects">
+<h3><a class="toc-backref" href="#id40">References and Objects</a><a class="headerlink" href="#references-and-objects" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>“mylist” is another name pointing to the same object.</p>
+<p>Delete one item</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span>
+<span class="nb">print</span> <span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span>
+</pre></div>
+</div>
+<p>Both list return it’s items without the deleted item “Book”. This shows that both point to the same object</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Copy with range&#39;</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[:]</span> <span class="c1"># this copies the whole list</span>
+<span class="k">del</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span> <span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span>
+<span class="nb">print</span> <span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span>
+</pre></div>
+</div>
+<p>Both lists are different now, will the copy created a new list.</p>
+</div>
+</div>
+<div class="section" id="oriented-objects-programming">
+<h2><a class="toc-backref" href="#id41">Oriented Objects Programming</a><a class="headerlink" href="#oriented-objects-programming" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">self</span></code> == <code class="docutils literal notranslate"><span class="pre">this</span></code> == addr des Objektes</p>
+<div class="section" id="init-method">
+<h3><a class="toc-backref" href="#id42"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a><a class="headerlink" href="#init-method" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span> <span class="nf">sagHallo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="s1">&#39;Hallo, mein Name ist&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sagHallo</span><span class="p">()</span>
+<span class="c1"># Dieses kurze Beispiel kann auch als</span>
+<span class="c1"># Person(&#39;Swaroop&#39;).sagHallo() geschrieben werden.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="klassen-und-objekt-variablen">
+<h3><a class="toc-backref" href="#id43">Klassen und Objekt variablen</a><a class="headerlink" href="#klassen-und-objekt-variablen" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Stellt eine Person dar.&#39;&#39;&#39;</span>
+    <span class="n">bevoelkerung</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Initialisiert die Daten der Person.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="nb">print</span> <span class="s1">&#39;(Initialisiere </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="c1"># Wenn diese Person erzeugt wird,</span>
+        <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Ich sterbe.&#39;&#39;&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> verabschiedet sich.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s1">&#39;Ich bin der letzte.&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s1">&#39;Es gibt noch </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span>
+    <span class="k">def</span> <span class="nf">sagHallo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Begruessung durch die Person.</span>
+<span class="sd">        Das ist wirklich alles, was hier geschieht.&#39;&#39;&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Hallo, mein Name ist </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">wieViele</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Gibt die aktuelle Bevoelkerungszahl aus.&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s1">&#39;Ich bin ganz allein hier.&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="s1">&#39;Es gibt hier </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Alle Variablen sind normalerweise public</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">__privatvar</span></code> wird es zu einer Privaten Variable</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> kann auf die <code class="docutils literal notranslate"><span class="pre">'''</span></code> Infos zugegriffen werden <code class="docutils literal notranslate"><span class="pre">Person.__doc__</span></code> or <code class="docutils literal notranslate"><span class="pre">Person.sagHallo.__doc__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> wird immer bei der erzeugung eines Objektes ausgeführt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__del__</span></code> wird automatisch aufgerufen falls das Objekt nicht mehr gebraucht wird</p></li>
+</ul>
+</div>
+<div class="section" id="inherit">
+<h3><a class="toc-backref" href="#id44">inherit</a><a class="headerlink" href="#inherit" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SchulMitglied</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Repraesentiert ein beliebiges Mitglied der Hochschule.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alter</span> <span class="o">=</span> <span class="n">alter</span>
+        <span class="nb">print</span> <span class="s1">&#39;(SchulMitglied </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Gib Auskunft ueber das Mitglied.&#39;&#39;&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Name: &quot;</span><span class="si">%s</span><span class="s1">&quot; Alter: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alter</span><span class="p">),</span>
+<span class="k">class</span> <span class="nc">Dozent</span><span class="p">(</span><span class="n">SchulMitglied</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Repraesentiert einen Dozenten der Hochschule.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">,</span> <span class="n">gehalt</span><span class="p">):</span>
+        <span class="n">SchulMitglied</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gehalt</span> <span class="o">=</span> <span class="n">gehalt</span>
+        <span class="nb">print</span> <span class="s1">&#39;(Dozent </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">SchulMitglied</span><span class="o">.</span><span class="n">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s1">&#39;Gehalt: &quot;</span><span class="si">%d</span><span class="s1"> Euro&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">gehalt</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">SchulMitglied</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Repraesentiert einen Studenten der Hochschule.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="n">SchulMitglied</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
+        <span class="nb">print</span> <span class="s1">&#39;(Student </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">SchulMitglied</span><span class="o">.</span><span class="n">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s1">&#39;Letzte Pruefungsnote: &quot;</span><span class="si">%1.1f</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">note</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dozent</span><span class="p">(</span><span class="s1">&#39;Mrs. Shrividya&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30000</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">)</span>
+<span class="n">mitglieder</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">mitglied</span> <span class="ow">in</span> <span class="n">mitglieder</span><span class="p">:</span>
+    <span class="n">mitglied</span><span class="o">.</span><span class="n">auskunft</span><span class="p">()</span> <span class="c1"># geht bei Dozenten und Studenten</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="input-output">
+<h2><a class="toc-backref" href="#id45">Input &amp; Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file">
+<h3><a class="toc-backref" href="#id46">File</a><a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;sein oder nicht sein&#39;</span>
+
+<span class="c1"># Write</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="s1">&#39;gedicht.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1"># &quot;w&quot; = Schreiben</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>                <span class="c1"># schreibe den Text in die Datei</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                    <span class="c1"># schliesse die Datei</span>
+
+<span class="c1"># Read</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="s1">&#39;gedicht.txt&#39;</span><span class="p">)</span>      <span class="c1"># kein Modus bedeutet &quot;r&quot; = Lesen</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>       <span class="c1"># eine leere Zeile = Dateiende (EOF)</span>
+        <span class="k">break</span>
+    <span class="nb">print</span> <span class="n">line</span><span class="p">,</span>              <span class="c1"># das , für Zeilenvorschub Unterdrückung</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                <span class="c1"># schliesse die Datei</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="freeze-and-unfreeze">
+<h3><a class="toc-backref" href="#id47">Freeze and Unfreeze</a><a class="headerlink" href="#freeze-and-unfreeze" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cPickle</span> <span class="k">as</span> <span class="nn">p</span>
+<span class="c1"># Datei, in der das Objekt speichert wird</span>
+<span class="n">einkaufsdatei</span> <span class="o">=</span> <span class="s1">&#39;einkaufsliste.data&#39;</span>
+<span class="n">einkaufsliste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Aepfel&#39;</span><span class="p">,</span> <span class="s1">&#39;Mangos&#39;</span><span class="p">,</span> <span class="s1">&#39;Karotten&#39;</span><span class="p">]</span>
+
+<span class="c1"># Schreibe in die Datei</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="n">einkaufsdatei</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="c1">#Einfrieren</span>
+<span class="n">p</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">einkaufsliste</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="c1"># speichere das Objekt in der Datei</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">einkaufsliste</span>        <span class="c1"># loesche die einkaufsliste</span>
+<span class="c1"># Lies die Einkaufsliste aus der Datei wieder ein</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="n">einkaufsdatei</span><span class="p">)</span>
+
+<span class="c1">#Auftauen</span>
+<span class="n">gespeicherteliste</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">gespeicherteliste</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2><a class="toc-backref" href="#id48">Exceptions</a><a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="try-except">
+<h3><a class="toc-backref" href="#id49"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a><a class="headerlink" href="#try-except" title="Permalink to this headline">¶</a></h3>
+<p>Each <code class="docutils literal notranslate"><span class="pre">try</span></code> needs to have at least one <code class="docutils literal notranslate"><span class="pre">except</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Geben Sie etwas ein --&gt; &#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span> <span class="c1"># beendet das Programm</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Irgendein Fehler hat eine Ausnahme ausgeloest.&#39;</span>
+<span class="nb">print</span> <span class="s1">&#39;Fertig&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="throw-exception">
+<h3><a class="toc-backref" href="#id50">throw exception</a><a class="headerlink" href="#throw-exception" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">KurzeEingabeAusnahme</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Eine benutzerdefinierte Ausnahmeklasse.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">laenge</span><span class="p">,</span> <span class="n">mindestens</span><span class="p">):</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">laenge</span> <span class="o">=</span> <span class="n">laenge</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mindestens</span> <span class="o">=</span> <span class="n">mindestens</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Geben Sie etwas ein --&gt; &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">KurzeEingabeAusnahme</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># Hier kann man ganz normal mit der Arbeit fortfahren</span>
+<span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span>
+<span class="k">except</span> <span class="n">KurzeEingabeAusnahme</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;KurzeEingabeAusnahme: Eingabe hatte die Laenge </span><span class="si">%d</span><span class="s1">,&#39;</span> \
+          <span class="s1">&#39; gefordert war mindestens </span><span class="si">%d</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">laenge</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">mindestens</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;Es wurde keine Ausnahme ausgeloest.&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="try-finally">
+<h3><a class="toc-backref" href="#id51"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a><a class="headerlink" href="#try-finally" title="Permalink to this headline">¶</a></h3>
+<p>If an exception is raised in the program, e.g. <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code> Keyboard interrupt, the finally clause is raised before the program is closed</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">file</span><span class="p">(</span><span class="s1">&#39;gedicht.txt&#39;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># unsere uebliche Weise, Dateien zu lesen</span>
+    <span class="n">zeile</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zeile</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="n">zeile</span><span class="p">,</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s1">&#39;Raeume auf... Datei geschlossen.&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="buildin-methods">
+<h2><a class="toc-backref" href="#id52">Buildin Methods</a><a class="headerlink" href="#buildin-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="init">
+<h3><a class="toc-backref" href="#id53"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a><a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<p>Is executed before an object is returned</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="del">
+<h3><a class="toc-backref" href="#id54"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a><a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h3>
+<p>Is called before an object is destroyed</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="str">
+<h3><a class="toc-backref" href="#id55"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
+<p>Is called if print or str() is used</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="it">
+<h3><a class="toc-backref" href="#id56"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a><a class="headerlink" href="#it" title="Permalink to this headline">¶</a></h3>
+<p>Is called if <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> is used <code class="docutils literal notranslate"><span class="pre">lt</span> <span class="pre">==</span> <span class="pre">less</span> <span class="pre">than</span></code> There are also such methods for other operators</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__it__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getitem">
+<h3><a class="toc-backref" href="#id57"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a><a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
+<p>Is called if an indexing operator is used <code class="docutils literal notranslate"><span class="pre">x[key]</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="len">
+<h3><a class="toc-backref" href="#id58"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a><a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
+<p>Is called if the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function is used</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../regex/index.html" class="btn btn-neutral float-right" title="RegEx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="stdlib.html" class="btn btn-neutral float-left" title="Standart libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

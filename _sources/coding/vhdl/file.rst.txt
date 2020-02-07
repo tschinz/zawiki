@@ -75,7 +75,6 @@ The below code reads a set of binary numbers from the file named read.txt and pu
        wait;
      end process;
    end behaviour;
-</code>
 
 A simulation of the reading:
 

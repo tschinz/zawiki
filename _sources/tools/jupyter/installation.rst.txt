@@ -144,3 +144,52 @@ Better PDF Export
    sudo apt-get install texlive-xetex
    pip install jupyter_contrib_nbextensions
    pip install cite2c
+
+Enable HTTPS
+============
+
+See: https://juno.sh/ssl-self-signed-cert/
+
+.. code-block:: bash
+
+   #!/bin/bash
+   # Create Directory Structure
+   mkdir ca ca/certs ca/crl ca/newcerts ca/private
+   chmod 700 ca/private
+   touch ca/index.txt
+   echo 1000 > ca/serial
+
+   # Generate CA root key
+   openssl genrsa -aes256 -out ca/private/ca.key.pem 4096
+   chmod 400 ca/private/ca.key.pem
+
+   # Use the root key (ca.key.pem) to create a root certificate (ca.cert.pem)
+   openssl req -config openssl.cnf -key ca/private/ca.key.pem -new -x509 -days 7300 -sha256 -extensions v3_ca -out ca/certs/ca.cert.pem
+   chmod 444 ca/certs/ca.cert.pem
+
+   # Generate SSL certificate
+   mkdir jupyter jupyter/csr jupyter/certs jupyter/private
+   chmod 700 jupyter/private
+   openssl genrsa -out jupyter/private/ssl.key.pem 2048
+   chmod 400 jupyter/private/ssl.key.pem
+
+   # Request certificate for your server
+   openssl req -config openssl.cnf -key jupyter/private/ssl.key.pem -new -sha256 -out jupyter/csr/ssl.csr.pem
+
+   # Finally, issue your server SSL certificate
+   openssl ca -config openssl.cnf -extensions server_cert -days 2048 -notext -md sha256 -in jupyter/csr/ssl.csr.pem -out jupyter/certs/ssl.cert.pem
+   chmod 444 jupyter/certs/ssl.cert.pem
+
+Install the CA certificate on your device, located at ``ca/certs/ca.cert.pem``
+
+As of iOS 10.3 you must manually turn on trust for SSL when you install a certificate. In order to turn on SSL trust for CA certificate, go to ``Settings > General > About > Certificate Trust Settings``. Under ``Enable full trust for root certificates``, turn on trust for the certificate.
+
+Once CA certificate is trusted on the device, all certificates signed with it will be trusted too, including the one we generated for SSL, located at jupyter/certs/ssl.cert.pem. You can now use it when launching Jupyter Notebook by providing absolute paths to both key and certificate. If you generate all your certificate and keys in ``~/.ssh/`` folder, your paths will be:
+
+
+.. code-block:: bash
+
+   jupyter notebook --certfile ~/.ssh/jupyter/certs/ssl.cert.pem --keyfile ~/.ssh/jupyter/private/ssl.key.pem
+
+Alternatively, you can specify paths to key and certificate in `Jupyter configuration file <http://jupyter-notebook.readthedocs.io/en/latest/public_server.html#running-a-public-notebook-server>`_.
+

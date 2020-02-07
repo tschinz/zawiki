@@ -2,6 +2,8 @@
 Xilinx UCF Constraints
 ======================
 
+.. contents:: :local:
+
 How to Guide
 ============
 
@@ -24,7 +26,7 @@ An example of such a constraint for a UCF file is given here :
    INST "broadenc_cpu_i/axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" TNM = UBlaze_Interrupts;
    TIMESPEC TS_UBlaze_Interrupts = TO "UBlaze_Interrupts" TIG; # We don't care of timing for interrupts
 
-This creates a group for two signals and then use the TIG constraint to it. If your instance name is incorrect, the synthesis tool will complaint.
+This creates a< group for two signals and then use the TIG constraint to it. If your instance name is incorrect, the synthesis tool will complaint.
 
 Problem B : reading data from outside the FPGA
 ----------------------------------------------
@@ -120,8 +122,6 @@ OFFSET
 ------
 
 **OFFSET** constraint is used to specify external setup time for input pads or necessary hold time for output pads.
-
-{{ :tschinz:programming:lang:vhdl:ucf:offset_example.png |Offset example}}
 
 .. figure:: img/ucf_offset_example.*
    :align: center

@@ -210,8 +210,8 @@ Signed
 Resize
 ======
 
-Unsigned
----------
+Resize Unsigned
+---------------
 
 .. code-block:: vhdl
    :caption: ieee unsigned resize
@@ -238,8 +238,8 @@ Unsigned
    ...
    uv_1 <= conv_unsigned(uv_2,uv_1'length);
 
-Signed
-------
+Resize Signed
+-------------
 
 .. code-block:: vhdl
    :caption: ieee signed resize
