@@ -64,7 +64,6 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 
    writing/latex/index
    writing/rst/index
-   writing/emoji/index
    writing/md/index
 
 .. toctree::
