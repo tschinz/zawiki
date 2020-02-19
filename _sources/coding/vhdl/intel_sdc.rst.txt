@@ -2,7 +2,7 @@
 SDC Constraints
 ===============
 
-* :pdfviewer:`Intel SDC Constraint Manual <github/tschinz/zawiki/source/coding/vhdl/docs/intel_sdc_manual.pdf>`
+* :pdfviewer:`Intel SDC Constraint Manual <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/intel_sdc_manual.pdf>`
 
 Comment
 =======
