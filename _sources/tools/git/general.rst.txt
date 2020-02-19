@@ -50,6 +50,21 @@ Not verify https Certificates
 
    git config --global http.sslVerify false
 
+Set commandline colors
+----------------------
+
+.. code-block:: bash
+
+   git config color.status.added "green bold"
+   git config color.status.changed "yellow bold"
+   git config color.status.untracked "red bold"
+
+Set commandline editor
+----------------------
+
+.. code-block:: bash
+
+   git config --global core.editor "nano -w"
 
 Git Repo Creation / Cloning
 ===========================

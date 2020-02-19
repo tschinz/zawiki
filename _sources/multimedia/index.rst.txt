@@ -14,5 +14,6 @@ Multimedia
 
    audio/*
    pictures/*
+   pictures/emoji/*
    text/*
    videos/*

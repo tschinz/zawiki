@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Time" href="time.html" />
-    <link rel="prev" title="Syntax" href="syntax.html" /> 
+    <link rel="prev" title="RTL Synthesis" href="synthesis.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-7-g5eb68f1
+                v0.11-11-g42e3d2d
               </div>
             
           
@@ -221,16 +221,19 @@
 <li class="toctree-l2"><a class="reference internal" href="file.html">File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osvvm.html">OSVVM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synthesis.html">RTL Synthesis</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Testbench</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">Time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xilinx_ucf.html">Xilinx UCF Constraints</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tcl_do/index.html">Tcl-Tk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_do/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_do/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_do/syntax.html">Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
@@ -290,11 +293,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
@@ -306,6 +304,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
@@ -403,30 +409,38 @@
 </div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#tests-severity" id="id13">Tests &amp; Severity</a></p>
+<li><p><a class="reference internal" href="#additional-documents" id="id13">Additional Documents</a></p></li>
+<li><p><a class="reference internal" href="#tests-severity" id="id14">Tests &amp; Severity</a></p>
 <ul>
-<li><p><a class="reference internal" href="#stop-simulation" id="id14">Stop Simulation</a></p></li>
+<li><p><a class="reference internal" href="#stop-simulation" id="id15">Stop Simulation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#clock-generation" id="id15">Clock generation</a></p></li>
-<li><p><a class="reference internal" href="#reset" id="id16">Reset</a></p></li>
-<li><p><a class="reference internal" href="#wait-statement" id="id17">Wait statement</a></p></li>
-<li><p><a class="reference internal" href="#strings" id="id18">Strings</a></p>
+<li><p><a class="reference internal" href="#clock-generation" id="id16">Clock generation</a></p></li>
+<li><p><a class="reference internal" href="#reset" id="id17">Reset</a></p></li>
+<li><p><a class="reference internal" href="#wait-statement" id="id18">Wait statement</a></p></li>
+<li><p><a class="reference internal" href="#strings" id="id19">Strings</a></p>
 <ul>
-<li><p><a class="reference internal" href="#simple-and-messy" id="id19">Simple and messy</a></p></li>
-<li><p><a class="reference internal" href="#complicated-and-pretty" id="id20">Complicated and pretty</a></p>
+<li><p><a class="reference internal" href="#simple-and-messy" id="id20">Simple and messy</a></p></li>
+<li><p><a class="reference internal" href="#complicated-and-pretty" id="id21">Complicated and pretty</a></p>
 <ul>
-<li><p><a class="reference internal" href="#put-string-into-line" id="id21">Put String into Line</a></p></li>
-<li><p><a class="reference internal" href="#get-string-from-line" id="id22">Get String from Line</a></p></li>
+<li><p><a class="reference internal" href="#put-string-into-line" id="id22">Put String into Line</a></p></li>
+<li><p><a class="reference internal" href="#get-string-from-line" id="id23">Get String from Line</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#shared-variables" id="id23">Shared Variables</a></p></li>
+<li><p><a class="reference internal" href="#shared-variables" id="id24">Shared Variables</a></p></li>
+</ul>
+</div>
+<div class="section" id="additional-documents">
+<h2><a class="toc-backref" href="#id13">Additional Documents</a><a class="headerlink" href="#additional-documents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_subblock_verification.pdf">Synth Works Subbloc Verification</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_testbench_techniques.pdf">Synth Works Testbench Techniques</a></p></li>
 </ul>
 </div>
 <div class="section" id="tests-severity">
-<h2><a class="toc-backref" href="#id13">Tests &amp; Severity</a><a class="headerlink" href="#tests-severity" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Tests &amp; Severity</a><a class="headerlink" href="#tests-severity" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">severity</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span>signal sev_lvl : severity_level := note
@@ -439,7 +453,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="stop-simulation">
-<h3><a class="toc-backref" href="#id14">Stop Simulation</a><a class="headerlink" href="#stop-simulation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Stop Simulation</a><a class="headerlink" href="#stop-simulation" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">testbench stop</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">false</span> <span class="n">report</span> <span class="s">&quot;End of simulation&quot;</span> <span class="k">severity</span> <span class="n">failure</span><span class="p">;</span>
@@ -449,7 +463,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="clock-generation">
-<h2><a class="toc-backref" href="#id15">Clock generation</a><a class="headerlink" href="#clock-generation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Clock generation</a><a class="headerlink" href="#clock-generation" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">clock</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">constant</span> <span class="n">sys_CLK_freq</span>   <span class="o">:</span> <span class="n">real</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">.</span><span class="mi">00</span><span class="n">E6</span><span class="p">;</span>
@@ -474,7 +488,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="reset">
-<h2><a class="toc-backref" href="#id16">Reset</a><a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Reset</a><a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">reset</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">tb_RESETn</span>   <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span> <span class="k">after</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span>
@@ -484,7 +498,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="wait-statement">
-<h2><a class="toc-backref" href="#id17">Wait statement</a><a class="headerlink" href="#wait-statement" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Wait statement</a><a class="headerlink" href="#wait-statement" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Has to be in process without List of sensitivity</p></li>
@@ -516,7 +530,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="strings">
-<h2><a class="toc-backref" href="#id18">Strings</a><a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Strings</a><a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">string</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Integer =&gt; String</span>
@@ -536,7 +550,7 @@ severity severity_lvl;
 </pre></div>
 </div>
 <div class="section" id="simple-and-messy">
-<h3><a class="toc-backref" href="#id19">Simple and messy</a><a class="headerlink" href="#simple-and-messy" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">Simple and messy</a><a class="headerlink" href="#simple-and-messy" title="Permalink to this headline">¶</a></h3>
 <p>Make a string plenty wide enough. Then you can store each string in the appropriate slice of it.</p>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">string simple</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
@@ -556,7 +570,7 @@ severity severity_lvl;
 <p>This is quite horrible, though, because you have no easy way to find out how many characters of <code class="docutils literal notranslate"><span class="pre">toto</span></code> are in use at any given time.</p>
 </div>
 <div class="section" id="complicated-and-pretty">
-<h3><a class="toc-backref" href="#id20">Complicated and pretty</a><a class="headerlink" href="#complicated-and-pretty" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">Complicated and pretty</a><a class="headerlink" href="#complicated-and-pretty" title="Permalink to this headline">¶</a></h3>
 <p>Make the string a variable of type <code class="docutils literal notranslate"><span class="pre">LINE</span></code>, from package <code class="docutils literal notranslate"><span class="pre">STD.TEXTIO</span></code>. Then you can copy any string into it using the <code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure:</p>
 <p><code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure adds things to the end of the string stored in <code class="docutils literal notranslate"><span class="pre">toto</span></code>, so that it grows ever longer. The <code class="docutils literal notranslate"><span class="pre">DEALLOCATE</span></code> procedure eliminates the spaces used by the line variable.</p>
 <div class="admonition important">
@@ -583,7 +597,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="put-string-into-line">
-<h4><a class="toc-backref" href="#id21">Put String into Line</a><a class="headerlink" href="#put-string-into-line" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id22">Put String into Line</a><a class="headerlink" href="#put-string-into-line" title="Permalink to this headline">¶</a></h4>
 <p>Copying any string into a line variable, having first cleared that variable:</p>
 <div class="literal-block-wrapper docutils container" id="id10">
 <div class="code-block-caption"><span class="caption-text">string pretty 3</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
@@ -597,7 +611,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="get-string-from-line">
-<h4><a class="toc-backref" href="#id22">Get String from Line</a><a class="headerlink" href="#get-string-from-line" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id23">Get String from Line</a><a class="headerlink" href="#get-string-from-line" title="Permalink to this headline">¶</a></h4>
 <p>Given a variable.</p>
 <div class="literal-block-wrapper docutils container" id="id11">
 <div class="code-block-caption"><span class="caption-text">string pretty 4</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
@@ -629,7 +643,7 @@ severity severity_lvl;
 </div>
 </div>
 <div class="section" id="shared-variables">
-<h2><a class="toc-backref" href="#id23">Shared Variables</a><a class="headerlink" href="#shared-variables" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id24">Shared Variables</a><a class="headerlink" href="#shared-variables" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id12">
 <div class="code-block-caption"><span class="caption-text">shared variables</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">architecture</span> <span class="nc">non_determinist</span> <span class="k">of</span> <span class="nc">example</span> <span class="k">is</span>
@@ -674,7 +688,7 @@ severity severity_lvl;
         <a href="time.html" class="btn btn-neutral float-right" title="Time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="syntax.html" class="btn btn-neutral float-left" title="Syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="synthesis.html" class="btn btn-neutral float-left" title="RTL Synthesis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
