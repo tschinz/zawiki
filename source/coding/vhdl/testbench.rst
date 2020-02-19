@@ -11,8 +11,8 @@ Testbench
 Additional Documents
 ====================
 
-* :pdfviewer:`Synth Works Subbloc Verification <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_subblock_verification.pdf>`
-* :pdfviewer:`Synth Works Testbench Techniques <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_testbench_techniques.pdf>`
+* :pdfviewer:`Synth Works Subbloc Verification <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_subblock_verification.pdf>`
+* :pdfviewer:`Synth Works Testbench Techniques <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_testbench_techniques.pdf>`
 
 
 Tests & Severity
