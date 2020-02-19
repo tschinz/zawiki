@@ -21,6 +21,7 @@ PDF
 * :pdfviewer:`Synth Works Fixed & Float <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_fixed_float.pdf>`
 * :pdfviewer:`Synth Works Math Tricks <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_math_tricks.pdf>`
 * :pdfviewer:`Synth Works Verification <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_subblock_verification.pdf>`
+* :pdfviewer:`Synth Works VHDL 2008 End of Verbosity <github/tschinz/zawiki/source/coding/vhdl/docs/synthworks_vhdl_2008end_of_verbosity.pdf>`
 * :pdfviewer:`Short Guide CoF <github/tschinz/zawiki/source/coding/vhdl/docs/vhdl_syntax_cof.pdf>`
 * :pdfviewer:`EPFL VHDL Script <github/tschinz/zawiki/source/coding/vhdl/docs/Intro_VHDL_v2.0_notes.pdf>`
 
@@ -34,3 +35,4 @@ Links
 * `Compact Summary of VHDL <http://www.cs.umbc.edu/portal/help/VHDL/summary.html>`_
 * `Open cores - Free VHDL/Verilog IP's <http://opencores.org>`_
 * `VHDL Guru Blog <http://vhdlguru.blogspot.com>`_
+* `Synth Works <http://synthworks.com/>`_

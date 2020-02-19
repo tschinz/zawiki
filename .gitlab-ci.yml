@@ -4,6 +4,7 @@ pages:
   stage: deploy
   before_script:
     - echo "Install additional packages"
+    - pip install -I sphinx==2.3.1
     - pip install sphinx-rtd-theme
     - pip install sphinxcontrib-wavedrom
     - pip install sphinxcontrib-plantuml
@@ -20,7 +21,7 @@ pages:
     - apt-get install -y inkscape
     - echo "Install texlive"
     - apt-get install -y texlive-full
-    - chmod +x /builds/SPL/spl-docs/source/_static/plantuml.jar
+    - chmod +x /builds/zawiki/source/_static/plantuml.jar
     - echo "Install Java"
     - dpkg --configure -a
     - mkdir -p /usr/share/man/man1

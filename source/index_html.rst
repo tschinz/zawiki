@@ -46,7 +46,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    coding/python/index
    coding/regex/index
    coding/vhdl/index
-   coding/tcl_do/index
+   coding/tcl_tk_do/index
    coding/spinal/index
    coding/scala/index
    coding/c_cpp/index
