@@ -34,6 +34,8 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    tools/jupyter/index
    tools/pandoc/index
    tools/sphinx/index
+   tools/sublimetext/index
+   tools/virtualbox/index
 
 .. toctree::
    :hidden:
@@ -52,6 +54,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    coding/c_cpp/index
    coding/make/index
    coding/ros/index
+   coding/swift/index
    coding/licenses/index
    coding/fileheaders
 
@@ -65,6 +68,8 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    writing/latex/index
    writing/rst/index
    writing/md/index
+   writing/emoji/index
+   writing/gitbook/index
 
 .. toctree::
    :hidden:

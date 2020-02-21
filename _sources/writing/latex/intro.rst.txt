@@ -8,7 +8,8 @@ Some LaTeX helppages
 ====================
 
 * `HEI SPL Latex Templates <https://gitlab.hevs.ch/SPL/miscellaneous/spl-latex-template>`_
-* `Cheatsheet A Guide to Latex <https://gitlab.hevs.ch/SPL/miscellaneous/spl-latex-template/raw/master/help/Guide-to-Latex.pdf?inline=false>`_
+* :pdfviewer:`Cheatsheet A Guide to Latex <github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Latex.pdf>`
+* :pdfviewer:`Cheatsheet A Guide to Latex Presentation <github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Presentation.pdf>`
 * `Tex Stackexchange Forum <https://tex.stackexchange.com/>`_
 
 

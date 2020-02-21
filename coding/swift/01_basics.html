@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basics &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Programming Concepts" href="02_mvc.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-14-g27200b6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/synthesis.html">RTL Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Swift</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_mvc.html">Programming Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_controlflow.html">Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_multithreading.html">Multithreading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_nsclasses.html">NS Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="081_uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_other.html">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Swift</a> &raquo;</li>
+        
+      <li>Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/swift/01_basics.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#comments" id="id1">Comments</a></p>
+<ul>
+<li><p><a class="reference internal" href="#comment-links" id="id2">Comment Links</a></p></li>
+<li><p><a class="reference internal" href="#comment-markdown" id="id3">Comment Markdown</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id4">Types</a></p>
+<ul>
+<li><p><a class="reference internal" href="#default-swift-types" id="id5">Default Swift Types</a></p></li>
+<li><p><a class="reference internal" href="#c-types-vs-swift-types" id="id6">C-Types vs Swift Types</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#operators" id="id7">Operators</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arithmetic-operators" id="id8">Arithmetic Operators</a></p></li>
+<li><p><a class="reference internal" href="#comparative-operators" id="id9">Comparative Operators</a></p></li>
+<li><p><a class="reference internal" href="#assignment-operators" id="id10">Assignment Operators</a></p></li>
+<li><p><a class="reference internal" href="#increment-and-decrement-operators" id="id11">Increment and Decrement Operators</a></p></li>
+<li><p><a class="reference internal" href="#logical-operators" id="id12">Logical Operators</a></p></li>
+<li><p><a class="reference internal" href="#range-operators" id="id13">Range Operators</a></p></li>
+<li><p><a class="reference internal" href="#bitwise-operators" id="id14">Bitwise Operators</a></p></li>
+<li><p><a class="reference internal" href="#overflow-and-underflow-operators" id="id15">Overflow and Underflow Operators</a></p></li>
+<li><p><a class="reference internal" href="#other-operators" id="id16">Other Operators</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="comments">
+<h2><a class="toc-backref" href="#id1">Comments</a><a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a comment</span>
+<span class="cm">/* This is a multiline comment</span>
+<span class="cm">/* Did you know /* you can nest multiline comments */ ? */</span>
+</pre></div>
+</div>
+<div class="section" id="comment-links">
+<h3><a class="toc-backref" href="#id2">Comment Links</a><a class="headerlink" href="#comment-links" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> Test appears in Xcode selector</span>
+<span class="c1">// </span><span class="cs">TODO:</span><span class="c1"> Write your todo here</span>
+<span class="c1">// </span><span class="cs">FIXME:</span><span class="c1"> Write your bug here (or fix is directly)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comment-markdown">
+<h3><a class="toc-backref" href="#id3">Comment Markdown</a><a class="headerlink" href="#comment-markdown" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">//: This is Markdown documentation inside the code</span>
+<span class="c1">//: # Markdown Title</span>
+<span class="c1">//: [link description](link)</span>
+<span class="c1">//: ![image description](img/location.png)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="types">
+<h2><a class="toc-backref" href="#id4">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<p>For a complete guide to 64-bit changes, please <a class="reference external" href="https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/64bitPorting/transition/transition.html#//apple_ref/doc/uid/TP40001064-CH207-TPXREF101">see the transition
+document</a>.</p>
+<div class="section" id="default-swift-types">
+<h3><a class="toc-backref" href="#id5">Default Swift Types</a><a class="headerlink" href="#default-swift-types" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Swift Type</p></th>
+<th class="head"><p>Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int</span></code>, <code class="docutils literal notranslate"><span class="pre">Int32</span></code>, <code class="docutils literal notranslate"><span class="pre">Int64</span></code>,
+<code class="docutils literal notranslate"><span class="pre">UInt8</span></code>, <code class="docutils literal notranslate"><span class="pre">UInt16</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">100</span></code> Dezimal
+<code class="docutils literal notranslate"><span class="pre">1_000_000</span></code> Dezimal
+<code class="docutils literal notranslate"><span class="pre">0b1001</span></code> Binary
+<code class="docutils literal notranslate"><span class="pre">0o85</span></code> Octal
+<code class="docutils literal notranslate"><span class="pre">0xFFE3</span></code> Hexadezimal</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3.14159265</span></code>
+<code class="docutils literal notranslate"><span class="pre">3.141_592_65</span></code>
+<code class="docutils literal notranslate"><span class="pre">1.25e2</span> <span class="pre">=</span> <span class="pre">125.0</span></code>
+<code class="docutils literal notranslate"><span class="pre">1.25e-2</span> <span class="pre">==</span> <span class="pre">0.0125</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>   <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">String&quot;</span></code>
+<code class="docutils literal notranslate"><span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">String</span> <span class="pre">including</span> <span class="pre">a</span> <span class="pre">\</span>
+<span class="pre">(varname)&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="c-types-vs-swift-types">
+<h3><a class="toc-backref" href="#id6">C-Types vs Swift Types</a><a class="headerlink" href="#c-types-vs-swift-types" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C Type</p></th>
+<th class="head"><p>Swift Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p>CBool</p></td>
+</tr>
+<tr class="row-odd"><td><p>char, signed char</p></td>
+<td><p>CChar</p></td>
+</tr>
+<tr class="row-even"><td><p>unsigned char</p></td>
+<td><p>CUnsignedChar</p></td>
+</tr>
+<tr class="row-odd"><td><p>short</p></td>
+<td><p>CShort</p></td>
+</tr>
+<tr class="row-even"><td><p>unsigned short</p></td>
+<td><p>CUnsignedShort</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>CInt</p></td>
+</tr>
+<tr class="row-even"><td><p>unsigned int</p></td>
+<td><p>CUnsignedInt</p></td>
+</tr>
+<tr class="row-odd"><td><p>long</p></td>
+<td><p>CLong</p></td>
+</tr>
+<tr class="row-even"><td><p>unsigned long</p></td>
+<td><p>CUnsignedLong</p></td>
+</tr>
+<tr class="row-odd"><td><p>long long</p></td>
+<td><p>CLongLong</p></td>
+</tr>
+<tr class="row-even"><td><p>unsigned long long</p></td>
+<td><p>CUnsignedLongLong</p></td>
+</tr>
+<tr class="row-odd"><td><p>wchar_t</p></td>
+<td><p>CWideChar</p></td>
+</tr>
+<tr class="row-even"><td><p>char16_t</p></td>
+<td><p>CChar16</p></td>
+</tr>
+<tr class="row-odd"><td><p>vchar32_t</p></td>
+<td><p>CChar32</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>CFloat</p></td>
+</tr>
+<tr class="row-odd"><td><p>double</p></td>
+<td><p>CDouble</p></td>
+</tr>
+<tr class="row-even"><td><p>From the
+<a class="reference external" href="https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/InteractingWithCAPIs.html">docs</a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="operators">
+<h2><a class="toc-backref" href="#id7">Operators</a><a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>Swift supports most standard C operators and improves several
+capabilities to eliminate common coding errors.</p>
+<p>Arithmetic operators (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code> and so forth)
+detect and disallow value overflow, to avoid unexpected results when
+working with numbers that become larger or smaller than the allowed
+value range of the type that stores them.</p>
+<div class="section" id="arithmetic-operators">
+<h3><a class="toc-backref" href="#id8">Arithmetic Operators</a><a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>Addition</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>Substraction</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Multiplication</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p>Division</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
+<td><p>Remainder also work on float <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">%</span> <span class="pre">2.5</span> <span class="pre">//</span> <span class="pre">equals</span> <span class="pre">0.5</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="comparative-operators">
+<h3><a class="toc-backref" href="#id9">Comparative Operators</a><a class="headerlink" href="#comparative-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>Equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">===</span></code></p></td>
+<td><p>Identical to</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td><p>Not equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!==</span></code></p></td>
+<td><p>Not identical to</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">~=</span></code></p></td>
+<td><p>Pattern match</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>Greater than</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>Less than</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>Greate than or equal to</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>Less than or equal to</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="assignment-operators">
+<h3><a class="toc-backref" href="#id10">Assignment Operators</a><a class="headerlink" href="#assignment-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td><p>Assign</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">+=</span></code></p></td>
+<td><p>Addition</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-=</span></code></p></td>
+<td><p>Subtraction</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\*=</span></code></p></td>
+<td><p>Multiplication</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></td>
+<td><p>Division</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">%=</span></code></p></td>
+<td><p>Remainder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;=</span></code></p></td>
+<td><p>Bitwise AND</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">|=</span></code></p></td>
+<td><p>Bitwise Inclusive OR</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">^=</span></code></p></td>
+<td><p>Exclusive OR</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;&lt;=</span></code></p></td>
+<td><p>Shift Left</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;=</span></code></p></td>
+<td><p>Shift Right</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;&amp;=</span></code></p></td>
+<td><p>Logical AND</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">||=</span></code></p></td>
+<td><p>Logical OR</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="increment-and-decrement-operators">
+<h3><a class="toc-backref" href="#id11">Increment and Decrement Operators</a><a class="headerlink" href="#increment-and-decrement-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">++</span></code></p></td>
+<td><p>Addition</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--</span></code></p></td>
+<td><p>Subtraction</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">x</span> <span class="c1">//increments variable **before** returning it&#39;s value</span>
+<span class="n">x</span><span class="o">--</span> <span class="c1">//increments variable **after** returning it&#39;s value</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logical-operators">
+<h3><a class="toc-backref" href="#id12">Logical Operators</a><a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">!</span></code></p></td>
+<td><p>NOT</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code></p></td>
+<td><p>Logical AND</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">||</span></code></p></td>
+<td><p>Logical OR</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="range-operators">
+<h3><a class="toc-backref" href="#id13">Range Operators</a><a class="headerlink" href="#range-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">..&lt;</span></code></p></td>
+<td><p>Half-open range</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">...</span></code></p></td>
+<td><p>Closed range</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">.&lt;</span><span class="mi">3</span> <span class="p">{}</span> <span class="c1">// 1 to 3 excluding 3</span>
+<span class="k">for</span> <span class="n">index</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">..</span><span class="mi">3</span> <span class="p">{}</span> <span class="c1">// 1 to 3 inluding 3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bitwise-operators">
+<h3><a class="toc-backref" href="#id14">Bitwise Operators</a><a class="headerlink" href="#bitwise-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p></td>
+<td><p>Bitwise AND</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">|</span></code></p></td>
+<td><p>Bitwise Inclusive OR</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td><p>Exclusive OR</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">~</span></code></p></td>
+<td><p>Unary complement (bit inversion)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code></p></td>
+<td><p>Shift Left</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></p></td>
+<td><p>Shift Right</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="overflow-and-underflow-operators">
+<h3><a class="toc-backref" href="#id15">Overflow and Underflow Operators</a><a class="headerlink" href="#overflow-and-underflow-operators" title="Permalink to this headline">¶</a></h3>
+<p>Typically, assigning or increment an integer, float, or double past it’s
+range would result in a run-time error. However, if you’d instead prefer
+to safely truncate the number of available bits, you can opt-in to have
+the variable overflow or underflow using the following operators:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;+</span></code></p></td>
+<td><p>Addition</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;-</span></code></p></td>
+<td><p>Subtraction</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;*</span></code></p></td>
+<td><p>Multiplication</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;/</span></code></p></td>
+<td><p>Division</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;%</span></code></p></td>
+<td><p>Remainder</p></td>
+</tr>
+</tbody>
+</table>
+<p>Example for unsigned integers (works similarly for signed):</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">willOverflow</span> <span class="p">=</span> <span class="nb">UInt8</span><span class="p">.</span><span class="bp">max</span>       <span class="c1">// willOverflow = 255</span>
+<span class="n">willOverflow</span> <span class="p">=</span> <span class="n">willOverflow</span> <span class="o">&amp;+</span> <span class="mi">1</span>   <span class="c1">// willOverflow = 0</span>
+
+<span class="kd">var</span> <span class="nv">willUnderflow</span> <span class="p">=</span> <span class="nb">UInt8</span><span class="p">.</span><span class="bp">min</span>      <span class="c1">// willUnderflow = 0</span>
+<span class="n">willUnderflow</span> <span class="p">=</span> <span class="n">willUnderflow</span> <span class="o">&amp;-</span> <span class="mi">1</span> <span class="c1">// willUnderflow = 255</span>
+</pre></div>
+</div>
+<p>Another example to show how you can prevent dividing by zero from
+resulting in infinity:</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">x</span> <span class="p">=</span> <span class="mi">1</span>
+<span class="kd">let</span> <span class="nv">y</span> <span class="p">=</span> <span class="n">x</span> <span class="o">&amp;/</span> <span class="mi">0</span> <span class="c1">// Division by zero y = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-operators">
+<h3><a class="toc-backref" href="#id16">Other Operators</a><a class="headerlink" href="#other-operators" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>??</p></td>
+<td><p>Nil coalescing (take left if not nil else right value)</p></td>
+</tr>
+<tr class="row-odd"><td><p>?:</p></td>
+<td><p>Ternary conditional</p></td>
+</tr>
+<tr class="row-even"><td><p>!</p></td>
+<td><p>Force unwrap object value</p></td>
+</tr>
+<tr class="row-odd"><td><p>?</p></td>
+<td><p>Safely unwrap object value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02_mvc.html" class="btn btn-neutral float-right" title="Programming Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Syntax" href="syntax.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-14-g27200b6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/synthesis.html">RTL Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Make</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../swift/index.html">Swift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../swift/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/01_basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/02_mvc.html">Programming Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/03_properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/05_controlflow.html">Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/06_multithreading.html">Multithreading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/07_nsclasses.html">NS Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/081_uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/08_views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/09_other.html">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Make</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/make/examples.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>In this section you can find some example Makefile which you can take and adapt to any needs.</p>
+<div class="section" id="sphinx-makefile">
+<h2>Sphinx Makefile<a class="headerlink" href="#sphinx-makefile" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">makefile sphinx</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># Makefile for Sphinx documentation</span>
+<span class="c">#</span>
+
+<span class="c"># You can set these variables from the command line.</span>
+<span class="nv">SPHINXOPTS</span>    <span class="o">=</span> -Dversion<span class="o">=</span><span class="k">$(</span>shell git describe --tags<span class="k">)</span>
+<span class="nv">SPHINXBUILD</span>   <span class="o">=</span> sphinx-build
+<span class="nv">SOURCEDIR</span>     <span class="o">=</span> <span class="nb">source</span>
+<span class="nv">BUILDDIR</span>      <span class="o">=</span> _build
+<span class="nv">OUTPUTDIR</span>     <span class="o">=</span> pdf
+<span class="nv">FILENAME</span>      <span class="o">=</span> zawiki
+<span class="c"># IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR</span>
+<span class="nv">IMAGEOBJS</span>     <span class="o">=</span> <span class="k">$(</span>sort <span class="k">$(</span>dir <span class="k">$(</span>wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*<span class="k">)))</span>
+<span class="nv">IMAGEDIRS</span>     <span class="o">=</span> <span class="k">$(</span>patsubst source/%/, %, <span class="k">$(</span>IMAGEOBJS<span class="k">))</span> <span class="c1"># remove source/ and last /</span>
+<span class="nv">IMAGEDIRS</span>    <span class="o">+=</span> img/icons
+<span class="c"># SVG to PDF conversion</span>
+<span class="nv">SVG2PDF</span>       <span class="o">=</span> inkscape
+<span class="nv">SVG2PDF_FLAGS</span> <span class="o">=</span> -C
+
+<span class="c"># Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.</span>
+<span class="nf">help</span><span class="o">:</span>
+    @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nb">help</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+
+<span class="c"># Pattern rule for converting SVG to PDF</span>
+<span class="nf">%.pdf </span><span class="o">:</span> %.<span class="n">svg</span>
+    <span class="k">$(</span>SVG2PDF<span class="k">)</span> <span class="k">$(</span>SVG2PDF_FLAGS<span class="k">)</span> -f $&lt; -A <span class="nv">$@</span>
+
+<span class="c"># Build a list of SVG files to convert to PDFs</span>
+<span class="nv">PDFs</span> <span class="o">:=</span> <span class="k">$(</span>foreach dir, <span class="k">$(</span>IMAGEDIRS<span class="k">)</span>, <span class="k">$(</span>patsubst %.svg,%.pdf,<span class="k">$(</span>wildcard <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/<span class="k">$(</span>dir<span class="k">)</span>/*.svg<span class="k">)))</span>
+
+<span class="c"># Make a rule to build the PDFs</span>
+<span class="nf">images-pdf</span><span class="o">:</span> <span class="k">$(</span><span class="nv">PDFs</span><span class="k">)</span>
+
+
+<span class="c"># Make a rule to build the images</span>
+<span class="nf">images</span><span class="o">:</span> <span class="n">images</span>-<span class="n">png</span>
+
+<span class="nf">clean-pdf</span><span class="o">:</span>
+    -rm <span class="k">$(</span>PDFs<span class="k">)</span>
+
+<span class="nf">clean-images</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">pdf</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">help</span> <span class="n">Makefile</span>
+
+<span class="c"># Catch-all target: route all unknown targets to Sphinx using the new</span>
+<span class="c"># &quot;make mode&quot; option.  $(O) is meant as a shortcut for $(SPHINXOPTS).</span>
+<span class="c">#%: Makefile</span>
+<span class="c">#   @$(SPHINXBUILD) -M $@ &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>
+<span class="nf">clean</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">images</span>
+    rm -rf <span class="k">$(</span>BUILDDIR<span class="k">)</span>/*
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">quick</span>
+<span class="nf">clean-quick</span><span class="o">:</span>
+    rm -rf <span class="k">$(</span>BUILDDIR<span class="k">)</span>/*
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">html</span>
+<span class="nf">html</span><span class="o">:</span> <span class="c"># images-png</span>
+<span class="cp">    if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;</span>
+    cp <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index_html.rst <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index.rst
+    <span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+    @echo
+    @echo <span class="s2">&quot;Build finished. The HTML pages are in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/html.&quot;</span>
+<span class="c">    #mkdir -p $(OUTPUTDIR)/html/</span>
+<span class="c">    #cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)</span>
+    @echo <span class="s2">&quot;html files copied; the html files are in </span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/html/.&quot;</span>
+
+
+    @echo <span class="s2">&quot;Build finished; now you can run &quot;</span>qcollectiongenerator<span class="s2">&quot; with the&quot;</span> <span class="se">\</span>
+          <span class="s2">&quot;.qhcp project file in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp, like this:&quot;</span>
+    @echo <span class="s2">&quot;# qcollectiongenerator </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp/Example.qhcp&quot;</span>
+    @echo <span class="s2">&quot;To view the help file:&quot;</span>
+    @echo <span class="s2">&quot;# assistant -collectionFile </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp/Example.qhc&quot;</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">latexpdf</span>
+<span class="nf">latexpdf</span><span class="o">:</span> <span class="n">images</span>-<span class="n">pdf</span>
+<span class="cp">    if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;</span>
+    cp <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index_latex.rst <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index.rst
+    <span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+    @echo <span class="s2">&quot;Running LaTeX files through pdflatex...&quot;</span>
+    <span class="k">$(</span>MAKE<span class="k">)</span> -C <span class="k">$(</span>BUILDDIR<span class="k">)</span>/latex all-pdf
+    @echo <span class="s2">&quot;xelatex finished; the PDF files are in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/latex.&quot;</span>
+    mkdir -p <span class="k">$(</span>OUTPUTDIR<span class="k">)</span>/
+    cp <span class="k">$(</span>BUILDDIR<span class="k">)</span>/latex/<span class="k">$(</span>FILENAME<span class="k">)</span>.pdf <span class="k">$(</span>OUTPUTDIR<span class="k">)</span>/<span class="k">$(</span>FILENAME<span class="k">)</span>.pdf
+    @echo <span class="s2">&quot;pdf copied; the PDF files are in </span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/</span><span class="k">$(</span>FILENAME<span class="k">)</span><span class="s2">.pdf.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="simple-c-c-project">
+<h2>Simple C/C++ Project<a class="headerlink" href="#simple-c-c-project" title="Permalink to this headline">¶</a></h2>
+<p>Here a simple editable Makefile where only the standart stuff is used.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">makefile simple cpp</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># check for host development system</span>
+<span class="nv">TOOLS</span> <span class="o">=</span> ../../bin
+
+<span class="c"># define access paths for tools</span>
+<span class="nv">CCP</span> <span class="o">=</span>  cpp
+<span class="nv">AS</span> <span class="o">=</span> <span class="k">$(</span>TOOLS<span class="k">)</span>/asm_hrms
+
+<span class="c"># define access path for header files and libraries</span>
+<span class="nv">INCDIRS</span> <span class="o">=</span> ../../include
+
+<span class="c"># list target files</span>
+<span class="nf">all</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">d</span> <span class="n">a</span>664<span class="n">_rx</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">bin</span>
+
+<span class="c"># produce Test Processor target files</span>
+<span class="nf">a664_rx.s</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">S</span> <span class="n">Makefile</span>
+    cpp -I <span class="k">$(</span>INCDIRS<span class="k">)</span> -o a664_rx.s a664_rx.S
+<span class="nf">a664_rx.d</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -d -o a664_rx.d a664_rx.s &gt; a664_rx.d.dis
+<span class="nf">a664_rx</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -o a664_rx a664_rx.s &gt; a664_rx.dis
+<span class="nf">a664_rx.bin</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -o a664_rx.bin a664_rx.s &gt; a664_rx.dis
+
+<span class="c"># clean up</span>
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f *.bin *~ *.dis *.bin *.s *.d a664_rx
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="c-c-project">
+<h2>C/C++ Project<a class="headerlink" href="#c-c-project" title="Permalink to this headline">¶</a></h2>
+<p>This is a C/C++ Project where as much make is used as possible.</p>
+<p>First you can see the C/C++ project files to the given Makefile</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">hellomake.c</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>#include
+
+int main() {
+  // call a function in another file
+  myPrintHelloMake();
+
+  return(0);
+}
+&lt;/code&gt;
+&lt;code c hellofunc.c&gt;
+#include
+#include
+
+void myPrintHelloMake(void) {
+
+  printf(&quot;Hello makefiles!\n&quot;);
+
+  return;
+}
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">hellomake.h</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>// example include file
+void myPrintHelloMake(void);
+&lt;/code&gt;
+
+Here the appropriate complete Makefile to the project above.
+&lt;code make Makefile&gt;
+CC=gcc
+CFLAGS=-I.
+DEPS = hellomake.h
+OBJ = hellomake.o hellofunc.o
+
+%.o: %.c $(DEPS)
+    $(CC) -c -o $@ $&lt; $(CFLAGS)
+
+hellomake: $(OBJ)
+    gcc -o $@ $^ $(CFLAGS)
+</pre></div>
+</div>
+</div>
+<p>or here the more complex project file</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">makefile cpp</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nv">IDIR</span> <span class="o">=</span>../include
+<span class="nv">CC</span><span class="o">=</span>gcc
+<span class="nv">CFLAGS</span><span class="o">=</span>-I<span class="k">$(</span>IDIR<span class="k">)</span>
+
+<span class="nv">ODIR</span><span class="o">=</span>obj
+<span class="nv">LDIR</span> <span class="o">=</span>../lib
+
+<span class="nv">LIBS</span><span class="o">=</span>-lm
+
+<span class="nv">_DEPS</span> <span class="o">=</span> hellomake.h
+<span class="nv">DEPS</span> <span class="o">=</span> <span class="k">$(</span>patsubst %,<span class="k">$(</span>IDIR<span class="k">)</span>/%,<span class="k">$(</span>_DEPS<span class="k">))</span>
+
+<span class="nv">_OBJ</span> <span class="o">=</span> hellomake.o hellofunc.o
+<span class="nv">OBJ</span> <span class="o">=</span> <span class="k">$(</span>patsubst %,<span class="k">$(</span>ODIR<span class="k">)</span>/%,<span class="k">$(</span>_OBJ<span class="k">))</span>
+
+
+<span class="nf">$(ODIR)/%.o</span><span class="o">:</span> %.<span class="n">c</span> <span class="k">$(</span><span class="nv">DEPS</span><span class="k">)</span>
+    <span class="k">$(</span>CC<span class="k">)</span> -c -o <span class="nv">$@</span> $&lt; <span class="k">$(</span>CFLAGS<span class="k">)</span>
+
+<span class="nf">hellomake</span><span class="o">:</span> <span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span>
+    gcc -o <span class="nv">$@</span> $^ <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="k">$(</span>LIBS<span class="k">)</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f <span class="k">$(</span>ODIR<span class="k">)</span>/*.o *~ core <span class="k">$(</span>INCDIR<span class="k">)</span>/*~
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="syntax.html" class="btn btn-neutral float-right" title="Syntax" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

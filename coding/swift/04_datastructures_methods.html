@@ -1,0 +1,788 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Structures &amp; Methods &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Control Flow" href="05_controlflow.html" />
+    <link rel="prev" title="Properties" href="03_properties.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-14-g27200b6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/synthesis.html">RTL Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Swift</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_mvc.html">Programming Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_properties.html">Properties</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Structures &amp; Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_controlflow.html">Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_multithreading.html">Multithreading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_nsclasses.html">NS Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="081_uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_other.html">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Swift</a> &raquo;</li>
+        
+      <li>Data Structures &amp; Methods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/swift/04_datastructures_methods.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-structures-methods">
+<h1>Data Structures &amp; Methods<a class="headerlink" href="#data-structures-methods" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#data-structures" id="id5">Data Structures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#enums" id="id6"><code class="docutils literal notranslate"><span class="pre">enums</span></code></a></p></li>
+<li><p><a class="reference internal" href="#struct" id="id7"><code class="docutils literal notranslate"><span class="pre">struct</span></code></a></p></li>
+<li><p><a class="reference internal" href="#class" id="id8"><code class="docutils literal notranslate"><span class="pre">class</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#creation" id="id9">Creation</a></p></li>
+<li><p><a class="reference internal" href="#final" id="id10"><code class="docutils literal notranslate"><span class="pre">Final</span></code></a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#methods-func" id="id11">Methods <code class="docutils literal notranslate"><span class="pre">func</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#internal-external-names" id="id12">Internal &amp; External Names</a></p></li>
+<li><p><a class="reference internal" href="#override" id="id13"><code class="docutils literal notranslate"><span class="pre">override</span></code></a></p></li>
+<li><p><a class="reference internal" href="#final-1" id="id14"><code class="docutils literal notranslate"><span class="pre">final</span></code></a></p></li>
+<li><p><a class="reference internal" href="#init-method" id="id15"><code class="docutils literal notranslate"><span class="pre">init()</span></code> Method</a></p>
+<ul>
+<li><p><a class="reference internal" href="#inherited-init" id="id16">Inherited <code class="docutils literal notranslate"><span class="pre">init</span></code></a></p></li>
+<li><p><a class="reference internal" href="#required-init" id="id17">Required <code class="docutils literal notranslate"><span class="pre">init</span></code></a></p></li>
+<li><p><a class="reference internal" href="#failable-init" id="id18">Failable `init``</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#objects" id="id19">Objects</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-objects" id="id20">Creating Objects</a></p></li>
+<li><p><a class="reference internal" href="#anyobject" id="id21"><code class="docutils literal notranslate"><span class="pre">AnyObject</span></code></a></p>
+<ul>
+<li><p><a class="reference internal" href="#convert-anyobject" id="id22">Convert <code class="docutils literal notranslate"><span class="pre">AnyObject</span></code></a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="data-structures">
+<h2><a class="toc-backref" href="#id5">Data Structures</a><a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">enum</span></code> and <code class="docutils literal notranslate"><span class="pre">struct</span></code> are the basic building blocks of
+swift they have:</p>
+<ul class="simple">
+<li><p>Similar Syntax</p></li>
+<li><p>Can have Properties (<code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">let</span></code>), Methods (<code class="docutils literal notranslate"><span class="pre">func</span></code>)</p></li>
+<li><p>Can have initializer</p></li>
+<li><p>Only <code class="docutils literal notranslate"><span class="pre">class</span></code> has inheritance</p></li>
+<li><p>Only <code class="docutils literal notranslate"><span class="pre">class</span></code> has introspection and casting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> = Reference type, <code class="docutils literal notranslate"><span class="pre">enum</span></code> and <code class="docutils literal notranslate"><span class="pre">struct</span></code> = Value type</p></li>
+</ul>
+<div class="section" id="enums">
+<h3><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">enums</span></code></a><a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">enumTypeVar</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span> <span class="c1">// explicitly all Int&#39;s</span>
+    <span class="k">case</span> <span class="n">firstProperty</span>   <span class="p">=</span> <span class="mi">1</span>
+    <span class="k">case</span> <span class="n">secondProperty</span>  <span class="p">=</span> <span class="mi">2</span>
+<span class="p">}</span>
+<span class="n">vat</span> <span class="n">type</span> <span class="p">=</span> <span class="n">enumTypeVar</span><span class="p">.</span><span class="n">firstProperty</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">Barcode</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">UPCA</span><span class="p">(</span><span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">)</span>
+    <span class="k">case</span> <span class="n">QRCode</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="struct">
+<h3><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">struct</span></code></a><a class="headerlink" href="#struct" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">struct</span> <span class="nc">Resolution</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">width</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="kd">var</span> <span class="nv">height</span> <span class="p">=</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="class">
+<h3><a class="toc-backref" href="#id8"><code class="docutils literal notranslate"><span class="pre">class</span></code></a><a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="creation">
+<h4><a class="toc-backref" href="#id9">Creation</a><a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h4>
+<p>```swift` class MyClass : OptionalSuperClass, OptionalProtocol1,
+OptionalProtocol2 { var myProperty : String var myOptionalProperty :
+String? // More Properties</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Only</span> <span class="n">need</span> <span class="n">override</span> <span class="k">if</span> <span class="n">subclassing</span>
+<span class="n">override</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">myProperty</span> <span class="o">=</span> <span class="s2">&quot;initValue&quot;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">More</span> <span class="n">methods</span>
+</pre></div>
+</div>
+<p>}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Usage
+```swift
+var myClassObject = MyClass()
+println(&quot;\(myClassObject.myProperty)&quot;)          // &quot;initValue&quot;
+println(&quot;\(myClassObject.myOptionalProperty!)&quot;) // nil
+</pre></div>
+</div>
+</div>
+<div class="section" id="final">
+<h4><a class="toc-backref" href="#id10"><code class="docutils literal notranslate"><span class="pre">Final</span></code></a><a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h4>
+<p>With <code class="docutils literal notranslate"><span class="pre">Final</span></code> a <code class="docutils literal notranslate"><span class="pre">func</span></code>or <code class="docutils literal notranslate"><span class="pre">class</span></code> can’t be override. It will be
+the end of the line.</p>
+</div>
+</div>
+</div>
+<div class="section" id="methods-func">
+<h2><a class="toc-backref" href="#id11">Methods <code class="docutils literal notranslate"><span class="pre">func</span></code></a><a class="headerlink" href="#methods-func" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="internal-external-names">
+<span id="id1"></span><h3><a class="toc-backref" href="#id12">Internal &amp; External Names</a><a class="headerlink" href="#internal-external-names" title="Permalink to this headline">¶</a></h3>
+<p>Methods in swift can have internal and external names. The first
+parameter is a littel different, it should be consistent with the method
+name.</p>
+<ul class="simple">
+<li><p>First parameter has no external name but can be forced with <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p></li>
+<li><p>All other parameters need to have an external name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_</span></code> == “I don’t care”. An name can be eliminated</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>         <span class="c1">// return 0</span>
+
+<span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">){</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// returns a tuple (a,b) == (0,1)</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// error first param has no external name</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">externalName</span> <span class="n">InternalName</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">internalName</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">externalName</span><span class="p">:</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>              <span class="c1">// Error no external name given</span>
+
+<span class="kd">func</span> <span class="nf">doIt</span><span class="p">(#</span><span class="n">InternalandImplicitExternalName</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">InternalandImplicitExternalName</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">InternalandImplicitExternalName</span><span class="p">:</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="override">
+<h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">override</span></code></a><a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h3>
+<p>A Method from a superclass can be override wiwth the keyword
+<code class="docutils literal notranslate"><span class="pre">override</span></code></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Classname</span> <span class="p">:</span> <span class="n">SuperClassName</span> <span class="p">{</span>
+    <span class="kr">override</span> <span class="n">doIt</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="final-1">
+<span id="id2"></span><h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">final</span></code></a><a class="headerlink" href="#final-1" title="Permalink to this headline">¶</a></h3>
+<p>With <code class="docutils literal notranslate"><span class="pre">Final</span></code> a <code class="docutils literal notranslate"><span class="pre">func</span></code>or <code class="docutils literal notranslate"><span class="pre">class</span></code> can’t be override. It will be
+the end of the line.</p>
+</div>
+<div class="section" id="init-method">
+<span id="id3"></span><h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">init()</span></code> Method</a><a class="headerlink" href="#init-method" title="Permalink to this headline">¶</a></h3>
+<p>Two types of <code class="docutils literal notranslate"><span class="pre">init</span></code></p>
+<ul class="simple">
+<li><p>designated <code class="docutils literal notranslate"><span class="pre">init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init()</span></code></p></li>
+</ul>
+<p><strong>Free Inits</strong></p>
+<ul class="simple">
+<li><p>If all Properties are initialized</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">struct</span></code>with no initializers will get a default <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+</ul>
+<p>What <strong>can</strong> be done in an <code class="docutils literal notranslate"><span class="pre">init</span></code>:</p>
+<ul class="simple">
+<li><p>Set or Reset properties values <code class="docutils literal notranslate"><span class="pre">var</span></code> and even <code class="docutils literal notranslate"><span class="pre">let</span></code></p></li>
+<li><p>Call other <code class="docutils literal notranslate"><span class="pre">init</span></code> methods <code class="docutils literal notranslate"><span class="pre">self.init()</span></code></p></li>
+<li><p>Call super classes <code class="docutils literal notranslate"><span class="pre">init</span></code> methods <code class="docutils literal notranslate"><span class="pre">super.init()</span></code></p></li>
+</ul>
+<p>What <strong>have to</strong> be done in an <code class="docutils literal notranslate"><span class="pre">init</span></code>:</p>
+<ul class="simple">
+<li><p>After <code class="docutils literal notranslate"><span class="pre">init()</span></code> all properties need to have an value (or <code class="docutils literal notranslate"><span class="pre">nil</span></code>)</p></li>
+<li><p>Designated <code class="docutils literal notranslate"><span class="pre">init</span></code> can only call designated init of its immediate
+superclass</p></li>
+<li><p>All <strong>own</strong> properties need to be initialized <strong>before</strong> using
+superclass <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+<li><p>The superclass <code class="docutils literal notranslate"><span class="pre">init</span></code> nedd to be called <strong>before</strong> inherited
+properties can ba assigned</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> can only call designated <code class="docutils literal notranslate"><span class="pre">init</span></code> in it’s own
+class</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> can call other <code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> but in the
+end a designated <code class="docutils literal notranslate"><span class="pre">init</span></code> must be called</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> first call designated <code class="docutils literal notranslate"><span class="pre">init</span></code> before set any
+property value</p></li>
+</ul>
+<div class="section" id="inherited-init">
+<h4><a class="toc-backref" href="#id16">Inherited <code class="docutils literal notranslate"><span class="pre">init</span></code></a><a class="headerlink" href="#inherited-init" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>If no <code class="docutils literal notranslate"><span class="pre">init</span></code> is implemented all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code> are inherited</p></li>
+<li><p>If you override all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code>, you’ll inherit all its
+<code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code></p></li>
+<li><p>If you implement no <code class="docutils literal notranslate"><span class="pre">init</span></code>, you’ll inherit all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="required-init">
+<h4><a class="toc-backref" href="#id17">Required <code class="docutils literal notranslate"><span class="pre">init</span></code></a><a class="headerlink" href="#required-init" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">class</span></code> can mark one or more <code class="docutils literal notranslate"><span class="pre">init</span></code> as required</p></li>
+</ul>
+</div>
+<div class="section" id="failable-init">
+<span id="id4"></span><h4><a class="toc-backref" href="#id18">Failable `init``</a><a class="headerlink" href="#failable-init" title="Permalink to this headline">¶</a></h4>
+<p>Rare, it is a <code class="docutils literal notranslate"><span class="pre">init</span></code> which can return <code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">?(){</span>
+    <span class="c1">// might return nil</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="p">#</span> <span class="bp">UIImage</span> <span class="n">example</span>
+<span class="kd">let</span> <span class="nv">image</span> <span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;nonExistingName&quot;</span><span class="p">)</span> <span class="c1">// image is an Optional UIImage?</span>
+<span class="c1">// solution</span>
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">image</span><span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;nonExistingName&quot;</span><span class="p">){</span>
+    <span class="c1">// image was successfully created</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// couldn&#39;t create the image</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="objects">
+<h2><a class="toc-backref" href="#id19">Objects</a><a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-objects">
+<h3><a class="toc-backref" href="#id20">Creating Objects</a><a class="headerlink" href="#creating-objects" title="Permalink to this headline">¶</a></h3>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">init</span></code> via the type name</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">x</span> <span class="p">=</span> <span class="n">ClassName</span><span class="p">()</span>
+<span class="kd">let</span> <span class="nv">y</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">]()</span>
+</pre></div>
+</div>
+<p>Calling type methods (rare)</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">button</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">.</span><span class="n">buttonWithType</span><span class="p">(</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">System</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anyobject">
+<h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">AnyObject</span></code></a><a class="headerlink" href="#anyobject" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Special Type (it is a Protocol) used to compatibility with
+Objective-C-based API</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// As Properties</span>
+<span class="kd">var</span> <span class="nv">destinationViewController</span> <span class="p">:</span> <span class="nb">AnyObject</span>
+<span class="kd">var</span> <span class="nv">toolbarItems</span><span class="p">:</span> <span class="p">[</span><span class="nb">AnyObject</span><span class="p">]</span>
+
+<span class="c1">// As Arguments to functions</span>
+<span class="kd">func</span> <span class="nf">appendDigit</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">addConstraints</span><span class="p">(</span><span class="n">constraints</span><span class="p">:</span> <span class="p">[</span><span class="nb">AnyObject</span><span class="p">])</span>
+
+<span class="c1">// Return type of functions</span>
+<span class="kd">class</span> <span class="nc">func</span> <span class="n">buttonWithType</span><span class="p">(</span><span class="n">buttonType</span><span class="p">:</span> <span class="n">UIButtonType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">AnyObject</span>
+</pre></div>
+</div>
+<div class="section" id="convert-anyobject">
+<h4><a class="toc-backref" href="#id22">Convert <code class="docutils literal notranslate"><span class="pre">AnyObject</span></code></a><a class="headerlink" href="#convert-anyobject" title="Permalink to this headline">¶</a></h4>
+<p><strong>Casting ``as`` or ``as?``</strong></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">destinationViewController</span><span class="p">:</span> <span class="nb">AnyObject</span>
+<span class="kd">let</span> <span class="nv">calcVC</span> <span class="p">=</span> <span class="n">destinationViewController</span> <span class="k">as</span> <span class="n">CalculatorViewVController</span>  <span class="c1">// could crash if not correct</span>
+
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">calcVC</span> <span class="p">=</span> <span class="n">destinationViewController</span> <span class="k">as</span><span class="p">?</span> <span class="n">CalculatorViewController</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Cast on the fly</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">button</span><span class="p">:</span> <span class="nb">AnyObject</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">.</span><span class="n">buttonWithTyoe</span><span class="p">(</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">System</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">title</span> <span class="p">=</span> <span class="p">(</span><span class="n">button</span> <span class="k">as</span> <span class="bp">UIButton</span><span class="p">).</span><span class="n">currentTitle</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="05_controlflow.html" class="btn btn-neutral float-right" title="Control Flow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="03_properties.html" class="btn btn-neutral float-left" title="Properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
