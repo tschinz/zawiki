@@ -15,6 +15,8 @@
    tools/jupyter/index
    tools/pandoc/index
    tools/sphinx/index
+   tools/sublimetext/index
+   tools/virtualbox/index
 
    coding/ahk/index
    coding/python/index
@@ -26,12 +28,14 @@
    coding/c_cpp/index
    coding/make/index
    coding/ros/index
+   coding/swift/index
    coding/licenses/index
    coding/fileheaders
 
    writing/latex/index
    writing/rst/index
    writing/md/index
+   writing/gitbook/index
 
    multimedia/index
    security/index
