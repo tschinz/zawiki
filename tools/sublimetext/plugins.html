@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-14-g27200b6
+                v0.11-15-g891d9d9
               </div>
             
           
@@ -229,9 +229,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/conversion.html">Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/examples.html">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/guidelines.html">Programming Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/intel_sdc_theory.html">SDC Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/intel_sdc_usage.html">SDC Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/libraries.html">Libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/simulation.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/syntax.html">Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/synthesis.html">RTL Synthesis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../coding/vhdl/testbench.html">Testbench</a></li>
@@ -446,17 +450,17 @@
 <h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#usage" id="id1">Usage</a></p></li>
-<li><p><a class="reference internal" href="#useful-packages" id="id2">Useful packages</a></p>
+<li><p><a class="reference internal" href="#usage" id="id2">Usage</a></p></li>
+<li><p><a class="reference internal" href="#useful-packages" id="id3">Useful packages</a></p>
 <ul>
-<li><p><a class="reference internal" href="#alignment" id="id3">Alignment</a></p></li>
+<li><p><a class="reference internal" href="#alignment" id="id4">Alignment</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <p>Packages are the plugins or extensions from SublimeText. On the webpage <a class="reference external" href="https://packagecontrol.io/">https://packagecontrol.io/</a> all available packages can be seen.</p>
 <div class="section" id="usage">
-<h2><a class="toc-backref" href="#id1">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">p</span></code></p>
 <ul class="simple">
 <li><p>Package Control: Install</p></li>
@@ -466,7 +470,7 @@
 </ul>
 </div>
 <div class="section" id="useful-packages">
-<h2><a class="toc-backref" href="#id2">Useful packages</a><a class="headerlink" href="#useful-packages" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Useful packages</a><a class="headerlink" href="#useful-packages" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>AlignTab</p></li>
 <li><p>AutoHotkey</p></li>
@@ -492,7 +496,19 @@
 <li><p>Kite</p></li>
 </ul>
 <div class="section" id="alignment">
-<h3><a class="toc-backref" href="#id3">Alignment</a><a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Alignment</a><a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">alignemnt settings</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    // The mid-line characters to align in a multi-line selection, changing
+    // this to an empty array will disable mid-line alignment
+    &quot;alignment_chars&quot;: [
+        &quot;^&quot;, &quot;|&quot;, &quot;:&quot;, &quot;:=&quot;, &quot;&lt;=&quot;, &quot;=&gt;&quot;
+    ]
+}
+</pre></div>
+</div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">a</span></code></p>
 </div>
 </div>

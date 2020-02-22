@@ -36,7 +36,7 @@ Types
 =====
 
 For a complete guide to 64-bit changes, please `see the transition
-document <https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/64bitPorting/transition/transition.html#//apple_ref/doc/uid/TP40001064-CH207-TPXREF101>`__.
+document <https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/64bitPorting/transition/transition.html#//apple_ref/doc/uid/TP40001064-CH207-TPXREF101>`_ .
 
 Default Swift Types
 -------------------
@@ -104,7 +104,7 @@ C-Types vs Swift Types
 | `docs <https://developer.apple.co |                                   |
 | m/library/ios/documentation/swift |                                   |
 | /conceptual/buildingcocoaapps/Int |                                   |
-| eractingWithCAPIs.html>`__        |                                   |
+| eractingWithCAPIs.html>`_         |                                   |
 +-----------------------------------+-----------------------------------+
 
 Operators

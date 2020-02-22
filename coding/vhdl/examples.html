@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-14-g27200b6
+                v0.11-15-g891d9d9
               </div>
             
           
@@ -229,9 +229,13 @@
 <li class="toctree-l2"><a class="reference internal" href="conversion.html">Conversion</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidelines.html">Programming Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc_theory.html">SDC Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc_usage.html">SDC Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="synthesis.html">RTL Synthesis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testbench.html">Testbench</a></li>
@@ -482,6 +486,12 @@
 </li>
 <li><p><a class="reference internal" href="#debounce" id="id19">Debounce</a></p></li>
 <li><p><a class="reference internal" href="#reset-input" id="id20">Reset Input</a></p></li>
+<li><p><a class="reference internal" href="#pseudo-random-number-generator" id="id21">Pseudo Random Number Generator</a></p>
+<ul>
+<li><p><a class="reference internal" href="#background" id="id22">Background</a></p></li>
+<li><p><a class="reference internal" href="#generics" id="id23">Generics</a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="blinker">
@@ -749,6 +759,102 @@ The following implementation has two different modes. Mode 0 is reactive on risi
 <span class="k">END</span> <span class="k">ARCHITECTURE</span> <span class="nc">rtl</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="pseudo-random-number-generator">
+<h2><a class="toc-backref" href="#id21">Pseudo Random Number Generator</a><a class="headerlink" href="#pseudo-random-number-generator" title="Permalink to this headline">¶</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://github.com/tschinz/config/tree/master/scripts/vhdl/prng">config repo blink</a></p>
+</div>
+<p>This VHDL module uses 2 Linear Feedback Shift Registers (LFSR) with polynomials for maximal sequence length, one of which is scalable to output word size (<code class="docutils literal notranslate"><span class="pre">4bit</span></code> - <code class="docutils literal notranslate"><span class="pre">24bit</span></code>) and one to operate as a non-uniform duty cycle clock. The module gives the user 4 options for output distribution types, Gaussian unimodal, bimodal, uniform, and non-uniform distributions. These distributions are created by altering a scalable LFSR output by clocking the output irregularly with a non-uniform clock, shifting scaled outputs into a buffer-adder-tree to effectively use the central limit theorem to create a normal distribution, and a feedback loop to further shape the distributions. Sample histograms are included in the figures following.
+The prng.vhd module is verified in a test bench by writing out the pseudo-random values to a file. This data can be entered into one’s favorite statistical analysis software package for verification.</p>
+<div class="section" id="background">
+<h3><a class="toc-backref" href="#id22">Background</a><a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>The LFSR is a shift register of arbitrary length that takes its input based off a linear function derived from the previous state. This function is chosen to provide a maximally long sequence. As the output-width is scaled, a different LFSR is built with a polynomial to provide maximal length. The polynomials used are commented in the VHDL module.</p>
+</div>
+<div class="section" id="generics">
+<h3><a class="toc-backref" href="#id23">Generics</a><a class="headerlink" href="#generics" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 10%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Generic</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">g_W</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">28</span></code> - <code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
+<td><p>Number of output vector bits</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">g_V</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">24</span></code> - <code class="docutils literal notranslate"><span class="pre">18</span></code></p></td>
+<td><p>Non uniforming clocking bits</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">g_G_TYPE</span></code></p></td>
+<td><p>Integer</p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0</span></code> = uniform</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">1</span></code> = bimodal</div>
+</div>
+</td>
+<td><p>Gaussion Distribution Type for <code class="docutils literal notranslate"><span class="pre">o_g_noise</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">g_U_TYPE</span></code></p></td>
+<td><p>Integer</p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0</span></code> = uniform</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">1</span></code> = ave-uniform</div>
+</div>
+</td>
+<td><p>Uniform Distribution Type for <code class="docutils literal notranslate"><span class="pre">o_u_noise</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 25%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>Size</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iCLK_clk</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>input clock signal</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iGRS_reset_n</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>input reset signal</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">i_enable</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>enable prn generation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">o_g_noise</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[g_W-1:0]</span></code></p></td>
+<td><p>gaussian distibution output</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">o_u_noise</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[g_W-1:0]</span></code></p></td>
+<td><p>uniform distribution output</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

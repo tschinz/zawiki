@@ -1,0 +1,928 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Programming Guidelines &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SDC Constraints" href="intel_sdc.html" />
+    <link rel="prev" title="File" href="file.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-15-g891d9d9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VHDL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Programming Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc_theory.html">SDC Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intel_sdc_usage.html">SDC Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="synthesis.html">RTL Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../swift/index.html">Swift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../swift/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/01_basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/02_mvc.html">Programming Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/03_properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/05_controlflow.html">Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/06_multithreading.html">Multithreading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/07_nsclasses.html">NS Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/081_uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/08_views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/09_other.html">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">VHDL</a> &raquo;</li>
+        
+      <li>Programming Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/vhdl/guidelines.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programming-guidelines">
+<h1>Programming Guidelines<a class="headerlink" href="#programming-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entity-ports">
+<h3>Entity ports<a class="headerlink" href="#entity-ports" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use only modes <code class="docutils literal notranslate"><span class="pre">IN</span></code> and <code class="docutils literal notranslate"><span class="pre">OUT</span></code> in the port of sub-blocks, <code class="docutils literal notranslate"><span class="pre">INOUT</span></code> mode too only in the port of the top-level entity</p></li>
+<li><p>Use only signal types <code class="docutils literal notranslate"><span class="pre">STD_LOGIC</span></code> and <code class="docutils literal notranslate"><span class="pre">STD_LOGIC_VECTOR</span></code>, <code class="docutils literal notranslate"><span class="pre">INTEGER</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSIGNED</span></code>, <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code></p></li>
+<li><p>Signals in the port of the entity should be grouped as follows:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Resets</p></li>
+<li><p>Clocks</p></li>
+<li><p>Signals of group A</p></li>
+<li><p>Signals of group B</p></li>
+<li><p>Signals of group C</p></li>
+<li><p>…</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Signals inside a group should be further grouped as follows:</p>
+<ul>
+<li><p>Control inputs</p></li>
+<li><p>Data inputs</p></li>
+<li><p>Outputs</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="architecture">
+<h3>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h3>
+<p>Architecture name should be one of following rules:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Architecture Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">behavioral</span></code></p></td>
+<td><p>Implies physical logic, does not compile with RTL tool</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rtl</span></code></p></td>
+<td><p>Implies physical logic, compiles with RTL tools</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">struct</span></code></p></td>
+<td><p>Implies physical connections, but not any logic</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gate</span></code></p></td>
+<td><p>Gate level netlist</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">simulation</span></code></p></td>
+<td><p>Simulation mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testbench</span></code></p></td>
+<td><p>Test bench</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<h3>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Direction of bits in <code class="docutils literal notranslate"><span class="pre">STD_LOGIC_VECTOR</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSIGNED</span></code> and <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code> is always <code class="docutils literal notranslate"><span class="pre">DOWNTO</span></code></p></li>
+<li><p>Size of the vector should be parameterized</p></li>
+<li><p>Usually the least significant bit is numbered as zero</p></li>
+<li><p>Use package <code class="docutils literal notranslate"><span class="pre">numeric_std</span></code> for arithmetic operations</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Never mix these libraries</p>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_arith.</span><span class="k">all</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="processes">
+<h3>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h3>
+<p>Label every process</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">async_process.vhd</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="k">all</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="n">Do</span> <span class="n">something</span> <span class="n">here</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="synchronous-process">
+<h4>Synchronous process<a class="headerlink" href="#synchronous-process" title="Permalink to this headline">¶</a></h4>
+<p>Synchronous process is sensitive only to reset and clock</p>
+<ul class="simple">
+<li><p>Clock event is always to the rising edge</p></li>
+<li><p>All control registers must be initialized in reset</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">sync_process.vhd</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="n">reset</span><span class="p">,</span> <span class="n">clock</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="k">if</span> <span class="n">reset</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">then</span>
+        <span class="n">reset</span> <span class="o">&lt;=</span> <span class="n">assignemts</span><span class="p">;</span>
+    <span class="k">elsif</span> <span class="n">rising_edge</span><span class="p">(</span><span class="n">clock</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">rising_edge_clock</span> <span class="o">&lt;=</span> <span class="n">assigments</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="asynchronous-process">
+<h4>Asynchronous process<a class="headerlink" href="#asynchronous-process" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Include all process input signals in the sensitivity list</p></li>
+<li><p>Complete if-clauses must be used, all cases defined</p></li>
+<li><p>Signals are assigned in every branch</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">async_process.vhd</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="k">all</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="n">async_logic</span> <span class="o">&lt;=</span> <span class="n">assignment</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="naming-conventions">
+<h2>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="constant">
+<h3>Constant<a class="headerlink" href="#constant" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to all constants. The names must be in <strong>capital letter</strong>,are composed as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 53%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Convention</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Generic</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">g_&lt;generic</span> <span class="pre">name&gt;</span></code></p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">g_WIDTH_A</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">g_WIDTH_BYTEENA_A</span></code></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Constant</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">c_&lt;interface</span> <span class="pre">that</span> <span class="pre">constant</span> <span class="pre">apply</span> <span class="pre">to&gt;_&lt;constant</span> <span class="pre">name&gt;</span></code></p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">c_MEM_WORD_SIZE</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">c_PH_UNIT_NUM</span></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="global-signals">
+<h3>Global Signals<a class="headerlink" href="#global-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention must be applied to physical ports of components or function blocks and global variables in <strong>QSYS</strong> components and pin names at top-level. The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;//interface</span> <span class="pre">type//&gt;_&lt;//interface</span> <span class="pre">name//&gt;_&lt;//signal</span> <span class="pre">type//&gt;[_n][_#]</span></code></p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">avs_JetMapping_data</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pad_Ethernet2_reset_n</span></code></p></li>
+</ul>
+<p>Valid Values for Interface Types</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 56%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Apply to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">avs</span></code></p></td>
+<td><p>Avalon-MM Slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">avm</span></code></p></td>
+<td><p>Avalon-MM Maser</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aso</span></code></p></td>
+<td><p>Avalon-ST Source</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">asi</span></code></p></td>
+<td><p>Avalon-ST Sink</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cso</span></code></p></td>
+<td><p>Clock output</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">csi</span></code></p></td>
+<td><p>Clock input</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">coe</span></code></p></td>
+<td><p>Conduit</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">inr</span></code></p></td>
+<td><p>Interrupt receiver</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ins</span></code></p></td>
+<td><p>Interrupt sender</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ncm</span></code></p></td>
+<td><p>Nios II custom instruction master</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ncs</span></code></p></td>
+<td><p>Nios II custom instruction slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rsi</span></code></p></td>
+<td><p>Reset sink</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rso</span></code></p></td>
+<td><p>Reset source</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tcm</span></code></p></td>
+<td><p>Avalon-TC master</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tcs</span></code></p></td>
+<td><p>Avalon-TC slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pad</span></code></p></td>
+<td><p>Physical pad</p></td>
+<td><p>Top-level entity</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ports-signals">
+<h3>Ports Signals<a class="headerlink" href="#ports-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to internal ports (signals across the hierarchy). The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;direction&gt;&lt;//signal</span> <span class="pre">function</span> <span class="pre">type//&gt;_&lt;//signal</span> <span class="pre">name//&gt;[_n][_#]</span></code></p>
+<p>Valid Values for Interface Types</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i]GCK</span></code></p></td>
+<td><p>Global Clock signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iGCK_clk_in_100</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i]GRS</span></code></p></td>
+<td><p>Global Reset signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iGRS_reset_n</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]CLK</span></code></p></td>
+<td><p>Internal Clock signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iCLK_pll_clk_25</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]RST</span></code></p></td>
+<td><p>Internal Reset signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">oRST_enet_reset_n</span><span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]&lt;name&gt;</span></code></p></td>
+<td><p>Synchronous signal(s)</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">i_fsm_data</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">31</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]&lt;name&gt;</span></code></p></td>
+<td><p>Asynchronous signal(s)</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">o_pcie_led_x1</span><span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="local-signals">
+<h3>Local Signals<a class="headerlink" href="#local-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to local signals only. The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">l&lt;//signal</span> <span class="pre">type//&gt;_&lt;//signal</span> <span class="pre">name//&gt;[_n][_#]</span></code></p>
+<p>Valid Values for Interface Types</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 17%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sig</span></code></p></td>
+<td><p>Local signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">lsig_cnt_en</span> <span class="o">:</span> <span class="kt">std_logic</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vec</span></code></p></td>
+<td><p>Local vector</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">unsigned</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">signed</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ary</span></code></p></td>
+<td><p>Local Array</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="n">logic_array</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">1</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span> <span class="n">lary_logics</span> <span class="o">:</span> <span class="n">logic_array</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Local integer</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">signal</span> <span class="n">lint_pixel_pos_cnt</span>  <span class="o">:</span> <span class="kt">integer</span> <span class="k">range</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">var</span></code></p></td>
+<td><p>Local variable</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">lvar_load_new_pix_data_set</span> <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alias">
+<h3>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h3>
+<p>An alias creates an alternative name for an existing object. It does not create a new object. For these reasons no specific naming conventions are established so far.</p>
+<p>Example:</p>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">signal</span> <span class="n">instruction</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">alias</span> <span class="n">opcode</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="k">is</span> <span class="n">instruction</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">12</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ip-reusability">
+<h2>IP Reusability<a class="headerlink" href="#ip-reusability" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The IP specification lists the requirements and details the feature set, performance expectations, size, usage model, etc. Not all design blocks need to be reusable, the specification must state whether a design is being architected as a reusable block.</p></li>
+<li><p>The specification has been officially reviewed by all interested parties. This increases the likelihood that the design block can be reused elsewhere in the company.</p></li>
+<li><p>Existing libraries of components have been reviewed to identify if existing IP with similar functionality already exists, i.e. practice reuse in the development process.</p></li>
+<li><p>The IP core name follows your company’s naming conventions. The name of the core should be description of designs function, e.g. AXI4 Clock Crossing Bridge.</p></li>
+<li><p>Signal and parameter naming conventions are followed. Signal and parameter names should be descriptive of the functionality. This makes it easier for end users to understand the impact of these parameters and signals on the design block.</p></li>
+<li><p>The IP core has default parameter values. Parameters provide the simplest way to create reusable design blocks. IP features, ports and functionality can all be parameterized for maximum flexibility. The default values should be the most common usage model for the design block.</p></li>
+<li><p>The IP uses standard interfaces. Adopt a common interface protocol on all of IP. The use of standard interfaces simplifies the interconnection and management of functional blocks that make up a design. It ensures compatibility between IP blocks from different design teams, simplifies the integration of individual design blocks into a full system design and enables “plug and play” interoperability of IP.</p></li>
+<li><p>The IP core meets the timing specification and all timing violations have been addressed. The IP core includes a full set of timing constraints.</p></li>
+<li><p>The IP passes LINT tests per your company’s established coding rules. It is recommended that you invest in a LINT to enforce coding guidelines and that it is fully integrated with version control/design check in process.</p></li>
+<li><p>The verification of the IP meets the functional, assertion, and line coverage goals as specified in the test plan. Note that the test plan should be developed at the same time as the functional specification for the design.</p></li>
+<li><p>The IP is adequately tested to cover the parameterization space and both expected and unexpected data patterns. Users of IP tend to be suspicious of other peoples design. There’s nothing gained in debugging someone else’s code.</p></li>
+<li><p>Provide a user interface and/or script for end users to instantiate the IP in their design. The interface should make it easy for the user to understand any applicable constraints. At a minimum, the IP should come with a documented command-line script that enables users to pass values to the parameters in the IP. Ideally it should come with a simple graphical user interface (GUI) to help users get started (see Figure 1).</p></li>
+<li><p>Design files and all packaging files adhere to your company’s standard version-control directory structure. If users know where the applicable files are located, it provides the user with confidence that the designer of the IP has thought through the process of reuse.</p></li>
+<li><p>Testbench and reference designs are available for use with the core. This is a “nice to have” feature that provides new users an easy way to get started with a design.</p></li>
+<li><p>IP cores, example designs and test benches can be simulated in company simulators. Users should be able to run the scripts and see the basic functionality of the design.</p></li>
+<li><p>Release notes detail all supported devices, FPGA device families, and versions of the EDA tools used on the design.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="intel_sdc.html" class="btn btn-neutral float-right" title="SDC Constraints" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file.html" class="btn btn-neutral float-left" title="File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

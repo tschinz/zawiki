@@ -39,7 +39,7 @@ Sequence Diagram
     **<color purple>left of</color> <s:red>Alice</strike> Bob**.
    end note
    note over Alice, Bob
-    <w:#FF33FF>This is hosted</w> by <img sourceforge.jpg>
+    <w:#FF33FF>This is hosted</w> by <img img/plantuml-logo.png>
    end note
 
 Use Case Diagram
