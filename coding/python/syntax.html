@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-15-g891d9d9
+                v0.11-16-g7b1747e
               </div>
             
           
@@ -450,112 +450,112 @@
 <h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#general" id="id3">General</a></p>
+<li><p><a class="reference internal" href="#general" id="id2">General</a></p>
 <ul>
-<li><p><a class="reference internal" href="#sourcefile" id="id4">Sourcefile</a></p></li>
-<li><p><a class="reference internal" href="#help-informations" id="id5">Help informations</a></p></li>
+<li><p><a class="reference internal" href="#sourcefile" id="id3">Sourcefile</a></p></li>
+<li><p><a class="reference internal" href="#help-informations" id="id4">Help informations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#import" id="id6">Import</a></p>
+<li><p><a class="reference internal" href="#import" id="id5">Import</a></p>
 <ul>
-<li><p><a class="reference internal" href="#import-module" id="id7">import &lt;module&gt;</a></p></li>
-<li><p><a class="reference internal" href="#from-module-import-function" id="id8">from &lt;module&gt; import &lt;function&gt;</a></p>
+<li><p><a class="reference internal" href="#import-module" id="id6">import &lt;module&gt;</a></p></li>
+<li><p><a class="reference internal" href="#from-module-import-function" id="id7">from &lt;module&gt; import &lt;function&gt;</a></p>
 <ul>
-<li><p><a class="reference internal" href="#example" id="id9">Example</a></p></li>
+<li><p><a class="reference internal" href="#example" id="id8">Example</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#strings-and-numbers" id="id10">Strings and Numbers</a></p>
+<li><p><a class="reference internal" href="#strings-and-numbers" id="id9">Strings and Numbers</a></p>
 <ul>
-<li><p><a class="reference internal" href="#escape-characters" id="id11">Escape Characters</a></p></li>
-<li><p><a class="reference internal" href="#types" id="id12">Types</a></p></li>
+<li><p><a class="reference internal" href="#escape-characters" id="id10">Escape Characters</a></p></li>
+<li><p><a class="reference internal" href="#types" id="id11">Types</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#convertions" id="id13">Convertions</a></p>
+<li><p><a class="reference internal" href="#convertions" id="id12">Convertions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#string-bin-hex-convertions" id="id14">String Bin Hex convertions</a></p></li>
+<li><p><a class="reference internal" href="#string-bin-hex-convertions" id="id13">String Bin Hex convertions</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#string-format-mini-language" id="id15">String Format Mini Language</a></p></li>
-<li><p><a class="reference internal" href="#operator" id="id16">Operator</a></p>
+<li><p><a class="reference internal" href="#string-format-mini-language" id="id14">String Format Mini Language</a></p></li>
+<li><p><a class="reference internal" href="#operator" id="id15">Operator</a></p>
 <ul>
-<li><p><a class="reference internal" href="#priority" id="id17">Priority</a></p></li>
+<li><p><a class="reference internal" href="#priority" id="id16">Priority</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#statement" id="id18">Statement</a></p>
+<li><p><a class="reference internal" href="#statement" id="id17">Statement</a></p>
 <ul>
-<li><p><a class="reference internal" href="#if-elif-else" id="id19">if elif else</a></p></li>
-<li><p><a class="reference internal" href="#while" id="id20">while</a></p></li>
-<li><p><a class="reference internal" href="#for" id="id21">for</a></p></li>
-<li><p><a class="reference internal" href="#break" id="id22">break</a></p></li>
-<li><p><a class="reference internal" href="#continue" id="id23">continue</a></p></li>
-<li><p><a class="reference internal" href="#pass" id="id24">pass</a></p></li>
+<li><p><a class="reference internal" href="#if-elif-else" id="id18">if elif else</a></p></li>
+<li><p><a class="reference internal" href="#while" id="id19">while</a></p></li>
+<li><p><a class="reference internal" href="#for" id="id20">for</a></p></li>
+<li><p><a class="reference internal" href="#break" id="id21">break</a></p></li>
+<li><p><a class="reference internal" href="#continue" id="id22">continue</a></p></li>
+<li><p><a class="reference internal" href="#pass" id="id23">pass</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#functions" id="id25">Functions</a></p>
+<li><p><a class="reference internal" href="#functions" id="id24">Functions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id1" id="id26">General</a></p></li>
-<li><p><a class="reference internal" href="#global-variable" id="id27">Global variable</a></p></li>
-<li><p><a class="reference internal" href="#predefined-arguments" id="id28">Predefined Arguments</a></p></li>
-<li><p><a class="reference internal" href="#keywords-with-param" id="id29">Keywords with param</a></p></li>
-<li><p><a class="reference internal" href="#return" id="id30">Return</a></p></li>
+<li><p><a class="reference internal" href="#general-functions" id="id25">General Functions</a></p></li>
+<li><p><a class="reference internal" href="#global-variable" id="id26">Global variable</a></p></li>
+<li><p><a class="reference internal" href="#predefined-arguments" id="id27">Predefined Arguments</a></p></li>
+<li><p><a class="reference internal" href="#keywords-with-param" id="id28">Keywords with param</a></p></li>
+<li><p><a class="reference internal" href="#return" id="id29">Return</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#modules" id="id31">Modules</a></p>
+<li><p><a class="reference internal" href="#modules" id="id30">Modules</a></p>
 <ul>
-<li><p><a class="reference internal" href="#definition-of-a-module" id="id32">Definition of a Module</a></p></li>
-<li><p><a class="reference internal" href="#usage-of-a-module" id="id33">Usage of a Module</a></p></li>
-<li><p><a class="reference internal" href="#from-import" id="id34">from .. import</a></p></li>
+<li><p><a class="reference internal" href="#definition-of-a-module" id="id31">Definition of a Module</a></p></li>
+<li><p><a class="reference internal" href="#usage-of-a-module" id="id32">Usage of a Module</a></p></li>
+<li><p><a class="reference internal" href="#from-import" id="id33">from .. import</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#data-structures" id="id35">Data structures</a></p>
+<li><p><a class="reference internal" href="#data-structures" id="id34">Data structures</a></p>
 <ul>
-<li><p><a class="reference internal" href="#list" id="id36">List</a></p></li>
-<li><p><a class="reference internal" href="#tuple" id="id37">Tuple</a></p></li>
-<li><p><a class="reference internal" href="#dictionaries" id="id38">Dictionaries</a></p></li>
-<li><p><a class="reference internal" href="#sequence" id="id39">Sequence</a></p></li>
-<li><p><a class="reference internal" href="#references-and-objects" id="id40">References and Objects</a></p></li>
+<li><p><a class="reference internal" href="#list" id="id35">List</a></p></li>
+<li><p><a class="reference internal" href="#tuple" id="id36">Tuple</a></p></li>
+<li><p><a class="reference internal" href="#dictionaries" id="id37">Dictionaries</a></p></li>
+<li><p><a class="reference internal" href="#sequence" id="id38">Sequence</a></p></li>
+<li><p><a class="reference internal" href="#references-and-objects" id="id39">References and Objects</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#oriented-objects-programming" id="id41">Oriented Objects Programming</a></p>
+<li><p><a class="reference internal" href="#oriented-objects-programming" id="id40">Oriented Objects Programming</a></p>
 <ul>
-<li><p><a class="reference internal" href="#init-method" id="id42"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a></p></li>
-<li><p><a class="reference internal" href="#klassen-und-objekt-variablen" id="id43">Klassen und Objekt variablen</a></p></li>
-<li><p><a class="reference internal" href="#inherit" id="id44">inherit</a></p></li>
+<li><p><a class="reference internal" href="#init-method" id="id41"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a></p></li>
+<li><p><a class="reference internal" href="#klassen-und-objekt-variablen" id="id42">Klassen und Objekt variablen</a></p></li>
+<li><p><a class="reference internal" href="#inherit" id="id43">inherit</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#input-output" id="id45">Input &amp; Output</a></p>
+<li><p><a class="reference internal" href="#input-output" id="id44">Input &amp; Output</a></p>
 <ul>
-<li><p><a class="reference internal" href="#file" id="id46">File</a></p></li>
-<li><p><a class="reference internal" href="#freeze-and-unfreeze" id="id47">Freeze and Unfreeze</a></p></li>
+<li><p><a class="reference internal" href="#file" id="id45">File</a></p></li>
+<li><p><a class="reference internal" href="#freeze-and-unfreeze" id="id46">Freeze and Unfreeze</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#exceptions" id="id48">Exceptions</a></p>
+<li><p><a class="reference internal" href="#exceptions" id="id47">Exceptions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#try-except" id="id49"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a></p></li>
-<li><p><a class="reference internal" href="#throw-exception" id="id50">throw exception</a></p></li>
-<li><p><a class="reference internal" href="#try-finally" id="id51"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a></p></li>
+<li><p><a class="reference internal" href="#try-except" id="id48"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a></p></li>
+<li><p><a class="reference internal" href="#throw-exception" id="id49">throw exception</a></p></li>
+<li><p><a class="reference internal" href="#try-finally" id="id50"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#buildin-methods" id="id52">Buildin Methods</a></p>
+<li><p><a class="reference internal" href="#buildin-methods" id="id51">Buildin Methods</a></p>
 <ul>
-<li><p><a class="reference internal" href="#init" id="id53"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#del" id="id54"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#str" id="id55"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#it" id="id56"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#getitem" id="id57"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#len" id="id58"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#init" id="id52"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#del" id="id53"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#str" id="id54"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#it" id="id55"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#getitem" id="id56"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#len" id="id57"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="general">
-<h2><a class="toc-backref" href="#id3">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sourcefile">
-<h3><a class="toc-backref" href="#id4">Sourcefile</a><a class="headerlink" href="#sourcefile" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">sourcefile</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<h3><a class="toc-backref" href="#id3">Sourcefile</a><a class="headerlink" href="#sourcefile" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">sourcefile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="c1"># -*- coding: latin1 -*-</span>
@@ -567,7 +567,7 @@
 </div>
 </div>
 <div class="section" id="help-informations">
-<h3><a class="toc-backref" href="#id5">Help informations</a><a class="headerlink" href="#help-informations" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Help informations</a><a class="headerlink" href="#help-informations" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">command</span> <span class="ow">or</span> <span class="nb">object</span><span class="p">)</span>
 <span class="n">q</span> <span class="o">=&gt;</span> <span class="n">Exit</span> <span class="n">help</span>
 </pre></div>
@@ -575,10 +575,10 @@
 </div>
 </div>
 <div class="section" id="import">
-<h2><a class="toc-backref" href="#id6">Import</a><a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Import</a><a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways to import modules.</p>
 <div class="section" id="import-module">
-<h3><a class="toc-backref" href="#id7">import &lt;module&gt;</a><a class="headerlink" href="#import-module" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">import &lt;module&gt;</a><a class="headerlink" href="#import-module" title="Permalink to this headline">¶</a></h3>
 <p>You import the module. you have to call each time modulname.function to access each function</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;.&lt;</span><span class="n">modulfunction</span><span class="o">&gt;</span>
@@ -586,14 +586,14 @@
 </div>
 </div>
 <div class="section" id="from-module-import-function">
-<h3><a class="toc-backref" href="#id8">from &lt;module&gt; import &lt;function&gt;</a><a class="headerlink" href="#from-module-import-function" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">from &lt;module&gt; import &lt;function&gt;</a><a class="headerlink" href="#from-module-import-function" title="Permalink to this headline">¶</a></h3>
 <p>In the second way you import one one or with * all functions of a module. But if you import the same function of two different modules, or if you import * from two modules which has common function names the interpreter won’t know which one you are calling.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">modulname</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="section" id="example">
-<h4><a class="toc-backref" href="#id9">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id8">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># First way</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
@@ -612,7 +612,7 @@
 </div>
 </div>
 <div class="section" id="strings-and-numbers">
-<h2><a class="toc-backref" href="#id10">Strings and Numbers</a><a class="headerlink" href="#strings-and-numbers" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Strings and Numbers</a><a class="headerlink" href="#strings-and-numbers" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;&#39;</span> <span class="o">=&gt;</span> <span class="n">Spaces</span> <span class="ow">and</span> <span class="n">symbols</span> <span class="n">will</span> <span class="n">be</span> <span class="n">taken</span>
 <span class="s2">&quot;&quot;</span> <span class="o">=&gt;</span> <span class="n">Same</span> <span class="k">as</span> <span class="n">Strings</span> <span class="k">with</span> <span class="s1">&#39;&#39;</span>
 <span class="sd">&#39;&#39;&#39; &#39;&#39;&#39;</span> <span class="ow">or</span> <span class="s2">&quot;&quot;&quot; &quot;&quot;&quot;</span>
@@ -624,7 +624,7 @@
 </pre></div>
 </div>
 <div class="section" id="escape-characters">
-<h3><a class="toc-backref" href="#id11">Escape Characters</a><a class="headerlink" href="#escape-characters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Escape Characters</a><a class="headerlink" href="#escape-characters" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>\<span class="s1">&#39;                  # = &#39;</span>
 \<span class="s2">&quot;                  # = &quot;</span>
 \\                  <span class="c1"># = \</span>
@@ -635,7 +635,7 @@
 </div>
 </div>
 <div class="section" id="types">
-<h3><a class="toc-backref" href="#id12">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -664,7 +664,7 @@
 </div>
 </div>
 <div class="section" id="convertions">
-<h2><a class="toc-backref" href="#id13">Convertions</a><a class="headerlink" href="#convertions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Convertions</a><a class="headerlink" href="#convertions" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">()</span>               <span class="c1"># to int</span>
 <span class="nb">float</span><span class="p">()</span>             <span class="c1"># to float</span>
 <span class="nb">complex</span><span class="p">()</span>           <span class="c1"># to complex</span>
@@ -675,7 +675,7 @@
 </pre></div>
 </div>
 <div class="section" id="string-bin-hex-convertions">
-<h3><a class="toc-backref" href="#id14">String Bin Hex convertions</a><a class="headerlink" href="#string-bin-hex-convertions" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">String Bin Hex convertions</a><a class="headerlink" href="#string-bin-hex-convertions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hex_bin</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">unhexlify</span><span class="p">(</span><span class="n">hex_string</span><span class="p">)</span>
 <span class="n">hex_string</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">hex_bin</span><span class="p">)</span>
 
@@ -713,7 +713,7 @@
 </div>
 </div>
 <div class="section" id="string-format-mini-language">
-<h2><a class="toc-backref" href="#id15">String Format Mini Language</a><a class="headerlink" href="#string-format-mini-language" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">String Format Mini Language</a><a class="headerlink" href="#string-format-mini-language" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">format_spec</span> <span class="p">::</span><span class="o">=</span>  <span class="p">[[</span><span class="n">fill</span><span class="p">]</span><span class="n">align</span><span class="p">][</span><span class="n">sign</span><span class="p">][</span><span class="c1">#][0][width][,][.precision][type]</span>
 <span class="n">fill</span>        <span class="p">::</span><span class="o">=</span>  <span class="o">&lt;</span><span class="nb">any</span> <span class="n">character</span><span class="o">&gt;</span>
 <span class="n">align</span>       <span class="p">::</span><span class="o">=</span>  <span class="s2">&quot;&lt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;&gt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;=&quot;</span> <span class="o">|</span> <span class="s2">&quot;^&quot;</span>
@@ -768,7 +768,7 @@ arg_name                                                 \
 </div>
 </div>
 <div class="section" id="operator">
-<h2><a class="toc-backref" href="#id16">Operator</a><a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Operator</a><a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+                   # Plus         3 + 5 = 8 &#39;a&#39; + &#39;b&#39; = &#39;ab&#39;
 -                   # Minus        -5.2 order 5 - 2
 *                   # Multiplcation 2 * 3 = 6
@@ -794,7 +794,7 @@ or                  # log OR
 </pre></div>
 </div>
 <div class="section" id="priority">
-<h3><a class="toc-backref" href="#id17">Priority</a><a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">Priority</a><a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
 <p>A Line will be evaluated from left to right</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## High priority</span>
 <span class="k">lambda</span>              <span class="c1"># lambda function</span>
@@ -827,9 +827,9 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="statement">
-<h2><a class="toc-backref" href="#id18">Statement</a><a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Statement</a><a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="if-elif-else">
-<h3><a class="toc-backref" href="#id19">if elif else</a><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">if elif else</a><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
 <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">zahl</span><span class="p">:</span>
@@ -842,7 +842,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="while">
-<h3><a class="toc-backref" href="#id20">while</a><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">while</a><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
 <span class="n">nostop</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">while</span> <span class="n">nostop</span><span class="p">:</span>
@@ -860,7 +860,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="for">
-<h3><a class="toc-backref" href="#id21">for</a><a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">for</a><a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span> <span class="n">i</span>
 <span class="k">else</span><span class="p">:</span>
@@ -869,7 +869,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="break">
-<h3><a class="toc-backref" href="#id22">break</a><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">break</a><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something: &#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
@@ -879,7 +879,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="continue">
-<h3><a class="toc-backref" href="#id23">continue</a><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">continue</a><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h3>
 <p>continue use for <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something: &#39;</span><span class="p">)</span>
@@ -893,7 +893,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="pass">
-<h3><a class="toc-backref" href="#id24">pass</a><a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">pass</a><a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># pass is used to create an empty block</span>
 <span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
     <span class="k">pass</span>
@@ -902,9 +902,9 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="functions">
-<h2><a class="toc-backref" href="#id25">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><a class="toc-backref" href="#id26">General</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id24">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-functions">
+<h3><a class="toc-backref" href="#id25">General Functions</a><a class="headerlink" href="#general-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="nb">print</span> <span class="s1">&#39;hello cruel world!&#39;</span>
 <span class="c1"># End of function</span>
@@ -923,7 +923,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="global-variable">
-<h3><a class="toc-backref" href="#id27">Global variable</a><a class="headerlink" href="#global-variable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">Global variable</a><a class="headerlink" href="#global-variable" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">x</span>
     <span class="nb">print</span> <span class="s1">&#39;x ist&#39;</span><span class="p">,</span> <span class="n">x</span>
@@ -936,7 +936,7 @@ or                  # log OR
 </div>
 </div>
 <div class="section" id="predefined-arguments">
-<h3><a class="toc-backref" href="#id28">Predefined Arguments</a><a class="headerlink" href="#predefined-arguments" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">Predefined Arguments</a><a class="headerlink" href="#predefined-arguments" title="Permalink to this headline">¶</a></h3>
 <p>If a function parameter is not given, the default value will be used.
 All parameter with default values need to be at the end of the parameter list.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sag</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">loops</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
@@ -947,7 +947,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="keywords-with-param">
-<h3><a class="toc-backref" href="#id29">Keywords with param</a><a class="headerlink" href="#keywords-with-param" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28">Keywords with param</a><a class="headerlink" href="#keywords-with-param" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span> <span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;and c is&#39;</span><span class="p">,</span> <span class="n">c</span>
 <span class="n">func</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
@@ -957,7 +957,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="return">
-<h3><a class="toc-backref" href="#id30">Return</a><a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">Return</a><a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">x</span>
@@ -969,9 +969,9 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="modules">
-<h2><a class="toc-backref" href="#id31">Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id30">Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="definition-of-a-module">
-<h3><a class="toc-backref" href="#id32">Definition of a Module</a><a class="headerlink" href="#definition-of-a-module" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id31">Definition of a Module</a><a class="headerlink" href="#definition-of-a-module" title="Permalink to this headline">¶</a></h3>
 <p>Everything in Python is a module (almost)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
     <span class="nb">print</span> <span class="s1">&#39;Hello, this is a module&#39;</span>
@@ -980,7 +980,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="usage-of-a-module">
-<h3><a class="toc-backref" href="#id33">Usage of a Module</a><a class="headerlink" href="#usage-of-a-module" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32">Usage of a Module</a><a class="headerlink" href="#usage-of-a-module" title="Permalink to this headline">¶</a></h3>
 <p>The Module need to be in the same folder</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">myModule</span>
 <span class="n">myModule</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
@@ -989,7 +989,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="from-import">
-<h3><a class="toc-backref" href="#id34">from .. import</a><a class="headerlink" href="#from-import" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">from .. import</a><a class="headerlink" href="#from-import" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="n">hello</span><span class="p">,</span> <span class="n">version</span>
 <span class="c1"># OR:</span>
 <span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1000,9 +1000,9 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="data-structures">
-<h2><a class="toc-backref" href="#id35">Data structures</a><a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id34">Data structures</a><a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="list">
-<h3><a class="toc-backref" href="#id36">List</a><a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id35">List</a><a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a list</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
 <span class="nb">print</span> <span class="s1">&#39;I have &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="s1">&#39; to buy.&#39;</span>
@@ -1027,7 +1027,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="tuple">
-<h3><a class="toc-backref" href="#id37">Tuple</a><a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36">Tuple</a><a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Wolf&#39;</span><span class="p">,</span> <span class="s1">&#39;Elefant&#39;</span><span class="p">,</span> <span class="s1">&#39;Pinguin&#39;</span><span class="p">)</span>
 <span class="nb">print</span> <span class="s1">&#39;The number of animals in the Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">zoo</span><span class="p">)</span>
 <span class="n">new_zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ape&#39;</span><span class="p">,</span> <span class="s1">&#39;Delfin&#39;</span><span class="p">,</span> <span class="n">zoo</span><span class="p">)</span>
@@ -1039,7 +1039,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="dictionaries">
-<h3><a class="toc-backref" href="#id38">Dictionaries</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37">Dictionaries</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ab</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Swaroop&#39;</span>   <span class="p">:</span> <span class="s1">&#39;swaroopch@byteofpython.info&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Larry&#39;</span>     <span class="p">:</span> <span class="s1">&#39;larry@wall.org&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Matsumoto&#39;</span> <span class="p">:</span> <span class="s1">&#39;matz@ruby-lang.org&#39;</span><span class="p">,</span>
@@ -1059,7 +1059,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="sequence">
-<h3><a class="toc-backref" href="#id39">Sequence</a><a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id38">Sequence</a><a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
 <span class="c1"># Index</span>
 <span class="nb">print</span> <span class="s1">&#39;Pos 0 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># Book</span>
@@ -1083,7 +1083,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="references-and-objects">
-<h3><a class="toc-backref" href="#id40">References and Objects</a><a class="headerlink" href="#references-and-objects" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">References and Objects</a><a class="headerlink" href="#references-and-objects" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
 <span class="n">mylist</span> <span class="o">=</span> <span class="nb">list</span>
 </pre></div>
@@ -1107,10 +1107,10 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="oriented-objects-programming">
-<h2><a class="toc-backref" href="#id41">Oriented Objects Programming</a><a class="headerlink" href="#oriented-objects-programming" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id40">Oriented Objects Programming</a><a class="headerlink" href="#oriented-objects-programming" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">self</span></code> == <code class="docutils literal notranslate"><span class="pre">this</span></code> == addr des Objektes</p>
 <div class="section" id="init-method">
-<h3><a class="toc-backref" href="#id42"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a><a class="headerlink" href="#init-method" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41"><code class="docutils literal notranslate"><span class="pre">__init__</span></code>-Method</a><a class="headerlink" href="#init-method" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
@@ -1124,7 +1124,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="klassen-und-objekt-variablen">
-<h3><a class="toc-backref" href="#id43">Klassen und Objekt variablen</a><a class="headerlink" href="#klassen-und-objekt-variablen" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">Klassen und Objekt variablen</a><a class="headerlink" href="#klassen-und-objekt-variablen" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;Stellt eine Person dar.&#39;&#39;&#39;</span>
     <span class="n">bevoelkerung</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1163,7 +1163,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </ul>
 </div>
 <div class="section" id="inherit">
-<h3><a class="toc-backref" href="#id44">inherit</a><a class="headerlink" href="#inherit" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id43">inherit</a><a class="headerlink" href="#inherit" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SchulMitglied</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;Repraesentiert ein beliebiges Mitglied der Hochschule.&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">):</span>
@@ -1201,9 +1201,9 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="input-output">
-<h2><a class="toc-backref" href="#id45">Input &amp; Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id44">Input &amp; Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="file">
-<h3><a class="toc-backref" href="#id46">File</a><a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id45">File</a><a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;sein oder nicht sein&#39;</span>
 
 <span class="c1"># Write</span>
@@ -1223,7 +1223,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="freeze-and-unfreeze">
-<h3><a class="toc-backref" href="#id47">Freeze and Unfreeze</a><a class="headerlink" href="#freeze-and-unfreeze" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id46">Freeze and Unfreeze</a><a class="headerlink" href="#freeze-and-unfreeze" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cPickle</span> <span class="k">as</span> <span class="nn">p</span>
 <span class="c1"># Datei, in der das Objekt speichert wird</span>
 <span class="n">einkaufsdatei</span> <span class="o">=</span> <span class="s1">&#39;einkaufsliste.data&#39;</span>
@@ -1247,9 +1247,9 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="exceptions">
-<h2><a class="toc-backref" href="#id48">Exceptions</a><a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id47">Exceptions</a><a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="try-except">
-<h3><a class="toc-backref" href="#id49"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a><a class="headerlink" href="#try-except" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id48"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">except</span></code></a><a class="headerlink" href="#try-except" title="Permalink to this headline">¶</a></h3>
 <p>Each <code class="docutils literal notranslate"><span class="pre">try</span></code> needs to have at least one <code class="docutils literal notranslate"><span class="pre">except</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Geben Sie etwas ein --&gt; &#39;</span><span class="p">)</span>
@@ -1263,7 +1263,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="throw-exception">
-<h3><a class="toc-backref" href="#id50">throw exception</a><a class="headerlink" href="#throw-exception" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">throw exception</a><a class="headerlink" href="#throw-exception" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">KurzeEingabeAusnahme</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Eine benutzerdefinierte Ausnahmeklasse.&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">laenge</span><span class="p">,</span> <span class="n">mindestens</span><span class="p">):</span>
@@ -1286,7 +1286,7 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="try-finally">
-<h3><a class="toc-backref" href="#id51"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a><a class="headerlink" href="#try-finally" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id50"><code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">..</span> <span class="pre">finally</span></code></a><a class="headerlink" href="#try-finally" title="Permalink to this headline">¶</a></h3>
 <p>If an exception is raised in the program, e.g. <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code> Keyboard interrupt, the finally clause is raised before the program is closed</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 <span class="k">try</span><span class="p">:</span>
@@ -1305,44 +1305,44 @@ All parameter with default values need to be at the end of the parameter list.</
 </div>
 </div>
 <div class="section" id="buildin-methods">
-<h2><a class="toc-backref" href="#id52">Buildin Methods</a><a class="headerlink" href="#buildin-methods" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id51">Buildin Methods</a><a class="headerlink" href="#buildin-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="init">
-<h3><a class="toc-backref" href="#id53"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a><a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id52"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a><a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
 <p>Is executed before an object is returned</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="del">
-<h3><a class="toc-backref" href="#id54"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a><a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id53"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a><a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h3>
 <p>Is called before an object is destroyed</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="str">
-<h3><a class="toc-backref" href="#id55"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id54"><code class="docutils literal notranslate"><span class="pre">__str__()</span></code></a><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
 <p>Is called if print or str() is used</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="it">
-<h3><a class="toc-backref" href="#id56"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a><a class="headerlink" href="#it" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id55"><code class="docutils literal notranslate"><span class="pre">__it__()</span></code></a><a class="headerlink" href="#it" title="Permalink to this headline">¶</a></h3>
 <p>Is called if <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> is used <code class="docutils literal notranslate"><span class="pre">lt</span> <span class="pre">==</span> <span class="pre">less</span> <span class="pre">than</span></code> There are also such methods for other operators</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__it__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="getitem">
-<h3><a class="toc-backref" href="#id57"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a><a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id56"><code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code></a><a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
 <p>Is called if an indexing operator is used <code class="docutils literal notranslate"><span class="pre">x[key]</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="len">
-<h3><a class="toc-backref" href="#id58"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a><a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id57"><code class="docutils literal notranslate"><span class="pre">__len__()</span></code></a><a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
 <p>Is called if the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function is used</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
