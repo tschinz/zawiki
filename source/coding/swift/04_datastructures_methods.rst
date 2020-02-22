@@ -142,8 +142,8 @@ A Method from a superclass can be override wiwth the keyword
 
 .. _final-1:
 
-``final``
----------
+``final()``
+-----------
 
 With ``Final`` a ``func``\ or ``class`` can't be override. It will be
 the end of the line.

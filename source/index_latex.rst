@@ -30,7 +30,6 @@
    coding/ros/index
    coding/swift/index
    coding/licenses/index
-   coding/fileheaders
 
    writing/latex/index
    writing/rst/index

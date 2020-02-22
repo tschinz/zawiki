@@ -370,8 +370,8 @@ pass
 Functions
 =========
 
-General
--------
+General Functions
+-----------------
 
 .. code-block:: python
 

@@ -4,7 +4,7 @@ Make
 
 .. figure:: img/logo.*
    :align: center
-   a:lt: Logo
+   :alt: Logo
    :width: 300px
 
 .. toctree::
