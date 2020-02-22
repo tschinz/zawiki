@@ -239,4 +239,9 @@ rst_epilog = """
 .. |linux| image:: /img/icons/linux.*
 .. |mac| image:: /img/icons/apple.*
 .. |win| image:: /img/icons/windows.*
+
+.. |word| image:: /img/icons/word.*
+.. |excel| image:: /img/icons/excel.*
+.. |onenote| image:: /img/icons/onenote.*
+.. |outlook| image:: /img/icons/outlook.*
 """

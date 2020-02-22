@@ -2,9 +2,6 @@
 Linux
 =====
 
-Linux
-=====
-
 .. figure:: img/logo.*
    :align: center
    :width: 150px

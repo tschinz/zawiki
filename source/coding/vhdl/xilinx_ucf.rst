@@ -2,6 +2,10 @@
 Xilinx UCF Constraints
 ======================
 
+.. figure:: img/xilinx.*
+   :align: center
+   :width: 150px
+
 .. contents:: :local:
 
 How to Guide

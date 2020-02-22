@@ -2,6 +2,10 @@
 SDC Constraints
 ===============
 
+.. figure:: img/intel_fpga.*
+   :align: center
+   :width: 150px
+
 * :pdfviewer:`Intel SDC Constraint Manual <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/intel_sdc_manual.pdf>`
 
 Comment

@@ -303,3 +303,50 @@ For having a stable system first you need a proper reset. Just using an input as
      end process;
      rst <= not lvec_rst_n(2);
    END ARCHITECTURE rtl;
+
+Pseudo Random Number Generator
+==============================
+
+.. seealso::
+
+   :config_repo:`config repo blink <tree/master/scripts/vhdl/prng>`
+
+This VHDL module uses 2 Linear Feedback Shift Registers (LFSR) with polynomials for maximal sequence length, one of which is scalable to output word size (``4bit`` - ``24bit``) and one to operate as a non-uniform duty cycle clock. The module gives the user 4 options for output distribution types, Gaussian unimodal, bimodal, uniform, and non-uniform distributions. These distributions are created by altering a scalable LFSR output by clocking the output irregularly with a non-uniform clock, shifting scaled outputs into a buffer-adder-tree to effectively use the central limit theorem to create a normal distribution, and a feedback loop to further shape the distributions. Sample histograms are included in the figures following.
+The prng.vhd module is verified in a test bench by writing out the pseudo-random values to a file. This data can be entered into one’s favorite statistical analysis software package for verification.
+
+Background
+----------
+
+The LFSR is a shift register of arbitrary length that takes its input based off a linear function derived from the previous state. This function is chosen to provide a maximally long sequence. As the output-width is scaled, a different LFSR is built with a polynomial to provide maximal length. The polynomials used are commented in the VHDL module.
+
+Generics
+--------
+
++--------------+---------+-----------------------+----------------------------------------------+
+| Generic      | Type    | Range                 | Description                                  |
++==============+=========+=======================+==============================================+
+| ``g_W``      | Integer | ``28`` - ``4``        | Number of output vector bits                 |
++--------------+---------+-----------------------+----------------------------------------------+
+| ``g_V``      | Integer | ``24`` - ``18``       | Non uniforming clocking bits                 |
++--------------+---------+-----------------------+----------------------------------------------+
+| ``g_G_TYPE`` | Integer | | ``0`` = uniform     | Gaussion Distribution Type for ``o_g_noise`` |
+|              |         | | ``1`` = bimodal     |                                              |
++--------------+---------+-----------------------+----------------------------------------------+
+| ``g_U_TYPE`` | Integer | | ``0`` = uniform     | Uniform Distribution Type for ``o_u_noise``  |
+|              |         | | ``1`` = ave-uniform |                                              |
++--------------+---------+-----------------------+----------------------------------------------+
+
++-------------------+----------------+-----------------------------+
+| Signal            | Size           | Description                 |
++===================+================+=============================+
+| ``iCLK_clk``      | ``1``          | input clock signal          |
++-------------------+----------------+-----------------------------+
+| ``iGRS_reset_n``  | ``1``          | input reset signal          |
++-------------------+----------------+-----------------------------+
+| ``i_enable``      | ``1``          | enable prn generation       |
++-------------------+----------------+-----------------------------+
+| ``o_g_noise``     | ``[g_W-1:0]``  | gaussian distibution output |
++-------------------+----------------+-----------------------------+
+| ``o_u_noise``     | ``[g_W-1:0]``  | uniform distribution output |
++-------------------+----------------+-----------------------------+
+

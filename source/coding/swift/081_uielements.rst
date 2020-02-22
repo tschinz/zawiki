@@ -239,9 +239,9 @@ Multi-dimensional Tables
 Usually done via a ``UINavigationController`` with multiple MVC's where
 View is ``UITableView``.
 
-.. |UITableView Plain| image:: uitableview_plain.png
+.. |UITableView Plain| image:: img/uitableview_plain.png
 
-.. |UITableView Grouped| image:: uitableview_grouped.gif
+.. |UITableView Grouped| image:: img/uitableview_grouped.gif
 
-.. |image2| image:: uitablecell_types.png
+.. |image2| image:: img/uitablecell_types.png
 

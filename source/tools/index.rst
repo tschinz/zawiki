@@ -32,8 +32,8 @@ Commandline
   * `Cmder <https://cmder.net/>`_ |win|
   * nmap :doc:`Wiki </tools/nmap/index>`
 
-Managment
-=========
+Management
+==========
 
   * `Total Commander <http://www.ghisler.com/>`_ |win|
   * `Krusader <http://www.krusader.org/>`_ |linux|

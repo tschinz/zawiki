@@ -46,7 +46,8 @@ Alignment
 ---------
 
 .. code-block:: json
-   :caption: alignemnt settings§
+   :caption: alignemnt settings
+
    {
        // The mid-line characters to align in a multi-line selection, changing
        // this to an empty array will disable mid-line alignment

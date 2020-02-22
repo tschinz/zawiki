@@ -7,7 +7,7 @@ Conversion
 Overview
 ========
 
-.. figure:: /img/sm_conversion.*
+.. figure:: img/sm_conversion.*
    :align: center
    :width: 600px
 
