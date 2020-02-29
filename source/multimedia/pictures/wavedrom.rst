@@ -2,10 +2,11 @@
 Wavedrom
 ========
 
-
-.. figure:: img/wavedrom-logo.*
+.. figure:: img/wavedrom.*
    :align: center
    :width: 150px
+
+* :pdfviewer:`Wavedrom Paper <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/SNUG2016_WaveDrom.pdf>`
 
 Timing Diagrams
 ===============

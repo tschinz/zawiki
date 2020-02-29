@@ -3,9 +3,9 @@ PlantUml
 ========
 
 
-.. figure:: img/plantuml-logo.*
+.. figure:: img/plantuml.*
    :align: center
-   :width: 300px
+   :width: 150px
 
 .. contents:: :local:
 
