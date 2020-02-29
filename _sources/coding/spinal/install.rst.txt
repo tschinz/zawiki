@@ -14,7 +14,7 @@ The following tools are needed:
 Linux
 =====
 
-For Linux there is also a complete :config_repo:`install-spinal.bash <blob/master/scripts/shell/install-spinal.bash>` script available.
+For Linux there is also a complete :config_repo:`install-spinal.bash <blob/master/scripts/spinal/install-spinal.bash>` script available.
 
 .. code-block:: bash
 
@@ -66,6 +66,18 @@ Hardware Debug Tools Linux
 .. code-block:: bash
 
    sudo apt-get install -y openocd
+
+RiscV Development Tools
+-----------------------
+
+.. code-block:: bash
+
+    wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+    tar -xzvf riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+    sudo mv riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6
+    sudo mv /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv
+    echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.bashrc
+    echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.zshrc
 
 Optional Dev Tools Linux
 ------------------------
@@ -132,4 +144,4 @@ Simulation Windows
 Hardware Debug Tools Windows
 ----------------------------
 
-* Install `OpenOCB <http://www.freddiechopin.info/en/download/category/4-openocd>`_ for JTAG debugging.
+* Install `OpenOCD <http://www.freddiechopin.info/en/download/category/4-openocd>`_ for JTAG debugging.

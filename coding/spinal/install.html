@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-16-g7b1747e
+                v0.11-17-ge22e059
               </div>
             
           
@@ -346,6 +346,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/graphviz.html">Graphviz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
@@ -457,15 +458,16 @@
 <li><p><a class="reference internal" href="#ide-linux" id="id5">IDE Linux</a></p></li>
 <li><p><a class="reference internal" href="#simulation-linux" id="id6">Simulation Linux</a></p></li>
 <li><p><a class="reference internal" href="#hardware-debug-tools-linux" id="id7">Hardware Debug Tools Linux</a></p></li>
-<li><p><a class="reference internal" href="#optional-dev-tools-linux" id="id8">Optional Dev Tools Linux</a></p></li>
+<li><p><a class="reference internal" href="#riscv-development-tools" id="id8">RiscV Development Tools</a></p></li>
+<li><p><a class="reference internal" href="#optional-dev-tools-linux" id="id9">Optional Dev Tools Linux</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#windows" id="id9">Windows</a></p>
+<li><p><a class="reference internal" href="#windows" id="id10">Windows</a></p>
 <ul>
-<li><p><a class="reference internal" href="#base-tools-windows" id="id10">Base Tools Windows</a></p></li>
-<li><p><a class="reference internal" href="#ide-windows" id="id11">IDE Windows</a></p></li>
-<li><p><a class="reference internal" href="#simulation-windows" id="id12">Simulation Windows</a></p></li>
-<li><p><a class="reference internal" href="#hardware-debug-tools-windows" id="id13">Hardware Debug Tools Windows</a></p></li>
+<li><p><a class="reference internal" href="#base-tools-windows" id="id11">Base Tools Windows</a></p></li>
+<li><p><a class="reference internal" href="#ide-windows" id="id12">IDE Windows</a></p></li>
+<li><p><a class="reference internal" href="#simulation-windows" id="id13">Simulation Windows</a></p></li>
+<li><p><a class="reference internal" href="#hardware-debug-tools-windows" id="id14">Hardware Debug Tools Windows</a></p></li>
 </ul>
 </li>
 </ul>
@@ -480,7 +482,7 @@
 </div>
 <div class="section" id="linux">
 <h2><a class="toc-backref" href="#id3">Linux</a><a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
-<p>For Linux there is also a complete <a class="reference external" href="https://github.com/tschinz/config/blob/master/scripts/shell/install-spinal.bash">install-spinal.bash</a> script available.</p>
+<p>For Linux there is also a complete <a class="reference external" href="https://github.com/tschinz/config/blob/master/scripts/spinal/install-spinal.bash">install-spinal.bash</a> script available.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x install-spinal.bash
 ./install-spinal.bash
 </pre></div>
@@ -541,8 +543,19 @@ sudo apt-get install -y gtkwave
 </pre></div>
 </div>
 </div>
+<div class="section" id="riscv-development-tools">
+<h3><a class="toc-backref" href="#id8">RiscV Development Tools</a><a class="headerlink" href="#riscv-development-tools" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+tar -xzvf riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+sudo mv riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6
+sudo mv /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=/opt/riscv/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=/opt/riscv/bin:$PATH&#39;</span> &gt;&gt; ~/.zshrc
+</pre></div>
+</div>
+</div>
 <div class="section" id="optional-dev-tools-linux">
-<h3><a class="toc-backref" href="#id8">Optional Dev Tools Linux</a><a class="headerlink" href="#optional-dev-tools-linux" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Optional Dev Tools Linux</a><a class="headerlink" href="#optional-dev-tools-linux" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -581,16 +594,16 @@ sudo apt-get install -y fsearch-trunk
 </div>
 </div>
 <div class="section" id="windows">
-<h2><a class="toc-backref" href="#id9">Windows</a><a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Windows</a><a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="base-tools-windows">
-<h3><a class="toc-backref" href="#id10">Base Tools Windows</a><a class="headerlink" href="#base-tools-windows" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Base Tools Windows</a><a class="headerlink" href="#base-tools-windows" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Install <a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a></p></li>
 <li><p>Install <a class="reference external" href="https://www.scala-sbt.org/download.html">Scala Build Tool SBT</a></p></li>
 </ul>
 </div>
 <div class="section" id="ide-windows">
-<h3><a class="toc-backref" href="#id11">IDE Windows</a><a class="headerlink" href="#ide-windows" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">IDE Windows</a><a class="headerlink" href="#ide-windows" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Install <a class="reference external" href="https://www.jetbrains.com/idea/download/">IntelliJ IDEA</a></dt><dd><ul>
@@ -603,7 +616,7 @@ sudo apt-get install -y fsearch-trunk
 </ul>
 </div>
 <div class="section" id="simulation-windows">
-<h3><a class="toc-backref" href="#id12">Simulation Windows</a><a class="headerlink" href="#simulation-windows" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Simulation Windows</a><a class="headerlink" href="#simulation-windows" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>Install <a class="reference external" href="https://www.msys2.org/">MSYS2 64bit</a></p></li>
 <li><p>Install verilator from minGW packet manager</p>
@@ -634,9 +647,9 @@ pacman -S mingw-w64-x86_64-verilator
 </ul>
 </div>
 <div class="section" id="hardware-debug-tools-windows">
-<h3><a class="toc-backref" href="#id13">Hardware Debug Tools Windows</a><a class="headerlink" href="#hardware-debug-tools-windows" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">Hardware Debug Tools Windows</a><a class="headerlink" href="#hardware-debug-tools-windows" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Install <a class="reference external" href="http://www.freddiechopin.info/en/download/category/4-openocd">OpenOCB</a> for JTAG debugging.</p></li>
+<li><p>Install <a class="reference external" href="http://www.freddiechopin.info/en/download/category/4-openocd">OpenOCD</a> for JTAG debugging.</p></li>
 </ul>
 </div>
 </div>

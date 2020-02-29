@@ -16,6 +16,13 @@ Some SpinalHDL helppages
 * :pdfviewer:`Cheatsheet Spinal HDL Presentation Fast <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/presentation_fast.pdf>`
 * :pdfviewer:`Cheatsheet Spinal HDL Presentation Very Fast <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/presentation_veryfast.pdf>`
 
+Spinal Projects
+===============
+* `SaxonSoC (RiscV Framework) <https://github.com/SpinalHDL/SaxonSoc>`_
+* `Spinal HDL Core and Lib <https://github.com/SpinalHDL/SpinalHDL>`_
+* `Spinal Workshop <https://github.com/SpinalHDL/SpinalWorkshop>`_
+* `Vex RiscV Processor <https://github.com/SpinalHDL/VexRiscv>`_
+
 Community
 =========
 
