@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Types &mdash; Zawiki</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/default.js"></script>
+        <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tools" href="tools/index.html" />
+    <link rel="prev" title="Project Files" href="project.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zawiki
+          
+
+          
+            
+            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.11-19-g29c15da
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Operating Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#change-password">Change Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Coding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/guidelines.html">Programming Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc_theory.html">SDC Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc_usage.html">SDC Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/osvvm.html">OSVVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/simulation.html">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/synthesis.html">RTL Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Spinal HDL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Project Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/gtkwave.html">GtkWave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/intellij_idea.html">Intellij IDEA IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../swift/index.html">Swift</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../swift/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/01_basics.html">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/02_mvc.html">Programming Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/03_properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/05_controlflow.html">Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/06_multithreading.html">Multithreading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/07_nsclasses.html">NS Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/081_uielements.html">UI Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/08_views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swift/09_other.html">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Writing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Else</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/graphviz.html">Graphviz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zawiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Spinal HDL</a> &raquo;</li>
+        
+      <li>Data Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/spinal/types.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-types">
+<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#spinal" id="id1">Spinal</a></p>
+<ul>
+<li><p><a class="reference internal" href="#bool" id="id2">Bool</a></p></li>
+<li><p><a class="reference internal" href="#bits" id="id3">Bits</a></p></li>
+<li><p><a class="reference internal" href="#uint-sint" id="id4">UInt &amp; SInt</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#scala" id="id5">Scala</a></p></li>
+<li><p><a class="reference internal" href="#conversions" id="id6">Conversions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#spinal-spinal" id="id7">Spinal &lt;-&gt; Spinal</a></p></li>
+<li><p><a class="reference internal" href="#scala-scala" id="id8">Scala &lt;-&gt; Scala</a></p></li>
+<li><p><a class="reference internal" href="#scala-spinal" id="id9">Scala &lt;- Spinal</a></p></li>
+<li><p><a class="reference internal" href="#spinal-scala" id="id10">Spinal &lt;- Scala</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#input-outputs" id="id11">Input &amp; Outputs</a></p></li>
+<li><p><a class="reference internal" href="#internal-signals" id="id12">Internal Signals</a></p></li>
+</ul>
+</div>
+<div class="section" id="spinal">
+<h2><a class="toc-backref" href="#id1">Spinal</a><a class="headerlink" href="#spinal" title="Permalink to this headline">¶</a></h2>
+<p>The language provides 5 base types and 2 composite types that can be used.</p>
+<ul class="simple">
+<li><p>Base types: Bool , Bits , UInt for unsigned integers, SInt for signed integers and Enum.</p></li>
+<li><p>Composite types: Bundle and Vec.</p></li>
+</ul>
+<div class="graphviz"><img src="../../_images/graphviz-261d859fcb730d5b1466302d9b0e5ceb2b504312.png" alt="digraph spinal_datatypes {
+  rankdir=&quot;BT&quot;
+
+  node [shape=box]; Bundle; Vec; Enum; Bool; Bits; UInt; SInt
+  node [shape=box, style=dashed]; Data; BaseType; BitVector
+  BaseType -&gt; Data [arrowhead=onormal];
+  Bundle -&gt; Data [arrowhead=onormal];
+  Vec -&gt; Data [arrowhead=onormal];
+  Enum -&gt; BaseType [arrowhead=onormal];
+  Bool -&gt; BaseType [arrowhead=onormal];
+  BitVector -&gt; BaseType [arrowhead=onormal];
+  Bits -&gt; BitVector [arrowhead=onormal];
+  UInt -&gt; BitVector [arrowhead=onormal];
+  SInt -&gt; BitVector [arrowhead=onormal];
+}" class="graphviz" /></div>
+<div class="section" id="bool">
+<h3><a class="toc-backref" href="#id2">Bool</a><a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h3>
+<p>Spinal Bool as <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Bool</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span>
+
+<span class="c1">// Assignments</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">False</span>
+
+<span class="c1">// Operators</span>
+<span class="o">!</span><span class="n">x</span>            <span class="c1">// not</span>
+<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>         <span class="c1">// and</span>
+<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>         <span class="c1">// or</span>
+<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>         <span class="c1">// xor</span>
+<span class="n">x</span> <span class="o">#</span><span class="k">#</span> <span class="n">y</span>        <span class="c1">// concatenate x is high xy is low</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span>
+<span class="n">x</span><span class="o">.</span><span class="n">setWhen</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clearWhen</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span>
+
+<span class="c1">// Edge detection</span>
+<span class="n">x</span><span class="o">.</span><span class="n">edge</span>          <span class="c1">// True if state change</span>
+<span class="n">x</span><span class="o">.</span><span class="n">rise</span>          <span class="c1">// True if rising edge</span>
+<span class="n">x</span><span class="o">.</span><span class="n">fall</span>          <span class="c1">// True if falling edge</span>
+<span class="n">x</span><span class="o">.</span><span class="n">edges</span>         <span class="c1">// returns a bundle (rise, fall, toggle)</span>
+
+<span class="n">x</span> <span class="o">===</span> <span class="n">y</span>         <span class="c1">// comparison True equality</span>
+<span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>         <span class="c1">// comparison True Inequality</span>
+
+<span class="c1">// Typecast</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Bits(w(x) bits)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// UInt(w(x) bits)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span><span class="o">(</span><span class="n">bitCount</span><span class="o">)</span> <span class="c1">// SInt(w(x) bits)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// UInt(bitCount bits)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span><span class="o">(</span><span class="n">bitCount</span><span class="o">)</span> <span class="c1">// Bits(bitCount bits)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bits">
+<h3><a class="toc-backref" href="#id3">Bits</a><a class="headerlink" href="#bits" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">,</span> <span class="o">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">5</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">B</span><span class="s">&quot;101&quot;</span><span class="o">,</span> <span class="mi">4</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+
+<span class="c1">// Assignments</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;dhFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0o377&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0b11111111&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0b1111_1111&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+
+<span class="c1">// Operators</span>
+<span class="o">~</span><span class="n">x</span>                 <span class="c1">// bitwise not</span>
+<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
+<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>              <span class="c1">// bitwise or</span>
+<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
+<span class="n">x</span><span class="o">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
+<span class="n">x</span><span class="o">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
+<span class="n">x</span><span class="o">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
+<span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span>             <span class="c1">// Logical shift right</span>
+<span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">y</span>             <span class="c1">// Logical shift left</span>
+<span class="n">x</span><span class="o">.</span><span class="n">rotateLeft</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>    <span class="c1">// Logical left rotation</span>
+<span class="n">x</span><span class="o">.</span><span class="n">rotateRight</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>   <span class="c1">// Logical right rotation</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
+<span class="n">x</span> <span class="o">#</span><span class="k">#</span> <span class="n">y</span>             <span class="c1">// concatenate x high y low</span>
+
+<span class="n">x</span> <span class="o">===</span> <span class="n">y</span>            <span class="c1">// comparison True equality</span>
+<span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>            <span class="c1">// comparison True Inequality</span>
+
+<span class="c1">// Typecast</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
+<span class="n">B</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to Bits</span>
+
+<span class="c1">// Bit Access</span>
+<span class="n">x</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>               <span class="c1">// R/W one bit</span>
+<span class="n">x</span><span class="o">(</span><span class="n">hi</span><span class="o">,</span><span class="n">lo</span><span class="o">)</span>           <span class="c1">// R/W range</span>
+<span class="n">x</span><span class="o">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span>      <span class="c1">// R/W range</span>
+
+<span class="c1">// Misc</span>
+<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
+<span class="n">x</span><span class="o">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
+<span class="n">x</span><span class="o">.</span><span class="n">low</span>              <span class="c1">// return lower bound</span>
+<span class="n">x</span><span class="o">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resize</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resizeLeft</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="uint-sint">
+<h3><a class="toc-backref" href="#id4">UInt &amp; SInt</a><a class="headerlink" href="#uint-sint" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">SInt</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">U</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="n">S</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+
+<span class="c1">// Assignments</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0o377&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0o0000_0001&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>   <span class="c1">// scala types can be used</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">2</span>  <span class="c1">// scala types can be used</span>
+
+<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="n">range</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="o">((</span><span class="mi">4</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+
+<span class="c1">// Operators</span>
+<span class="o">~</span><span class="n">x</span>                 <span class="c1">// bitwise not</span>
+<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
+<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>              <span class="c1">// bitwise or</span>
+<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
+<span class="n">x</span><span class="o">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
+<span class="n">x</span><span class="o">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
+<span class="n">x</span><span class="o">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
+<span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span>             <span class="c1">// Logical shift right</span>
+<span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">y</span>             <span class="c1">// Logical shift left</span>
+<span class="n">x</span><span class="o">.</span><span class="n">rotateLeft</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>    <span class="c1">// Logical left rotation</span>
+<span class="n">x</span><span class="o">.</span><span class="n">rotateRight</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>   <span class="c1">// Logical right rotation</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
+<span class="n">x</span> <span class="o">#</span><span class="k">#</span> <span class="n">y</span>             <span class="c1">// concatenate x high and low y</span>
+
+<span class="c1">// Arithmetic</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>              <span class="c1">// Addition</span>
+<span class="n">x</span> <span class="o">+^</span> <span class="n">y</span>             <span class="c1">// Addition with carry, return +1 bit</span>
+<span class="n">x</span> <span class="o">+|</span> <span class="n">y</span>             <span class="c1">// Addition with sat carry</span>
+<span class="n">x</span> <span class="o">-</span> <span class="n">y</span>              <span class="c1">// Substraction</span>
+<span class="n">x</span> <span class="o">-^</span> <span class="n">y</span>             <span class="c1">// Substraction with carry, return +1 bit</span>
+<span class="n">x</span> <span class="o">-|</span> <span class="n">y</span>             <span class="c1">// Substraction with sat carry</span>
+<span class="n">x</span> <span class="o">*</span> <span class="n">y</span>              <span class="c1">// Multiplication, return x+y bits</span>
+<span class="n">x</span> <span class="o">/</span> <span class="n">y</span>              <span class="c1">// Division</span>
+<span class="n">x</span> <span class="o">%</span> <span class="n">y</span>              <span class="c1">// Modulo</span>
+
+<span class="c1">// Comparison</span>
+<span class="n">x</span> <span class="o">===</span> <span class="n">y</span>            <span class="c1">// True by equality</span>
+<span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>            <span class="c1">// True by inequality</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>              <span class="c1">// True by greater than</span>
+<span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>             <span class="c1">// True by greater than or equal</span>
+<span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>              <span class="c1">// True by less than</span>
+<span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>             <span class="c1">// True by less than or equal</span>
+
+<span class="c1">// Typecast</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
+<span class="n">S</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to SInt</span>
+<span class="n">U</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to UInt</span>
+
+<span class="c1">// Bit Access</span>
+<span class="n">x</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>               <span class="c1">// R/W one bit</span>
+<span class="n">x</span><span class="o">(</span><span class="n">offset</span><span class="o">,</span> <span class="n">width</span><span class="o">)</span>   <span class="c1">// R/W bitfield</span>
+<span class="n">x</span><span class="o">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span>      <span class="c1">// R/W range</span>
+
+<span class="c1">// Misc</span>
+<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
+<span class="n">x</span><span class="o">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
+<span class="n">x</span><span class="o">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
+<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resize</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
+<span class="n">x</span><span class="o">.</span><span class="n">resizeLeft</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
+<span class="n">x</span><span class="o">.</span><span class="n">expand</span>           <span class="c1">// return x with 1 bit expanded</span>
+
+<span class="c1">// UInt Special</span>
+<span class="n">x</span><span class="o">.</span><span class="n">twoComplement</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span> <span class="c1">//enable, disable 2-complement</span>
+
+<span class="c1">// SInt Special</span>
+<span class="n">y</span><span class="o">.</span><span class="n">abs</span>               <span class="c1">// return UInt is SInt</span>
+<span class="n">y</span><span class="o">.</span><span class="n">sign</span>              <span class="c1">// return most significant bit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="scala">
+<h2><a class="toc-backref" href="#id5">Scala</a><a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 41%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Range</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Byte</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-128</span></code> to <code class="docutils literal notranslate"><span class="pre">127</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Short</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-32768</span></code> to <code class="docutils literal notranslate"><span class="pre">32767</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-2147483648</span></code> to <code class="docutils literal notranslate"><span class="pre">2147483647</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Long</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-9223372036854775808</span></code> to <code class="docutils literal notranslate"><span class="pre">9223372036854775807</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> IEEE 754 single-precision float</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> IEEE 754 double-precision float</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Char</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> unsigned Unicode character</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">U+0000</span></code> to <code class="docutils literal notranslate"><span class="pre">U+FFFF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>A sequence of Chars</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
+<td><p>Either the literal true or the literal false</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Unit</span></code></p></td>
+<td><p>Corresponds to no value</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Null</span></code></p></td>
+<td><p>null or empty reference</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="conversions">
+<h2><a class="toc-backref" href="#id6">Conversions</a><a class="headerlink" href="#conversions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="spinal-spinal">
+<h3><a class="toc-backref" href="#id7">Spinal &lt;-&gt; Spinal</a><a class="headerlink" href="#spinal-spinal" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Long</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">.</span><span class="n">toInt</span>
+<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Floa</span> <span class="kt">tscala</span> <span class="kt">types</span><span class="o">=</span> <span class="mf">1.0</span>
+<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0e6</span>
+<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">100</span><span class="n">e6</span>
+<span class="k">val</span> <span class="nc">BigDecimal</span> <span class="k">:</span> <span class="kt">BigDecimal</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mf">1.0e6</span><span class="o">)</span>
+<span class="k">val</span> <span class="nc">BigDecimal</span> <span class="k">:</span> <span class="kt">BigInt</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mf">1.0e6</span><span class="o">).</span><span class="n">toBigInt</span>
+
+<span class="nc">BigDecimal</span><span class="o">().</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">10</span><span class="n">e6</span><span class="o">).</span><span class="n">toBigInt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scala-scala">
+<h3><a class="toc-backref" href="#id8">Scala &lt;-&gt; Scala</a><a class="headerlink" href="#scala-scala" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scala-spinal">
+<h3><a class="toc-backref" href="#id9">Scala &lt;- Spinal</a><a class="headerlink" href="#scala-spinal" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spinal-scala">
+<h3><a class="toc-backref" href="#id10">Spinal &lt;- Scala</a><a class="headerlink" href="#spinal-scala" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="input-outputs">
+<h2><a class="toc-backref" href="#id11">Input &amp; Outputs</a><a class="headerlink" href="#input-outputs" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+   <span class="k">val</span> <span class="n">testMode</span>      <span class="k">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">inValue</span>       <span class="k">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">4</span> <span class="n">bits</span><span class="o">)</span> <span class="n">default</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">loadValue</span>     <span class="k">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">en</span>            <span class="k">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">step</span>          <span class="k">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">)</span> <span class="n">default</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">reset</span>         <span class="k">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">up_nDown</span>      <span class="k">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">overflowValue</span> <span class="k">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="n">bits</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">count</span>         <span class="k">=</span> <span class="n">out</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="n">bits</span><span class="o">)</span>
+   <span class="k">val</span> <span class="n">trigger</span>       <span class="k">=</span> <span class="n">out</span> <span class="nc">Bool</span>
+ <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="internal-signals">
+<h2><a class="toc-backref" href="#id12">Internal Signals</a><a class="headerlink" href="#internal-signals" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tools/index.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="project.html" class="btn btn-neutral float-left" title="Project Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020 tschinz
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

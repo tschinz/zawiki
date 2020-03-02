@@ -1,11 +1,11 @@
-======================
-Introduction SpinalHDL
-======================
+============
+Introduction
+============
 
 .. contents:: :local:
 
-Some SpinalHDL helppages
-========================
+Some helppages
+==============
 
 * `Offical Spinal HDL Documentation <https://spinalhdl.github.io/SpinalDoc-RTD>`_
 * :pdfviewer:`Cheatsheet Spinal HDL Core <github/tschinz/zawiki/blob/master/source/coding/spinal/docs/cheatSheet_core_oo.pdf>`

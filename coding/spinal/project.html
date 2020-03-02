@@ -41,8 +41,8 @@
   <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tools" href="tools/index.html" />
-    <link rel="prev" title="Installation SpinalHDL" href="install.html" /> 
+    <link rel="next" title="Data Types" href="types.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-18-g61d0e6c
+                v0.11-19-g29c15da
               </div>
             
           
@@ -251,11 +251,13 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Spinal HDL</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction SpinalHDL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Installation SpinalHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html">Data Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tools/index.html">Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tools/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/gtkwave.html">GtkWave</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tools/intellij_idea.html">Intellij IDEA IDE</a></li>
 </ul>
 </li>
@@ -451,13 +453,23 @@
 <h1>Project Files<a class="headerlink" href="#project-files" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#project-folder-structure" id="id1">Project Folder Structure</a></p></li>
-<li><p><a class="reference internal" href="#create-your-first-project" id="id2">Create your first Project</a></p></li>
+<li><p><a class="reference internal" href="#project-structure" id="id1">Project Structure</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general-project-structure" id="id2">General Project Structure</a></p></li>
+<li><p><a class="reference internal" href="#my-project-structure" id="id3">My Project Structure</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#create-your-first-project" id="id4">Create your first Project</a></p></li>
+<li><p><a class="reference internal" href="#sample-build-sbt" id="id5">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a></p></li>
+<li><p><a class="reference internal" href="#sbt-commands" id="id6">SBT Commands</a></p></li>
+<li><p><a class="reference internal" href="#add-submodule-to-project" id="id7">Add Submodule to Project</a></p></li>
 </ul>
 </div>
-<div class="section" id="project-folder-structure">
-<h2><a class="toc-backref" href="#id1">Project Folder Structure</a><a class="headerlink" href="#project-folder-structure" title="Permalink to this headline">¶</a></h2>
-<p>Every SpinalHDL Project is created as a Scala Project This means the Scala folder definition applies:</p>
+<div class="section" id="project-structure">
+<h2><a class="toc-backref" href="#id1">Project Structure</a><a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<p>Every SpinalHDL Project is created as a Scala Project This means the Scala folder definition applies, of course this can be changes if needed.</p>
+<div class="section" id="general-project-structure">
+<h3><a class="toc-backref" href="#id2">General Project Structure</a><a class="headerlink" href="#general-project-structure" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">etc/</span></code> - external project libraries for example VexRISCV</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project/</span></code> - sbt project configuration</p>
@@ -479,9 +491,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">scala/</span></code> - src files for scala resp. SpinalHDL</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;project_name&gt;/</span></code> - custom folder structure for project</p></li>
-<li><p>soc - example soc project</p></li>
-<li><p>misc -example project</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;project_name&gt;/</span></code> - custom folder structure for project</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">sim/</span></code> - optional simulation directory</p></li>
 </ul>
@@ -492,7 +502,7 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code> - same structure are <code class="docutils literal notranslate"><span class="pre">src/</span></code> files for test purpoese only</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code> - same structure are <code class="docutils literal notranslate"><span class="pre">src/</span></code> files for test purpose only</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;language&gt;/</span></code></p></li>
@@ -504,18 +514,63 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target/</span></code> - folder where scala keeps compiled files</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">build.properties</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">plugins.sbt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target/</span></code> - temp folder where scala keeps compiled files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></p></li>
 </ul>
 </div>
+<div class="section" id="my-project-structure">
+<h3><a class="toc-backref" href="#id3">My Project Structure</a><a class="headerlink" href="#my-project-structure" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--</span> <span class="p">(</span><span class="o">.</span><span class="n">idea</span><span class="o">/</span><span class="p">)</span>                    <span class="c1"># temp intellij settings folder</span>
+<span class="o">+--</span> <span class="n">ext</span><span class="o">/</span>                        <span class="c1"># folder for external IP imported normally via submodules</span>
+<span class="o">+--</span> <span class="n">img</span><span class="o">/</span>                        <span class="c1"># project images</span>
+<span class="o">+--</span> <span class="n">project</span><span class="o">/</span>                    <span class="c1"># sbt project folder</span>
+<span class="o">+--</span> <span class="n">scripts</span><span class="o">/</span>                    <span class="c1"># general scripts for the project</span>
+<span class="o">+--</span> <span class="n">sim</span><span class="o">/</span>                        <span class="c1"># temp folder for simulation files</span>
+<span class="o">+--</span> <span class="n">scr</span><span class="o">/</span>                        <span class="c1"># folder for all project source files</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">hardware</span><span class="o">/</span>               <span class="c1"># folder for all hw related stuff</span>
+<span class="o">|</span>   <span class="o">|</span>    <span class="o">+--</span> <span class="n">netlist</span><span class="o">/</span>           <span class="c1"># spinalHDL generated VHDL and Verilog Code ready for synthesis</span>
+<span class="o">|</span>   <span class="o">|</span>    <span class="o">+--</span> <span class="n">scala</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">|</span>    <span class="o">|</span>   <span class="o">+--</span> <span class="o">&lt;</span><span class="n">projectname</span><span class="o">&gt;/</span> <span class="c1"># all chrono project related scala files</span>
+<span class="o">|</span>   <span class="o">|</span>    <span class="o">|</span>       <span class="o">+--</span> <span class="n">board</span><span class="o">/</span>     <span class="c1"># boardlevel Files (one folder per board)</span>
+<span class="o">|</span>   <span class="o">|</span>    <span class="o">+--</span> <span class="n">synthesis</span><span class="o">/</span>         <span class="c1"># folder for synthesis projects (one folder per board)</span>
+<span class="o">|</span>   <span class="o">+--</span> <span class="n">test</span><span class="o">/</span>                   <span class="c1"># folder for testbench files</span>
+<span class="o">|</span>       <span class="o">+--</span> <span class="n">scala</span><span class="o">/</span>
+<span class="o">|</span>           <span class="o">+--</span> <span class="o">&lt;</span><span class="n">projectname</span><span class="o">&gt;/</span>  <span class="c1"># Testbenches for chrono project</span>
+<span class="o">+--</span> <span class="p">(</span><span class="n">target</span><span class="o">/</span><span class="p">)</span>                   <span class="c1"># temp folder for scala and sbt</span>
+<span class="o">+--</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="o">+--</span> <span class="n">build</span><span class="o">.</span><span class="n">sbt</span>                   <span class="c1"># main sbt project file</span>
+<span class="o">+--</span> <span class="n">LICENSE</span>                     <span class="c1"># The project license</span>
+<span class="o">+--</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>                   <span class="c1"># This file</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="create-your-first-project">
-<h2><a class="toc-backref" href="#id2">Create your first Project</a><a class="headerlink" href="#create-your-first-project" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Create your first Project</a><a class="headerlink" href="#create-your-first-project" title="Permalink to this headline">¶</a></h2>
 <p>Clone the <a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">https://github.com/SpinalHDL/SpinalTemplateSbt</a> sample project and get started.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/SpinalHDL/SpinalTemplateSbt.git
 <span class="nb">cd</span> SpinalBaseProject/
 sbt run
 ls MyTopLevel.vhd
+</pre></div>
+</div>
+</div>
+<div class="section" id="sample-build-sbt">
+<h2><a class="toc-backref" href="#id5">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a><a class="headerlink" href="#sample-build-sbt" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sbt-commands">
+<h2><a class="toc-backref" href="#id6">SBT Commands</a><a class="headerlink" href="#sbt-commands" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbt                     <span class="c1"># enter sbt shell</span>
+sbt clean               <span class="c1"># clean repo from sbt generated files</span>
+sbt compile             <span class="c1"># compiles all code in hardware/scala</span>
+sbt run                 <span class="c1"># run all compiled code</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-submodule-to-project">
+<h2><a class="toc-backref" href="#id7">Add Submodule to Project</a><a class="headerlink" href="#add-submodule-to-project" title="Permalink to this headline">¶</a></h2>
+<p>Need to be in the <code class="docutils literal notranslate"><span class="pre">ext/</span></code> folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git submodule add -b &lt;branch&gt; &lt;url&gt; ext
 </pre></div>
 </div>
 </div>
@@ -535,10 +590,10 @@ ls MyTopLevel.vhd
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tools/index.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="types.html" class="btn btn-neutral float-right" title="Data Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral float-left" title="Installation SpinalHDL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
