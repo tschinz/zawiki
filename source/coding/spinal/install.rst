@@ -1,6 +1,6 @@
-======================
-Installation SpinalHDL
-======================
+============
+Installation
+============
 
 .. contents:: :local:
 
@@ -58,7 +58,7 @@ Simulation Linux
    ./configure
    make -j$(nproc)
    sudo make install
-   sudo apt-get install -y gtkwave
+   sudo apt-get install -y gconf2 gtkwave
 
 Hardware Debug Tools Linux
 --------------------------
