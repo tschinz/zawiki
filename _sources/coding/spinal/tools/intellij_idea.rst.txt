@@ -6,6 +6,9 @@ Intellij IDEA IDE
 
 * Cheatsheet :pdfviewer:`IntelliJIDEA_ReferenceCard.pdf <github/tschinz/zawiki/source/coding/spinal/tools/docs/IntelliJIDEA_ReferenceCard.pdf`
 
+Shortcuts
+=========
+
 +---------------------------------------------+----------------------------------+
 | Shortcut                                    | Action                           |
 +=============================================+==================================+
@@ -29,3 +32,10 @@ Intellij IDEA IDE
 +---------------------------------------------+----------------------------------+
 | ``Shift`` + ``Alt`` + ``Left Click``        | Add Cursor at pointer location   |
 +---------------------------------------------+----------------------------------+
+
+Rebuild all sbt projects
+========================
+
+When external IP change or libraries change you need to force a reimport of all svbt project.
+
+``View`` -> ``Tool Window`` -> ``sbt`` -> ``Reimport all sbt projects``.

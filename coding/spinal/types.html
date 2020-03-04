@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-19-g29c15da
+                v0.11-20-g966b77f
               </div>
             
           
@@ -777,7 +777,20 @@
 </div>
 <div class="section" id="scala-scala">
 <h3><a class="toc-backref" href="#id8">Scala &lt;-&gt; Scala</a><a class="headerlink" href="#scala-scala" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Can be done with any type</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toByte</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toShort</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toInt</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toLong</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toFloat</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toDouble</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toChar</span>
+<span class="n">x</span><span class="o">.</span><span class="n">toString</span><span class="o">()</span>
+
+<span class="c1">// Spinal uses BigInt many times</span>
+<span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">2</span><span class="n">e42</span><span class="o">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="o">(</span><span class="n">x_Int</span><span class="o">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="o">(</span><span class="n">x_Double</span><span class="o">).</span><span class="n">toBigInt</span>
 </pre></div>
 </div>
 </div>
@@ -789,7 +802,10 @@
 </div>
 <div class="section" id="spinal-scala">
 <h3><a class="toc-backref" href="#id10">Spinal &lt;- Scala</a><a class="headerlink" href="#spinal-scala" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">x_UInt</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">2</span> <span class="n">bits</span><span class="o">)</span>
+<span class="n">x_UInt</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigInt</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">10</span><span class="n">e42</span><span class="o">).</span><span class="n">toBigInt</span>
 </pre></div>
 </div>
 </div>

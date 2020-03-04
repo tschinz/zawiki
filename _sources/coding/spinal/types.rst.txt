@@ -286,6 +286,20 @@ Scala <-> Scala
 
 .. code-block:: scala
 
+   // Can be done with any type
+   x.toByte
+   x.toShort
+   x.toInt
+   x.toLong
+   x.toFloat
+   x.toDouble
+   x.toChar
+   x.toString()
+
+   // Spinal uses BigInt many times
+   BigDecimal(2e42).toBigInt
+   BigDecimal(x_Int).toBigInt
+   BigDecimal(x_Double).toBigInt
 
 Scala <- Spinal
 ---------------
@@ -297,6 +311,12 @@ Spinal <- Scala
 ---------------
 
 .. code-block:: scala
+
+   x_UInt := U(2, 2 bits)
+   x_UInt := 2
+   x_UInt := BigInt(2)
+   x_UInt := BigDecimal(10e42).toBigInt
+
 
 Input & Outputs
 ===============
