@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-20-g966b77f
+                v0.11-21-ge2397ac
               </div>
             
           
@@ -264,8 +264,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction Scala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scala/libraries.html">Libraries</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
@@ -458,9 +459,9 @@
 <li><p><a class="reference internal" href="#bool" id="id2">Bool</a></p></li>
 <li><p><a class="reference internal" href="#bits" id="id3">Bits</a></p></li>
 <li><p><a class="reference internal" href="#uint-sint" id="id4">UInt &amp; SInt</a></p></li>
+<li><p><a class="reference internal" href="#vec" id="id5">Vec</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#scala" id="id5">Scala</a></p></li>
 <li><p><a class="reference internal" href="#conversions" id="id6">Conversions</a></p>
 <ul>
 <li><p><a class="reference internal" href="#spinal-spinal" id="id7">Spinal &lt;-&gt; Spinal</a></p></li>
@@ -473,6 +474,7 @@
 <li><p><a class="reference internal" href="#internal-signals" id="id12">Internal Signals</a></p></li>
 </ul>
 </div>
+<p>For scala types see <a class="reference internal" href="../scala/intro.html"><span class="doc">Introduction</span></a></p>
 <div class="section" id="spinal">
 <h2><a class="toc-backref" href="#id1">Spinal</a><a class="headerlink" href="#spinal" title="Permalink to this headline">¶</a></h2>
 <p>The language provides 5 base types and 2 composite types that can be used.</p>
@@ -506,11 +508,11 @@
 <span class="n">x</span> <span class="o">:=</span> <span class="nc">False</span>
 
 <span class="c1">// Operators</span>
-<span class="o">!</span><span class="n">x</span>            <span class="c1">// not</span>
-<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>         <span class="c1">// and</span>
-<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>         <span class="c1">// or</span>
-<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>         <span class="c1">// xor</span>
-<span class="n">x</span> <span class="o">#</span><span class="k">#</span> <span class="n">y</span>        <span class="c1">// concatenate x is high xy is low</span>
+<span class="o">!</span><span class="n">x</span>             <span class="c1">// not</span>
+<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>          <span class="c1">// and</span>
+<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>          <span class="c1">// or</span>
+<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>          <span class="c1">// xor</span>
+<span class="n">x</span> <span class="o">#</span><span class="k">#</span> <span class="n">y</span>         <span class="c1">// concatenate x is high xy is low</span>
 <span class="n">x</span><span class="o">.</span><span class="n">set</span>
 <span class="n">x</span><span class="o">.</span><span class="n">clear</span>
 <span class="n">x</span><span class="o">.</span><span class="n">setWhen</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span>
@@ -693,68 +695,39 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="vec">
+<h3><a class="toc-backref" href="#id5">Vec</a><a class="headerlink" href="#vec" title="Permalink to this headline">¶</a></h3>
+<p>Vector are scala array like</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
+<span class="k">val</span> <span class="n">w</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">),</span><span class="mi">2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Bool</span><span class="o">,</span><span class="mi">2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Reg</span><span class="o">(</span><span class="nc">Bool</span><span class="o">)</span> <span class="n">init</span><span class="o">(</span><span class="nc">False</span><span class="o">),</span> <span class="mi">2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">z</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Reg</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">))</span> <span class="n">init</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="mi">10</span><span class="o">)</span>
+
+<span class="c1">// Assignments</span>
+<span class="n">x</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">x</span><span class="o">.</span><span class="n">head</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(0)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">last</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(size-1)</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span> <span class="o">:=</span> <span class="mi">0</span><span class="o">)</span> <span class="c1">// map on a vector (assign all elements with value 0)</span>
+
+<span class="c1">// Comparison</span>
+<span class="n">x</span> <span class="o">===</span> <span class="n">y</span>             <span class="c1">// True by equality</span>
+<span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>             <span class="c1">// True by inequality</span>
+
+<span class="n">boolvar</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">===</span> <span class="n">y</span>  <span class="c1">// Compare all elements</span>
+
+<span class="c1">// Typecast</span>
+<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>            <span class="c1">// Combines all elements to a big bits</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span><span class="n">bits</span><span class="o">,</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">myBits_16bits</span> <span class="o">:=</span> <span class="n">vec</span><span class="o">.</span><span class="n">asBits</span>
+
+<span class="c1">// Misc</span>
+<span class="n">x</span><span class="o">.</span><span class="n">getBitsWidth</span>      <span class="c1">// Get width of all elements combined</span>
+<span class="n">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="n">getBitsWidth</span><span class="o">)</span> <span class="c1">// 16</span>
+</pre></div>
 </div>
-<div class="section" id="scala">
-<h2><a class="toc-backref" href="#id5">Scala</a><a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 41%" />
-<col style="width: 47%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Range</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Byte</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bit</span></code> signed value</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-128</span></code> to <code class="docutils literal notranslate"><span class="pre">127</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Short</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> signed value</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-32768</span></code> to <code class="docutils literal notranslate"><span class="pre">32767</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> signed value</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-2147483648</span></code> to <code class="docutils literal notranslate"><span class="pre">2147483647</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Long</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> signed value</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-9223372036854775808</span></code> to <code class="docutils literal notranslate"><span class="pre">9223372036854775807</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> IEEE 754 single-precision float</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> IEEE 754 double-precision float</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Char</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> unsigned Unicode character</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">U+0000</span></code> to <code class="docutils literal notranslate"><span class="pre">U+FFFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
-<td><p>A sequence of Chars</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
-<td><p>Either the literal true or the literal false</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Unit</span></code></p></td>
-<td><p>Corresponds to no value</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Null</span></code></p></td>
-<td><p>null or empty reference</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</div>
 </div>
 <div class="section" id="conversions">
 <h2><a class="toc-backref" href="#id6">Conversions</a><a class="headerlink" href="#conversions" title="Permalink to this headline">¶</a></h2>

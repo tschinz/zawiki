@@ -4,6 +4,8 @@ Data Types
 
 .. contents:: :local:
 
+For scala types see :doc:`/coding/scala/intro`
+
 Spinal
 ======
 
@@ -32,6 +34,7 @@ The language provides 5 base types and 2 composite types that can be used.
 
 Bool
 ----
+
 Spinal Bool as ``True`` or ``False``
 
 .. code-block:: scala
@@ -44,11 +47,11 @@ Spinal Bool as ``True`` or ``False``
    x := False
 
    // Operators
-   !x            // not
-   x & y         // and
-   x | y         // or
-   x ^ y         // xor
-   x ## y        // concatenate x is high xy is low
+   !x             // not
+   x & y          // and
+   x | y          // or
+   x ^ y          // xor
+   x ## y         // concatenate x is high xy is low
    x.set
    x.clear
    x.setWhen(cond)
@@ -231,34 +234,39 @@ UInt & SInt
    y.abs               // return UInt is SInt
    y.sign              // return most significant bit
 
-Scala
-=====
+Vec
+---
+Vector are scala array like
 
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| Type        | Description                                  | Range                                               |
-+=============+==============================================+=====================================================+
-| ``Byte``    | ``8 bit`` signed value                       | ``-128`` to ``127``                                 |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Short``   | ``16 bit`` signed value                      | ``-32768`` to ``32767``                             |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Int``     | ``32 bit`` signed value                      | ``-2147483648`` to ``2147483647``                   |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Long``    | ``64 bit`` signed value                      | ``-9223372036854775808`` to ``9223372036854775807`` |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Float``   | ``32 bit`` IEEE 754 single-precision float   |                                                     |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Double``  | ``64 bit`` IEEE 754 double-precision float   |                                                     |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Char``    | ``16 bit`` unsigned Unicode character        | ``U+0000`` to ``U+FFFF``                            |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``String``  | A sequence of Chars                          |                                                     |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Boolean`` | Either the literal true or the literal false | ``true``, ``false``                                 |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Unit``    | Corresponds to no value                      |                                                     |
-+-------------+----------------------------------------------+-----------------------------------------------------+
-| ``Null``    | null or empty reference                      |                                                     |
-+-------------+----------------------------------------------+-----------------------------------------------------+
+.. code-block:: scala
+
+   // Instances
+   val w = Vec(SInt(8 bits),2)
+   val x = Vec(Bool,2)
+   val y = Vec(Reg(Bool) init(False), 2)
+   val z = Vec(Reg(SInt(8 bits)) init(0), 10)
+
+   // Assignments
+   x(0) := 2
+   x.head := 2       // x(0)
+   x.last := 2       // x(size-1)
+
+   x.map(_ := 0) // map on a vector (assign all elements with value 0)
+
+   // Comparison
+   x === y             // True by equality
+   x =/= y             // True by inequality
+
+   boolvar := x === y  // Compare all elements
+
+   // Typecast
+   x.asBits            // Combines all elements to a big bits
+   val x = Vec(SInt(8bits,2)
+   myBits_16bits := vec.asBits
+
+   // Misc
+   x.getBitsWidth      // Get width of all elements combined
+   println(x.getBitsWidth) // 16
 
 Conversions
 ===========

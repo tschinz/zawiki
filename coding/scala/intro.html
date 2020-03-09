@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction Scala &mdash; Zawiki</title>
+  <title>Introduction &mdash; Zawiki</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                v0.11-20-g966b77f
+                v0.11-21-ge2397ac
               </div>
             
           
@@ -264,8 +264,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Scala</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction Scala</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coding_convention.html">Coding Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
@@ -428,7 +429,7 @@
         
           <li><a href="index.html">Scala</a> &raquo;</li>
         
-      <li>Introduction Scala</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -449,8 +450,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-scala">
-<h1>Introduction Scala<a class="headerlink" href="#introduction-scala" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#basics" id="id1">Basics</a></p>
@@ -487,39 +488,62 @@
 <h2><a class="toc-backref" href="#id1">Basics</a><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="types">
 <h3><a class="toc-backref" href="#id2">Types</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
-<p>In Scala, there are 5 major types</p>
-<table class="colwidths-given docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 50%" />
+<col style="width: 12%" />
+<col style="width: 41%" />
+<col style="width: 47%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
-<th class="head"><p>Literal</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Range</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Boolean</p></td>
-<td><p>true, false</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Byte</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-128</span></code> to <code class="docutils literal notranslate"><span class="pre">127</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Short</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-32768</span></code> to <code class="docutils literal notranslate"><span class="pre">32767</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-2147483648</span></code> to <code class="docutils literal notranslate"><span class="pre">2147483647</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Long</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-9223372036854775808</span></code> to <code class="docutils literal notranslate"><span class="pre">9223372036854775807</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> IEEE 754 single-precision float</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Int</p></td>
-<td><p>3, 0x32</p></td>
-<td><p>32 bits integer</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> IEEE 754 double-precision float</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Float</p></td>
-<td><p>3.14f</p></td>
-<td><p>32 bits floating point</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Char</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> unsigned Unicode character</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">U+0000</span></code> to <code class="docutils literal notranslate"><span class="pre">U+FFFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Double</p></td>
-<td><p>3.14</p></td>
-<td><p>64 bits floating point</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>A sequence of Chars</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>String</p></td>
-<td><p>“Hello world”</p></td>
-<td><p>UTF-16 string</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
+<td><p>Either the literal true or the literal false</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Unit</span></code></p></td>
+<td><p>Corresponds to no value</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Null</span></code></p></td>
+<td><p>null or empty reference</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
