@@ -238,3 +238,13 @@ Launch x11vnc
 
    # Minimal command but still restricted to localhost
    x11vnc -forever -display :0 -safer -bg -localhost
+
+QView
+-----
+Lightweight Image Viewer
+
+.. code-block:: bash
+
+   sudo add-apt-repository ppa:jurplel/qview
+   sudo apt-get update
+   sudo apt-get install qview
