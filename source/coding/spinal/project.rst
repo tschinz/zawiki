@@ -84,6 +84,7 @@ Sample ``build.sbt``
 
 .. code-block:: scala
    :caption: build.sbt example
+
    // project name & version
    name := "eln-chrono-spinal"
    version := "0.1"

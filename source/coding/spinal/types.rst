@@ -347,7 +347,7 @@ Input & Outputs
 Internal Signals
 ================
 
-.. code-bloc:: Scala
+.. code-block:: Scala
 
     // Access internal signals in simulation
     val register = Reg(UInt(width bits)) init(0) simPublic()

@@ -45,6 +45,7 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.githubpages',
     'sphinxemoji.sphinxemoji',
+    'sphinx_copybutton',
     # 'sphinx.ext.imgmath',
     # 'sphinx.ext.imgconverter',
 ]

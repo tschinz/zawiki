@@ -10,6 +10,7 @@ pages:
     - pip install sphinxcontrib-plantuml
     - pip install recommonmark
     - pip install sphinxemoji
+    - pip install sphinx-copybutton
     - apt-get update
     - echo "Install build-essential"
     - apt-get install -y build-essential
