@@ -22,7 +22,7 @@ pages:
     - apt-get install -y inkscape
     - echo "Install texlive"
     - apt-get install -y texlive-full
-    - chmod +x /builds/SPL/spl-docs/source/_static/plantuml.jar
+    - chmod +x /builds/SPL/spl-docs/source/_static/jar/plantuml.jar
     - echo "Install Java"
     - dpkg --configure -a
     - mkdir -p /usr/share/man/man1

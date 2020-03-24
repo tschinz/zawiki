@@ -18,6 +18,7 @@ install:
   - pip install sphinxcontrib-plantuml
   - pip install recommonmark
   - pip install sphinxemoji
+  - pip install sphinx-copybutton
   - sudo apt-get update
   - echo "Install build-essential"
   - sudo apt-get install -y build-essential
@@ -29,7 +30,7 @@ install:
   - sudo apt-get install -y inkscape
   - echo "Install texlive"
   #- sudo apt-get install -y texlive-full
-  - chmod +x source/_static/plantuml.jar
+  - chmod +x source/_static/jar/plantuml.jar
   - echo "Install Java"
   - sudo dpkg --configure -a
   - mkdir -p /usr/share/man/man1

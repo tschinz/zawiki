@@ -64,7 +64,7 @@ extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
 autosectionlabel_prefix_document = True
 
 # Plant uml Jar file
-plantuml = "java -jar -Djava.awt.headless=true " + os.path.abspath("." + os.sep + "_static" + os.sep + "plantuml.jar")
+plantuml = "java -jar -Djava.awt.headless=true " + os.path.abspath("." + os.sep + "_static" + os.sep + "jar" + os.sep + "plantuml.jar")
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -114,6 +114,14 @@ html_favicon = 'img/favicon.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+    'css/copybutton.css',
+]
+
+# Copybutton image path
+copybutton_image_path = 'img/copybutton.svg'
+
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -208,8 +216,8 @@ html_context = {
 html_logo = 'img/logo.svg'
 html_title = 'Zawiki'
 # This is a temporary fix for wavedrom
-offline_skin_js_path = "_static/default.js"
-offline_wavedrom_js_path = "_static/wavedrom.min.js"
+offline_skin_js_path = "_static/js/default.js"
+offline_wavedrom_js_path = "_static/js/wavedrom.min.js"
 
 # Option for linkcheck
 linkcheck_anchors=False
