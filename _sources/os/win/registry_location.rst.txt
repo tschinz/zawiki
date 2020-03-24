@@ -52,5 +52,21 @@ PowerPoint Options
 .. code-block:: bat
 
    Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options
-     * ExportBitmapResolution => DWORD 32bit => 300 (ppi)
-     * AutomaticPicturesCompressionDefault => DWORD => 0
+     :: ExportBitmapResolution => DWORD 32bit => 300 (ppi)
+     :: AutomaticPicturesCompressionDefault => DWORD => 0
+
+Power Settings
+==============
+
+.. code-block:: bat
+
+   Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power
+     :: HibernateEnabledDefault = 0
+
+Taskbar Transparency
+====================
+
+.. code-block:: bat
+
+   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+     :: UseOLEDTaskbarTransparency => DWORD 32bit => 1

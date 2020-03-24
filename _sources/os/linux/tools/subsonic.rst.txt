@@ -147,7 +147,7 @@ Here is a sample output of the script:
 </code>
 Linux / Mac : Modify your ``/usr/bin/subsonic/subsonic_run.sh`` (for Ubuntu package install) and add the following line. Note the single quotes and the hash mark ``#`` before the sound card name. Those are required.
 
-.. code-block:: java
+.. code-block:: bash
 
    '-Djavax.sound.sampled.SourceDataLine=#PCH [plughw:0,0]' \
 

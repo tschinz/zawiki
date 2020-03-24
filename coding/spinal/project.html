@@ -27,6 +27,8 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+        <script type="text/javascript" src="../../_static/copybutton.js"></script>
         <script type="text/javascript" src="../../_static/default.js"></script>
         <script type="text/javascript" src="../../_static/wavedrom.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -69,7 +71,7 @@
             
             
               <div class="version">
-                v0.11-23-g0856531
+                v0.11-25-g5fb6bc8
               </div>
             
           
@@ -152,6 +154,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../os/win/cmdline.html">Commandline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../os/win/power.html">Power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
 </ul>
 </li>
@@ -163,11 +166,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/git/github.html">Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/install.html">Additional Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#anaconda-conda-update">Anaconda / Conda Update</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html#config-file">Config File</a></li>
@@ -455,23 +460,23 @@
 <h1>Project Files<a class="headerlink" href="#project-files" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#project-structure" id="id1">Project Structure</a></p>
+<li><p><a class="reference internal" href="#project-structure" id="id2">Project Structure</a></p>
 <ul>
-<li><p><a class="reference internal" href="#general-project-structure" id="id2">General Project Structure</a></p></li>
-<li><p><a class="reference internal" href="#my-project-structure" id="id3">My Project Structure</a></p></li>
+<li><p><a class="reference internal" href="#general-project-structure" id="id3">General Project Structure</a></p></li>
+<li><p><a class="reference internal" href="#my-project-structure" id="id4">My Project Structure</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#create-your-first-project" id="id4">Create your first Project</a></p></li>
-<li><p><a class="reference internal" href="#sample-build-sbt" id="id5">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a></p></li>
-<li><p><a class="reference internal" href="#sbt-commands" id="id6">SBT Commands</a></p></li>
-<li><p><a class="reference internal" href="#add-submodule-to-project" id="id7">Add Submodule to Project</a></p></li>
+<li><p><a class="reference internal" href="#create-your-first-project" id="id5">Create your first Project</a></p></li>
+<li><p><a class="reference internal" href="#sample-build-sbt" id="id6">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a></p></li>
+<li><p><a class="reference internal" href="#sbt-commands" id="id7">SBT Commands</a></p></li>
+<li><p><a class="reference internal" href="#add-submodule-to-project" id="id8">Add Submodule to Project</a></p></li>
 </ul>
 </div>
 <div class="section" id="project-structure">
-<h2><a class="toc-backref" href="#id1">Project Structure</a><a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Project Structure</a><a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
 <p>Every SpinalHDL Project is created as a Scala Project This means the Scala folder definition applies, of course this can be changes if needed.</p>
 <div class="section" id="general-project-structure">
-<h3><a class="toc-backref" href="#id2">General Project Structure</a><a class="headerlink" href="#general-project-structure" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">General Project Structure</a><a class="headerlink" href="#general-project-structure" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">etc/</span></code> - external project libraries for example VexRISCV</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project/</span></code> - sbt project configuration</p>
@@ -521,7 +526,7 @@
 </ul>
 </div>
 <div class="section" id="my-project-structure">
-<h3><a class="toc-backref" href="#id3">My Project Structure</a><a class="headerlink" href="#my-project-structure" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">My Project Structure</a><a class="headerlink" href="#my-project-structure" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--</span> <span class="p">(</span><span class="o">.</span><span class="n">idea</span><span class="o">/</span><span class="p">)</span>                    <span class="c1"># temp intellij settings folder</span>
 <span class="o">+--</span> <span class="n">ext</span><span class="o">/</span>                        <span class="c1"># folder for external IP imported normally via submodules</span>
 <span class="o">+--</span> <span class="n">img</span><span class="o">/</span>                        <span class="c1"># project images</span>
@@ -548,7 +553,7 @@
 </div>
 </div>
 <div class="section" id="create-your-first-project">
-<h2><a class="toc-backref" href="#id4">Create your first Project</a><a class="headerlink" href="#create-your-first-project" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Create your first Project</a><a class="headerlink" href="#create-your-first-project" title="Permalink to this headline">¶</a></h2>
 <p>Clone the <a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">https://github.com/SpinalHDL/SpinalTemplateSbt</a> sample project and get started.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/SpinalHDL/SpinalTemplateSbt.git
 <span class="nb">cd</span> SpinalBaseProject/
@@ -558,10 +563,36 @@ ls MyTopLevel.vhd
 </div>
 </div>
 <div class="section" id="sample-build-sbt">
-<h2><a class="toc-backref" href="#id5">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a><a class="headerlink" href="#sample-build-sbt" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Sample <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></a><a class="headerlink" href="#sample-build-sbt" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">build.sbt example</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// project name &amp; version</span>
+<span class="n">name</span> <span class="o">:=</span> <span class="s">&quot;eln-chrono-spinal&quot;</span>
+<span class="n">version</span> <span class="o">:=</span> <span class="s">&quot;0.1&quot;</span>
+
+<span class="c1">// scala version</span>
+<span class="n">scalaVersion</span> <span class="o">:=</span> <span class="s">&quot;2.11.12&quot;</span>
+
+<span class="nc">EclipseKeys</span><span class="o">.</span><span class="n">withSource</span> <span class="o">:=</span> <span class="kc">true</span>
+
+<span class="c1">// scala plugins dependencies</span>
+<span class="n">libraryDependencies</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>
+  <span class="s">&quot;com.github.spinalhdl&quot;</span> <span class="o">%</span> <span class="s">&quot;spinalhdl-core_2.11&quot;</span> <span class="o">%</span> <span class="s">&quot;1.3.8&quot;</span><span class="o">,</span>
+  <span class="s">&quot;com.github.spinalhdl&quot;</span> <span class="o">%</span> <span class="s">&quot;spinalhdl-lib_2.11&quot;</span> <span class="o">%</span> <span class="s">&quot;1.3.8&quot;</span>
+<span class="o">)</span>
+
+<span class="c1">// changing the src folder for compile and test code</span>
+<span class="n">scalaSource</span> <span class="n">in</span> <span class="nc">Compile</span> <span class="o">:=</span> <span class="n">baseDirectory</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="s">&quot;src&quot;</span><span class="o">/</span> <span class="s">&quot;hardware&quot;</span> <span class="o">/</span> <span class="s">&quot;scala&quot;</span>
+<span class="n">scalaSource</span> <span class="n">in</span> <span class="nc">Test</span>    <span class="o">:=</span> <span class="n">baseDirectory</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="s">&quot;src&quot;</span> <span class="o">/</span> <span class="s">&quot;test&quot;</span> <span class="o">/</span> <span class="s">&quot;scala&quot;</span>
+
+<span class="c1">// For allowing Simulation fork tasks</span>
+<span class="n">fork</span> <span class="o">:=</span> <span class="kc">true</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="sbt-commands">
-<h2><a class="toc-backref" href="#id6">SBT Commands</a><a class="headerlink" href="#sbt-commands" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">SBT Commands</a><a class="headerlink" href="#sbt-commands" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbt                     <span class="c1"># enter sbt shell</span>
 sbt clean               <span class="c1"># clean repo from sbt generated files</span>
 sbt compile             <span class="c1"># compiles all code in hardware/scala</span>
@@ -570,7 +601,7 @@ sbt run                 <span class="c1"># run all compiled code</span>
 </div>
 </div>
 <div class="section" id="add-submodule-to-project">
-<h2><a class="toc-backref" href="#id7">Add Submodule to Project</a><a class="headerlink" href="#add-submodule-to-project" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Add Submodule to Project</a><a class="headerlink" href="#add-submodule-to-project" title="Permalink to this headline">¶</a></h2>
 <p>Need to be in the <code class="docutils literal notranslate"><span class="pre">ext/</span></code> folder</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git submodule add -b &lt;branch&gt; &lt;url&gt; ext
 </pre></div>
