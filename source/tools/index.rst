@@ -23,6 +23,7 @@ Internet
 ========
   * Madsonic :doc:`Wiki </os/linux/tools/subsonic>` and `Official <https://www.madsonic.org>`_ |linux|
   * X11VNC :doc:`Wiki </os/linux/tools/vnc>` |linux|
+  * qBitTorrent :doc:`Wiki </tools/bittorrent>` |linux| |mac| |win|
 
 Commandline
 ===========

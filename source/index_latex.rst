@@ -17,6 +17,7 @@
    tools/sphinx/index
    tools/sublimetext/index
    tools/virtualbox/index
+   tools/bittorrent/index
 
    coding/ahk/index
    coding/python/index
