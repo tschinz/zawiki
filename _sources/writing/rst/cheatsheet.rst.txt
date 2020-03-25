@@ -283,6 +283,59 @@ Image Placement
 
    Caption of figure
 
+Side-by-Side Images
+-------------------
+
+Images can be displayed side by side with the help of a list table
+
+.. code-block:: ReST
+
+   .. list-table::
+
+      * - .. figure:: img/logo.*
+             :align: center
+             :alt: logo 1
+             :width: 200px
+
+             Logo Text 1
+
+        - .. figure:: img/logo.*
+             :align: center
+             :alt: logo 2
+             :width: 200px
+
+             Logo Text 2
+
+        - .. figure:: img/logo.*
+             :align: center
+             :alt: logo 3
+             :width: 200px
+
+             Logo Text 3
+
+.. list-table::
+
+   * - .. figure:: img/logo.*
+          :align: center
+          :alt: logo 1
+          :width: 200px
+
+          Logo Text 1
+
+     - .. figure:: img/logo.*
+          :align: center
+          :alt: logo 2
+          :width: 200px
+
+          Logo Text 2
+
+     - .. figure:: img/logo.*
+          :align: center
+          :alt: logo 3
+          :width: 200px
+
+          Logo Text 3
+
 Inline Images
 -------------
 For inline images to work, a substitution needs to be made

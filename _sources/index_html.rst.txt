@@ -36,6 +36,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    tools/sphinx/index
    tools/sublimetext/index
    tools/virtualbox/index
+   tools/bittorrent/index
 
 .. toctree::
    :hidden:
