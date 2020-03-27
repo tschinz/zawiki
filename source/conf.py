@@ -115,13 +115,8 @@ html_favicon = 'img/favicon.png'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = [
-    'css/copybutton.css',
-]
-
 # Copybutton image path
 copybutton_image_path = 'img/copybutton.svg'
-
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -204,7 +199,8 @@ html_theme_options = {
 
 html_context = {
     'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        '_static/css/theme_overrides.css',  # override wide tables in RTD theme
+        '_static/css/copy_button.css',      # override copybutton on code-block
         ],
     "display_github": True,
     'github_user': 'tschinz',
