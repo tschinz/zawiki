@@ -15,15 +15,11 @@ My Extension list
    jupyter labextension install @jupyter-widgets/jupyterlab-manager
    jupyter labextension install @jupyterlab/statusbar-extension
    jupyter labextension install @jupyterlab/geojson-extension
-   jupyter labextension install @jupyterlab/git
-   pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg=jupyterlab_git
-   jupyter serverextension enable --py jupyterlab_git --sys-prefix
    jupyter labextension install @jupyterlab/plotly-extension
    jupyter labextension install @jupyterlab/toc
    jupyter labextension install @deathbeds/jupyterlab_graphviz
    jupyter labextension install @ryantam626/jupyterlab_sublime
    jupyter labextension install jupyter-matplotlib
-   jupyter labextension install jupyterlab_bokeh
    jupyter labextension install @mflevine/jupyterlab_html
    jupyter labextension install jupyterlab-drawio
    jupyter labextension install jupyterlab-flake8
@@ -38,9 +34,7 @@ All in one install
 .. code-block:: bash
    :linenos:
 
-   jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib jupyterlab_bokeh @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
-   pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg=jupyterlab_git
-   jupyter serverextension enable --py jupyterlab_git --sys-prefix
+   jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
 
 Add install R to jupyter
 ------------------------

@@ -40,7 +40,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Pandoc" href="../pandoc/index.html" />
@@ -71,7 +72,7 @@
             
             
               <div class="version">
-                v0.11-26-g2a3e33a
+                v0.11-27-g2a6e4d6
               </div>
             
           
@@ -500,22 +501,14 @@
 12
 13
 14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @jupyterlab/statusbar-extension
 jupyter labextension install @jupyterlab/geojson-extension
-jupyter labextension install @jupyterlab/git
-pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg<span class="o">=</span>jupyterlab_git
-jupyter serverextension <span class="nb">enable</span> --py jupyterlab_git --sys-prefix
 jupyter labextension install @jupyterlab/plotly-extension
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @deathbeds/jupyterlab_graphviz
 jupyter labextension install @ryantam626/jupyterlab_sublime
 jupyter labextension install jupyter-matplotlib
-jupyter labextension install jupyterlab_bokeh
 jupyter labextension install @mflevine/jupyterlab_html
 jupyter labextension install jupyterlab-drawio
 jupyter labextension install jupyterlab-flake8
@@ -527,11 +520,7 @@ jupyter labextension install @lckr/jupyterlab_variableinspector
 </td></tr></table></div>
 <div class="section" id="all-in-one-install">
 <h3><a class="toc-backref" href="#id2">All in one install</a><a class="headerlink" href="#all-in-one-install" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib jupyterlab_bokeh @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
-pip install -e git+https://github.com/jupyterlab/jupyterlab-git.git#egg<span class="o">=</span>jupyterlab_git
-jupyter serverextension <span class="nb">enable</span> --py jupyterlab_git --sys-prefix
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
 </pre></div>
 </td></tr></table></div>
 </div>
