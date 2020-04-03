@@ -14,7 +14,6 @@ My Extension list
 
    jupyter labextension install @jupyter-widgets/jupyterlab-manager
    jupyter labextension install @jupyterlab/statusbar-extension
-   jupyter labextension install @jupyterlab/geojson-extension
    jupyter labextension install @jupyterlab/plotly-extension
    jupyter labextension install @jupyterlab/toc
    jupyter labextension install @deathbeds/jupyterlab_graphviz
@@ -23,10 +22,32 @@ My Extension list
    jupyter labextension install @mflevine/jupyterlab_html
    jupyter labextension install jupyterlab-drawio
    jupyter labextension install jupyterlab-flake8
-   # jupyter labextension install jupyterlab_nbmetadata
    jupyter labextension install jupyterlab_hidecode
-   jupyter labextension install @krassowski/jupyterlab_go_to_definition
    jupyter labextension install @lckr/jupyterlab_variableinspector
+   jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+One Liner
+
+.. code-block:: bash
+
+
+IDE Features
+------------
+nbdev adds jupyter with the follwoing features:
+
+* a variable explorer, a list of breakpoints and a source preview
+* the possibility to navigate the call stack (next line, step in, step out etc.)
+* the ability to set breakpoints intuitively, next to the line of interest
+* flags to indicate where the current execution has stopped
+
+.. code-block:: bash
+   :linenos:
+
+   pip install nbdev
+   conda install xeus-python -c conda-forge
+   pip install jupyter_server
+   jupyter labextension install @jupyterlab/debugger
+
 
 All in one install
 ------------------
@@ -34,7 +55,8 @@ All in one install
 .. code-block:: bash
    :linenos:
 
-   jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
+   jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8 jupyterlab_hidecode @lckr/jupyterlab_variableinspector @jupyter-widgets/jupyterlab-manager
+
 
 Add install R to jupyter
 ------------------------
@@ -78,12 +100,13 @@ Install python Libraries
    pip install pyflakes
    pip install nbconvert
    pip install watermark
+   pip install sty
 
 **oneline**
 
 .. code-block:: bash
 
-   pip install pixiedust SchemDraw nbwavedrom flake8 pyflakes nbconvert graphviz
+   pip install pixiedust SchemDraw nbwavedrom flake8 pyflakes nbconvert graphviz watermark
 
 Problems
 ========

@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                v0.11-27-g2a6e4d6
+                v0.11-28-g0d0aab3
               </div>
             
           
@@ -463,25 +463,26 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#my-extension-list" id="id1">My Extension list</a></p>
 <ul>
-<li><p><a class="reference internal" href="#all-in-one-install" id="id2">All in one install</a></p></li>
-<li><p><a class="reference internal" href="#add-install-r-to-jupyter" id="id3">Add install R to jupyter</a></p></li>
-<li><p><a class="reference internal" href="#add-install-pandoc-and-inkscape-to-conda" id="id4">Add install pandoc and inkscape to conda</a></p></li>
+<li><p><a class="reference internal" href="#ide-features" id="id2">IDE Features</a></p></li>
+<li><p><a class="reference internal" href="#all-in-one-install" id="id3">All in one install</a></p></li>
+<li><p><a class="reference internal" href="#add-install-r-to-jupyter" id="id4">Add install R to jupyter</a></p></li>
+<li><p><a class="reference internal" href="#add-install-pandoc-and-inkscape-to-conda" id="id5">Add install pandoc and inkscape to conda</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#install-python-additional-stuff" id="id5">Install Python Additional Stuff</a></p>
+<li><p><a class="reference internal" href="#install-python-additional-stuff" id="id6">Install Python Additional Stuff</a></p>
 <ul>
-<li><p><a class="reference internal" href="#graphviz" id="id6">Graphviz</a></p></li>
-<li><p><a class="reference internal" href="#install-python-libraries" id="id7">Install python Libraries</a></p></li>
+<li><p><a class="reference internal" href="#graphviz" id="id7">Graphviz</a></p></li>
+<li><p><a class="reference internal" href="#install-python-libraries" id="id8">Install python Libraries</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#problems" id="id8">Problems</a></p>
+<li><p><a class="reference internal" href="#problems" id="id9">Problems</a></p>
 <ul>
-<li><p><a class="reference internal" href="#anaconda-navigator-not-starting" id="id9">Anaconda Navigator not starting</a></p></li>
+<li><p><a class="reference internal" href="#anaconda-navigator-not-starting" id="id10">Anaconda Navigator not starting</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#install-plotly-and-plotly-express" id="id10">Install Plotly and Plotly Express</a></p></li>
-<li><p><a class="reference internal" href="#better-pdf-export" id="id11">Better PDF Export</a></p></li>
-<li><p><a class="reference internal" href="#enable-https" id="id12">Enable HTTPS</a></p></li>
+<li><p><a class="reference internal" href="#install-plotly-and-plotly-express" id="id11">Install Plotly and Plotly Express</a></p></li>
+<li><p><a class="reference internal" href="#better-pdf-export" id="id12">Better PDF Export</a></p></li>
+<li><p><a class="reference internal" href="#enable-https" id="id13">Enable HTTPS</a></p></li>
 </ul>
 </div>
 <p>see also <a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter config</a></p>
@@ -499,11 +500,8 @@
 10
 11
 12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @jupyterlab/statusbar-extension
-jupyter labextension install @jupyterlab/geojson-extension
 jupyter labextension install @jupyterlab/plotly-extension
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @deathbeds/jupyterlab_graphviz
@@ -512,26 +510,48 @@ jupyter labextension install jupyter-matplotlib
 jupyter labextension install @mflevine/jupyterlab_html
 jupyter labextension install jupyterlab-drawio
 jupyter labextension install jupyterlab-flake8
-<span class="c1"># jupyter labextension install jupyterlab_nbmetadata</span>
 jupyter labextension install jupyterlab_hidecode
-jupyter labextension install @krassowski/jupyterlab_go_to_definition
 jupyter labextension install @lckr/jupyterlab_variableinspector
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
 </pre></div>
 </td></tr></table></div>
+<p>One Liner</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="section" id="ide-features">
+<h3><a class="toc-backref" href="#id2">IDE Features</a><a class="headerlink" href="#ide-features" title="Permalink to this headline">¶</a></h3>
+<p>nbdev adds jupyter with the follwoing features:</p>
+<ul class="simple">
+<li><p>a variable explorer, a list of breakpoints and a source preview</p></li>
+<li><p>the possibility to navigate the call stack (next line, step in, step out etc.)</p></li>
+<li><p>the ability to set breakpoints intuitively, next to the line of interest</p></li>
+<li><p>flags to indicate where the current execution has stopped</p></li>
+</ul>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install nbdev
+conda install xeus-python -c conda-forge
+pip install jupyter_server
+jupyter labextension install @jupyterlab/debugger
+</pre></div>
+</td></tr></table></div>
+</div>
 <div class="section" id="all-in-one-install">
-<h3><a class="toc-backref" href="#id2">All in one install</a><a class="headerlink" href="#all-in-one-install" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @lckr/jupyterlab_variableinspector @krassowski/jupyterlab_go_to_definition @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/geojson-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz jupyterlab_hidecode @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8
+<h3><a class="toc-backref" href="#id3">All in one install</a><a class="headerlink" href="#all-in-one-install" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8 jupyterlab_hidecode @lckr/jupyterlab_variableinspector @jupyter-widgets/jupyterlab-manager
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="section" id="add-install-r-to-jupyter">
-<h3><a class="toc-backref" href="#id3">Add install R to jupyter</a><a class="headerlink" href="#add-install-r-to-jupyter" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Add install R to jupyter</a><a class="headerlink" href="#add-install-r-to-jupyter" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c r r-essentials
 </pre></div>
 </div>
 </div>
 <div class="section" id="add-install-pandoc-and-inkscape-to-conda">
-<h3><a class="toc-backref" href="#id4">Add install pandoc and inkscape to conda</a><a class="headerlink" href="#add-install-pandoc-and-inkscape-to-conda" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Add install pandoc and inkscape to conda</a><a class="headerlink" href="#add-install-pandoc-and-inkscape-to-conda" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>conda install -c conda-forge pandoc
 conda install -c conda-forge inkscape
@@ -540,9 +560,9 @@ conda install -c conda-forge inkscape
 </div>
 </div>
 <div class="section" id="install-python-additional-stuff">
-<h2><a class="toc-backref" href="#id5">Install Python Additional Stuff</a><a class="headerlink" href="#install-python-additional-stuff" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Install Python Additional Stuff</a><a class="headerlink" href="#install-python-additional-stuff" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="graphviz">
-<h3><a class="toc-backref" href="#id6">Graphviz</a><a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Graphviz</a><a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h3>
 <p>Install Graphviz from <a class="reference external" href="https://graphviz.gitlab.io/download/">https://graphviz.gitlab.io/download/</a>
 put Graphviz/bin in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install graphviz
@@ -550,32 +570,34 @@ put Graphviz/bin in your <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <div class="section" id="install-python-libraries">
-<h3><a class="toc-backref" href="#id7">Install python Libraries</a><a class="headerlink" href="#install-python-libraries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Install python Libraries</a><a class="headerlink" href="#install-python-libraries" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install pixiedust
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install pixiedust
 pip install SchemDraw
 pip install nbwavedrom
 pip install flake8
 pip install pyflakes
 pip install nbconvert
 pip install watermark
+pip install sty
 </pre></div>
 </td></tr></table></div>
 <p><strong>oneline</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pixiedust SchemDraw nbwavedrom flake8 pyflakes nbconvert graphviz
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pixiedust SchemDraw nbwavedrom flake8 pyflakes nbconvert graphviz watermark
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="problems">
-<h2><a class="toc-backref" href="#id8">Problems</a><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Problems</a><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="anaconda-navigator-not-starting">
-<h3><a class="toc-backref" href="#id9">Anaconda Navigator not starting</a><a class="headerlink" href="#anaconda-navigator-not-starting" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Anaconda Navigator not starting</a><a class="headerlink" href="#anaconda-navigator-not-starting" title="Permalink to this headline">¶</a></h3>
 <p>When starting anaconda-navigator produces the follwowing error.</p>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -626,13 +648,13 @@ anaconda-navigator.exe
 </div>
 </div>
 <div class="section" id="install-plotly-and-plotly-express">
-<h2><a class="toc-backref" href="#id10">Install Plotly and Plotly Express</a><a class="headerlink" href="#install-plotly-and-plotly-express" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id11">Install Plotly and Plotly Express</a><a class="headerlink" href="#install-plotly-and-plotly-express" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c plotly plotly_express plotly-orca
 </pre></div>
 </div>
 </div>
 <div class="section" id="better-pdf-export">
-<h2><a class="toc-backref" href="#id11">Better PDF Export</a><a class="headerlink" href="#better-pdf-export" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Better PDF Export</a><a class="headerlink" href="#better-pdf-export" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo apt-get install texlive-xetex
@@ -642,7 +664,7 @@ pip install cite2c
 </td></tr></table></div>
 </div>
 <div class="section" id="enable-https">
-<h2><a class="toc-backref" href="#id12">Enable HTTPS</a><a class="headerlink" href="#enable-https" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Enable HTTPS</a><a class="headerlink" href="#enable-https" title="Permalink to this headline">¶</a></h2>
 <p>See: <a class="reference external" href="https://juno.sh/ssl-self-signed-cert/">https://juno.sh/ssl-self-signed-cert/</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># Create Directory Structure</span>
