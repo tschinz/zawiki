@@ -12,13 +12,14 @@ stages:
 
 install:
   - echo "Install additional packages"
-  - pip install -I sphinx==2.3.1
-  - pip install sphinx-rtd-theme
-  - pip install sphinxcontrib-wavedrom
-  - pip install sphinxcontrib-plantuml
-  - pip install recommonmark
-  - pip install sphinxemoji
-  - pip install sphinx-copybutton
+  #- pip install -I sphinx==2.3.1
+  - pip install -U sphinx
+  - pip install -U sphinx-rtd-theme
+  - pip install -U sphinxcontrib-wavedrom
+  - pip install -U sphinxcontrib-plantuml
+  - pip install -U recommonmark
+  - pip install -U sphinxemoji
+  - pip install -U sphinx-copybutton
   - sudo apt-get update
   - echo "Install build-essential"
   - sudo apt-get install -y build-essential
