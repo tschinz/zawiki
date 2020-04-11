@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                v0.11-30-g7307413
+                v0.11-31-g22f58f4
               </div>
             
           
@@ -469,10 +469,14 @@
 <li><p><a class="reference internal" href="#class-diagram" id="id3">Class Diagram</a></p></li>
 <li><p><a class="reference internal" href="#activity-diagram" id="id4">Activity Diagram</a></p></li>
 <li><p><a class="reference internal" href="#mindmaps" id="id5">MindMaps</a></p></li>
+<li><p><a class="reference internal" href="#wbs-work-breakdown-structure" id="id6">WBS Work Breakdown Structure</a></p></li>
+<li><p><a class="reference internal" href="#gantt-chart" id="id7">GANTT Chart</a></p></li>
+<li><p><a class="reference internal" href="#timing-diagram" id="id8">Timing Diagram</a></p></li>
 </ul>
 </div>
 <ul class="simple">
-<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf">Wavedrom Paper</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf">PlantUML Reference Guide</a></p></li>
+<li><p><a class="reference external" href="https://plantuml.com/">PlantUML Webpage</a></p></li>
 </ul>
 <div class="section" id="sequence-diagram">
 <h2><a class="toc-backref" href="#id1">Sequence Diagram</a><a class="headerlink" href="#sequence-diagram" title="Permalink to this headline">¶</a></h2>
@@ -653,6 +657,57 @@ endif
 --- Windows 8
 --- Windows 10
 &#64;endmindmap"/>
+</p>
+</div>
+<div class="section" id="wbs-work-breakdown-structure">
+<h2><a class="toc-backref" href="#id6">WBS Work Breakdown Structure</a><a class="headerlink" href="#wbs-work-breakdown-structure" title="Permalink to this headline">¶</a></h2>
+<p class="plantuml">
+<img src="../../_images/plantuml-2d928b1cc1c09e0777bee0581dfae533880354a7.png" alt="&#64;startwbs
+* Business Process Modelling WBS
+** Launch the project
+*** Complete Stakeholder Research
+*** Initial Implementation Plan
+** Design phase
+*** Model of AsIs Processes Completed
+**** Model of AsIs Processes Completed1
+**** Model of AsIs Processes Completed2
+*** Measure AsIs performance metrics
+*** Identify Quick Wins
+** Complete innovate phase
+&#64;endwbs"/>
+</p>
+</div>
+<div class="section" id="gantt-chart">
+<h2><a class="toc-backref" href="#id7">GANTT Chart</a><a class="headerlink" href="#gantt-chart" title="Permalink to this headline">¶</a></h2>
+<p class="plantuml">
+<img src="../../_images/plantuml-94fe03c8876f936bf9bce902ef58edc98c0c8114.png" alt="&#64;startuml
+project starts the 2020/05/01
+saturday are closed
+sunday are closed
+Project starts the 1th of may 2020
+[Test prototype] lasts 10 days
+[Prototype completed] happens at [Test prototype]'s end
+[Setup assembly line] lasts 12 days
+[Setup assembly line] starts at [Test prototype]'s end
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="timing-diagram">
+<h2><a class="toc-backref" href="#id8">Timing Diagram</a><a class="headerlink" href="#timing-diagram" title="Permalink to this headline">¶</a></h2>
+<p class="plantuml">
+<img src="../../_images/plantuml-229796a4435d9f3a995023d55b06d85071ef972a.png" alt="&#64;startuml
+clock clk with period 1
+binary &quot;Enable&quot; as EN
+
+&#64;0
+EN is low
+
+&#64;5
+EN is high
+
+&#64;10
+EN is low
+&#64;enduml"/>
 </p>
 </div>
 </div>
