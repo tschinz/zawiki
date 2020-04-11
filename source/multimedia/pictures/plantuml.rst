@@ -9,6 +9,8 @@ PlantUml
 
 .. contents:: :local:
 
+* :pdfviewer:`Wavedrom Paper <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
+
 Sequence Diagram
 ================
 
