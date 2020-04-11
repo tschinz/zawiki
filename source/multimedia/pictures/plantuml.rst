@@ -9,7 +9,8 @@ PlantUml
 
 .. contents:: :local:
 
-* :pdfviewer:`Wavedrom Paper <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
+* :pdfviewer:`PlantUML Reference Guide <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
+* `PlantUML Webpage <https://plantuml.com/>`_
 
 Sequence Diagram
 ================
@@ -198,3 +199,57 @@ MindMaps
    --- Windows 8
    --- Windows 10
    @endmindmap
+
+WBS Work Breakdown Structure
+============================
+
+.. uml::
+
+   @startwbs
+   * Business Process Modelling WBS
+   ** Launch the project
+   *** Complete Stakeholder Research
+   *** Initial Implementation Plan
+   ** Design phase
+   *** Model of AsIs Processes Completed
+   **** Model of AsIs Processes Completed1
+   **** Model of AsIs Processes Completed2
+   *** Measure AsIs performance metrics
+   *** Identify Quick Wins
+   ** Complete innovate phase
+   @endwbs
+
+GANTT Chart
+===========
+
+.. uml::
+
+   @startuml
+   project starts the 2020/05/01
+   saturday are closed
+   sunday are closed
+   Project starts the 1th of may 2020
+   [Test prototype] lasts 10 days
+   [Prototype completed] happens at [Test prototype]'s end
+   [Setup assembly line] lasts 12 days
+   [Setup assembly line] starts at [Test prototype]'s end
+   @enduml
+
+Timing Diagram
+==============
+
+.. uml::
+
+   @startuml
+   clock clk with period 1
+   binary "Enable" as EN
+
+   @0
+   EN is low
+
+   @5
+   EN is high
+
+   @10
+   EN is low
+   @enduml
