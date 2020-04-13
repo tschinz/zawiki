@@ -11,6 +11,95 @@ PlantUml
 
 * :pdfviewer:`PlantUML Reference Guide <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
 * `PlantUML Webpage <https://plantuml.com/>`_
+* `PlantUML Ashley Doc <https://plantuml-documentation.readthedocs.io/en/latest/>`_
+* `PlantText Webpage <https://planttext.com/>`_
+
+Skinparam
+=========
+With the `skinparam` you can change the feel and design of the whole Diagram
+
+Shadows
+-------
+
+.. code-blocks::
+
+   skinparam shadowing false
+
+Black and White
+---------------
+
+.. code-blocks::
+
+   skinparam monochrome true
+
+.. uml::
+
+   @startuml
+
+   skinparam monochrome true
+   skinparam shadowing false
+
+   actor User
+   participant "First Class" as A
+   participant "Second Class" as B
+   participant "Last Class" as C
+
+   User -> A: DoWork
+   activate A
+
+   A -> B: Create Request
+   activate B
+
+   B -> C: DoWork
+   activate C
+   C --> B: WorkDone
+   destroy C
+
+   B --> A: Request Created
+   deactivate B
+
+   A --> User: Done
+   deactivate A
+
+   @enduml
+
+White and Black
+---------------
+
+.. code-blocks::
+
+   skinparam monochrome reverse
+
+.. uml::
+
+   @startuml
+
+   skinparam monochrome reverse
+   skinparam shadowing false
+
+   actor User
+   participant "First Class" as A
+   participant "Second Class" as B
+   participant "Last Class" as C
+
+   User -> A: DoWork
+   activate A
+
+   A -> B: Create Request
+   activate B
+
+   B -> C: DoWork
+   activate C
+   C --> B: WorkDone
+   destroy C
+
+   B --> A: Request Created
+   deactivate B
+
+   A --> User: Done
+   deactivate A
+
+   @enduml
 
 Sequence Diagram
 ================
