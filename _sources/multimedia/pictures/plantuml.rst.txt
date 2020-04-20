@@ -21,14 +21,14 @@ With the `skinparam` you can change the feel and design of the whole Diagram
 Shadows
 -------
 
-.. code-blocks::
+.. code-block::
 
    skinparam shadowing false
 
 Black and White
 ---------------
 
-.. code-blocks::
+.. code-block::
 
    skinparam monochrome true
 
@@ -66,7 +66,7 @@ Black and White
 White and Black
 ---------------
 
-.. code-blocks::
+.. code-block::
 
    skinparam monochrome reverse
 
