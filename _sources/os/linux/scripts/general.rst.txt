@@ -2,7 +2,7 @@
 Scripts
 =======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Here you can dowload some example files for Linux. It can be neither Scripts or Links or config files
 

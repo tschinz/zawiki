@@ -2,7 +2,7 @@
 VNC Remote Control
 ==================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 VNC is a protocol to let you connect and view the screen of your remote controlled PC. But this isn't very secure and should not be enabled over the internet but only locally. VNC is often used to hack Linux PC.

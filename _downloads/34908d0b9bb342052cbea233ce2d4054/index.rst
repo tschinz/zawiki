@@ -8,7 +8,7 @@ About
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 4
    :titlesonly:
    :caption: Content
 

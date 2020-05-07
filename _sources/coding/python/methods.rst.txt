@@ -2,7 +2,7 @@
 Some Methods
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Raw Input
 =========

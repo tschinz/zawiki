@@ -1,499 +1,261 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Commandline Commands &mdash; Zawiki</title>
-  
 
-  
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Commandline Commands &#8212; Zawiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/default.js"></script>
-        <script src="../../_static/wavedrom.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Installation" href="install.html" />
-    <link rel="prev" title="Catkin Tools" href="catkin_tools.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
+    <link rel="prev" title="Catkin Tools" href="catkin_tools.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-            <a href="../../index.html" class="icon icon-home"> Zawiki
-          
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-          
-            
-            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
-          
-          </a>
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
 
-          
-            
-            
-              <div class="version">
-                v0.11-33-g965aa10
-              </div>
-            
-          
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Operating Systems</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/cmdline.html">Commandline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/power.html">Power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/github.html">Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/install.html">Additional Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/bittorrent/index.html">Bittorrent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/bittorrent/intro.html">Introduction</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Coding</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vhdl/index.html">VHDL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/attributes.html">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/conversion.html">Conversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/file.html">File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/guidelines.html">Programming Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc.html">SDC Constraints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc_theory.html">SDC Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/intel_sdc_usage.html">SDC Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/osvvm.html">OSVVM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/simulation.html">Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/syntax.html">Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/synthesis.html">RTL Synthesis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/testbench.html">Testbench</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/time.html">Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vhdl/xilinx_ucf.html">Xilinx UCF Constraints</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/types.html">Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/gtkwave.html">GtkWave</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scala/libraries.html">Libraries</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">ROS - Robot Operating System</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html">Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="books-summary.html">Books summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="catkin_tools.html">Catkin Tools</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Commandline Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="launch.html">Launch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lidar-driver.html">Lidar Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages-ext.html">External Packages and Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rviz.html">RViz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tf2.html">Transform Frames</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../swift/index.html">Swift</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../swift/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/01_basics.html">Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/02_mvc.html">Programming Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/03_properties.html">Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/05_controlflow.html">Control Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/06_multithreading.html">Multithreading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/07_nsclasses.html">NS Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/081_uielements.html">UI Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/08_views.html">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/09_other.html">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Writing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Else</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/graphviz.html">Graphviz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
-</ul>
-</li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the wiki" aria-label="Search the wiki" autocomplete="off" >
+</form>
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+
+      <ul class="navbar-nav">
         
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Zawiki</a>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
         
-      </nav>
-
-
-      <div class="wy-nav-content">
         
-        <div class="rst-content">
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
         
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">ROS - Robot Operating System</a> &raquo;</li>
-        
-      <li>Commandline Commands</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            
-              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/ros/commands.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
+      </ul>
+    </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#commandline-variables" class="nav-link">Commandline Variables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#useful-commands" class="nav-link">Useful commands</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ros-tools" class="nav-link">ROS tools</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#roscore" class="nav-link">roscore</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosversion" class="nav-link">rosversion</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosparam" class="nav-link">rosparam</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosnode" class="nav-link">rosnode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rostopic" class="nav-link">rostopic</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#roslaunch" class="nav-link">roslaunch</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosrun" class="nav-link">rosrun</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosservice" class="nav-link">rosservice</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosbag" class="nav-link">rosbag</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosmsg" class="nav-link">rosmsg</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#other-commands" class="nav-link">Other Commands</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#catkin" class="nav-link">Catkin</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#create-package" class="nav-link">Create Package</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#build" class="nav-link">Build</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#install" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#python-modules" class="nav-link">Python modules</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#update-services-with-rqt" class="nav-link">Update services with RQT</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="commandline-commands">
 <h1>Commandline Commands<a class="headerlink" href="#commandline-commands" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#commandline-variables" id="id1">Commandline Variables</a></p></li>
-<li><p><a class="reference internal" href="#useful-commands" id="id2">Useful commands</a></p>
-<ul>
-<li><p><a class="reference internal" href="#ros-tools" id="id3">ROS tools</a></p>
-<ul>
-<li><p><a class="reference internal" href="#roscore" id="id4"><code class="docutils literal notranslate"><span class="pre">roscore</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosversion" id="id5"><code class="docutils literal notranslate"><span class="pre">rosversion</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosparam" id="id6"><code class="docutils literal notranslate"><span class="pre">rosparam</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosnode" id="id7"><code class="docutils literal notranslate"><span class="pre">rosnode</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rostopic" id="id8"><code class="docutils literal notranslate"><span class="pre">rostopic</span></code></a></p></li>
-<li><p><a class="reference internal" href="#roslaunch" id="id9"><code class="docutils literal notranslate"><span class="pre">roslaunch</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosrun" id="id10"><code class="docutils literal notranslate"><span class="pre">rosrun</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosservice" id="id11"><code class="docutils literal notranslate"><span class="pre">rosservice</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosbag" id="id12"><code class="docutils literal notranslate"><span class="pre">rosbag</span></code></a></p></li>
-<li><p><a class="reference internal" href="#rosmsg" id="id13"><code class="docutils literal notranslate"><span class="pre">rosmsg</span></code></a></p></li>
-<li><p><a class="reference internal" href="#other-commands" id="id14">Other Commands</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#catkin" id="id15">Catkin</a></p>
-<ul>
-<li><p><a class="reference internal" href="#create-package" id="id16">Create Package</a></p></li>
-<li><p><a class="reference internal" href="#build" id="id17">Build</a></p></li>
-<li><p><a class="reference internal" href="#install" id="id18">Install</a></p></li>
-<li><p><a class="reference internal" href="#python-modules" id="id19">Python modules</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#update-services-with-rqt" id="id20">Update services with RQT</a></p></li>
-</ul>
-</div>
 <div class="section" id="commandline-variables">
-<h2><a class="toc-backref" href="#id1">Commandline Variables</a><a class="headerlink" href="#commandline-variables" title="Permalink to this headline">¶</a></h2>
+<h2>Commandline Variables<a class="headerlink" href="#commandline-variables" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> $&lt;variable_name&gt;        <span class="c1"># To display value</span>
 
 ROS_DISTRO                   <span class="c1"># Distro name e.g. melodic</span>
@@ -509,25 +271,25 @@ ROS_VERSION                  <span class="c1"># ros version 1 or 2 e.g. 1</span>
 </div>
 </div>
 <div class="section" id="useful-commands">
-<h2><a class="toc-backref" href="#id2">Useful commands</a><a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
+<h2>Useful commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ros-tools">
-<h3><a class="toc-backref" href="#id3">ROS tools</a><a class="headerlink" href="#ros-tools" title="Permalink to this headline">¶</a></h3>
+<h3>ROS tools<a class="headerlink" href="#ros-tools" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="roscore">
-<h4><a class="toc-backref" href="#id4"><code class="docutils literal notranslate"><span class="pre">roscore</span></code></a><a class="headerlink" href="#roscore" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">roscore</span></code><a class="headerlink" href="#roscore" title="Permalink to this headline">¶</a></h4>
 <p>Launch ROS <code class="docutils literal notranslate"><span class="pre">master</span></code> core</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
 </pre></div>
 </div>
 </div>
 <div class="section" id="rosversion">
-<h4><a class="toc-backref" href="#id5"><code class="docutils literal notranslate"><span class="pre">rosversion</span></code></a><a class="headerlink" href="#rosversion" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosversion</span></code><a class="headerlink" href="#rosversion" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosversion -d                             <span class="c1"># Print ROS distro name</span>
 rosversion &lt;package_name&gt;                 <span class="c1"># Print package vrosnode</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="rosparam">
-<h4><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">rosparam</span></code></a><a class="headerlink" href="#rosparam" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosparam</span></code><a class="headerlink" href="#rosparam" title="Permalink to this headline">¶</a></h4>
 <p>Nodes use the parameter server to store and retrieve parameters at runtime.</p>
 <p><a class="reference external" href="http://wiki.ros.org/rosparam">http://wiki.ros.org/rosparam</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosparam list                             <span class="c1"># list parameter names</span>
@@ -540,7 +302,7 @@ rosparam load                             <span class="c1"># load parameter from
 </div>
 </div>
 <div class="section" id="rosnode">
-<h4><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">rosnode</span></code></a><a class="headerlink" href="#rosnode" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosnode</span></code><a class="headerlink" href="#rosnode" title="Permalink to this headline">¶</a></h4>
 <p>Work with <code class="docutils literal notranslate"><span class="pre">nodes</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosnode list                              <span class="c1"># list all nodes</span>
 rosnode ping /&lt;node_name&gt;                 <span class="c1"># check node connectivity</span>
@@ -551,7 +313,7 @@ rosnode <span class="nb">kill</span> /&lt;node_name&gt;                 <span cl
 </div>
 </div>
 <div class="section" id="rostopic">
-<h4><a class="toc-backref" href="#id8"><code class="docutils literal notranslate"><span class="pre">rostopic</span></code></a><a class="headerlink" href="#rostopic" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rostopic</span></code><a class="headerlink" href="#rostopic" title="Permalink to this headline">¶</a></h4>
 <p>Work with <code class="docutils literal notranslate"><span class="pre">topics</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic list                             <span class="c1"># list all topics</span>
 rostopic info /&lt;topic_name&gt;               <span class="c1"># print information about active topic</span>
@@ -566,14 +328,14 @@ rostopic hz /&lt;topic_name&gt;                 <span class="c1"># display publi
 </div>
 </div>
 <div class="section" id="roslaunch">
-<h4><a class="toc-backref" href="#id9"><code class="docutils literal notranslate"><span class="pre">roslaunch</span></code></a><a class="headerlink" href="#roslaunch" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">roslaunch</span></code><a class="headerlink" href="#roslaunch" title="Permalink to this headline">¶</a></h4>
 <p>To start a launch file which can contain multiple <code class="docutils literal notranslate"><span class="pre">nodes</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch &lt;ros_pkg_name&gt; &lt;launch_file_name&gt; <span class="c1"># Launch ros launch file</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="rosrun">
-<h4><a class="toc-backref" href="#id10"><code class="docutils literal notranslate"><span class="pre">rosrun</span></code></a><a class="headerlink" href="#rosrun" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosrun</span></code><a class="headerlink" href="#rosrun" title="Permalink to this headline">¶</a></h4>
 <p>To run a <code class="docutils literal notranslate"><span class="pre">node</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun &lt;ros_pkg_name&gt; &lt;node_name&gt;         <span class="c1"># Start a ros node</span>
 rosrun &lt;PACKAGE_NAME&gt;&lt;NODE_NAME&gt; __name:<span class="o">=</span>&lt;INSTANCE_NAME&gt; <span class="c1"># Start another instance of a node, the parameter *INSTANCE_NAME* can be whatever you want, but it must be unique.</span>
@@ -581,7 +343,7 @@ rosrun &lt;PACKAGE_NAME&gt;&lt;NODE_NAME&gt; __name:<span class="o">=</span>&lt;
 </div>
 </div>
 <div class="section" id="rosservice">
-<h4><a class="toc-backref" href="#id11"><code class="docutils literal notranslate"><span class="pre">rosservice</span></code></a><a class="headerlink" href="#rosservice" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosservice</span></code><a class="headerlink" href="#rosservice" title="Permalink to this headline">¶</a></h4>
 <p>Work with <code class="docutils literal notranslate"><span class="pre">services</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosservice list                           <span class="c1"># list active services</span>
 rosservice info &lt;service_name&gt;            <span class="c1"># print information about service</span>
@@ -590,7 +352,7 @@ rosservice uri &lt;service_name&gt;             <span class="c1"># print service
 </div>
 </div>
 <div class="section" id="rosbag">
-<h4><a class="toc-backref" href="#id12"><code class="docutils literal notranslate"><span class="pre">rosbag</span></code></a><a class="headerlink" href="#rosbag" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosbag</span></code><a class="headerlink" href="#rosbag" title="Permalink to this headline">¶</a></h4>
 <p>ROS offers the possibility to record the data published on topics into <code class="docutils literal notranslate"><span class="pre">bag</span></code> files :</p>
 <ol class="arabic">
 <li><p>create a directory to store the bag files:</p>
@@ -623,7 +385,7 @@ rosbag play cloud.bag
 </div>
 </div>
 <div class="section" id="rosmsg">
-<h4><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">rosmsg</span></code></a><a class="headerlink" href="#rosmsg" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">rosmsg</span></code><a class="headerlink" href="#rosmsg" title="Permalink to this headline">¶</a></h4>
 <p>Display information about ros <code class="docutils literal notranslate"><span class="pre">messages</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosmsg list                     <span class="c1"># List all messages</span>
 rosmsg info &lt;message_name&gt;      <span class="c1"># Show message description</span>
@@ -633,7 +395,7 @@ rosmsg packages &lt;package_name&gt;  <span class="c1"># List packages that cont
 </div>
 </div>
 <div class="section" id="other-commands">
-<h4><a class="toc-backref" href="#id14">Other Commands</a><a class="headerlink" href="#other-commands" title="Permalink to this headline">¶</a></h4>
+<h4>Other Commands<a class="headerlink" href="#other-commands" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd &lt;PKG_NAME&gt;                 <span class="c1"># move to the folder of the package</span>
 
 rosinstall &lt;PKG_NAME&gt;            <span class="c1"># install a ROS package</span>
@@ -653,13 +415,13 @@ evince frames.pdf                <span class="c1"># show with evince the generat
 </div>
 </div>
 <div class="section" id="catkin">
-<h3><a class="toc-backref" href="#id15">Catkin</a><a class="headerlink" href="#catkin" title="Permalink to this headline">¶</a></h3>
+<h3>Catkin<a class="headerlink" href="#catkin" title="Permalink to this headline">¶</a></h3>
 <p>More info:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://wiki.ros.org/catkin/Tutorials">http://wiki.ros.org/catkin/Tutorials</a></p></li>
 </ul>
 <div class="section" id="create-package">
-<h4><a class="toc-backref" href="#id16">Create Package</a><a class="headerlink" href="#create-package" title="Permalink to this headline">¶</a></h4>
+<h4>Create Package<a class="headerlink" href="#create-package" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li><p>new terminal</p></li>
 <li><p>navigate to the source folder of the catkin workspace : <code class="docutils literal notranslate"><span class="pre">.../catkin_ws/src</span></code></p></li>
@@ -676,7 +438,7 @@ note : <em>run_depend</em> has to be replaced by the <em>exec_depend</em></p></l
 </div>
 </div>
 <div class="section" id="build">
-<h4><a class="toc-backref" href="#id17">Build</a><a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h4>
+<h4>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cm
 catkin_make                                     <span class="c1"># build the whole workspace</span>
 catkin_make &lt;PKG_NAME&gt;                          <span class="c1"># build a single package</span>
@@ -684,14 +446,14 @@ catkin_make &lt;PKG_NAME&gt;                          <span class="c1"># build a
 </div>
 </div>
 <div class="section" id="install">
-<h4><a class="toc-backref" href="#id18">Install</a><a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
+<h4>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_make install                             <span class="c1"># installs all executables</span>
 catkin_make install &lt;PKG_NAME&gt;                  <span class="c1"># installs single executables</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="python-modules">
-<h4><a class="toc-backref" href="#id19">Python modules</a><a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h4>
+<h4>Python modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h4>
 <p>Tips :</p>
 <ul class="simple">
 <li><p>put the script in a folder called <em>scripts</em></p></li>
@@ -701,7 +463,7 @@ catkin_make install &lt;PKG_NAME&gt;                  <span class="c1"># install
 </div>
 </div>
 <div class="section" id="update-services-with-rqt">
-<h2><a class="toc-backref" href="#id20">Update services with RQT</a><a class="headerlink" href="#update-services-with-rqt" title="Permalink to this headline">¶</a></h2>
+<h2>Update services with RQT<a class="headerlink" href="#update-services-with-rqt" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>launch <em>RQT</em> from a new terminal : run <code class="docutils literal notranslate"><span class="pre">rqt</span></code></p></li>
 <li><p>Search for the plugin <em>Service Caller</em></p></li>
@@ -719,52 +481,23 @@ catkin_make install &lt;PKG_NAME&gt;                  <span class="c1"># install
         window.onload = init;
     </script>
 
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="install.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="catkin_tools.html" class="btn btn-neutral float-left" title="Catkin Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
     </div>
-  
 
-  <hr/>
-
-  <div role="contentinfo">
+    <script src="../../_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
     <p>
-        &copy; Copyright 2020 tschinz
-
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+  </body>
 </html>

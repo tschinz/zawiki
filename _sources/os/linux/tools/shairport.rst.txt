@@ -2,7 +2,7 @@
 Shairport
 =========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Linux can receive AirPlay audio using a program called Shairport. Shairport tries to emulate the Airport system of Apple. This version allows to stream music from a device e.g. Smartphone, Tablet, PC to the Airport Server which then play the music. The device need to be in the same Network.
 

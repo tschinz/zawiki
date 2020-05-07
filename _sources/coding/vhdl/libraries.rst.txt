@@ -2,7 +2,7 @@
 Libraries
 =========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Numeric Operations
 ==================

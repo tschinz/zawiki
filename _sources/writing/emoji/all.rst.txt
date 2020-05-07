@@ -2,7 +2,7 @@
 All Emoji
 =========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 People
 ======

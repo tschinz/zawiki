@@ -2,7 +2,7 @@
 HACK this documentation
 =======================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 If you want to add your page to this documentation you need to add your source file in the appropriate section.
 Every main section has its own folder structure and its own ``img/`` folder containing all images for this section.
@@ -21,7 +21,7 @@ If you want to add a new section, you need to specify in the :download:`main ind
    .. toctree::
       :hidden:
       :glob:
-      :maxdepth: 2
+      :maxdepth: 7
       :titlesonly:
       :caption: Content
 
@@ -55,11 +55,11 @@ So I need to create a folder named ``section/`` (name is not important), and in 
       :align: right
       :width: 150px
 
-   .. contents:: :local:
+   .. comments .. contents:: :local:
 
    .. toctree::
       :glob:
-      :maxdepth: 2
+      :maxdepth: 7
       :titlesonly:
       :caption: Content
 

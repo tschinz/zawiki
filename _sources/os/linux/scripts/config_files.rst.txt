@@ -2,7 +2,7 @@
 Config Files
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 * :config_repo:`My linux configfiles <tree/master/config/linux/server>`

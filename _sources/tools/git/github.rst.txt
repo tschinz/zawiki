@@ -2,7 +2,7 @@
 Github
 ======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Advanced Search
 ===============

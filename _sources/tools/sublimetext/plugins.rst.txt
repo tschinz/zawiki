@@ -2,7 +2,7 @@
 Packages
 ========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Packages are the plugins or extensions from SublimeText. On the webpage https://packagecontrol.io/ all available packages can be seen.
 

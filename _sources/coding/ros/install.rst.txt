@@ -2,7 +2,7 @@
 Installation
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 How to install ROS

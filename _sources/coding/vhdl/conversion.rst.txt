@@ -2,7 +2,7 @@
 Conversion
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Overview
 ========

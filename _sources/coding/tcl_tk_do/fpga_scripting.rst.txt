@@ -2,7 +2,7 @@
 FPGA Scripting
 ==============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Every FPGA Manufacturer has its own libraries for scripting their tools with tcl-tk scripts.
 

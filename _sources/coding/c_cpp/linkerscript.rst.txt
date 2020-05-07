@@ -2,7 +2,7 @@
 Linkerscript
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Overview
 ========

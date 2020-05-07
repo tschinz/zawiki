@@ -2,7 +2,7 @@
 Git General
 ===========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 .. figure:: img/git-transport.png
    :align: center

@@ -5,7 +5,7 @@
 How to use Sphinx Documentation
 ===============================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Sphinx Requirements
 ===================

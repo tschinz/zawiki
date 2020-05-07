@@ -2,7 +2,7 @@
 Settings
 ========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 * Config Repo :config_repo:`M< Settings Backup <tree/master/config/sublimetext>`.
 

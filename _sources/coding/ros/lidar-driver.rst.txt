@@ -2,7 +2,7 @@
 Lidar Driver
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Install the SDK
 ===============

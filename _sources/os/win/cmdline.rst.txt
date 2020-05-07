@@ -2,7 +2,7 @@
 Commandline
 ===========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Sample scripts can be found in the :config_repo:`config repo <tree/master/config/scripts/bat>`
 

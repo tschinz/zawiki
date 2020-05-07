@@ -8,7 +8,7 @@ Security
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 7
    :titlesonly:
    :caption: Content
 

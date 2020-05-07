@@ -6,7 +6,7 @@ Testbench
    :align: center
    :width: 600px
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Additional Documents
 ====================

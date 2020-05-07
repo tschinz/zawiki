@@ -2,7 +2,7 @@
 Introduction
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 AutoHotkey is a free, open source macro-creation and automation software utility which allows users to automate repetitive tasks. Any application user interface can be modified by AutoHotkey. It is driven by a custom scripting language called AHK that is aimed specifically at providing keyboard shortcuts or hotkeys.
 

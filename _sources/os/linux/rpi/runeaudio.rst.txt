@@ -6,7 +6,7 @@ Rune Audio
    :align: center
    :width: 300px
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 `Rune Audio <https://www.runeaudio.com/>`_ is a based on an Archlinux distribution. It is intended to be easy to setup and offers a wide variety of audio tools and supports many different DAC's.
 For the Raspberry Pi A+/B+ and 2 a preconfigured image is available with out of the box support for many DAC's.

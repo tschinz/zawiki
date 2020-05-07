@@ -2,7 +2,7 @@
 Coding Convention
 =================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Introduction
 ============

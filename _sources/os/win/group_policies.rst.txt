@@ -2,7 +2,7 @@
 Group Policies
 ==============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Modify Policies
 ===============

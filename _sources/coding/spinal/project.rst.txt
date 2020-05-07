@@ -2,7 +2,7 @@
 Project Files
 =============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Project Structure
 =================

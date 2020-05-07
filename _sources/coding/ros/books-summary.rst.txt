@@ -2,7 +2,7 @@
 Books summary
 ==============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Topics
 ======

@@ -2,7 +2,7 @@
 General Shell Commands
 ======================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Change permissions on type
 ==========================

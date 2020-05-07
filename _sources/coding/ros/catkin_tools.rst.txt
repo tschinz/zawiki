@@ -2,7 +2,7 @@
 Catkin Tools
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Catkin build system
 ===================

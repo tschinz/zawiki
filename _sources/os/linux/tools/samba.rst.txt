@@ -6,7 +6,7 @@ Samba
    :align: center
    :width: 150px
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Samba is useful for a creating a Network directory and share it with other PC, especially Windows.
 

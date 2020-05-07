@@ -2,7 +2,7 @@
 Commandline Commands
 ====================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Commandline Variables
 =====================

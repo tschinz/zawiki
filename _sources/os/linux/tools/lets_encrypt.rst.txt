@@ -2,7 +2,7 @@
 Let's Encrypt
 =============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Version
 =======

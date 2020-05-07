@@ -1,539 +1,336 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>SDC Usage &mdash; Zawiki</title>
-  
 
-  
-  
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SDC Usage &#8212; Zawiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/default.js"></script>
-        <script src="../../_static/wavedrom.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Libraries" href="libraries.html" />
-    <link rel="prev" title="SDC Theory" href="intel_sdc_theory.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
+    <link rel="prev" title="SDC Theory" href="intel_sdc_theory.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-            <a href="../../index.html" class="icon icon-home"> Zawiki
-          
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-          
-            
-            <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
-          
-          </a>
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
 
-          
-            
-            
-              <div class="version">
-                v0.11-33-g965aa10
-              </div>
-            
-          
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Operating Systems</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../os/linux/index.html">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/commandline/index.html">Commandline</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/cheatsheet.html">Cheatsheet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/crontab.html">Crontab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/dd.html">dd and ddfldd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/general.html">General Shell Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/network.html">Network</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/rsync.html">RSync</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/commandline/ssh.html">SSH</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/scripts/index.html">Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/config_files.html">Config Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/scripts/general.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/tools/index.html">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/apache.html">Apache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/hw_sensors.html">Hardware Sensors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/lets_encrypt.html">Let’s Encrypt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/raid.html">Raid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/samba.html">Samba</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/shairport.html">Shairport</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/subsonic.html">Subsonic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/systemd.html">Systemd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vim.html">VIM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vnc.html">VNC Remote Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/tools/vpn.html">VPN Virtual Private Network</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/ubuntu/index.html">Ubuntu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/install.html">Installation and Config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/ubuntu/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/rpi/index.html">Raspberry Pi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/runeaudio.html">Rune Audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/rpi/setup.html">Setup Rpi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/linux/filesystem/index.html">Filesystem</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/files.html">Important Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../os/linux/filesystem/folders.html">Folders</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../os/mac/index.html">Mac</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/geektool.html">Geektool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/keyboard.html">Keyboard Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/mac/macport.html">Macport</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../os/win/index.html">Windows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/cmdline.html">Commandline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/firewall.html">Firewall</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/group_policies.html">Group Policies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/power.html">Power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../os/win/registry_location.html">Registry</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Useful Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/git/index.html">Git</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/commands.html">Git Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/flow.html">Git Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/general.html">Git General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/github.html">Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/gitignore.html">.gitignore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/git/submodules.html">Git Submodules</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/anaconda/index.html">Anaconda</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/install.html">Additional Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/anaconda/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/jupyter/index.html">Jupyter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/common_functions.html">Common Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/extensions.html">Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/general.html">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/install_plotly_dash.html">Plotly Dash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/jupyter/installation.html">Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/pandoc/index.html">Pandoc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/pandoc/intro.html">Pandoc</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/sphinx/index.html">Sphinx Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sphinx/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/sublimetext/index.html">SublimeText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/plugins.html">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/sublimetext/settings.html">Settings</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/virtualbox/index.html">VirtualBox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/virtualbox/intro.html">Introduction</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/bittorrent/index.html">Bittorrent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/bittorrent/intro.html">Introduction</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Coding</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../ahk/index.html">AutoHotKey AHK</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/key_definitions.html">Key Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ahk/tips_tricks.html">Tips &amp; Tricks</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/docstring.html">Docstring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/flake8.html">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/general.html">Flake 8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/methods.html">Some Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/pip_general.html">PIP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/pyqt.html">PyQt4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/stdlib.html">Standart libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../regex/index.html">RegEx</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">VHDL</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="attributes.html">Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conversion.html">Conversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file.html">File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guidelines.html">Programming Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel_sdc_theory.html">SDC Theory</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SDC Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="osvvm.html">OSVVM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="synthesis.html">RTL Synthesis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testbench.html">Testbench</a></li>
-<li class="toctree-l2"><a class="reference internal" href="time.html">Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xilinx_ucf.html">Xilinx UCF Constraints</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tcl_tk_do/index.html">Tcl-Tk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/fpga_scripting.html">FPGA Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tcl_tk_do/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../spinal/index.html">Spinal HDL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/project.html">Project Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/types.html">Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spinal/tools/index.html">Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intro.html">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/gtkwave.html">GtkWave</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spinal/tools/intellij_idea.html">Intellij IDEA IDE</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../scala/index.html">Scala</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../scala/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scala/coding_convention.html">Coding Convention</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scala/libraries.html">Libraries</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../c_cpp/index.html">C / C++</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/executionframework.html">Execution Framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/linkerscript.html">Linkerscript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c_cpp/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../make/index.html">Make</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../make/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../make/examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../make/syntax.html">Syntax</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ros/index.html">ROS - Robot Operating System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ros/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/basics.html">Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/books-summary.html">Books summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/catkin_tools.html">Catkin Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/commands.html">Commandline Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/install.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/launch.html">Launch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/lidar-driver.html">Lidar Driver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/packages.html">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/packages-ext.html">External Packages and Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/rviz.html">RViz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros/tf2.html">Transform Frames</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../swift/index.html">Swift</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../swift/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/01_basics.html">Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/02_mvc.html">Programming Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/03_properties.html">Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/04_datastructures_methods.html">Data Structures &amp; Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/05_controlflow.html">Control Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/06_multithreading.html">Multithreading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/07_nsclasses.html">NS Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/081_uielements.html">UI Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/08_views.html">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../swift/09_other.html">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../licenses/index.html">Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/All_RIGHTS_RESERVED.html">All rights reserved</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/MIT.html">MIT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../licenses/WTFPL.html">WTFPL</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Writing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/latex/index.html">LaTeX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/latex/install.html">Installation LaTeX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/rst/index.html">ReStructuredText</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/rst/cheatsheet.html">RST and Sphinx Cheatsheet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/md/index.html">Markdown</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html">Github Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/md/md_github.html#h1">H1</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/emoji/index.html">Emoji</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/emoji/curated.html">Curated Emoji</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../writing/gitbook/index.html">GitBook</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../writing/gitbook/intro.html">Introduction</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Else</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../multimedia/index.html">Multimedia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/ascii_art.html">ASCII Art</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/graphviz.html">Graphviz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/icons.html">Icons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/plantuml.html">PlantUml</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/wavedrom.html">Wavedrom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/pictures/emoji/index.html">Emoji</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/all.html">All Emoji</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multimedia/pictures/emoji/curated.html">Curated Emoji</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/books.html">Book Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fileheaders.html">File Headers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/fonts.html">Fonts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/programmer_jokes.html">Programmer Jokes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/text/quotes.html">Inspirational Quotes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multimedia/videos/resolutions.html">Resolutions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../security/gnupg.html">GnuPg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../security/password.html">Password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../security/tor.html">Tor</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/about.html">About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/credits.html">Credits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/getting_started.html">How to use Sphinx Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/howtodocument.html">HACK this documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">License</a></li>
-</ul>
-</li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the wiki" aria-label="Search the wiki" autocomplete="off" >
+</form>
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+
+      <ul class="navbar-nav">
         
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Zawiki</a>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
         
-      </nav>
-
-
-      <div class="wy-nav-content">
         
-        <div class="rst-content">
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
         
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">VHDL</a> &raquo;</li>
-        
-      <li>SDC Usage</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            
-              <a href="https://github.com/tschinz/zawiki/blob/mastersource/coding/vhdl/intel_sdc_usage.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
+      </ul>
+    </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#general" class="nav-link">General</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#collections" class="nav-link">Collections</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#priorities" class="nav-link">Priorities</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#clock-constraints" class="nav-link">Clock Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#clock" class="nav-link">Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#generated-clock" class="nav-link">Generated Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#derive-pll-clocks" class="nav-link">Derive PLL clocks</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#automatic-clock-detection-creation" class="nav-link">Automatic Clock Detection & Creation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fpga-uncertainties-jitter-clock-networks" class="nav-link">FPGA Uncertainties (jitter, clock networks)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#virtual-clock-example" class="nav-link">Virtual Clock example</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#gated-clock" class="nav-link">Gated Clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#input-constraints" class="nav-link">Input Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#combinatorial-without-ff" class="nav-link">Combinatorial (without FF)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronous-inputs" class="nav-link">Synchronous Inputs</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#source-synchronous" class="nav-link">Source Synchronous</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sdr" class="nav-link">SDR</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#center-aligned-clock" class="nav-link">Center Aligned Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#direct-clocking" class="nav-link">Direct Clocking</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#pll-clocking" class="nav-link">PLL Clocking</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#edge-aligned-clock" class="nav-link">Edge Aligned Clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#data-input-constraints" class="nav-link">Data Input Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#t-co-relative-to-data" class="nav-link">T_{co} relative to data</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#t-co-relative-to-input-clock" class="nav-link">T_{co} relative to input clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#output-constraints" class="nav-link">Output Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronous-outputs" class="nav-link">Synchronous Outputs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#so-calculations" class="nav-link">SO Calculations</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#source-synchronous-outputs" class="nav-link">Source Synchronous Outputs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#sso-calculations" class="nav-link">SSO Calculations</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#false-path" class="nav-link">False Path</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#asynchronous-i-o-constraints" class="nav-link">Asynchronous I/O constraints</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#timing-exceptions-between-clock-domains" class="nav-link">Timing exceptions between clock domains</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronisation-done-through-a-dual-clock-dc-fifo" class="nav-link">Synchronisation done through a dual-clock DC_FIFO</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#clock-groups" class="nav-link">Clock groups</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#multicycle-paths" class="nav-link">Multicycle Paths</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="sdc-usage">
 <h1>SDC Usage<a class="headerlink" href="#sdc-usage" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/intel_fpga.svg"><img alt="../../_images/intel_fpga.svg" src="../../_images/intel_fpga.svg" width="150px" /></a>
 </div>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#general" id="id1">General</a></p>
-<ul>
-<li><p><a class="reference internal" href="#collections" id="id2">Collections</a></p></li>
-<li><p><a class="reference internal" href="#priorities" id="id3">Priorities</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#clock-constraints" id="id4">Clock Constraints</a></p>
-<ul>
-<li><p><a class="reference internal" href="#clock" id="id5">Clock</a></p></li>
-<li><p><a class="reference internal" href="#generated-clock" id="id6">Generated Clock</a></p></li>
-<li><p><a class="reference internal" href="#derive-pll-clocks" id="id7">Derive PLL clocks</a></p></li>
-<li><p><a class="reference internal" href="#automatic-clock-detection-creation" id="id8">Automatic Clock Detection &amp; Creation</a></p></li>
-<li><p><a class="reference internal" href="#fpga-uncertainties-jitter-clock-networks" id="id9">FPGA Uncertainties (jitter, clock networks)</a></p></li>
-<li><p><a class="reference internal" href="#virtual-clock-example" id="id10">Virtual Clock example</a></p></li>
-<li><p><a class="reference internal" href="#gated-clock" id="id11">Gated Clock</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#input-constraints" id="id12">Input Constraints</a></p>
-<ul>
-<li><p><a class="reference internal" href="#combinatorial-without-ff" id="id13">Combinatorial (without FF)</a></p></li>
-<li><p><a class="reference internal" href="#synchronous-inputs" id="id14">Synchronous Inputs</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#source-synchronous" id="id15">Source Synchronous</a></p>
-<ul>
-<li><p><a class="reference internal" href="#sdr" id="id16">SDR</a></p>
-<ul>
-<li><p><a class="reference internal" href="#center-aligned-clock" id="id17">Center Aligned Clock</a></p></li>
-<li><p><a class="reference internal" href="#direct-clocking" id="id18">Direct Clocking</a></p></li>
-<li><p><a class="reference internal" href="#pll-clocking" id="id19">PLL Clocking</a></p></li>
-<li><p><a class="reference internal" href="#edge-aligned-clock" id="id20">Edge Aligned Clock</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#data-input-constraints" id="id21">Data Input Constraints</a></p>
-<ul>
-<li><p><a class="reference internal" href="#t-co-relative-to-data" id="id22"><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to data</a></p></li>
-<li><p><a class="reference internal" href="#t-co-relative-to-input-clock" id="id23"><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to input clock</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#output-constraints" id="id24">Output Constraints</a></p>
-<ul>
-<li><p><a class="reference internal" href="#synchronous-outputs" id="id25">Synchronous Outputs</a></p>
-<ul>
-<li><p><a class="reference internal" href="#so-calculations" id="id26">SO Calculations</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#source-synchronous-outputs" id="id27">Source Synchronous Outputs</a></p>
-<ul>
-<li><p><a class="reference internal" href="#sso-calculations" id="id28">SSO Calculations</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#false-path" id="id29">False Path</a></p>
-<ul>
-<li><p><a class="reference internal" href="#asynchronous-i-o-constraints" id="id30">Asynchronous I/O constraints</a></p></li>
-<li><p><a class="reference internal" href="#timing-exceptions-between-clock-domains" id="id31">Timing exceptions between clock domains</a></p></li>
-<li><p><a class="reference internal" href="#synchronisation-done-through-a-dual-clock-dc-fifo" id="id32">Synchronisation done through a dual-clock DC_FIFO</a></p></li>
-<li><p><a class="reference internal" href="#clock-groups" id="id33">Clock groups</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#multicycle-paths" id="id34">Multicycle Paths</a></p></li>
-</ul>
-</div>
 <div class="section" id="general">
-<h2><a class="toc-backref" href="#id1">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="collections">
-<h3><a class="toc-backref" href="#id2">Collections</a><a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
+<h3>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
 <p>To find certain Cells, Pins, Nets or Ports Collections, there are Wildcard enabled search commands.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">get_clocks</span>
 <span class="nv">get_registers</span>
@@ -547,7 +344,7 @@
 </div>
 </div>
 <div class="section" id="priorities">
-<h3><a class="toc-backref" href="#id3">Priorities</a><a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h3>
+<h3>Priorities<a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Priority Order</p>
 <ul>
@@ -563,10 +360,10 @@
 </div>
 </div>
 <div class="section" id="clock-constraints">
-<h2><a class="toc-backref" href="#id4">Clock Constraints</a><a class="headerlink" href="#clock-constraints" title="Permalink to this headline">¶</a></h2>
+<h2>Clock Constraints<a class="headerlink" href="#clock-constraints" title="Permalink to this headline">¶</a></h2>
 <p>Two possible clocks: Clocks &amp; Generated Clocks</p>
 <div class="section" id="clock">
-<h3><a class="toc-backref" href="#id5">Clock</a><a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h3>
+<h3>Clock<a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h3>
 <p>Absolute or base clock (from Quartz internal or external)</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>create_clock [-name &lt;clock_name&gt;]                  \\ # clock name if not the same as signal_name
               -period &lt;time_in_ns&gt;                 \\ # period in ns or &quot;frequence&quot; e.g. &quot;50mhz&quot;
@@ -584,7 +381,7 @@
 </div>
 </div>
 <div class="section" id="generated-clock">
-<h3><a class="toc-backref" href="#id6">Generated Clock</a><a class="headerlink" href="#generated-clock" title="Permalink to this headline">¶</a></h3>
+<h3>Generated Clock<a class="headerlink" href="#generated-clock" title="Permalink to this headline">¶</a></h3>
 <p>Clocks derived from another clock (all other clocks) (PLL, clock divider, output clocks, ripple clocks)</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>create_generated_clock [-name &lt;clock_name&gt;]         \\ name in SDC namespace
                         -source &lt;master_pin&gt;        \\ clock derived by
@@ -605,7 +402,7 @@
 </div>
 </div>
 <div class="section" id="derive-pll-clocks">
-<h3><a class="toc-backref" href="#id7">Derive PLL clocks</a><a class="headerlink" href="#derive-pll-clocks" title="Permalink to this headline">¶</a></h3>
+<h3>Derive PLL clocks<a class="headerlink" href="#derive-pll-clocks" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>derived_pll_clocks                       \\ # Altera specific for all PLL generated clocks
                    [-create_base_clocks] \\ # generate create_clock constants for PLL input clocks
                    [-use_net_name]          # use net names as clock names
@@ -618,7 +415,7 @@
 </div>
 </div>
 <div class="section" id="automatic-clock-detection-creation">
-<h3><a class="toc-backref" href="#id8">Automatic Clock Detection &amp; Creation</a><a class="headerlink" href="#automatic-clock-detection-creation" title="Permalink to this headline">¶</a></h3>
+<h3>Automatic Clock Detection &amp; Creation<a class="headerlink" href="#automatic-clock-detection-creation" title="Permalink to this headline">¶</a></h3>
 <p>Not to use for final design. Default clock used = 1GHz.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>derive_clocks [-period &lt;time_in_ns&gt;]   # same use as with create_clock
               [-waveform {&lt;rise_time&gt; &lt;fall_time&gt;}] # same use as with create_clock
@@ -626,7 +423,7 @@
 </div>
 </div>
 <div class="section" id="fpga-uncertainties-jitter-clock-networks">
-<h3><a class="toc-backref" href="#id9">FPGA Uncertainties (jitter, clock networks)</a><a class="headerlink" href="#fpga-uncertainties-jitter-clock-networks" title="Permalink to this headline">¶</a></h3>
+<h3>FPGA Uncertainties (jitter, clock networks)<a class="headerlink" href="#fpga-uncertainties-jitter-clock-networks" title="Permalink to this headline">¶</a></h3>
 <p>3 Types of uncertainties:</p>
 <ul class="simple">
 <li><p>Intra-clock transfer : Transfer within single clock domain within FPGA</p></li>
@@ -654,7 +451,7 @@ set_clock_uncertainty [-setup | -hold]
 </div>
 </div>
 <div class="section" id="virtual-clock-example">
-<h3><a class="toc-backref" href="#id10">Virtual Clock example</a><a class="headerlink" href="#virtual-clock-example" title="Permalink to this headline">¶</a></h3>
+<h3>Virtual Clock example<a class="headerlink" href="#virtual-clock-example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">create_clock</span> <span class="o">-</span>period <span class="mi">10</span> <span class="o">-</span>name clk_in <span class="k">[</span><span class="nv">get_ports</span> <span class="k">{</span><span class="nv">clk_in</span><span class="k">}]</span>
 <span class="nv">create_clock</span> <span class="o">-</span>period <span class="mi">10</span> <span class="o">-</span>name virt_clk_in
 <span class="nv">set_input_delay</span> <span class="o">-</span>clock <span class="k">[</span><span class="nv">get_clocks</span> <span class="k">{</span><span class="nv">virt_clk_in</span><span class="k">}]</span> <span class="o">-</span>max <span class="mi">2</span> <span class="k">[</span><span class="nv">get_ports</span> <span class="k">{</span><span class="nv">data_in</span><span class="k">}]</span>
@@ -663,15 +460,15 @@ set_clock_uncertainty [-setup | -hold]
 </div>
 </div>
 <div class="section" id="gated-clock">
-<h3><a class="toc-backref" href="#id11">Gated Clock</a><a class="headerlink" href="#gated-clock" title="Permalink to this headline">¶</a></h3>
+<h3>Gated Clock<a class="headerlink" href="#gated-clock" title="Permalink to this headline">¶</a></h3>
 <p>An AND enable on the clock can serve to eliminate power consumption. All flip-flops use no energy without clock. But it violates synchronous design rules. It also uses a new Global Clock path for the Gated Clock.</p>
 </div>
 </div>
 <div class="section" id="input-constraints">
-<h2><a class="toc-backref" href="#id12">Input Constraints</a><a class="headerlink" href="#input-constraints" title="Permalink to this headline">¶</a></h2>
+<h2>Input Constraints<a class="headerlink" href="#input-constraints" title="Permalink to this headline">¶</a></h2>
 <p>2 Types of Combinatorial Interfaces and Synchronous Inputs.</p>
 <div class="section" id="combinatorial-without-ff">
-<h3><a class="toc-backref" href="#id13">Combinatorial (without FF)</a><a class="headerlink" href="#combinatorial-without-ff" title="Permalink to this headline">¶</a></h3>
+<h3>Combinatorial (without FF)<a class="headerlink" href="#combinatorial-without-ff" title="Permalink to this headline">¶</a></h3>
 <p>Absolute maximum and minimum time between points.
 Signals traversing FPGA and internal signals</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>set_max_delay [-from &lt;names&gt;] \\
@@ -695,7 +492,7 @@ set_min_delay [-from &lt;names&gt;] \\
 </div>
 </div>
 <div class="section" id="synchronous-inputs">
-<h3><a class="toc-backref" href="#id14">Synchronous Inputs</a><a class="headerlink" href="#synchronous-inputs" title="Permalink to this headline">¶</a></h3>
+<h3>Synchronous Inputs<a class="headerlink" href="#synchronous-inputs" title="Permalink to this headline">¶</a></h3>
 <p>Synchronous Inputs where one external clock is used between multiple devices.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>set_input_delay [-max] \\ # max time to arrive and still meet Tsu (input setup time)
                 [-min]    # min time to stay active and still meet Th (input hold time)
@@ -717,7 +514,7 @@ set_min_delay [-from &lt;names&gt;] \\
 </div>
 </div>
 <div class="section" id="source-synchronous">
-<h2><a class="toc-backref" href="#id15">Source Synchronous</a><a class="headerlink" href="#source-synchronous" title="Permalink to this headline">¶</a></h2>
+<h2>Source Synchronous<a class="headerlink" href="#source-synchronous" title="Permalink to this headline">¶</a></h2>
 <p>Source Synchronous Interfaces where the FPGA reads a clock which is used created by an other device.
 Clock and Data send at the same time.</p>
 <ul class="simple">
@@ -727,14 +524,14 @@ Clock and Data send at the same time.</p>
 <li><p>High Speed SPI4.2</p></li>
 </ul>
 <div class="section" id="sdr">
-<h3><a class="toc-backref" href="#id16">SDR</a><a class="headerlink" href="#sdr" title="Permalink to this headline">¶</a></h3>
+<h3>SDR<a class="headerlink" href="#sdr" title="Permalink to this headline">¶</a></h3>
 <p>e.g. MII, SPI</p>
 <div class="section" id="center-aligned-clock">
-<h4><a class="toc-backref" href="#id17">Center Aligned Clock</a><a class="headerlink" href="#center-aligned-clock" title="Permalink to this headline">¶</a></h4>
+<h4>Center Aligned Clock<a class="headerlink" href="#center-aligned-clock" title="Permalink to this headline">¶</a></h4>
 <p>Data transitions not in phase with clock, clock is in the middle of the data change. Can directly be used without shift.</p>
 </div>
 <div class="section" id="direct-clocking">
-<h4><a class="toc-backref" href="#id18">Direct Clocking</a><a class="headerlink" href="#direct-clocking" title="Permalink to this headline">¶</a></h4>
+<h4>Direct Clocking<a class="headerlink" href="#direct-clocking" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Virtual Clock which create the data on other device</span>
 <span class="nv">create_clock</span> <span class="o">-</span>name virt_clk_in <span class="o">-</span>period <span class="mf">8.000</span>
 
@@ -745,7 +542,7 @@ Clock and Data send at the same time.</p>
 </div>
 </div>
 <div class="section" id="pll-clocking">
-<h4><a class="toc-backref" href="#id19">PLL Clocking</a><a class="headerlink" href="#pll-clocking" title="Permalink to this headline">¶</a></h4>
+<h4>PLL Clocking<a class="headerlink" href="#pll-clocking" title="Permalink to this headline">¶</a></h4>
 <p>Add PLL clocking or DLL to add shift to have the same input delay between data and clock. Needed for High speed (&gt;125MHz)</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Virtual Clock which create the data on other device</span>
 <span class="nv">create_clock</span> <span class="o">-</span>name virt_clk_in <span class="o">-</span>period <span class="mf">8.000</span>
@@ -761,7 +558,7 @@ Clock and Data send at the same time.</p>
 </div>
 </div>
 <div class="section" id="edge-aligned-clock">
-<h4><a class="toc-backref" href="#id20">Edge Aligned Clock</a><a class="headerlink" href="#edge-aligned-clock" title="Permalink to this headline">¶</a></h4>
+<h4>Edge Aligned Clock<a class="headerlink" href="#edge-aligned-clock" title="Permalink to this headline">¶</a></h4>
 <p>Data transitions at the same time at the clock. <strong>Clock need to be shifted 180°</strong></p>
 <p>** PLL Clocking **</p>
 <p>Add PLL clocking or DLL to add shift to have the same input delay between data and clock. Needed for High speed (&gt;125MHz)</p>
@@ -779,9 +576,9 @@ Clock and Data send at the same time.</p>
 </div>
 </div>
 <div class="section" id="data-input-constraints">
-<h3><a class="toc-backref" href="#id21">Data Input Constraints</a><a class="headerlink" href="#data-input-constraints" title="Permalink to this headline">¶</a></h3>
+<h3>Data Input Constraints<a class="headerlink" href="#data-input-constraints" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="t-co-relative-to-data">
-<h4><a class="toc-backref" href="#id22"><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to data</a><a class="headerlink" href="#t-co-relative-to-data" title="Permalink to this headline">¶</a></h4>
+<h4><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to data<a class="headerlink" href="#t-co-relative-to-data" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># create input delays</span>
 <span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemax</span> <span class="o">+</span> <span class="nv">$tcomax</span> <span class="o">-</span> <span class="nv">$clk_tracemin</span><span class="k">]</span>
 <span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemin</span> <span class="o">+</span> <span class="nv">$tcomin</span> <span class="o">-</span> <span class="nv">$clk_tracemax</span><span class="k">]</span>
@@ -793,7 +590,7 @@ Clock and Data send at the same time.</p>
 </div>
 </div>
 <div class="section" id="t-co-relative-to-input-clock">
-<h4><a class="toc-backref" href="#id23"><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to input clock</a><a class="headerlink" href="#t-co-relative-to-input-clock" title="Permalink to this headline">¶</a></h4>
+<h4><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to input clock<a class="headerlink" href="#t-co-relative-to-input-clock" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># create input delays</span>
 <span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemax</span> <span class="o">+</span> <span class="nv">$tco_datamax</span> <span class="o">-</span> <span class="nv">$tco_clkmin</span> <span class="o">-</span> <span class="nv">$clk_tracemin</span><span class="k">]</span>
 <span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemin</span> <span class="o">+</span> <span class="nv">$tco_datamin</span> <span class="o">-</span> <span class="nv">$tco_clkmax</span> <span class="o">-</span> <span class="nv">$clk_tracemax</span><span class="k">]</span>
@@ -807,16 +604,16 @@ Clock and Data send at the same time.</p>
 </div>
 </div>
 <div class="section" id="output-constraints">
-<h2><a class="toc-backref" href="#id24">Output Constraints</a><a class="headerlink" href="#output-constraints" title="Permalink to this headline">¶</a></h2>
+<h2>Output Constraints<a class="headerlink" href="#output-constraints" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="synchronous-outputs">
-<h3><a class="toc-backref" href="#id25">Synchronous Outputs</a><a class="headerlink" href="#synchronous-outputs" title="Permalink to this headline">¶</a></h3>
+<h3>Synchronous Outputs<a class="headerlink" href="#synchronous-outputs" title="Permalink to this headline">¶</a></h3>
 <p>Synchronous Outputs where one external clock is used between multiple devices.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>set_output_delay [-max] \\ # max time to arrive and still meet other devices Tsu (input setup time)
                  [-min]    # min time to stay active and still meet other devices Th (input hold time)
 </pre></div>
 </div>
 <div class="section" id="so-calculations">
-<h4><a class="toc-backref" href="#id26">SO Calculations</a><a class="headerlink" href="#so-calculations" title="Permalink to this headline">¶</a></h4>
+<h4>SO Calculations<a class="headerlink" href="#so-calculations" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <p>output_delay_max = Data_trace_{max} - Board_clock_skew_{min} + T_{su}
@@ -836,7 +633,7 @@ output_delay_min = (T_{data_pcb_{min}} + T_{cl}) - (T_{clk2_{max}} - T_{clk1_ext
 </div>
 </div>
 <div class="section" id="source-synchronous-outputs">
-<h3><a class="toc-backref" href="#id27">Source Synchronous Outputs</a><a class="headerlink" href="#source-synchronous-outputs" title="Permalink to this headline">¶</a></h3>
+<h3>Source Synchronous Outputs<a class="headerlink" href="#source-synchronous-outputs" title="Permalink to this headline">¶</a></h3>
 <p>Source Synchronous Outputs where the FPGA generates a clock which is used further in an other device.
 Clock and Data send at the same time.</p>
 <ul class="simple">
@@ -850,7 +647,7 @@ Clock and Data send at the same time.</p>
 </pre></div>
 </div>
 <div class="section" id="sso-calculations">
-<h4><a class="toc-backref" href="#id28">SSO Calculations</a><a class="headerlink" href="#sso-calculations" title="Permalink to this headline">¶</a></h4>
+<h4>SSO Calculations<a class="headerlink" href="#sso-calculations" title="Permalink to this headline">¶</a></h4>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <p>output_delay_max = Data_trace_{max} - Clock_trace_{min} + T_{su}
@@ -869,7 +666,7 @@ output_delay_min = Data_trace_{min} - Clock_trace_{max} + T_{h}</p>
 </div>
 </div>
 <div class="section" id="false-path">
-<h2><a class="toc-backref" href="#id29">False Path</a><a class="headerlink" href="#false-path" title="Permalink to this headline">¶</a></h2>
+<h2>False Path<a class="headerlink" href="#false-path" title="Permalink to this headline">¶</a></h2>
 <p>2 Types of False Path:</p>
 <ul class="simple">
 <li><p>Logic-based: Not relevant circuit operation (static, quasi-static)</p></li>
@@ -895,7 +692,7 @@ set_clock_groups [-asynchronous] # no phase relationship, but active at the same
 </pre></div>
 </div>
 <div class="section" id="asynchronous-i-o-constraints">
-<h3><a class="toc-backref" href="#id30">Asynchronous I/O constraints</a><a class="headerlink" href="#asynchronous-i-o-constraints" title="Permalink to this headline">¶</a></h3>
+<h3>Asynchronous I/O constraints<a class="headerlink" href="#asynchronous-i-o-constraints" title="Permalink to this headline">¶</a></h3>
 <p>Path to ignore by the Timing Analyzer.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span>set_false_path -from [get_ports ext_rst_n] # input
 set_false_path -from [get_ports button*]   # input
@@ -905,21 +702,21 @@ set_false_path -to [get_ports led*]        # output
 </div>
 </div>
 <div class="section" id="timing-exceptions-between-clock-domains">
-<h3><a class="toc-backref" href="#id31">Timing exceptions between clock domains</a><a class="headerlink" href="#timing-exceptions-between-clock-domains" title="Permalink to this headline">¶</a></h3>
+<h3>Timing exceptions between clock domains<a class="headerlink" href="#timing-exceptions-between-clock-domains" title="Permalink to this headline">¶</a></h3>
 <p>Path to ignore by the Timing Analyzer. Clock domain crossing if double FF synchronisation.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_pins</span> reg1<span class="o">|</span>clk<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_pins</span> reg2<span class="o">|</span>d<span class="k">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="synchronisation-done-through-a-dual-clock-dc-fifo">
-<h3><a class="toc-backref" href="#id32">Synchronisation done through a dual-clock DC_FIFO</a><a class="headerlink" href="#synchronisation-done-through-a-dual-clock-dc-fifo" title="Permalink to this headline">¶</a></h3>
+<h3>Synchronisation done through a dual-clock DC_FIFO<a class="headerlink" href="#synchronisation-done-through-a-dual-clock-dc-fifo" title="Permalink to this headline">¶</a></h3>
 <p>Path to ignore by the Timing Analyzer.</p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_clocks</span> ext_clk50mhz<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_clocks</span> <span class="k">{</span><span class="nv">i_PLL</span><span class="o">|</span>altpll_component<span class="o">|</span>auto_generated<span class="o">|</span>pll1<span class="o">|</span> clk<span class="k">[</span><span class="nv">0</span><span class="k">]}]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="clock-groups">
-<h3><a class="toc-backref" href="#id33">Clock groups</a><a class="headerlink" href="#clock-groups" title="Permalink to this headline">¶</a></h3>
+<h3>Clock groups<a class="headerlink" href="#clock-groups" title="Permalink to this headline">¶</a></h3>
 <p><strong>Muxed clocks</strong></p>
 <div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># clocks are separate, no cross domain analyzation</span>
 <span class="nv">set_clock_groups</span> <span class="o">-</span>exclusive <span class="o">-</span>group <span class="k">{</span><span class="nv">clk_100</span><span class="k">}</span> <span class="o">-</span>group <span class="k">{</span><span class="nv">clk_66</span><span class="k">}</span>
@@ -932,7 +729,7 @@ set_false_path -to [get_ports led*]        # output
 </div>
 </div>
 <div class="section" id="multicycle-paths">
-<h2><a class="toc-backref" href="#id34">Multicycle Paths</a><a class="headerlink" href="#multicycle-paths" title="Permalink to this headline">¶</a></h2>
+<h2>Multicycle Paths<a class="headerlink" href="#multicycle-paths" title="Permalink to this headline">¶</a></h2>
 <p>If a signal is slow and not sampled every clock edge. 2 Types possible:</p>
 <ul class="simple">
 <li><p>Clock enable signal not every time</p>
@@ -999,52 +796,23 @@ set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -hold  0 # 1
         window.onload = init;
     </script>
 
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="libraries.html" class="btn btn-neutral float-right" title="Libraries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="intel_sdc_theory.html" class="btn btn-neutral float-left" title="SDC Theory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
     </div>
-  
 
-  <hr/>
-
-  <div role="contentinfo">
+    <script src="../../_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
     <p>
-        &copy; Copyright 2020 tschinz
-
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+  </body>
 </html>

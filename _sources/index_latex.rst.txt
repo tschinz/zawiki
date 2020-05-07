@@ -1,7 +1,7 @@
 .. toctree::
    :hidden:
    :glob:
-   :maxdepth: 2
+   :maxdepth: 7
    :titlesonly:
    :caption: Content
 
@@ -49,7 +49,7 @@ Welcome to Zawiki Knowledge Database
 ====================================
 
 
-.. figure:: img/logo.*
+.. figure:: img/logo-icon.*
    :align: center
    :alt: Site Logo
    :width: 150px
