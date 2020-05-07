@@ -48,9 +48,6 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.extlinks",
     "sphinx.ext.githubpages",
-    #"IPython.sphinxext.ipython_directive",
-    #"IPython.sphinxext.ipython_console_highlighting",
-    "matplotlib.sphinxext.plot_directive",
     "sphinxcontrib.wavedrom",
     "sphinxcontrib.plantuml",
     "nbsphinx",
@@ -58,6 +55,9 @@ extensions = [
     "recommonmark",
     "sphinx_copybutton",
     "sphinxemoji.sphinxemoji",
+    #"matplotlib.sphinxext.plot_directive",
+    #"IPython.sphinxext.ipython_console_highlighting",
+    #"IPython.sphinxext.ipython_directive",
 ]
 
 # emoij style
