@@ -23,7 +23,7 @@ Internet
 ========
   * Madsonic :doc:`Wiki </os/linux/tools/subsonic>` and `Official <https://www.madsonic.org>`_ |linux|
   * X11VNC :doc:`Wiki </os/linux/tools/vnc>` |linux|
-  * qBitTorrent :doc:`Wiki </tools/bittorrent>` |linux| |mac| |win|
+  * qBitTorrent :doc:`Wiki </tools/bittorrent/index>` |linux| |mac| |win|
 
 Commandline
 ===========
@@ -31,7 +31,7 @@ Commandline
   * `Yakuake <http://yakuake.kde.org/>`_ |linux|
   * `Total Terminal <http://totalterminal.binaryage.com/>`_ |mac|
   * `Cmder <https://cmder.net/>`_ |win|
-  * nmap :doc:`Wiki </tools/nmap/index>`
+  * nmap :doc:`Wiki </tools/nmap/index>` |linux| |mac| |win|
 
 Management
 ==========

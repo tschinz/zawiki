@@ -404,6 +404,31 @@ There are some predefined images in :zawiki_repo:`conf.py file <blob/master/sour
 Lists
 =====
 
+.. code-block:: ReST
+
+   * item 1
+
+     * item 1.1
+     * item 1.2
+
+   * item 2
+
+     * item 2.1
+
+       * item 2.1.1
+
+   #. auto enumerated list item 1
+   #. auto enumerated list item 1
+   #. auto enumerated list item 1
+   #. auto enumerated list item 1
+
+   3. enumerated list start with item 3
+   #. auto enumerated list item 4
+   #. auto enumerated list item 5
+   #. auto enumerated list item 6
+
+
+
 * item 1
 
   * item 1.1
