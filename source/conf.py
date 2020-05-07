@@ -36,11 +36,11 @@ release = VERSION
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.autosummary",
-    "sphinx.ext.doctest",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.coverage",
+    #"sphinx.ext.autodoc",
+    #"sphinx.ext.autosummary",
+    #"sphinx.ext.doctest",
+    #"sphinx.ext.intersphinx",
+    #"sphinx.ext.coverage",
     "sphinx.ext.mathjax",
     "sphinx.ext.ifconfig",
     "sphinx.ext.graphviz",
@@ -50,7 +50,7 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinxcontrib.wavedrom",
     "sphinxcontrib.plantuml",
-    "jupyter_sphinx",
+    #"jupyter_sphinx",
     "recommonmark",
     "sphinx_copybutton",
     "sphinxemoji.sphinxemoji",
@@ -197,7 +197,8 @@ html_theme_options = {
   "twitter_url": "https://twitter.com/tschinz",
   "show_prev_next": False,
   "search_bar_position": "navbar", #"sidebar"
-  "search_bar_text": "Search the wiki"
+  "search_bar_text": "Don't panic, search",
+  "use_edit_page_button": True,
 }
 html_context = {
     'css_files': [
