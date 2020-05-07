@@ -2,7 +2,7 @@
 Data Types
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 For scala types see :doc:`/coding/scala/intro`
 

@@ -2,7 +2,7 @@
 Git Flow
 ========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Branches
 ========

@@ -2,7 +2,7 @@
 RViz
 ====
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Overview
 ========

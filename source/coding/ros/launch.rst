@@ -2,7 +2,7 @@
 Launch
 ======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Launcher
 ========

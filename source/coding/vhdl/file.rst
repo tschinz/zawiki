@@ -2,7 +2,7 @@
 File
 ====
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 .. code-block:: vhdl

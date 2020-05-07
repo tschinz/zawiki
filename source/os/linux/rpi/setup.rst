@@ -2,7 +2,7 @@
 Setup Rpi
 =========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Raspi-conf
 ==========

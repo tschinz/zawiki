@@ -2,7 +2,7 @@
 Subsonic
 ========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 (Sub)Madsonic is a free, web-based media streamer, providing ubiquitous access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
 

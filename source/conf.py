@@ -13,6 +13,7 @@
 import os
 import sys
 import subprocess
+from datetime import datetime
 sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
@@ -20,7 +21,7 @@ AUTHOR='tschinz'
 VERSION = subprocess.check_output(["git", "describe"]).decode('UTF-8')
 
 project = 'Zawiki'
-copyright = '2020 tschinz'
+copyright = f"2004-{datetime.now().year}, tschinz"
 author = AUTHOR
 
 # The short X.Y version
@@ -35,19 +36,28 @@ release = VERSION
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.wavedrom',
-    'sphinxcontrib.plantuml',
-    'recommonmark',
-    'sphinx.ext.graphviz',
-    'sphinx.ext.autosectionlabel',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.todo',
-    'sphinx.ext.extlinks',
-    'sphinx.ext.githubpages',
-    'sphinxemoji.sphinxemoji',
-    'sphinx_copybutton',
-    # 'sphinx.ext.imgmath',
-    # 'sphinx.ext.imgconverter',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.doctest",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.coverage",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.ifconfig",
+    "sphinx.ext.graphviz",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.todo",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.githubpages",
+    "IPython.sphinxext.ipython_directive",
+    "IPython.sphinxext.ipython_console_highlighting",
+    "matplotlib.sphinxext.plot_directive",
+    "sphinxcontrib.wavedrom",
+    "sphinxcontrib.plantuml",
+    "nbsphinx",
+    "jupyter_sphinx",
+    "recommonmark",
+    "sphinx_copybutton",
+    "sphinxemoji.sphinxemoji",
 ]
 
 # emoij style
@@ -92,17 +102,18 @@ exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = 'pastie'
-pygments_style = 'monokai'
+#pygments_style = 'monokai'
+pygments_style = "sphinx"
 #pygments_style = 'manni'
 #pygments_style = 'default'
-
 
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = "pydata_sphinx_theme"
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -180,34 +191,24 @@ latex_documents = [
 latex_logo = 'img/logo.pdf'
 
 # -- Extension configuration -------------------------------------------------
+# -- Options for pydata-sphinx-theme -----------------------------------------
 html_theme_options = {
-    'canonical_url': '',
-    'analytics_id': '',  #  Provided by Google in your dashboard
-    'logo_only': False,
-    'display_version': True,
-    'prev_next_buttons_location': 'bottom',
-    'style_external_links': False,
-    #'vcs_pageview_mode': 'blob',
-    #'style_nav_header_background': '#da0066',
-    # Toc options
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'navigation_depth': -1,
-    'includehidden': True,
-    'titles_only': False,
+  "github_url": "https://github.com/tschinz/zawiki",
+  "twitter_url": "https://twitter.com/tschinz",
+  "show_prev_next": False,
+  "search_bar_position": "navbar", #"sidebar"
+  "search_bar_text": "Search the wiki"
 }
-
 html_context = {
     'css_files': [
         '_static/css/theme_overrides.css',  # override wide tables in RTD theme
         '_static/css/copy_button.css',      # override copybutton on code-block
-        ],
-    "display_github": True,
-    'github_user': 'tschinz',
-    'github_repo': 'zawiki',
-    'github_version': 'master',
-    "conf_py_path": "source/",
-     }
+    ],
+    "github_user": "tschinz",
+    "github_repo": "zawiki",
+    "github_version": "master",
+    "doc_path": "source/",
+}
 
 html_logo = 'img/logo.svg'
 html_title = 'Zawiki'

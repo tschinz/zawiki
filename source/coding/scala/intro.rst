@@ -2,7 +2,7 @@
 Introduction
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 * :download:`Scala Cheatsheet <docs/scala-cheatsheet.pdf>`

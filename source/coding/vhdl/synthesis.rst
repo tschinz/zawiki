@@ -2,7 +2,7 @@
 RTL Synthesis
 =============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 Additional Documents

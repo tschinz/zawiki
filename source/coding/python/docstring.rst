@@ -2,7 +2,7 @@
 Docstring
 =========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Python begin file
 =================

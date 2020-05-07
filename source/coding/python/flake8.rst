@@ -2,7 +2,7 @@
 General
 =======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 :config_repo:`Python samples <tree/master/scripts/python>`
 

@@ -2,7 +2,7 @@
 Packages
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Package Structure
 ==================

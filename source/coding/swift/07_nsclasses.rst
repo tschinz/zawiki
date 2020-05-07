@@ -2,7 +2,7 @@
 NS Classes
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 NSString
 ========

@@ -2,7 +2,7 @@
 General
 =======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Extentions
 ==========

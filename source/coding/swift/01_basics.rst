@@ -2,7 +2,7 @@
 Basics
 ======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Comments
 ========

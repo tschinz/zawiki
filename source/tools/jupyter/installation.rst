@@ -2,7 +2,7 @@
 Installation
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 see also :config_repo:`jupyter config <tree/master/config/jupyter>`
 

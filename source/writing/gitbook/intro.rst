@@ -2,7 +2,7 @@
 Introduction
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Gitbook is a tool to create and generate books using the Markdown or ASCIIDoc Syntax. It allows to create book in the following formats:
 

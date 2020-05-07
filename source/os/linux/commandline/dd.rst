@@ -2,7 +2,7 @@
 dd and ddfldd
 =============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Use for creating and copying iso files from and to a medium.
 

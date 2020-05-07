@@ -2,7 +2,7 @@
 Properties
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 It is best to let Swift infer the variable type. Many types are
 Optionals.

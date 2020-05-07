@@ -2,7 +2,7 @@
 Extensions
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Installed extensions
 ====================

@@ -2,7 +2,7 @@
 Installation and Config
 =======================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Installation
 ============

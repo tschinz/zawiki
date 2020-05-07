@@ -2,7 +2,7 @@
 Syntax
 ======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 For
 ===

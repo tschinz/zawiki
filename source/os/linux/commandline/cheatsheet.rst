@@ -2,7 +2,7 @@
 Cheatsheet
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Admin rights
 ============

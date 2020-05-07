@@ -2,7 +2,7 @@
 Transform Frames
 ================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 A frame in the ROS language is a specific coordinate system in the space. ROS abstracts elements of a robot as coordinates frames. Each physical part of a robot that has a particular meaning will most likely have its own frame :
 

@@ -2,7 +2,7 @@
 PIP
 ===
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Admin
 =====

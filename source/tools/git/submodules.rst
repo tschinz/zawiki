@@ -2,7 +2,7 @@
 Git Submodules
 ==============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Clone Repo with submodules
 ==========================

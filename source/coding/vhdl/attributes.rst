@@ -2,7 +2,7 @@
 Attributes
 ==========
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 
 Attributes are a feature of VHDL that allow you to extract additional information about an object (such as a signal, variable or type) that may not be directly related to the value that the object carries. Attributes also allow you to assign additional information (such as data related to synthesis) to objects in your design description.

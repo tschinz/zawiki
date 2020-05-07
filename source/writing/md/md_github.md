@@ -1,6 +1,6 @@
 # Github Markdown
 
-See also my git :config_repo:`css themes <tree/master/scripts/md>` in the config repo
+See also my git [css theme](https://github.com/tschinz/config/tree/master/scripts/md) in the config repo
 
 GFM is a variant of markdown developed by Github.
   * https://help.github.com/articles/github-flavored-markdown
@@ -8,18 +8,18 @@ GFM is a variant of markdown developed by Github.
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
 ## Table of Contents
-[Headers](#headers)
-[Emphasis](#emphasis)
-[Lists](#lists)
-[Links](#links)
-[Images](#images)
-[Code and Syntax Highlighting](#code)
-[Tables](#tables)
-[Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
+* [Headers](#headers)
+* [Emphasis](#emphasis)
+* [Lists](#lists)
+* [Links](#links)
+* [Images](#images)
+* [Code and Syntax Highlighting](#code)
+* [Tables](#tables)
+* [Blockquotes](#blockquotes)
+* [Inline HTML](#html)
+* [Horizontal Rule](#hr)
+* [Line Breaks](#lines)
+* [YouTube Videos](#videos)
 
 <a name="headers"/>
 

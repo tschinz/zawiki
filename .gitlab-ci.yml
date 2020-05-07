@@ -4,13 +4,15 @@ pages:
   stage: deploy
   before_script:
     - echo "Install additional packages"
-    - pip install -I sphinx==2.3.1
-    - pip install sphinx-rtd-theme
+    - pip install -U sphinx
+    - pip install pydata-sphinx-theme
     - pip install sphinxcontrib-wavedrom
     - pip install sphinxcontrib-plantuml
     - pip install recommonmark
     - pip install sphinxemoji
     - pip install sphinx-copybutton
+    - pip install nbsphinx
+    - pip install jupyter_sphinx
     - apt-get update
     - echo "Install build-essential"
     - apt-get install -y build-essential

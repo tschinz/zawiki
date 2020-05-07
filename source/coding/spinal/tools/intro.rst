@@ -2,7 +2,7 @@
 Introduction
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 There are additional Tools needed for Spinal HDL to work. hereafter are named the most common with references for further studies.
 

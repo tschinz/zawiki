@@ -2,7 +2,7 @@
 Systemd
 =======
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 List services
 =============

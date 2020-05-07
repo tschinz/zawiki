@@ -2,7 +2,7 @@
 Programming Concepts
 ====================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 MVC
 ===

@@ -2,7 +2,7 @@
 Key Definitions
 ===============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Raw Keys
 ========

@@ -6,7 +6,7 @@ Xilinx UCF Constraints
    :align: center
    :width: 150px
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 How to Guide
 ============

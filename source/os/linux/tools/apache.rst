@@ -6,7 +6,7 @@ Apache
    :align: center
    :width: 300px
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Password Protect Apache Pages
 =============================

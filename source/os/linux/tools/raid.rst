@@ -2,7 +2,7 @@
 Raid
 ====
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Raid ( **R** edundant **A** rray of **I** ndependent **D** isks) is a system to connect multiple harddisks together to increase the size, the performance or the security of those drives.
 

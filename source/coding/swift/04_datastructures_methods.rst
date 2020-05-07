@@ -2,7 +2,7 @@
 Data Structures & Methods
 =========================
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 Data Structures
 ===============

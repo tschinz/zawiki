@@ -2,7 +2,7 @@
 Control Flow
 ============
 
-.. contents:: :local:
+.. comments .. contents:: :local:
 
 ``if`` - ``else``
 =================
