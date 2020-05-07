@@ -15,6 +15,7 @@ install:
   #- pip install -I sphinx==2.3.1
   - pip install -U sphinx
   - pip install -U sphinx-rtd-theme
+  - pip install pydata-sphinx-theme
   - pip install -U sphinxcontrib-wavedrom
   - pip install -U sphinxcontrib-plantuml
   - pip install -U recommonmark
