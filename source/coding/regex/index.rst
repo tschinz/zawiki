@@ -6,14 +6,6 @@ RegEx
    :align: center
    :width: 150px
 
-.. toctree::
-   :glob:
-   :maxdepth: 4
-   :titlesonly:
-   :caption: RegEx
-
-   *
-
 * :zawiki_repo:`RegEx Cheatsheet <blob/master/source/coding/regex/docs/regex_cheatsheet.pdf>` - from `Added Bytes <http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/>`_
 * Test your regex with `Regexr <https://regexr.com/>`_
 

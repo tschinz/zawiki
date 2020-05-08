@@ -10,17 +10,16 @@ Coding
    :glob:
    :maxdepth: 4
    :titlesonly:
-   :caption: Coding
 
-   regex/index
-   python/index
-   vhdl/index
-   tcl_tk_do/index
-   spinal/index
-   scala/index
    ahk/index
-   ros/index
-   make/index
    c_cpp/index
-   swift/index
    licenses/index
+   make/index
+   python/index
+   regex/index
+   ros/index
+   scala/index
+   spinal/index
+   swift/index
+   tcl_tk_do/index
+   vhdl/index

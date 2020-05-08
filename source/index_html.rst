@@ -12,8 +12,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 .. toctree::
    :hidden:
    :glob:
-   :maxdepth: 4
-   :caption: Content
+   :maxdepth: 5
 
    os/index
    tools/index
