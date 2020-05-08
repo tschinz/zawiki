@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
-    <link rel="prev" title="Syntax" href="../python/syntax.html" />
+    <link rel="next" title="Attributes" href="attributes.html" />
+    <link rel="prev" title="Syntax" href="../tcl_tk_do/syntax.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -148,9 +148,26 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pdf" class="nav-link">PDF</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#links" class="nav-link">Links</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -178,26 +195,39 @@
 <a class="reference internal image-reference" href="../../_images/logo12.svg"><img alt="../../_images/logo12.svg" src="../../_images/logo12.svg" width="150px" /></a>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attributes.html">Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conversion.html">Conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file.html">File</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Programming Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intel_sdc.html">SDC Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intel_sdc_theory.html">SDC Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intel_sdc_usage.html">SDC Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="libraries.html">Libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osvvm.html">OSVVM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="syntax.html">Syntax</a></li>
-<li class="toctree-l1"><a class="reference internal" href="synthesis.html">RTL Synthesis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testbench.html">Testbench</a></li>
-<li class="toctree-l1"><a class="reference internal" href="time.html">Time</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xilinx_ucf.html">Xilinx UCF Constraints</a></li>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>VHDL (VHSIC hardware description language) is a hardware description language used in electronic design automation to describe digital and mixed-signal systems such as field-programmable gate arrays and integrated circuits.</p>
+<p>VHDL is commonly used to write text models that describe a logic circuit. Such a model is processed by a synthesis program. A simulation program is used to test the logic design using simulation models to represent the logic circuits that interface to the design. This collection of simulation models is commonly called a testbench.</p>
+<p>VHDL has constructs to handle the parallelism inherent in hardware designs. VHDL is strongly typed and is not case sensitive.</p>
+<p>A final point is that when a VHDL model is translated into the “gates and wires” that are mapped onto a programmable logic device such as a CPLD or FPGA, then it is the actual hardware being configured, rather than the VHDL code being “executed” as if on some form of a processor chip.</p>
+<p>As last remark I want to thank Corthay Francois for his VHDL Summary and HTML files.</p>
+<div class="section" id="pdf">
+<h3>PDF<a class="headerlink" href="#pdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/esa_vhdl_modellingguide.pdf">ESA VHDL Modelling Guide</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_fixed_float.pdf">Synth Works Fixed &amp; Float</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_math_tricks.pdf">Synth Works Math Tricks</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_subblock_verification.pdf">Synth Works Verification</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_vhdl_2008end_of_verbosity.pdf">Synth Works VHDL 2008 End of Verbosity</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/vhdl_syntax_cof.pdf">Short Guide CoF</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/Intro_VHDL_v2.0_notes.pdf">EPFL VHDL Script</a></p></li>
 </ul>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://en.wikibooks.org/wiki/Programmable_Logic/VHDL">Wikibook VHDL Programmable Logic</a></p></li>
+<li><p><a class="reference external" href="http://en.wikibooks.org/wiki/VHDL_for_FPGA_Design">Wikibook VHDL for FPGA Design</a></p></li>
+<li><p><a class="reference external" href="http://de.wikibooks.org/wiki/VHDL">Wikibook VHDL</a></p></li>
+<li><p><a class="reference external" href="http://www.emba.uvm.edu/~jswift/uvm_class/index.html#Files">VHDL Guide</a></p></li>
+<li><p><a class="reference external" href="http://www.cs.umbc.edu/portal/help/VHDL/summary.html">Compact Summary of VHDL</a></p></li>
+<li><p><a class="reference external" href="http://opencores.org">Open cores - Free VHDL/Verilog IP’s</a></p></li>
+<li><p><a class="reference external" href="http://vhdlguru.blogspot.com">VHDL Guru Blog</a></p></li>
+<li><p><a class="reference external" href="http://synthworks.com/">Synth Works</a></p></li>
+</ul>
+</div>
 </div>
 </div>
 

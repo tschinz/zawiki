@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
+    <link rel="next" title="GtkWave" href="gtkwave.html" />
     <link rel="prev" title="Data Types" href="../types.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -148,9 +148,38 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#programming-language" class="nav-link">Programming Language</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#execution" class="nav-link">Execution</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ide" class="nav-link">IDE</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#simulator" class="nav-link">Simulator</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#additional" class="nav-link">Additional</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -180,10 +209,71 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gtkwave.html">GtkWave</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intellij_idea.html">Intellij IDEA IDE</a></li>
 </ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>There are additional Tools needed for Spinal HDL to work. hereafter are named the most common with references for further studies.</p>
+<div class="section" id="programming-language">
+<h3>Programming Language<a class="headerlink" href="#programming-language" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://scala-lang.org/download/">Scala</a></p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/scala-logo-small.svg"><img alt="../../../_images/scala-logo-small.svg" src="../../../_images/scala-logo-small.svg" width="150px" /></a>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="execution">
+<h3>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java SDK</a></p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/java-logo.svg"><img alt="../../../_images/java-logo.svg" src="../../../_images/java-logo.svg" width="150px" /></a>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.scala-sbt.org/download.html">Scala Build Tool SBT</a></p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/sbt-logo.svg"><img alt="../../../_images/sbt-logo.svg" src="../../../_images/sbt-logo.svg" width="150px" /></a>
+</div>
+</div>
+<div class="section" id="ide">
+<h3>IDE<a class="headerlink" href="#ide" title="Permalink to this headline">¶</a></h3>
+<p>For writing and executing the scala code</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jetbrains.com/idea/">Intellij IDEA</a></p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/intellij-idea-logo.svg"><img alt="../../../_images/intellij-idea-logo.svg" src="../../../_images/intellij-idea-logo.svg" width="150px" /></a>
+</div>
+</div>
+<div class="section" id="simulator">
+<h3>Simulator<a class="headerlink" href="#simulator" title="Permalink to this headline">¶</a></h3>
+<p>Behind the scene SpinalHDL is generating a C++ cycle accurate model of your hardware by generating the equivalent Verilog and asking Verilator to convert it into a C++ model.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.veripool.org/wiki/verilator">Verilator</a>
+* <a class="reference external" href="https://www.wikiwand.com/en/Verilator">Verilator Wiki</a></p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/verilator-logo.svg"><img alt="../../../_images/verilator-logo.svg" src="../../../_images/verilator-logo.svg" width="150px" /></a>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="http://gtkwave.sourceforge.net/">GTKWave</a></p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../../_images/gtkwave-logo.png"><img alt="../../../_images/gtkwave-logo.png" src="../../../_images/gtkwave-logo.png" style="width: 150px;" /></a>
+</div>
+</div>
+<div class="section" id="additional">
+<h3>Additional<a class="headerlink" href="#additional" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.msys2.org/">MYSYS2</a> for windows only</p></li>
+</ul>
+</div>
 </div>
 </div>
 

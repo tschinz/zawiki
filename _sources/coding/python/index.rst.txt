@@ -8,8 +8,13 @@ Python
 
 .. toctree::
    :glob:
+   :hidden:
    :maxdepth: 4
    :titlesonly:
-   :caption: Python
 
    *
+
+Introduction
+============
+
+:config_repo:`Python samples <tree/master/scripts/python>`

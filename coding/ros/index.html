@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>ROS - Robot Operating System &#8212; Zawiki</title>
+    <title>ROS &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
-    <link rel="prev" title="Tips &amp; Tricks" href="../ahk/tips_tricks.html" />
+    <link rel="next" title="Basics" href="basics.html" />
+    <link rel="prev" title="RegEx" href="../regex/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -148,9 +148,22 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#philosophy" class="nav-link">Philosophy</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -172,27 +185,119 @@
               
               <div>
                 
-  <div class="section" id="ros-robot-operating-system">
-<h1>ROS - Robot Operating System<a class="headerlink" href="#ros-robot-operating-system" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ros">
+<h1>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/logo7.svg"><img alt="../../_images/logo7.svg" src="../../_images/logo7.svg" width="150px" /></a>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="books-summary.html">Books summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catkin_tools.html">Catkin Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commandline Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="launch.html">Launch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lidar-driver.html">Lidar Driver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages-ext.html">External Packages and Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rviz.html">RViz</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tf2.html">Transform Frames</a></li>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>ROS aka Robotic Operating System is not a OS itself but a framework and middleware.</p>
+<ul class="simple">
+<li><p>Software Framework for programming robots</p></li>
+<li><p>Prototype from Standfort AI Research Institute and created by Willow Garage in 2007</p></li>
+<li><p>Since 2013 maintained by the Open Source Robotics Foundation (OSRF)</p></li>
+<li><p>Consists of infrastrucutre, tools, capabilities and a ecosystem</p></li>
 </ul>
+<table class="table" id="id2">
+<caption><span class="caption-text">Source : ROS Tutorial #1 - <a class="reference external" href="https://www.youtube.com/watch?v=9U6GDonGFHw&amp;t=1s">https://www.youtube.com/watch?v=9U6GDonGFHw&amp;t=1s</a></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Advantages</p></th>
+<th class="head"><p>Disadvantages</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Provides lots of infrastructure,
+tools and capabilities</p></td>
+<td><p>Approaching maturity, but still
+changing</p></td>
+</tr>
+<tr class="row-odd"><td><p>Easy to try other people’s work
+and shar your own</p></td>
+<td><p>Security and scalability are not
+first-class concerns</p></td>
+</tr>
+<tr class="row-even"><td><p>Large community</p></td>
+<td><p>OSes other than Ubuntu Linux are
+not well supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>Free, open source, BSD license</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>Great for open-source and
+researchers</strong></p></td>
+<td><p><strong>Not great for mission-critical
+tasks</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/ros-equation.png"><img alt="ROS Equation" src="../../_images/ros-equation.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">ROS Equation</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 23%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Plumbing</p></th>
+<th class="head"><p>Tools</p></th>
+<th class="head"><p>Capabilities</p></th>
+<th class="head"><p>Ecosystem</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Process
+management</p></td>
+<td><p>Simulation</p></td>
+<td><p>Control</p></td>
+<td><p>Package
+organization</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inter-process
+communication</p></td>
+<td><p>Visualization</p></td>
+<td><p>Planning</p></td>
+<td><p>Software
+distribution</p></td>
+</tr>
+<tr class="row-even"><td><p>Device drivers</p></td>
+<td><p>Graphical user
+interface</p></td>
+<td><p>Perception</p></td>
+<td><p>Documentation</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Data logging</p></td>
+<td><p>Mapping</p></td>
+<td><p>Tutorials</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>Manipulation</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="philosophy">
+<h3>Philosophy<a class="headerlink" href="#philosophy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Peer to peer</strong> - Individual programs communicate over defined API (ROS messages, services, etc.).</p></li>
+<li><p><strong>Distributed</strong> - Programs can be run on multiple computers and communicate over the network.</p></li>
+<li><p><strong>Multi-lingual</strong> - ROS modules can be written in any language for which a client library exists (C++, Python, MATLAB, Java, etc.).</p></li>
+<li><p><strong>Thin</strong> - The ROS conventions encourage contributors to create standalone libraries and then wrap those libraries so they can send and receive messages to and from other ROS modules.</p></li>
+<li><p><strong>Free and open source</strong> - The core of ROS is released under the permissive BSD license, which allows commercial and noncommercial use.</p></li>
+</ul>
+</div>
 </div>
 </div>
 
