@@ -2,8 +2,6 @@
 Properties
 ==========
 
-.. comments .. contents:: :local:
-
 It is best to let Swift infer the variable type. Many types are
 Optionals.
 
@@ -266,8 +264,6 @@ Array Functions
    reduce(initial: U, combine:(U,T) -> U) -> U
    let sum: Int = [1,2,3].reduce(0) { $0 + $1 }
 
-
-
 Dictionary
 ==========
 
@@ -328,4 +324,3 @@ Range is also enumerable
 .. code:: swift
 
    for in 24...42 {}
-

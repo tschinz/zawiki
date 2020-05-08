@@ -2,7 +2,6 @@
 Curated Emoji
 =============
 
-
 .. list-table::
    :header-rows: 1
 
@@ -19,7 +18,7 @@ Curated Emoji
      - |:sparkles:| ``|:sparkles:|``
 
    * - Bugfix
-     - |:ant:| ``|:ant:|`` |:bug:| ``|:bug:|`` |:beetle:| ``|:beetle``
+     - |:ant:| ``|:ant:|`` |:bug:| ``|:bug:|`` |:beetle:| ``|:beetle:|``
 
    * - Security Fix
      - |:lock:| ``|:lock:|`` |:unlock:| ``|:unlock:|`` |:key:| ``|:key:|``
@@ -92,4 +91,3 @@ Curated Emoji
 
    * - Monkeys
      - |:see_no_evil:| ``|:see_no_evil:|`` |:hear_no_evil:| ``|:hear_no_evil:|`` |:speak_no_evil:| ``|:speak_no_evil:|``
-

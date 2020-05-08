@@ -2,8 +2,6 @@
 Syntax
 ======
 
-.. comments .. contents:: :local:
-
 You can also find nice comprehensive VHDL papers and courses at: http://www.synthworks.com
 
 Types

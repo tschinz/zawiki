@@ -2,8 +2,6 @@
 Libraries
 =========
 
-.. comments .. contents:: :local:
-
 Numeric Operations
 ==================
 
@@ -25,8 +23,6 @@ Numeric Operations
      use ieee.std_logic_1164.all ;
      use ieee.std_logic_arith.all ;
      use ieee.std_logic_unsigned.all ;
-
-
 
 IEEE
 ====

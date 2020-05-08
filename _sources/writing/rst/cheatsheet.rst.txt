@@ -4,8 +4,6 @@ RST and Sphinx Cheatsheet
 
 In this page you will get a quick overview about the most used syntax.
 
-.. comment.. contents:: :local:
-
 Table of content
 ================
 
@@ -96,7 +94,6 @@ The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
                'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None)
               }
 
-
 .. code-block:: ReST
 
    :config_repo:`jupyter folder <tree/master/config/jupyter>`
@@ -151,7 +148,6 @@ In order to link to another subheader in another document you need to use :ref:`
 
 In the page to be jumped to add ``.. _ref_name:``, and then you can:
 
-
 .. code-block:: ReST
 
    :ref:`ref_name`
@@ -188,7 +184,6 @@ Link to titles directly is done with the extension ``sphinx.ext.autosectionlabel
 :ref:`Back to top <writing/rst/cheatsheet:RST and Sphinx Cheatsheet>`
 
 :ref:`writing/rst/cheatsheet:Images`
-
 
 .. _ref-point:
 
@@ -427,8 +422,6 @@ Lists
    #. auto enumerated list item 5
    #. auto enumerated list item 6
 
-
-
 * item 1
 
   * item 1.1
@@ -589,7 +582,6 @@ see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx
       if __name__=='__main__':
           main()
 
-
 .. code-block:: python
 
    import antigravity
@@ -611,7 +603,6 @@ see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx
           antigravity.fly()
       if __name__=='__main__':
           main()
-
 
 .. code-block:: python
    :linenos:
@@ -636,7 +627,6 @@ see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx
           antigravity.fly()
       if __name__=='__main__':
           main()
-
 
 .. code-block:: python
    :linenos:

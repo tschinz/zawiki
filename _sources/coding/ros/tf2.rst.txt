@@ -2,8 +2,6 @@
 Transform Frames
 ================
 
-.. comments .. contents:: :local:
-
 A frame in the ROS language is a specific coordinate system in the space. ROS abstracts elements of a robot as coordinates frames. Each physical part of a robot that has a particular meaning will most likely have its own frame :
 
 * a sensor : *laser_frame*
@@ -90,4 +88,3 @@ Each topic has a reference frame. This means that each message being published o
 Documentation about frames and transformations can be found there :
 
 * `tf2 <http://wiki.ros.org/tf2>`_
-

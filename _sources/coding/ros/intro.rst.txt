@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 ROS aka Robotic Operating System is not a OS itself but a framework and middleware.
 
 *  Software Framework for programming robots

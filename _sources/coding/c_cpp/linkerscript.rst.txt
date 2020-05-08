@@ -2,8 +2,6 @@
 Linkerscript
 ============
 
-.. comments .. contents:: :local:
-
 Overview
 ========
 

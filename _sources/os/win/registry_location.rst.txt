@@ -2,8 +2,6 @@
 Registry
 ========
 
-.. comments .. contents:: :local:
-
 Login
 =====
 

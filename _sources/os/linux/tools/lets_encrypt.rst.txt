@@ -2,8 +2,6 @@
 Let's Encrypt
 =============
 
-.. comments .. contents:: :local:
-
 Version
 =======
 

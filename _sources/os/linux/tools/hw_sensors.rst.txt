@@ -2,8 +2,6 @@
 Hardware Sensors
 ================
 
-.. comments .. contents:: :local:
-
 Installation
 ============
 

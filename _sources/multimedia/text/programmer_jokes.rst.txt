@@ -2,12 +2,9 @@
 Programmer Jokes
 ================
 
-
 .. figure:: img/joke.*
    :align: center
    :width: 150px
-
-.. comments .. contents:: :local:
 
 Christmas and Halloween
 =======================

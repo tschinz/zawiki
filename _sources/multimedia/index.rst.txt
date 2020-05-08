@@ -8,12 +8,11 @@ Multimedia
 
 .. toctree::
    :glob:
-   :maxdepth: 7
+   :maxdepth: 4
    :titlesonly:
    :caption: Content
 
-   audio/*
-   pictures/*
-   pictures/emoji/*
-   text/*
-   videos/*
+   audio/index
+   pictures/index
+   text/index
+   videos/index

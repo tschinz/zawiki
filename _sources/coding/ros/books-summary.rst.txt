@@ -2,8 +2,6 @@
 Books summary
 ==============
 
-.. comments .. contents:: :local:
-
 Topics
 ======
 

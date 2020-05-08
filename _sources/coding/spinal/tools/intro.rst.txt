@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 There are additional Tools needed for Spinal HDL to work. hereafter are named the most common with references for further studies.
 
 Programming Language
@@ -47,8 +45,6 @@ Behind the scene SpinalHDL is generating a C++ cycle accurate model of your hard
 
 .. figure:: img/verilator-logo.*
    :width: 150px
-
-
 
 * `GTKWave <http://gtkwave.sourceforge.net/>`_
 

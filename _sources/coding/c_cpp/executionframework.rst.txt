@@ -2,8 +2,6 @@
 Execution Framework
 ===================
 
-.. comments .. contents:: :local:
-
 Execution Framework is also called XF. XF are a collection of services that allow communication and execution of objects and of reactive entities containing state machines.
 It is an abstraction layer which can be on top of an OS or of an HAL.
 

@@ -2,9 +2,6 @@
 Config Files
 ============
 
-.. comments .. contents:: :local:
-
-
 * :config_repo:`My linux configfiles <tree/master/config/linux/server>`
 
 .. _config_files_profile:

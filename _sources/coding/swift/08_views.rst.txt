@@ -2,8 +2,6 @@
 Views
 =====
 
-.. comments .. contents:: :local:
-
 Views is a ``UIView`` subclass and it represents a rectangular Area on
 the screen.
 

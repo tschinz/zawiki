@@ -2,8 +2,6 @@
 Firewall
 ========
 
-.. comments .. contents:: :local:
-
 SSH Over FTP Port
 =================
 

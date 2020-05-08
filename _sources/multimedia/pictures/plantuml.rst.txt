@@ -2,12 +2,9 @@
 PlantUml
 ========
 
-
 .. figure:: img/plantuml.*
    :align: center
    :width: 150px
-
-.. comments .. contents:: :local:
 
 * :pdfviewer:`PlantUML Reference Guide <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
 * `PlantUML Webpage <https://plantuml.com/>`_

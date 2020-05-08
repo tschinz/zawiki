@@ -233,17 +233,15 @@ Every main section has its own folder structure and its own <code class="docutil
 <p>If you don’t have enough knowledge about ReStructuredText then you can also use the <a class="reference external" href="https://pandoc.org/try/">pandoc translator</a> or use the internal <a class="reference internal" href="../writing/rst/cheatsheet.html"><span class="doc">Cheatsheet</span></a></p>
 <div class="section" id="new-documentation-section">
 <h2>New Documentation Section<a class="headerlink" href="#new-documentation-section" title="Permalink to this headline">¶</a></h2>
-<p>If you want to add a new section, you need to specify in the <a class="reference download internal" download="" href="../_downloads/db4b047b30ffef7855b12b527860ac2c/index.rst"><code class="xref download docutils literal notranslate"><span class="pre">main</span> <span class="pre">index.rst</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">section/index.rst</span></code> file of the new section.</p>
+<p>If you want to add a new section, you need to specify in the <a class="reference download internal" download="" href="../_downloads/b2aaeda56b4116ccd739de4a734f43ad/index_html.rst"><code class="xref download docutils literal notranslate"><span class="pre">main</span> <span class="pre">index_html.rst</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">section/index_html.rst</span></code> file of the new section.</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:hidden:</span>
    <span class="nc">:glob:</span>
-   <span class="nc">:maxdepth:</span> 7
+   <span class="nc">:maxdepth:</span> 4
    <span class="nc">:titlesonly:</span>
    <span class="nc">:caption:</span> Content
 
-   linux/index
-   mac/index
-   windows/index
+   os/index
    tools/index
    coding/index
    writing/index
@@ -266,11 +264,9 @@ Every main section has its own folder structure and its own <code class="docutil
    <span class="nc">:align:</span> right
    <span class="nc">:width:</span> 150px
 
-<span class="cp">.. comments .. contents:: :local:</span>
-
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:glob:</span>
-   <span class="nc">:maxdepth:</span> 7
+   <span class="nc">:maxdepth:</span> 4
    <span class="nc">:titlesonly:</span>
    <span class="nc">:caption:</span> Content
 
@@ -286,7 +282,7 @@ makes so you can use the <code class="docutils literal notranslate"><span class=
 <p class="admonition-title">Note</p>
 <p>The file path is relative to the index file, if you want to specify the absolute path, you need to prepend <code class="docutils literal notranslate"><span class="pre">/</span></code></p>
 </div>
-<p>Now I can add additional <code class="docutils literal notranslate"><span class="pre">ReST</span></code> files like <code class="docutils literal notranslate"><span class="pre">section/intro.rst</span></code> and other files like <code class="docutils literal notranslate"><span class="pre">section/section_part_1.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">ssection/ection_part_2.rst</span></code>, etc.</p>
+<p>Now I can add additional <code class="docutils literal notranslate"><span class="pre">ReST</span></code> files like <code class="docutils literal notranslate"><span class="pre">section/intro.rst</span></code> and other files like <code class="docutils literal notranslate"><span class="pre">section/section_part_1.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">ssection/section_part_2.rst</span></code>, etc.</p>
 <div class="section" id="section-images">
 <h3>Section Images<a class="headerlink" href="#section-images" title="Permalink to this headline">¶</a></h3>
 <p>Add an image folder in the section folder <code class="docutils literal notranslate"><span class="pre">section/img</span></code>, in case of additional documents ass a <code class="docutils literal notranslate"><span class="pre">section/docs</span></code> folder too.</p>

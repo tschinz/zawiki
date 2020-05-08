@@ -2,8 +2,6 @@
 Installation
 ============
 
-.. comments .. contents:: :local:
-
 see also :config_repo:`jupyter config <tree/master/config/jupyter>`
 
 My Extension list
@@ -25,11 +23,6 @@ My Extension list
    jupyter labextension install jupyterlab_hidecode
    jupyter labextension install @lckr/jupyterlab_variableinspector
    jupyter labextension install @jupyter-widgets/jupyterlab-manager
-
-One Liner
-
-.. code-block:: bash
-
 
 IDE Features
 ------------

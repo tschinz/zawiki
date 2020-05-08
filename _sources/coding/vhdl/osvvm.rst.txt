@@ -6,8 +6,6 @@ OSVVM
    :align: center
    :width: 600px
 
-.. comments .. contents:: :local:
-
 Stands for Open Source VHDL Verification Methodology.
 
 Additional Documents

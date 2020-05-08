@@ -2,8 +2,6 @@
 Time
 ====
 
-.. comments .. contents:: :local:
-
 Time Type
 =========
 

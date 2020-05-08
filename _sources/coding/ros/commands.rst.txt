@@ -2,8 +2,6 @@
 Commandline Commands
 ====================
 
-.. comments .. contents:: :local:
-
 Commandline Variables
 =====================
 

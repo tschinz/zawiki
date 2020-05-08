@@ -1,6 +1,6 @@
-==============
-AutoHotKey AHK
-==============
+===
+AHK
+===
 
 .. figure:: img/logo.*
    :align: center
@@ -8,8 +8,8 @@ AutoHotKey AHK
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 4
    :titlesonly:
-   :caption: Content
+   :caption: AHK
 
    *

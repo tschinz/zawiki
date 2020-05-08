@@ -2,8 +2,6 @@
 NS Classes
 ==========
 
-.. comments .. contents:: :local:
-
 NSString
 ========
 

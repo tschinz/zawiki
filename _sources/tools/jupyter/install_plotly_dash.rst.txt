@@ -2,8 +2,6 @@
 Plotly Dash
 ===========
 
-.. comments .. contents:: :local:
-
 Install Plotly Dash
 ===================
 

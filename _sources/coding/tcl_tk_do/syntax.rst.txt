@@ -2,8 +2,6 @@
 Syntax
 ======
 
-.. comments .. contents:: :local:
-
 General
 =======
 

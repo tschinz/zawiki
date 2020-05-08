@@ -2,8 +2,6 @@
 Installation and Config
 =======================
 
-.. comments .. contents:: :local:
-
 Installation
 ============
 

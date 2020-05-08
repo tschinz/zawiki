@@ -8,7 +8,7 @@ Tools
 
 .. toctree::
    :glob:
-   :maxdepth: 7
+   :maxdepth: 4
    :titlesonly:
    :caption: Tools
 
@@ -20,4 +20,4 @@ Tools
    sublimetext/index
    virtualbox/index
    bittorrent/index
-   useful_tools
+   useful_tools/useful_tools

@@ -2,9 +2,6 @@
 File
 ====
 
-.. comments .. contents:: :local:
-
-
 .. code-block:: vhdl
 
    type file_open_kind is ( read_mode, write_mode, append_mode );
@@ -152,6 +149,5 @@ The code below writes is used to writing a file. It writes binary values from 00
        wait;
      end process;
    end behaviour;
-
 
 :config_repo:`write_file.vhd <blob/master/scripts/vhdl/file_io/write_file.vhd>`

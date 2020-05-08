@@ -2,8 +2,6 @@
 Syntax
 ======
 
-.. comments .. contents:: :local:
-
 For
 ===
 
@@ -12,7 +10,6 @@ For
    for(int i = 0; i <= max; i++)
    {
    }
-
 
 Bitwise Operations
 ==================

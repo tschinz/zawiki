@@ -2,9 +2,6 @@
 RTL Synthesis
 =============
 
-.. comments .. contents:: :local:
-
-
 Additional Documents
 ====================
 

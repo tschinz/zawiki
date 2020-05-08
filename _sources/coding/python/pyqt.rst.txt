@@ -2,8 +2,6 @@
 PyQt4
 =====
 
-.. comments .. contents:: :local:
-
 Links
 =====
 

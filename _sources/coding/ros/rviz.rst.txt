@@ -2,8 +2,6 @@
 RViz
 ====
 
-.. comments .. contents:: :local:
-
 Overview
 ========
 
@@ -29,8 +27,6 @@ Run
    :alt: Rviz
 
 Save configuration with ``ctrl+s``
-
-
 
 Built-In Display Types
 ======================

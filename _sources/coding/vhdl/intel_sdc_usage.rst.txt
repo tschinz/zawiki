@@ -6,8 +6,6 @@ SDC Usage
    :align: center
    :width: 150px
 
-.. comments .. contents:: :local:
-
 General
 =======
 
