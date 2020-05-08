@@ -4,7 +4,7 @@ RST and Sphinx Cheatsheet
 
 In this page you will get a quick overview about the most used syntax.
 
-.. contents:: :local:
+.. comment.. contents:: :local:
 
 Table of content
 ================
