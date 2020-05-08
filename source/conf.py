@@ -193,6 +193,10 @@ latex_logo = 'img/logo.pdf'
 # -- Extension configuration -------------------------------------------------
 # -- Options for pydata-sphinx-theme -----------------------------------------
 html_theme_options = {
+  "external_links": [
+      {"name": "Config repo", "url": "https://github.com/tschinz/config"},
+  ],
+  "google_analytics_id": "UA-20699788-1",
   "github_url": "https://github.com/tschinz/zawiki",
   "twitter_url": "https://twitter.com/tschinz",
   "show_prev_next": False,
@@ -208,7 +212,7 @@ html_context = {
     "github_user": "tschinz",
     "github_repo": "zawiki",
     "github_version": "master",
-    "doc_path": "source/",
+    "doc_path": "source",
 }
 
 html_logo = 'img/logo.svg'
