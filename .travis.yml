@@ -15,14 +15,14 @@ install:
   #- pip install -I sphinx==2.3.1
   - pip install -U sphinx
   - pip install -U sphinx-rtd-theme
-  - pip install pydata-sphinx-theme
+  - pip install -U pydata-sphinx-theme
   - pip install -U sphinxcontrib-wavedrom
   - pip install -U sphinxcontrib-plantuml
   - pip install -U recommonmark
   - pip install -U sphinxemoji
   - pip install -U sphinx-copybutton
-  - pip install nbsphinx
-  - pip install jupyter_sphinx
+  - pip install -U nbsphinx
+  - pip install -U jupyter_sphinx
   - sudo apt-get update
   - echo "Install build-essential"
   - sudo apt-get install -y build-essential

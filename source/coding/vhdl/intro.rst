@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 VHDL (VHSIC hardware description language) is a hardware description language used in electronic design automation to describe digital and mixed-signal systems such as field-programmable gate arrays and integrated circuits.
 
 VHDL is commonly used to write text models that describe a logic circuit. Such a model is processed by a synthesis program. A simulation program is used to test the logic design using simulation models to represent the logic circuits that interface to the design. This collection of simulation models is commonly called a testbench.

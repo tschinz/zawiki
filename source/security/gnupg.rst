@@ -79,7 +79,3 @@ Links
   * `Key Server <http://wwwkeys.pgp.net>`_
   * `HowTo GnuPG <https://help.ubuntu.com/community/GnuPrivacyGuardHowto>`_
   * `Mailvelope enryption for Gmail, Yahoo, GMX, Outlook <http://www.mailvelope.com/>`_
-
-
-
-

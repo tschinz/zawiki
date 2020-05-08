@@ -9,7 +9,7 @@ C / C++
 
 .. toctree::
    :glob:
-   :maxdepth: 7
+   :maxdepth: 4
    :titlesonly:
    :caption: Content
 

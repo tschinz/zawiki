@@ -2,8 +2,6 @@
 Control Flow
 ============
 
-.. comments .. contents:: :local:
-
 ``if`` - ``else``
 =================
 

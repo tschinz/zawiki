@@ -140,45 +140,45 @@ copybutton_image_path = 'img/copybutton.svg'
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-latex_engine = 'xelatex'
-latex_elements = {
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'printindex': r'\footnotesize\raggedright\printindex',
-
-    'papersize': 'a4paper',
-
-    'pointsize': '10pt',
-    'extraclassoptions': 'onecolumn,oneside',
-    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
-
-    'inputenc': '',
-    'fncychap': '',
-    'utf8extra': '',
-    'fontpkg': '',
-    'babel': '\\usepackage{polyglossia}',
-    'cmappkg': '',
-    'fontenc': '',
-    'releasename': '',
-
-    'fontpkg': r'''
-        \setmainfont{DejaVu Serif}
-        \setsansfont{DejaVu Sans}
-        \setmonofont{DejaVu Sans Mono}
-    ''',
-
-    'preamble': r'''
-        % !Tex program = xelatex
-        \usepackage[titles]{tocloft}
-        \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
-        \setlength{\cftchapnumwidth}{0.75cm}
-        \setlength{\cftsecindent}{\cftchapnumwidth}
-        \setlength{\cftsecnumwidth}{1.25cm}
-    ''',
-
-    # Latex figure (float) alignment
-    #
-    'figure_align': 'htbp',
-}
+#latex_engine = 'xelatex'
+#latex_elements = {
+#    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+#    'printindex': r'\footnotesize\raggedright\printindex',
+#
+#    'papersize': 'a4paper',
+#
+#    'pointsize': '10pt',
+#    'extraclassoptions': 'onecolumn,oneside',
+#    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
+#
+#    'inputenc': '',
+#    'fncychap': '',
+#    'utf8extra': '',
+#    'fontpkg': '',
+#    'babel': '\\usepackage{polyglossia}',
+#    'cmappkg': '',
+#    'fontenc': '',
+#    'releasename': '',
+#
+#    'fontpkg': r'''
+#        \setmainfont{DejaVu Serif}
+#        \setsansfont{DejaVu Sans}
+#        \setmonofont{DejaVu Sans Mono}
+#    ''',
+#
+#    'preamble': r'''
+#        % !Tex program = xelatex
+#        \usepackage[titles]{tocloft}
+#        \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+#        \setlength{\cftchapnumwidth}{0.75cm}
+#        \setlength{\cftsecindent}{\cftchapnumwidth}
+#        \setlength{\cftsecnumwidth}{1.25cm}
+#    ''',
+#
+#    # Latex figure (float) alignment
+#    #
+#    'figure_align': 'htbp',
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,

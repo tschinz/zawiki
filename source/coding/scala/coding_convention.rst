@@ -2,8 +2,6 @@
 Coding Convention
 =================
 
-.. comments .. contents:: :local:
-
 Introduction
 ============
 

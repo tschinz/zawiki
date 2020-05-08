@@ -2,8 +2,6 @@
 Examples
 ========
 
-.. comments .. contents:: :local:
-
 Blinker
 =======
 

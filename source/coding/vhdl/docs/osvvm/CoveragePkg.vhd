@@ -143,8 +143,6 @@ package CoveragePkg is
   type IllegalModeType is (ILLEGAL_ON, ILLEGAL_FAILURE, ILLEGAL_OFF) ;
   type WeightModeType  is (AT_LEAST, WEIGHT, REMAIN, REMAIN_EXP, REMAIN_SCALED, REMAIN_WEIGHT ) ;
 
-
-
   -- In VHDL-2008 CovMatrix?BaseType and CovMatrix?Type will be subsumed
   -- by CovBinBaseType and CovBinType with RangeArrayType as an unconstrained array.
   type CovMatrix2BaseType is record
@@ -246,7 +244,6 @@ package CoveragePkg is
     variable result   : out   integer_vector
   ) ;
 
-
   ------------------------------------------------------------------------------------------
   --  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CovPType  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   --  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CovPType  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -301,8 +298,6 @@ package CoveragePkg is
     procedure AddBins ( AtLeast : integer ; CovBin : CovBinType ) ;
     procedure AddBins ( CovBin : CovBinType ) ;
 
-
-
     ------------------------------------------------------------
     procedure AddCross(
     ------------------------------------------------------------
@@ -355,7 +350,6 @@ package CoveragePkg is
       Bin3, Bin4, Bin5, Bin6, Bin7, Bin8, Bin9, Bin10, Bin11, Bin12, Bin13,
       Bin14, Bin15, Bin16, Bin17, Bin18, Bin19, Bin20 : CovBinType := NULL_BIN
     ) ;
-
 
     procedure Deallocate ;
 
@@ -512,7 +506,6 @@ package CoveragePkg is
   --  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CovPType  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   --  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CovPType  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   ------------------------------------------------------------------------------------------
-
 
   ------------------------------------------------------------
   -- Experimental.  Intended primarily for development.

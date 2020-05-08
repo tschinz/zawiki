@@ -2,8 +2,6 @@
 Raid
 ====
 
-.. comments .. contents:: :local:
-
 Raid ( **R** edundant **A** rray of **I** ndependent **D** isks) is a system to connect multiple harddisks together to increase the size, the performance or the security of those drives.
 
 Raid can be done via a specific hardware implementation, which is expensive; or a software implementation, which adds overhead and decreases your CPU performance.
@@ -15,7 +13,6 @@ Types
 
 Raid types
 ----------
-
 
 +-----------+------------------------------------------------------------------------+-----------------------------+
 | Type      ^ Description                                                            | Image                       |

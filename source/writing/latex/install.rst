@@ -2,8 +2,6 @@
 Installation LaTeX
 ==================
 
-.. comments .. contents:: :local:
-
 Base Install
 ============
 

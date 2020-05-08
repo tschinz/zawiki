@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 Useful Links
 ============
 

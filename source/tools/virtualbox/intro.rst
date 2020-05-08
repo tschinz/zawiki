@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 Oracle VM VirtualBox is an x86 virtualization software package. VirtualBox is installed on an existing host operating system as an application; this host application allows additional guest operating systems, each known as a Guest OS, to be loaded and run, each with its own virtual environment.
 Supported host operating systems include Linux, Mac OS X, Windows XP, Windows Vista, Windows 7, Solaris, and OpenSolaris; there is also a port to FreeBSD. Supported guest operating systems include versions and derivations of Windows, Linux, BSD, OS/2, Solaris and others.
 

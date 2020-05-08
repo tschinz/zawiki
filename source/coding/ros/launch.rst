@@ -2,8 +2,6 @@
 Launch
 ======
 
-.. comments .. contents:: :local:
-
 Launcher
 ========
 

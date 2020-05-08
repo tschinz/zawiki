@@ -2,8 +2,6 @@
 Installation
 ============
 
-.. comments .. contents:: :local:
-
 Tools
 =====
 The following tools are needed:

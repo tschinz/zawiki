@@ -2,8 +2,6 @@
 Syntax
 ======
 
-.. comments .. contents:: :local:
-
 Make Commands
 =============
 The execution of make isn't hard. Below a list of possible make commands.

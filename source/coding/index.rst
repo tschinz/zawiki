@@ -8,19 +8,19 @@ Coding
 
 .. toctree::
    :glob:
-   :maxdepth: 7
+   :maxdepth: 4
    :titlesonly:
    :caption: Coding
 
-   ahk/index
-   python/index
    regex/index
+   python/index
    vhdl/index
    tcl_tk_do/index
    spinal/index
    scala/index
-   c_cpp/index
-   make/index
+   ahk/index
    ros/index
+   make/index
+   c_cpp/index
    swift/index
    licenses/index

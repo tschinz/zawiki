@@ -2,8 +2,6 @@
 Power
 =====
 
-.. comments .. contents:: :local:
-
 ``powercfg``
 ============
 

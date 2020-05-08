@@ -2,8 +2,6 @@
 Packages
 ==========
 
-.. comments .. contents:: :local:
-
 Package Structure
 ==================
 

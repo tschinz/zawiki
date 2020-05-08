@@ -1,16 +1,15 @@
 =====
-Emoji
+Audio
 =====
 
 .. figure:: img/logo.*
    :align: center
-   :width: 150px
+   :width: 300px
 
 .. toctree::
    :glob:
-   :maxdepth: 7
+   :maxdepth: 4
    :titlesonly:
    :caption: Content
 
    *
-

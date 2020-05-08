@@ -2,8 +2,6 @@
 Basics
 ======
 
-.. comments .. contents:: :local:
-
 Coding Rules
 ============
 

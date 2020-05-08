@@ -4,6 +4,8 @@ Resolutions
 
 It is important to know the common used display, video and image resolutions.
 
+.. figure:: img/resolution.*
+
 +----------+---------------+---------------------+----------------+
 | Acronym  | Aspect Ration | Width x Height (px) | Usage          |
 +==========+===============+=====================+================+
@@ -65,6 +67,3 @@ It is important to know the common used display, video and image resolutions.
 +----------+---------------+---------------------+----------------+
 | 18M      | 3:2           | 5184 × 3456         | Canon 600D     |
 +----------+---------------+---------------------+----------------+
-
-.. figure:: img/resolution.*
-

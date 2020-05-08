@@ -2,8 +2,6 @@
 Data Structures & Methods
 =========================
 
-.. comments .. contents:: :local:
-
 Data Structures
 ===============
 

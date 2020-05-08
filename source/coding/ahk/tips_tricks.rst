@@ -2,8 +2,6 @@
 Tips & Tricks
 =============
 
-.. comments .. contents:: :local:
-
 My ahk scripts cna be found in the :config_repo:`config repo <tree/master/scripts/ahk>`
 
 Comment

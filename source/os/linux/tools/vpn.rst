@@ -2,8 +2,6 @@
 VPN Virtual Private Network
 ===========================
 
-.. comments .. contents:: :local:
-
 A virtual private network (VPN) extends a private network across a public network, such as the Internet. It enables a computer to send and receive data across shared or public networks as if it were directly connected to the private network, while benefiting from the functionality, security and management policies of the private network. This is done by establishing a virtual point-to-point connection through the use of dedicated connections, encryption, or a combination of the two.
 
 There exist many different VPN protocols such as PPTP, OpenVPN, L2TP, SSTP.

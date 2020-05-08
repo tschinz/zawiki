@@ -6,8 +6,6 @@ SDC Theory
    :align: center
    :width: 150px
 
-.. comments .. contents:: :local:
-
 Path & Analysis Times
 =====================
 

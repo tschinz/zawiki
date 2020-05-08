@@ -6,8 +6,6 @@ Simulation
    :align: center
    :width: 600px
 
-.. comments .. contents:: :local:
-
 Proposal of a simulation script system. All simulation files of a certain bloc can be found besides the ``src`` directory in the ``sim`` directory.
 
 It needs to have at least 4 files

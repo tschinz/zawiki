@@ -10,10 +10,9 @@ Writing
    :glob:
    :maxdepth: 4
    :titlesonly:
-   :caption: Coding
+   :caption: Content
 
    latex/index
    rst/index
    md/index
-   emoji/index
    gitbook/index

@@ -5,8 +5,6 @@
 How to use Sphinx Documentation
 ===============================
 
-.. comments .. contents:: :local:
-
 Sphinx Requirements
 ===================
 
@@ -31,9 +29,15 @@ Sphinx Requirements
 
      pip install sphinx
      pip install sphinx-rtd-theme
+     pip install pydata-sphinx-theme
      pip install sphinxcontrib-wavedrom
      pip install sphinxcontrib-plantuml
      pip install recommonmark
+     pip install sphinxemoji
+     pip install sphinx-copybutton
+     pip install nbsphinx
+     pip install jupyter_sphinx
+
 
 * Latex Tools (only for latex build)
 

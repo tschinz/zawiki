@@ -2,9 +2,6 @@
 Libraries
 =========
 
-.. comments .. contents:: :local:
-
-
 ``scala.math._``
 ================
 

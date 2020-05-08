@@ -2,8 +2,6 @@
 Git Flow
 ========
 
-.. comments .. contents:: :local:
-
 Branches
 ========
 
@@ -18,4 +16,3 @@ Branches
    :width: 500px
 
    Git Flow
-

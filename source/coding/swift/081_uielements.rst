@@ -2,9 +2,6 @@
 UI Elements
 ===========
 
-.. comments .. contents:: :local:
-
-
 ``UILabel``
 ===========
 

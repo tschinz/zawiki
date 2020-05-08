@@ -2,8 +2,6 @@
 Project Files
 =============
 
-.. comments .. contents:: :local:
-
 Project Structure
 =================
 

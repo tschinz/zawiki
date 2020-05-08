@@ -6,9 +6,6 @@ VIM
    :align: center
    :width: 150px
 
-.. comments .. contents:: :local:
-
-
 Vim is a text editor written by Bram Moolenaar and first released publicly in 1991. Based on the vi editor common to Unix-like systems, Vim is designed for use both from a command line interface and as a standalone application in a graphical user interface.
 
 Cheat Sheet

@@ -2,8 +2,6 @@
 Pandas
 ======
 
-.. comments .. contents:: :local:
-
 Import
 ======
 The minimum pandas imports are:
@@ -15,7 +13,6 @@ The minimum pandas imports are:
 
 Import Excel
 ============
-
 
 .. code-block:: python
 
@@ -35,7 +32,6 @@ Import Excel
 
    # import specific columns
    df = pd.read_excel(filename, sheet_name='Sheet1', header=None, skiprows=1, usecols='B,D')
-
 
 Access informations
 ===================
@@ -119,10 +115,6 @@ Access Data
 Sort
 ====
 
-.. code-block:: python
-
-
-
 
 Filter
 ======
@@ -152,7 +144,6 @@ Filter
    # drop duplicates
    df.drop_duplicates(subset=['colname'])
 
-
 Remove
 ======
 
@@ -160,4 +151,3 @@ Remove
 
    # remove columns
    df.drop(['colname'], axis = 1)
-

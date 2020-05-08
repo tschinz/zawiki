@@ -2,8 +2,6 @@
 Intellij IDEA IDE
 =================
 
-.. comments .. contents:: :local:
-
 * Cheatsheet :pdfviewer:`IntelliJIDEA_ReferenceCard.pdf <github/tschinz/zawiki/source/coding/spinal/tools/docs/IntelliJIDEA_ReferenceCard.pdf`
 
 Shortcuts

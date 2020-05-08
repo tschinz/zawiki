@@ -2,8 +2,6 @@
 Some Methods
 ============
 
-.. comments .. contents:: :local:
-
 Raw Input
 =========
 

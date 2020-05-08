@@ -2,8 +2,6 @@
 All Emoji
 =========
 
-.. comments .. contents:: :local:
-
 People
 ======
 

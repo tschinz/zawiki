@@ -2,8 +2,6 @@
 Git Commands
 ============
 
-.. comments .. contents:: :local:
-
 .. figure:: img/git-cheatsheet.*
    :align: center
    :width: 500px

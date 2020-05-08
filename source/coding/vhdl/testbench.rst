@@ -6,8 +6,6 @@ Testbench
    :align: center
    :width: 600px
 
-.. comments .. contents:: :local:
-
 Additional Documents
 ====================
 
@@ -27,7 +25,6 @@ Tests & Severity
    assert ( a = b )
    report “a is not equal to b”
    severity severity_lvl;
-
 
 Stop Simulation
 ---------------

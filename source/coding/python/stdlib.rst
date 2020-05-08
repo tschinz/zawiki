@@ -2,8 +2,6 @@
 Standart libraries
 ==================
 
-.. comments .. contents:: :local:
-
 Module Content
 ==============
 

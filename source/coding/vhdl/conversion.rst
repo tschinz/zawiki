@@ -2,8 +2,6 @@
 Conversion
 ==========
 
-.. comments .. contents:: :local:
-
 Overview
 ========
 

@@ -2,8 +2,6 @@
 Key Definitions
 ===============
 
-.. comments .. contents:: :local:
-
 Raw Keys
 ========
 

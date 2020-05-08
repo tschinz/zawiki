@@ -2,8 +2,6 @@
 .gitignore
 ==========
 
-.. comments .. contents:: :local:
-
 Get useful gitignore at `gitignore.io <https://gitignore.io/>`_
 
 Gitignore entries

@@ -2,8 +2,6 @@
 Setup Rpi
 =========
 
-.. comments .. contents:: :local:
-
 Raspi-conf
 ==========
 

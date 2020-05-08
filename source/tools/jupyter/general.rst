@@ -2,8 +2,6 @@
 General
 =======
 
-.. comments .. contents:: :local:
-
 Extentions
 ==========
 

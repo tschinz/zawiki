@@ -2,8 +2,6 @@
 Introduction
 ============
 
-.. comments .. contents:: :local:
-
 Swift is:
 
 * **Safe**. The most obvious way to write code should also behave in a safe manner. Undefined behavior is the enemy of safety, and developer mistakes should be caught before software is in production. Opting for safety sometimes means Swift will feel strict, but we believe that clarity saves time in the long run.

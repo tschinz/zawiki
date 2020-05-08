@@ -2,8 +2,6 @@
 Github
 ======
 
-.. comments .. contents:: :local:
-
 Advanced Search
 ===============
 

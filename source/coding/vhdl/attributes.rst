@@ -2,9 +2,6 @@
 Attributes
 ==========
 
-.. comments .. contents:: :local:
-
-
 Attributes are a feature of VHDL that allow you to extract additional information about an object (such as a signal, variable or type) that may not be directly related to the value that the object carries. Attributes also allow you to assign additional information (such as data related to synthesis) to objects in your design description.
 
 Predefined attributes
@@ -547,4 +544,3 @@ Once the attribute has been declared and given a name, it can be referenced as n
    attribute enum_encoding of statevalue: type is "000 001 011 010 110";
 
 Custom attributes are a convenient "back door" feature of VHDL, and design tool vendors have created many such attributes to give you more control over the synthesis and simulation process. For detailed information about custom attributes, refer to your design tool documentation.
-

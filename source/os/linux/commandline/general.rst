@@ -2,8 +2,6 @@
 General Shell Commands
 ======================
 
-.. comments .. contents:: :local:
-
 Change permissions on type
 ==========================
 
@@ -11,7 +9,6 @@ Change permissions on type
 
    sudo find /var/www -type d -print0 | sudo xargs -0 chmod 0755
    sudo find /var/www -type f -print0 | sudo xargs -0 chmod 0644
-
 
 SSH relia
 =========

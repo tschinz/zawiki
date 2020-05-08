@@ -1,12 +1,5 @@
-=======
-General
-=======
-
-.. comments .. contents:: :local:
-
-:config_repo:`Python samples <tree/master/scripts/python>`
-
-flake8
+======
+Flake8
 ======
 
 .. code-block:: bash

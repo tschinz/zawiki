@@ -2,8 +2,6 @@
 External Packages and Nodes
 ===========================
 
-.. comments .. contents:: :local:
-
 Terminology
 ===========
 

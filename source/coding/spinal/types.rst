@@ -2,8 +2,6 @@
 Data Types
 ==========
 
-.. comments .. contents:: :local:
-
 For scala types see :doc:`/coding/scala/intro`
 
 Spinal

@@ -2,8 +2,6 @@
 HACK this documentation
 =======================
 
-.. comments .. contents:: :local:
-
 If you want to add your page to this documentation you need to add your source file in the appropriate section.
 Every main section has its own folder structure and its own ``img/`` folder containing all images for this section.
 
@@ -14,27 +12,24 @@ If you don't have enough knowledge about ReStructuredText then you can also use 
 New Documentation Section
 =========================
 
-If you want to add a new section, you need to specify in the :download:`main index.rst </index.rst>`, the ``section/index.rst`` file of the new section.
+If you want to add a new section, you need to specify in the :download:`main index_html.rst </index_html.rst>`, the ``section/index_html.rst`` file of the new section.
 
 .. code-block:: ReST
 
    .. toctree::
       :hidden:
       :glob:
-      :maxdepth: 7
+      :maxdepth: 4
       :titlesonly:
       :caption: Content
 
-      linux/index
-      mac/index
-      windows/index
+      os/index
       tools/index
       coding/index
       writing/index
       multimedia/index
       security/index
       about/index
-
 
 The section name should be the same as the folder name, but for Sphinx this is not required. Sphinx will take the name of the section from the title of the ``section/index.rst`` file.
 
@@ -55,11 +50,9 @@ So I need to create a folder named ``section/`` (name is not important), and in 
       :align: right
       :width: 150px
 
-   .. comments .. contents:: :local:
-
    .. toctree::
       :glob:
-      :maxdepth: 7
+      :maxdepth: 4
       :titlesonly:
       :caption: Content
 
@@ -72,7 +65,7 @@ So I need to create a folder named ``section/`` (name is not important), and in 
 .. note::
    The file path is relative to the index file, if you want to specify the absolute path, you need to prepend ``/``
 
-Now I can add additional ``ReST`` files like ``section/intro.rst`` and other files like ``section/section_part_1.rst``, ``ssection/ection_part_2.rst``, etc.
+Now I can add additional ``ReST`` files like ``section/intro.rst`` and other files like ``section/section_part_1.rst``, ``ssection/section_part_2.rst``, etc.
 
 Section Images
 --------------

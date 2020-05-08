@@ -2,8 +2,6 @@
 Multithreading
 ==============
 
-.. comments .. contents:: :local:
-
 Queue
 =====
 
