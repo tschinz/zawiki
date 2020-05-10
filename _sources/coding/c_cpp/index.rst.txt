@@ -9,9 +9,9 @@ C / C++
 
 .. toctree::
    :glob:
-   :hidden:
    :maxdepth: 4
    :titlesonly:
+   :caption: Content
 
    *
 

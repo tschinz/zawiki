@@ -5,6 +5,10 @@
 How to use Sphinx Documentation
 ===============================
 
+.. figure:: img/howto.*
+   :align: center
+   :width: 150px
+
 Sphinx Requirements
 ===================
 
