@@ -4,7 +4,7 @@ Pictures
 
 .. figure:: img/logo.*
    :align: center
-   :width: 300px
+   :width: 150px
 
 .. toctree::
    :glob:
@@ -13,4 +13,4 @@ Pictures
    :caption: Content
 
    *
-   emoji/*
+   emoji/index

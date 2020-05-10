@@ -43,7 +43,7 @@ Boolean Answer
 The best thing about a Boolean is even if you are wrong, you are only off by a bit.
 
 **Answer**
-Boolean = ``0`` or ``1`` only of by 1bit
+Boolean = ``0`` or ``1`` only of by ``1bit``
 
 Programmer Checks
 =================
@@ -75,7 +75,7 @@ HTML Tags
    ``<DIV>Q: How to you annoy a web developer? </SPAN`>``
 
 **Answer**
-HTML Tags are wrong DIV and SPAN means the same. Above code is wrong.
+HTML Tags are wrong ``DIV`` and ``SPAN`` means the same. Above code is wrong.
 
 Teacher Punishement
 ===================
@@ -106,12 +106,14 @@ Accelerate a computer
 =====================
 
 **Question**
-The best method for accelerating a computer is the one that boosts it by 9.8 m/s2
+The best method for accelerating a computer is the one that boosts it by :math:`9.8 \frac{m}{s^2}`.
 
 **Answer**
-Let it drop. Earth gravity accelerates it by 9.8m/s2
+Let it drop. Earth gravity accelerates it by :math:`9.8 \frac{m}{s^2}`
 
-## SQL Naming
+SQL Naming
+==========
+
 **Question**
 
 .. figure:: img/sql_name.png
@@ -137,3 +139,17 @@ Scripts Automation
    :width: 500px
 
    Automation 2
+
+Are you feeling ill?
+====================
+
+**Question**
+
+.. figure:: img/one_bit_off.png
+   :align: center
+   :width: 500px
+
+   feeling a bit off
+
+**Answer**
+One bit is the smallest dataunit. Plays on the double meaning of "a bit" (a bit or one bit (data)).

@@ -2,6 +2,10 @@
 License
 =======
 
+.. figure:: img/license.*
+   :align: right
+   :width: 150px
+
 Copyright (c) 2020, tschinz All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

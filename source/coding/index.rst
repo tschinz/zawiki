@@ -7,9 +7,9 @@ Coding
    :width: 150px
 
 .. toctree::
-   :glob:
    :maxdepth: 4
    :titlesonly:
+   :caption: Content
 
    ahk/index
    c_cpp/index
