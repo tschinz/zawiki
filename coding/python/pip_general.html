@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PyQt4" href="pyqt.html" />
+    <link rel="next" title="pipenv" href="pipenv.html" />
     <link rel="prev" title="Pandas" href="pandas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -164,7 +164,21 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#requirements" class="nav-link">requirements</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#file-content-requirements-txt" class="nav-link">File content requirements.txt</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#create-requirements-txt" class="nav-link">Create requirements.txt</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#install-requirements-txt" class="nav-link">Install requirements.txt</a>
+        </li>
+    
+            </ul>
         </li>
     
     </ul>
@@ -189,6 +203,9 @@
                 
   <div class="section" id="pip">
 <h1>PIP<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/pip_logo.svg"><img alt="../../_images/pip_logo.svg" src="../../_images/pip_logo.svg" width="150px" /></a>
+</div>
 <div class="section" id="admin">
 <h2>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show pip help</span>
@@ -221,15 +238,46 @@ pip install &lt;packagename&gt;
 pip install -I &lt;packagename&gt;<span class="o">==</span>&lt;package version&gt;
 pip install -I <span class="nv">ipython</span><span class="o">==</span><span class="m">5</span>.4.0
 
+<span class="c1"># Update</span>
+pip install -U &lt;packagename&gt;
+
 <span class="c1"># Uninstall</span>
 pip uninstall &lt;packagename&gt;
 </pre></div>
 </div>
 </div>
+<div class="section" id="requirements">
+<h2>requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-content-requirements-txt">
+<h3>File content <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#file-content-requirements-txt" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>###### Requirements without Version Specifiers ######`
+nose
+nose-cov
+beautifulsoup4
+
+###### Requirements with Version Specifiers ######`
+docopt == 0.6.1             # Version Matching. Must be version 0.6.1
+keyring &gt;= 4.1.1            # Minimum version 4.1.1
+coverage != 3.5             # Version Exclusion. Anything except version 3.5
+Mopidy-Dirble ~= 1.1        # Compatible release. Same as &gt;= 1.1, == 1.*
+package &gt;= 1.0, &lt;=2.0       # two requirements combinesd with and
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="create-requirements-txt">
-<h2>Create <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#create-requirements-txt" title="Permalink to this headline">¶</a></h2>
+<h3>Create <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#create-requirements-txt" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
 </pre></div>
+</div>
+</div>
+<div class="section" id="install-requirements-txt">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#install-requirements-txt" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
 </div>
 </div>
 </div>

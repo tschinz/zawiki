@@ -6,7 +6,7 @@ Tools
 =====
 The following tools are needed:
 
-* :doc:`tools intro </coding/spinal/tools/intro>`
+* :doc:`tools intro </coding/spinal/tools/index>`
 * :doc:`intellij_idea </coding/spinal/tools/intellij_idea>`
 
 Linux

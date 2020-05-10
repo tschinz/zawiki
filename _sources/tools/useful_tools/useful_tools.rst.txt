@@ -14,14 +14,14 @@ Multimedia
   * `Gimp <https://www.gimp.org/>`_ - Image Editor |linux| |mac| |win|
   * `Inkscape <https://inkscape.org/>`_ - Vector Graphic Editor |linux| |mac| |win|
   * `pdftk <https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/>`_ |linux| |mac| |win|
-  * Pantuml :doc:`Wiki </multimedia/pictures/plantuml>` and `Official <https://plantuml.com/>`_ |linux| |mac| |win|
+  * :doc:`Pantuml Wiki </multimedia/pictures/plantuml>` and `Official Plantuml <https://plantuml.com/>`_ |linux| |mac| |win|
   * `Graphviz <https://graphviz.org/>`_ |linux| |mac| |win|
-  * Wavedrom :doc:`Wiki </multimedia/pictures/wavedrom>` and `Official <https://wavedrom.com/>`_ |linux| |mac| |win|
+  * :doc:`Wavedrom Wiki </multimedia/pictures/wavedrom>` and `Official Wavedrom <https://wavedrom.com/>`_ |linux| |mac| |win|
   * Latex :doc:`Wiki </writing/latex/index>` |linux| |mac| |win|
 
 Internet
 ========
-  * Madsonic :doc:`Wiki </os/linux/tools/subsonic>` and `Official <https://www.madsonic.org>`_ |linux|
+  * :doc:`Madsonic Wiki </os/linux/tools/subsonic>` and `Official Madsonic <https://www.madsonic.org>`_ |linux|
   * X11VNC :doc:`Wiki </os/linux/tools/vnc>` |linux|
   * qBitTorrent :doc:`Wiki </tools/bittorrent/index>` |linux| |mac| |win|
 
