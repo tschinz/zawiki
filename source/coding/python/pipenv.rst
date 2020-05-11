@@ -20,7 +20,7 @@ Installation
 ``Pipfile``
 ===========
 
-``Pipfile``s contain information for the dependencies of the project, and supersedes the ``requirements.txt`` file used in most Python projects.
+``Pipfile`` contain information for the dependencies of the project, and supersedes the ``requirements.txt`` file used in most Python projects.
 
 
 Import from ``requirements.txt``
