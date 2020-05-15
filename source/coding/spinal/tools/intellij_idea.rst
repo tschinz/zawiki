@@ -2,7 +2,9 @@
 Intellij IDEA IDE
 =================
 
-* Cheatsheet :pdfviewer:`IntelliJIDEA_ReferenceCard.pdf <github/tschinz/zawiki/source/coding/spinal/tools/docs/IntelliJIDEA_ReferenceCard.pdf`
+* Cheatsheet :pdfviewer:`IntelliJIDEA_ReferenceCard.pdf <github/tschinz/zawiki/source/tools/jetbrain/docs/IntelliJIDEA_ReferenceCard.pdf`
+
+See also :doc:`/tools/jetbrains/intellij_idea`
 
 Shortcuts
 =========

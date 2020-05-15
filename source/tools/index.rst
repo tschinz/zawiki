@@ -17,6 +17,7 @@ Tools
    jupyter/index
    pandoc/index
    sphinx/index
+   jetbrains/index
    sublimetext/index
    virtualbox/index
    bittorrent/index
