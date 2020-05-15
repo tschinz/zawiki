@@ -145,10 +145,6 @@
                           <a href="install.html">Additional Install</a>
                       </li>
                   
-                      <li class="">
-                          <a href="intro.html">Introduction</a>
-                      </li>
-                  
                   </ul>
               </li>
           
@@ -168,6 +164,12 @@
           
               <li class="">
                   <a href="../sphinx/index.html">Sphinx Documentation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../jetbrains/index.html">JetBrains IDE</a>
               </li>
           
         
@@ -216,9 +218,34 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#anaconda-conda-update" class="nav-link">Anaconda / Conda Update</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#config-file" class="nav-link">Config File</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#change-password" class="nav-link">Change Password</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#jupyter" class="nav-link">Jupyter</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -243,14 +270,54 @@
   <div class="section" id="anaconda">
 <h1>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo30.svg"><img alt="../../_images/logo30.svg" src="../../_images/logo30.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo30.svg"><img alt="../../_images/logo30.svg" src="../../_images/logo30.svg" width="300px" /></a>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Additional Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 </ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Anaconda is a complete python package with comes with many features:</p>
+<ul class="simple">
+<li><p>Jupyter</p></li>
+<li><p>PIP</p></li>
+<li><p>Environments</p></li>
+<li><p>Support Win / Linux / Mac</p></li>
+<li><p><a class="reference external" href="https://www.continuum.io/downloads">Anaconda Download</a></p></li>
+<li><p><a class="reference external" href="http://conda.pydata.org/">Conda Docs</a></p></li>
+</ul>
+<div class="section" id="anaconda-conda-update">
+<h3>Anaconda / Conda Update<a class="headerlink" href="#anaconda-conda-update" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update all Conda packages</span>
+conda update --all
+
+<span class="c1"># Update Anaconda only</span>
+conda update conda
+conda update anaconda
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-file">
+<h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
+<p>Create Config file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook --generate-config
+</pre></div>
+</div>
+<p>The Config file  is located at: <code class="docutils literal notranslate"><span class="pre">~/.jupyter/jupyter_notebook_config.json</span></code></p>
+</div>
+<div class="section" id="change-password">
+<h3>Change Password<a class="headerlink" href="#change-password" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook password
+</pre></div>
+</div>
+</div>
+<div class="section" id="jupyter">
+<h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h3>
+<p>See the dedicated jupyter pages for more informations: <a class="reference internal" href="../jupyter/index.html"><span class="doc">Jupyter</span></a></p>
+</div>
 </div>
 </div>
 

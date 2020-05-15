@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Pandoc" href="intro.html" />
+    <link rel="next" title="Sphinx Documentation" href="../sphinx/index.html" />
     <link rel="prev" title="Installation" href="../jupyter/installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -148,22 +148,20 @@
           
         
           
-
               <li class="active">
                   <a href="">Pandoc</a>
-                  <ul>
-                  
-                      <li class="">
-                          <a href="intro.html">Pandoc</a>
-                      </li>
-                  
-                  </ul>
               </li>
           
         
           
               <li class="">
                   <a href="../sphinx/index.html">Sphinx Documentation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../jetbrains/index.html">JetBrains IDE</a>
               </li>
           
         
@@ -212,9 +210,46 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#additional-arguments" class="nav-link">Additional Arguments</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#highlight-styles" class="nav-link">Highlight Styles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pdf-output" class="nav-link">PDF Output</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#for-my-template-needed-packages" class="nav-link">For my template needed packages</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#template" class="nav-link">Template</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#windows" class="nav-link">Windows</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#linux" class="nav-link">Linux</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -239,13 +274,73 @@
   <div class="section" id="pandoc">
 <h1>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo35.svg"><img alt="../../_images/logo35.svg" src="../../_images/logo35.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo36.svg"><img alt="../../_images/logo36.svg" src="../../_images/logo36.svg" width="150px" /></a>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Pandoc</a></li>
+<p>If you need to convert files from one markup format into another, pandoc is your swiss-army knife.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pandoc.org/try/">Pandoc Online</a></p></li>
+<li><p><a class="reference external" href="https://pandoc.org/installing.html">Pandoc Download</a></p></li>
 </ul>
+<div class="section" id="additional-arguments">
+<h2>Additional Arguments<a class="headerlink" href="#additional-arguments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="highlight-styles">
+<h3>Highlight Styles<a class="headerlink" href="#highlight-styles" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all Highlight Styles</span>
+pandoc --list-highlight-styles
+pygments
+tango
+espresso
+zenburn
+kate
+monochrome
+breezedark
+haddock
+
+<span class="c1">## Pandoc Argument</span>
+--highlight-style breezedark
+</pre></div>
+</div>
+</div>
+<div class="section" id="pdf-output">
+<h3>PDF Output<a class="headerlink" href="#pdf-output" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--pdf-engine<span class="o">=</span>xelatex
+</pre></div>
+</div>
+<div class="section" id="for-my-template-needed-packages">
+<h4>For my template needed packages<a class="headerlink" href="#for-my-template-needed-packages" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>cm-super</p>
+<ul>
+<li><p>Error no Scalable font</p></li>
+</ul>
+</li>
+<li><p>koma-script</p>
+<ul>
+<li><p>! LaTeX Error: File <code class="docutils literal notranslate"><span class="pre">scrartcl.cls</span></code> not found.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="template">
+<h3>Template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
+<p>Latex Template needs to be in the following folders</p>
+<div class="section" id="windows">
+<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\\</span>Users<span class="se">\\</span>&lt;username&gt;<span class="se">\\</span>AppData<span class="se">\\</span>Roaming<span class="se">\\</span>pandoc<span class="se">\\</span>templates
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux">
+<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/.pandoc/templates/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--template<span class="o">=</span>&lt;template&gt;.latex
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

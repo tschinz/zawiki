@@ -23,10 +23,10 @@ Installation
 ``Pipfile`` contain information for the dependencies of the project, and supersedes the ``requirements.txt`` file used in most Python projects.
 
 
-Import from ``requirements.txt``
+Import from existing file
 --------------------------------
 
-If there is no ``Pipfile`` the install command will search for a ``requirement.txt`` and creates a ``Pipfile`` with its content.
+The import will search first for a ``Pipfile`` and ``Pipfile.lock`` file. If found a virtual environemnt with that packages will be created. If there files are not found ``pipenv`` will search for a ``requirements.txt`` and create a new ``Pipfile`` with its content. Afterwards a virtual environment will be created from it.
 
 .. code-block:: bash
 

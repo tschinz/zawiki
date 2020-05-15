@@ -163,7 +163,7 @@
             <a href="#pipfile" class="nav-link">Pipfile</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#import-from-requirements-txt" class="nav-link">Import from requirements.txt</a>
+            <a href="#import-from-existing-file" class="nav-link">Import from existing file</a>
         </li>
     
             </ul>
@@ -264,9 +264,9 @@
 <div class="section" id="pipfile">
 <h2><code class="docutils literal notranslate"><span class="pre">Pipfile</span></code><a class="headerlink" href="#pipfile" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> contain information for the dependencies of the project, and supersedes the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file used in most Python projects.</p>
-<div class="section" id="import-from-requirements-txt">
-<h3>Import from <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code><a class="headerlink" href="#import-from-requirements-txt" title="Permalink to this headline">¶</a></h3>
-<p>If there is no <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> the install command will search for a <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code> and creates a <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> with its content.</p>
+<div class="section" id="import-from-existing-file">
+<h3>Import from existing file<a class="headerlink" href="#import-from-existing-file" title="Permalink to this headline">¶</a></h3>
+<p>The import will search first for a <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> and <code class="docutils literal notranslate"><span class="pre">Pipfile.lock</span></code> file. If found a virtual environemnt with that packages will be created. If there files are not found <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> will search for a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> and create a new <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> with its content. Afterwards a virtual environment will be created from it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipenv install
 </pre></div>
 </div>
