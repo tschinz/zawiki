@@ -1,0 +1,663 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scala &#8212; Zawiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Coding Convention" href="coding_convention.html" />
+    <link rel="prev" title="Transform Frames" href="../ros/tf2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../ahk/index.html">AHK</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../c_cpp/index.html">C / C++</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../licenses/index.html">Licenses</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../make/index.html">Make</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../python/index.html">Python</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../regex/index.html">RegEx</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../ros/index.html">ROS</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="">Scala</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="coding_convention.html">Coding Convention</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="libraries.html">Libraries</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../spinal/index.html">Spinal HDL</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../swift/index.html">Swift</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../tcl_tk_do/index.html">Tcl-Tk</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../vhdl/index.html">VHDL</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#basics" class="nav-link">Basics</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#types" class="nav-link">Types</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#variables" class="nav-link">Variables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#constants" class="nav-link">Constants</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#functions" class="nav-link">Functions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#return" class="nav-link">Return</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#return-type-inferation" class="nav-link">Return type inferation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#function-that-returns-nothing-unit" class="nav-link">Function that returns nothing Unit</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#arguements-default-value" class="nav-link">Arguements default value</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#apply" class="nav-link">Apply</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#object" class="nav-link">Object</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#entry-point-main" class="nav-link">Entry point (main)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#class" class="nav-link">Class</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#inheritance-extends" class="nav-link">Inheritance extends</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#case-class" class="nav-link">Case class</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#templates-type-parameterization" class="nav-link">Templates / Type parameterization</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/programming/scala/index.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="scala">
+<h1>Scala<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/logo24.svg"><img alt="Logo" src="../../_images/logo24.svg" width="150px" /></a>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coding_convention.html">Coding Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Libraries</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/78351e9c9f7ca3273b6ad4549ba4a990/scala-cheatsheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Scala</span> <span class="pre">Cheatsheet</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="types">
+<h3>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<table class="table">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 41%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Range</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Byte</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-128</span></code> to <code class="docutils literal notranslate"><span class="pre">127</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Short</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-32768</span></code> to <code class="docutils literal notranslate"><span class="pre">32767</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-2147483648</span></code> to <code class="docutils literal notranslate"><span class="pre">2147483647</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Long</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> signed value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-9223372036854775808</span></code> to <code class="docutils literal notranslate"><span class="pre">9223372036854775807</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">bit</span></code> IEEE 754 single-precision float</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">bit</span></code> IEEE 754 double-precision float</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Char</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bit</span></code> unsigned Unicode character</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">U+0000</span></code> to <code class="docutils literal notranslate"><span class="pre">U+FFFF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code></p></td>
+<td><p>A sequence of Chars</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></p></td>
+<td><p>Either the literal true or the literal false</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Unit</span></code></p></td>
+<td><p>Corresponds to no value</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Null</span></code></p></td>
+<td><p>null or empty reference</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<p>In scala, you can define a variable by using the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">number</span> <span class="k">=</span> <span class="mi">6</span>
+<span class="n">number</span> <span class="o">+=</span> <span class="mi">4</span>
+<span class="n">println</span><span class="o">(</span><span class="n">number</span><span class="o">)</span> <span class="c1">// 10</span>
+</pre></div>
+</div>
+<p>Scala is able to infer the type automatically. You don’t need to specify it if the variable is assigned at declaration:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">=</span> <span class="mi">0</span>   <span class="c1">//The type of &#39;number&#39; is inferred as a Int during the compilation.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="constants">
+<h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
+<p>But, in fact, it’s not very common to use <code class="docutils literal notranslate"><span class="pre">var</span></code> in Scala. Instead, constant values defined by <code class="docutils literal notranslate"><span class="pre">val</span></code> are often used:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">two</span>   <span class="k">=</span> <span class="mi">2</span>
+<span class="k">val</span> <span class="n">three</span> <span class="k">=</span> <span class="mi">3</span>
+<span class="k">val</span> <span class="n">six</span>   <span class="k">=</span> <span class="n">two</span> <span class="o">*</span> <span class="n">three</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>For example, if you want to define a function which returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the sum of its two arguments is bigger than zero, you can do as follows:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then, to call this function, you can just write:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="mf">2.3f</span><span class="o">,</span> <span class="mf">5.4f</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>You can also specify arguements by name, which is useful if you have many arguements:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">sumBiggerThanZero</span><span class="o">(</span>
+  <span class="n">a</span> <span class="k">=</span> <span class="mf">2.3f</span><span class="o">,</span>
+  <span class="n">b</span> <span class="k">=</span> <span class="mf">5.4f</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<div class="section" id="return">
+<h4>Return<a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword is not necessary. In absence of it, Scala takes the last statement of your function as the returned value.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="return-type-inferation">
+<h4>Return type inferation<a class="headerlink" href="#return-type-inferation" title="Permalink to this headline">¶</a></h4>
+<p>Scala is able to automatically infer the return type. You don’t need to specify it:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-that-returns-nothing-unit">
+<h4>Function that returns nothing <code class="docutils literal notranslate"><span class="pre">Unit</span></code><a class="headerlink" href="#function-that-returns-nothing-unit" title="Permalink to this headline">¶</a></h4>
+<p>If you want a function to return nothing, the return type should be set to <code class="docutils literal notranslate"><span class="pre">Unit</span></code>. It’s equivalent to the C/C++ void.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">printer</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">&quot;1234&quot;</span><span class="o">)</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">&quot;5678&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arguements-default-value">
+<h4>Arguements default value<a class="headerlink" href="#arguements-default-value" title="Permalink to this headline">¶</a></h4>
+<p>You can specify a default value for each arguement of a function:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="apply">
+<h4>Apply<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h4>
+<p>Functions named apply are special because you can call them without having to type their name:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Array</span><span class="o">(){</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">index</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">array</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="n">array</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>   <span class="c1">//array(4) is interpreted as array.apply(4) and will return 7</span>
+</pre></div>
+</div>
+<p>This concept is also applicable for scala <code class="docutils literal notranslate"><span class="pre">object</span></code> (static)</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MajorityVote</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="nc">MajorityVote</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="c1">// Will call MajorityVote.apply(4)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="object">
+<h3>Object<a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h3>
+<p>In scala, there is no <code class="docutils literal notranslate"><span class="pre">static</span></code> keyword. In place of that, there is <code class="docutils literal notranslate"><span class="pre">object</span></code>. Everything defined into an <code class="docutils literal notranslate"><span class="pre">object</span></code> is static.</p>
+<p>The following example defines a static function named <code class="docutils literal notranslate"><span class="pre">pow2</span></code> which takes a floating point value as parameter and returns a floating point as well.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MathUtils</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">pow2</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="n">value</span><span class="o">*</span><span class="n">value</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then you can call it by writing:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">MathUtils</span><span class="o">.</span><span class="n">pow2</span><span class="o">(</span><span class="mf">42.0f</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="entry-point-main">
+<h3>Entry point (main)<a class="headerlink" href="#entry-point-main" title="Permalink to this headline">¶</a></h3>
+<p>The entry point of a Scala program (the main function) should be defined inside an object as a function named <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">MyTopLevelMain</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello world&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="class">
+<h3>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<p>The class syntax is very similar to Java. Imagine that you want to define a <code class="docutils literal notranslate"><span class="pre">Color</span></code> class which takes as construction parameters three Float values (r,g,b) :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Color</span><span class="o">(</span><span class="n">r</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">){</span>
+  <span class="k">def</span> <span class="n">getGrayLevel</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mf">0.3f</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="mf">0.4f</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span><span class="mf">0.4f</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then, to instantiate the class from the previous example and use its <code class="docutils literal notranslate"><span class="pre">getGrayLevel</span></code> function:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">grayLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">getGrayLevel</span><span class="o">()</span>
+</pre></div>
+</div>
+<p>Be careful, if you want to access a construction parameter of the class from the outside, this construction parameter should be defined as a <code class="docutils literal notranslate"><span class="pre">val</span></code>:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Color</span><span class="o">(</span><span class="k">val</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">){</span> <span class="o">...</span> <span class="o">}</span>
+<span class="o">...</span>
+<span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">redLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">r</span>
+</pre></div>
+</div>
+<div class="section" id="inheritance-extends">
+<h4>Inheritance <cite>extends</cite><a class="headerlink" href="#inheritance-extends" title="Permalink to this headline">¶</a></h4>
+<p>As an example, suppose that you want to define two classes, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> and <code class="docutils literal notranslate"><span class="pre">Square</span></code>, which extend the class <code class="docutils literal notranslate"><span class="pre">Shape</span></code>:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Shape</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Square</span><span class="o">(</span><span class="n">sideLength</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">sideLength</span> <span class="o">*</span> <span class="n">sideLength</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="case-class">
+<h4>Case class<a class="headerlink" href="#case-class" title="Permalink to this headline">¶</a></h4>
+<p>Case class is an alternative way of declaring classes.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Then there are some differences between <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> and <code class="docutils literal notranslate"><span class="pre">class</span></code> :</p>
+<ul class="simple">
+<li><p>case classes don’t need the <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword to be instantiated</p></li>
+<li><p>construction parameters are accessible from outside, you don’t need to define them as <code class="docutils literal notranslate"><span class="pre">val</span></code>.</p></li>
+</ul>
+<p>In SpinalHDL, this explains the reasoning behind the coding conventions: it’s in general recommended to use <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> instead of <code class="docutils literal notranslate"><span class="pre">class</span></code> in order to have less typing and more coherency.</p>
+</div>
+</div>
+<div class="section" id="templates-type-parameterization">
+<h3>Templates / Type parameterization<a class="headerlink" href="#templates-type-parameterization" title="Permalink to this headline">¶</a></h3>
+<p>Imagine you want to design a class which is a queue of a given datatype, in that case you need to provide a type parameter to the class:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span>  <span class="nc">Queue</span><span class="o">[</span><span class="kt">T</span><span class="o">](){</span>
+  <span class="k">def</span> <span class="n">push</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">...</span>
+  <span class="k">def</span> <span class="n">pop</span><span class="o">()</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If you want to restrict the <code class="docutils literal notranslate"><span class="pre">T</span></code> type to be a sub class of a given type (for example <code class="docutils literal notranslate"><span class="pre">Shape</span></code>), you can use the <code class="docutils literal notranslate"><span class="pre">&lt;:</span> <span class="pre">Shape</span></code> syntax :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Shape</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span><span class="k">:</span> <span class="kt">Float</span>
+<span class="o">}</span>
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+<span class="k">class</span>  <span class="nc">Queue</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Shape</span><span class="o">](){</span>
+  <span class="k">def</span> <span class="n">push</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">...</span>
+  <span class="k">def</span> <span class="n">pop</span><span class="o">()</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The same is possible for functions:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">doSomething</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Shape</span><span class="o">](</span><span class="n">shape</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">Something</span> <span class="o">=</span> <span class="o">{</span> <span class="n">shape</span><span class="o">.</span><span class="n">getArea</span><span class="o">()</span> <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

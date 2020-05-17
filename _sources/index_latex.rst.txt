@@ -19,18 +19,18 @@
    tools/virtualbox/index
    tools/bittorrent/index
 
-   coding/ahk/index
-   coding/python/index
-   coding/regex/index
-   coding/vhdl/index
-   coding/tcl_tk_do/index
-   coding/spinal/index
-   coding/scala/index
-   coding/c_cpp/index
-   coding/make/index
-   coding/ros/index
-   coding/swift/index
-   coding/licenses/index
+   programming/ahk/index
+   programming/python/index
+   programming/regex/index
+   programming/vhdl/index
+   programming/tcl_tk_do/index
+   programming/spinal/index
+   programming/scala/index
+   programming/c_cpp/index
+   programming/make/index
+   programming/ros/index
+   programming/swift/index
+   programming/licenses/index
 
    writing/latex/index
    writing/rst/index

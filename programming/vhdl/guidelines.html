@@ -1,0 +1,842 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Programming Guidelines &#8212; Zawiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SDC Constraints" href="intel_sdc.html" />
+    <link rel="prev" title="File" href="file.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../ahk/index.html">AHK</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../c_cpp/index.html">C / C++</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../licenses/index.html">Licenses</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../make/index.html">Make</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../python/index.html">Python</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../regex/index.html">RegEx</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../ros/index.html">ROS</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../scala/index.html">Scala</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../spinal/index.html">Spinal HDL</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../swift/index.html">Swift</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../tcl_tk_do/index.html">Tcl-Tk</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="index.html">VHDL</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="attributes.html">Attributes</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="conversion.html">Conversion</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="examples.html">Examples</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="file.html">File</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">Programming Guidelines</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="intel_sdc.html">SDC Constraints</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="intel_sdc_theory.html">SDC Theory</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="intel_sdc_usage.html">SDC Usage</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="libraries.html">Libraries</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="osvvm.html">OSVVM</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="simulation.html">Simulation</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="syntax.html">Syntax</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="synthesis.html">RTL Synthesis</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="testbench.html">Testbench</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="time.html">Time</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="xilinx_ucf.html">Xilinx UCF Constraints</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#rules" class="nav-link">Rules</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#entity-ports" class="nav-link">Entity ports</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#architecture" class="nav-link">Architecture</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#signals" class="nav-link">Signals</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#processes" class="nav-link">Processes</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#synchronous-process" class="nav-link">Synchronous process</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#asynchronous-process" class="nav-link">Asynchronous process</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#naming-conventions" class="nav-link">Naming Conventions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#constant" class="nav-link">Constant</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#global-signals" class="nav-link">Global Signals</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ports-signals" class="nav-link">Ports Signals</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#local-signals" class="nav-link">Local Signals</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#alias" class="nav-link">Alias</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ip-reusability" class="nav-link">IP Reusability</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/programming/vhdl/guidelines.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="programming-guidelines">
+<h1>Programming Guidelines<a class="headerlink" href="#programming-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entity-ports">
+<h3>Entity ports<a class="headerlink" href="#entity-ports" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use only modes <code class="docutils literal notranslate"><span class="pre">IN</span></code> and <code class="docutils literal notranslate"><span class="pre">OUT</span></code> in the port of sub-blocks, <code class="docutils literal notranslate"><span class="pre">INOUT</span></code> mode too only in the port of the top-level entity</p></li>
+<li><p>Use only signal types <code class="docutils literal notranslate"><span class="pre">STD_LOGIC</span></code> and <code class="docutils literal notranslate"><span class="pre">STD_LOGIC_VECTOR</span></code>, <code class="docutils literal notranslate"><span class="pre">INTEGER</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSIGNED</span></code>, <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code></p></li>
+<li><p>Signals in the port of the entity should be grouped as follows:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Resets</p></li>
+<li><p>Clocks</p></li>
+<li><p>Signals of group A</p></li>
+<li><p>Signals of group B</p></li>
+<li><p>Signals of group C</p></li>
+<li><p>…</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Signals inside a group should be further grouped as follows:</p>
+<ul>
+<li><p>Control inputs</p></li>
+<li><p>Data inputs</p></li>
+<li><p>Outputs</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="architecture">
+<h3>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h3>
+<p>Architecture name should be one of following rules:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Architecture Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">behavioral</span></code></p></td>
+<td><p>Implies physical logic, does not compile with RTL tool</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rtl</span></code></p></td>
+<td><p>Implies physical logic, compiles with RTL tools</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">struct</span></code></p></td>
+<td><p>Implies physical connections, but not any logic</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gate</span></code></p></td>
+<td><p>Gate level netlist</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">simulation</span></code></p></td>
+<td><p>Simulation mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">testbench</span></code></p></td>
+<td><p>Test bench</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<h3>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Direction of bits in <code class="docutils literal notranslate"><span class="pre">STD_LOGIC_VECTOR</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSIGNED</span></code> and <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code> is always <code class="docutils literal notranslate"><span class="pre">DOWNTO</span></code></p></li>
+<li><p>Size of the vector should be parameterized</p></li>
+<li><p>Usually the least significant bit is numbered as zero</p></li>
+<li><p>Use package <code class="docutils literal notranslate"><span class="pre">numeric_std</span></code> for arithmetic operations</p></li>
+</ul>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Never mix these libraries</p>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_arith.</span><span class="k">all</span> <span class="p">;</span>
+  <span class="k">use</span> <span class="nn">ieee.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="processes">
+<h3>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h3>
+<p>Label every process</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">async_process.vhd</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="k">all</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="n">Do</span> <span class="n">something</span> <span class="n">here</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="synchronous-process">
+<h4>Synchronous process<a class="headerlink" href="#synchronous-process" title="Permalink to this headline">¶</a></h4>
+<p>Synchronous process is sensitive only to reset and clock</p>
+<ul class="simple">
+<li><p>Clock event is always to the rising edge</p></li>
+<li><p>All control registers must be initialized in reset</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">sync_process.vhd</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="n">reset</span><span class="p">,</span> <span class="n">clock</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="k">if</span> <span class="n">reset</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="k">then</span>
+        <span class="n">reset</span> <span class="o">&lt;=</span> <span class="n">assignemts</span><span class="p">;</span>
+    <span class="k">elsif</span> <span class="n">rising_edge</span><span class="p">(</span><span class="n">clock</span><span class="p">)</span> <span class="k">then</span>
+        <span class="n">rising_edge_clock</span> <span class="o">&lt;=</span> <span class="n">assigments</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="asynchronous-process">
+<h4>Asynchronous process<a class="headerlink" href="#asynchronous-process" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Include all process input signals in the sensitivity list</p></li>
+<li><p>Complete if-clauses must be used, all cases defined</p></li>
+<li><p>Signals are assigned in every branch</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">async_process.vhd</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">processname</span><span class="o">:</span> <span class="k">process</span><span class="p">(</span><span class="k">all</span><span class="p">)</span>
+<span class="k">begin</span>
+    <span class="n">async_logic</span> <span class="o">&lt;=</span> <span class="n">assignment</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="naming-conventions">
+<h2>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="constant">
+<h3>Constant<a class="headerlink" href="#constant" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to all constants. The names must be in <strong>capital letter</strong>,are composed as follows:</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 53%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Convention</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Generic</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">g_&lt;generic</span> <span class="pre">name&gt;</span></code></p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">g_WIDTH_A</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">g_WIDTH_BYTEENA_A</span></code></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Constant</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">c_&lt;interface</span> <span class="pre">that</span> <span class="pre">constant</span> <span class="pre">apply</span> <span class="pre">to&gt;_&lt;constant</span> <span class="pre">name&gt;</span></code></p></td>
+<td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">c_MEM_WORD_SIZE</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">c_PH_UNIT_NUM</span></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="global-signals">
+<h3>Global Signals<a class="headerlink" href="#global-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention must be applied to physical ports of components or function blocks and global variables in <strong>QSYS</strong> components and pin names at top-level. The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;//interface</span> <span class="pre">type//&gt;_&lt;//interface</span> <span class="pre">name//&gt;_&lt;//signal</span> <span class="pre">type//&gt;[_n][_#]</span></code></p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">avs_JetMapping_data</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pad_Ethernet2_reset_n</span></code></p></li>
+</ul>
+<p>Valid Values for Interface Types</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 56%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Apply to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">avs</span></code></p></td>
+<td><p>Avalon-MM Slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">avm</span></code></p></td>
+<td><p>Avalon-MM Maser</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aso</span></code></p></td>
+<td><p>Avalon-ST Source</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">asi</span></code></p></td>
+<td><p>Avalon-ST Sink</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cso</span></code></p></td>
+<td><p>Clock output</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">csi</span></code></p></td>
+<td><p>Clock input</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">coe</span></code></p></td>
+<td><p>Conduit</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">inr</span></code></p></td>
+<td><p>Interrupt receiver</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ins</span></code></p></td>
+<td><p>Interrupt sender</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ncm</span></code></p></td>
+<td><p>Nios II custom instruction master</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ncs</span></code></p></td>
+<td><p>Nios II custom instruction slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rsi</span></code></p></td>
+<td><p>Reset sink</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rso</span></code></p></td>
+<td><p>Reset source</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tcm</span></code></p></td>
+<td><p>Avalon-TC master</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tcs</span></code></p></td>
+<td><p>Avalon-TC slave</p></td>
+<td><p>QSys components</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pad</span></code></p></td>
+<td><p>Physical pad</p></td>
+<td><p>Top-level entity</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ports-signals">
+<h3>Ports Signals<a class="headerlink" href="#ports-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to internal ports (signals across the hierarchy). The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;direction&gt;&lt;//signal</span> <span class="pre">function</span> <span class="pre">type//&gt;_&lt;//signal</span> <span class="pre">name//&gt;[_n][_#]</span></code></p>
+<p>Valid Values for Interface Types</p>
+<table class="table">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i]GCK</span></code></p></td>
+<td><p>Global Clock signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iGCK_clk_in_100</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i]GRS</span></code></p></td>
+<td><p>Global Reset signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iGRS_reset_n</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]CLK</span></code></p></td>
+<td><p>Internal Clock signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">iCLK_pll_clk_25</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]RST</span></code></p></td>
+<td><p>Internal Reset signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">oRST_enet_reset_n</span><span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]&lt;name&gt;</span></code></p></td>
+<td><p>Synchronous signal(s)</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">i_fsm_data</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">31</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[i,o]&lt;name&gt;</span></code></p></td>
+<td><p>Asynchronous signal(s)</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">o_pcie_led_x1</span><span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="local-signals">
+<h3>Local Signals<a class="headerlink" href="#local-signals" title="Permalink to this headline">¶</a></h3>
+<p>This convention applies to local signals only. The names are composed as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">l&lt;//signal</span> <span class="pre">type//&gt;_&lt;//signal</span> <span class="pre">name//&gt;[_n][_#]</span></code></p>
+<p>Valid Values for Interface Types</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 17%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sig</span></code></p></td>
+<td><p>Local signal</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">lsig_cnt_en</span> <span class="o">:</span> <span class="kt">std_logic</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vec</span></code></p></td>
+<td><p>Local vector</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">unsigned</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">lvec_cnt</span> <span class="o">:</span> <span class="kt">signed</span><span class="p">(</span><span class="mi">1</span> <span class="k">DOWNTO</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ary</span></code></p></td>
+<td><p>Local Array</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">type</span> <span class="n">logic_array</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">1</span><span class="p">)</span> <span class="k">of</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span> <span class="n">lary_logics</span> <span class="o">:</span> <span class="n">logic_array</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Local integer</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">signal</span> <span class="n">lint_pixel_pos_cnt</span>  <span class="o">:</span> <span class="kt">integer</span> <span class="k">range</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">var</span></code></p></td>
+<td><p>Local variable</p></td>
+<td><div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">lvar_load_new_pix_data_set</span> <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="alias">
+<h3>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h3>
+<p>An alias creates an alternative name for an existing object. It does not create a new object. For these reasons no specific naming conventions are established so far.</p>
+<p>Example:</p>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">signal</span> <span class="n">instruction</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">alias</span> <span class="n">opcode</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="k">is</span> <span class="n">instruction</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">12</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ip-reusability">
+<h2>IP Reusability<a class="headerlink" href="#ip-reusability" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The IP specification lists the requirements and details the feature set, performance expectations, size, usage model, etc. Not all design blocks need to be reusable, the specification must state whether a design is being architected as a reusable block.</p></li>
+<li><p>The specification has been officially reviewed by all interested parties. This increases the likelihood that the design block can be reused elsewhere in the company.</p></li>
+<li><p>Existing libraries of components have been reviewed to identify if existing IP with similar functionality already exists, i.e. practice reuse in the development process.</p></li>
+<li><p>The IP core name follows your company’s naming conventions. The name of the core should be description of designs function, e.g. AXI4 Clock Crossing Bridge.</p></li>
+<li><p>Signal and parameter naming conventions are followed. Signal and parameter names should be descriptive of the functionality. This makes it easier for end users to understand the impact of these parameters and signals on the design block.</p></li>
+<li><p>The IP core has default parameter values. Parameters provide the simplest way to create reusable design blocks. IP features, ports and functionality can all be parameterized for maximum flexibility. The default values should be the most common usage model for the design block.</p></li>
+<li><p>The IP uses standard interfaces. Adopt a common interface protocol on all of IP. The use of standard interfaces simplifies the interconnection and management of functional blocks that make up a design. It ensures compatibility between IP blocks from different design teams, simplifies the integration of individual design blocks into a full system design and enables “plug and play” interoperability of IP.</p></li>
+<li><p>The IP core meets the timing specification and all timing violations have been addressed. The IP core includes a full set of timing constraints.</p></li>
+<li><p>The IP passes LINT tests per your company’s established coding rules. It is recommended that you invest in a LINT to enforce coding guidelines and that it is fully integrated with version control/design check in process.</p></li>
+<li><p>The verification of the IP meets the functional, assertion, and line coverage goals as specified in the test plan. Note that the test plan should be developed at the same time as the functional specification for the design.</p></li>
+<li><p>The IP is adequately tested to cover the parameterization space and both expected and unexpected data patterns. Users of IP tend to be suspicious of other peoples design. There’s nothing gained in debugging someone else’s code.</p></li>
+<li><p>Provide a user interface and/or script for end users to instantiate the IP in their design. The interface should make it easy for the user to understand any applicable constraints. At a minimum, the IP should come with a documented command-line script that enables users to pass values to the parameters in the IP. Ideally it should come with a simple graphical user interface (GUI) to help users get started (see Figure 1).</p></li>
+<li><p>Design files and all packaging files adhere to your company’s standard version-control directory structure. If users know where the applicable files are located, it provides the user with confidence that the designer of the IP has thought through the process of reuse.</p></li>
+<li><p>Testbench and reference designs are available for use with the core. This is a “nice to have” feature that provides new users an easy way to get started with a design.</p></li>
+<li><p>IP cores, example designs and test benches can be simulated in company simulators. Users should be able to run the scripts and see the basic functionality of the design.</p></li>
+<li><p>Release notes detail all supported devices, FPGA device families, and versions of the EDA tools used on the design.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

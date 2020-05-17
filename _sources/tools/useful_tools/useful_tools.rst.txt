@@ -58,6 +58,6 @@ Programming
   * Mentor Modelsim |linux| |win|
   * Xilinx ISE |linux| |win|
   * Intel Quartus |win|
-  * Intellij IDEA :doc:`Wiki </coding/spinal/tools/intellij_idea>` |linux| |mac| |win|
+  * Intellij IDEA :doc:`Wiki </programming/spinal/tools/intellij_idea>` |linux| |mac| |win|
   * Intellij PyCharm |linux| |mac| |win|
-  * SpinalHDL :doc:`Wiki </coding/spinal/index>` |linux| |mac| |win|
+  * SpinalHDL :doc:`Wiki </programming/spinal/index>` |linux| |mac| |win|

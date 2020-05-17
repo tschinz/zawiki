@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Linkerscript &#8212; Zawiki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Syntax" href="syntax.html" />
+    <link rel="prev" title="Execution Framework" href="executionframework.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../ahk/index.html">AHK</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="index.html">C / C++</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="executionframework.html">Execution Framework</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">Linkerscript</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="syntax.html">Syntax</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../licenses/index.html">Licenses</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../make/index.html">Make</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../python/index.html">Python</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../regex/index.html">RegEx</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../ros/index.html">ROS</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../scala/index.html">Scala</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../spinal/index.html">Spinal HDL</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../swift/index.html">Swift</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../tcl_tk_do/index.html">Tcl-Tk</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../vhdl/index.html">VHDL</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview" class="nav-link">Overview</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#dynamic-linking" class="nav-link">Dynamic Linking</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#script" class="nav-link">Script</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#compilation-linking-objcopy" class="nav-link">Compilation & Linking & Objcopy</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/programming/c_cpp/linkerscript.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="linkerscript">
+<h1>Linkerscript<a class="headerlink" href="#linkerscript" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>A linker or link editor is a program that takes one or more objects generated by a compiler and combines them into a single executable program.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/linker.png"><img alt="Linker" src="../../_images/linker.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Linker</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="dynamic-linking">
+<h2>Dynamic Linking<a class="headerlink" href="#dynamic-linking" title="Permalink to this headline">¶</a></h2>
+<p>Many operating system environments allow dynamic linking, that is the postponing of the resolving of some undefined symbols until a program is run. That means that the executable code still contains undefined symbols, plus a list of objects or libraries that will provide definitions for these. Loading the program will load these objects/libraries as well, and perform a final linking.</p>
+<p><strong>This approach offers two advantages:</strong></p>
+<ul class="simple">
+<li><p>Often-used libraries (for example the standard system libraries) need to be stored in only one location, not duplicated in every single binary.</p></li>
+<li><p>If an error in a library function is corrected by replacing the library, all programs using it dynamically will benefit from the correction after restarting them. Programs that included this function by static linking would have to be re-linked first.</p></li>
+</ul>
+<p><strong>There are also disadvantages:</strong></p>
+<ul class="simple">
+<li><p>Known on the Windows platform as “DLL Hell”, an incompatible updated DLL will break executables that depended on the behavior of the previous DLL.</p></li>
+<li><p>A program, together with the libraries it uses, might be certified as a package, but not if components can be replaced.</p></li>
+</ul>
+</div>
+<div class="section" id="script">
+<h2>Script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h2>
+<p>the Linkerscript defines where which part of the  programm goes.</p>
+<p>Typically sections are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.text</span></code>: constants &amp; programm itself</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.data</span></code>: initialised variables</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.bss</span></code>: non initialised variables</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.stack</span></code>: stack for return addresses of functions (LIFO)</p></li>
+</ul>
+<p>Basic linker script</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">basic.ld</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SECTIONS</span> <span class="p">{</span> <span class="o">//</span> <span class="mf">1.</span>
+        <span class="o">.</span> <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span> <span class="o">//</span> <span class="mf">2.</span>
+        <span class="o">.</span><span class="n">text</span> <span class="p">:</span> <span class="p">{</span> <span class="o">//</span> <span class="mf">3.</span>
+                <span class="n">abc</span><span class="o">.</span><span class="n">o</span> <span class="p">(</span><span class="o">.</span><span class="n">text</span><span class="p">);</span>
+                <span class="n">def</span><span class="o">.</span><span class="n">o</span> <span class="p">(</span><span class="o">.</span><span class="n">text</span><span class="p">);</span>
+        <span class="p">}</span> <span class="o">//</span> <span class="mf">4.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>The SECTIONS command is the most import linker command, it specifies how the sections are to be merged and at what location they are to be placed.</p></li>
+<li><p>Within the block following the SECTIONS command, the . (period) represents the location counter. The location is always initialised to 0x0. It can be modified by assigning a new value to it. Setting the value to 0x0 at the beginning is superfluous.</p></li>
+<li><p>&amp; 4. This part of the script specifies that, the .text section from the input files abc.o and def.o should go to the .text section of the output file.</p></li>
+</ol>
+<p>The linker script can be further simplified and generalised by using the wild card character * instead of individually specifying the file names.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">wildcard.ld</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Wildcard</span> <span class="ow">in</span> <span class="n">linker</span> <span class="n">scripts</span><span class="o">.</span>
+<span class="n">SECTIONS</span> <span class="p">{</span>
+        <span class="o">.</span> <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+        <span class="o">.</span><span class="n">text</span> <span class="p">:</span> <span class="p">{</span> <span class="o">*</span> <span class="p">(</span><span class="o">.</span><span class="n">text</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>If the program contains both .text and .data sections, the .data section merging and location can be specified as shown below.
+Multiple sections in linker scripts.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">multiple_sections.ld</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SECTIONS</span> <span class="p">{</span>
+         <span class="o">.</span> <span class="o">=</span> <span class="mh">0x00000000</span><span class="p">;</span>
+         <span class="o">.</span><span class="n">text</span> <span class="p">:</span> <span class="p">{</span> <span class="o">*</span> <span class="p">(</span><span class="o">.</span><span class="n">text</span><span class="p">);</span> <span class="p">}</span>
+
+         <span class="o">.</span> <span class="o">=</span> <span class="mh">0x00000400</span><span class="p">;</span>
+         <span class="o">.</span><span class="n">data</span> <span class="p">:</span> <span class="p">{</span> <span class="o">*</span> <span class="p">(</span><span class="o">.</span><span class="n">data</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Here, the <code class="docutils literal notranslate"><span class="pre">.text</span></code> section is located at <code class="docutils literal notranslate"><span class="pre">0x0</span></code> and <code class="docutils literal notranslate"><span class="pre">.data</span></code> is located at <code class="docutils literal notranslate"><span class="pre">0x400</span></code>. Note that, if the location counter is not assigned a different value, the <code class="docutils literal notranslate"><span class="pre">.text</span></code> and <code class="docutils literal notranslate"><span class="pre">.data</span></code> sections will be located at adjacent memory locations.</p>
+</div>
+<div class="section" id="compilation-linking-objcopy">
+<h2>Compilation &amp; Linking &amp; Objcopy<a class="headerlink" href="#compilation-linking-objcopy" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">c_l_obj.sh</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcc -g -O2 program.c -o exe.out -Tlinkerscript -Wl,-Map,mapfile
+
+objcopy -O srec exe.out exe.srec
+pause
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

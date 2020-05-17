@@ -208,13 +208,13 @@ To link to a file within the Sphinx file structure use the Role ``:download:``
 
 .. code:: ReST
 
-   :download:`../../coding/ros/books/Mastering_ROS_for_Robotics_Programming.pdf`
+   :download:`../../programming/ros/books/Mastering_ROS_for_Robotics_Programming.pdf`
 
-   :download:`Mastering_ROS_for_Robotics_Programming <../../coding/ros/books/Mastering_ROS_for_Robotics_Programming.pdf>`
+   :download:`Mastering_ROS_for_Robotics_Programming <../../programming/ros/books/Mastering_ROS_for_Robotics_Programming.pdf>`
 
-:download:`../../coding/ros/books/Mastering_ROS_for_Robotics_Programming.pdf`
+:download:`../../programming/ros/books/Mastering_ROS_for_Robotics_Programming.pdf`
 
-:download:`Mastering_ROS_for_Robotics_Programming <../../coding/ros/books/Mastering_ROS_for_Robotics_Programming.pdf>`
+:download:`Mastering_ROS_for_Robotics_Programming <../../programming/ros/books/Mastering_ROS_for_Robotics_Programming.pdf>`
 
 Images
 ======

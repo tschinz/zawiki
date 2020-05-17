@@ -29,7 +29,7 @@ If you want to add a new section, you need to specify in the :download:`main ind
 
       os/index
       tools/index
-      coding/index
+      programming/index
       writing/index
       multimedia/index
       security/index

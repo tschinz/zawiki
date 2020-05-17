@@ -153,3 +153,9 @@ Are you feeling ill?
 
 **Answer**
 One bit is the smallest dataunit. Plays on the double meaning of "a bit" (a bit or one bit (data)).
+
+19 Jan 2038 at 3:14:07 AM
+=========================
+What about 19 Jan 2038 at 3:14:07 AM? Remember Y2K? There’s another date like it.
+
+In Unix-like systems, time is measured as seconds since January 1, 1970. This time is often stored in a 32-bit signed integer. That means that dates can range between −2147483648 en 2147483647 seconds from 1970. So now you know what it is about 19 Jan 2038 at 3:14:07 AM, it’s 2147483647 seconds after January 1, 1970!
