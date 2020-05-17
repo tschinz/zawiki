@@ -16,7 +16,7 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
 
    os/index
    tools/index
-   coding/index
+   programming/index
    writing/index
    multimedia/index
    security/index

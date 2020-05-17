@@ -25,4 +25,4 @@ JetBrains has different applications.
 
 It can be heavily extented with plugins found on the `Plugin Repository <https://plugins.jetbrains.com/>`_
 
-See also :doc:`/coding/spinal/tools/intellij_idea` for Spinal specific use case
+See also :doc:`/programming/spinal/tools/intellij_idea` for Spinal specific use case
