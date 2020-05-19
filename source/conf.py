@@ -18,7 +18,10 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 AUTHOR='tschinz'
-VERSION = subprocess.check_output(["git", "describe"]).decode('UTF-8')
+try:
+  VERSION = subprocess.check_output(["git", "describe"]).decode('UTF-8')
+except:
+  VERSION = 'v0.0'
 
 project = 'Zawiki'
 copyright = f"2004-{datetime.now().year}, tschinz"
