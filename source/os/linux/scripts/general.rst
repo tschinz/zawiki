@@ -8,8 +8,11 @@ A lot of scripts and configurations can be found in my config repo:
 
 * :config_repo:`Shell Scripts <tree/master/scripts/shell>`
 
-Shell Bang
-==========
+Script Basics
+=============
+
+Shell Bangs
+-----------
 
 At the beginning of a file there need to be a line to indentify the program or the file. ``#!<path of the program executable>``
 
@@ -25,8 +28,31 @@ At the beginning of a file there need to be a line to indentify the program or t
 
    #!/usr/bin/env python
 
-Script End
-==========
+Begin
+-----
+
+.. code-block:: bash
+
+   base_directory="$(dirname "$(readlink -f "$0")")"
+   pushd $base_directory
+
+   SEPARATOR='--------------------------------------------------------------------------------'
+   INDENT='  '
+
+   echo "$SEPARATOR"
+   echo "-- ${0##*/} Started!"
+   echo ""
+
+End
+---
+
+.. code-block:: bash
+
+   echo ""
+   echo "-- ${0##*/} Finished!"
+   echo "$SEPARATOR"
+   popd
+
 
 .. code-block:: bash
 
@@ -48,6 +74,11 @@ Variables
 
    # Use Env var
    Linux_user="$USER"
+
+   # Check if variables exist
+   if [ -n "$verbose" ] ; then
+     echo "$SEPARATOR\n * Git clone spl repositories\n"
+   fi
 
 Command line arguments
 ======================
@@ -74,6 +105,45 @@ Command line arguments
    if [ -n "$verbose" ] ; then
      echo "Verbose"
    fi
+
+Long and short arguments
+------------------------
+
+.. code-block:: bash
+   :linenos:
+   :caption: short long cli arguments
+
+   usage="usage: git-clone [options]
+   options:
+     -m | --my      Clone my repos
+     -a | --all     Clone all repos"
+
+   if [ $? != 0 ] ; then echo "No option given \n $usage \n\nTerminating..." >&2 ; exit 1 ; fi
+
+   # Transform long options to short ones
+   for arg in "$@"; do
+     shift
+     case "$arg" in
+       "--my") set -- "$@" "-m" ;;
+       "--all")   set -- "$@" "-a" ;;
+       *)        set -- "$@" "$arg"
+     esac
+   done
+
+   # Parse short options
+   OPTIND=1
+   while getopts "hvmfepsi" opt
+   do
+     case "$opt" in
+       "h") echo "$usage"; exit 0 ;;
+       "v") verbose=true ;;
+       "m") my=true ;;
+       "a") all=true; my=true ;;
+       "?") echo "$usage" >&2; exit 1 ;;
+     esac
+   done
+   shift $(expr $OPTIND - 1) # remove options from positional parameters
+
 
 Functions
 =========
@@ -179,6 +249,27 @@ Lockfiles you can wait until another process is finished.
 
    # Remove lockfile
    rm -f $lockFilePath
+
+
+Find
+====
+
+.. code-block:: bash
+   :caption: find samples
+   :linenos:
+
+   # Find directory and execute commands
+   find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
+
+   # Find files and delete it
+   find $base_directory -type f -name '.cache.dat' | xargs -r rm -v
+
+   # Find folders and delete it
+   find $base_directory -type d -name '.xrf' | xargs -r rm -Rv
+
+   # Find files and RegEx replace some content
+   find $project_directory -type f -name '*._epf' | xargs sed -i "s/$actual_view/$new_view/g"
+
 
 Samples
 =======
