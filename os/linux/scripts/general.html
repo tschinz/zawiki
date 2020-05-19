@@ -204,11 +204,21 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#shell-bang" class="nav-link">Shell Bang</a>
+            <a href="#script-basics" class="nav-link">Script Basics</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#shell-bangs" class="nav-link">Shell Bangs</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#script-end" class="nav-link">Script End</a>
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#begin" class="nav-link">Begin</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#end" class="nav-link">End</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -216,7 +226,13 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#command-line-arguments" class="nav-link">Command line arguments</a>
+            <a href="#command-line-arguments" class="nav-link">Command line arguments</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#long-and-short-arguments" class="nav-link">Long and short arguments</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -237,6 +253,10 @@
     
         <li class="nav-item toc-entry toc-h2">
             <a href="#lockfile" class="nav-link">Lockfile</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#find" class="nav-link">Find</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -270,8 +290,10 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/tschinz/config/tree/master/scripts/shell">Shell Scripts</a></p></li>
 </ul>
-<div class="section" id="shell-bang">
-<h2>Shell Bang<a class="headerlink" href="#shell-bang" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="script-basics">
+<h2>Script Basics<a class="headerlink" href="#script-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shell-bangs">
+<h3>Shell Bangs<a class="headerlink" href="#shell-bangs" title="Permalink to this headline">¶</a></h3>
 <p>At the beginning of a file there need to be a line to indentify the program or the file. <code class="docutils literal notranslate"><span class="pre">#!&lt;path</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">program</span> <span class="pre">executable&gt;</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 </pre></div>
@@ -283,25 +305,51 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="script-end">
-<h2>Script End<a class="headerlink" href="#script-end" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="begin">
+<h3>Begin<a class="headerlink" href="#begin" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">base_directory</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>dirname <span class="s2">&quot;</span><span class="k">$(</span>readlink -f <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">pushd</span> <span class="nv">$base_directory</span>
+
+<span class="nv">SEPARATOR</span><span class="o">=</span><span class="s1">&#39;--------------------------------------------------------------------------------&#39;</span>
+<span class="nv">INDENT</span><span class="o">=</span><span class="s1">&#39;  &#39;</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$SEPARATOR</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;-- </span><span class="si">${</span><span class="nv">0</span><span class="p">##*/</span><span class="si">}</span><span class="s2"> Started!&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="end">
+<h3>End<a class="headerlink" href="#end" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;-- </span><span class="si">${</span><span class="nv">0</span><span class="p">##*/</span><span class="si">}</span><span class="s2"> Finished!&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$SEPARATOR</span><span class="s2">&quot;</span>
+<span class="nb">popd</span>
+</pre></div>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span> <span class="m">0</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">variables</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Var</span>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Var</span>
 <span class="nv">SEPARATOR</span><span class="o">=</span><span class="s1">&#39;--------------------------------------------------------------------------------&#39;</span>
 <span class="nv">INDENT</span><span class="o">=</span><span class="s1">&#39;  &#39;</span>
 
@@ -310,6 +358,11 @@
 
 <span class="c1"># Use Env var</span>
 <span class="nv">Linux_user</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span>
+
+<span class="c1"># Check if variables exist</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&quot;</span><span class="nv">$verbose</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$SEPARATOR</span><span class="s2">\n * Git clone spl repositories\n&quot;</span>
+<span class="k">fi</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -356,11 +409,78 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+<div class="section" id="long-and-short-arguments">
+<h3>Long and short arguments<a class="headerlink" href="#long-and-short-arguments" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">short long cli arguments</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nv">usage</span><span class="o">=</span><span class="s2">&quot;usage: git-clone [options]</span>
+<span class="s2">options:</span>
+<span class="s2">  -m | --my      Clone my repos</span>
+<span class="s2">  -a | --all     Clone all repos&quot;</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;No option given \n </span><span class="nv">$usage</span><span class="s2"> \n\nTerminating...&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span> <span class="p">;</span> <span class="k">fi</span>
+
+<span class="c1"># Transform long options to short ones</span>
+<span class="k">for</span> arg in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">shift</span>
+  <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$arg</span><span class="s2">&quot;</span> in
+    <span class="s2">&quot;--my&quot;</span><span class="o">)</span> <span class="nb">set</span> -- <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="s2">&quot;-m&quot;</span> <span class="p">;;</span>
+    <span class="s2">&quot;--all&quot;</span><span class="o">)</span>   <span class="nb">set</span> -- <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="s2">&quot;-a&quot;</span> <span class="p">;;</span>
+    *<span class="o">)</span>        <span class="nb">set</span> -- <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$arg</span><span class="s2">&quot;</span>
+  <span class="k">esac</span>
+<span class="k">done</span>
+
+<span class="c1"># Parse short options</span>
+<span class="nv">OPTIND</span><span class="o">=</span><span class="m">1</span>
+<span class="k">while</span> <span class="nb">getopts</span> <span class="s2">&quot;hvmfepsi&quot;</span> opt
+<span class="k">do</span>
+  <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$opt</span><span class="s2">&quot;</span> in
+    <span class="s2">&quot;h&quot;</span><span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$usage</span><span class="s2">&quot;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">0</span> <span class="p">;;</span>
+    <span class="s2">&quot;v&quot;</span><span class="o">)</span> <span class="nv">verbose</span><span class="o">=</span><span class="nb">true</span> <span class="p">;;</span>
+    <span class="s2">&quot;m&quot;</span><span class="o">)</span> <span class="nv">my</span><span class="o">=</span><span class="nb">true</span> <span class="p">;;</span>
+    <span class="s2">&quot;a&quot;</span><span class="o">)</span> <span class="nv">all</span><span class="o">=</span>true<span class="p">;</span> <span class="nv">my</span><span class="o">=</span><span class="nb">true</span> <span class="p">;;</span>
+    <span class="s2">&quot;?&quot;</span><span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$usage</span><span class="s2">&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">1</span> <span class="p">;;</span>
+  <span class="k">esac</span>
+<span class="k">done</span>
+<span class="nb">shift</span> <span class="k">$(</span>expr <span class="nv">$OPTIND</span> - <span class="m">1</span><span class="k">)</span> <span class="c1"># remove options from positional parameters</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">functions</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">functions</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -389,8 +509,8 @@
 <div class="section" id="console-prints">
 <h2>Console prints<a class="headerlink" href="#console-prints" title="Permalink to this headline">¶</a></h2>
 <p>Display message welcome on screen</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">echo</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">echo</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -418,8 +538,8 @@
 </div>
 <div class="section" id="user-inputs">
 <h2>User Inputs<a class="headerlink" href="#user-inputs" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">user inputs 1</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">user inputs 1</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -436,8 +556,8 @@ stty <span class="nb">echo</span>
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">user inputs 1</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">user inputs 1</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -459,8 +579,8 @@ stty <span class="nb">echo</span>
 </div>
 <div class="section" id="check-and-create-folder">
 <h2>Check and create folder<a class="headerlink" href="#check-and-create-folder" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;/folder/location&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -473,8 +593,8 @@ stty <span class="nb">echo</span>
 <div class="section" id="lockfile">
 <h2>Lockfile<a class="headerlink" href="#lockfile" title="Permalink to this headline">¶</a></h2>
 <p>Lockfiles you can wait until another process is finished.</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -506,6 +626,35 @@ TO SOMETHING THE LOCK IS YOURS
 
 <span class="c1"># Remove lockfile</span>
 rm -f <span class="nv">$lockFilePath</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="find">
+<h2>Find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">find samples</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Find directory and execute commands</span>
+find . -maxdepth <span class="m">1</span> -type d -exec sh -c <span class="s1">&#39;(cd {} &amp;&amp; git pull)&#39;</span> <span class="s1">&#39;;&#39;</span>
+
+<span class="c1"># Find files and delete it</span>
+find <span class="nv">$base_directory</span> -type f -name <span class="s1">&#39;.cache.dat&#39;</span> <span class="p">|</span> xargs -r rm -v
+
+<span class="c1"># Find folders and delete it</span>
+find <span class="nv">$base_directory</span> -type d -name <span class="s1">&#39;.xrf&#39;</span> <span class="p">|</span> xargs -r rm -Rv
+
+<span class="c1"># Find files and RegEx replace some content</span>
+find <span class="nv">$project_directory</span> -type f -name <span class="s1">&#39;*._epf&#39;</span> <span class="p">|</span> xargs sed -i <span class="s2">&quot;s/</span><span class="nv">$actual_view</span><span class="s2">/</span><span class="nv">$new_view</span><span class="s2">/g&quot;</span>
 </pre></div>
 </td></tr></table></div>
 </div>

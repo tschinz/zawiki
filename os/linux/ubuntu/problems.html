@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Zawiki</title>
+    <title>Problems &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
@@ -204,7 +204,11 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#additional-informations" class="nav-link">Additional Informations</a>
+            <a href="#perl-locale-warning" class="nav-link">Perl locale warning</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#bracketed-paste-mode" class="nav-link">bracketed paste mode</a>
         </li>
     
     </ul>
@@ -213,7 +217,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/linux/ubuntu/intro.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/linux/ubuntu/problems.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -227,42 +231,67 @@
               
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="additional-informations">
-<h2>Additional Informations<a class="headerlink" href="#additional-informations" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://ubuntu.com/">https://ubuntu.com/</a> - Ubuntu Webpage</p>
-<ul>
-<li><p><a class="reference external" href="https://ubuntu.com/#download">https://ubuntu.com/#download</a> - Ubuntu Download</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://www.osboxes.org/ubuntu/">https://www.osboxes.org/ubuntu/</a> - Virtual Box images</p></li>
-<li><p>Additional Tools</p>
-<ul>
-<li><p><a class="reference external" href="https://www.zsh.org/">ZSH</a></p>
-<ul>
-<li><p><a class="reference external" href="https://ohmyz.sh/">Oh My ZSH</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a></p></li>
-<li><p><a class="reference external" href="https://www.sublimemerge.com/">Sublime Merge</a></p></li>
-<li><p><a class="reference external" href="https://krusader.org/">Krusader</a></p></li>
-<li><p><a class="reference external" href="https://kde.org/applications/system/org.kde.yakuake">Yakuake</a></p></li>
-<li><p><a class="reference external" href="https://github.com/cboxdoerfer/fsearch">FSearch</a></p></li>
-<li><p><a class="reference external" href="https://www.anaconda.com/">Anaconda</a></p></li>
-<li><p><a class="reference external" href="https://www.qt.io/download">QT Creator</a></p></li>
-<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a></p></li>
-<li><p>Hitachi SDK</p>
-<ul>
-<li><p><a class="reference external" href="https://hlds.co.jp/product-eng/tofsdk">Hitachi LiDaR SDK</a></p></li>
-<li><p><a class="reference external" href="https://wiki.ros.org/hls_lfom_tof_driver">Hitachi LiDaR ROS Driver</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://wiki.ros.org/melodic/Installation/Ubuntu">ROS Installation</a></p></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="problems">
+<h1>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h1>
+<p>How to fix problems I’ve encountered.</p>
+<div class="section" id="perl-locale-warning">
+<h2>Perl locale warning<a class="headerlink" href="#perl-locale-warning" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">perl locale warning</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        <span class="nv">LANGUAGE</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>,
+        <span class="nv">LC_ALL</span> <span class="o">=</span> <span class="o">(</span><span class="nb">unset</span><span class="o">)</span>,
+        <span class="nv">LC_TIME</span> <span class="o">=</span> <span class="s2">&quot;de_CH.UTF-8&quot;</span>,
+        <span class="nv">LC_MONETARY</span> <span class="o">=</span> <span class="s2">&quot;de_CH.UTF-8&quot;</span>,
+        <span class="nv">LC_COLLATE</span> <span class="o">=</span> <span class="s2">&quot;de_CH.UTF-8&quot;</span>,
+        <span class="nv">LC_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;en_US.UTF-8&quot;</span>,
+        <span class="nv">LC_TELEPHONE</span> <span class="o">=</span> <span class="s2">&quot;en_US.UTF-8&quot;</span>,
+        <span class="nv">LC_NAME</span> <span class="o">=</span> <span class="s2">&quot;en_US.UTF-8&quot;</span>,
+        <span class="nv">LC_MEASUREMENT</span> <span class="o">=</span> <span class="s2">&quot;de_CH.UTF-8&quot;</span>,
+        <span class="nv">LC_IDENTIFICATION</span> <span class="o">=</span> <span class="s2">&quot;en_US.UTF-8&quot;</span>,
+        <span class="nv">LC_NUMERIC</span> <span class="o">=</span> <span class="s2">&quot;de_CH.UTF-8&quot;</span>,
+        <span class="nv">LC_PAPER</span> <span class="o">=</span> <span class="s2">&quot;en_US.UTF-8&quot;</span>,
+        <span class="nv">LANG</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale <span class="o">(</span><span class="s2">&quot;C&quot;</span><span class="o">)</span>.
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Solution</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo locale-gen en_US.UTF-8
+sudo locale-gen de_CH.UTF-8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bracketed-paste-mode">
+<h2>bracketed paste mode<a class="headerlink" href="#bracketed-paste-mode" title="Permalink to this headline">¶</a></h2>
+<p>bracketed paste mode enabled addes characters on paste</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">added characters onpaste in terminal</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>^<span class="o">[[</span><span class="m">200</span>~...~
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">disable bracketed mode</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># in Terminal temporarily</span>
+<span class="nb">bind</span> <span class="s1">&#39;set enable-bracketed-paste off&#39;</span>
+
+<span class="c1"># permanentely</span>
+<span class="nb">echo</span> <span class="s1">&#39;Disable bracketed mode&#39;</span> &gt;&gt; /etc/inputrc
+<span class="nb">echo</span> <span class="s1">&#39;set enable-bracketed-paste off&#39;</span> &gt;&gt; /etc/inputrc
+
+<span class="c1"># or add this in the bashrc?</span>
+<span class="nb">echo</span> <span class="s1">&#39;bracketed mode fix&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s1">&#39;printf &quot;\e[?2004l&quot;&#39;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s1">&#39;bracketed mode fix&#39;</span> &gt;&gt; ~/.zshrc
+<span class="nb">echo</span> <span class="s1">&#39;printf &quot;\e[?2004l&quot;&#39;</span> &gt;&gt; ~/.zshrc
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

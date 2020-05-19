@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
+    <link rel="next" title="Problems" href="problems.html" />
     <link rel="prev" title="Ubuntu" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -336,7 +336,7 @@
 <p>This installation is based on Ubuntu 18.4 LTS and ROS Melodic Morenia.</p>
 <div class="section" id="default-tools">
 <h3>Default Tools<a class="headerlink" href="#default-tools" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install git curl vim openssh-server krename rar unrar kget diffutils kate x11vnc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install git curl vim openssh-server krename rar unrar kget diffutils kate x11vnc kdiff3
 <span class="nb">echo</span> <span class="s2">&quot;Configure Firewall and Port for ssh&quot;</span>
 sudo ufw allow ssh
 sudo ufw <span class="nb">enable</span>
@@ -347,7 +347,7 @@ sudo service ssh restart
 </div>
 <div class="section" id="zsh">
 <h3>ZSH<a class="headerlink" href="#zsh" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install zsh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install zsh
 sudo chsh -s /bin/zsh <span class="nv">$USER</span>
 </pre></div>
 </div>
@@ -362,32 +362,32 @@ sh -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://
 <div class="section" id="sublimetext-3">
 <h3>SublimeText 3<a class="headerlink" href="#sublimetext-3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg <span class="p">|</span> sudo apt-key add -
-sudo apt-get install apt-transport-https
+sudo apt install apt-transport-https
 <span class="nb">echo</span> <span class="s2">&quot;deb https://download.sublimetext.com/ apt/stable/&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt update
+sudo apt install sublime-text
 </pre></div>
 </div>
 </div>
 <div class="section" id="sublimemerge">
 <h3>SublimeMerge<a class="headerlink" href="#sublimemerge" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg <span class="p">|</span> sudo apt-key add -
-sudo apt-get install apt-transport-https
+sudo apt install apt-transport-https
 <span class="nb">echo</span> <span class="s2">&quot;deb https://download.sublimetext.com/ apt/stable/&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-merge
+sudo apt update
+sudo apt install sublime-merge
 </pre></div>
 </div>
 </div>
 <div class="section" id="krusader">
 <h3>Krusader<a class="headerlink" href="#krusader" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install krusader
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install krusader
 </pre></div>
 </div>
 </div>
 <div class="section" id="yakuake">
 <h3>Yakuake<a class="headerlink" href="#yakuake" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install yakuake
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install yakuake
 </pre></div>
 </div>
 </div>
@@ -395,15 +395,16 @@ sudo apt-get install sublime-merge
 <h3>FSearch<a class="headerlink" href="#fsearch" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
 sudo apt update
-sudo apt-get install fsearch-trunk
+sudo apt install fsearch-trunk
 </pre></div>
 </div>
 </div>
 <div class="section" id="anaconda">
 <h3>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
-wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
-bash Anaconda3-2019.10-Linux-x86_64.sh
+sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash Anaconda3-2020.02-Linux-x86_64.sh
 </pre></div>
 </div>
 </div>
@@ -413,10 +414,10 @@ bash Anaconda3-2019.10-Linux-x86_64.sh
 wget http://download.qt.io/official_releases/qt/5.13/5.13.1/qt-opensource-linux-x64-5.13.1.run
 chmod +x qt-opensource-linux-x64-5.13.1.run
 ./qt-opensource-linux-x64-5.13.1.run
-sudo apt-get install build-essential
-sudo apt-get install libfontconfig1
-sudo apt-get install mesa-common-dev
-sudo apt-get install libglu1-mesa-dev -y
+sudo apt install build-essential
+sudo apt install libfontconfig1
+sudo apt install mesa-common-dev
+sudo apt install libglu1-mesa-dev -y
 </pre></div>
 </div>
 </div>
@@ -426,9 +427,9 @@ sudo apt-get install libglu1-mesa-dev -y
 sudo install -o root -g root -m <span class="m">644</span> packages.microsoft.gpg /usr/share/keyrings/
 sudo sh -c <span class="s1">&#39;echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#39;</span>
 
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code <span class="c1"># or code-insiders</span>
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code <span class="c1"># or code-insiders</span>
 </pre></div>
 </div>
 </div>
@@ -439,7 +440,7 @@ sudo apt-get install code <span class="c1"># or code-insiders</span>
 <h3>Oh My ZSH Config<a class="headerlink" href="#oh-my-zsh-config" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">~/.zshrc additions</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>echo<span class="s2">&quot;#------------------------------------------------------------------------------&quot;</span> &gt;&gt; ~/.zshrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;#------------------------------------------------------------------------------&quot;</span> &gt;&gt; ~/.zshrc
 <span class="nb">echo</span> <span class="s2">&quot;# Program in Path&quot;</span> &gt;&gt; ~/.zshrc
 <span class="nb">echo</span> <span class="s2">&quot;#&quot;</span> &gt;&gt; ~/.zshrc
 <span class="nb">echo</span> <span class="s2">&quot;#------------------------------------------------------------------------------&quot;</span> &gt;&gt; ~/.zshrc
@@ -555,8 +556,8 @@ x11vnc -forever -display :0 -safer -bg -localhost
 <h3>QView<a class="headerlink" href="#qview" title="Permalink to this headline">¶</a></h3>
 <p>Lightweight Image Viewer</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:jurplel/qview
-sudo apt-get update
-sudo apt-get install qview
+sudo apt update
+sudo apt install qview
 </pre></div>
 </div>
 </div>

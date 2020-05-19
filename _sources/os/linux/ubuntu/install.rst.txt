@@ -12,7 +12,7 @@ Default Tools
 
 .. code-block:: bash
 
-   sudo apt-get install git curl vim openssh-server krename rar unrar kget diffutils kate x11vnc
+   sudo apt install git curl vim openssh-server krename rar unrar kget diffutils kate x11vnc kdiff3
    echo "Configure Firewall and Port for ssh"
    sudo ufw allow ssh
    sudo ufw enable
@@ -24,7 +24,7 @@ ZSH
 
 .. code-block:: bash
 
-   sudo apt-get install zsh
+   sudo apt install zsh
    sudo chsh -s /bin/zsh $USER
 
 Oh My ZSH
@@ -41,10 +41,10 @@ SublimeText 3
 .. code-block:: bash
 
    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-   sudo apt-get install apt-transport-https
+   sudo apt install apt-transport-https
    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-   sudo apt-get update
-   sudo apt-get install sublime-text
+   sudo apt update
+   sudo apt install sublime-text
 
 SublimeMerge
 ------------
@@ -52,24 +52,24 @@ SublimeMerge
 .. code-block:: bash
 
    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-   sudo apt-get install apt-transport-https
+   sudo apt install apt-transport-https
    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-   sudo apt-get update
-   sudo apt-get install sublime-merge
+   sudo apt update
+   sudo apt install sublime-merge
 
 Krusader
 --------
 
 .. code-block:: bash
 
-   sudo apt-get install krusader
+   sudo apt install krusader
 
 Yakuake
 -------
 
 .. code-block:: bash
 
-   sudo apt-get install yakuake
+   sudo apt install yakuake
 
 FSearch
 -------
@@ -78,7 +78,7 @@ FSearch
 
    sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
    sudo apt update
-   sudo apt-get install fsearch-trunk
+   sudo apt install fsearch-trunk
 
 Anaconda
 --------
@@ -86,8 +86,9 @@ Anaconda
 .. code-block:: bash
 
    cd ~/Downloads
-   wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
-   bash Anaconda3-2019.10-Linux-x86_64.sh
+   sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+   wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+   bash Anaconda3-2020.02-Linux-x86_64.sh
 
 QT-Creator
 ----------
@@ -98,10 +99,10 @@ QT-Creator
    wget http://download.qt.io/official_releases/qt/5.13/5.13.1/qt-opensource-linux-x64-5.13.1.run
    chmod +x qt-opensource-linux-x64-5.13.1.run
    ./qt-opensource-linux-x64-5.13.1.run
-   sudo apt-get install build-essential
-   sudo apt-get install libfontconfig1
-   sudo apt-get install mesa-common-dev
-   sudo apt-get install libglu1-mesa-dev -y
+   sudo apt install build-essential
+   sudo apt install libfontconfig1
+   sudo apt install mesa-common-dev
+   sudo apt install libglu1-mesa-dev -y
 
 Visual Studio Code
 ------------------
@@ -112,9 +113,9 @@ Visual Studio Code
    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
-   sudo apt-get install apt-transport-https
-   sudo apt-get update
-   sudo apt-get install code # or code-insiders
+   sudo apt install apt-transport-https
+   sudo apt update
+   sudo apt install code # or code-insiders
 
 Configuration
 ==============
@@ -125,7 +126,7 @@ Oh My ZSH Config
 .. code-block:: bash
    :caption: ~/.zshrc additions
 
-   echo"#------------------------------------------------------------------------------" >> ~/.zshrc
+   echo "#------------------------------------------------------------------------------" >> ~/.zshrc
    echo "# Program in Path" >> ~/.zshrc
    echo "#" >> ~/.zshrc
    echo "#------------------------------------------------------------------------------" >> ~/.zshrc
@@ -244,5 +245,5 @@ Lightweight Image Viewer
 .. code-block:: bash
 
    sudo add-apt-repository ppa:jurplel/qview
-   sudo apt-get update
-   sudo apt-get install qview
+   sudo apt update
+   sudo apt install qview
