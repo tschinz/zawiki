@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Plotly Dash &#8212; Zawiki</title>
+    <title>Heroku &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Installation" href="installation.html" />
-    <link rel="prev" title="General" href="general.html" />
+    <link rel="next" title="Pandoc" href="../pandoc/index.html" />
+    <link rel="prev" title="Installation" href="../jupyter/installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -142,42 +142,14 @@
           
         
           
-
-              <li class="active">
-                  <a href="index.html">Jupyter</a>
-                  <ul>
-                  
-                      <li class="">
-                          <a href="common_functions.html">Common Functions</a>
-                      </li>
-                  
-                      <li class="">
-                          <a href="convert.html">Jupyter Converts</a>
-                      </li>
-                  
-                      <li class="">
-                          <a href="extensions.html">Extensions</a>
-                      </li>
-                  
-                      <li class="">
-                          <a href="general.html">General</a>
-                      </li>
-                  
-                      <li class="active">
-                          <a href="">Plotly Dash</a>
-                      </li>
-                  
-                      <li class="">
-                          <a href="installation.html">Installation</a>
-                      </li>
-                  
-                  </ul>
+              <li class="">
+                  <a href="../jupyter/index.html">Jupyter</a>
               </li>
           
         
           
-              <li class="">
-                  <a href="../heroku/index.html">Heroku</a>
+              <li class="active">
+                  <a href="">Heroku</a>
               </li>
           
         
@@ -258,33 +230,7 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#install-plotly-dash" class="nav-link">Install Plotly Dash</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#checking-versions" class="nav-link">Checking Versions</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#getting-help" class="nav-link">Getting help</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#jupyter-integration-install" class="nav-link">Jupyter integration install</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#to-rebuild-the-package-and-the-jupyterlab-app" class="nav-link">To rebuild the package and the JupyterLab app</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#additional-packages" class="nav-link">Additional Packages</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#install-dash-daq" class="nav-link">Install Dash DAQ</a>
-        </li>
-    
-            </ul>
+            <a href="#heroku-cli" class="nav-link">Heroku CLI</a>
         </li>
     
     </ul>
@@ -293,7 +239,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/jupyter/install_plotly_dash.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/heroku/index.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -307,58 +253,26 @@
               
               <div>
                 
-  <div class="section" id="plotly-dash">
-<h1>Plotly Dash<a class="headerlink" href="#plotly-dash" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="install-plotly-dash">
-<h2>Install Plotly Dash<a class="headerlink" href="#install-plotly-dash" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># The core dash backend</span>
-pip install <span class="nv">dash</span><span class="o">==</span><span class="m">0</span>.43.0
-<span class="c1"># DAQ components (newly open-sourced!)</span>
-pip install dash-daq<span class="o">==</span><span class="m">0</span>.1.0
-</pre></div>
+  <div class="section" id="heroku">
+<h1>Heroku<a class="headerlink" href="#heroku" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/logo33.svg"><img alt="../../_images/logo33.svg" src="../../_images/logo33.svg" width="150px" /></a>
 </div>
-<div class="section" id="checking-versions">
-<h3>Checking Versions<a class="headerlink" href="#checking-versions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dash_core_components</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dash_core_components</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="getting-help">
-<h3>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="jupyter-integration-install">
-<h3>Jupyter integration install<a class="headerlink" href="#jupyter-integration-install" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/plotly/jupyterlab-dash
-<span class="nb">cd</span> jupyterlab-dash
-npm install
-npm run build
-jupyter labextension link .
-~/anaconda3/bin/./python -m pip install -e .
-</pre></div>
-</div>
-</div>
-<div class="section" id="to-rebuild-the-package-and-the-jupyterlab-app">
-<h3>To rebuild the package and the JupyterLab app<a class="headerlink" href="#to-rebuild-the-package-and-the-jupyterlab-app" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm run build
-jupyter lab build
-</pre></div>
-</div>
-</div>
-<div class="section" id="additional-packages">
-<h3>Additional Packages<a class="headerlink" href="#additional-packages" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install aiohttp
-pip install django_plotly_dash
-pip install jupyter_plotly_dash
-</pre></div>
-</div>
-</div>
-<div class="section" id="install-dash-daq">
-<h3>Install Dash DAQ<a class="headerlink" href="#install-dash-daq" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install dash_daq
+<p><a class="reference external" href="https://dashboard.heroku.com">Heroku</a> is a cloud platform as a service (PaaS) supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go. For this reason, Heroku is said to be a polyglot platform as it has features for a developer to build, run and scale applications in a similar manner across most languages.</p>
+<p>How to deploy Heroku for a python application see also: <a class="reference internal" href="../../programming/python/plotly_dash.html"><span class="doc">Plotly Dash</span></a>.</p>
+<div class="section" id="heroku-cli">
+<h2>Heroku CLI<a class="headerlink" href="#heroku-cli" title="Permalink to this headline">¶</a></h2>
+<p>Heroku provides a commandline interface to access the log of the webserver. The deploy activity can be seen on the webinterface, but the webserver logs only via the <code class="docutils literal notranslate"><span class="pre">heroku-cli</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://devcenter.heroku.com/articles/heroku-cli">Heroku CLI Documentation</a></p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Basic heroku-cli commands</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># See list of deployed apps</span>
+heroku apps
+
+<span class="c1"># See log of one app</span>
+heroku logs -a choose-your-app-name
 </pre></div>
 </div>
 </div>
