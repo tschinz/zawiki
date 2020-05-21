@@ -152,6 +152,10 @@
                       </li>
                   
                       <li class="">
+                          <a href="convert.html">Jupyter Converts</a>
+                      </li>
+                  
+                      <li class="">
                           <a href="extensions.html">Extensions</a>
                       </li>
                   
@@ -259,24 +263,6 @@
             <a href="#troubleshoot" class="nav-link">Troubleshoot</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#nbconvert" class="nav-link">nbconvert</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#convert-to-python-for-linting" class="nav-link">Convert to python for linting</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#convert-to-html" class="nav-link">Convert to html</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#convert-to-pdf" class="nav-link">Convert to pdf</a>
-        </li>
-    
-            </ul>
-        </li>
-    
     </ul>
 </nav>
 
@@ -320,60 +306,6 @@ jupyter labextension install &lt;extensionsname&gt;
 <h2>Troubleshoot<a class="headerlink" href="#troubleshoot" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter troubleshoot
 </pre></div>
-</div>
-</div>
-<div class="section" id="nbconvert">
-<h2>nbconvert<a class="headerlink" href="#nbconvert" title="Permalink to this headline">¶</a></h2>
-<p>Converts jupyter notebook to other formats</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to &lt;format&gt; notebook.ipynb
-</pre></div>
-</div>
-<p>formats are:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">html</span></code> - HTML</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">full</span></code> (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">basic</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">latex</span></code> - LaTeX</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">article</span></code> (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">report</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">basic</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">pdf</span></code> - PDF</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">article</span></code> (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">report</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">basic</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">sildes</span></code> - Reveal.js HTML slideshow</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">markdown</span></code> - Markdown</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">rst</span></code> - reStructuredText</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">script</span></code> - executable script (<code class="docutils literal notranslate"><span class="pre">.py</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">notebook</span></code> -</p></li>
-</ul>
-<div class="section" id="convert-to-python-for-linting">
-<h3>Convert to python for linting<a class="headerlink" href="#convert-to-python-for-linting" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to script test.ipynb
-</pre></div>
-</div>
-</div>
-<div class="section" id="convert-to-html">
-<h3>Convert to html<a class="headerlink" href="#convert-to-html" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to html test.ipynb
-</pre></div>
-</div>
-</div>
-<div class="section" id="convert-to-pdf">
-<h3>Convert to pdf<a class="headerlink" href="#convert-to-pdf" title="Permalink to this headline">¶</a></h3>
-<p>needs Latex installed see: <a class="reference internal" href="../../writing/latex/install.html"><span class="doc">LaTeX</span></a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbconvert --to latex test.ipynb
-</pre></div>
-</div>
 </div>
 </div>
 </div>

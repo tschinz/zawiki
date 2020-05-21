@@ -11,15 +11,29 @@ The minimum pandas imports are:
    import pandas as pd
    import numpy as np
 
-Import Excel
-============
+Import / Export Data
+====================
+
+Search for files
+---------------
 
 .. code-block:: python
 
+   # List files in a directory
+   dirlist = os.listdir(inputDir)
+   print("Files from directory ", inputDir)
+   for file in dirlist:
+     print("  * ", file)
+
+   # Glob search for specific files
    wkbks = glob(os.path.join(os.pardir, 'input', 'xlsx_files_all', 'Ir*.xls'))
    sorted(wkbks)
 
-   filename = 'Iris.xlsx'
+
+Excel
+-----
+
+.. code-block:: python
 
    # import excel file
    df = pd.read_excel(filename)
@@ -32,6 +46,46 @@ Import Excel
 
    # import specific columns
    df = pd.read_excel(filename, sheet_name='Sheet1', header=None, skiprows=1, usecols='B,D')
+
+   # export excel file
+   df.to_excel(filename, index=False)
+
+CSV
+---
+
+.. code-block:: python
+
+   # import csv file
+   df = pd.read_csv(filename)
+
+   # export first 10 rows
+   df[:10].to_csv(filename, index=False)
+
+H5
+--
+
+``H5`` is a file format to efficiently store multiple panda dataframes. During export a dataframe name has to be given, the same key is needed to reimport the dataframe. The ``H5`` format is compressed and encrypted
+
+.. code-block:: python
+
+   # Import H5 File
+   if filename:
+      with pd.HDFStore(filename) as hdf:
+        df = hdf.select(datasetname)
+   # Import H5 file
+   pd.read_hdf(filename, datasetname)
+
+   # Export H5 File
+   with pd.HDFStore(filename, mode='w') as hdf:
+     hdf.put(datasetname, df, format='table', data_columns=True)
+
+Copy
+====
+
+.. code-block:: python
+
+   # Copy dataframe
+   df = df.copy(deep=True)
 
 Access informations
 ===================
@@ -51,11 +105,26 @@ Access informations
 
    # Get columns
    df.columns
+   df.columns.tolist()
 
    # Get number of columns and rows, cells
    df.shape[0]     # rows
    df.shape[1]     # columns
    df.size         # elements (rows * columns)
+
+   # Count unique values in a column
+   len(df['colname'].unique())
+
+Index
+=====
+
+.. code-block:: python
+
+   # set index
+   df = df.set_index('colname')
+
+   # reset index
+
 
 Statistic
 =========
@@ -99,6 +168,7 @@ Access Data
 
    # Access specific columns
    df['colname']
+   df['colname'].tolist()
    df.iloc[:,[4]]
    df.loc[:,['colname']]
 
@@ -108,13 +178,14 @@ Access Data
    # Access rows (index starts at 0)
    df.loc[20:30]
    df.loc[20:30, ['colname']]
+   # get 3 first rows
+   df.iloc[0:3]
 
    # Get unique values
    df['colname'].unique()
 
-Sort
-====
-
+   # Get random sample of rows while maintaining index
+   df.sample(frac=0.25)
 
 Filter
 ======
@@ -144,6 +215,39 @@ Filter
    # drop duplicates
    df.drop_duplicates(subset=['colname'])
 
+Sorting
+=======
+
+.. code-block:: python
+
+   # Soft data by value
+   df.sort_values('colname', ascending=False)
+
+Aggregating
+===========
+
+.. code-block:: python
+
+   # groupby and count
+   df.groupby('colname').count()
+
+   # groupby and aggregate
+   df.groupby(['colname']).agg({
+     'colname1': "sum",
+     'colname2': "count",
+     'colname3': "first",
+     'colname4': "last",
+
+   }).reset_index()
+
+Add
+===
+
+.. code-block:: python
+
+   # add new column with initial value True
+   df['colname'] = True
+
 Remove
 ======
 
@@ -151,3 +255,14 @@ Remove
 
    # remove columns
    df.drop(['colname'], axis = 1)
+
+   # keep only a few columns
+   df = df[['colname1', 'colname2']]
+
+Iterate over row indices
+========================
+
+.. code-block:: python
+
+  for idx, row in df[:2].iterrows():
+    print(idx,row)

@@ -286,11 +286,37 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#import-excel" class="nav-link">Import Excel</a>
+            <a href="#import-export-data" class="nav-link">Import / Export Data</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#search-for-files" class="nav-link">Search for files</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#excel" class="nav-link">Excel</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#csv" class="nav-link">CSV</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#h5" class="nav-link">H5</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#copy" class="nav-link">Copy</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
             <a href="#access-informations" class="nav-link">Access informations</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#index" class="nav-link">Index</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -306,15 +332,27 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#sort" class="nav-link">Sort</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
             <a href="#filter" class="nav-link">Filter</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#sorting" class="nav-link">Sorting</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#aggregating" class="nav-link">Aggregating</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#add" class="nav-link">Add</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#remove" class="nav-link">Remove</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#iterate-over-row-indices" class="nav-link">Iterate over row indices</a>
         </li>
     
     </ul>
@@ -347,14 +385,25 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="import-excel">
-<h2>Import Excel<a class="headerlink" href="#import-excel" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wkbks</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;xlsx_files_all&#39;</span><span class="p">,</span> <span class="s1">&#39;Ir*.xls&#39;</span><span class="p">))</span>
+<div class="section" id="import-export-data">
+<h2>Import / Export Data<a class="headerlink" href="#import-export-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="search-for-files">
+<h3>Search for files<a class="headerlink" href="#search-for-files" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List files in a directory</span>
+<span class="n">dirlist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">inputDir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files from directory &quot;</span><span class="p">,</span> <span class="n">inputDir</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">dirlist</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  * &quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># Glob search for specific files</span>
+<span class="n">wkbks</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;xlsx_files_all&#39;</span><span class="p">,</span> <span class="s1">&#39;Ir*.xls&#39;</span><span class="p">))</span>
 <span class="nb">sorted</span><span class="p">(</span><span class="n">wkbks</span><span class="p">)</span>
-
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;Iris.xlsx&#39;</span>
-
-<span class="c1"># import excel file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="excel">
+<h3>Excel<a class="headerlink" href="#excel" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import excel file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 
 <span class="c1"># import one sheet from excel file</span>
@@ -365,6 +414,43 @@
 
 <span class="c1"># import specific columns</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="s1">&#39;B,D&#39;</span><span class="p">)</span>
+
+<span class="c1"># export excel file</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="csv">
+<h3>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import csv file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># export first 10 rows</span>
+<span class="n">df</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="h5">
+<h3>H5<a class="headerlink" href="#h5" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">H5</span></code> is a file format to efficiently store multiple panda dataframes. During export a dataframe name has to be given, the same key is needed to reimport the dataframe. The <code class="docutils literal notranslate"><span class="pre">H5</span></code> format is compressed and encrypted</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import H5 File</span>
+<span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+   <span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">HDFStore</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdf</span><span class="p">:</span>
+     <span class="n">df</span> <span class="o">=</span> <span class="n">hdf</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">datasetname</span><span class="p">)</span>
+<span class="c1"># Import H5 file</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">datasetname</span><span class="p">)</span>
+
+<span class="c1"># Export H5 File</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">HDFStore</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdf</span><span class="p">:</span>
+  <span class="n">hdf</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">datasetname</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;table&#39;</span><span class="p">,</span> <span class="n">data_columns</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="copy">
+<h2>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -383,11 +469,24 @@
 
 <span class="c1"># Get columns</span>
 <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 
 <span class="c1"># Get number of columns and rows, cells</span>
 <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>     <span class="c1"># rows</span>
 <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># columns</span>
 <span class="n">df</span><span class="o">.</span><span class="n">size</span>         <span class="c1"># elements (rows * columns)</span>
+
+<span class="c1"># Count unique values in a column</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set index</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;colname&#39;</span><span class="p">)</span>
+
+<span class="c1"># reset index</span>
 </pre></div>
 </div>
 </div>
@@ -427,6 +526,7 @@
 <h2>Access Data<a class="headerlink" href="#access-data" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access specific columns</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,[</span><span class="mi">4</span><span class="p">]]</span>
 <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;colname&#39;</span><span class="p">]]</span>
 
@@ -436,14 +536,16 @@
 <span class="c1"># Access rows (index starts at 0)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
 <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]]</span>
+<span class="c1"># get 3 first rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 
 <span class="c1"># Get unique values</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># Get random sample of rows while maintaining index</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sort">
-<h2>Sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="filter">
 <h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
@@ -472,10 +574,50 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="sorting">
+<h2>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soft data by value</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;colname&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aggregating">
+<h2>Aggregating<a class="headerlink" href="#aggregating" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># groupby and count</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;colname&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># groupby and aggregate</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;colname&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+  <span class="s1">&#39;colname1&#39;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span>
+  <span class="s1">&#39;colname2&#39;</span><span class="p">:</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span>
+  <span class="s1">&#39;colname3&#39;</span><span class="p">:</span> <span class="s2">&quot;first&quot;</span><span class="p">,</span>
+  <span class="s1">&#39;colname4&#39;</span><span class="p">:</span> <span class="s2">&quot;last&quot;</span><span class="p">,</span>
+
+<span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># add new column with initial value True</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="remove">
 <h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove columns</span>
 <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;colname&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># keep only a few columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;colname1&#39;</span><span class="p">,</span> <span class="s1">&#39;colname2&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iterate-over-row-indices">
+<h2>Iterate over row indices<a class="headerlink" href="#iterate-over-row-indices" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -22,7 +22,8 @@ Introduction
 Some helppages
 ---------------
 
-* `Offical Spinal HDL Documentation <https://spinalhdl.github.io/SpinalDoc-RTD>`_
+* `Spinal HDL Documentation <https://spinalhdl.github.io/SpinalDoc-RTD>`_
+* `Spinal HDL Scaladoc <https://spinalhdl.github.io/SpinalHDL/>`_
 * :pdfviewer:`Cheatsheet Spinal HDL Core <github/tschinz/zawiki/blob/master/source/programming/spinal/docs/cheatSheet_core_oo.pdf>`
 * :pdfviewer:`Cheatsheet Spinal HDL Lib <github/tschinz/zawiki/blob/master/source/programming/spinal/docs/cheatSheet_lib_oo.pdf>`
 * :pdfviewer:`Cheatsheet Spinal HDL Symbolic <github/tschinz/zawiki/blob/master/source/programming/spinal/docs/cheatSheet_symbolic.pdf>`
