@@ -15,6 +15,7 @@ Tools
    git/index
    anaconda/index
    jupyter/index
+   heroku/index
    pandoc/index
    sphinx/index
    jetbrains/index
