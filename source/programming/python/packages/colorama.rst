@@ -27,8 +27,11 @@ Import
 .. code-block:: python
 
    # Windows only
+   import sys
    from colorama import init, Fore, Back, Style
-   init()
+   if sys.platform.startswith('win'):
+     init(autoreset=True)  # autoreset style after each print
+     init()
 
    # Jupyter & Linux
    from colorama import Fore, Back, Style
@@ -67,6 +70,10 @@ Example
    text+= Fore.WHITE   + Back.BLACK   + Style.BRIGHT + 'X ' + os.linesep
    ...
    print(text)
+   print(Fore.RESET)      # Reset foreground color
+   print(Back.RESET)      # Reset background color
+   print(Style.RESET_ALL) # Reset all styles back to normal
+
 
 .. figure:: img/colorama_demo.*
    :align: center

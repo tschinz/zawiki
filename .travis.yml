@@ -12,9 +12,11 @@ stages:
 
 install:
   - echo "Install additional packages"
+  # - pipenv install
+  # - pipenv shell
   #- pip install -I sphinx==2.3.1
+  #- pip install -U sphinx-rtd-theme
   - pip install -U sphinx
-  - pip install -U sphinx-rtd-theme
   - pip install -U pydata-sphinx-theme
   - pip install -U sphinxcontrib-wavedrom
   - pip install -U sphinxcontrib-plantuml
@@ -23,6 +25,7 @@ install:
   - pip install -U sphinx-copybutton
   - pip install -U nbsphinx
   - pip install -U jupyter_sphinx
+  - pip install -U sphinx-panels
   - sudo apt-get update
   - echo "Install build-essential"
   - sudo apt-get install -y build-essential
