@@ -166,6 +166,10 @@
                       </li>
                   
                       <li class="">
+                          <a href="datetime.html">Datetime</a>
+                      </li>
+                  
+                      <li class="">
                           <a href="docstring.html">Docstring</a>
                       </li>
                   
@@ -195,6 +199,10 @@
                   
                       <li class="">
                           <a href="plotly_dash.html">Plotly Dash</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="print.html">String Format Mini Language</a>
                       </li>
                   
                       <li class="">
@@ -337,10 +345,6 @@
         </li>
     
             </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#string-format-mini-language" class="nav-link">String Format Mini Language</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -566,7 +570,7 @@
 <span class="c1"># -*- coding: latin1 -*-</span>
 <span class="c1"># -*- coding: iso-8859-1 -*-</span>
 <span class="c1"># durch coding auch umlaut möglich</span>
-<span class="nb">print</span> <span class="s1">&#39;Hello Wörld&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Wörld&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -717,61 +721,6 @@
 </div>
 </div>
 </div>
-<div class="section" id="string-format-mini-language">
-<h2>String Format Mini Language<a class="headerlink" href="#string-format-mini-language" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">format_spec</span> <span class="p">:</span><span class="o">:=</span>  <span class="p">[[</span><span class="n">fill</span><span class="p">]</span><span class="n">align</span><span class="p">][</span><span class="n">sign</span><span class="p">][</span><span class="c1">#][0][width][,][.precision][type]</span>
-<span class="n">fill</span>        <span class="p">:</span><span class="o">:=</span>  <span class="o">&lt;</span><span class="nb">any</span> <span class="n">character</span><span class="o">&gt;</span>
-<span class="n">align</span>       <span class="p">:</span><span class="o">:=</span>  <span class="s2">&quot;&lt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;&gt;&quot;</span> <span class="o">|</span> <span class="s2">&quot;=&quot;</span> <span class="o">|</span> <span class="s2">&quot;^&quot;</span>
-<span class="n">sign</span>        <span class="p">:</span><span class="o">:=</span>  <span class="s2">&quot;+&quot;</span> <span class="o">|</span> <span class="s2">&quot;-&quot;</span> <span class="o">|</span> <span class="s2">&quot; &quot;</span>
-<span class="n">width</span>       <span class="p">:</span><span class="o">:=</span>  <span class="n">integer</span>
-<span class="n">precision</span>   <span class="p">:</span><span class="o">:=</span>  <span class="n">integer</span>
-<span class="nb">type</span>        <span class="p">:</span><span class="o">:=</span>  <span class="s2">&quot;b&quot;</span> <span class="o">|</span> <span class="s2">&quot;c&quot;</span> <span class="o">|</span> <span class="s2">&quot;d&quot;</span> <span class="o">|</span> <span class="s2">&quot;e&quot;</span> <span class="o">|</span> <span class="s2">&quot;E&quot;</span> <span class="o">|</span> <span class="s2">&quot;f&quot;</span> <span class="o">|</span> <span class="s2">&quot;F&quot;</span> <span class="o">|</span> <span class="s2">&quot;g&quot;</span> <span class="o">|</span> <span class="s2">&quot;G&quot;</span> <span class="o">|</span> <span class="s2">&quot;n&quot;</span> <span class="o">|</span> <span class="s2">&quot;o&quot;</span> <span class="o">|</span> <span class="s2">&quot;s&quot;</span> <span class="o">|</span> <span class="s2">&quot;x&quot;</span> <span class="o">|</span> <span class="s2">&quot;X&quot;</span> <span class="o">|</span> <span class="s2">&quot;%&quot;</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       &quot;{&quot; [field_name] [&quot;!&quot; conversion] [&quot;:&quot; format_spec] &quot;}&quot;
-          /                  &quot;r&quot;|&quot;s&quot;                   \
-         /               (r)epr   (s)tr                 \
-arg_name                                                 \
-| (&quot;.&quot; attribute_name | &quot;[&quot; element_index &quot;]&quot;)*           \
-|        |                       |                         \
-|     identifier         integer | index_string            |
-|                                   (quotes                |
-[identifier                          not required)         |
- |integer]                                                 |
-                                                           |
- _________________________________________________________/ \________
-/                                                                    \
-      &quot;:&quot;
-         [[fill]align][sign][#][0][width][,][.precision][type]
-  [default]--&gt; &lt; left    +   |  |  (int)       (int)    b base 2
-  [default --&gt; &gt; right  [-]  |  |                       c character
-   for         ^ center &quot; &quot;  |  \                       d base 10
-   numbers]    =             |   `zero padding          e exponent (e)
-                             |                          E exponent (E)
-                            use 0b,0o,0x                f fixed point
-                             for 2  8 16                F ^^(same)^^
-  b base 2     c character                 [default]--&gt; g general (???)
-  o base 8     s string                                 G general 2 (?)
-  d base 10                                             n number (general 3)
-  x base 16                                             o base 8
-  X base 16                                             s string
-  e, E    exponent                         (lower case) x base 16
-  f, F, % fixed point                      (upper case) X base 16
-  g, G, n (general numbers)                   (x100, f) % percentage
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&gt;6.5}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>        <span class="c1"># right aligned to 6 digits, precision 5 (5 numbers including point e.g. 0.123)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:08}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>          <span class="c1"># filled up with 0 to 8 digits, 00001234</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0x</span><span class="si">{:0x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x4d2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0x</span><span class="si">{:0X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x4D2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:04x}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x04d2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:04X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">var</span><span class="p">)))</span>     <span class="c1"># in hex small case, 0x04D2</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="operator">
 <h2>Operator<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+                   # Plus         3 + 5 = 8 &#39;a&#39; + &#39;b&#39; = &#39;ab&#39;
@@ -838,11 +787,11 @@ or                  # log OR
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
 <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">zahl</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;YES&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;YES&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;Higher&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Higher&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;Lower&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lower&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -853,23 +802,23 @@ or                  # log OR
 <span class="k">while</span> <span class="n">nostop</span><span class="p">:</span>
     <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter a number: &#39;</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s1">&#39;Yes&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
     <span class="n">nostop</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># End of while</span>
     <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s1">&#39;Higher&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Higher&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s1">&#39;Lower&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lower&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;End of while loop&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End of while loop&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="for">
 <h3>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;End of for loop&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End of for loop&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -879,7 +828,7 @@ or                  # log OR
     <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Enter something: &#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
         <span class="k">break</span>
-    <span class="nb">print</span> <span class="s1">&#39;The length of the string is&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The length of the string is&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -892,7 +841,7 @@ or                  # log OR
         <span class="k">break</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
         <span class="k">continue</span>
-    <span class="nb">print</span> <span class="s1">&#39;Sufficient long&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sufficient long&#39;</span><span class="p">)</span>
     <span class="c1"># Treat input here</span>
 </pre></div>
 </div>
@@ -917,9 +866,9 @@ or                  # log OR
 
 <span class="k">def</span> <span class="nf">printMax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="s1">&#39;is max value&#39;</span><span class="p">)</span>
 <span class="n">printMax</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1"># function call with number</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
@@ -931,12 +880,12 @@ or                  # log OR
 <h3>Global variable<a class="headerlink" href="#global-variable" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">x</span>
-    <span class="nb">print</span> <span class="s1">&#39;x ist&#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x ist&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="nb">print</span> <span class="s1">&#39;global x is now&#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;global x is now&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="n">func</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s1">&#39;The value of x is&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="c1"># x = 2 because of global var</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of x is&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># x = 2 because of global var</span>
 </pre></div>
 </div>
 </div>
@@ -945,7 +894,7 @@ or                  # log OR
 <p>If a function parameter is not given, the default value will be used.
 All parameter with default values need to be at the end of the parameter list.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sag</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">loops</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="n">message</span> <span class="o">*</span> <span class="n">loops</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span> <span class="o">*</span> <span class="n">loops</span><span class="p">)</span>
 <span class="n">sag</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
 <span class="n">sag</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -954,7 +903,7 @@ All parameter with default values need to be at the end of the parameter list.</
 <div class="section" id="keywords-with-param">
 <h3>Keywords with param<a class="headerlink" href="#keywords-with-param" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;and c is&#39;</span><span class="p">,</span> <span class="n">c</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;and b is&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;and c is&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <span class="n">func</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="n">func</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
 <span class="n">func</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -979,7 +928,7 @@ All parameter with default values need to be at the end of the parameter list.</
 <h3>Definition of a Module<a class="headerlink" href="#definition-of-a-module" title="Permalink to this headline">¶</a></h3>
 <p>Everything in Python is a module (almost)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="s1">&#39;Hello, this is a module&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, this is a module&#39;</span><span class="p">)</span>
 <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.1&#39;</span>
 </pre></div>
 </div>
@@ -989,7 +938,7 @@ All parameter with default values need to be at the end of the parameter list.</
 <p>The Module need to be in the same folder</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">myModule</span>
 <span class="n">myModule</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">mmyModule</span><span class="o">.</span><span class="n">version</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">mmyModule</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -999,7 +948,7 @@ All parameter with default values need to be at the end of the parameter list.</
 <span class="c1"># OR:</span>
 <span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">hello</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">version</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Version&#39;</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1010,36 +959,36 @@ All parameter with default values need to be at the end of the parameter list.</
 <h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a list</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;I have &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="s1">&#39; to buy.&#39;</span>
-<span class="nb">print</span> <span class="s1">&#39;These things are:&#39;</span><span class="p">,</span> <span class="c1"># Don&#39;t forget the comma at the end</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I have &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="s1">&#39; to buy.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;These things are:&#39;</span><span class="p">,</span> <span class="c1"># Don&#39;t forget the comma at the end)</span>
 <span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="n">thing</span><span class="p">,</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">thing</span><span class="p">,)</span>
 
-<span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">I also have to buy Bananas&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">I also have to buy Bananas&#39;</span><span class="p">)</span>
 <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Banans&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
 
-<span class="nb">print</span> <span class="s1">&#39;Sort My list&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sort My list&#39;</span><span class="p">)</span>
 <span class="nb">list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span> <span class="s1">&#39;The sorted list is &#39;</span><span class="p">,</span> <span class="nb">list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sorted list is &#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
 
-<span class="nb">print</span> <span class="s1">&#39;First I&#39;</span><span class="n">ll</span> <span class="n">buy</span><span class="s1">&#39;, list[0]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First I&#39;</span><span class="n">ll</span> <span class="n">buy</span><span class="s1">&#39;, list[0])</span>
 <span class="n">oldthing</span> <span class="o">=</span><span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="k">del</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;I did buy &#39;</span><span class="p">,</span> <span class="n">oldthing</span>
-<span class="nb">print</span> <span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I did buy &#39;</span><span class="p">,</span> <span class="n">oldthing</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My list is now&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="tuple">
 <h3>Tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Wolf&#39;</span><span class="p">,</span> <span class="s1">&#39;Elefant&#39;</span><span class="p">,</span> <span class="s1">&#39;Pinguin&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s1">&#39;The number of animals in the Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">zoo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of animals in the Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">zoo</span><span class="p">))</span>
 <span class="n">new_zoo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Ape&#39;</span><span class="p">,</span> <span class="s1">&#39;Delfin&#39;</span><span class="p">,</span> <span class="n">zoo</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s1">&#39;The number of animals in the new Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s1">&#39;All animals in the new Zoo are: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span>
-<span class="nb">print</span> <span class="s1">&#39;The animals from the old Zoo are&#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;The last animal is a: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of animals in the new Zoo is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_zoo</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All animals in the new Zoo are: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The animals from the old Zoo are&#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The last animal is a: &#39;</span><span class="p">,</span> <span class="n">new_zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1050,16 +999,16 @@ All parameter with default values need to be at the end of the parameter list.</
        <span class="s1">&#39;Matsumoto&#39;</span> <span class="p">:</span> <span class="s1">&#39;matz@ruby-lang.org&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Spammer&#39;</span>   <span class="p">:</span> <span class="s1">&#39;spammer@hotmail.com&#39;</span>
      <span class="p">}</span>
-<span class="nb">print</span> <span class="s2">&quot;Swaroops Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swaroops Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">])</span>
 <span class="c1"># Ein Schluessel/Wert-Paar hinzufuegen</span>
 <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;guido@python.org&#39;</span>
 <span class="c1"># Ein Schluessel/Wert-Paar loeschen</span>
 <span class="k">del</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Spammer&#39;</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Es gibt </span><span class="si">%d</span><span class="s1"> Kontakte im Adressbuch</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">ab</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Es gibt </span><span class="si">%d</span><span class="s1"> Kontakte im Adressbuch</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">ab</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">adresse</span> <span class="ow">in</span> <span class="n">ab</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> hat die Adresse </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">adresse</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> hat die Adresse </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">adresse</span><span class="p">))</span>
 <span class="k">if</span> <span class="s1">&#39;Guido&#39;</span> <span class="ow">in</span> <span class="n">ab</span><span class="p">:</span> <span class="c1"># oder: ab.has_key(&#39;Guido&#39;)</span>
-    <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Guidos Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Guidos Adresse ist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ab</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1067,23 +1016,23 @@ All parameter with default values need to be at the end of the parameter list.</
 <h3>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span> <span class="s1">&#39;Pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Glass&#39;</span><span class="p">]</span>
 <span class="c1"># Index</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 0 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># Book</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>           <span class="c1"># Pencil</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>           <span class="c1"># Apple</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>           <span class="c1"># Glass</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>         <span class="c1"># Glass</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos -2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>         <span class="c1"># Apple</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 0 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>           <span class="c1"># Book</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>           <span class="c1"># Pencil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>           <span class="c1"># Apple</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>           <span class="c1"># Glass</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>         <span class="c1"># Glass</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos -2 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>         <span class="c1"># Apple</span>
 <span class="c1"># List range</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 1 to 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>    <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 2 to End is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>   <span class="c1"># [&#39;Apple&#39;, &#39;Glass&#39;]</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos 1 to -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
-<span class="nb">print</span> <span class="s1">&#39;Pos begin to is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[:]</span>    <span class="c1"># [&#39;Book&#39;, &#39;Pencil&#39;, &#39;Apple&#39;, &#39;Glass&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 1 to 3 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 2 to End is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>   <span class="c1"># [&#39;Apple&#39;, &#39;Glass&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos 1 to -1 is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># [&#39;Pencil&#39;, &#39;Apple&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pos begin to is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">[:])</span>    <span class="c1"># [&#39;Book&#39;, &#39;Pencil&#39;, &#39;Apple&#39;, &#39;Glass&#39;]</span>
 <span class="c1"># List range on a string</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;1234567&#39;</span>
-<span class="nb">print</span> <span class="s1">&#39;Chars 1 bis 3 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>    <span class="c1"># 23</span>
-<span class="nb">print</span> <span class="s1">&#39;Chars 2 bis Ende ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># 34567</span>
-<span class="nb">print</span> <span class="s1">&#39;Chars 1 bis -1 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 3456</span>
-<span class="nb">print</span> <span class="s1">&#39;Chars Begin to End&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[:]</span>     <span class="c1"># 1234567</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chars 1 bis 3 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># 23</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chars 2 bis Ende ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>  <span class="c1"># 34567</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chars 1 bis -1 ist&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># 3456</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chars Begin to End&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">[:])</span>     <span class="c1"># 1234567</span>
 </pre></div>
 </div>
 </div>
@@ -1096,16 +1045,16 @@ All parameter with default values need to be at the end of the parameter list.</
 <p>“mylist” is another name pointing to the same object.</p>
 <p>Delete one item</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span>
-<span class="nb">print</span> <span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Both list return it’s items without the deleted item “Book”. This shows that both point to the same object</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Copy with range&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Copy with range&#39;</span><span class="p">)</span>
 <span class="n">mylist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[:]</span> <span class="c1"># this copies the whole list</span>
 <span class="k">del</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span> <span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span>
-<span class="nb">print</span> <span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list is&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mylist is&#39;</span><span class="p">,</span> <span class="n">mylist</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Both lists are different now, will the copy created a new list.</p>
@@ -1120,7 +1069,7 @@ All parameter with default values need to be at the end of the parameter list.</
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
     <span class="k">def</span> <span class="nf">sagHallo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span> <span class="s1">&#39;Hallo, mein Name ist&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo, mein Name ist&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">sagHallo</span><span class="p">()</span>
 <span class="c1"># Dieses kurze Beispiel kann auch als</span>
@@ -1136,27 +1085,27 @@ All parameter with default values need to be at the end of the parameter list.</
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Initialisiert die Daten der Person.&#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="nb">print</span> <span class="s1">&#39;(Initialisiere </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(Initialisiere </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="c1"># Wenn diese Person erzeugt wird,</span>
         <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Ich sterbe.&#39;&#39;&#39;</span>
-        <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> verabschiedet sich.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> verabschiedet sich.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">-=</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span> <span class="s1">&#39;Ich bin der letzte.&#39;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ich bin der letzte.&#39;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span> <span class="s1">&#39;Es gibt noch </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es gibt noch </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">sagHallo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Begruessung durch die Person.</span>
 <span class="sd">        Das ist wirklich alles, was hier geschieht.&#39;&#39;&#39;</span>
-        <span class="nb">print</span> <span class="s1">&#39;Hallo, mein Name ist </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo, mein Name ist </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wieViele</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Gibt die aktuelle Bevoelkerungszahl aus.&#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="nb">print</span> <span class="s1">&#39;Ich bin ganz allein hier.&#39;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ich bin ganz allein hier.&#39;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span> <span class="s1">&#39;Es gibt hier </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es gibt hier </span><span class="si">%d</span><span class="s1"> Leute.&#39;</span> <span class="o">%</span> <span class="n">Person</span><span class="o">.</span><span class="n">bevoelkerung</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1174,28 +1123,28 @@ All parameter with default values need to be at the end of the parameter list.</
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">alter</span> <span class="o">=</span> <span class="n">alter</span>
-        <span class="nb">print</span> <span class="s1">&#39;(SchulMitglied </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(SchulMitglied </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Gib Auskunft ueber das Mitglied.&#39;&#39;&#39;</span>
-        <span class="nb">print</span> <span class="s1">&#39;Name: &quot;</span><span class="si">%s</span><span class="s1">&quot; Alter: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alter</span><span class="p">),</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Name: &quot;</span><span class="si">%s</span><span class="s1">&quot; Alter: &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alter</span><span class="p">),)</span>
 <span class="k">class</span> <span class="nc">Dozent</span><span class="p">(</span><span class="n">SchulMitglied</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Repraesentiert einen Dozenten der Hochschule.&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">,</span> <span class="n">gehalt</span><span class="p">):</span>
         <span class="n">SchulMitglied</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gehalt</span> <span class="o">=</span> <span class="n">gehalt</span>
-        <span class="nb">print</span> <span class="s1">&#39;(Dozent </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(Dozent </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">SchulMitglied</span><span class="o">.</span><span class="n">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="nb">print</span> <span class="s1">&#39;Gehalt: &quot;</span><span class="si">%d</span><span class="s1"> Euro&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">gehalt</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gehalt: &quot;</span><span class="si">%d</span><span class="s1"> Euro&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">gehalt</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">SchulMitglied</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Repraesentiert einen Studenten der Hochschule.&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
         <span class="n">SchulMitglied</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alter</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
-        <span class="nb">print</span> <span class="s1">&#39;(Student </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(Student </span><span class="si">%s</span><span class="s1"> initialisiert)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">SchulMitglied</span><span class="o">.</span><span class="n">auskunft</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="nb">print</span> <span class="s1">&#39;Letzte Pruefungsnote: &quot;</span><span class="si">%1.1f</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">note</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Letzte Pruefungsnote: &quot;</span><span class="si">%1.1f</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">note</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">Dozent</span><span class="p">(</span><span class="s1">&#39;Mrs. Shrividya&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30000</span><span class="p">)</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">)</span>
 <span class="n">mitglieder</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span>
@@ -1222,7 +1171,7 @@ All parameter with default values need to be at the end of the parameter list.</
     <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>       <span class="c1"># eine leere Zeile = Dateiende (EOF)</span>
         <span class="k">break</span>
-    <span class="nb">print</span> <span class="n">line</span><span class="p">,</span>              <span class="c1"># das , für Zeilenvorschub Unterdrückung</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,)</span>              <span class="c1"># das , für Zeilenvorschub Unterdrückung</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                <span class="c1"># schliesse die Datei</span>
 </pre></div>
 </div>
@@ -1246,7 +1195,7 @@ All parameter with default values need to be at the end of the parameter list.</
 
 <span class="c1">#Auftauen</span>
 <span class="n">gespeicherteliste</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">gespeicherteliste</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gespeicherteliste</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1259,11 +1208,11 @@ All parameter with default values need to be at the end of the parameter list.</
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Geben Sie etwas ein --&gt; &#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span> <span class="c1"># beendet das Programm</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Irgendein Fehler hat eine Ausnahme ausgeloest.&#39;</span>
-<span class="nb">print</span> <span class="s1">&#39;Fertig&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Irgendein Fehler hat eine Ausnahme ausgeloest.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fertig&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1281,12 +1230,12 @@ All parameter with default values need to be at the end of the parameter list.</
         <span class="k">raise</span> <span class="n">KurzeEingabeAusnahme</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
     <span class="c1"># Hier kann man ganz normal mit der Arbeit fortfahren</span>
 <span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Warum haben Sie die Eingabe abgebrochen?&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="n">KurzeEingabeAusnahme</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;KurzeEingabeAusnahme: Eingabe hatte die Laenge </span><span class="si">%d</span><span class="s1">,&#39;</span> \
-          <span class="s1">&#39; gefordert war mindestens </span><span class="si">%d</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">laenge</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">mindestens</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;KurzeEingabeAusnahme: Eingabe hatte die Laenge </span><span class="si">%d</span><span class="s1">,&#39;</span> \
+          <span class="s1">&#39; gefordert war mindestens </span><span class="si">%d</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">laenge</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">mindestens</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s1">&#39;Es wurde keine Ausnahme ausgeloest.&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es wurde keine Ausnahme ausgeloest.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1301,10 +1250,10 @@ All parameter with default values need to be at the end of the parameter list.</
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zeile</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="n">zeile</span><span class="p">,</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">zeile</span><span class="p">,)</span>
 <span class="k">finally</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="nb">print</span> <span class="s1">&#39;Raeume auf... Datei geschlossen.&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Raeume auf... Datei geschlossen.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -16,7 +16,7 @@ Sourcefile
    # -*- coding: latin1 -*-
    # -*- coding: iso-8859-1 -*-
    # durch coding auch umlaut möglich
-   print 'Hello Wörld'
+   print('Hello Wörld')
 
 Help informations
 -----------------
@@ -161,65 +161,6 @@ String Bin Hex convertions
    print("{0: >6,.4}".format(nbr0, nbr1)
    # print nbr0,  align right,  fill with " ", 6 places width, 4 digits precision
 
-
-String Format Mini Language
-===========================
-
-.. code-block::
-
-   format_spec ::=  [[fill]align][sign][#][0][width][,][.precision][type]
-   fill        ::=  <any character>
-   align       ::=  "<" | ">" | "=" | "^"
-   sign        ::=  "+" | "-" | " "
-   width       ::=  integer
-   precision   ::=  integer
-   type        ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
-
-.. code-block::
-
-          "{" [field_name] ["!" conversion] [":" format_spec] "}"
-             /                  "r"|"s"                   \
-            /               (r)epr   (s)tr                 \
-   arg_name                                                 \
-   | ("." attribute_name | "[" element_index "]")*           \
-   |        |                       |                         \
-   |     identifier         integer | index_string            |
-   |                                   (quotes                |
-   [identifier                          not required)         |
-    |integer]                                                 |
-                                                              |
-    _________________________________________________________/ \________
-   /                                                                    \
-         ":"
-            [[fill]align][sign][#][0][width][,][.precision][type]
-     [default]--> < left    +   |  |  (int)       (int)    b base 2
-     [default --> > right  [-]  |  |                       c character
-      for         ^ center " "  |  \                       d base 10
-      numbers]    =             |   `zero padding          e exponent (e)
-                                |                          E exponent (E)
-                               use 0b,0o,0x                f fixed point
-                                for 2  8 16                F ^^(same)^^
-     b base 2     c character                 [default]--> g general (???)
-     o base 8     s string                                 G general 2 (?)
-     d base 10                                             n number (general 3)
-     x base 16                                             o base 8
-     X base 16                                             s string
-     e, E    exponent                         (lower case) x base 16
-     f, F, % fixed point                      (upper case) X base 16
-     g, G, n (general numbers)                   (x100, f) % percentage
-
-.. code-block:: python
-
-   print("{:>6.5}".format(var))        # right aligned to 6 digits, precision 5 (5 numbers including point e.g. 0.123)
-
-   print("{:08}".format(var))          # filled up with 0 to 8 digits, 00001234
-
-   print("0x{:0x}".format(int(var)))     # in hex small case, 0x4d2
-   print("0x{:0X}".format(int(var)))     # in hex small case, 0x4D2
-
-   print("{:04x}".format(int(var)))     # in hex small case, 0x04d2
-   print("{:04X}".format(int(var)))     # in hex small case, 0x04D2
-
 Operator
 ========
 
@@ -294,11 +235,11 @@ if elif else
    number = 23
    guess = int(raw_input('Enter a number: '))
    if guess == zahl:
-       print 'YES'
+       print('YES')
    elif guess < number:
-       print 'Higher'
+       print('Higher')
    else:
-       print 'Lower'
+       print('Lower')
 
 while
 -----
@@ -310,14 +251,14 @@ while
    while nostop:
        guess = int(raw_input('Enter a number: '))
        if number == guess:
-           print 'Yes'
+           print('Yes')
        nostop = False # End of while
        elif guess < number:
-           print 'Higher'
+           print('Higher')
        else:
-           print 'Lower'
+           print('Lower')
    else:
-       print 'End of while loop'
+       print('End of while loop')
 
 for
 ---
@@ -325,9 +266,9 @@ for
 .. code-block:: python
 
    for i in range(1, 5):
-       print i
+       print(i)
    else:
-       print 'End of for loop'
+       print('End of for loop')
 
 break
 -----
@@ -338,7 +279,7 @@ break
        s = raw_input('Enter something: ')
        if s == 'end':
            break
-       print 'The length of the string is', len(s)
+       print('The length of the string is', len(s))
 
 continue
 --------
@@ -353,7 +294,7 @@ continue use for ``while`` and ``for``
            break
        if len(s) < 3:
            continue
-       print 'Sufficient long'
+       print('Sufficient long')
        # Treat input here
 
 pass
@@ -380,9 +321,9 @@ General Functions
 
    def printMax(a, b):
        if a > b:
-           print a, 'is max value'
+           print(a, 'is max value')
        else:
-           print b, 'is max value'
+           print(b, 'is max value')
    printMax(3, 4) # function call with number
    x = 5
    y = 7
@@ -395,12 +336,12 @@ Global variable
 
    def func():
        global x
-       print 'x ist', x
+       print('x ist', x)
        x = 2
-       print 'global x is now', x
+       print('global x is now', x)
    x = 50
    func()
-   print 'The value of x is', x # x = 2 because of global var
+   print('The value of x is', x) # x = 2 because of global var
 
 Predefined Arguments
 --------------------
@@ -411,7 +352,7 @@ All parameter with default values need to be at the end of the parameter list.
 .. code-block:: python
 
    def sag(message, loops = 1):
-       print message * loops
+       print(message * loops)
    sag('Hello')
    sag('World', 5)
 
@@ -421,7 +362,7 @@ Keywords with param
 .. code-block:: python
 
    def func(a, b=5, c=10):
-       print 'a is', a, 'and b is', b, 'and c is', c
+       print('a is', a, 'and b is', b, 'and c is', c)
    func(3, 7)
    func(25, c=24)
    func(c=50, a=100)
@@ -449,7 +390,7 @@ Everything in Python is a module (almost)
 .. code-block:: python
 
    def hello():
-       print 'Hello, this is a module'
+       print('Hello, this is a module')
    version = '0.1'
 
 Usage of a Module
@@ -461,7 +402,7 @@ The Module need to be in the same folder
 
    import myModule
    myModule.hello()
-   print 'Version', mmyModule.version
+   print('Version', mmyModule.version)
 
 from .. import
 --------------
@@ -472,7 +413,7 @@ from .. import
    # OR:
    from myModule import *
    hello()
-   print 'Version', version
+   print('Version', version)
 
 Data structures
 ===============
@@ -484,24 +425,24 @@ List
 
    # This is a list
    list = ['Book', 'Pencil', 'Apple', 'Glass']
-   print 'I have ', len(list), ' to buy.'
-   print 'These things are:', # Don't forget the comma at the end
+   print('I have ', len(list), ' to buy.')
+   print('These things are:', # Don't forget the comma at the end)
    for thing in list:
-       print thing,
+       print(thing,)
 
-   print '\nI also have to buy Bananas'
+   print('\nI also have to buy Bananas')
    list.append('Banans')
-   print 'My list is now', list
+   print('My list is now', list)
 
-   print 'Sort My list'
+   print('Sort My list')
    list.sort()
-   print 'The sorted list is ', list
+   print('The sorted list is ', list)
 
-   print 'First I'll buy', list[0]
+   print('First I'll buy', list[0])
    oldthing =list[0]
    del list[0]
-   print 'I did buy ', oldthing
-   print 'My list is now', list
+   print('I did buy ', oldthing)
+   print('My list is now', list)
 
 Tuple
 -----
@@ -509,12 +450,12 @@ Tuple
 .. code-block:: python
 
    zoo = ('Wolf', 'Elefant', 'Pinguin')
-   print 'The number of animals in the Zoo is: ', len(zoo)
+   print('The number of animals in the Zoo is: ', len(zoo))
    new_zoo = ('Ape', 'Delfin', zoo)
-   print 'The number of animals in the new Zoo is: ', len(new_zoo)
-   print 'All animals in the new Zoo are: ', new_zoo
-   print 'The animals from the old Zoo are', new_zoo[2]
-   print 'The last animal is a: ', new_zoo[2][2]
+   print('The number of animals in the new Zoo is: ', len(new_zoo))
+   print('All animals in the new Zoo are: ', new_zoo)
+   print('The animals from the old Zoo are', new_zoo[2])
+   print('The last animal is a: ', new_zoo[2][2])
 
 Dictionaries
 ------------
@@ -526,16 +467,16 @@ Dictionaries
           'Matsumoto' : 'matz@ruby-lang.org',
           'Spammer'   : 'spammer@hotmail.com'
         }
-   print "Swaroops Adresse ist %s" % ab['Swaroop']
+   print("Swaroops Adresse ist %s" % ab['Swaroop'])
    # Ein Schluessel/Wert-Paar hinzufuegen
    ab['Guido'] = 'guido@python.org'
    # Ein Schluessel/Wert-Paar loeschen
    del ab['Spammer']
-   print '\nEs gibt %d Kontakte im Adressbuch\n' % len(ab)
+   print('\nEs gibt %d Kontakte im Adressbuch\n' % len(ab))
    for name, adresse in ab.items():
-       print '%s hat die Adresse %s' % (name, adresse)
+       print('%s hat die Adresse %s' % (name, adresse))
    if 'Guido' in ab: # oder: ab.has_key('Guido')
-       print "\nGuidos Adresse ist %s" % ab['Guido']
+       print("\nGuidos Adresse ist %s" % ab['Guido'])
 
 Sequence
 --------
@@ -544,23 +485,23 @@ Sequence
 
    list = ['Book', 'Pencil', 'Apple', 'Glass']
    # Index
-   print 'Pos 0 is', list[0]           # Book
-   print 'Pos 1 is', list[1]           # Pencil
-   print 'Pos 2 is', list[2]           # Apple
-   print 'Pos 3 is', list[3]           # Glass
-   print 'Pos -1 is', list[-1]         # Glass
-   print 'Pos -2 is', list[-2]         # Apple
+   print('Pos 0 is', list[0])           # Book
+   print('Pos 1 is', list[1])           # Pencil
+   print('Pos 2 is', list[2])           # Apple
+   print('Pos 3 is', list[3])           # Glass
+   print('Pos -1 is', list[-1])         # Glass
+   print('Pos -2 is', list[-2])         # Apple
    # List range
-   print 'Pos 1 to 3 is', list[1:3]    # ['Pencil', 'Apple']
-   print 'Pos 2 to End is', list[2:]   # ['Apple', 'Glass']
-   print 'Pos 1 to -1 is', list[1:-1]  # ['Pencil', 'Apple']
-   print 'Pos begin to is', list[:]    # ['Book', 'Pencil', 'Apple', 'Glass']
+   print('Pos 1 to 3 is', list[1:3])    # ['Pencil', 'Apple']
+   print('Pos 2 to End is', list[2:])   # ['Apple', 'Glass']
+   print('Pos 1 to -1 is', list[1:-1])  # ['Pencil', 'Apple']
+   print('Pos begin to is', list[:])    # ['Book', 'Pencil', 'Apple', 'Glass']
    # List range on a string
    name = '1234567'
-   print 'Chars 1 bis 3 ist', name[1:3]    # 23
-   print 'Chars 2 bis Ende ist', name[2:]  # 34567
-   print 'Chars 1 bis -1 ist', name[1:-1]  # 3456
-   print 'Chars Begin to End', name[:]     # 1234567
+   print('Chars 1 bis 3 ist', name[1:3])    # 23
+   print('Chars 2 bis Ende ist', name[2:])  # 34567
+   print('Chars 1 bis -1 ist', name[1:-1])  # 3456
+   print('Chars Begin to End', name[:])     # 1234567
 
 References and Objects
 ----------------------
@@ -577,18 +518,18 @@ Delete one item
 .. code-block:: python
 
    del list[0]
-   print 'list is', list
-   print 'mylist is', mylist
+   print('list is', list)
+   print('mylist is', mylist)
 
 Both list return it's items without the deleted item "Book". This shows that both point to the same object
 
 .. code-block:: python
 
-   print 'Copy with range'
+   print('Copy with range')
    mylist = list[:] # this copies the whole list
    del mylist[0]
-   print 'list is', list
-   print 'mylist is', mylist
+   print('list is', list)
+   print('mylist is', mylist)
 
 Both lists are different now, will the copy created a new list.
 
@@ -606,7 +547,7 @@ Oriented Objects Programming
        def __init__(self, name):
            self.name = name
        def sagHallo(self):
-           print 'Hallo, mein Name ist', self.name
+           print('Hallo, mein Name ist', self.name)
    p = Person('Swaroop')
    p.sagHallo()
    # Dieses kurze Beispiel kann auch als
@@ -623,27 +564,27 @@ Klassen und Objekt variablen
        def __init__(self, name):
            '''Initialisiert die Daten der Person.'''
            self.name = name
-           print '(Initialisiere %s)' % self.name
+           print('(Initialisiere %s)' % self.name)
            # Wenn diese Person erzeugt wird,
            Person.bevoelkerung += 1
        def __del__(self):
            '''Ich sterbe.'''
-           print '%s verabschiedet sich.' % self.name
+           print('%s verabschiedet sich.' % self.name)
            Person.bevoelkerung -= 1
            if Person.bevoelkerung == 0:
-               print 'Ich bin der letzte.'
+               print('Ich bin der letzte.')
            else:
-               print 'Es gibt noch %d Leute.' % Person.bevoelkerung
+               print('Es gibt noch %d Leute.' % Person.bevoelkerung)
        def sagHallo(self):
            '''Begruessung durch die Person.
            Das ist wirklich alles, was hier geschieht.'''
-           print 'Hallo, mein Name ist %s.' % self.name
+           print('Hallo, mein Name ist %s.' % self.name)
        def wieViele(self):
            '''Gibt die aktuelle Bevoelkerungszahl aus.'''
            if Person.bevoelkerung == 1:
-               print 'Ich bin ganz allein hier.'
+               print('Ich bin ganz allein hier.')
            else:
-               print 'Es gibt hier %d Leute.' % Person.bevoelkerung
+               print('Es gibt hier %d Leute.' % Person.bevoelkerung)
 
 * Alle Variablen sind normalerweise public
 * Mit ``__privatvar`` wird es zu einer Privaten Variable
@@ -661,28 +602,28 @@ inherit
        def __init__(self, name, alter):
            self.name = name
            self.alter = alter
-           print '(SchulMitglied %s initialisiert)' % self.name
+           print('(SchulMitglied %s initialisiert)' % self.name)
        def auskunft(self):
            '''Gib Auskunft ueber das Mitglied.'''
-           print 'Name: "%s" Alter: "%s"' % (self.name, self.alter),
+           print('Name: "%s" Alter: "%s"' % (self.name, self.alter),)
    class Dozent(SchulMitglied):
        '''Repraesentiert einen Dozenten der Hochschule.'''
        def __init__(self, name, alter, gehalt):
            SchulMitglied.__init__(self, name, alter)
            self.gehalt = gehalt
-           print '(Dozent %s initialisiert)' % self.name
+           print('(Dozent %s initialisiert)' % self.name)
        def auskunft(self):
            SchulMitglied.auskunft(self)
-           print 'Gehalt: "%d Euro"' % self.gehalt
+           print('Gehalt: "%d Euro"' % self.gehalt)
    class Student(SchulMitglied):
        '''Repraesentiert einen Studenten der Hochschule.'''
        def __init__(self, name, alter, note):
            SchulMitglied.__init__(self, name, alter)
            self.note = note
-           print '(Student %s initialisiert)' % self.name
+           print('(Student %s initialisiert)' % self.name)
        def auskunft(self):
            SchulMitglied.auskunft(self)
-           print 'Letzte Pruefungsnote: "%1.1f"' % self.note
+           print('Letzte Pruefungsnote: "%1.1f"' % self.note)
    d = Dozent('Mrs. Shrividya', 40, 30000)
    s = Student('Swaroop', 22, 1.7)
    mitglieder = [d, s]
@@ -710,7 +651,7 @@ File
        line = f.readline()
        if len(line) == 0:       # eine leere Zeile = Dateiende (EOF)
            break
-       print line,              # das , für Zeilenvorschub Unterdrückung
+       print(line,)              # das , für Zeilenvorschub Unterdrückung
        f.close()                # schliesse die Datei
 
 Freeze and Unfreeze
@@ -735,7 +676,7 @@ Freeze and Unfreeze
 
    #Auftauen
    gespeicherteliste = p.load(f)
-   print gespeicherteliste
+   print(gespeicherteliste)
 
 Exceptions
 ==========
@@ -750,11 +691,11 @@ Each ``try`` needs to have at least one ``except``
    try:
        s = raw_input('Geben Sie etwas ein --> ')
    except EOFError:
-       print '\nWarum haben Sie die Eingabe abgebrochen?'
+       print('\nWarum haben Sie die Eingabe abgebrochen?')
        sys.exit() # beendet das Programm
    except:
-       print '\nIrgendein Fehler hat eine Ausnahme ausgeloest.'
-   print 'Fertig'
+       print('\nIrgendein Fehler hat eine Ausnahme ausgeloest.')
+   print('Fertig')
 
 throw exception
 ---------------
@@ -773,12 +714,12 @@ throw exception
            raise KurzeEingabeAusnahme(len(s), 3)
        # Hier kann man ganz normal mit der Arbeit fortfahren
    except EOFError:
-       print '\nWarum haben Sie die Eingabe abgebrochen?'
+       print('\nWarum haben Sie die Eingabe abgebrochen?')
    except KurzeEingabeAusnahme, x:
-       print 'KurzeEingabeAusnahme: Eingabe hatte die Laenge %d,' \
-             ' gefordert war mindestens %d.' % (x.laenge, x.mindestens
+       print('KurzeEingabeAusnahme: Eingabe hatte die Laenge %d,' \
+             ' gefordert war mindestens %d.' % (x.laenge, x.mindestens)
    else:
-       print 'Es wurde keine Ausnahme ausgeloest.'
+       print('Es wurde keine Ausnahme ausgeloest.')
 
 ``try .. finally``
 ------------------
@@ -795,10 +736,10 @@ If an exception is raised in the program, e.g. ``Ctrl + c`` Keyboard interrupt, 
        if len(zeile) == 0:
            break
        time.sleep(2)
-       print zeile,
+       print(zeile,)
    finally:
        f.close()
-       print 'Raeume auf... Datei geschlossen.'
+       print('Raeume auf... Datei geschlossen.')
 
 Buildin Methods
 ===============
