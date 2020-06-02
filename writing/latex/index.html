@@ -60,6 +60,10 @@
             <a class="nav-link" href="../../programming/index.html">Programming</a>
         </li>
         
+        <li class="nav-item ">
+            <a class="nav-link" href="../../boards/index.html">Dev Boards</a>
+        </li>
+        
         <li class="nav-item active">
             <a class="nav-link" href="../index.html">Writing</a>
         </li>
@@ -132,6 +136,8 @@
       
       
       
+      
+      
         
           
 
@@ -141,10 +147,6 @@
                   
                       <li class="">
                           <a href="install.html">Installation LaTeX</a>
-                      </li>
-                  
-                      <li class="">
-                          <a href="intro.html">Introduction</a>
                       </li>
                   
                   </ul>
@@ -186,9 +188,26 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#some-latex-helppages" class="nav-link">Some LaTeX helppages</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#generate-pdf-files" class="nav-link">Generate PDF files</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -213,14 +232,33 @@
   <div class="section" id="latex">
 <h1>LaTeX<a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo43.svg"><img alt="../../_images/logo43.svg" src="../../_images/logo43.svg" width="300px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo44.svg"><img alt="../../_images/logo44.svg" src="../../_images/logo44.svg" width="300px" /></a>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation LaTeX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 </ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="some-latex-helppages">
+<h3>Some LaTeX helppages<a class="headerlink" href="#some-latex-helppages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gitlab.hevs.ch/SPL/miscellaneous/spl-latex-template">HEI SPL Latex Templates</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Latex.pdf">Cheatsheet A Guide to Latex</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Presentation.pdf">Cheatsheet A Guide to Latex Presentation</a></p></li>
+<li><p><a class="reference external" href="https://tex.stackexchange.com/">Tex Stackexchange Forum</a></p></li>
+</ul>
+</div>
+<div class="section" id="generate-pdf-files">
+<h3>Generate PDF files<a class="headerlink" href="#generate-pdf-files" title="Permalink to this headline">¶</a></h3>
+<p>Latex is best suited to insert images as pdf. In order to convert images or svg into pdf use inkscape
+Convert <code class="docutils literal notranslate"><span class="pre">*.svg</span></code> images with inkscape to <code class="docutils literal notranslate"><span class="pre">*.pdf</span></code> and <code class="docutils literal notranslate"><span class="pre">*.pdf_tex</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>inkscape -D -z --file<span class="o">=</span>image.svg --export-pdf<span class="o">=</span>image.pdf --export-latex
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -255,7 +293,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
     </p>
   </div>
 </footer>

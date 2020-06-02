@@ -61,6 +61,10 @@
         </li>
         
         <li class="nav-item ">
+            <a class="nav-link" href="../boards/index.html">Dev Boards</a>
+        </li>
+        
+        <li class="nav-item ">
             <a class="nav-link" href="../writing/index.html">Writing</a>
         </li>
         
@@ -124,6 +128,8 @@
   
 
   <ul class="nav bd-sidenav">
+      
+      
       
       
       
@@ -245,7 +251,7 @@
 <h2>The System<a class="headerlink" href="#the-system" title="Permalink to this headline">¶</a></h2>
 <p>Briefly and without technical detours, the system works as follows. To encrypt and decrypt with GPG, it is necessary to use two different cryptographic keys: a public and a secret key. “Public” keys are used to encrypt and “Private” keys are used to decrypt messages. To send encrypted e.g. e-mails you must have the “public” key of the recipient, which is used to encrypt the message. The recipient then uses his “Private” key to decrypt (and read) the encrypted message.
 To send encrypted messages to you, senders must first have a copy of your “public” key from your keychain. “Public” keys may be passed on to those who want to send you encrypted messages. For this purpose you can deposit your “Public” Key on a Key Server. “Private” keys may not be passed on.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Key distributionAllocation of keys</strong> “Private” keys may not be passed on to anyone, “Public” keys must be distributed to everyone.</p>
 </div>
@@ -336,7 +342,7 @@ gpg --verify filename or gpg -v filename
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
     </p>
   </div>
 </footer>

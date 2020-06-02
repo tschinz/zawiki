@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
+    <link rel="next" title="Multimedia" href="../../multimedia/index.html" />
     <link rel="prev" title="Github Markdown" href="../md/md_github.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -58,6 +58,10 @@
         
         <li class="nav-item ">
             <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../boards/index.html">Dev Boards</a>
         </li>
         
         <li class="nav-item active">
@@ -132,6 +136,8 @@
       
       
       
+      
+      
         
           
               <li class="">
@@ -152,16 +158,8 @@
           
         
           
-
               <li class="active">
                   <a href="">GitBook</a>
-                  <ul>
-                  
-                      <li class="">
-                          <a href="intro.html">Introduction</a>
-                      </li>
-                  
-                  </ul>
               </li>
           
         
@@ -182,9 +180,34 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#installation" class="nav-link">Installation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#usage" class="nav-link">Usage</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#cover" class="nav-link">Cover</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#links" class="nav-link">Links</a>
+        </li>
     
     </ul>
 </nav>
@@ -209,12 +232,85 @@
   <div class="section" id="gitbook">
 <h1>GitBook<a class="headerlink" href="#gitbook" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo41.svg"><img alt="../../_images/logo41.svg" src="../../_images/logo41.svg" width="300px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo42.svg"><img alt="../../_images/logo42.svg" src="../../_images/logo42.svg" width="300px" /></a>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Gitbook is a tool to create and generate books using the Markdown or ASCIIDoc Syntax. It allows to create book in the following formats:</p>
+<ul class="simple">
+<li><p>PDF</p></li>
+<li><p>EPUB</p></li>
+<li><p>MOBI</p></li>
+<li><p>HTML</p></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>For using gitbook locally on your machine you’ll need a couple of tools.</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li><p><a class="reference external" href="https://www.npmjs.com/">npm</a></p></li>
+<li><p>Install gitbook commandline tools with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm install gitbook-cli -g
+</pre></div>
+</div>
+</li>
+<li><p>Install <a class="reference external" href="http://calibre-ebook.com/">calibre</a> this is needed for having the <code class="docutils literal notranslate"><span class="pre">ebook-convert</span></code> command</p></li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gitbook init    <span class="c1"># creates a new ebook folder and file structure</span>
+
+gitbook install <span class="c1"># installs the required plugins for the book you want to build</span>
+
+gitbook build   <span class="c1"># build the static html webpage</span>
+
+gitbook pdf ./myrepo ./mybook.pdf
+gitbook pdf     <span class="c1"># creates a pdf version of the book</span>
+
+gitbook epub ./myrepo ./mybook.epub
+gitbook epub    <span class="c1"># created a epub version fo the book</span>
+
+gitbook mobi ./myrepo ./mybook.mobi
+gitbook mobi    <span class="c1"># created a mobi version fo the book</span>
+</pre></div>
+</div>
+<div class="section" id="cover">
+<h3>Cover<a class="headerlink" href="#cover" title="Permalink to this headline">¶</a></h3>
+<table class="table">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Big</p></th>
+<th class="head"><p>Small</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Filename</p></td>
+<td><p>cover.jpg</p></td>
+<td><p>cover_small.jpg</p></td>
+</tr>
+<tr class="row-odd"><td><p>Size</p></td>
+<td><p>1800px x 2360px</p></td>
+<td><p>200px x 262px</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/GitbookIO/gitbook">Github Gitbook Repo</a></p></li>
+<li><p><a class="reference external" href="https://www.gitbook.com/">GitBook Official Website</a></p></li>
+<li><p><a class="reference external" href="https://docs.gitbook.com/">GitBook Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tschinz/swift_cheat_sheet">Tschinz Gitbook Swift Cheatsheet</a></p></li>
 </ul>
 </div>
 </div>
@@ -250,7 +346,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
     </p>
   </div>
 </footer>

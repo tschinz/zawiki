@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Zawiki</title>
+    <title>Overlays &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Multimedia" href="../../multimedia/index.html" />
-    <link rel="prev" title="GitBook" href="index.html" />
+    <link rel="next" title="pynq Package" href="pynq-package.html" />
+    <link rel="prev" title="Xilinx PYNQ-Z1" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -60,8 +60,12 @@
             <a class="nav-link" href="../../programming/index.html">Programming</a>
         </li>
         
-        <li class="nav-item active">
-            <a class="nav-link" href="../index.html">Writing</a>
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Dev Boards</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
         </li>
         
         <li class="nav-item ">
@@ -132,39 +136,7 @@
       
       
       
-        
-          
-              <li class="">
-                  <a href="../latex/index.html">LaTeX</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="../rst/index.html">ReStructuredText</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="../md/index.html">Markdown</a>
-              </li>
-          
-        
-          
-
-              <li class="active">
-                  <a href="index.html">GitBook</a>
-                  <ul>
-                  
-                      <li class="active">
-                          <a href="">Introduction</a>
-                      </li>
-                  
-                  </ul>
-              </li>
-          
-        
+      
       
       
       
@@ -190,21 +162,39 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#installation" class="nav-link">Installation</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#usage" class="nav-link">Usage</a><ul class="nav section-nav flex-column">
+            <a href="#loading" class="nav-link">Loading</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#cover" class="nav-link">Cover</a>
+            <a href="#instantiates" class="nav-link">Instantiates</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#full-redownload" class="nav-link">Full Redownload</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#partial-redownload" class="nav-link">Partial Redownload</a>
         </li>
     
             </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#links" class="nav-link">Links</a>
+            <a href="#help" class="nav-link">Help</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#existing-xilinx-overlays" class="nav-link">Existing Xilinx Overlays</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#computer-pynq-computervision" class="nav-link">Computer PYNQ-ComputerVision</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#qnn-mo" class="nav-link">QNN MO</a>
+        </li>
+    
+            </ul>
         </li>
     
     </ul>
@@ -213,7 +203,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/writing/gitbook/intro.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/boards/pynq-z1/overlays.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -227,81 +217,78 @@
               
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Gitbook is a tool to create and generate books using the Markdown or ASCIIDoc Syntax. It allows to create book in the following formats:</p>
+  <div class="section" id="overlays">
+<h1>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h1>
+<p>By default, an overlay (bitstream) called base is downloaded into the PL at boot time. The base overlay can be considered like a reference design for a board. New overlays can be installed or copied to the board and can be loaded into the PL as the system is running.</p>
+<p>An overlay usually includes:</p>
 <ul class="simple">
-<li><p>PDF</p></li>
-<li><p>EPUB</p></li>
-<li><p>MOBI</p></li>
-<li><p>HTML</p></li>
+<li><p>A bitstream to configure the FPGA fabric</p></li>
+<li><p>A Vivado design Tcl file to determine the available IP</p></li>
+<li><p>Python API that exposes the IPs as attributes</p></li>
 </ul>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>For using gitbook locally on your machine you’ll need a couple of tools.</p>
-<ul>
-<li><p><a class="reference external" href="https://www.npmjs.com/">npm</a></p></li>
-<li><p>Install gitbook commandline tools with the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm install gitbook-cli -g
+<div class="section" id="loading">
+<h2>Loading<a class="headerlink" href="#loading" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instantiates">
+<h3>Instantiates<a class="headerlink" href="#instantiates" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq</span> <span class="kn">import</span> <span class="n">Overlay</span>
+<span class="c1"># instantiates the overlay and downloads it to the PL</span>
+<span class="n">overlay</span> <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span><span class="s2">&quot;base.bit&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p>Install <a class="reference external" href="http://calibre-ebook.com/">calibre</a> this is needed for having the <code class="docutils literal notranslate"><span class="pre">ebook-convert</span></code> command</p></li>
-</ul>
 </div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gitbook init    <span class="c1"># creates a new ebook folder and file structure</span>
-
-gitbook install <span class="c1"># installs the required plugins for the book you want to build</span>
-
-gitbook build   <span class="c1"># build the static html webpage</span>
-
-gitbook pdf ./myrepo ./mybook.pdf
-gitbook pdf     <span class="c1"># creates a pdf version of the book</span>
-
-gitbook epub ./myrepo ./mybook.epub
-gitbook epub    <span class="c1"># created a epub version fo the book</span>
-
-gitbook mobi ./myrepo ./mybook.mobi
-gitbook mobi    <span class="c1"># created a mobi version fo the book</span>
+<div class="section" id="full-redownload">
+<h3>Full Redownload<a class="headerlink" href="#full-redownload" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># for a full download of the bitstream</span>
+<span class="n">overlay</span><span class="o">.</span><span class="n">download</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="section" id="cover">
-<h3>Cover<a class="headerlink" href="#cover" title="Permalink to this headline">¶</a></h3>
-<table class="table">
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 39%" />
-<col style="width: 39%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Big</p></th>
-<th class="head"><p>Small</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Filename</p></td>
-<td><p>cover.jpg</p></td>
-<td><p>cover_small.jpg</p></td>
-</tr>
-<tr class="row-odd"><td><p>Size</p></td>
-<td><p>1800px x 2360px</p></td>
-<td><p>200px x 262px</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="section" id="partial-redownload">
+<h3>Partial Redownload<a class="headerlink" href="#partial-redownload" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set region</span>
+<span class="n">overlay</span><span class="o">.</span><span class="n">set_partial_region</span><span class="p">(</span><span class="s1">&#39;block_0&#39;</span><span class="p">)</span>
+
+<span class="c1"># download region</span>
+<span class="n">overlay</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;rm_0_partial.bit&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>Once a overlas is instantiated the <code class="docutils literal notranslate"><span class="pre">help()</span></code> method can be used to discover its function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq.overlays.base</span> <span class="kn">import</span> <span class="n">BaseOverlay</span>
+<span class="n">base_overlay</span> <span class="o">=</span> <span class="n">BaseOverlay</span><span class="p">(</span><span class="s2">&quot;base.bit&quot;</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">base_overlay</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">base_overlay</span><span class="o">.</span><span class="n">leds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="existing-xilinx-overlays">
+<h2>Existing Xilinx Overlays<a class="headerlink" href="#existing-xilinx-overlays" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="computer-pynq-computervision">
+<h3>Computer PYNQ-ComputerVision<a class="headerlink" href="#computer-pynq-computervision" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/GitbookIO/gitbook">Github Gitbook Repo</a></p></li>
-<li><p><a class="reference external" href="https://www.gitbook.com/">GitBook Official Website</a></p></li>
-<li><p><a class="reference external" href="https://docs.gitbook.com/">GitBook Documentation</a></p></li>
-<li><p><a class="reference external" href="https://github.com/tschinz/swift_cheat_sheet">Tschinz Gitbook Swift Cheatsheet</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Xilinx/PYNQ-ComputerVision">Github Repo</a></p></li>
 </ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># in my case Cython needed to be upgraded beforehands</span>
+pip3 install -U Cython
+
+sudo pip3 install --upgrade git+https://github.com/Xilinx/PYNQ-ComputerVision.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="qnn-mo">
+<h3>QNN MO<a class="headerlink" href="#qnn-mo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Xilinx/QNN-MO-PYNQ">Github Repo</a></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pip3 install git+https://github.com/Xilinx/QNN-MO-PYNQ.git
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -336,7 +323,7 @@ gitbook mobi    <span class="c1"># created a mobi version fo the book</span>
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
     </p>
   </div>
 </footer>

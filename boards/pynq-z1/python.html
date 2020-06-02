@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Introduction &#8212; Zawiki</title>
+    <title>Python &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -25,8 +25,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ReStructuredText" href="../rst/index.html" />
-    <link rel="prev" title="Installation LaTeX" href="install.html" />
+    <link rel="next" title="Writing" href="../../writing/index.html" />
+    <link rel="prev" title="pynq Package" href="pynq-package.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -60,8 +60,12 @@
             <a class="nav-link" href="../../programming/index.html">Programming</a>
         </li>
         
-        <li class="nav-item active">
-            <a class="nav-link" href="../index.html">Writing</a>
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Dev Boards</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
         </li>
         
         <li class="nav-item ">
@@ -132,43 +136,7 @@
       
       
       
-        
-          
-
-              <li class="active">
-                  <a href="index.html">LaTeX</a>
-                  <ul>
-                  
-                      <li class="">
-                          <a href="install.html">Installation LaTeX</a>
-                      </li>
-                  
-                      <li class="active">
-                          <a href="">Introduction</a>
-                      </li>
-                  
-                  </ul>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="../rst/index.html">ReStructuredText</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="../md/index.html">Markdown</a>
-              </li>
-          
-        
-          
-              <li class="">
-                  <a href="../gitbook/index.html">GitBook</a>
-              </li>
-          
-        
+      
       
       
       
@@ -194,11 +162,15 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#some-latex-helppages" class="nav-link">Some LaTeX helppages</a>
+            <a href="#data-movement" class="nav-link">Data Movement</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#generate-pdf-files" class="nav-link">Generate PDF files</a>
+            <a href="#asyncio-integration" class="nav-link">Asyncio Integration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overlays" class="nav-link">Overlays</a>
         </li>
     
     </ul>
@@ -207,7 +179,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/writing/latex/intro.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/boards/pynq-z1/python.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -221,24 +193,16 @@
               
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="some-latex-helppages">
-<h2>Some LaTeX helppages<a class="headerlink" href="#some-latex-helppages" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://gitlab.hevs.ch/SPL/miscellaneous/spl-latex-template">HEI SPL Latex Templates</a></p></li>
-<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Latex.pdf">Cheatsheet A Guide to Latex</a></p></li>
-<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/source/writing/latex/docs/Guide-to-Presentation.pdf">Cheatsheet A Guide to Latex Presentation</a></p></li>
-<li><p><a class="reference external" href="https://tex.stackexchange.com/">Tex Stackexchange Forum</a></p></li>
-</ul>
+  <div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-movement">
+<h2>Data Movement<a class="headerlink" href="#data-movement" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="generate-pdf-files">
-<h2>Generate PDF files<a class="headerlink" href="#generate-pdf-files" title="Permalink to this headline">¶</a></h2>
-<p>Latex is best suited to insert images as pdf. In order to convert images or svg into pdf use inkscape
-Convert <code class="docutils literal notranslate"><span class="pre">*.svg</span></code> images with inkscape to <code class="docutils literal notranslate"><span class="pre">*.pdf</span></code> and <code class="docutils literal notranslate"><span class="pre">*.pdf_tex</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>inkscape -D -z --file<span class="o">=</span>image.svg --export-pdf<span class="o">=</span>image.pdf --export-latex
-</pre></div>
+<div class="section" id="asyncio-integration">
+<h2>Asyncio Integration<a class="headerlink" href="#asyncio-integration" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="overlays">
+<h2>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -273,7 +237,7 @@ Convert <code class="docutils literal notranslate"><span class="pre">*.svg</span
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
     </p>
   </div>
 </footer>
