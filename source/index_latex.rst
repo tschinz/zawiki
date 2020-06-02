@@ -32,6 +32,9 @@
    programming/swift/index
    programming/licenses/index
 
+   boards/index
+   boards/pynq-z1/index
+
    writing/latex/index
    writing/rst/index
    writing/md/index
