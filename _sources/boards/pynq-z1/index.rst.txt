@@ -22,10 +22,23 @@ Additional Informations
 * `PYNQ ReadtheDocs <https://pynq.readthedocs.io>`_
 * `PYNQ Github Source Code <https://github.com/xilinx/pynq>`_
 * `FINN Deep Neural Network Webpage <https://xilinx.github.io/finn/>`_
-
+* `My Pynq repo <https://github.com/tschinz/pynq_notebooks.git>`_
 
 Introduction
 ============
+
+* ``PS`` = Processing System
+* ``PL`` = Program Logic
+
+Xilinx Zynq FPGA
+----------------
+The core of a PYNQ Board is a Xilinx ZYNQ-7000 SoC.
+
+* :zawiki_repo:`Zynq-7000 Soc Reference Manual <blob/master/source/boards/pynq-z1/docs/ug585-Zynq-7000-TRM.pdf>`
+
+.. figure:: img/pynq_blockdiagram.*
+   :align: center
+
 
 Start
 -----

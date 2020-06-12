@@ -5,6 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xilinx PYNQ-Z1 &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -21,7 +22,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/default.js"></script>
     <script src="../../_static/wavedrom.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -169,6 +170,10 @@
             <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
+            <a href="#xilinx-zynq-fpga" class="nav-link">Xilinx Zynq FPGA</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#start" class="nav-link">Start</a>
         </li>
     
@@ -245,10 +250,25 @@
 <li><p><a class="reference external" href="https://pynq.readthedocs.io">PYNQ ReadtheDocs</a></p></li>
 <li><p><a class="reference external" href="https://github.com/xilinx/pynq">PYNQ Github Source Code</a></p></li>
 <li><p><a class="reference external" href="https://xilinx.github.io/finn/">FINN Deep Neural Network Webpage</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tschinz/pynq_notebooks.git">My Pynq repo</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PS</span></code> = Processing System</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PL</span></code> = Program Logic</p></li>
+</ul>
+<div class="section" id="xilinx-zynq-fpga">
+<h3>Xilinx Zynq FPGA<a class="headerlink" href="#xilinx-zynq-fpga" title="Permalink to this headline">¶</a></h3>
+<p>The core of a PYNQ Board is a Xilinx ZYNQ-7000 SoC.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/tschinz/zawiki/blob/master/source/boards/pynq-z1/docs/ug585-Zynq-7000-TRM.pdf">Zynq-7000 Soc Reference Manual</a></p></li>
+</ul>
+<div class="figure align-center">
+<img alt="../../_images/pynq_blockdiagram.jpg" src="../../_images/pynq_blockdiagram.jpg" />
+</div>
+</div>
 <div class="section" id="start">
 <h3>Start<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h3>
 <p>Program the <a class="reference external" href="http://www.pynq.io/board.html">SDCard image</a> with <a class="reference external" href="https://rufus.ie/">Rufus</a></p>
@@ -402,7 +422,7 @@ shutdown -r now
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.0.<br/>
     </p>
   </div>
 </footer>
