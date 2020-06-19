@@ -30,6 +30,18 @@ Introduction
 * ``PS`` = Processing System
 * ``PL`` = Program Logic
 
+Important Linux Commands
+------------------------
+
+.. code-block:: bash
+
+   # Shutdown
+   shutdown now
+
+   # Restart
+   shutdown -r now
+
+
 Xilinx Zynq FPGA
 ----------------
 The core of a PYNQ Board is a Xilinx ZYNQ-7000 SoC.
@@ -135,8 +147,8 @@ Ethernet
 
 There is Jupter and Jupyterlab installed it can be accessed by the browser
 
-* Jupyter Notebooks ``http://192.168.2.99`` or ``pynq.local``
-* Jupyterlab Notebooks ``http://192.168.2.99/lab`` or ``pynq.local/lab``
+* Jupyter Notebooks `http://192.168.2.99`_ or `pynq.local`_
+* Jupyterlab Notebooks `http://192.168.2.99/lab`_ or `pynq.local/lab`_
 
 USB
 ^^^

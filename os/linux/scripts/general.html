@@ -233,6 +233,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#strings" class="nav-link">Strings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#command-line-arguments" class="nav-link">Command line arguments</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
@@ -372,6 +376,16 @@
 <span class="k">fi</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">file</span><span class="o">=</span><span class="s2">&quot;/home/user/test.txt&quot;</span>
+<span class="nv">filename</span><span class="o">=</span><span class="k">$(</span>basename -- <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="nv">extension</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">filename_withoutext</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">path</span><span class="o">=</span><span class="k">$(</span>dirname <span class="s2">&quot;</span><span class="si">${</span><span class="nv">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">)</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="command-line-arguments">
@@ -651,7 +665,15 @@ rm -f <span class="nv">$lockFilePath</span>
  8
  9
 10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Find directory and execute commands</span>
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Find directory and execute commands</span>
 find . -maxdepth <span class="m">1</span> -type d -exec sh -c <span class="s1">&#39;(cd {} &amp;&amp; git pull)&#39;</span> <span class="s1">&#39;;&#39;</span>
 
 <span class="c1"># Find files and delete it</span>
@@ -662,6 +684,14 @@ find <span class="nv">$base_directory</span> -type d -name <span class="s1">&#39
 
 <span class="c1"># Find files and RegEx replace some content</span>
 find <span class="nv">$project_directory</span> -type f -name <span class="s1">&#39;*._epf&#39;</span> <span class="p">|</span> xargs sed -i <span class="s2">&quot;s/</span><span class="nv">$actual_view</span><span class="s2">/</span><span class="nv">$new_view</span><span class="s2">/g&quot;</span>
+
+<span class="c1"># Find with executing multiple command</span>
+find ./ -iname <span class="s2">&quot;*.md&quot;</span> -type f <span class="p">|</span><span class="k">while</span> <span class="nb">read</span> file<span class="p">;</span>
+<span class="k">do</span>
+ <span class="nv">filename_withoutext</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
+ <span class="nb">echo</span> <span class="s2">&quot;pandoc </span><span class="nv">$file</span><span class="s2"> -o </span><span class="nv">$filename_withoutext</span><span class="s2">.</span><span class="nv">$out_type</span><span class="s2">&quot;</span>
+ pandoc <span class="nv">$file</span> -o <span class="nv">$filename_withoutext</span>.<span class="nv">$out_type</span>
+<span class="k">done</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -705,7 +735,7 @@ find <span class="nv">$project_directory</span> -type f -name <span class="s1">&
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.0.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.1.<br/>
     </p>
   </div>
 </footer>
