@@ -147,8 +147,8 @@ Ethernet
 
 There is Jupter and Jupyterlab installed it can be accessed by the browser
 
-* Jupyter Notebooks `http://192.168.2.99`_ or `pynq.local`_
-* Jupyterlab Notebooks `http://192.168.2.99/lab`_ or `pynq.local/lab`_
+* Jupyter Notebooks `http://192.168.2.99 <http://192.168.2.99>`_ or `pynq.local <pynq.local>`_
+* Jupyterlab Notebooks `http://192.168.2.99/lab <http://192.168.2.99/lab>`_ or `pynq.local/lab <pynq.local/lab>`_
 
 USB
 ^^^
