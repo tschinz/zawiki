@@ -80,6 +80,17 @@ Variables
      echo "$SEPARATOR\n * Git clone spl repositories\n"
    fi
 
+Strings
+=======
+
+.. code-block:: bash
+
+   file="/home/user/test.txt"
+   filename=$(basename -- "$file")
+   extension="${filename##*.}"
+   filename_withoutext="${filename%.*}"
+   path=$(dirname "${file}")
+
 Command line arguments
 ======================
 
@@ -269,6 +280,14 @@ Find
 
    # Find files and RegEx replace some content
    find $project_directory -type f -name '*._epf' | xargs sed -i "s/$actual_view/$new_view/g"
+
+   # Find with executing multiple command
+   find ./ -iname "*.md" -type f |while read file;
+   do
+    filename_withoutext="${file%.*}"
+    echo "pandoc $file -o $filename_withoutext.$out_type"
+    pandoc $file -o $filename_withoutext.$out_type
+   done
 
 
 Samples
