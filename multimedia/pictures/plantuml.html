@@ -223,6 +223,12 @@
             <a href="#shadows" class="nav-link">Shadows</a>
         </li>
     
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#colors" class="nav-link">Colors</a><ul class="nav section-nav flex-column">
+                
         <li class="nav-item toc-entry toc-h3">
             <a href="#black-and-white" class="nav-link">Black and White</a>
         </li>
@@ -306,6 +312,14 @@
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="colors">
+<h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
+<p class="plantuml">
+<img src="../../_images/plantuml-50000ba899229d7c2c2c5bc8c8879c88048cc4c0.png" alt="&#64;startuml
+colors
+&#64;enduml"/>
+</p>
 <div class="section" id="black-and-white">
 <h3>Black and White<a class="headerlink" href="#black-and-white" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skinparam</span> <span class="n">monochrome</span> <span class="n">true</span>
@@ -410,6 +424,35 @@ note over Alice, Bob
  &lt;w:#FF33FF&gt;This is hosted&lt;/w&gt; by &lt;img img/plantuml-logo.png&gt;
 end note"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">participant</span> <span class="n">Alice</span>
+<span class="n">participant</span> <span class="s2">&quot;The **Famous** Bob&quot;</span> <span class="k">as</span> <span class="n">Bob</span>
+
+<span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">hello</span> <span class="o">--</span><span class="n">there</span><span class="o">--</span>
+<span class="o">...</span> <span class="n">Some</span> <span class="o">~~</span><span class="n">long</span> <span class="n">delay</span><span class="o">~~</span> <span class="o">...</span>
+<span class="n">Bob</span> <span class="o">-&gt;</span> <span class="n">Alice</span> <span class="p">:</span> <span class="n">ok</span>
+<span class="n">note</span> <span class="n">left</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="o">**</span><span class="n">bold</span><span class="o">**</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="o">//</span><span class="n">italics</span><span class="o">//</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="s2">&quot;&quot;</span><span class="n">monospaced</span><span class="s2">&quot;&quot;</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="o">--</span><span class="n">stroked</span><span class="o">--</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="n">__underlined__</span>
+  <span class="n">This</span> <span class="ow">is</span> <span class="o">~~</span><span class="n">waved</span><span class="o">~~</span>
+<span class="n">end</span> <span class="n">note</span>
+
+<span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">A</span> <span class="o">//</span><span class="n">well</span> <span class="n">formatted</span><span class="o">//</span> <span class="n">message</span>
+<span class="n">note</span> <span class="n">right</span> <span class="n">of</span> <span class="n">Alice</span>
+ <span class="n">This</span> <span class="ow">is</span> <span class="o">&lt;</span><span class="n">back</span><span class="p">:</span><span class="n">cadetblue</span><span class="o">&gt;&lt;</span><span class="n">size</span><span class="p">:</span><span class="mi">18</span><span class="o">&gt;</span><span class="n">displayed</span><span class="o">&lt;/</span><span class="n">size</span><span class="o">&gt;&lt;/</span><span class="n">back</span><span class="o">&gt;</span>
+ <span class="n">__left</span> <span class="n">of__</span> <span class="n">Alice</span><span class="o">.</span>
+<span class="n">end</span> <span class="n">note</span>
+<span class="n">note</span> <span class="n">left</span> <span class="n">of</span> <span class="n">Bob</span>
+ <span class="o">&lt;</span><span class="n">u</span><span class="p">:</span><span class="n">red</span><span class="o">&gt;</span><span class="n">This</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="o">&lt;</span><span class="n">color</span> <span class="c1">#118888&gt;displayed&lt;/color&gt;</span>
+ <span class="o">**&lt;</span><span class="n">color</span> <span class="n">purple</span><span class="o">&gt;</span><span class="n">left</span> <span class="n">of</span><span class="o">&lt;/</span><span class="n">color</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">s</span><span class="p">:</span><span class="n">red</span><span class="o">&gt;</span><span class="n">Alice</span><span class="o">&lt;/</span><span class="n">strike</span><span class="o">&gt;</span> <span class="n">Bob</span><span class="o">**.</span>
+<span class="n">end</span> <span class="n">note</span>
+<span class="n">note</span> <span class="n">over</span> <span class="n">Alice</span><span class="p">,</span> <span class="n">Bob</span>
+ <span class="o">&lt;</span><span class="n">w</span><span class="p">:</span><span class="c1">#FF33FF&gt;This is hosted&lt;/w&gt; by &lt;img img/plantuml-logo.png&gt;</span>
+<span class="n">end</span> <span class="n">note</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="use-case-diagram">
 <h2>Use Case Diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline">¶</a></h2>
@@ -433,6 +476,26 @@ note &quot;This note is connected\nto several objects.&quot; as N2
 (Start) .. N2
 N2 .. (Use)"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">Main</span> <span class="n">Admin</span><span class="p">:</span> <span class="k">as</span> <span class="n">Admin</span>
+<span class="p">(</span><span class="n">Use</span> <span class="n">the</span> <span class="n">application</span><span class="p">)</span> <span class="k">as</span> <span class="p">(</span><span class="n">Use</span><span class="p">)</span>
+
+<span class="n">User</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">Start</span><span class="p">)</span>
+<span class="n">User</span> <span class="o">--&gt;</span> <span class="p">(</span><span class="n">Use</span><span class="p">)</span>
+
+<span class="n">Admin</span> <span class="o">---&gt;</span> <span class="p">(</span><span class="n">Use</span><span class="p">)</span>
+
+<span class="n">note</span> <span class="n">right</span> <span class="n">of</span> <span class="n">Admin</span> <span class="p">:</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">example</span><span class="o">.</span>
+
+<span class="n">note</span> <span class="n">right</span> <span class="n">of</span> <span class="p">(</span><span class="n">Use</span><span class="p">)</span>
+  <span class="n">A</span> <span class="n">note</span> <span class="n">can</span> <span class="n">also</span>
+  <span class="n">be</span> <span class="n">on</span> <span class="n">several</span> <span class="n">lines</span>
+<span class="n">end</span> <span class="n">note</span>
+
+<span class="n">note</span> <span class="s2">&quot;This note is connected</span><span class="se">\n</span><span class="s2">to several objects.&quot;</span> <span class="k">as</span> <span class="n">N2</span>
+<span class="p">(</span><span class="n">Start</span><span class="p">)</span> <span class="o">..</span> <span class="n">N2</span>
+<span class="n">N2</span> <span class="o">..</span> <span class="p">(</span><span class="n">Use</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="class-diagram">
 <h2>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
@@ -443,6 +506,13 @@ Object : equals()
 ArrayList : Object[] elementData
 ArrayList : size()"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Object</span> <span class="o">&lt;|--</span> <span class="n">ArrayList</span>
+
+<span class="n">Object</span> <span class="p">:</span> <span class="n">equals</span><span class="p">()</span>
+<span class="n">ArrayList</span> <span class="p">:</span> <span class="n">Object</span><span class="p">[]</span> <span class="n">elementData</span>
+<span class="n">ArrayList</span> <span class="p">:</span> <span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
 <p class="plantuml">
 <img src="../../_images/plantuml-d84472aed58e8d2079e18ee9df58addbf197945f.png" alt="class Foo1 {
   You can use
@@ -471,6 +541,34 @@ class User {
   String password
 }"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class Foo1 {
+  You can use
+  several lines
+  ..
+  as you want
+  and group
+  ==
+  things together.
+  __
+  You can have as many groups
+  as you want
+  --
+  End of class
+}
+
+class User {
+  .. Simple Getter ..
+  + getName()
+  + getAddress()
+  .. Some setter ..
+  + setName()
+  __ private data __
+  int age
+  -- encrypted --
+  String password
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="activity-diagram">
 <h2>Activity Diagram<a class="headerlink" href="#activity-diagram" title="Permalink to this headline">¶</a></h2>
@@ -486,6 +584,18 @@ else
   --&gt;[Ending process] (*)
 endif"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s2">&quot;Initialization&quot;</span>
+
+<span class="k">if</span> <span class="s2">&quot;Some Test&quot;</span> <span class="n">then</span>
+  <span class="o">--&gt;</span><span class="p">[</span><span class="n">true</span><span class="p">]</span> <span class="s2">&quot;Some Activity&quot;</span>
+  <span class="o">--&gt;</span> <span class="s2">&quot;Another activity&quot;</span>
+  <span class="o">-</span><span class="n">right</span><span class="o">-&gt;</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">else</span>
+  <span class="o">-&gt;</span><span class="p">[</span><span class="n">false</span><span class="p">]</span> <span class="s2">&quot;Something else&quot;</span>
+  <span class="o">--&gt;</span><span class="p">[</span><span class="n">Ending</span> <span class="n">process</span><span class="p">]</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="n">endif</span>
+</pre></div>
+</div>
 <p class="plantuml">
 <img src="../../_images/plantuml-5bc99c2e1fc2578f670a384f13dfa8ebe9984967.png" alt="title Servlet Container
 
@@ -537,6 +647,57 @@ endif
 --&gt; &quot;Page.onDestroy()&quot;
 --&gt;(*)"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="n">Servlet</span> <span class="n">Container</span>
+
+<span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="s2">&quot;ClickServlet.handleRequest()&quot;</span>
+<span class="o">--&gt;</span> <span class="s2">&quot;new Page&quot;</span>
+
+<span class="k">if</span> <span class="s2">&quot;Page.onSecurityCheck&quot;</span> <span class="n">then</span>
+  <span class="o">-&gt;</span><span class="p">[</span><span class="n">true</span><span class="p">]</span> <span class="s2">&quot;Page.onInit()&quot;</span>
+
+  <span class="k">if</span> <span class="s2">&quot;isForward?&quot;</span> <span class="n">then</span>
+   <span class="o">-&gt;</span><span class="p">[</span><span class="n">no</span><span class="p">]</span> <span class="s2">&quot;Process controls&quot;</span>
+
+   <span class="k">if</span> <span class="s2">&quot;continue processing?&quot;</span> <span class="n">then</span>
+   <span class="o">--&gt;</span><span class="p">[</span><span class="n">yes</span><span class="p">]</span> <span class="o">===</span><span class="n">RENDERING</span><span class="o">===</span>
+   <span class="k">else</span>
+   <span class="o">--&gt;</span><span class="p">[</span><span class="n">no</span><span class="p">]</span> <span class="o">===</span><span class="n">REDIRECT_CHECK</span><span class="o">===</span>
+   <span class="n">endif</span>
+
+  <span class="k">else</span>
+   <span class="o">--&gt;</span><span class="p">[</span><span class="n">yes</span><span class="p">]</span> <span class="o">===</span><span class="n">RENDERING</span><span class="o">===</span>
+  <span class="n">endif</span>
+
+  <span class="k">if</span> <span class="s2">&quot;is Post?&quot;</span> <span class="n">then</span>
+  <span class="o">--&gt;</span><span class="p">[</span><span class="n">yes</span><span class="p">]</span> <span class="s2">&quot;Page.onPost()&quot;</span>
+  <span class="o">--&gt;</span> <span class="s2">&quot;Page.onRender()&quot;</span> <span class="k">as</span> <span class="n">render</span>
+  <span class="o">--&gt;</span> <span class="o">===</span><span class="n">REDIRECT_CHECK</span><span class="o">===</span>
+  <span class="k">else</span>
+  <span class="o">--&gt;</span><span class="p">[</span><span class="n">no</span><span class="p">]</span> <span class="s2">&quot;Page.onGet()&quot;</span>
+  <span class="o">--&gt;</span> <span class="n">render</span>
+  <span class="n">endif</span>
+
+<span class="k">else</span>
+  <span class="o">--&gt;</span><span class="p">[</span><span class="n">false</span><span class="p">]</span> <span class="o">===</span><span class="n">REDIRECT_CHECK</span><span class="o">===</span>
+<span class="n">endif</span>
+
+<span class="k">if</span> <span class="s2">&quot;Do redirect?&quot;</span> <span class="n">then</span>
+ <span class="o">-&gt;</span><span class="p">[</span><span class="n">yes</span><span class="p">]</span> <span class="s2">&quot;redirect request&quot;</span>
+ <span class="o">--&gt;</span> <span class="o">==</span><span class="n">BEFORE_DESTROY</span><span class="o">===</span>
+<span class="k">else</span>
+ <span class="k">if</span> <span class="s2">&quot;Do Forward?&quot;</span> <span class="n">then</span>
+  <span class="o">-</span><span class="n">left</span><span class="o">-&gt;</span><span class="p">[</span><span class="n">yes</span><span class="p">]</span> <span class="s2">&quot;Forward request&quot;</span>
+  <span class="o">--&gt;</span> <span class="o">==</span><span class="n">BEFORE_DESTROY</span><span class="o">===</span>
+ <span class="k">else</span>
+  <span class="o">-</span><span class="n">right</span><span class="o">-&gt;</span><span class="p">[</span><span class="n">no</span><span class="p">]</span> <span class="s2">&quot;Render page template&quot;</span>
+  <span class="o">--&gt;</span> <span class="o">==</span><span class="n">BEFORE_DESTROY</span><span class="o">===</span>
+ <span class="n">endif</span>
+<span class="n">endif</span>
+
+<span class="o">--&gt;</span> <span class="s2">&quot;Page.onDestroy()&quot;</span>
+<span class="o">--&gt;</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="mindmaps">
 <h2>MindMaps<a class="headerlink" href="#mindmaps" title="Permalink to this headline">¶</a></h2>
@@ -559,6 +720,25 @@ endif
 --- Windows 10
 &#64;endmindmap"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startmindmap</span>
+<span class="o">+</span> <span class="n">OS</span>
+<span class="o">++</span> <span class="n">Ubuntu</span>
+<span class="o">+++</span> <span class="n">Linux</span> <span class="n">Mint</span>
+<span class="o">+++</span> <span class="n">Kubuntu</span>
+<span class="o">+++</span> <span class="n">Lubuntu</span>
+<span class="o">+++</span> <span class="n">KDE</span> <span class="n">Neon</span>
+<span class="o">++</span> <span class="n">LMDE</span>
+<span class="o">++</span> <span class="n">SolydXK</span>
+<span class="o">++</span> <span class="n">SteamOS</span>
+<span class="o">++</span> <span class="n">Raspbian</span>
+<span class="o">--</span> <span class="n">Windows</span> <span class="mi">95</span>
+<span class="o">--</span> <span class="n">Windows</span> <span class="mi">98</span>
+<span class="o">--</span> <span class="n">Windows</span> <span class="n">NT</span>
+<span class="o">---</span> <span class="n">Windows</span> <span class="mi">8</span>
+<span class="o">---</span> <span class="n">Windows</span> <span class="mi">10</span>
+<span class="nd">@endmindmap</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="wbs-work-breakdown-structure">
 <h2>WBS Work Breakdown Structure<a class="headerlink" href="#wbs-work-breakdown-structure" title="Permalink to this headline">¶</a></h2>
@@ -577,6 +757,21 @@ endif
 ** Complete innovate phase
 &#64;endwbs"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startwbs</span>
+<span class="o">*</span> <span class="n">Business</span> <span class="n">Process</span> <span class="n">Modelling</span> <span class="n">WBS</span>
+<span class="o">**</span> <span class="n">Launch</span> <span class="n">the</span> <span class="n">project</span>
+<span class="o">***</span> <span class="n">Complete</span> <span class="n">Stakeholder</span> <span class="n">Research</span>
+<span class="o">***</span> <span class="n">Initial</span> <span class="n">Implementation</span> <span class="n">Plan</span>
+<span class="o">**</span> <span class="n">Design</span> <span class="n">phase</span>
+<span class="o">***</span> <span class="n">Model</span> <span class="n">of</span> <span class="n">AsIs</span> <span class="n">Processes</span> <span class="n">Completed</span>
+<span class="o">****</span> <span class="n">Model</span> <span class="n">of</span> <span class="n">AsIs</span> <span class="n">Processes</span> <span class="n">Completed1</span>
+<span class="o">****</span> <span class="n">Model</span> <span class="n">of</span> <span class="n">AsIs</span> <span class="n">Processes</span> <span class="n">Completed2</span>
+<span class="o">***</span> <span class="n">Measure</span> <span class="n">AsIs</span> <span class="n">performance</span> <span class="n">metrics</span>
+<span class="o">***</span> <span class="n">Identify</span> <span class="n">Quick</span> <span class="n">Wins</span>
+<span class="o">**</span> <span class="n">Complete</span> <span class="n">innovate</span> <span class="n">phase</span>
+<span class="nd">@endwbs</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="gantt-chart">
 <h2>GANTT Chart<a class="headerlink" href="#gantt-chart" title="Permalink to this headline">¶</a></h2>
@@ -592,6 +787,122 @@ Project starts the 1th of may 2020
 [Setup assembly line] starts at [Test prototype]'s end
 &#64;enduml"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="n">project</span> <span class="n">starts</span> <span class="n">the</span> <span class="mi">2020</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">01</span>
+<span class="n">saturday</span> <span class="n">are</span> <span class="n">closed</span>
+<span class="n">sunday</span> <span class="n">are</span> <span class="n">closed</span>
+<span class="n">Project</span> <span class="n">starts</span> <span class="n">the</span> <span class="mi">1</span><span class="n">th</span> <span class="n">of</span> <span class="n">may</span> <span class="mi">2020</span>
+<span class="p">[</span><span class="n">Test</span> <span class="n">prototype</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">10</span> <span class="n">days</span>
+<span class="p">[</span><span class="n">Prototype</span> <span class="n">completed</span><span class="p">]</span> <span class="n">happens</span> <span class="n">at</span> <span class="p">[</span><span class="n">Test</span> <span class="n">prototype</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">Setup</span> <span class="n">assembly</span> <span class="n">line</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">12</span> <span class="n">days</span>
+<span class="p">[</span><span class="n">Setup</span> <span class="n">assembly</span> <span class="n">line</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">Test</span> <span class="n">prototype</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="nd">@enduml</span>
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="../../_images/plantuml-2d1ceb2ed9d7a917d698a53d599170225e1386ae.png" alt="&#64;startuml
+project starts the 2021/06/01
+'saturday are closed
+'sunday are closed
+printscale weekly
+
+[WP1 Literature Research] starts at 2021/06/01
+[WP1 Literature Research] lasts 3 weeks
+
+[WP2 External Survey] starts at [WP1 Literature Research]'s start
+[WP2 External Survey] ends at [WP1 Literature Research]'s end
+
+[WP3 Synthesising State of the Art] starts at [WP2 External Survey]'s end
+[WP3 Synthesising State of the Art] lasts 2 weeks
+
+[Theoretical research completed] happens at [WP3 Synthesising State of the Art]'s end
+
+[WP4 Selection practial application] starts at [WP3 Synthesising State of the Art]'s end
+[WP4 Selection practial application] lasts 2 week
+
+[WP5 Data Collection] starts at [WP4 Selection practial application]'s end
+[WP5 Data Collection] lasts 3 weeks
+
+[WP6 ML Model Selection] starts at [WP4 Selection practial application]'s end
+[WP6 ML Model Selection] lasts 2 weeks
+
+[WP7 ML Model Implementation] starts at [WP6 ML Model Selection]'s end
+[WP7 ML Model Implementation] lasts 5 weeks
+
+[Implementation completed] happens at [WP7 ML Model Implementation]'s end
+
+[WP8 Fieldtest] starts at [WP7 ML Model Implementation]'s end
+[WP8 Fieldtest] ends at 2021/09/30
+
+[Write Thesis Report] starts at 2021/06/01
+[Write Thesis Report] ends at 2021/09/30
+
+' Color definitions
+[WP1 Literature Research] is colored in LightSteelBlue/DimGrey
+[WP2 External Survey] is colored in LightSteelBlue/DimGrey
+[WP3 Synthesising State of the Art] is colored in LightSteelBlue/DimGrey
+[WP4 Selection practial application] is colored in LightGreen/DimGrey
+[WP5 Data Collection] is colored in LightGreen/DimGrey
+[WP6 ML Model Selection] is colored in LightGreen/DimGrey
+[WP7 ML Model Implementation] is colored in LightGreen/DimGrey
+[WP8 Fieldtest] is colored in SandyBrown/Sienna
+
+[Write Thesis Report] is colored in LightSteelBlue/DimGrey
+
+&#64;enduml"/>
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="n">project</span> <span class="n">starts</span> <span class="n">the</span> <span class="mi">2021</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">01</span>
+<span class="n">saturday</span> <span class="n">are</span> <span class="n">closed</span>
+<span class="n">sunday</span> <span class="n">are</span> <span class="n">closed</span>
+<span class="n">printscale</span> <span class="n">weekly</span>
+
+<span class="p">[</span><span class="n">WP1</span> <span class="n">Literature</span> <span class="n">Research</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="mi">2021</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">01</span>
+<span class="p">[</span><span class="n">WP1</span> <span class="n">Literature</span> <span class="n">Research</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">3</span> <span class="n">weeks</span>
+
+<span class="p">[</span><span class="n">WP2</span> <span class="n">External</span> <span class="n">Survey</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP1</span> <span class="n">Literature</span> <span class="n">Research</span><span class="p">]</span><span class="s1">&#39;s start</span>
+<span class="p">[</span><span class="n">WP2</span> <span class="n">External</span> <span class="n">Survey</span><span class="p">]</span> <span class="n">ends</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP1</span> <span class="n">Literature</span> <span class="n">Research</span><span class="p">]</span><span class="s1">&#39;s end</span>
+
+<span class="p">[</span><span class="n">WP3</span> <span class="n">Synthesising</span> <span class="n">State</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Art</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP2</span> <span class="n">External</span> <span class="n">Survey</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP3</span> <span class="n">Synthesising</span> <span class="n">State</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Art</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">2</span> <span class="n">weeks</span>
+
+<span class="p">[</span><span class="n">Theoretical</span> <span class="n">research</span> <span class="n">completed</span><span class="p">]</span> <span class="n">happens</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP3</span> <span class="n">Synthesising</span> <span class="n">State</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Art</span><span class="p">]</span><span class="s1">&#39;s end</span>
+
+<span class="p">[</span><span class="n">WP4</span> <span class="n">Selection</span> <span class="n">practial</span> <span class="n">application</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP3</span> <span class="n">Synthesising</span> <span class="n">State</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Art</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP4</span> <span class="n">Selection</span> <span class="n">practial</span> <span class="n">application</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">2</span> <span class="n">week</span>
+
+<span class="p">[</span><span class="n">WP5</span> <span class="n">Data</span> <span class="n">Collection</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP4</span> <span class="n">Selection</span> <span class="n">practial</span> <span class="n">application</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP5</span> <span class="n">Data</span> <span class="n">Collection</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">3</span> <span class="n">weeks</span>
+
+<span class="p">[</span><span class="n">WP6</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Selection</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP4</span> <span class="n">Selection</span> <span class="n">practial</span> <span class="n">application</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP6</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Selection</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">2</span> <span class="n">weeks</span>
+
+<span class="p">[</span><span class="n">WP7</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Implementation</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP6</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Selection</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP7</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Implementation</span><span class="p">]</span> <span class="n">lasts</span> <span class="mi">5</span> <span class="n">weeks</span>
+
+<span class="p">[</span><span class="n">Implementation</span> <span class="n">completed</span><span class="p">]</span> <span class="n">happens</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP7</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Implementation</span><span class="p">]</span><span class="s1">&#39;s end</span>
+
+<span class="p">[</span><span class="n">WP8</span> <span class="n">Fieldtest</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="p">[</span><span class="n">WP7</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Implementation</span><span class="p">]</span><span class="s1">&#39;s end</span>
+<span class="p">[</span><span class="n">WP8</span> <span class="n">Fieldtest</span><span class="p">]</span> <span class="n">ends</span> <span class="n">at</span> <span class="mi">2021</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">30</span>
+
+<span class="p">[</span><span class="n">Write</span> <span class="n">Thesis</span> <span class="n">Report</span><span class="p">]</span> <span class="n">starts</span> <span class="n">at</span> <span class="mi">2021</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">01</span>
+<span class="p">[</span><span class="n">Write</span> <span class="n">Thesis</span> <span class="n">Report</span><span class="p">]</span> <span class="n">ends</span> <span class="n">at</span> <span class="mi">2021</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">30</span>
+
+<span class="s1">&#39; Color definitions</span>
+<span class="p">[</span><span class="n">WP1</span> <span class="n">Literature</span> <span class="n">Research</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightSteelBlue</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP2</span> <span class="n">External</span> <span class="n">Survey</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightSteelBlue</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP3</span> <span class="n">Synthesising</span> <span class="n">State</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Art</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightSteelBlue</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP4</span> <span class="n">Selection</span> <span class="n">practial</span> <span class="n">application</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightGreen</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP5</span> <span class="n">Data</span> <span class="n">Collection</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightGreen</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP6</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Selection</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightGreen</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP7</span> <span class="n">ML</span> <span class="n">Model</span> <span class="n">Implementation</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightGreen</span><span class="o">/</span><span class="n">DimGrey</span>
+<span class="p">[</span><span class="n">WP8</span> <span class="n">Fieldtest</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">SandyBrown</span><span class="o">/</span><span class="n">Sienna</span>
+
+<span class="p">[</span><span class="n">Write</span> <span class="n">Thesis</span> <span class="n">Report</span><span class="p">]</span> <span class="ow">is</span> <span class="n">colored</span> <span class="ow">in</span> <span class="n">LightSteelBlue</span><span class="o">/</span><span class="n">DimGrey</span>
+
+<span class="nd">@enduml</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="timing-diagram">
 <h2>Timing Diagram<a class="headerlink" href="#timing-diagram" title="Permalink to this headline">¶</a></h2>
@@ -610,6 +921,21 @@ EN is high
 EN is low
 &#64;enduml"/>
 </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="n">clock</span> <span class="n">clk</span> <span class="k">with</span> <span class="n">period</span> <span class="mi">1</span>
+<span class="n">binary</span> <span class="s2">&quot;Enable&quot;</span> <span class="k">as</span> <span class="n">EN</span>
+
+<span class="o">@</span><span class="mi">0</span>
+<span class="n">EN</span> <span class="ow">is</span> <span class="n">low</span>
+
+<span class="o">@</span><span class="mi">5</span>
+<span class="n">EN</span> <span class="ow">is</span> <span class="n">high</span>
+
+<span class="o">@</span><span class="mi">10</span>
+<span class="n">EN</span> <span class="ow">is</span> <span class="n">low</span>
+<span class="nd">@enduml</span>
+</pre></div>
+</div>
 </div>
 </div>
 
