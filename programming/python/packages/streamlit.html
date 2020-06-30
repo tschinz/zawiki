@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pillow &#8212; Zawiki</title>
+    <title>Streamlit &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
@@ -26,8 +26,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Plotly" href="plotly.html" />
-    <link rel="prev" title="Fuzzywuzzy" href="fuzzywuzzy.html" />
+    <link rel="next" title="TQDM" href="tqdm.html" />
+    <link rel="prev" title="Requests" href="requests.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -304,27 +304,13 @@
             <a href="#install" class="nav-link">Install</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#usage" class="nav-link">Usage</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#import" class="nav-link">Import</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#open-image" class="nav-link">Open Image</a>
-        </li>
-    
-            </ul>
-        </li>
-    
     </ul>
 </nav>
 
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/programming/python/packages/pillow.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/programming/python/packages/streamlit.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -338,37 +324,22 @@
               
               <div>
                 
-  <div class="section" id="pillow">
-<h1>Pillow<a class="headerlink" href="#pillow" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="streamlit">
+<h1>Streamlit<a class="headerlink" href="#streamlit" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/streamlit.png"><img alt="../../../_images/streamlit.png" src="../../../_images/streamlit.png" style="width: 30%;" /></a>
+</div>
+<p><a class="reference external" href="https://www.streamlit.io/">Streamlit</a> is the fastest way to build data apps.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pypi.org/project/Pillow/">Pillow on PIP</a></p></li>
-<li><p><a class="reference external" href="https://pillow.readthedocs.io/en/stable/">Pillow RTD</a></p></li>
+<li><p><a class="reference external" href="https://docs.streamlit.io/en/stable/">Documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.streamlit.io/gallery">Sample gallery</a></p></li>
 </ul>
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pillow
-</pre></div>
-</div>
-</div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="import">
-<h3>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">PIL</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="open-image">
-<h3>Open Image<a class="headerlink" href="#open-image" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install streamlit
 
-<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;kittens.jpg&quot;</span><span class="p">)</span>
-<span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">im</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-<span class="c1"># JPEG (1920, 1357) RGB</span>
+streamlit hello
 </pre></div>
-</div>
 </div>
 </div>
 </div>
