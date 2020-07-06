@@ -301,7 +301,23 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#cheatsheet" class="nav-link">Cheatsheet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#install" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#import" class="nav-link">Import</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#run" class="nav-link">Run</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#caching" class="nav-link">Caching</a>
         </li>
     
     </ul>
@@ -334,11 +350,38 @@
 <li><p><a class="reference external" href="https://docs.streamlit.io/en/stable/">Documentation</a></p></li>
 <li><p><a class="reference external" href="https://www.streamlit.io/gallery">Sample gallery</a></p></li>
 </ul>
+<div class="section" id="cheatsheet">
+<h2>Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">¶</a></h2>
+<p>Instead of listing its funcitionalities here you can find an exhaustive example as standalone repo: <a class="reference external" href="https://github.com/tschinz/streamlit_cheatsheet">Streamlit Cheastsheet</a></p>
+</div>
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install streamlit
 
 streamlit hello
+</pre></div>
+</div>
+</div>
+<div class="section" id="import">
+<h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>streamlit run pythonscript.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="caching">
+<h2>Caching<a class="headerlink" href="#caching" title="Permalink to this headline">¶</a></h2>
+<p>In order to cache parts of the website, functions which are not needed to be reexecuted each time can be caches with the help of a python decorator.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>@st.cache<span class="o">(</span><span class="nv">persist</span><span class="o">=</span>True<span class="o">)</span>
+def someTimeconsumingFunction<span class="o">()</span>:
+  sleep<span class="o">(</span><span class="m">100</span><span class="o">)</span>
 </pre></div>
 </div>
 </div>
@@ -375,7 +418,7 @@ streamlit hello
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.1.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
     </p>
   </div>
 </footer>
