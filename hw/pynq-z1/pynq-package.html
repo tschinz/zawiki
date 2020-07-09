@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overlays &#8212; Zawiki</title>
+    <title>pynq Package &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -26,8 +26,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="pynq Package" href="pynq-package.html" />
-    <link rel="prev" title="Xilinx PYNQ-Z1" href="index.html" />
+    <link rel="next" title="Python" href="python.html" />
+    <link rel="prev" title="Overlays" href="overlays.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -155,48 +155,9 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#loading" class="nav-link">Loading</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#instantiates" class="nav-link">Instantiates</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#full-redownload" class="nav-link">Full Redownload</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#partial-redownload" class="nav-link">Partial Redownload</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#help" class="nav-link">Help</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#existing-xilinx-overlays" class="nav-link">Existing Xilinx Overlays</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#computer-pynq-computervision" class="nav-link">Computer PYNQ-ComputerVision</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#qnn-mo" class="nav-link">QNN MO</a>
-        </li>
-    
-            </ul>
-        </li>
     
     </ul>
 </nav>
@@ -204,7 +165,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/boards/pynq-z1/overlays.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/hw/pynq-z1/pynq-package.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -218,79 +179,46 @@
               
               <div>
                 
-  <div class="section" id="overlays">
-<h1>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h1>
-<p>By default, an overlay (bitstream) called base is downloaded into the PL at boot time. The base overlay can be considered like a reference design for a board. New overlays can be installed or copied to the board and can be loaded into the PL as the system is running.</p>
-<p>An overlay usually includes:</p>
-<ul class="simple">
-<li><p>A bitstream to configure the FPGA fabric</p></li>
-<li><p>A Vivado design Tcl file to determine the available IP</p></li>
-<li><p>Python API that exposes the IPs as attributes</p></li>
+  <div class="section" id="pynq-package">
+<h1><code class="docutils literal notranslate"><span class="pre">pynq</span></code> Package<a class="headerlink" href="#pynq-package" title="Permalink to this headline">¶</a></h1>
+<p>All PYNQ code is contained in the <em>pynq</em> Python package and can be found on the on the <a class="reference external" href="https://github.com/xilinx/PYNQ/">Github repository</a>.</p>
+<p>To learn more about Python package structures, please refer to the <a class="reference external" href="https://docs.python.org/3.6/tutorial/modules.html#packages">official python documentation</a>.</p>
+<p>Foundational modules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.ps</span></code> - Facilitates management of the Processing System (PS) and PS/PL interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.pl</span></code> - Facilitates management of the Programmable Logic (PL).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.overlay</span></code> - Manages the state, drivers, and and contents of overlays.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.bitstream</span></code> - Instantiates class for PL bitstream (full/partial).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.devicetree</span></code> - Instantiates the device tree segment class.</p></li>
 </ul>
-<div class="section" id="loading">
-<h2>Loading<a class="headerlink" href="#loading" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="instantiates">
-<h3>Instantiates<a class="headerlink" href="#instantiates" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq</span> <span class="kn">import</span> <span class="n">Overlay</span>
-<span class="c1"># instantiates the overlay and downloads it to the PL</span>
-<span class="n">overlay</span> <span class="o">=</span> <span class="n">Overlay</span><span class="p">(</span><span class="s2">&quot;base.bit&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="full-redownload">
-<h3>Full Redownload<a class="headerlink" href="#full-redownload" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># for a full download of the bitstream</span>
-<span class="n">overlay</span><span class="o">.</span><span class="n">download</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="partial-redownload">
-<h3>Partial Redownload<a class="headerlink" href="#partial-redownload" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set region</span>
-<span class="n">overlay</span><span class="o">.</span><span class="n">set_partial_region</span><span class="p">(</span><span class="s1">&#39;block_0&#39;</span><span class="p">)</span>
-
-<span class="c1"># download region</span>
-<span class="n">overlay</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;rm_0_partial.bit&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="help">
-<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
-<p>Once a overlas is instantiated the <code class="docutils literal notranslate"><span class="pre">help()</span></code> method can be used to discover its function.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq.overlays.base</span> <span class="kn">import</span> <span class="n">BaseOverlay</span>
-<span class="n">base_overlay</span> <span class="o">=</span> <span class="n">BaseOverlay</span><span class="p">(</span><span class="s2">&quot;base.bit&quot;</span><span class="p">)</span>
-
-<span class="n">help</span><span class="p">(</span><span class="n">base_overlay</span><span class="p">)</span>
-
-<span class="n">help</span><span class="p">(</span><span class="n">base_overlay</span><span class="o">.</span><span class="n">leds</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="existing-xilinx-overlays">
-<h2>Existing Xilinx Overlays<a class="headerlink" href="#existing-xilinx-overlays" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="computer-pynq-computervision">
-<h3>Computer PYNQ-ComputerVision<a class="headerlink" href="#computer-pynq-computervision" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/Xilinx/PYNQ-ComputerVision">Github Repo</a></p></li>
+</div></blockquote>
+<p>Data Movement modules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.mmio</span></code> - Implements PYNQ Memory Mapped IO (MMIO) API</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.gpio</span></code> - Implements PYNQ General-Purpose IO (GPIO) by wrapping the Linux Sysfs API</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.xlnk</span></code> - Implements Contiguous Memory Allocation for PYNQ DMA</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.buffer</span></code> - Implements a buffer class for DMA engines and accelerators</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># in my case Cython needed to be upgraded beforehands</span>
-pip3 install -U Cython
-
-sudo pip3 install --upgrade git+https://github.com/Xilinx/PYNQ-ComputerVision.git
-</pre></div>
-</div>
-</div>
-<div class="section" id="qnn-mo">
-<h3>QNN MO<a class="headerlink" href="#qnn-mo" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/Xilinx/QNN-MO-PYNQ">Github Repo</a></p></li>
+</div></blockquote>
+<p>Additional modules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.interrupt</span></code> - Implements PYNQ asyncio</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.pmbus</span></code> - PYNQ class for reading power measurements from PMBus</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.uio</span></code> - Interacts directly with a UIO device</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.registers</span></code> - Allows users to access registers easily</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.utils</span></code> - Functions for assisting with installation and testing</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pip3 install git+https://github.com/Xilinx/QNN-MO-PYNQ.git
-</pre></div>
-</div>
-</div>
-</div>
+</div></blockquote>
+<p>Sub-packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.lib</span></code> - Contains sub-packages with drivers for for PMOD, Arduino and Logictools PYNQ Libraries, and drivers for various communication controllers (GPIO, DMA, Video, Audio, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pynq.pl_server</span></code> - Contains sub-packages for PL server to work across multiple devices. It also includes the overlay metadata parsers (e.g., tcl, hwh)</p></li>
+</ul>
+</div></blockquote>
 </div>
 
     <script type="text/javascript">
