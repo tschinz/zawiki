@@ -1,6 +1,6 @@
-==========
-Dev Boards
-==========
+========
+Hardware
+========
 
 .. figure:: img/logo.*
    :align: center
@@ -13,3 +13,4 @@ Dev Boards
    :caption: Content
 
    pynq-z1/index
+   dell-xps13-9300/index
