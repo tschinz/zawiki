@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pandoc &#8212; Zawiki</title>
+    <title>Install Linux &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -26,8 +26,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Sphinx Documentation" href="../sphinx/index.html" />
-    <link rel="prev" title="Heroku" href="../heroku/index.html" />
+    <link rel="next" title="Bittorrent" href="../bittorrent/index.html" />
+    <link rel="prev" title="Mentor EDA" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   </head>
@@ -159,8 +159,8 @@
           
         
           
-              <li class="active">
-                  <a href="">Pandoc</a>
+              <li class="">
+                  <a href="../pandoc/index.html">Pandoc</a>
               </li>
           
         
@@ -189,8 +189,16 @@
           
         
           
-              <li class="">
-                  <a href="../mentor/index.html">Mentor EDA</a>
+
+              <li class="active">
+                  <a href="index.html">Mentor EDA</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="">Install Linux</a>
+                      </li>
+                  
+                  </ul>
               </li>
           
         
@@ -243,37 +251,55 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#additional-arguments" class="nav-link">Additional Arguments</a><ul class="nav section-nav flex-column">
+            <a href="#modelsim" class="nav-link">Modelsim</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
-            <a href="#highlight-styles" class="nav-link">Highlight Styles</a>
+            <a href="#prerequisies" class="nav-link">Prerequisies</a>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#pdf-output" class="nav-link">PDF Output</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#for-my-template-needed-packages" class="nav-link">For my template needed packages</a>
+            <a href="#install" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#cleanup" class="nav-link">Cleanup</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#test" class="nav-link">Test</a>
         </li>
     
             </ul>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#template" class="nav-link">Template</a><ul class="nav section-nav flex-column">
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#hdl-designer" class="nav-link">HDL Designer</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#windows" class="nav-link">Windows</a>
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id1" class="nav-link">Prerequisies</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#linux" class="nav-link">Linux</a>
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id2" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id3" class="nav-link">Cleanup</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#libraries" class="nav-link">Libraries</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id4" class="nav-link">Test</a>
         </li>
     
             </ul>
         </li>
     
-            </ul>
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#license-path" class="nav-link">License & PATH</a>
         </li>
     
     </ul>
@@ -282,7 +308,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/pandoc/index.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/mentor/install.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -296,75 +322,125 @@
               
               <div>
                 
-  <div class="section" id="pandoc">
-<h1>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="install-linux">
+<h1>Install Linux<a class="headerlink" href="#install-linux" title="Permalink to this headline">¶</a></h1>
+<p>Both tools are mostly installed at the same time. Download the latest Software on the <a class="reference external" href="https://support.sw.siemens.com">SupportNet</a></p>
+<div class="section" id="modelsim">
+<h2>Modelsim<a class="headerlink" href="#modelsim" title="Permalink to this headline">¶</a></h2>
+<p>Download Modelsim: <a class="reference external" href="https://support.sw.siemens.com/de-DE/product/852852093/downloads">https://support.sw.siemens.com/de-DE/product/852852093/downloads</a></p>
+<div class="section" id="prerequisies">
+<h3>Prerequisies<a class="headerlink" href="#prerequisies" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="install">
+<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<p>Copy <code class="docutils literal notranslate"><span class="pre">modelsim*.aol</span></code> to <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
+chmod +x modelsim*.aol
+sudo ./modelsim*.aol
+</pre></div>
+</div>
+<p>Options:</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo38.svg"><img alt="../../_images/logo38.svg" src="../../_images/logo38.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/modelsim_install_1.png"><img alt="../../_images/modelsim_install_1.png" src="../../_images/modelsim_install_1.png" style="width: 70%;" /></a>
 </div>
-<p>If you need to convert files from one markup format into another, pandoc is your swiss-army knife.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://pandoc.org/try/">Pandoc Online</a></p></li>
-<li><p><a class="reference external" href="https://pandoc.org/installing.html">Pandoc Download</a></p></li>
-</ul>
-<div class="section" id="additional-arguments">
-<h2>Additional Arguments<a class="headerlink" href="#additional-arguments" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="highlight-styles">
-<h3>Highlight Styles<a class="headerlink" href="#highlight-styles" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all Highlight Styles</span>
-pandoc --list-highlight-styles
-pygments
-tango
-espresso
-zenburn
-kate
-monochrome
-breezedark
-haddock
+<p>Select 64bit Modelsim</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/modelsim_install_2.png"><img alt="../../_images/modelsim_install_2.png" src="../../_images/modelsim_install_2.png" style="width: 70%;" /></a>
+</div>
+</div>
+<div class="section" id="cleanup">
+<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p>Cleanup the Mentor installer</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
+rm -R /root/mgc
+<span class="nb">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test">
+<h3>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/opt/Modelsim/modeltech/bin
+<span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:27001@mentorlm.hevs.ch
 
-<span class="c1">## Pandoc Argument</span>
---highlight-style breezedark
+vsim <span class="p">&amp;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="pdf-output">
-<h3>PDF Output<a class="headerlink" href="#pdf-output" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--pdf-engine<span class="o">=</span>xelatex
-</pre></div>
 </div>
-<div class="section" id="for-my-template-needed-packages">
-<h4>For my template needed packages<a class="headerlink" href="#for-my-template-needed-packages" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>cm-super</p>
-<ul>
-<li><p>Error no Scalable font</p></li>
-</ul>
-</li>
-<li><p>koma-script</p>
-<ul>
-<li><p>! LaTeX Error: File <code class="docutils literal notranslate"><span class="pre">scrartcl.cls</span></code> not found.</p></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="template">
-<h3>Template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h3>
-<p>Latex Template needs to be in the following folders</p>
-<div class="section" id="windows">
-<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\\</span>Users<span class="se">\\</span>&lt;username&gt;<span class="se">\\</span>AppData<span class="se">\\</span>Roaming<span class="se">\\</span>pandoc<span class="se">\\</span>templates
+<div class="section" id="hdl-designer">
+<h2>HDL Designer<a class="headerlink" href="#hdl-designer" title="Permalink to this headline">¶</a></h2>
+<p>Download HDL Designer: <a class="reference external" href="https://support.sw.siemens.com/de-DE/product/862138546/downloads">https://support.sw.siemens.com/de-DE/product/862138546/downloads</a></p>
+<div class="section" id="id1">
+<h3>Prerequisies<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">install required libraries</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install lib32z1
+sudp dpkg --add-architecture i386
+sudo apt update
+sudo apt install libx11-6:i386
 </pre></div>
 </div>
 </div>
-<div class="section" id="linux">
-<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/.pandoc/templates/
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">install fonts</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> sudo apt install xfonts-75dpi
+ sudo apt install xfonts-100dpi
+
+ xset +fp /usr/share/fonts/X11/75dpi
+ xset +fp /usr/share/fonts/X11/100dpi
+ xset fp rehash
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--template<span class="o">=</span>&lt;template&gt;.latex
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Install<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Copy <code class="docutils literal notranslate"><span class="pre">HDS_*.exe</span></code> to <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
+chmod +x HDS_*.exe
+sudo ./HDS_*.exe
+</pre></div>
+</div>
+<p>Options:</p>
+</div>
+<div class="section" id="id3">
+<h3>Cleanup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Cleanup the Mentor installer</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
+rm -R /root/mgc
+<span class="nb">exit</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="libraries">
+<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/tschinz/config.git
+sudo cp config/scripts/vhdl/libraries/ieee/numeric_std.vhd /usr/opt/HDS/hdl_libs/ieee/hdl
+sudo cp config/scripts/vhdl/libraries/ieee/std_logic_1164.vhd /usr/opt/HDS/hdl_libs/ieee/hdl
+
+sudo rm -R config
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Test<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/opt/HDS/bin
+<span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:27001@mentorlm.hevs.ch
+
+hdl_designer <span class="p">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="license-path">
+<h2>License &amp; PATH<a class="headerlink" href="#license-path" title="Permalink to this headline">¶</a></h2>
+<p>For the HEVS license add the following lines to <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#-------------------------------------------------------------------------------</span>
+<span class="c1"># EDA tools</span>
+<span class="c1">#</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/opt/HDS/bin:/usr/opt/Modelsim/modeltech/bin:/usr/opt/Xilinx/ISE_DS/ISE/bin/lin64/
+<span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:27001@mentorlm.hevs.ch:2100@xilinxlm.hevs.ch:1717@dl-srv69.admin.hes-so.ch
+</pre></div>
 </div>
 </div>
 </div>

@@ -198,6 +198,12 @@
         
           
               <li class="">
+                  <a href="../mentor/index.html">Mentor EDA</a>
+              </li>
+          
+        
+          
+              <li class="">
                   <a href="../bittorrent/index.html">Bittorrent</a>
               </li>
           
@@ -274,6 +280,10 @@
             </ul>
         </li>
     
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#access-to-shared-folder" class="nav-link">Access to shared folder</a>
+        </li>
+    
     </ul>
 </nav>
 
@@ -343,6 +353,13 @@ Supported host operating systems include Linux, Mac OS X, Windows XP, Windows Vi
 VBoxManage modifyhd pentaho_vm.vdi --resize <span class="m">40000</span> <span class="c1"># resize to 40GB</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="access-to-shared-folder">
+<h2>Access to shared folder<a class="headerlink" href="#access-to-shared-folder" title="Permalink to this headline">¶</a></h2>
+<p>In order to access a shared folder in the guest os you need to add the user to the group <code class="docutils literal notranslate"><span class="pre">vboxsf</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo adduser <span class="nv">$USER</span> vboxsf
+</pre></div>
 </div>
 </div>
 </div>
