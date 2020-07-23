@@ -59,3 +59,10 @@ After resizing the harddisk file it, the partition needs to be resized to in gpa
    VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
    VBoxManage modifyhd pentaho_vm.vdi --resize 40000 # resize to 40GB
 
+Access to shared folder
+=======================
+In order to access a shared folder in the guest os you need to add the user to the group ``vboxsf``
+
+.. code-block:: bash
+
+   sudo adduser $USER vboxsf

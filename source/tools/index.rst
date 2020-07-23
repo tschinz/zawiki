@@ -21,6 +21,7 @@ Tools
    jetbrains/index
    sublimetext/index
    virtualbox/index
+   mentor/index
    bittorrent/index
    nmap/index
    useful_tools/useful_tools
