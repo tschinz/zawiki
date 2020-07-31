@@ -1,3 +1,5 @@
+:orphan:
+
 ====================================
 Welcome to Zawiki Knowledge Database
 ====================================
@@ -36,6 +38,8 @@ You can view the content as a:
 * :zawiki_page:`Webpage <>`
 * `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf>`_
 * :zawiki_repo:`Repo <>`
+
+:doc:`test`
 
 Known Issues / TODOs
 --------------------

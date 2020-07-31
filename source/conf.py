@@ -57,6 +57,7 @@ extensions = [
     "recommonmark",
     "sphinx_copybutton",
     "sphinxemoji.sphinxemoji",
+    #"notfound.extension",
     #"nbsphinx",
     #"matplotlib.sphinxext.plot_directive",
     #"IPython.sphinxext.ipython_console_highlighting",

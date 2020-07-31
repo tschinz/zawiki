@@ -15,7 +15,7 @@ Import / Export Data
 ====================
 
 Search for files
----------------
+----------------
 
 .. code-block:: python
 
@@ -160,6 +160,14 @@ Pivot
 
 Pivot table is similar to GroupBy Methods. I allows to group a table and quickly
 
+Datetime
+========
+
+.. code-block:: python
+
+   df['colname'] = pd.to_datetime(df['colname'], format='%d/%m/%Y %H:%M:%S')
+
+for the format values see :doc:`./datetime`
 
 Access Data
 ===========
@@ -215,6 +223,9 @@ Filter
    # drop duplicates
    df.drop_duplicates(subset=['colname'])
 
+   # get duplicates
+   df_duplicates = df[df.duplicated()]
+
 Sorting
 =======
 
@@ -222,6 +233,9 @@ Sorting
 
    # Soft data by value
    df.sort_values('colname', ascending=False)
+
+   # Soft data by value
+   df.sort_values('colname', axis=0, ascending=False, inplace=False, kind='quicksort', na_position='last')
 
 Aggregating
 ===========

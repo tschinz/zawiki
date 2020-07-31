@@ -4,7 +4,7 @@ Install Linux
 
 Both tools are mostly installed at the same time. Download the latest Software on the `SupportNet <https://support.sw.siemens.com>`_
 
-.. information::
+.. note::
 
    Tested on Lubuntu 20.04 LTS
 
@@ -12,11 +12,8 @@ Modelsim
 ========
 Download Modelsim: https://support.sw.siemens.com/de-DE/product/852852093/downloads
 
-Prerequisies
-------------
+**Install**
 
-Install
--------
 
 Copy ``modelsim*.aol`` to ``~/Downloads/``
 
@@ -29,7 +26,7 @@ Copy ``modelsim*.aol`` to ``~/Downloads/``
 Options:
 
 .. code-block:: raw
-   :capton: Target location
+   :caption: Target location
 
    /usr/opt/Modelsim
 
@@ -43,10 +40,8 @@ Select 64bit Modelsim
    :align: center
    :width: 70%
 
+**Cleanup**
 
-
-Cleanup
--------
 
 Cleanup the Mentor installer
 
@@ -56,8 +51,7 @@ Cleanup the Mentor installer
    rm -R /root/mgc
    exit
 
-Test
-----
+**Test**
 
 .. code-block:: bash
 
@@ -72,17 +66,19 @@ HDL Designer
 Download HDL Designer: https://support.sw.siemens.com/de-DE/product/862138546/downloads
 
 
-Prerequisies
-------------
+**Prerequisies**
 
 .. code-block:: bash
    :caption: install required libraries
 
    sudo apt install lib32z1
-   sudp dpkg --add-architecture i386
+   sudo dpkg --add-architecture i386
    sudo apt update
    sudo apt install libx11-6:i386
-
+   sudo apt install libxext6:i386
+   sudo apt install libxrender1:i386
+   sudo apt install libxtst6:i386
+   sudo apt install libxi6:i386
 
 .. code-block:: bash
    :caption: install fonts
@@ -94,8 +90,7 @@ Prerequisies
     xset +fp /usr/share/fonts/X11/100dpi
     xset fp rehash
 
-Install
--------
+**Install**
 
 Copy ``HDS_*.exe`` to ``~/Downloads/``
 
@@ -108,12 +103,15 @@ Copy ``HDS_*.exe`` to ``~/Downloads/``
 Options:
 
 .. code-block:: raw
-   :capton: Target location
+   :caption: Target location
 
    /usr/opt/HDS
 
-Cleanup
--------
+.. figure:: img/hdl-designer_1.*
+   :align: center
+   :width: 70%
+
+**Cleanup**
 
 Cleanup the Mentor installer
 
@@ -123,8 +121,7 @@ Cleanup the Mentor installer
    rm -R /root/mgc
    exit
 
-Libraries
----------
+**Libraries**
 
 .. code-block:: bash
 
@@ -134,8 +131,7 @@ Libraries
 
    sudo rm -R config
 
-Test
-----
+**Test**
 
 .. code-block:: bash
 
@@ -143,7 +139,6 @@ Test
    export LM_LICENSE_FILE=$LM_LICENSE_FILE:27001@mentorlm.hevs.ch
 
    hdl_designer &
-
 
 
 License & PATH
