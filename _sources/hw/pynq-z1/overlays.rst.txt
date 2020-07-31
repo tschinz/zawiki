@@ -59,7 +59,8 @@ Existing Xilinx Overlays
 
 Computer PYNQ-ComputerVision
 ----------------------------
-* `Github Repo <https://github.com/Xilinx/PYNQ-ComputerVision>`_
+
+* `Github Repo PYNQ-ComputerVision <https://github.com/Xilinx/PYNQ-ComputerVision>`_
 
 
 .. code-block:: bash
@@ -71,7 +72,7 @@ Computer PYNQ-ComputerVision
 
 QNN MO
 ------
-* `Github Repo <https://github.com/Xilinx/QNN-MO-PYNQ>`_
+* `Github Repo QNN-MO-PYNQ <https://github.com/Xilinx/QNN-MO-PYNQ>`_
 
 .. code-block:: bash
 

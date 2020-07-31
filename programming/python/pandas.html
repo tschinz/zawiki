@@ -353,6 +353,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#datetime" class="nav-link">Datetime</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#access-data" class="nav-link">Access Data</a>
         </li>
     
@@ -547,6 +551,13 @@
 <h2>Pivot<a class="headerlink" href="#pivot" title="Permalink to this headline">¶</a></h2>
 <p>Pivot table is similar to GroupBy Methods. I allows to group a table and quickly</p>
 </div>
+<div class="section" id="datetime">
+<h2>Datetime<a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y %H:%M:%S&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for the format values see <a class="reference internal" href="datetime.html"><span class="doc">Datetime</span></a></p>
+</div>
 <div class="section" id="access-data">
 <h2>Access Data<a class="headerlink" href="#access-data" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access specific columns</span>
@@ -596,6 +607,9 @@
 
 <span class="c1"># drop duplicates</span>
 <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;colname&#39;</span><span class="p">])</span>
+
+<span class="c1"># get duplicates</span>
+<span class="n">df_duplicates</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
 </pre></div>
 </div>
 </div>
@@ -603,6 +617,9 @@
 <h2>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soft data by value</span>
 <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;colname&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Soft data by value</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;colname&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;quicksort&#39;</span><span class="p">,</span> <span class="n">na_position</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

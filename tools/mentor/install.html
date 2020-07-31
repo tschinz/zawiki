@@ -251,51 +251,11 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#modelsim" class="nav-link">Modelsim</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#prerequisies" class="nav-link">Prerequisies</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#install" class="nav-link">Install</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#cleanup" class="nav-link">Cleanup</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#test" class="nav-link">Test</a>
-        </li>
-    
-            </ul>
+            <a href="#modelsim" class="nav-link">Modelsim</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#hdl-designer" class="nav-link">HDL Designer</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#id1" class="nav-link">Prerequisies</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#id2" class="nav-link">Install</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#id3" class="nav-link">Cleanup</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#libraries" class="nav-link">Libraries</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#id4" class="nav-link">Test</a>
-        </li>
-    
-            </ul>
+            <a href="#hdl-designer" class="nav-link">HDL Designer</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -325,14 +285,14 @@
   <div class="section" id="install-linux">
 <h1>Install Linux<a class="headerlink" href="#install-linux" title="Permalink to this headline">¶</a></h1>
 <p>Both tools are mostly installed at the same time. Download the latest Software on the <a class="reference external" href="https://support.sw.siemens.com">SupportNet</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tested on Lubuntu 20.04 LTS</p>
+</div>
 <div class="section" id="modelsim">
 <h2>Modelsim<a class="headerlink" href="#modelsim" title="Permalink to this headline">¶</a></h2>
 <p>Download Modelsim: <a class="reference external" href="https://support.sw.siemens.com/de-DE/product/852852093/downloads">https://support.sw.siemens.com/de-DE/product/852852093/downloads</a></p>
-<div class="section" id="prerequisies">
-<h3>Prerequisies<a class="headerlink" href="#prerequisies" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="install">
-<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<p><strong>Install</strong></p>
 <p>Copy <code class="docutils literal notranslate"><span class="pre">modelsim*.aol</span></code> to <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
 chmod +x modelsim*.aol
@@ -340,6 +300,12 @@ sudo ./modelsim*.aol
 </pre></div>
 </div>
 <p>Options:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Target location</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-raw notranslate"><div class="highlight"><pre><span></span><span class="err">/usr/opt/Modelsim</span>
+</pre></div>
+</div>
+</div>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/modelsim_install_1.png"><img alt="../../_images/modelsim_install_1.png" src="../../_images/modelsim_install_1.png" style="width: 70%;" /></a>
 </div>
@@ -347,18 +313,14 @@ sudo ./modelsim*.aol
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/modelsim_install_2.png"><img alt="../../_images/modelsim_install_2.png" src="../../_images/modelsim_install_2.png" style="width: 70%;" /></a>
 </div>
-</div>
-<div class="section" id="cleanup">
-<h3>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cleanup</strong></p>
 <p>Cleanup the Mentor installer</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
 rm -R /root/mgc
 <span class="nb">exit</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="test">
-<h3>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+<p><strong>Test</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/opt/Modelsim/modeltech/bin
 <span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:27001@mentorlm.hevs.ch
 
@@ -366,23 +328,25 @@ vsim <span class="p">&amp;</span>
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="hdl-designer">
 <h2>HDL Designer<a class="headerlink" href="#hdl-designer" title="Permalink to this headline">¶</a></h2>
 <p>Download HDL Designer: <a class="reference external" href="https://support.sw.siemens.com/de-DE/product/862138546/downloads">https://support.sw.siemens.com/de-DE/product/862138546/downloads</a></p>
-<div class="section" id="id1">
-<h3>Prerequisies<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">install required libraries</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<p><strong>Prerequisies</strong></p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">install required libraries</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install lib32z1
-sudp dpkg --add-architecture i386
+sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install libx11-6:i386
+sudo apt install libxext6:i386
+sudo apt install libxrender1:i386
+sudo apt install libxtst6:i386
+sudo apt install libxi6:i386
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">install fonts</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">install fonts</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> sudo apt install xfonts-75dpi
  sudo apt install xfonts-100dpi
 
@@ -392,9 +356,7 @@ sudo apt install libx11-6:i386
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3>Install<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><strong>Install</strong></p>
 <p>Copy <code class="docutils literal notranslate"><span class="pre">HDS_*.exe</span></code> to <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
 chmod +x HDS_*.exe
@@ -402,18 +364,23 @@ sudo ./HDS_*.exe
 </pre></div>
 </div>
 <p>Options:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Target location</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-raw notranslate"><div class="highlight"><pre><span></span><span class="err">/usr/opt/HDS</span>
+</pre></div>
 </div>
-<div class="section" id="id3">
-<h3>Cleanup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/hdl-designer_1.png"><img alt="../../_images/hdl-designer_1.png" src="../../_images/hdl-designer_1.png" style="width: 70%;" /></a>
+</div>
+<p><strong>Cleanup</strong></p>
 <p>Cleanup the Mentor installer</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
 rm -R /root/mgc
 <span class="nb">exit</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="libraries">
-<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h3>
+<p><strong>Libraries</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/tschinz/config.git
 sudo cp config/scripts/vhdl/libraries/ieee/numeric_std.vhd /usr/opt/HDS/hdl_libs/ieee/hdl
 sudo cp config/scripts/vhdl/libraries/ieee/std_logic_1164.vhd /usr/opt/HDS/hdl_libs/ieee/hdl
@@ -421,15 +388,12 @@ sudo cp config/scripts/vhdl/libraries/ieee/std_logic_1164.vhd /usr/opt/HDS/hdl_l
 sudo rm -R config
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h3>Test<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p><strong>Test</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/opt/HDS/bin
 <span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:27001@mentorlm.hevs.ch
 
 hdl_designer <span class="p">&amp;</span>
 </pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="license-path">

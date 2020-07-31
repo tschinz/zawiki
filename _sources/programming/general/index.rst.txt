@@ -7,14 +7,6 @@ General
    :alt: Logo
    :width: 20%
 
-.. toctree::
-   :glob:
-   :maxdepth: 4
-   :titlesonly:
-   :caption: Content
-
-   *
-
 
 Data Sizes SI vs IEC
 ====================
