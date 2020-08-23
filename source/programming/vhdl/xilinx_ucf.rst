@@ -22,7 +22,7 @@ A simple example for the first case is when you generate the TX line of an UART 
 
 An example of such a constraint for a UCF file is given here :
 
-.. code-block:: tcl
+.. code-block::
 
    INST "broadenc_cpu_i/axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_1" TNM = UBlaze_Interrupts;
    INST "broadenc_cpu_i/axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" TNM = UBlaze_Interrupts;
@@ -35,7 +35,7 @@ Problem B : reading data from outside the FPGA
 
 When you read synchronous data (i.e. with an incoming clock) in an FPGA, you must be sure that you respect setup and hold times in your input register. In order to do, a simple constraint like
 
-.. code-block:: tcl
+.. code-block::
 
    OFFSET = IN 4 ns VALID 8 ns BEFORE "mb_vclk";
 
@@ -46,7 +46,7 @@ Problem C: outputting synchronous data correctly with an FPGA
 
 When you generate data for another system in your FPGA and you also generate the clock for that system ( a global clock is not shared between all elements of the system (FPGA and device) for that bus), making sure that the data are aligned with the clock and are output with correct setup and hold times consist  in putting the following constraint :
 
-.. code-block:: tcl
+.. code-block::
 
    net "ve_vclk" TNM_NET = "vdata_out";
    net "ve_vy<0>" TNM_NET = "vdata_out";
@@ -71,7 +71,7 @@ Comment
 I/O Pad Assigments
 ------------------
 
-.. code-block:: tcl
+.. code-block::
 
    NET "out_sig_slow"    LOC = "S1" | SLEW = SLOW;
    NET "out_sig_fast"    LOC = "S2" | SLEW = FAST;
@@ -89,7 +89,7 @@ Clock constraint (PERIOD)
 
 Definition of a clock with a 50% duty cycle and it's frequency (40MHz)
 
-.. code-block:: tcl
+.. code-block::
 
    NET "SYS_CLK" TNM_NET = "SYS_CLK";
    TIMESPEC "tnm_name"   = PERIOD "sig_name" <Tcycle> HIGH <dutycycle>;
@@ -107,7 +107,7 @@ Time Group
 Create timing group with particular net.
 This code defines a clk_net timing group associated with the CLK clock net and including all synchronous elements controlled by this net (since no qualifier has been specified).
 
-.. code-block:: tcl
+.. code-block::
 
    NET "net_name" TNM_NET = qualifier "tnm_name";
    NET "CLK"      TNM_NET = "clk_net";
@@ -116,7 +116,7 @@ This code defines a clk_net timing group associated with the CLK clock net and i
 
 Create timing group by specify the name of the instance (module)
 
-.. code-block:: tcl
+.. code-block::
 
    INST "inst_name" TNM = qualifier "tnm_name";
 
@@ -133,7 +133,7 @@ OFFSET
 
 For input pads, OFFSET specifies a time before the (external) clock edge when the related data signals are set.
 
-.. code-block:: tcl
+.. code-block::
 
    OFFSET = IN 5 ns AFTER  "CLK";
    OFFSET = IN 5 ns BEFORE "CLK";
@@ -147,7 +147,7 @@ For input pads, OFFSET specifies a time before the (external) clock edge when th
 
 For output pads, OFFSET specifies a minimum time after the clock edge when the related data signals can be deasserted.
 
-.. code-block:: tcl
+.. code-block::
 
    OFFSET = OUT 2 ns AFTER  "CLK";
    OFFSET = OUT 2 ns BEFORE "CLK";
@@ -163,7 +163,7 @@ OFFSET with TimeGroup
 
 Set Offset after rising edge of clock constraint for all signals in Timegroup
 
-.. code-block:: tcl
+.. code-block::
 
    TIMEGRP "ve_data" OFFSET = OUT 10.333 ns AFTER "mb_vclk" RISING;
    TIMEGRP "ve_data" OFFSET = OUT 10.333 ns AFTER "mb_vclk" FALLING;
@@ -173,7 +173,7 @@ OFFSET with Valid data
 
 The **VALID** keyword is used in conjunction with the requirement to create a hold time requirement. The VALID keyword specifies the duration of the incoming data valid window. By default, the VALID value is equal to the OFFSET time requirement, which specifies a zero hold time requirement
 
-.. code-block:: tcl
+.. code-block::
 
    TIMEGRP DATA_IN OFFSET IN = 2ns VALID 3ns BEFORE CLK RISING;
 
@@ -205,7 +205,7 @@ To specify the timing ignore (TIG) constraint for this method, define:
 * A set of registers for the destination time group
 * A FROM-TO constraint with a TIG keyword to remove the paths between the groups
 
-.. code-block:: tcl
+.. code-block::
 
    TIMESPEC "TSid" = FROM "SRC_GRP" TO "DST_GRP" TIG;
 
@@ -237,7 +237,7 @@ To specify the ``FROM:TO`` (multi-cycle) constraint for this method, define:
 * A set of registers based on a common clock enable signal
 * A ``FROM:TO`` (multi-cycle) constraint describing the new timing requirement
 
-.. code-block:: tcl
+.. code-block::
 
    TIMESPEC "TSid" = FROM "MC_GRP" TO "MC_GRP" <value>;
 

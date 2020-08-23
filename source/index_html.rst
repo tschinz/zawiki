@@ -39,8 +39,6 @@ You can view the content as a:
 * `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf>`_
 * :zawiki_repo:`Repo <>`
 
-:doc:`test`
-
 Known Issues / TODOs
 --------------------
 

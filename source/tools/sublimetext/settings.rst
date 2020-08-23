@@ -58,7 +58,7 @@ Preferences Settings
 Preferences Key Bindings
 ========================
 
-.. code-block:: json
+.. code-block::
    :caption: Default (Windows).sublime-keymap
    :linenos:
 

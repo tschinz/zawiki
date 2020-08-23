@@ -48,7 +48,7 @@ Clock
 
 Absolute or base clock (from Quartz internal or external)
 
-.. code-block:: tcl
+.. code-block::
 
    create_clock [-name <clock_name>]                  \\ # clock name if not the same as signal_name
                  -period <time_in_ns>                 \\ # period in ns or "frequence" e.g. "50mhz"
@@ -69,7 +69,7 @@ Generated Clock
 
 Clocks derived from another clock (all other clocks) (PLL, clock divider, output clocks, ripple clocks)
 
-.. code-block:: tcl
+.. code-block::
 
    create_generated_clock [-name <clock_name>]         \\ name in SDC namespace
                            -source <master_pin>        \\ clock derived by
@@ -91,7 +91,7 @@ Clocks derived from another clock (all other clocks) (PLL, clock divider, output
 Derive PLL clocks
 -----------------
 
-.. code-block:: tcl
+.. code-block::
 
    derived_pll_clocks                       \\ # Altera specific for all PLL generated clocks
                       [-create_base_clocks] \\ # generate create_clock constants for PLL input clocks
@@ -109,7 +109,7 @@ Automatic Clock Detection & Creation
 
 Not to use for final design. Default clock used = 1GHz.
 
-.. code-block:: tcl
+.. code-block::
 
    derive_clocks [-period <time_in_ns>]   # same use as with create_clock
                  [-waveform {<rise_time> <fall_time>}] # same use as with create_clock
@@ -123,7 +123,7 @@ FPGA Uncertainties (jitter, clock networks)
 * Inter-clock transfer : Transfer within different clock domains within FPGA
 * I/O interface clock transfer : Transfer between I/O port and internal design registers
 
-.. code-block:: tcl
+.. code-block::
 
    derive_clock_uncertainty              # Altera specific
                             [-overwrite] # overwrites any existing uncertainty constraints
@@ -169,7 +169,7 @@ Combinatorial (without FF)
 Absolute maximum and minimum time between points.
 Signals traversing FPGA and internal signals
 
-.. code-block:: tcl
+.. code-block::
 
   set_max_delay [-from <names>] \\
                 [-to <names>]   \\
@@ -194,7 +194,7 @@ Synchronous Inputs
 ------------------
 Synchronous Inputs where one external clock is used between multiple devices.
 
-.. code-block:: tcl
+.. code-block::
 
    set_input_delay [-max] \\ # max time to arrive and still meet Tsu (input setup time)
                    [-min]    # min time to stay active and still meet Th (input hold time)
@@ -207,7 +207,7 @@ Synchronous Inputs where one external clock is used between multiple devices.
 
    input\_delay\_min = Data\_trace_{min} - Boardclockskew_{max} + T_{co_{min}}
 
-.. code-block:: tcl
+.. code-block::
 
    set_input_delay -clock <clock_name>        # Clock driving source (external)
                    [-clock_fall]              # input signal was launched on falling edge
@@ -327,7 +327,7 @@ Synchronous Outputs
 
 Synchronous Outputs where one external clock is used between multiple devices.
 
-.. code-block:: tcl
+.. code-block::
 
    set_output_delay [-max] \\ # max time to arrive and still meet other devices Tsu (input setup time)
                     [-min]    # min time to stay active and still meet other devices Th (input hold time)
@@ -342,7 +342,7 @@ output\_delay\_max = (T_{data\_pcb_{max}} + T_{cl}) - (T_{clk2_{min}} - T_{clk1\
 output\_delay\_min = Data\_trace_{min} - Board\_clock\_skew_{max} + T_{h}
 output\_delay\_min = (T_{data\_pcb_{min}} + T_{cl}) - (T_{clk2_{max}} - T_{clk1\_ext{min}}) + T_{h}
 
-.. code-block:: tcl
+.. code-block::
 
    set_output_delay -clock <clock_name>        # Clock driving source (external)
                    [-clock_fall]              # input signal was launched on falling edge
@@ -364,7 +364,7 @@ Clock and Data send at the same time.
 * Quatriple Data Rate (QDR)
 * High Speed SPI4.2
 
-.. code-block:: tcl
+.. code-block::
 
    set_output_delay [-max] \\ # max time to arrive and still meet other devices Tsu (input setup time)
                     [-min]    # min time to stay active and still meet other devices Th (input hold time)
@@ -377,7 +377,7 @@ SSO Calculations
 output\_delay\_max = Data\_trace_{max} - Clock\_trace_{min} + T_{su}
 output\_delay\_min = Data\_trace_{min} - Clock\_trace_{max} + T_{h}
 
-.. code-block:: tcl
+.. code-block::
 
    set_output_delay -clock <clock_name>        # Clock driving source (external)
                    [-clock_fall]              # input signal was launched on falling edge
@@ -401,7 +401,7 @@ False Path
 * ``set_false_path``: disable timing analysation for a certain path or collection
 * ``set_clock_group``: don't look at clock domain crossing between one, or mor clocks
 
-.. code-block:: tcl
+.. code-block::
 
    set_false_path [-fall_from <clocks>] # no analysis falling edge on launch clock
                   [-rise_from <clocks>] # no analysis rising edge on launch clock
@@ -421,7 +421,7 @@ Asynchronous I/O constraints
 
 Path to ignore by the Timing Analyzer.
 
-.. code-block:: tcl
+.. code-block::
 
    set_false_path -from [get_ports ext_rst_n] # input
    set_false_path -from [get_ports button*]   # input
@@ -489,7 +489,7 @@ Open Window
 * start hold increment = edges after on source clock
 * end hold increment = edge before on destination clock
 
-.. code-block:: tcl
+.. code-block::
 
    set_multicycle_path [-start | -end]      # start = change launch clock | end = change latch clock
                        [-setup | -hold]     # setup hold edge
@@ -502,7 +502,7 @@ Open Window
                        [-rise_to <clocks>]
                        <value>
 
-.. code-block:: tcl
+.. code-block::
 
    # 2 cycles for signal (case clock enable)
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -setup 2
@@ -512,7 +512,7 @@ Open Window
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -setup 1
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -hold  0
 
-.. code-block:: tcl
+.. code-block::
 
    # 2 cycles for signal (case shifted clock)
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -setup 2

@@ -14,19 +14,16 @@ Script Basics
 Shell Bangs
 -----------
 
-At the beginning of a file there need to be a line to indentify the program or the file. ``#!<path of the program executable>``
+At the beginning of a file there need to be a line to indentify the program or the file. IF the ``#!/usr/bin/env`` is used the system will search the command in your ``$PATH`` folders.
 
 .. code-block:: bash
+
+   #!interpreter [optional arguments]
 
    #!/bin/sh
-
-.. code-block:: bash
-
    #!/bin/bash
-
-.. code-block:: bash
-
    #!/usr/bin/env python
+   #!/usr/bin/env bash
 
 Begin
 -----
@@ -62,7 +59,6 @@ Variables
 =========
 
 .. code-block:: bash
-   :linenos:
    :caption: variables
 
    # Var
@@ -80,6 +76,35 @@ Variables
      echo "$SEPARATOR\n * Git clone spl repositories\n"
    fi
 
+Preexisting special variables
+-----------------------------
+
+This is just a small incomplete list.
+
++-------------------+---------------------------------------------------+
+| Var name          | Description                                       |
++===================+===================================================+
+| ``$0``            | The name of the current script                    |
++-------------------+---------------------------------------------------+
+| ``$1`` ... ``$9`` | The first 9 arguments of the script               |
++-------------------+---------------------------------------------------+
+| ``$#``            | Number of arguments passed tothe script           |
++-------------------+---------------------------------------------------+
+| ``$@``            | All the arguments passed to the script            |
++-------------------+---------------------------------------------------+
+| ``$USER``         | User name of the user running the script          |
++-------------------+---------------------------------------------------+
+| ``$HOSTNAME``     | Hostname of the machine running the script        |
++-------------------+---------------------------------------------------+
+| ``$PATH``         | List of folders in the current environment        |
++-------------------+---------------------------------------------------+
+| ``$SECONDS``      | Number of seconds since the script started        |
++-------------------+---------------------------------------------------+
+| ``$RANDOM``       | Returns a random number each time                 |
++-------------------+---------------------------------------------------+
+| ``$LINENO``       | Return the current line number in the Bash script |
++-------------------+---------------------------------------------------+
+
 Strings
 =======
 
@@ -95,7 +120,6 @@ Command line arguments
 ======================
 
 .. code-block:: bash
-   :linenos:
    :caption: cli arguments
 
    usage='Usage: script.bash [-v] [-h]'
@@ -121,7 +145,6 @@ Long and short arguments
 ------------------------
 
 .. code-block:: bash
-   :linenos:
    :caption: short long cli arguments
 
    usage="usage: git-clone [options]
@@ -155,12 +178,40 @@ Long and short arguments
    done
    shift $(expr $OPTIND - 1) # remove options from positional parameters
 
+Conditions
+==========
+
+Check if variable length is zero
+
+.. code-block:: bash
+
+   if test -z "$1"
+   then
+     echo "Usage: $0 <Your name>"
+   else
+     echo "Hello $1, from $0"
+   fi
+
+Compare two values
+
+.. code-block:: bash
+
+   for i in {1..10}
+   do
+     if test $i -eq 3
+     then
+       echo "I found the 3!"
+     fi
+   done
+
+
+For Loops
+=========
 
 Functions
 =========
 
 .. code-block:: bash
-   :linenos:
    :caption: functions
 
    # Define function
@@ -181,7 +232,6 @@ Console prints
 Display message welcome on screen
 
 .. code-block:: bash
-   :linenos:
    :caption: echo
 
    # Console print
@@ -200,7 +250,6 @@ User Inputs
 ===========
 
 .. code-block:: bash
-   :linenos:
    :caption: user inputs 1
 
    echo -n "Please enter: "
@@ -212,7 +261,6 @@ User Inputs
    echo ""         # force a carriage return to be output
 
 .. code-block:: bash
-   :linenos:
    :caption: user inputs 1
 
    read -n1 -r -p "Press space to continue..." key
@@ -229,7 +277,6 @@ Check and create folder
 
 .. code-block:: bash
    :caption: check and create folder
-   :linenos:
 
    if [ ! -d "/folder/location" ]; then
      sudo mkdir /folder/location
@@ -242,7 +289,6 @@ Lockfiles you can wait until another process is finished.
 
 .. code-block:: bash
    :caption: check and create folder
-   :linenos:
 
    # Define path and lockfile
    lockDir="/path/to/lock_files"
@@ -261,13 +307,14 @@ Lockfiles you can wait until another process is finished.
    # Remove lockfile
    rm -f $lockFilePath
 
-
 Find
 ====
 
 .. code-block:: bash
    :caption: find samples
-   :linenos:
+
+   # Find all in current location
+   find .
 
    # Find directory and execute commands
    find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
@@ -288,6 +335,20 @@ Find
     echo "pandoc $file -o $filename_withoutext.$out_type"
     pandoc $file -o $filename_withoutext.$out_type
    done
+
+xargs
+=====
+
+Xargs reads items from standard input (meaning, you can pipe data to it) and executes the specified command. In addition you can parallize the commands.
+
+.. code-block:: bash
+
+   xargs [options] [command [initial-arguments]]
+
+.. code-block:: bash
+
+   # Find mpeg files launch 4 parallel processes of ffmpeg
+   find . -name "*.mpeg" | xargs -P 4 -I {} ffmpeg -i {} -o {}.mp4
 
 
 Samples

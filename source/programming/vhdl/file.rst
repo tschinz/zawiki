@@ -11,20 +11,20 @@ Reading File
 
 The below code reads a set of binary numbers from the file named read.txt and put them into a 4 bit ``std_logic_vector`` signal.
 
-.. code-block:: vhdl
+.. code-block::
    :caption: read file
 
    LIBRARY ieee;
      use ieee.std_logic_1164.ALL;
      use STD.textio.all;
 
-   --------------------------------------------------------------------------------
+   -- -----------------------------------------------------------------------------
    -- Declare empty entity
    --
    ENTITY read_file IS
    END read_file;
 
-   --------------------------------------------------------------------------------
+   -- -----------------------------------------------------------------------------
    -- Declare architecture
    --
    ARCHITECTURE behaviour OF read_file IS
@@ -34,7 +34,7 @@ The below code reads a set of binary numbers from the file named read.txt and pu
 
    BEGIN
 
-     ----------------------------------------------------------------------------
+     -- -------------------------------------------------------------------------
      -- Read Process
      --
      process
@@ -86,7 +86,7 @@ Writing File
 
 The code below writes is used to writing a file. It writes binary values from 0000 to 1111.
 
-.. code-block:: vhdl
+.. code-block::
    :caption: write file
 
    LIBRARY ieee;
@@ -94,13 +94,13 @@ The code below writes is used to writing a file. It writes binary values from 00
      use ieee.std_logic_arith.ALL;
      use STD.textio.all;
 
-   --------------------------------------------------------------------------------
+   -- -----------------------------------------------------------------------------
    -- Declare empty entity
    --
    ENTITY write_file IS
    END write_file;
 
-   --------------------------------------------------------------------------------
+   -- -----------------------------------------------------------------------------
    -- Declare architecture
    --
    ARCHITECTURE behaviour OF write_file IS
@@ -109,7 +109,7 @@ The code below writes is used to writing a file. It writes binary values from 00
 
    BEGIN
 
-     ----------------------------------------------------------------------------
+     -- -------------------------------------------------------------------------
      -- Write Process
      --
      process

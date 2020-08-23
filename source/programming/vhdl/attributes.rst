@@ -410,10 +410,10 @@ Signal kind attributes include the following:
 
 ``'Delayed(time)`` creates a delayed signal that is identical in waveform to the signal the attribute is applied to. (The time parameter is optional, and may be omitted.)
 
-.. code-block:: vhdl
+.. code-block::
 
    process(Clk'delayed(hold))
-     -- Hold time check for input Data
+   -- Hold time check for input Data
    begin
      if Clk = '1' and Clk'stable(hold) then
        assert(Data’stable(hold))
