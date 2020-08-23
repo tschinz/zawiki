@@ -20,7 +20,7 @@ New line
 
 No character allowed after newline ``\\``
 
-.. code-block:: tcl
+.. code-block::
 
     command_part_1 \\
     command_part_2

@@ -48,7 +48,7 @@ for example all ``.o`` files depend on the appropriate ``.c`` files
 
 Most used predefined variables
 
-.. code-block:: make
+.. code-block::
    :caption: predefined variables
 
    $<     # Name of the first dependency
@@ -63,7 +63,7 @@ Variables
 
 It is possible to work with variables to save names. Usually these vrariables are kept UPPERCASE. Here some of the most used variables
 
-.. code-block:: make
+.. code-block::
    :caption: variables
 
    CC       # Compiler e.g. fcc
@@ -85,7 +85,7 @@ Phony Targets
 
 Phony targets have no dependencies, that the difference to the normal targets. But unlike normal targets with no depencies, they need to be **executed all the time**.
 
-.. code-block:: make
+.. code-block::
 
    .PHONY clean
    clean:
@@ -133,7 +133,7 @@ A file called **Toplevel Makefiles.rules** defines all variables needed in the s
 **Makefile in the subfolders**
 Depending in the defined Object files and the Rules in Makefile.rules, the executed code will be defined.
 
-.. code-block:: make
+.. code-block::
 
    Include ../Makefile.rules
    OBJ = file1.o file2.o
@@ -159,7 +159,7 @@ with the flag ``-MM`` make will search in the ``SRC`` files for include directiv
 Specialsigns
 ------------
 
-.. code-block:: make
+.. code-block::
 
    #                         # is a comment
    first part of command \   # Command split

@@ -16,15 +16,13 @@ Additional Documents
 Tests & Severity
 ================
 
-.. code-block:: vhdl
+.. code-block::
    :caption: severity
 
-   signal sev_lvl : severity_level := note
-   -- note | warning | error | failure
-
+   -- severity = note | warning | error | failure
    assert ( a = b )
-   report “a is not equal to b”
-   severity severity_lvl;
+     report “a is not equal to b”
+   severity note;
 
 Stop Simulation
 ---------------

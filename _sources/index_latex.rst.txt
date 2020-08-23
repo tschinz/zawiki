@@ -53,7 +53,6 @@
 Welcome to Zawiki Knowledge Database
 ====================================
 
-
 .. figure:: img/logo-icon.*
    :align: center
    :alt: Site Logo
@@ -74,7 +73,6 @@ You can view the content as a:
 * :zawiki_page:`Webpage <>`
 * `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/pdf/zawiki.pdf>`_
 * :zawiki_repo:`Repo <>`
-
 
 Known Issues / TODOs
 --------------------

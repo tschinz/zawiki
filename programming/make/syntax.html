@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syntax &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -362,7 +362,7 @@ make -t                  <span class="c1"># make updates the date of the targets
 <p>Most used predefined variables</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">predefined variables</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>$&lt;     # Name of the first dependency
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$&lt;     # Name of the first dependency
 $@     # Name of the target
 $+     # List of all dependencies
 $^     # List of all dependencies, doubles will be eliminated
@@ -376,12 +376,12 @@ $^     # List of all dependencies, doubles will be eliminated
 <p>It is possible to work with variables to save names. Usually these vrariables are kept UPPERCASE. Here some of the most used variables</p>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">variables</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>CC       # Compiler e.g. fcc
-CFLAGS   # Compiler options r.g. -Wall
-LDFLAGS  # Linker options
-OBJ      # Objectfiles *.o
-SRC      # Sourcefiles *.c
-HDR      # Headerfiles *.h
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CC</span>       <span class="c1"># Compiler e.g. fcc</span>
+<span class="n">CFLAGS</span>   <span class="c1"># Compiler options r.g. -Wall</span>
+<span class="n">LDFLAGS</span>  <span class="c1"># Linker options</span>
+<span class="n">OBJ</span>      <span class="c1"># Objectfiles *.o</span>
+<span class="n">SRC</span>      <span class="c1"># Sourcefiles *.c</span>
+<span class="n">HDR</span>      <span class="c1"># Headerfiles *.h</span>
 </pre></div>
 </div>
 </div>
@@ -394,9 +394,9 @@ HDR      # Headerfiles *.h
 <div class="section" id="phony-targets">
 <h3>Phony Targets<a class="headerlink" href="#phony-targets" title="Permalink to this headline">¶</a></h3>
 <p>Phony targets have no dependencies, that the difference to the normal targets. But unlike normal targets with no depencies, they need to be <strong>executed all the time</strong>.</p>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>.PHONY clean
-clean:
-    rm -rf file1.o file2.o
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">PHONY</span> <span class="n">clean</span>
+<span class="n">clean</span><span class="p">:</span>
+    <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="n">file1</span><span class="o">.</span><span class="n">o</span> <span class="n">file2</span><span class="o">.</span><span class="n">o</span>
 </pre></div>
 </div>
 </div>
@@ -434,7 +434,7 @@ clean:
 </div>
 <p><strong>Makefile in the subfolders</strong>
 Depending in the defined Object files and the Rules in Makefile.rules, the executed code will be defined.</p>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>Include ../Makefile.rules
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Include ../Makefile.rules
 OBJ = file1.o file2.o
 all: $(OBJ)
 </pre></div>
@@ -455,10 +455,10 @@ all: $(OBJ)
 </div>
 <div class="section" id="specialsigns">
 <h3>Specialsigns<a class="headerlink" href="#specialsigns" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>#                         # is a comment
-first part of command \   # Command split
-second part of command \  # into multiple
-third part of command     # lines
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#                         # is a comment</span>
+<span class="n">first</span> <span class="n">part</span> <span class="n">of</span> <span class="n">command</span> \   <span class="c1"># Command split</span>
+<span class="n">second</span> <span class="n">part</span> <span class="n">of</span> <span class="n">command</span> \  <span class="c1"># into multiple</span>
+<span class="n">third</span> <span class="n">part</span> <span class="n">of</span> <span class="n">command</span>     <span class="c1"># lines</span>
 </pre></div>
 </div>
 </div>
@@ -496,7 +496,7 @@ third part of command     # lines
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

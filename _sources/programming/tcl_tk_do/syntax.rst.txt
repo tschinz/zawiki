@@ -28,7 +28,7 @@ Concatenate commands
 
 It is possible to concatenate commands with the ``[]`` braces.
 
-.. code-block:: tcl
+.. code-block::
    :caption: concatenation
 
    set pwd_path [eval pwd]
@@ -42,7 +42,7 @@ It is possible to concatenate commands with the ``[]`` braces.
 Sleep
 -----
 
-.. code-block:: tcl
+.. code-block::
    :caption: sleep
 
    after [expr {int(10*1000)}] # Wait for 10*1000ms = 10sec

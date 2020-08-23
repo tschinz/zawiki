@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examples &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -423,31 +423,31 @@
 <p>First you can see the C/C++ project files to the given Makefile</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">hellomake.c</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>#include
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span>
 
-int main() {
-  // call a function in another file
-  myPrintHelloMake();
+<span class="cpf">int main() {</span><span class="cp"></span>
+  <span class="c1">// call a function in another file</span>
+  <span class="n">myPrintHelloMake</span><span class="p">();</span>
 
-  return(0);
-}
-&lt;/code&gt;
-&lt;code c hellofunc.c&gt;
-#include
-#include
+  <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">code</span> <span class="n">c</span> <span class="n">hellofunc</span><span class="p">.</span><span class="n">c</span><span class="o">&gt;</span>
+<span class="cp">#include</span>
+<span class="cpf">#include</span><span class="cp"></span>
 
-void myPrintHelloMake(void) {
+<span class="kt">void</span> <span class="n">myPrintHelloMake</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 
-  printf(&quot;Hello makefiles!\n&quot;);
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello makefiles!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
-  return;
-}
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">hellomake.h</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>// example include file
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// example include file
 void myPrintHelloMake(void);
 &lt;/code&gt;
 
@@ -532,7 +532,7 @@ hellomake: $(OBJ)
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

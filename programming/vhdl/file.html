@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File &#8212; Zawiki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -348,64 +348,64 @@
 <p>The below code reads a set of binary numbers from the file named read.txt and put them into a 4 bit <code class="docutils literal notranslate"><span class="pre">std_logic_vector</span></code> signal.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">read file</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span>LIBRARY ieee;
-  use ieee.std_logic_1164.ALL;
-  use STD.textio.all;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LIBRARY</span> <span class="n">ieee</span><span class="p">;</span>
+  <span class="n">use</span> <span class="n">ieee</span><span class="o">.</span><span class="n">std_logic_1164</span><span class="o">.</span><span class="n">ALL</span><span class="p">;</span>
+  <span class="n">use</span> <span class="n">STD</span><span class="o">.</span><span class="n">textio</span><span class="o">.</span><span class="n">all</span><span class="p">;</span>
 
---------------------------------------------------------------------------------
--- Declare empty entity
---
-ENTITY read_file IS
-END read_file;
+<span class="o">--</span> <span class="o">-----------------------------------------------------------------------------</span>
+<span class="o">--</span> <span class="n">Declare</span> <span class="n">empty</span> <span class="n">entity</span>
+<span class="o">--</span>
+<span class="n">ENTITY</span> <span class="n">read_file</span> <span class="n">IS</span>
+<span class="n">END</span> <span class="n">read_file</span><span class="p">;</span>
 
---------------------------------------------------------------------------------
--- Declare architecture
---
-ARCHITECTURE behaviour OF read_file IS
+<span class="o">--</span> <span class="o">-----------------------------------------------------------------------------</span>
+<span class="o">--</span> <span class="n">Declare</span> <span class="n">architecture</span>
+<span class="o">--</span>
+<span class="n">ARCHITECTURE</span> <span class="n">behaviour</span> <span class="n">OF</span> <span class="n">read_file</span> <span class="n">IS</span>
 
-  constant FILE_NAME : string := &quot;C:\read.txt&quot;;
-  signal  bin_value : std_logic_vector(3 downto 0):=&quot;0000&quot;;
+  <span class="n">constant</span> <span class="n">FILE_NAME</span> <span class="p">:</span> <span class="n">string</span> <span class="o">:=</span> <span class="s2">&quot;C:</span><span class="se">\r</span><span class="s2">ead.txt&quot;</span><span class="p">;</span>
+  <span class="n">signal</span>  <span class="n">bin_value</span> <span class="p">:</span> <span class="n">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="n">downto</span> <span class="mi">0</span><span class="p">)</span><span class="o">:=</span><span class="s2">&quot;0000&quot;</span><span class="p">;</span>
 
-BEGIN
+<span class="n">BEGIN</span>
 
-  ----------------------------------------------------------------------------
-  -- Read Process
-  --
-  process
-    file file_pointer : text;
-    variable line_content : string(1 to 4);
-    variable line_num : line;
-    variable j : integer := 0;
-    variable char : character:=&#39;0&#39;;
-  begin
-    -- Open the file read.txt from the specified location for reading(READ_MODE)
-    file_open(file_pointer,FILE_NAME,READ_MODE);
+  <span class="o">--</span> <span class="o">-------------------------------------------------------------------------</span>
+  <span class="o">--</span> <span class="n">Read</span> <span class="n">Process</span>
+  <span class="o">--</span>
+  <span class="n">process</span>
+    <span class="n">file</span> <span class="n">file_pointer</span> <span class="p">:</span> <span class="n">text</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">line_content</span> <span class="p">:</span> <span class="n">string</span><span class="p">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">variable</span> <span class="n">line_num</span> <span class="p">:</span> <span class="n">line</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">j</span> <span class="p">:</span> <span class="n">integer</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">char</span> <span class="p">:</span> <span class="n">character</span><span class="o">:=</span><span class="s1">&#39;0&#39;</span><span class="p">;</span>
+  <span class="n">begin</span>
+    <span class="o">--</span> <span class="n">Open</span> <span class="n">the</span> <span class="n">file</span> <span class="n">read</span><span class="o">.</span><span class="n">txt</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">specified</span> <span class="n">location</span> <span class="k">for</span> <span class="n">reading</span><span class="p">(</span><span class="n">READ_MODE</span><span class="p">)</span>
+    <span class="n">file_open</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">,</span><span class="n">FILE_NAME</span><span class="p">,</span><span class="n">READ_MODE</span><span class="p">);</span>
 
-    -- Continue reading until EOF
-    while not endfile(file_pointer) loop
-      -- Read the whole line from the file
-      readline (file_pointer,line_num);
-      -- Read the contents of the line from the file into a variable
-      READ(line_num,line_content);
-      -- For each character in the line convert it to binary value
-      -- And then store it in a signal named &#39;bin_value&#39;
-      for j in 1 to 4 loop
-        char := line_content(j);
-        if(char = &#39;0&#39;) then
-          bin_value(4-j) &lt;= &#39;0&#39;;
-        else
-          bin_value(4-j) &lt;= &#39;1&#39;;
-        end if;
-      end loop;
-      -- After reading each line wait for 10ns
-      wait for 10 ns;
-    end loop;
+    <span class="o">--</span> <span class="n">Continue</span> <span class="n">reading</span> <span class="n">until</span> <span class="n">EOF</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">endfile</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">)</span> <span class="n">loop</span>
+      <span class="o">--</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">whole</span> <span class="n">line</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">file</span>
+      <span class="n">readline</span> <span class="p">(</span><span class="n">file_pointer</span><span class="p">,</span><span class="n">line_num</span><span class="p">);</span>
+      <span class="o">--</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">contents</span> <span class="n">of</span> <span class="n">the</span> <span class="n">line</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">file</span> <span class="n">into</span> <span class="n">a</span> <span class="n">variable</span>
+      <span class="n">READ</span><span class="p">(</span><span class="n">line_num</span><span class="p">,</span><span class="n">line_content</span><span class="p">);</span>
+      <span class="o">--</span> <span class="n">For</span> <span class="n">each</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">line</span> <span class="n">convert</span> <span class="n">it</span> <span class="n">to</span> <span class="n">binary</span> <span class="n">value</span>
+      <span class="o">--</span> <span class="n">And</span> <span class="n">then</span> <span class="n">store</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">signal</span> <span class="n">named</span> <span class="s1">&#39;bin_value&#39;</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">4</span> <span class="n">loop</span>
+        <span class="n">char</span> <span class="o">:=</span> <span class="n">line_content</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">char</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="n">then</span>
+          <span class="n">bin_value</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">j</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+        <span class="k">else</span>
+          <span class="n">bin_value</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">j</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="s1">&#39;1&#39;</span><span class="p">;</span>
+        <span class="n">end</span> <span class="k">if</span><span class="p">;</span>
+      <span class="n">end</span> <span class="n">loop</span><span class="p">;</span>
+      <span class="o">--</span> <span class="n">After</span> <span class="n">reading</span> <span class="n">each</span> <span class="n">line</span> <span class="n">wait</span> <span class="k">for</span> <span class="mi">10</span><span class="n">ns</span>
+      <span class="n">wait</span> <span class="k">for</span> <span class="mi">10</span> <span class="n">ns</span><span class="p">;</span>
+    <span class="n">end</span> <span class="n">loop</span><span class="p">;</span>
 
-    -- After reading all the lines close the file
-    file_close(file_pointer);
-    wait;
-  end process;
-end behaviour;
+    <span class="o">--</span> <span class="n">After</span> <span class="n">reading</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">close</span> <span class="n">the</span> <span class="n">file</span>
+    <span class="n">file_close</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">);</span>
+    <span class="n">wait</span><span class="p">;</span>
+  <span class="n">end</span> <span class="n">process</span><span class="p">;</span>
+<span class="n">end</span> <span class="n">behaviour</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -420,66 +420,66 @@ end behaviour;
 <p>The code below writes is used to writing a file. It writes binary values from 0000 to 1111.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">write file</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span>LIBRARY ieee;
-  use ieee.std_logic_1164.ALL;
-  use ieee.std_logic_arith.ALL;
-  use STD.textio.all;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LIBRARY</span> <span class="n">ieee</span><span class="p">;</span>
+  <span class="n">use</span> <span class="n">ieee</span><span class="o">.</span><span class="n">std_logic_1164</span><span class="o">.</span><span class="n">ALL</span><span class="p">;</span>
+  <span class="n">use</span> <span class="n">ieee</span><span class="o">.</span><span class="n">std_logic_arith</span><span class="o">.</span><span class="n">ALL</span><span class="p">;</span>
+  <span class="n">use</span> <span class="n">STD</span><span class="o">.</span><span class="n">textio</span><span class="o">.</span><span class="n">all</span><span class="p">;</span>
 
---------------------------------------------------------------------------------
--- Declare empty entity
---
-ENTITY write_file IS
-END write_file;
+<span class="o">--</span> <span class="o">-----------------------------------------------------------------------------</span>
+<span class="o">--</span> <span class="n">Declare</span> <span class="n">empty</span> <span class="n">entity</span>
+<span class="o">--</span>
+<span class="n">ENTITY</span> <span class="n">write_file</span> <span class="n">IS</span>
+<span class="n">END</span> <span class="n">write_file</span><span class="p">;</span>
 
---------------------------------------------------------------------------------
--- Declare architecture
---
-ARCHITECTURE behaviour OF write_file IS
+<span class="o">--</span> <span class="o">-----------------------------------------------------------------------------</span>
+<span class="o">--</span> <span class="n">Declare</span> <span class="n">architecture</span>
+<span class="o">--</span>
+<span class="n">ARCHITECTURE</span> <span class="n">behaviour</span> <span class="n">OF</span> <span class="n">write_file</span> <span class="n">IS</span>
 
-  constant FILE_NAME : string := &quot;C:\write.txt&quot;;
+  <span class="n">constant</span> <span class="n">FILE_NAME</span> <span class="p">:</span> <span class="n">string</span> <span class="o">:=</span> <span class="s2">&quot;C:\write.txt&quot;</span><span class="p">;</span>
 
-BEGIN
+<span class="n">BEGIN</span>
 
-  ----------------------------------------------------------------------------
-  -- Write Process
-  --
-  process
-    file file_pointer : text;
-    variable line_content : string(1 to 4);
-    variable bin_value : std_logic_vector(3 downto 0);
-    variable line_num : line;
-    variable i,j : integer := 0;
-    variable char : character:=&#39;0&#39;;
-  begin
-    -- Open the file write.txt from the specified location for writing(WRITE_MODE)
-    file_open(file_pointer, FILE_NAME, WRITE_MODE);
+  <span class="o">--</span> <span class="o">-------------------------------------------------------------------------</span>
+  <span class="o">--</span> <span class="n">Write</span> <span class="n">Process</span>
+  <span class="o">--</span>
+  <span class="n">process</span>
+    <span class="n">file</span> <span class="n">file_pointer</span> <span class="p">:</span> <span class="n">text</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">line_content</span> <span class="p">:</span> <span class="n">string</span><span class="p">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">4</span><span class="p">);</span>
+    <span class="n">variable</span> <span class="n">bin_value</span> <span class="p">:</span> <span class="n">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="n">downto</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">variable</span> <span class="n">line_num</span> <span class="p">:</span> <span class="n">line</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="p">:</span> <span class="n">integer</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">variable</span> <span class="n">char</span> <span class="p">:</span> <span class="n">character</span><span class="o">:=</span><span class="s1">&#39;0&#39;</span><span class="p">;</span>
+  <span class="n">begin</span>
+    <span class="o">--</span> <span class="n">Open</span> <span class="n">the</span> <span class="n">file</span> <span class="n">write</span><span class="o">.</span><span class="n">txt</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">specified</span> <span class="n">location</span> <span class="k">for</span> <span class="n">writing</span><span class="p">(</span><span class="n">WRITE_MODE</span><span class="p">)</span>
+    <span class="n">file_open</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">,</span> <span class="n">FILE_NAME</span><span class="p">,</span> <span class="n">WRITE_MODE</span><span class="p">);</span>
 
-    -- We want to store binary values from 0000 to 1111 in the file
-    for i in 0 to 15 loop
-      bin_value := conv_std_logic_vector(i,4);
-      -- convert each bit value to character for writing to file
-      for j in 0 to 3 loop
-        if(bin_value(j) = &#39;0&#39;) then
-          line_content(4-j) := &#39;0&#39;;
-        else
-          line_content(4-j) := &#39;1&#39;;
-        end if;
-      end loop;
+    <span class="o">--</span> <span class="n">We</span> <span class="n">want</span> <span class="n">to</span> <span class="n">store</span> <span class="n">binary</span> <span class="n">values</span> <span class="kn">from</span> <span class="mi">0000</span> <span class="n">to</span> <span class="mi">1111</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">file</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">15</span> <span class="n">loop</span>
+      <span class="n">bin_value</span> <span class="o">:=</span> <span class="n">conv_std_logic_vector</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+      <span class="o">--</span> <span class="n">convert</span> <span class="n">each</span> <span class="n">bit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">character</span> <span class="k">for</span> <span class="n">writing</span> <span class="n">to</span> <span class="n">file</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">3</span> <span class="n">loop</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">bin_value</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="n">then</span>
+          <span class="n">line_content</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">j</span><span class="p">)</span> <span class="o">:=</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+        <span class="k">else</span>
+          <span class="n">line_content</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">j</span><span class="p">)</span> <span class="o">:=</span> <span class="s1">&#39;1&#39;</span><span class="p">;</span>
+        <span class="n">end</span> <span class="k">if</span><span class="p">;</span>
+      <span class="n">end</span> <span class="n">loop</span><span class="p">;</span>
 
-      -- write the line
-      write(line_num,line_content);
+      <span class="o">--</span> <span class="n">write</span> <span class="n">the</span> <span class="n">line</span>
+      <span class="n">write</span><span class="p">(</span><span class="n">line_num</span><span class="p">,</span><span class="n">line_content</span><span class="p">);</span>
 
-      -- write the contents into the file
-      writeline (file_pointer,line_num);
-      -- wait for 10ns after writing the current line
-      wait for 10 ns;
-    end loop;
+      <span class="o">--</span> <span class="n">write</span> <span class="n">the</span> <span class="n">contents</span> <span class="n">into</span> <span class="n">the</span> <span class="n">file</span>
+      <span class="n">writeline</span> <span class="p">(</span><span class="n">file_pointer</span><span class="p">,</span><span class="n">line_num</span><span class="p">);</span>
+      <span class="o">--</span> <span class="n">wait</span> <span class="k">for</span> <span class="mi">10</span><span class="n">ns</span> <span class="n">after</span> <span class="n">writing</span> <span class="n">the</span> <span class="n">current</span> <span class="n">line</span>
+      <span class="n">wait</span> <span class="k">for</span> <span class="mi">10</span> <span class="n">ns</span><span class="p">;</span>
+    <span class="n">end</span> <span class="n">loop</span><span class="p">;</span>
 
-    -- Close the file after writing
-    file_close(file_pointer);
-    wait;
-  end process;
-end behaviour;
+    <span class="o">--</span> <span class="n">Close</span> <span class="n">the</span> <span class="n">file</span> <span class="n">after</span> <span class="n">writing</span>
+    <span class="n">file_close</span><span class="p">(</span><span class="n">file_pointer</span><span class="p">);</span>
+    <span class="n">wait</span><span class="p">;</span>
+  <span class="n">end</span> <span class="n">process</span><span class="p">;</span>
+<span class="n">end</span> <span class="n">behaviour</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -518,7 +518,7 @@ end behaviour;
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>

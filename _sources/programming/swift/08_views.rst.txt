@@ -69,7 +69,7 @@ View's Coordinate System
 
 -  Bounds vs Frame |Coordinate|
 
-.. code:: swift
+.. code::
 
    View B's bounds = ( (0  ,0) , (250,200) )
    View B's frame  = ( (140,65), (320,320) )

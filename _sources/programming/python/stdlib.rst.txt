@@ -51,7 +51,7 @@ Arguments
 .. code-block:: python
    :caption: sys args
 
-   sys.argv for $python foo.py bar -c qux --h
+   # sys.argv for $python foo.py bar -c qux --h
 
    sys.argv[0] = foo.py
    sys.argv[1] = bar

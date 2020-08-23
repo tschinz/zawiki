@@ -139,7 +139,7 @@ This is a C/C++ Project where as much make is used as possible.
 
 First you can see the C/C++ project files to the given Makefile
 
-.. code-block:: make
+.. code-block:: c
    :caption: hellomake.c
 
    #include
@@ -162,7 +162,7 @@ First you can see the C/C++ project files to the given Makefile
      return;
    }
 
-.. code-block:: make
+.. code-block::
    :caption: hellomake.h
 
    // example include file
