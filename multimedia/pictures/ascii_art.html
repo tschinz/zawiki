@@ -229,6 +229,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#cowsay" class="nav-link">Cowsay</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#images" class="nav-link">Images</a>
         </li>
     
@@ -331,6 +335,78 @@
 +----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+---&gt;
 </pre></div>
 </div>
+</div>
+<div class="section" id="cowsay">
+<h2>Cowsay<a class="headerlink" href="#cowsay" title="Permalink to this headline">¶</a></h2>
+<p>The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install cowsay
+</pre></div>
+</div>
+<p><strong>Some examples</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>λ cowsay Answer to everything is 42
+ ____________________________
+&lt; Answer to everything is 42 &gt;
+ ----------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+λ cowsay -f sheep Answer to everything is 42
+ ____________________________
+&lt; Answer to everything is 42 &gt;
+ ----------------------------
+  \
+   \
+       __
+      UooU\.&#39;@@@@@@`.
+      \__/(@@@@@@@@@@)
+           (@@@@@@@@)
+           `YY~~~~YY&#39;
+            ||    ||
+
+λ cowsay -f bud-frogs Answer to everything is 42
+ ____________________________
+&lt; Answer to everything is 42 &gt;
+ ----------------------------
+     \
+      \
+          oO)-.                       .-(Oo
+         /__  _\                     /_  __\
+         \  \(  |     ()~()         |  )/  /
+          \__|\ |    (-___-)        | /|__/
+          &#39;  &#39;--&#39;    ==`-&#39;==        &#39;--&#39;  &#39;
+
+λ cowsay -f ghostbusters Answer to everything is 42
+ ____________________________
+&lt; Answer to everything is 42 &gt;
+ ----------------------------
+          \
+           \
+            \          __---__
+                    _-       /--______
+               __--( /     \ )XXXXXXXXXXX\v.
+             .-XXX(   O   O  )XXXXXXXXXXXXXXX-
+            /XXX(       U     )        XXXXXXX\
+          /XXXXX(              )--_  XXXXXXXXXXX\
+         /XXXXX/ (      O     )   XXXXXX   \XXXXX\
+         XXXXX/   /            XXXXXX   \__ \XXXXX
+         XXXXXX__/          XXXXXX         \__----&gt;
+ ---___  XXX__/          XXXXXX      \__         /
+   \-  --__/   ___/\  XXXXXX            /  ___--/=
+    \-\    ___/    XXXXXX              &#39;--- XXXXXX
+       \-\/XXX\ XXXXXX                      /XXXXX
+         \XXXXXXXXX   \                    /XXXXX/
+          \XXXXXX      &gt;                 _/XXXXX/
+            \XXXXX--__/              __-- XXXX/
+             -XXXXXXXX---------------  XXXXXX-
+                \XXXXXXXXXXXXXXXXXXXXXXXXXX/
+                  &quot;&quot;VXXXXXXXXXXXXXXXXXXV&quot;&quot;
+</pre></div>
+</div>
+<p>a cowfile can be manually added on the folder <code class="docutils literal notranslate"><span class="pre">/usr/share/cowsay/cows</span></code>, loaded by default are the following graphics:
+<code class="docutils literal notranslate"><span class="pre">apt</span></code> <code class="docutils literal notranslate"><span class="pre">bud-frogs</span></code> <code class="docutils literal notranslate"><span class="pre">bunny</span></code> <code class="docutils literal notranslate"><span class="pre">calvin</span></code> <code class="docutils literal notranslate"><span class="pre">cheese</span></code> <code class="docutils literal notranslate"><span class="pre">cock</span></code> <code class="docutils literal notranslate"><span class="pre">cower</span></code> <code class="docutils literal notranslate"><span class="pre">daemon</span></code> <code class="docutils literal notranslate"><span class="pre">default</span></code> <code class="docutils literal notranslate"><span class="pre">dragon</span></code> <code class="docutils literal notranslate"><span class="pre">dragon-and-cow</span></code> <code class="docutils literal notranslate"><span class="pre">duck</span></code> <code class="docutils literal notranslate"><span class="pre">elephant</span></code> <code class="docutils literal notranslate"><span class="pre">elephant-in-snake</span></code> <code class="docutils literal notranslate"><span class="pre">eyes</span></code> <code class="docutils literal notranslate"><span class="pre">flaming-sheep</span></code> <code class="docutils literal notranslate"><span class="pre">ghostbusters</span></code> <code class="docutils literal notranslate"><span class="pre">gnu</span></code> <code class="docutils literal notranslate"><span class="pre">hellokitty</span></code> <code class="docutils literal notranslate"><span class="pre">kiss</span></code> <code class="docutils literal notranslate"><span class="pre">koala</span></code> <code class="docutils literal notranslate"><span class="pre">kosh</span></code> <code class="docutils literal notranslate"><span class="pre">luke-koala</span></code> <code class="docutils literal notranslate"><span class="pre">mech-and-cow</span></code> <code class="docutils literal notranslate"><span class="pre">milk</span></code> <code class="docutils literal notranslate"><span class="pre">moofasa</span></code> <code class="docutils literal notranslate"><span class="pre">moose</span></code> <code class="docutils literal notranslate"><span class="pre">pony</span></code> <code class="docutils literal notranslate"><span class="pre">pony-smaller</span></code> <code class="docutils literal notranslate"><span class="pre">ren</span></code> <code class="docutils literal notranslate"><span class="pre">sheep</span></code> <code class="docutils literal notranslate"><span class="pre">skeleton</span></code> <code class="docutils literal notranslate"><span class="pre">snowman</span></code> <code class="docutils literal notranslate"><span class="pre">stegosaurus</span></code> <code class="docutils literal notranslate"><span class="pre">stimpy</span></code> <code class="docutils literal notranslate"><span class="pre">suse</span></code> <code class="docutils literal notranslate"><span class="pre">three-eyes</span></code> <code class="docutils literal notranslate"><span class="pre">turkey</span></code> <code class="docutils literal notranslate"><span class="pre">turtle</span></code> <code class="docutils literal notranslate"><span class="pre">tux</span></code> <code class="docutils literal notranslate"><span class="pre">unipony</span></code> <code class="docutils literal notranslate"><span class="pre">unipony-smaller</span></code> <code class="docutils literal notranslate"><span class="pre">vader</span></code> <code class="docutils literal notranslate"><span class="pre">vader-koala</span></code> <code class="docutils literal notranslate"><span class="pre">www</span></code></p>
 </div>
 <div class="section" id="images">
 <h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
