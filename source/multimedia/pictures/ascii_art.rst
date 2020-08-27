@@ -79,6 +79,84 @@ Analog Signal
    |   '-'   '-'   '-'   '-'   '-'   is installed and running now!  -'   '-'
    +----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+--->
 
+Cowsay
+======
+
+The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the following command:
+
+.. code-block:: bash
+
+   sudo apt install cowsay
+
+**Some examples**
+
+.. code-block::
+
+   λ cowsay Answer to everything is 42
+    ____________________________
+   < Answer to everything is 42 >
+    ----------------------------
+           \   ^__^
+            \  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+
+   λ cowsay -f sheep Answer to everything is 42
+    ____________________________
+   < Answer to everything is 42 >
+    ----------------------------
+     \
+      \
+          __
+         UooU\.'@@@@@@`.
+         \__/(@@@@@@@@@@)
+              (@@@@@@@@)
+              `YY~~~~YY'
+               ||    ||
+
+   λ cowsay -f bud-frogs Answer to everything is 42
+    ____________________________
+   < Answer to everything is 42 >
+    ----------------------------
+        \
+         \
+             oO)-.                       .-(Oo
+            /__  _\                     /_  __\
+            \  \(  |     ()~()         |  )/  /
+             \__|\ |    (-___-)        | /|__/
+             '  '--'    ==`-'==        '--'  '
+
+   λ cowsay -f ghostbusters Answer to everything is 42
+    ____________________________
+   < Answer to everything is 42 >
+    ----------------------------
+             \
+              \
+               \          __---__
+                       _-       /--______
+                  __--( /     \ )XXXXXXXXXXX\v.
+                .-XXX(   O   O  )XXXXXXXXXXXXXXX-
+               /XXX(       U     )        XXXXXXX\
+             /XXXXX(              )--_  XXXXXXXXXXX\
+            /XXXXX/ (      O     )   XXXXXX   \XXXXX\
+            XXXXX/   /            XXXXXX   \__ \XXXXX
+            XXXXXX__/          XXXXXX         \__---->
+    ---___  XXX__/          XXXXXX      \__         /
+      \-  --__/   ___/\  XXXXXX            /  ___--/=
+       \-\    ___/    XXXXXX              '--- XXXXXX
+          \-\/XXX\ XXXXXX                      /XXXXX
+            \XXXXXXXXX   \                    /XXXXX/
+             \XXXXXX      >                 _/XXXXX/
+               \XXXXX--__/              __-- XXXX/
+                -XXXXXXXX---------------  XXXXXX-
+                   \XXXXXXXXXXXXXXXXXXXXXXXXXX/
+                     ""VXXXXXXXXXXXXXXXXXXV""
+
+
+a cowfile can be manually added on the folder ``/usr/share/cowsay/cows``, loaded by default are the following graphics:
+``apt`` ``bud-frogs`` ``bunny`` ``calvin`` ``cheese`` ``cock`` ``cower`` ``daemon`` ``default`` ``dragon`` ``dragon-and-cow`` ``duck`` ``elephant`` ``elephant-in-snake`` ``eyes`` ``flaming-sheep`` ``ghostbusters`` ``gnu`` ``hellokitty`` ``kiss`` ``koala`` ``kosh`` ``luke-koala`` ``mech-and-cow`` ``milk`` ``moofasa`` ``moose`` ``pony`` ``pony-smaller`` ``ren`` ``sheep`` ``skeleton`` ``snowman`` ``stegosaurus`` ``stimpy`` ``suse`` ``three-eyes`` ``turkey`` ``turtle`` ``tux`` ``unipony`` ``unipony-smaller`` ``vader`` ``vader-koala`` ``www``
+
 Images
 ======
 
