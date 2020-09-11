@@ -61,6 +61,15 @@ needs Latex installed see: :doc:`LaTeX </writing/latex/install>`
 
    jupyter nbconvert --to latex test.ipynb
 
+Execute a notebook in cmdline
+=============================
+
+More info in `official doc <https://nbconvert.readthedocs.io/en/latest/execute_api.html>`_
+
+.. code-block:: bash
+
+   jupyter nbconvert --to notebook --execute --inplace notebook.ipynb
+
 Little Mix of everything
 ========================
 

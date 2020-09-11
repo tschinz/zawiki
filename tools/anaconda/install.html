@@ -1,18 +1,37 @@
 
-
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Additional Install &#8212; Zawiki</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
+    <title>Install &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -27,9 +46,9 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Jupyter" href="../jupyter/index.html" />
-    <link rel="prev" title="Anaconda" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <link rel="prev" title="Conda" href="conda.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -146,8 +165,12 @@
                   <a href="index.html">Anaconda</a>
                   <ul>
                   
+                      <li class="">
+                          <a href="conda.html">Conda</a>
+                      </li>
+                  
                       <li class="active">
-                          <a href="">Additional Install</a>
+                          <a href="">Install</a>
                       </li>
                   
                   </ul>
@@ -251,11 +274,33 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#conda" class="nav-link">Conda</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#jupyter" class="nav-link">Jupyter</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#pip" class="nav-link">PIP</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#conda-environment-setup" class="nav-link">Conda Environment Setup</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#additional-installs" class="nav-link">Additional Installs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
             <a href="#sphinx" class="nav-link">Sphinx</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#kite" class="nav-link">Kite</a>
+        </li>
+    
+            </ul>
         </li>
     
     </ul>
@@ -278,23 +323,91 @@
               
               <div>
                 
-  <div class="section" id="additional-install">
-<h1>Additional Install<a class="headerlink" href="#additional-install" title="Permalink to this headline">¶</a></h1>
-<p>After installing anaconda other things have to be installed</p>
+  <div class="section" id="install">
+<h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
+<p>Download <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> here.</p>
+<div class="section" id="conda">
+<h2>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h2>
+<p>At installation (Anaconda), conda creates a generic environment called <code class="docutils literal notranslate"><span class="pre">base</span></code> which is activated by default.
+Therefore, when installing a package with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>, the package will be installted in that environment.
+You can be more explicit and activate the environment by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> in a terminal.</p>
+<p>See dedicated conda page for more information about conda: <a class="reference internal" href="conda.html"><span class="doc">Conda</span></a></p>
+</div>
 <div class="section" id="jupyter">
 <h2>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
-<p>See the dedicated jupyter pages for more informations: <a class="reference internal" href="../jupyter/index.html"><span class="doc">Jupyter</span></a></p>
+<p>See the dedicated jupyter pages for more information about jupyter: <a class="reference internal" href="../jupyter/index.html"><span class="doc">Jupyter</span></a></p>
 </div>
+<div class="section" id="pip">
+<h2>PIP<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h2>
+<p>See the dedicated pip page for more information about pip install <a class="reference internal" href="../../programming/python/pip_general.html"><span class="doc">PIP</span></a></p>
+</div>
+<div class="section" id="conda-environment-setup">
+<h2>Conda Environment Setup<a class="headerlink" href="#conda-environment-setup" title="Permalink to this headline">¶</a></h2>
+<p>Setup an conda environment contains many times the same stuff</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Windows conda environmnt setup</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">CONDAENV</span><span class="p">=</span>envname
+conda create -n <span class="nv">%CONDAENV%</span>
+
+<span class="p">:</span><span class="c1">: default packages</span>
+conda install pip
+
+<span class="p">:</span><span class="c1">: pip packages</span>
+pip install IPython
+pip install ipykernel
+pip install numpy
+pip install plotly
+pip install pandas
+pip install matplotlib
+pip install jupyter-kite
+pip install seaborn
+
+<span class="p">:</span><span class="c1">: jupyterlab extensions</span>
+<span class="k">set</span> <span class="nv">NODE_OPTIONS</span><span class="p">=</span>--max-old-space-size=4096
+jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.9.0 --no-build
+jupyter labextension install jupyterlab-plotly --no-build
+jupyter labextension install run-tag-cells-jlab --no-build
+jupyter labextension install <span class="s2">&quot;@kiteco/jupyterlab-kite&quot;</span> --no-build
+
+jupyter lab build
+<span class="k">set</span> <span class="nv">NODE_OPTIONS</span><span class="p">=</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-installs">
+<h2>Additional Installs<a class="headerlink" href="#additional-installs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sphinx">
-<h2>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -I <span class="nv">sphinx</span><span class="o">==</span><span class="m">2</span>.3.1
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h3>
+<p>Install requirements for sphinx</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx
 pip install sphinx-rtd-theme
+pip install pydata-sphinx-theme
 pip install sphinxcontrib-wavedrom
 pip install sphinxcontrib-plantuml
 pip install recommonmark
 pip install sphinxemoji
 pip install sphinx-copybutton
+pip install nbsphinx
+pip install jupyter_sphinx
+pip install sphinx-panels
+pip install nbsphinx
+pip install IPython
+pip install ipykernel
+pip install numpy
+pip install plotly
+pip install pandas
+pip install matplotlib
 </pre></div>
+</div>
+</div>
+<div class="section" id="kite">
+<h3>Kite<a class="headerlink" href="#kite" title="Permalink to this headline">¶</a></h3>
+<p>Install requirements for Kite</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupyter-kite
+jupyter labextension install <span class="s2">&quot;@kiteco/jupyterlab-kite&quot;</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -315,7 +428,10 @@ pip install sphinx-copybutton
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>

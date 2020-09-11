@@ -6,6 +6,12 @@ PIP
    :align: center
    :width: 150px
 
+Check out also:
+
+  * :doc:`/tools/jupyter/index`
+  * :doc:`/tools/anaconda/conda`
+  * :doc:`/programming/python/pip_general`
+
 
 Admin
 =====

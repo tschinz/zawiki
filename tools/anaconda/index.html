@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,12 +6,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anaconda &#8212; Zawiki</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
+    
+  <link rel="stylesheet" href="../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -26,10 +45,10 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Additional Install" href="install.html" />
+    <link rel="next" title="Conda" href="conda.html" />
     <link rel="prev" title="Git Submodules" href="../git/submodules.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -147,7 +166,11 @@
                   <ul>
                   
                       <li class="">
-                          <a href="install.html">Additional Install</a>
+                          <a href="conda.html">Conda</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="install.html">Install</a>
                       </li>
                   
                   </ul>
@@ -251,25 +274,7 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#anaconda-conda-update" class="nav-link">Anaconda / Conda Update</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#config-file" class="nav-link">Config File</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#change-password" class="nav-link">Change Password</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#jupyter" class="nav-link">Jupyter</a>
-        </li>
-    
-            </ul>
+            <a href="#introduction" class="nav-link">Introduction</a>
         </li>
     
     </ul>
@@ -300,49 +305,22 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Additional Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Anaconda is a complete python package with comes with many features:</p>
 <ul class="simple">
-<li><p>Jupyter</p></li>
-<li><p>PIP</p></li>
+<li><p><a class="reference internal" href="../jupyter/index.html"><span class="doc">Jupyter</span></a></p></li>
+<li><p><a class="reference internal" href="conda.html"><span class="doc">Conda</span></a></p></li>
+<li><p><a class="reference internal" href="../../programming/python/pip_general.html"><span class="doc">PIP</span></a></p></li>
 <li><p>Environments</p></li>
 <li><p>Support Win / Linux / Mac</p></li>
 <li><p><a class="reference external" href="https://www.continuum.io/downloads">Anaconda Download</a></p></li>
 <li><p><a class="reference external" href="http://conda.pydata.org/">Conda Docs</a></p></li>
 </ul>
-<div class="section" id="anaconda-conda-update">
-<h3>Anaconda / Conda Update<a class="headerlink" href="#anaconda-conda-update" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update all Conda packages</span>
-conda update --all
-
-<span class="c1"># Update Anaconda only</span>
-conda update conda
-conda update anaconda
-</pre></div>
-</div>
-</div>
-<div class="section" id="config-file">
-<h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
-<p>Create Config file</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook --generate-config
-</pre></div>
-</div>
-<p>The Config file  is located at: <code class="docutils literal notranslate"><span class="pre">~/.jupyter/jupyter_notebook_config.json</span></code></p>
-</div>
-<div class="section" id="change-password">
-<h3>Change Password<a class="headerlink" href="#change-password" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook password
-</pre></div>
-</div>
-</div>
-<div class="section" id="jupyter">
-<h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h3>
-<p>See the dedicated jupyter pages for more informations: <a class="reference internal" href="../jupyter/index.html"><span class="doc">Jupyter</span></a></p>
-</div>
 </div>
 </div>
 
@@ -362,7 +340,10 @@ conda update anaconda
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>

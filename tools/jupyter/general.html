@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,12 +6,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General &#8212; Zawiki</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
+    
+  <link rel="stylesheet" href="../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -27,9 +46,9 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Plotly Dash" href="install_plotly_dash.html" />
-    <link rel="prev" title="Extensions" href="extensions.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <link rel="prev" title="Jupyter Converts" href="convert.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -160,10 +179,6 @@
                           <a href="convert.html">Jupyter Converts</a>
                       </li>
                   
-                      <li class="">
-                          <a href="extensions.html">Extensions</a>
-                      </li>
-                  
                       <li class="active">
                           <a href="">General</a>
                       </li>
@@ -271,7 +286,23 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#extentions" class="nav-link">Extentions</a>
+            <a href="#config" class="nav-link">Config</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#change-password" class="nav-link">Change Password</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyterlab" class="nav-link">Jupyterlab</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#extensions" class="nav-link">Extensions</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -304,20 +335,60 @@
                 
   <div class="section" id="general">
 <h1>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="extentions">
-<h2>Extentions<a class="headerlink" href="#extentions" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension list
+<div class="section" id="config">
+<h2>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the location of the config directory</span>
+jupyter --config-dir
 
-jupyter labextension install &lt;extensionsname&gt;
+<span class="c1"># Show the location of the data directory</span>
+jupyter --data-dir
+
+<span class="c1"># Show all Jupyter directories and search paths</span>
+jupyter --paths
+
+<span class="c1"># List notebook extensions</span>
+jupyter nbextension list
+
+<span class="c1"># List running notebook servers</span>
+jupyter notebook list
+</pre></div>
+</div>
+<div class="section" id="change-password">
+<h3>Change Password<a class="headerlink" href="#change-password" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook password
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="jupyterlab">
+<h2>Jupyterlab<a class="headerlink" href="#jupyterlab" title="Permalink to this headline">¶</a></h2>
+<p>Create a config file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --generate-config
+</pre></div>
+</div>
+<p>The Config file is located at: <cite>~/.jupyter/jupyter_notebook_config.json</cite></p>
+<div class="section" id="extensions">
+<h3>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h3>
+<p>Get installed extensions</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension list
+</pre></div>
+</div>
+<p>Install extension</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension install &lt;extensionsname&gt;
 </pre></div>
 </div>
 <p>For Matplotlib see: <a class="reference external" href="https://github.com/matplotlib/jupyter-matplotlib">https://github.com/matplotlib/jupyter-matplotlib</a></p>
 <p>See all Jupyterlab Extensions: <a class="reference external" href="https://www.npmjs.com/search?q=keywords:jupyterlab-extension">https://www.npmjs.com/search?q=keywords:jupyterlab-extension</a></p>
 </div>
+</div>
 <div class="section" id="kernels">
 <h2>Kernels<a class="headerlink" href="#kernels" title="Permalink to this headline">¶</a></h2>
 <p>Inspect available Kernels</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter kernelspec list
+</pre></div>
+</div>
+<p>Use a specific kernel</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter qtconsole --kernel<span class="o">=</span>machine-learning-jh44uwir
 </pre></div>
 </div>
 </div>
@@ -345,7 +416,10 @@ jupyter labextension install &lt;extensionsname&gt;
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>
