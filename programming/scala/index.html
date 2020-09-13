@@ -27,8 +27,8 @@
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
 
@@ -453,22 +453,22 @@
 <h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
 <p>In scala, you can define a variable by using the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">number</span> <span class="k">=</span> <span class="mi">6</span>
+<span class="n">number</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">number</span> <span class="o">+=</span> <span class="mi">4</span>
 <span class="n">println</span><span class="o">(</span><span class="n">number</span><span class="o">)</span> <span class="c1">// 10</span>
 </pre></div>
 </div>
 <p>Scala is able to infer the type automatically. You don’t need to specify it if the variable is assigned at declaration:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="k">=</span> <span class="mi">0</span>   <span class="c1">//The type of &#39;number&#39; is inferred as a Int during the compilation.</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">var</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1">//The type of &#39;number&#39; is inferred as a Int during the compilation.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="constants">
 <h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
 <p>But, in fact, it’s not very common to use <code class="docutils literal notranslate"><span class="pre">var</span></code> in Scala. Instead, constant values defined by <code class="docutils literal notranslate"><span class="pre">val</span></code> are often used:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">two</span>   <span class="k">=</span> <span class="mi">2</span>
-<span class="k">val</span> <span class="n">three</span> <span class="k">=</span> <span class="mi">3</span>
-<span class="k">val</span> <span class="n">six</span>   <span class="k">=</span> <span class="n">two</span> <span class="o">*</span> <span class="n">three</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">two</span>   <span class="o">=</span> <span class="mi">2</span>
+<span class="k">val</span> <span class="n">three</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">val</span> <span class="n">six</span>   <span class="o">=</span> <span class="n">two</span> <span class="o">*</span> <span class="n">three</span>
 </pre></div>
 </div>
 </div>
@@ -486,8 +486,8 @@
 </div>
 <p>You can also specify arguements by name, which is useful if you have many arguements:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">sumBiggerThanZero</span><span class="o">(</span>
-  <span class="n">a</span> <span class="k">=</span> <span class="mf">2.3f</span><span class="o">,</span>
-  <span class="n">b</span> <span class="k">=</span> <span class="mf">5.4f</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mf">2.3f</span><span class="o">,</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="mf">5.4f</span>
 <span class="o">)</span>
 </pre></div>
 </div>
@@ -503,7 +503,7 @@
 <div class="section" id="return-type-inferation">
 <h4>Return type inferation<a class="headerlink" href="#return-type-inferation" title="Permalink to this headline">¶</a></h4>
 <p>Scala is able to automatically infer the return type. You don’t need to specify it:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="o">=</span> <span class="o">{</span>
   <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 <span class="o">}</span>
 </pre></div>
@@ -522,7 +522,7 @@
 <div class="section" id="arguements-default-value">
 <h4>Arguements default value<a class="headerlink" href="#arguements-default-value" title="Permalink to this headline">¶</a></h4>
 <p>You can specify a default value for each arguement of a function:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sumBiggerThanZero</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="o">)</span> <span class="o">=</span> <span class="o">{</span>
   <span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 <span class="o">}</span>
 </pre></div>
@@ -535,8 +535,8 @@
   <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">index</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">3</span>
 <span class="o">}</span>
 
-<span class="k">val</span> <span class="n">array</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">()</span>
-<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="n">array</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>   <span class="c1">//array(4) is interpreted as array.apply(4) and will return 7</span>
+<span class="k">val</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">value</span> <span class="o">=</span> <span class="n">array</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>   <span class="c1">//array(4) is interpreted as array.apply(4) and will return 7</span>
 </pre></div>
 </div>
 <p>This concept is also applicable for scala <code class="docutils literal notranslate"><span class="pre">object</span></code> (static)</p>
@@ -544,7 +544,7 @@
   <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">...</span>
 <span class="o">}</span>
 
-<span class="k">val</span> <span class="n">value</span> <span class="k">=</span> <span class="nc">MajorityVote</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="c1">// Will call MajorityVote.apply(4)</span>
+<span class="k">val</span> <span class="n">value</span> <span class="o">=</span> <span class="nc">MajorityVote</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="c1">// Will call MajorityVote.apply(4)</span>
 </pre></div>
 </div>
 </div>
@@ -583,15 +583,15 @@
 </pre></div>
 </div>
 <p>Then, to instantiate the class from the previous example and use its <code class="docutils literal notranslate"><span class="pre">getGrayLevel</span></code> function:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">grayLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">getGrayLevel</span><span class="o">()</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">blue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">grayLevelOfBlue</span> <span class="o">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">getGrayLevel</span><span class="o">()</span>
 </pre></div>
 </div>
 <p>Be careful, if you want to access a construction parameter of the class from the outside, this construction parameter should be defined as a <code class="docutils literal notranslate"><span class="pre">val</span></code>:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Color</span><span class="o">(</span><span class="k">val</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="k">val</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Float</span><span class="o">){</span> <span class="o">...</span> <span class="o">}</span>
 <span class="o">...</span>
-<span class="k">val</span> <span class="n">blue</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">redLevelOfBlue</span> <span class="k">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">r</span>
+<span class="k">val</span> <span class="n">blue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">redLevelOfBlue</span> <span class="o">=</span> <span class="n">blue</span><span class="o">.</span><span class="n">r</span>
 </pre></div>
 </div>
 <div class="section" id="inheritance-extends">
@@ -602,11 +602,11 @@
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Square</span><span class="o">(</span><span class="n">sideLength</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
-  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">sideLength</span> <span class="o">*</span> <span class="n">sideLength</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="o">=</span> <span class="n">sideLength</span> <span class="o">*</span> <span class="n">sideLength</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
-  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -615,7 +615,7 @@
 <h4>Case class<a class="headerlink" href="#case-class" title="Permalink to this headline">¶</a></h4>
 <p>Case class is an alternative way of declaring classes.</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Float</span><span class="o">,</span> <span class="n">height</span><span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
-  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="k">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">getArea</span><span class="o">()</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
 <span class="o">}</span>
 </pre></div>
 </div>

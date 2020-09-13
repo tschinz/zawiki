@@ -27,8 +27,8 @@
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
 
@@ -368,7 +368,7 @@
 <h3>companion object<a class="headerlink" href="#companion-object" title="Permalink to this headline">¶</a></h3>
 <p>A companion object should start with a <strong>upper case</strong> letter.</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">Fifo</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">Bits</span><span class="o">])</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">Bits</span><span class="o">]</span> <span class="k">=</span> <span class="o">{...}</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">Bits</span><span class="o">])</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">Bits</span><span class="o">]</span> <span class="o">=</span> <span class="o">{...}</span>
 <span class="o">}</span>
 
 <span class="k">object</span> <span class="nc">MajorityVote</span> <span class="o">{</span>
@@ -386,20 +386,20 @@
 <div class="section" id="function">
 <h3>function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h3>
 <p>A function should always start with a <strong>lower case</strong> letter:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sinTable</span> <span class="k">=</span> <span class="o">(</span><span class="mi">0</span> <span class="n">until</span> <span class="n">sampleCount</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="n">sampleIndex</span> <span class="k">=&gt;</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">sinValue</span> <span class="k">=</span> <span class="nc">Math</span><span class="o">.</span><span class="n">sin</span><span class="o">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="nc">PI</span> <span class="o">*</span> <span class="n">sampleIndex</span> <span class="o">/</span> <span class="n">sampleCount</span><span class="o">)</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="n">sinTable</span> <span class="o">=</span> <span class="o">(</span><span class="mi">0</span> <span class="n">until</span> <span class="n">sampleCount</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="n">sampleIndex</span> <span class="o">=&gt;</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">sinValue</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="n">sin</span><span class="o">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="nc">PI</span> <span class="o">*</span> <span class="n">sampleIndex</span> <span class="o">/</span> <span class="n">sampleCount</span><span class="o">)</span>
   <span class="n">S</span><span class="o">((</span><span class="n">sinValue</span> <span class="o">*</span> <span class="o">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">resolutionWidth</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)).</span><span class="n">toInt</span><span class="o">,</span> <span class="n">resolutionWidth</span> <span class="n">bits</span><span class="o">)</span>
 <span class="o">})</span>
 
-<span class="k">val</span> <span class="n">rom</span> <span class="k">=</span>  <span class="nc">Mem</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="n">resolutionWidth</span> <span class="n">bit</span><span class="o">),</span><span class="n">initialContent</span> <span class="k">=</span> <span class="n">sinTable</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">rom</span> <span class="o">=</span>  <span class="nc">Mem</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="n">resolutionWidth</span> <span class="n">bit</span><span class="o">),</span><span class="n">initialContent</span> <span class="o">=</span> <span class="n">sinTable</span><span class="o">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="instances">
 <h3>instances<a class="headerlink" href="#instances" title="Permalink to this headline">¶</a></h3>
 <p>Instances of classes should always start with a <strong>lower case</strong> letter:</p>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">fifo</span>   <span class="k">=</span> <span class="k">new</span> <span class="nc">Fifo</span><span class="o">()</span>
-<span class="k">val</span> <span class="n">buffer</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Bits</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">))</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">fifo</span>   <span class="o">=</span> <span class="k">new</span> <span class="nc">Fifo</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Bits</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">))</span>
 </pre></div>
 </div>
 </div>
@@ -449,13 +449,13 @@
 <li><p>Better maintainability</p></li>
 </ul>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">RgbConfig</span><span class="o">(</span><span class="n">rWidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">gWidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">bWidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">){</span>
-  <span class="k">def</span> <span class="n">getWidth</span> <span class="k">=</span> <span class="n">rWidth</span> <span class="o">+</span> <span class="n">gWidth</span> <span class="o">+</span> <span class="n">bWidth</span>
+  <span class="k">def</span> <span class="n">getWidth</span> <span class="o">=</span> <span class="n">rWidth</span> <span class="o">+</span> <span class="n">gWidth</span> <span class="o">+</span> <span class="n">bWidth</span>
 <span class="o">}</span>
 
 <span class="k">case</span> <span class="k">class</span> <span class="nc">Rgb</span><span class="o">(</span><span class="n">c</span><span class="k">:</span> <span class="kt">RgbConfig</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">r</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">rWidth</span> <span class="n">bit</span><span class="o">)</span>
-  <span class="k">val</span> <span class="n">g</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">gWidth</span> <span class="n">bit</span><span class="o">)</span>
-  <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">bWidth</span> <span class="n">bit</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">r</span> <span class="o">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">rWidth</span> <span class="n">bit</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">g</span> <span class="o">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">gWidth</span> <span class="n">bit</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">b</span> <span class="o">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="n">bWidth</span> <span class="n">bit</span><span class="o">)</span>
 <span class="o">}</span>
 </pre></div>
 </div>

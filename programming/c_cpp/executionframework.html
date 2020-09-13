@@ -27,8 +27,8 @@
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/copy_button.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
 
@@ -395,18 +395,18 @@ The time manager holds all software timers in a FIFO. The timer which ends first
 <div class="section" id="subject">
 <h3>Subject<a class="headerlink" href="#subject" title="Permalink to this headline">¶</a></h3>
 <p>Multiple Observers can be attached to an Subject and get notified when something interesting happens.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">attach</span> <span class="p">(</span> <span class="n">Observer</span> <span class="o">*</span> <span class="n">pObserver</span> <span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">attach</span> <span class="p">(</span> <span class="n">Observer</span> <span class="o">*</span> <span class="n">pObserver</span> <span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
 </pre></div>
 </div>
 <p>Informs the observer(s) that something of interest happened to  the Subject</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">_notify</span> <span class="p">(</span> <span class="kt">uint8_t</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">_notify</span> <span class="p">(</span> <span class="kt">uint8_t</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="observer">
 <h3>Observer<a class="headerlink" href="#observer" title="Permalink to this headline">¶</a></h3>
 <p>Informs the observer that something of interest happened to its Subject (called by the notify() method of the Subject)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="nf">update</span> <span class="p">(</span> <span class="n">Subject</span> <span class="o">*</span> <span class="n">pSubject</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">update</span> <span class="p">(</span> <span class="n">Subject</span> <span class="o">*</span> <span class="n">pSubject</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
