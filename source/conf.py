@@ -209,10 +209,10 @@ html_theme_options = {
   "use_edit_page_button": True,
 }
 html_context = {
-    'css_files': [
-        '_static/css/theme_overrides.css',  # override wide tables in RTD theme
-        '_static/css/copy_button.css',      # override copybutton on code-block
-    ],
+    #'css_files': [
+    #    '_static/css/theme_overrides.css',  # override wide tables in RTD theme
+    #    '_static/css/copy_button.css',      # override copybutton on code-block
+    #],
     "github_user": "tschinz",
     "github_repo": "zawiki",
     "github_version": "master",
