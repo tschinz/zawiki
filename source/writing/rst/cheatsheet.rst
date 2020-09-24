@@ -355,6 +355,14 @@ There are some predefined images in :zawiki_repo:`conf.py file <blob/master/sour
    |folder|
    |file|
    |sign-check|
+   |upload|
+   |download|
+   |expand|
+   |minimize|
+   |arrow-up|
+   |arrow-down|
+   |arrow-left|
+   |arrow-right|
    |star5|
    |star4|
    |star3|
@@ -373,10 +381,22 @@ There are some predefined images in :zawiki_repo:`conf.py file <blob/master/sour
    |linux|
    |mac|
    |win|
+   |word|
+   |excel|
+   |onenote|
+   |outlook|
 
 |folder|
 |file|
 |sign-check|
+|upload|
+|download|
+|expand|
+|minimize|
+|arrow-up|
+|arrow-down|
+|arrow-left|
+|arrow-right|
 |star5|
 |star4|
 |star3|
@@ -395,6 +415,10 @@ There are some predefined images in :zawiki_repo:`conf.py file <blob/master/sour
 |linux|
 |mac|
 |win|
+|word|
+|excel|
+|onenote|
+|outlook|
 
 Lists
 =====

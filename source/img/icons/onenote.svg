@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -13,12 +11,12 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   viewBox="0 0 319.933 289.82402"
+   viewBox="0 0 22.077745 20.000001"
    xml:space="preserve"
    sodipodi:docname="onenote.svg"
-   width="319.93298"
-   height="289.82401"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
+   width="22.077744"
+   height="20"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
    id="metadata67"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -31,8 +29,8 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="870"
-   inkscape:window-height="480"
+   inkscape:window-width="1920"
+   inkscape:window-height="1121"
    id="namedview63"
    showgrid="false"
    fit-margin-top="0"
@@ -42,22 +40,23 @@
    inkscape:zoom="0.46093662"
    inkscape:cx="170.28773"
    inkscape:cy="144.91151"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
-   inkscape:current-layer="Capa_1" />
+   inkscape:window-x="-9"
+   inkscape:window-y="41"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1"
+   inkscape:document-rotation="0" />
 
 
 <g
    id="g14"
-   transform="translate(-96.035,-111.088)">
+   transform="matrix(0.0690074,0,0,0.0690074,-6.6271257,-7.6658941)">
 	<polygon
    style="fill:#823264"
-   points="276.777,111.088 96.035,142.798 96.035,369.202 276.777,400.912 "
+   points="276.777,400.912 276.777,111.088 96.035,142.798 96.035,369.202 "
    id="polygon6" />
 	<polygon
    style="fill:#823264"
-   points="285.57,142.799 285.57,369.202 399.086,369.202 399.086,214.395 415.965,214.395 415.965,151.681 399.086,151.681 399.086,142.799 "
+   points="399.086,214.395 415.965,214.395 415.965,151.681 399.086,151.681 399.086,142.799 285.57,142.799 285.57,369.202 399.086,369.202 "
    id="polygon8" />
 	<rect
    x="405.07999"
@@ -76,7 +75,7 @@
 </g>
 <g
    id="g30"
-   transform="translate(-96.035,-111.088)">
+   transform="matrix(0.0690074,0,0,0.0690074,-6.6271257,-7.6658941)">
 	<rect
    x="285.57001"
    y="167.48"
@@ -121,7 +120,7 @@
    id="rect26" />
 	<polygon
    style="fill:#ffffff"
-   points="145.945,213.341 145.945,298.659 164.237,298.659 164.237,239.689 205.175,298.659 223.467,298.659 223.467,213.341 205.175,213.341 205.175,272.311 164.237,213.341 "
+   points="164.237,239.689 205.175,298.659 223.467,298.659 223.467,213.341 205.175,213.341 205.175,272.311 164.237,213.341 145.945,213.341 145.945,298.659 164.237,298.659 "
    id="polygon28" />
 </g>
 <g

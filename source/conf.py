@@ -234,6 +234,18 @@ rst_epilog = """
 .. |file| image:: /img/icons/file.*
 .. |sign-check| image:: /img/icons/success.*
 
+.. |upload| image:: /img/icons/upload.*
+.. |download| image:: /img/icons/download.*
+.. |expand| image:: /img/icons/expand.*
+.. |minimize| image:: /img/icons/minimize.*
+
+.. |arrow-up| image:: /img/icons/arrow-up.*
+.. |arrow-down| image:: /img/icons/arrow-down.*
+.. |arrow-left| image:: /img/icons/arrow-left.*
+.. |arrow-right| image:: /img/icons/arrow-right.*
+
+.. |+| image:: /img/icons/add.*
+
 .. |star5| image:: /img/icons/star-5.*
 .. |star4| image:: /img/icons/star-4.*
 .. |star3| image:: /img/icons/star-3.*
