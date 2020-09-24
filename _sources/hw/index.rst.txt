@@ -14,3 +14,4 @@ Hardware
 
    pynq-z1/index
    dell-xps13-9300/index
+   raspberry/index

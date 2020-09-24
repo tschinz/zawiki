@@ -10,6 +10,9 @@ Inspirational Quotes
 .. list-table::
    :header-rows: 0
 
+   * - To see your own footstep, one needs to take a step back.
+
+       *Silvan Zahno*
    * - Computers are useless. They can only give you answers.
 
        *Pablo Picasso*
