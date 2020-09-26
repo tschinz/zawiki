@@ -29,40 +29,10 @@ Quit
    sudo reboot        # Reboot
    sudo shutdown now  # Shutdown
 
-Mounting
-========
+Filesystem
+==========
 
-For permanent mount see: :ref:`/etc/fstab <config_files_fstab>`
-
-.. code-block:: bash
-   :caption: mounting
-
-   sudo vim /etc/fstab             # To edit default mount drives
-   sudo fdisk -l           # Drive info
-   ls -l /dev/disk/by-uuid         # get Drive UUID's
-   mkdir -p /media/d       # make folder for HD
-   mount -t vfat -o iocharset-utf8, umask=000 /dev/sda3 /media/d
-
-   mkdir -p /mnt/mountplace
-   mount /dev/sda1 /mnt/mountplace
-
-   unmount /mnt/mountplace
-
-   mount -U <UUID>                 # mount drive according to fstab definition
-
-   df -k                           # check partitions and the available space
-
-Wipe Disk
-=========
-
-.. code-block:: bash
-   :caption: wipe disk
-
-   # unmount disk
-   sudo umount /dev/sdXY -l
-
-   # use /dev/random to write Zeros on entire disk§
-   sudo dd if=/dev/urandom of=/dev/sdX bs=10M
+See independent page: :doc:`../filesystem/index`
 
 Environment variables
 =====================
@@ -125,8 +95,29 @@ Alias
 
    # Set up aliases
    alias <aliasname>="<command>"
-   alias ll="ls -la"
 
+   # Common aliases
+   # Common home locations
+   alias home='cd ~'
+   alias root='cd /'
+   alias dtop='cd ~/Desktop'
+   alias dbox='cd ~/Dropbox'
+   alias dwld='cd ~/Downloads'
+   alias docs='cd ~/Documents'
+   alias www='cd /var/www/html'
+
+   # Common commands
+   alias o=open
+   alias ..='cd ..'
+   alias ...='cd ..; cd ..'
+   alias ....='cd ..; cd ..; cd ..'
+
+   # Common command shortcuts
+   alias cls=clear
+   alias ll='ls -la'
+   alias owner-wwwdata='sudo chown -R www-data:www-data ./'
+   alias permission-file='sudo find . -type f -exec chmod 644 {} \;'
+   alias permission-folder='sudo find . -type d -exec chmod 755 {} \;'
 
 Permissions
 ===========
@@ -274,7 +265,6 @@ grep is also often uses in pipes to search within the output of an other command
    * ``-c`` : count number of times found \\
    * ``--color`` : colors the word searched in the results
 
-
 Links
 =====
 
@@ -307,7 +297,6 @@ Tar, bz2, gz
 
    tar cfvj name.tar.bz2 /path/to/folder # Compression tar.bz2
    tar xfvj tarfile                      # Decompression tar.bz2
-
 
 .. note::
 
