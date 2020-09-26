@@ -222,9 +222,48 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#comandline-tools" class="nav-link">Comandline Tools</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#disk-infos" class="nav-link">Disk Infos</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#df" class="nav-link">df</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#fdisk" class="nav-link">fdisk</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#lsblk" class="nav-link">lsblk</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#parted" class="nav-link">Parted</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mounting" class="nav-link">Mounting</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#wipe-disk" class="nav-link">Wipe Disk</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -257,6 +296,243 @@
 <li class="toctree-l1"><a class="reference internal" href="files.html">Important Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="folders.html">Folders</a></li>
 </ul>
+</div>
+<div class="section" id="comandline-tools">
+<h2>Comandline Tools<a class="headerlink" href="#comandline-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="disk-infos">
+<h3>Disk Infos<a class="headerlink" href="#disk-infos" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="df">
+<h4>df<a class="headerlink" href="#df" title="Permalink to this headline">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">df</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># check partitions and the available space</span>
+df -k
+df -h                           <span class="c1"># humand readable</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">df example</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>λ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            <span class="m">7</span>.8G     <span class="m">0</span>  <span class="m">7</span>.8G   <span class="m">0</span>% /dev
+tmpfs           <span class="m">1</span>.6G   12M  <span class="m">1</span>.6G   <span class="m">1</span>% /run
+/dev/sdc1       229G   86G  134G  <span class="m">39</span>% /
+tmpfs           <span class="m">7</span>.8G   46M  <span class="m">7</span>.8G   <span class="m">1</span>% /dev/shm
+tmpfs           <span class="m">5</span>.0M  <span class="m">4</span>.0K  <span class="m">5</span>.0M   <span class="m">1</span>% /run/lock
+tmpfs           <span class="m">7</span>.8G     <span class="m">0</span>  <span class="m">7</span>.8G   <span class="m">0</span>% /sys/fs/cgroup
+/dev/loop1       97M   97M     <span class="m">0</span> <span class="m">100</span>% /snap/core/9804
+/dev/loop2       13M   13M     <span class="m">0</span> <span class="m">100</span>% /snap/dmd/102
+/dev/loop3       13M   13M     <span class="m">0</span> <span class="m">100</span>% /snap/dmd/99
+/dev/sda1       <span class="m">1</span>.8T  148G  <span class="m">1</span>.6T   <span class="m">9</span>% /mnt/data2
+/dev/sdb1       <span class="m">3</span>.6T  <span class="m">2</span>.2T  <span class="m">1</span>.3T  <span class="m">63</span>% /mnt/data
+tmpfs           <span class="m">1</span>.6G   16K  <span class="m">1</span>.6G   <span class="m">1</span>% /run/user/1000
+/dev/loop4       98M   98M     <span class="m">0</span> <span class="m">100</span>% /snap/core/9993
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="fdisk">
+<h4>fdisk<a class="headerlink" href="#fdisk" title="Permalink to this headline">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">fdisk</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo fdisk -l
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">fdisk example</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>λ sudo fdisk -l
+
+Disk /dev/sda: <span class="m">1</span>.8 TiB, <span class="m">2000398934016</span> bytes, <span class="m">3907029168</span> sectors
+Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">4096</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">4096</span> bytes / <span class="m">4096</span> bytes
+Disklabel type: dos
+Disk identifier: 0x000f0848
+
+Device     Boot Start        End    Sectors  Size Id Type
+/dev/sda1        <span class="m">2048</span> <span class="m">3907028991</span> <span class="m">3907026944</span>  <span class="m">1</span>.8T <span class="m">83</span> Linux
+
+
+Disk /dev/sdb: <span class="m">3</span>.7 TiB, <span class="m">4000787030016</span> bytes, <span class="m">7814037168</span> sectors
+Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">4096</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">4096</span> bytes / <span class="m">4096</span> bytes
+Disklabel type: gpt
+Disk identifier: 25BCB5B9-0133-4561-AF05-050B47B56F84
+
+Device     Start        End    Sectors  Size Type
+/dev/sdb1   <span class="m">2048</span> <span class="m">7814035455</span> <span class="m">7814033408</span>  <span class="m">3</span>.7T Linux filesystem
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="lsblk">
+<h4>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h4>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">lsblk</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lsblk
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">lsblk example 1</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      <span class="m">8</span>:0    <span class="m">0</span> <span class="m">465</span>.8G  <span class="m">0</span> disk
+├─sda1   <span class="m">8</span>:1    <span class="m">0</span>    70G  <span class="m">0</span> part
+├─sda2   <span class="m">8</span>:2    <span class="m">0</span>     1K  <span class="m">0</span> part
+├─sda5   <span class="m">8</span>:5    <span class="m">0</span>  <span class="m">97</span>.7G  <span class="m">0</span> part /media/4668484A68483B47
+├─sda6   <span class="m">8</span>:6    <span class="m">0</span>  <span class="m">97</span>.7G  <span class="m">0</span> part /
+├─sda7   <span class="m">8</span>:7    <span class="m">0</span>   <span class="m">1</span>.9G  <span class="m">0</span> part <span class="o">[</span>SWAP<span class="o">]</span>
+└─sda8   <span class="m">8</span>:8    <span class="m">0</span> <span class="m">198</span>.5G  <span class="m">0</span> part /media/13f35f59-f023-4d98-b06f-9dfaebefd6c1
+sdb      <span class="m">8</span>:16   <span class="m">1</span>   <span class="m">3</span>.8G  <span class="m">0</span> disk
+└─sdb1   <span class="m">8</span>:17   <span class="m">1</span>   <span class="m">3</span>.8G  <span class="m">0</span> part
+sr0     <span class="m">11</span>:0    <span class="m">1</span>  1024M  <span class="m">0</span> rom
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">lsblk example 2</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>λ lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,STATE,MODEL,UUID
+NAME     SIZE TYPE MOUNTPOINT      STATE   MODEL            UUID
+loop1   <span class="m">96</span>.6M loop /snap/core/9804
+loop2     13M loop /snap/dmd/102
+loop3     13M loop /snap/dmd/99
+loop4   <span class="m">97</span>.1M loop /snap/core/9993
+sda      <span class="m">1</span>.8T disk                 running WDC WD20NPVT-00Z
+└─sda1   <span class="m">1</span>.8T part /mnt/data2                               25c04a96-63f6-4307-800d-66928e4e1261
+sdb      <span class="m">3</span>.7T disk                 running ST4000LM024-2AN1
+└─sdb1   <span class="m">3</span>.7T part /mnt/data                                d56c1a6b-6871-4a27-8051-19747339b9ce
+sdc    <span class="m">232</span>.9G disk                 running Samsung SSD <span class="m">860</span>
+└─sdc1 <span class="m">232</span>.9G part /                                        3d3920bb-91c7-4632-8fd0-1d87b110a496
+sdd      <span class="m">3</span>.7T disk                 running Rugged USB-C
+└─sdd1   <span class="m">3</span>.7T part                                          88fdbcc0-809a-48c7-bdda-d75cd5f79bb4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parted">
+<h3>Parted<a class="headerlink" href="#parted" title="Permalink to this headline">¶</a></h3>
+<p>Parted is a commandline tool which allows to add, modify, delete</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">parted</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create partition tables</span>
+<span class="c1"># GPT</span>
+sudo parted /dev/sda mklabel gpt
+
+<span class="c1"># MBR</span>
+sudo parted /dev/sda mklabel msdos
+
+<span class="c1"># Format a drive fully as ext4</span>
+sudo parted -a opt /dev/sda mkpart primary ext4 <span class="m">0</span>% <span class="m">100</span>%
+
+<span class="c1"># Format the drive</span>
+mkfs /dev/sda1
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">parted server</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ parted
+
+<span class="o">(</span>parted<span class="o">)</span> unit MiB
+<span class="o">(</span>parted<span class="o">)</span> print
+</pre></div>
+</div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">unit</span></code></p></td>
+<td><p>Sets the kind of unit. I always use MiB. I always make this my first command.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">print</span></code></p></td>
+<td><p>Show the disk and partition information, complete with sizes in your selected unit.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">help</span></code></p></td>
+<td><p>Lists available commands. If followed by a command, gives help on that command’s syntax and choices.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mklabel</span></code></p></td>
+<td><p>Makes a partition table on the disk. If you use Linux, the type should always be either “msdos” or “gpt”.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mkpart</span></code></p></td>
+<td><p>Make Partition. You’ll be asked primary or secondary, format type, start and end (in your chosen units). Always make sure your unit setting is “MiB”. Always make your first partition starts at 1, and if your last one is intended to fill the rest of the disk, make its end be -1, which means end of disk. You can’t put in a size directly: You must do the math and put in start and end.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">&lt;#&gt;</span></code></p></td>
+<td><p>Delete partition number &lt;#&gt;, which can be found using the print command. Obviously, use caution.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">&lt;number&gt;</span> <span class="pre">&lt;flag&gt;</span> <span class="pre">&lt;state&gt;</span></code></p></td>
+<td><p>This is how you set flags of partitions. To make partition 1 bootable, perform the following command:
+<code class="docutils literal notranslate"><span class="pre">(parted)</span> <span class="pre">set</span> <span class="pre">1</span> <span class="pre">boot</span> <span class="pre">on</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">align-check</span></code></p></td>
+<td><p>This queries you whether you want optimal or minimal alignment, and I always say optimal. Then it asks you for the partition number, (which can be found using the <code class="docutils literal notranslate"><span class="pre">print</span></code> command), and when you put in the partition number, it reports it as being either aligned or not. Aligned partitions are a good thing for top notch disk performance.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">quit</span></code></p></td>
+<td><p>Exit the Parted program.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lsblk</span> <span class="pre">-o</span> <span class="pre">+label,fstype,uuid</span></code></p></td>
+<td><p>Command to see all relevant info on all partitions, without being root.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mkfs.ext4</span> <span class="pre">-L</span> <span class="pre">&lt;mystring&gt;</span> <span class="pre">/dev/&lt;partition&gt;</span></code></p></td>
+<td><p>Create an ext4 filesystem, with label <code class="docutils literal notranslate"><span class="pre">&lt;mystring&gt;</span></code>, on partition <code class="docutils literal notranslate"><span class="pre">/dev/&lt;partition&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;partition&gt;</span></code> is something like <code class="docutils literal notranslate"><span class="pre">sda1</span></code> or <code class="docutils literal notranslate"><span class="pre">sda2</span></code> or <code class="docutils literal notranslate"><span class="pre">sdb1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mkswap</span> <span class="pre">-L</span> <span class="pre">&lt;mystring&gt;</span> <span class="pre">/dev/&lt;partition&gt;</span></code></p></td>
+<td><p>Create a swap filesystem, with label <code class="docutils literal notranslate"><span class="pre">&lt;mystring&gt;</span></code>, on partition <code class="docutils literal notranslate"><span class="pre">/dev/&lt;partition&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;partition&gt;</span></code> is something like <code class="docutils literal notranslate"><span class="pre">sda1</span></code> or <code class="docutils literal notranslate"><span class="pre">sda2</span></code> or <code class="docutils literal notranslate"><span class="pre">sdb1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mounting">
+<h3>Mounting<a class="headerlink" href="#mounting" title="Permalink to this headline">¶</a></h3>
+<p>For permanent mount see: <a class="reference internal" href="../scripts/config_files.html#config-files-fstab"><span class="std std-ref">/etc/fstab</span></a></p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">mounting</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/fstab             <span class="c1"># To edit default mount drives</span>
+sudo fdisk -l           <span class="c1"># Drive info</span>
+ls -l /dev/disk/by-uuid         <span class="c1"># get Drive UUID&#39;s</span>
+mkdir -p /media/d       <span class="c1"># make folder for HD</span>
+mount -t vfat -o iocharset-utf8, <span class="nv">umask</span><span class="o">=</span><span class="m">000</span> /dev/sda3 /media/d
+
+mkdir -p /mnt/mountplace
+mount /dev/sda1 /mnt/mountplace
+
+unmount /mnt/mountplace
+
+mount -U &lt;UUID&gt;                 <span class="c1"># mount drive according to fstab definition</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wipe-disk">
+<h3>Wipe Disk<a class="headerlink" href="#wipe-disk" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">wipe disk</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># unmount disk</span>
+sudo umount /dev/sdXY -l
+
+<span class="c1"># use /dev/random to write Zeros on entire disk§</span>
+sudo dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>10M
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

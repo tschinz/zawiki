@@ -520,11 +520,17 @@ False  True   True
 True   True   True
 =====  =====  ======
 
+
+.. note::
+   ``:widths: auto`` will adapt the columnwidth automatically
+
 .. code-block:: ReST
 
    .. list-table::
       :header-rows: 1
+      :stub-columns: 1
       :widths: 1 1 2
+      :align: center
 
       * - Type
         - Literal
@@ -547,7 +553,9 @@ True   True   True
 
 .. list-table::
    :header-rows: 1
+   :stub-columns: 1
    :widths: 1 1 2
+   :align: center
 
    * - Type
      - Literal

@@ -238,11 +238,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#mounting" class="nav-link">Mounting</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#wipe-disk" class="nav-link">Wipe Disk</a>
+            <a href="#filesystem" class="nav-link">Filesystem</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -386,47 +382,15 @@ sudo shutdown now  <span class="c1"># Shutdown</span>
 </div>
 </div>
 </div>
-<div class="section" id="mounting">
-<h2>Mounting<a class="headerlink" href="#mounting" title="Permalink to this headline">¶</a></h2>
-<p>For permanent mount see: <a class="reference internal" href="../scripts/config_files.html#config-files-fstab"><span class="std std-ref">/etc/fstab</span></a></p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">mounting</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/fstab             <span class="c1"># To edit default mount drives</span>
-sudo fdisk -l           <span class="c1"># Drive info</span>
-ls -l /dev/disk/by-uuid         <span class="c1"># get Drive UUID&#39;s</span>
-mkdir -p /media/d       <span class="c1"># make folder for HD</span>
-mount -t vfat -o iocharset-utf8, <span class="nv">umask</span><span class="o">=</span><span class="m">000</span> /dev/sda3 /media/d
-
-mkdir -p /mnt/mountplace
-mount /dev/sda1 /mnt/mountplace
-
-unmount /mnt/mountplace
-
-mount -U &lt;UUID&gt;                 <span class="c1"># mount drive according to fstab definition</span>
-
-df -k                           <span class="c1"># check partitions and the available space</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="wipe-disk">
-<h2>Wipe Disk<a class="headerlink" href="#wipe-disk" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">wipe disk</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># unmount disk</span>
-sudo umount /dev/sdXY -l
-
-<span class="c1"># use /dev/random to write Zeros on entire disk§</span>
-sudo dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>10M
-</pre></div>
-</div>
-</div>
+<div class="section" id="filesystem">
+<h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
+<p>See independent page: <a class="reference internal" href="../filesystem/index.html"><span class="doc">Filesystem</span></a></p>
 </div>
 <div class="section" id="environment-variables">
 <h2>Environment variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
 <p>They can be set permanently system wide <a class="reference internal" href="../scripts/config_files.html#config-files-profile"><span class="std std-ref">/etc/profile</span></a> or per user shell <a class="reference internal" href="../scripts/config_files.html#config-files-user"><span class="std std-ref">/etc/.bashrc /etc/.zshrc</span></a></p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">environment variables</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">environment variables</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Licenses</span>
 <span class="nb">export</span> <span class="nv">LM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>:portnumber@serverip
 
@@ -442,8 +406,8 @@ setenv name value
 </div>
 <div class="section" id="user">
 <h2>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">user</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">user</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access to different PC with unknown Password</span>
 chroot path/of/new/systemroot    <span class="c1"># change root of FileSys</span>
 <span class="c1"># Useful for hacking another PC</span>
@@ -478,19 +442,41 @@ sudo passwd &lt;username&gt;
 </div>
 <div class="section" id="alias">
 <h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">alias</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">alias</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up aliases</span>
 <span class="n">alias</span> <span class="o">&lt;</span><span class="n">aliasname</span><span class="o">&gt;=</span><span class="s2">&quot;&lt;command&gt;&quot;</span>
-<span class="n">alias</span> <span class="n">ll</span><span class="o">=</span><span class="s2">&quot;ls -la&quot;</span>
+
+<span class="c1"># Common aliases</span>
+<span class="c1"># Common home locations</span>
+<span class="n">alias</span> <span class="n">home</span><span class="o">=</span><span class="s1">&#39;cd ~&#39;</span>
+<span class="n">alias</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;cd /&#39;</span>
+<span class="n">alias</span> <span class="n">dtop</span><span class="o">=</span><span class="s1">&#39;cd ~/Desktop&#39;</span>
+<span class="n">alias</span> <span class="n">dbox</span><span class="o">=</span><span class="s1">&#39;cd ~/Dropbox&#39;</span>
+<span class="n">alias</span> <span class="n">dwld</span><span class="o">=</span><span class="s1">&#39;cd ~/Downloads&#39;</span>
+<span class="n">alias</span> <span class="n">docs</span><span class="o">=</span><span class="s1">&#39;cd ~/Documents&#39;</span>
+<span class="n">alias</span> <span class="n">www</span><span class="o">=</span><span class="s1">&#39;cd /var/www/html&#39;</span>
+
+<span class="c1"># Common commands</span>
+<span class="n">alias</span> <span class="n">o</span><span class="o">=</span><span class="nb">open</span>
+<span class="n">alias</span> <span class="o">..=</span><span class="s1">&#39;cd ..&#39;</span>
+<span class="n">alias</span> <span class="o">...=</span><span class="s1">&#39;cd ..; cd ..&#39;</span>
+<span class="n">alias</span> <span class="o">....=</span><span class="s1">&#39;cd ..; cd ..; cd ..&#39;</span>
+
+<span class="c1"># Common command shortcuts</span>
+<span class="n">alias</span> <span class="bp">cls</span><span class="o">=</span><span class="n">clear</span>
+<span class="n">alias</span> <span class="n">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="n">alias</span> <span class="n">owner</span><span class="o">-</span><span class="n">wwwdata</span><span class="o">=</span><span class="s1">&#39;sudo chown -R www-data:www-data ./&#39;</span>
+<span class="n">alias</span> <span class="n">permission</span><span class="o">-</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;sudo find . -type f -exec chmod 644 </span><span class="si">{}</span><span class="s1"> \;&#39;</span>
+<span class="n">alias</span> <span class="n">permission</span><span class="o">-</span><span class="n">folder</span><span class="o">=</span><span class="s1">&#39;sudo find . -type d -exec chmod 755 </span><span class="si">{}</span><span class="s1"> \;&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="permissions">
 <h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">permissions</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">permissions</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod xxx file<span class="p">|</span>folder                <span class="c1"># xxx = rwx|xnumber</span>
 chmod -x  file <span class="p">|</span>folder               <span class="c1"># add only executable Flag</span>
 chown -R user:group file<span class="p">|</span>folder      <span class="c1"># change owner recursively</span>
@@ -599,8 +585,8 @@ find . -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> 
 <div class="section" id="threads">
 <h2>Threads<a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h2>
 <p><strong>PID = Process ID</strong></p>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">threads</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">threads</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps -x                             <span class="c1"># view executed threads</span>
 ps -ax <span class="p">|</span> grep name                <span class="c1"># search for specific process name</span>
 <span class="nb">kill</span> &lt;pidnumber&gt;                  <span class="c1"># kill thread with given PID</span>
@@ -646,8 +632,8 @@ ps -ax <span class="p">|</span> grep name                <span class="c1"># sear
 </div>
 <div class="section" id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">general</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">general</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uname -a                           <span class="c1"># Distribution &amp; Kernel informations</span>
 whereis <span class="nb">command</span>                    <span class="c1"># returns location of command</span>
 
@@ -681,8 +667,8 @@ sdiff path/to/file1 path/to file2  <span class="c1"># compare file1&lt;-&gt;file
 </div>
 <div class="section" id="find-which">
 <h2>Find / Which<a class="headerlink" href="#find-which" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">find and which</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">find and which</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># finding and delete all folder with &lt;foldername&gt; and it&#39;s content</span>
 find -type d -iname <span class="s2">&quot;&lt;foldername&gt;&quot;</span> -exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
 <span class="c1"># finding and delete all files with &lt;filename&gt; and it&#39;s content</span>
@@ -703,8 +689,8 @@ which zsh
 <div class="section" id="grep">
 <h2>Grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
 <p>Grep let you search for word in files and outputs the line it was found.</p>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">grep</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">grep</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep boo /etc/passwd         <span class="c1"># search boo in for /etc/passwd</span>
 grep -r <span class="s2">&quot;192.168.1.5&quot;</span> /etc/  <span class="c1"># search recursivaly in /etc for 192.168.1.5</span>
 grep -w <span class="s2">&quot;boo&quot;</span> /path/to/file  <span class="c1"># search for word &quot;boo&quot; only</span>
@@ -712,8 +698,8 @@ grep -w <span class="s2">&quot;boo&quot;</span> /path/to/file  <span class="c1">
 </div>
 </div>
 <p>grep is also often uses in pipes to search within the output of an other command</p>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">grep pipe</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">grep pipe</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /proc/cpuinfo <span class="p">|</span> grep -i <span class="s1">&#39;Model&#39;</span> <span class="c1"># display CPU Model name</span>
 ps -x <span class="p">|</span> grep vnc
 </pre></div>
@@ -732,8 +718,8 @@ ps -x <span class="p">|</span> grep vnc
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-text">links</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">links</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln target-filename symbolic-filename    <span class="c1"># create hardlink</span>
 ln -s target-filename symbolic-filename <span class="c1"># create softlink</span>
 </pre></div>
@@ -749,8 +735,8 @@ ln -s target-filename symbolic-filename <span class="c1"># create softlink</span
 <h2>Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tar-bz2-gz">
 <h3>Tar, bz2, gz<a class="headerlink" href="#tar-bz2-gz" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-text">compress</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">compress</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar cfv name.tar /path/to/folder      <span class="c1"># Compression tar</span>
 tar xfv tarfile                       <span class="c1"># Decompression tar</span>
 
@@ -777,8 +763,8 @@ tar xfvj tarfile                      <span class="c1"># Decompression tar.bz2</
 </div>
 <div class="section" id="rar">
 <h2>RAR<a class="headerlink" href="#rar" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">compress rar</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">compress rar</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># compress and split in files of 700MB</span>
 rar a -m5 -v700m rarname folder_or_file_to_compress
 
@@ -802,8 +788,8 @@ rar e rarname
 <h2>In Outputs<a class="headerlink" href="#in-outputs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tail">
 <h3>Tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-text">tail</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">tail</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail file<span class="p">|</span>folder                <span class="c1"># give end of a file</span>
 ./executable &gt; output.txt       <span class="c1"># redirect output to a file</span>
 ./executable &gt; output.txt <span class="m">2</span>&lt;<span class="p">&amp;</span><span class="m">1</span>  <span class="c1"># redirect output to a file output 2 &amp; 1</span>
@@ -815,8 +801,8 @@ rar e rarname
 </div>
 <div class="section" id="cat">
 <h3>Cat<a class="headerlink" href="#cat" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id18">
-<div class="code-block-caption"><span class="caption-text">cat</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">cat</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; file1.txt                         <span class="c1"># To Create a new file</span>
 cat &gt;&gt; file1.txt                        <span class="c1"># To Append data into the file</span>
 cat file1.txt                           <span class="c1"># To display a file</span>
@@ -832,8 +818,8 @@ cat file1.txt file2.txt &gt; file3.txt     <span class="c1"># To cat several fil
 <p>see also <a class="reference internal" href="../../../security/gnupg.html"><span class="doc">GnuPg</span></a></p>
 <div class="section" id="files">
 <h3>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id19">
-<div class="code-block-caption"><span class="caption-text">pgp files</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">pgp files</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/user/.ssh
 pgp                             <span class="c1"># private key</span>
 pgp.pub                         <span class="c1"># public key</span>
@@ -844,8 +830,8 @@ gpg_fingerprint.txt             <span class="c1"># Infos for the gpg fingerprint
 </div>
 <div class="section" id="create-pgp-files">
 <h3>Create PGP files<a class="headerlink" href="#create-pgp-files" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id20">
-<div class="code-block-caption"><span class="caption-text">create key’s</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">create key’s</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t dsa -f filename   <span class="c1"># Create private and public key</span>
 gpg --gen-key                   <span class="c1"># Create gpg fingerprint</span>
 </pre></div>
@@ -854,8 +840,8 @@ gpg --gen-key                   <span class="c1"># Create gpg fingerprint</span>
 </div>
 <div class="section" id="gpg-privacy">
 <h3>GPG Privacy<a class="headerlink" href="#gpg-privacy" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id21">
-<div class="code-block-caption"><span class="caption-text">gpg</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">gpg</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gpg --gen-key               <span class="c1"># Create a key</span>
 gpg --export -a <span class="s2">&quot;User Name&quot;</span> &gt; public.key# Export a public key
 gpg --export-secret-key -a <span class="s2">&quot;User Name&quot;</span> &gt; private.key# Export private key
@@ -876,8 +862,8 @@ gpg -d mydata.tar.gpg           <span class="c1"># Decrypt data</span>
 <div class="section" id="ssh">
 <h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
 <p>See also the dedicated <a class="reference internal" href="ssh.html"><span class="doc">SSH page</span></a></p>
-<div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-text">ssh_config</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">ssh_config</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Edit config file</span>
 sudo vim /etc/ssh/sshd_config
 
@@ -888,8 +874,8 @@ sudo /etc/init.d/ssh restart
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-text">ssh</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">ssh</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-agent bash          <span class="c1"># start new bash agent</span>
 ssh-add privatekey      <span class="c1"># key you want to use for that session</span>
              <span class="c1"># without a given key he search for ~/.ssh/id_rsa</span>
@@ -897,8 +883,8 @@ ssh-add privatekey      <span class="c1"># key you want to use for that session<
 </div>
 </div>
 <p>Connect to another station by ssh by default a password is needed or if configured no password but with rsh keys</p>
-<div class="literal-block-wrapper docutils container" id="id24">
-<div class="code-block-caption"><span class="caption-text">ssh connection</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">ssh connection</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -p &lt;portnumber&gt; -l &lt;username&gt; server.address.com
 
 <span class="c1"># or</span>
@@ -927,8 +913,8 @@ ssh -L &lt;remoteport&gt;:localhost:&lt;localport&gt; &lt;user&gt;@&lt;hostname&
 <h2>SCP<a class="headerlink" href="#scp" title="Permalink to this headline">¶</a></h2>
 <p>Transferring file through SSH
 For these command you have to use either the PW or already bash started</p>
-<div class="literal-block-wrapper docutils container" id="id25">
-<div class="code-block-caption"><span class="caption-text">scp</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">scp</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Synchronising directories</span>
 rsync -avr -P --rsh<span class="o">=</span><span class="s1">&#39;ssh -p YYYY&#39;</span> /localpath/to/dir user@host:/remotepath/to/dir
 
