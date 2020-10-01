@@ -25,3 +25,19 @@ Find me at
 * `Github <https://github.com/tschinz>`_
 * `Flickr <https://www.flickr.com/photos/tschinz/>`_
 * `Twitter @tschinz <https://twitter.com/tschinz>`_
+
+Todo
+====
+General Todolist
+
+.. todo::
+
+   Github CI not working for PDF creation
+
+.. todo::
+
+   Missing pages from original Zawiki
+
+.. todo::
+
+   missing links to config repo

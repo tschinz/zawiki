@@ -226,10 +226,6 @@
             <a href="#with-pipenv" class="nav-link">With pipenv</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#continuous-build" class="nav-link">Continuous Build</a>
-        </li>
-    
             </ul>
         </li>
     
@@ -300,6 +296,7 @@ pip install sphinxemoji
 pip install sphinx-copybutton
 pip install nbsphinx
 pip install jupyter_sphinx
+pip install sphinx-autobuild
 </pre></div>
 </div>
 </li>
@@ -350,15 +347,18 @@ pip install jupyter_sphinx
 <li><p>Install requirements see: <a class="reference internal" href="#sphinx-requirements"><span class="std std-ref">Sphinx Requirements</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> to the git folder</p></li>
 <li><p>Generate the desired output</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make          <span class="c1"># list all the available output format</span>
-make <span class="nb">help</span>     <span class="c1"># list all the available output format</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make               <span class="c1"># list all the available output format</span>
+make <span class="nb">help</span>          <span class="c1"># list all the available output format</span>
 
-make html     <span class="c1"># for html</span>
-make latex    <span class="c1"># for latex</span>
-make latexpdf <span class="c1"># for latex (will require latexpdf installed)</span>
+make html          <span class="c1"># for html</span>
+make latex         <span class="c1"># for latex</span>
+make latexpdf      <span class="c1"># for latex (will require latexpdf installed)</span>
 
-make clean    <span class="c1"># cleans all generated file, TODO before commiting</span>
-make clean-images <span class="c1"># cleans all autogerated png and pdf files</span>
+make clean         <span class="c1"># cleans all generated file, TODO before commiting</span>
+make clean-images  <span class="c1"># cleans all autogerated png and pdf files</span>
+
+make livehtml      <span class="c1"># start a local webserver and watch files change</span>
+make openhtml      <span class="c1"># open the generated index.html in browser</span>
 </pre></div>
 </div>
 </li>
@@ -384,15 +384,18 @@ make clean-images <span class="c1"># cleans all autogerated png and pdf files</s
 </div>
 </li>
 <li><p>and then you can use <code class="docutils literal notranslate"><span class="pre">make</span></code> the usual way</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make          <span class="c1"># list all the available output format</span>
-make <span class="nb">help</span>     <span class="c1"># list all the available output format</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make               <span class="c1"># list all the available output format</span>
+make <span class="nb">help</span>          <span class="c1"># list all the available output format</span>
 
-make html     <span class="c1"># for html</span>
-make latex    <span class="c1"># for latex</span>
-make latexpdf <span class="c1"># for latex (will require latexpdf installed)</span>
+make html          <span class="c1"># for html</span>
+make latex         <span class="c1"># for latex</span>
+make latexpdf      <span class="c1"># for latex (will require latexpdf installed)</span>
 
-make clean    <span class="c1"># cleans all generated file, TODO before commiting</span>
-make clean-images <span class="c1"># cleans all autogerated png and pdf files</span>
+make clean         <span class="c1"># cleans all generated file, TODO before commiting</span>
+make clean-images  <span class="c1"># cleans all autogerated png and pdf files</span>
+
+make livehtml      <span class="c1"># start a local webserver and watch files change</span>
+make openhtml      <span class="c1"># open the generated index.html in browser</span>
 </pre></div>
 </div>
 </li>
@@ -402,11 +405,6 @@ make clean-images <span class="c1"># cleans all autogerated png and pdf files</s
 <li><p>html: <code class="docutils literal notranslate"><span class="pre">_build/html</span></code></p></li>
 <li><p>pdf &amp; tex: <code class="docutils literal notranslate"><span class="pre">_build/latex</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="continuous-build">
-<h3>Continuous Build<a class="headerlink" href="#continuous-build" title="Permalink to this headline">¶</a></h3>
-<p>During developement or creation of a page, the script <a class="reference download internal" download="" href="../_downloads/43e11a908b6d6afb0e13b55e3799a173/build-loop.bash"><code class="xref download docutils literal notranslate"><span class="pre">build-loop.bash</span></code></a> will rebuild the webpage every X seconds.
-In this way a constant preview of the page can be shown.</p>
 </div>
 </div>
 <div class="section" id="commit-to-repository">

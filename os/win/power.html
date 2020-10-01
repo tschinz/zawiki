@@ -282,7 +282,10 @@ powercfg -H off
 <p>Basically there are 2 sleep states in Windows, S1 and S3. Most of the time all you have to do is set your BIOS sleep mode to “S3 only” and it should always use S3 sleep state.
 However you could also configure Windows to force S3 sleep state to ensure that your system saves maximum power.
 While I don’t have exact figures because each PC is different, I can tell you that S1 sleep state only saves a couple of watts of power but S3 on the other hand only uses a couple watts of power and thus saves quite alot more.</p>
-<p>Enter ´´dumppo admin´´ in a console to show th current state</p>
+<p>Enter ´´dumppo admin´´ in a console to show the current state</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>dumppo admin
+</pre></div>
+</div>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>$dumppo admin
  Admin policy overrides
  Min sleep state......: S1
@@ -294,6 +297,9 @@ While I don’t have exact figures because each PC is different, I can tell you 
 </pre></div>
 </div>
 <p>Notice the minimum sleep state is S1 by default. Type the following command and press enter, “dumppo admin minsleep=S3”. You should now get the following information on the screen.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>dumppo admin minsleep=S3
+</pre></div>
+</div>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span>dumppo admin minsleep=S3
  Admin policy overrides
  Min sleep state......: S3
