@@ -41,6 +41,7 @@ Sphinx Requirements
      pip install sphinx-copybutton
      pip install nbsphinx
      pip install jupyter_sphinx
+     pip install sphinx-autobuild
 
 
 * Latex Tools (only for latex build)
@@ -85,15 +86,18 @@ Without pipenv
 
   .. code-block:: bash
 
-     make          # list all the available output format
-     make help     # list all the available output format
+     make               # list all the available output format
+     make help          # list all the available output format
 
-     make html     # for html
-     make latex    # for latex
-     make latexpdf # for latex (will require latexpdf installed)
+     make html          # for html
+     make latex         # for latex
+     make latexpdf      # for latex (will require latexpdf installed)
 
-     make clean    # cleans all generated file, TODO before commiting
-     make clean-images # cleans all autogerated png and pdf files
+     make clean         # cleans all generated file, TODO before commiting
+     make clean-images  # cleans all autogerated png and pdf files
+
+     make livehtml      # start a local webserver and watch files change
+     make openhtml      # open the generated index.html in browser
 
 With pipenv
 -----------
@@ -121,26 +125,23 @@ With pipenv
 
   .. code-block:: bash
 
-     make          # list all the available output format
-     make help     # list all the available output format
+     make               # list all the available output format
+     make help          # list all the available output format
 
-     make html     # for html
-     make latex    # for latex
-     make latexpdf # for latex (will require latexpdf installed)
+     make html          # for html
+     make latex         # for latex
+     make latexpdf      # for latex (will require latexpdf installed)
 
-     make clean    # cleans all generated file, TODO before commiting
-     make clean-images # cleans all autogerated png and pdf files
+     make clean         # cleans all generated file, TODO before commiting
+     make clean-images  # cleans all autogerated png and pdf files
+
+     make livehtml      # start a local webserver and watch files change
+     make openhtml      # open the generated index.html in browser
 
 all the outputs will be in ``_build`` folder
 
 * html: ``_build/html``
 * pdf & tex: ``_build/latex``
-
-Continuous Build
-----------------
-
-During developement or creation of a page, the script :download:`build-loop.bash </../build-loop.bash>` will rebuild the webpage every X seconds.
-In this way a constant preview of the page can be shown.
 
 Commit to Repository
 ====================

@@ -6,7 +6,7 @@ SPHINXOPTS    = -Dversion=$(shell git describe --tags)
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = _build
-OUTPUTDIR     = pdf
+OUTPUTDIR     = html
 FILENAME      = zawiki
 # IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
 IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*)))
@@ -60,7 +60,7 @@ clean-images: clean-pdf clean-png
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 #%: Makefile
-#	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+# @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: clean
 clean: clean-images
@@ -70,17 +70,30 @@ clean: clean-images
 clean-quick:
 	rm -rf $(BUILDDIR)/*
 
-.PHONY: html
-html: # images-png
+.PHONY: index
+index:
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
+
+.PHONY: html
+html: index # images-png
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-	#mkdir -p $(OUTPUTDIR)/html/
-	#cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)
+
+.PHONY: publichtml
+publichtml: index html
+	mkdir -p $(OUTPUTDIR)/html/
+	cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)
 	@echo "html files copied; the html files are in $(OUTPUTDIR)/html/."
 
+.PHONY: livehtml
+livehtml: index
+	sphinx-autobuild --port 0 --open-browser -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
+
+.PHONY: openhtml
+openhtml:
+	python -c "import os;os.system('start $(BUILDDIR)/html/index.html')"
 
 .PHONY: dirhtml
 dirhtml:
@@ -111,14 +124,14 @@ htmlhelp:
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
-	      ".hhp project file in $(BUILDDIR)/htmlhelp."
+				".hhp project file in $(BUILDDIR)/htmlhelp."
 
 .PHONY: qthelp
 qthelp:
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
-	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
+				".qhcp project file in $(BUILDDIR)/qthelp, like this:"
 	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/Example.qhcp"
 	@echo "To view the help file:"
 	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/Example.qhc"
@@ -129,8 +142,8 @@ applehelp:
 	@echo
 	@echo "Build finished. The help book is in $(BUILDDIR)/applehelp."
 	@echo "N.B. You won't be able to view it unless you put it in" \
-	      "~/Library/Documentation/Help or install it in your application" \
-	      "bundle."
+				"~/Library/Documentation/Help or install it in your application" \
+				"bundle."
 
 .PHONY: devhelp
 devhelp:
@@ -156,7 +169,7 @@ latex: images-pdf
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
-	      "(use \`make latexpdf' here to do that automatically)."
+				"(use \`make latexpdf' here to do that automatically)."
 
 .PHONY: latexpdf
 latexpdf: images-pdf
@@ -195,7 +208,7 @@ texinfo:
 	@echo
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
 	@echo "Run \`make' in that directory to run these through makeinfo" \
-	      "(use \`make info' here to do that automatically)."
+				"(use \`make info' here to do that automatically)."
 
 .PHONY: info
 info:
@@ -221,19 +234,19 @@ linkcheck:
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
-	      "or in $(BUILDDIR)/linkcheck/output.txt."
+				"or in $(BUILDDIR)/linkcheck/output.txt."
 
 .PHONY: doctest
 doctest:
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Testing of doctests in the sources finished, look at the " \
-	      "results in $(BUILDDIR)/doctest/output.txt."
+				"results in $(BUILDDIR)/doctest/output.txt."
 
 .PHONY: coverage
 coverage:
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Testing of coverage in the sources finished, look at the " \
-	      "results in $(BUILDDIR)/coverage/python.txt."
+				"results in $(BUILDDIR)/coverage/python.txt."
 
 .PHONY: xml
 xml:

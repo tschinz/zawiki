@@ -42,6 +42,7 @@ You can view the content as a:
 Known Issues / TODOs
 --------------------
 
-* Github CI not working for PDF creation
-* Missing pages from original Zawiki
-* missing links to config repo
+See also the `github issues <https://github.com/tschinz/zawiki/issues>`_ page.
+
+.. todolist::
+

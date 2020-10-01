@@ -769,6 +769,24 @@ In order to exclude some parts for a certain output use the ``.. only:: output``
 
    This is needed for the all the :ref:`writing/rst/cheatsheet:Wavedrom` code
 
+Todo
+====
+
+If the extension ``sphinx.ext.todo`` is enabled and the variable ``todo_include_todos`` is set to True in ``conf.py``,
+one can use the directive ``todo`` to write a todo task for a later completion.
+
+.. code-block::
+
+   .. todo::
+
+      (example) This section need to be completed.
+
+Then use the directive ``todolist`` to list all todos within the documentation:
+
+.. code-block::
+
+   .. todolist::
+
 GraphViz
 ========
 

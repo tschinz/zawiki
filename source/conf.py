@@ -228,6 +228,9 @@ offline_wavedrom_js_path = "_static/js/wavedrom.min.js"
 # Option for linkcheck
 linkcheck_anchors=False
 
+# Activate todo within the documentation (extension sphinx.ext.todo)
+todo_include_todos = True
+
 # -- RST Epilog ----------------------------------------------------------
 rst_epilog = """
 .. |folder| image:: /img/icons/folder.*

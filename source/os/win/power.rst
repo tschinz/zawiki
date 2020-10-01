@@ -31,7 +31,11 @@ Basically there are 2 sleep states in Windows, S1 and S3. Most of the time all y
 However you could also configure Windows to force S3 sleep state to ensure that your system saves maximum power.
 While I don't have exact figures because each PC is different, I can tell you that S1 sleep state only saves a couple of watts of power but S3 on the other hand only uses a couple watts of power and thus saves quite alot more.
 
-Enter ´´dumppo admin´´ in a console to show th current state
+Enter ´´dumppo admin´´ in a console to show the current state
+
+.. code-block:: bat
+
+   dumppo admin
 
 .. code-block:: bat
 
@@ -45,6 +49,10 @@ Enter ´´dumppo admin´´ in a console to show th current state
     Max spindown timeout.: -1
 
 Notice the minimum sleep state is S1 by default. Type the following command and press enter, "dumppo admin minsleep=S3". You should now get the following information on the screen.
+
+.. code-block:: bat
+
+   dumppo admin minsleep=S3
 
 .. code-block:: bat
 
