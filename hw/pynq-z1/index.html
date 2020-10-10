@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xilinx PYNQ-Z1 &#8212; Zawiki</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -55,11 +55,11 @@
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
 <div class="container-xl">
 
-    
     <a class="navbar-brand" href="../../index.html">
-      <img src="../../_static/logo.svg" class="logo" alt="logo">
-    </a>
     
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -138,36 +138,32 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar">
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
+    <div class="bd-toc-item active">
+    
   
-
-  <ul class="nav bd-sidenav">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
-
-</nav>
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
           </div>
           
 
@@ -205,7 +201,17 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#ip-address" class="nav-link">IP Address</a>
+            <a href="#ip-address" class="nav-link">IP Address</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#ethernet" class="nav-link">Ethernet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#wifi" class="nav-link">Wifi</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
@@ -216,7 +222,7 @@
             <a href="#access" class="nav-link">Access</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
-            <a href="#ethernet" class="nav-link">Ethernet</a>
+            <a href="#id1" class="nav-link">Ethernet</a>
         </li>
     
         <li class="nav-item toc-entry toc-h4">
@@ -331,6 +337,8 @@ shutdown -r now
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hostname -I
 </pre></div>
 </div>
+<div class="section" id="ethernet">
+<h4>Ethernet<a class="headerlink" href="#ethernet" title="Permalink to this headline">¶</a></h4>
 <p>Change Static IP Address</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/eth0
 </pre></div>
@@ -354,6 +362,34 @@ shutdown -r now
 </pre></div>
 </div>
 </div>
+<div class="section" id="wifi">
+<h4>Wifi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/wlan0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+ <span class="n">wpa</span><span class="o">-</span><span class="n">ssid</span> <span class="o">&lt;</span><span class="n">ssid</span><span class="o">&gt;</span>
+ <span class="n">wpa</span><span class="o">-</span><span class="n">psk</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You can edit this file via a python cell in a notebook</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq.lib</span> <span class="kn">import</span> <span class="n">Wifi</span>
+<span class="n">port</span> <span class="o">=</span> <span class="n">Wifi</span><span class="p">()</span>
+<span class="n">port</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;wifiNetworkNameGoesHere&#39;</span><span class="p">,</span> <span class="s1">&#39;wifiNetworkPasswordGoesHere&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Activate and deactivate wifi if setup</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ifdown wlan0
+sudo ifup -v wlan0
+</pre></div>
+</div>
+<p>Check wifi connection</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iwconfig
+iw wlan0 info
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="jupyter-password">
 <h3>Jupyter Password<a class="headerlink" href="#jupyter-password" title="Permalink to this headline">¶</a></h3>
 <p>Jupyter Configuration can be found at: <code class="docutils literal notranslate"><span class="pre">/root/.jupyter/jupyter_notebook_config.py</span></code></p>
@@ -363,8 +399,8 @@ shutdown -r now
 <span class="o">&gt;</span> <span class="mi">6</span><span class="n">c2164fc2b22</span><span class="p">:</span><span class="n">ed55ecf07fc0f985ab46561483c0e888e8964ae6</span>
 </pre></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">jupyter_notebook_config.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">jupyter_notebook_config.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set jupyter notebook password hash</span>
 <span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span><span class="sa">u</span><span class="s1">&#39;sha1:6c2164fc2b22:ed55ecf07fc0f985ab46561483c0e888e8964ae6&#39;</span>
 </pre></div>
@@ -390,8 +426,8 @@ shutdown -r now
 </tr>
 </tbody>
 </table>
-<div class="section" id="ethernet">
-<h4>Ethernet<a class="headerlink" href="#ethernet" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h4>Ethernet<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>There is Jupter and Jupyterlab installed it can be accessed by the browser</p>
 <ul class="simple">
 <li><p>Jupyter Notebooks <a class="reference external" href="http://192.168.2.99">http://192.168.2.99</a> or <a class="reference external" href="pynq.local">pynq.local</a></p></li>
@@ -441,7 +477,7 @@ shutdown -r now
     </div>
 
     
-  <script src="../../_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

@@ -86,6 +86,9 @@ Get Current IP Address
 
    hostname -I
 
+Ethernet
+^^^^^^^^
+
 Change Static IP Address
 
 .. code-block:: bash
@@ -113,6 +116,41 @@ For new static IP
    iface eth0:1 inet static
    address <new-ip-address>
    netmask <new-subnew-mask>
+
+Wifi
+^^^^
+
+.. code-block:: bash
+
+   vim /etc/network/interfaces.d/wlan0
+
+.. code-block::
+
+   iface wlan0 inet dhcp
+    wpa-ssid <ssid>
+    wpa-psk <password>
+
+You can edit this file via a python cell in a notebook
+
+.. code-block:: python
+
+   from pynq.lib import Wifi
+   port = Wifi()
+   port.connect('wifiNetworkNameGoesHere', 'wifiNetworkPasswordGoesHere')
+
+Activate and deactivate wifi if setup
+
+.. code-block:: bash
+
+   sudo ifdown wlan0
+   sudo ifup -v wlan0
+
+Check wifi connection
+
+.. code-block:: bash
+
+   iwconfig
+   iw wlan0 info
 
 
 Jupyter Password
