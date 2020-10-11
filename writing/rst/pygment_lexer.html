@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pygment Lexer &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Markdown" href="../md/index.html" />
+    <link rel="prev" title="RST and Sphinx Cheatsheet" href="cheatsheet.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+            
+                <li class="">
+                    <a href="../latex/index.html">LaTeX</a>
+                </li>
+            
+          
+            
+  
+                <li class="active">
+                    <a href="index.html">ReStructuredText</a>
+                    <ul>
+                    
+                        <li class="">
+                            <a href="cheatsheet.html">RST and Sphinx Cheatsheet</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="">Pygment Lexer</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../md/index.html">Markdown</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../gitbook/index.html">GitBook</a>
+                </li>
+            
+          
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/writing/rst/pygment_lexer.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="pygment-lexer">
+<h1>Pygment Lexer<a class="headerlink" href="#pygment-lexer" title="Permalink to this headline">¶</a></h1>
+<p>List of all pygment lexer available:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abap</span>
+<span class="n">abnf</span>
+<span class="n">ada</span><span class="p">,</span> <span class="n">ada95</span><span class="p">,</span> <span class="n">ada2005</span>
+<span class="n">adl</span>
+<span class="n">agda</span>
+<span class="n">ahk</span><span class="p">,</span> <span class="n">autohotkey</span>
+<span class="n">alloy</span>
+<span class="n">ampl</span>
+<span class="n">antlr</span><span class="o">-</span><span class="k">as</span><span class="p">,</span> <span class="n">antlr</span><span class="o">-</span><span class="n">actionscript</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">cpp</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">csharp</span><span class="p">,</span> <span class="n">antlr</span><span class="o">-</span><span class="n">c</span><span class="c1">#</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">java</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">objc</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">perl</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">python</span>
+<span class="n">antlr</span><span class="o">-</span><span class="n">ruby</span><span class="p">,</span> <span class="n">antlr</span><span class="o">-</span><span class="n">rb</span>
+<span class="n">antlr</span>
+<span class="n">apacheconf</span><span class="p">,</span> <span class="n">aconf</span><span class="p">,</span> <span class="n">apache</span>
+<span class="n">apl</span>
+<span class="n">applescript</span>
+<span class="n">arduino</span>
+<span class="k">as</span><span class="p">,</span> <span class="n">actionscript</span>
+<span class="n">as3</span><span class="p">,</span> <span class="n">actionscript3</span>
+<span class="n">aspectj</span>
+<span class="n">aspx</span><span class="o">-</span><span class="n">cs</span>
+<span class="n">aspx</span><span class="o">-</span><span class="n">vb</span>
+<span class="n">asy</span><span class="p">,</span> <span class="n">asymptote</span>
+<span class="n">at</span><span class="p">,</span> <span class="n">ambienttalk</span><span class="p">,</span> <span class="n">ambienttalk</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">autoit</span>
+<span class="n">awk</span><span class="p">,</span> <span class="n">gawk</span><span class="p">,</span> <span class="n">mawk</span><span class="p">,</span> <span class="n">nawk</span>
+<span class="n">basemake</span>
+<span class="n">bash</span><span class="p">,</span> <span class="n">sh</span><span class="p">,</span> <span class="n">ksh</span><span class="p">,</span> <span class="n">shell</span>
+<span class="n">bat</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">dosbatch</span><span class="p">,</span> <span class="n">winbatch</span>
+<span class="n">bbcode</span>
+<span class="n">bc</span>
+<span class="n">befunge</span>
+<span class="n">blitzbasic</span><span class="p">,</span> <span class="n">b3d</span><span class="p">,</span> <span class="n">bplus</span>
+<span class="n">blitzmax</span><span class="p">,</span> <span class="n">bmax</span>
+<span class="n">bnf</span>
+<span class="n">boo</span>
+<span class="n">boogie</span>
+<span class="n">brainfuck</span><span class="p">,</span> <span class="n">bf</span>
+<span class="n">bro</span>
+<span class="n">bugs</span><span class="p">,</span> <span class="n">winbugs</span><span class="p">,</span> <span class="n">openbugs</span>
+<span class="n">c</span><span class="o">-</span><span class="n">objdump</span>
+<span class="n">c</span>
+<span class="n">ca65</span>
+<span class="n">cadl</span>
+<span class="n">camkes</span><span class="p">,</span> <span class="n">idl4</span>
+<span class="n">cbmbas</span>
+<span class="n">ceylon</span>
+<span class="n">cfc</span>
+<span class="n">cfengine3</span><span class="p">,</span> <span class="n">cf3</span>
+<span class="n">cfm</span>
+<span class="n">cfs</span>
+<span class="n">chai</span><span class="p">,</span> <span class="n">chaiscript</span>
+<span class="n">chapel</span><span class="p">,</span> <span class="n">chpl</span>
+<span class="n">cheetah</span><span class="p">,</span> <span class="n">spitfire</span>
+<span class="n">cirru</span>
+<span class="n">clay</span>
+<span class="n">clean</span>
+<span class="n">clojure</span><span class="p">,</span> <span class="n">clj</span>
+<span class="n">clojurescript</span><span class="p">,</span> <span class="n">cljs</span>
+<span class="n">cmake</span>
+<span class="n">cobol</span>
+<span class="n">cobolfree</span>
+<span class="n">coffee</span><span class="o">-</span><span class="n">script</span><span class="p">,</span> <span class="n">coffeescript</span><span class="p">,</span> <span class="n">coffee</span>
+<span class="n">common</span><span class="o">-</span><span class="n">lisp</span><span class="p">,</span> <span class="n">cl</span><span class="p">,</span> <span class="n">lisp</span>
+<span class="n">componentpascal</span><span class="p">,</span> <span class="n">cp</span>
+<span class="n">console</span><span class="p">,</span> <span class="n">shell</span><span class="o">-</span><span class="n">session</span>
+<span class="n">control</span><span class="p">,</span> <span class="n">debcontrol</span>
+<span class="n">coq</span>
+<span class="n">cpp</span><span class="p">,</span> <span class="n">c</span><span class="o">++</span>
+<span class="n">cpp</span><span class="o">-</span><span class="n">objdump</span><span class="p">,</span> <span class="n">c</span><span class="o">++-</span><span class="n">objdumb</span><span class="p">,</span> <span class="n">cxx</span><span class="o">-</span><span class="n">objdump</span>
+<span class="n">cpsa</span>
+<span class="n">crmsh</span><span class="p">,</span> <span class="n">pcmk</span>
+<span class="n">croc</span>
+<span class="n">cryptol</span><span class="p">,</span> <span class="n">cry</span>
+<span class="n">csharp</span><span class="p">,</span> <span class="n">c</span><span class="c1">#</span>
+<span class="n">csound</span><span class="p">,</span> <span class="n">csound</span><span class="o">-</span><span class="n">orc</span>
+<span class="n">csound</span><span class="o">-</span><span class="n">document</span><span class="p">,</span> <span class="n">csound</span><span class="o">-</span><span class="n">csd</span>
+<span class="n">csound</span><span class="o">-</span><span class="n">score</span><span class="p">,</span> <span class="n">csound</span><span class="o">-</span><span class="n">sco</span>
+<span class="n">css</span><span class="o">+</span><span class="n">django</span><span class="p">,</span> <span class="n">css</span><span class="o">+</span><span class="n">jinja</span>
+<span class="n">css</span><span class="o">+</span><span class="n">erb</span><span class="p">,</span> <span class="n">css</span><span class="o">+</span><span class="n">ruby</span>
+<span class="n">css</span><span class="o">+</span><span class="n">genshitext</span><span class="p">,</span> <span class="n">css</span><span class="o">+</span><span class="n">genshi</span>
+<span class="n">css</span><span class="o">+</span><span class="n">lasso</span>
+<span class="n">css</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">css</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">css</span><span class="o">+</span><span class="n">mozpreproc</span>
+<span class="n">css</span><span class="o">+</span><span class="n">myghty</span>
+<span class="n">css</span><span class="o">+</span><span class="n">php</span>
+<span class="n">css</span><span class="o">+</span><span class="n">smarty</span>
+<span class="n">css</span>
+<span class="n">cucumber</span><span class="p">,</span> <span class="n">gherkin</span>
+<span class="n">cuda</span><span class="p">,</span> <span class="n">cu</span>
+<span class="n">cypher</span>
+<span class="n">cython</span><span class="p">,</span> <span class="n">pyx</span><span class="p">,</span> <span class="n">pyrex</span>
+<span class="n">d</span><span class="o">-</span><span class="n">objdump</span>
+<span class="n">d</span>
+<span class="n">dart</span>
+<span class="n">delphi</span><span class="p">,</span> <span class="n">pas</span><span class="p">,</span> <span class="n">pascal</span><span class="p">,</span> <span class="n">objectpascal</span>
+<span class="n">dg</span>
+<span class="n">diff</span><span class="p">,</span> <span class="n">udiff</span>
+<span class="n">django</span><span class="p">,</span> <span class="n">jinja</span>
+<span class="n">docker</span><span class="p">,</span> <span class="n">dockerfile</span>
+<span class="n">doscon</span>
+<span class="n">dpatch</span>
+<span class="n">dtd</span>
+<span class="n">duel</span><span class="p">,</span> <span class="n">jbst</span><span class="p">,</span> <span class="n">jsonml</span><span class="o">+</span><span class="n">bst</span>
+<span class="n">dylan</span><span class="o">-</span><span class="n">console</span><span class="p">,</span> <span class="n">dylan</span><span class="o">-</span><span class="n">repl</span>
+<span class="n">dylan</span><span class="o">-</span><span class="n">lid</span><span class="p">,</span> <span class="n">lid</span>
+<span class="n">dylan</span>
+<span class="n">earl</span><span class="o">-</span><span class="n">grey</span><span class="p">,</span> <span class="n">earlgrey</span><span class="p">,</span> <span class="n">eg</span>
+<span class="n">easytrieve</span>
+<span class="n">ebnf</span>
+<span class="n">ec</span>
+<span class="n">ecl</span>
+<span class="n">eiffel</span>
+<span class="n">elixir</span><span class="p">,</span> <span class="n">ex</span><span class="p">,</span> <span class="n">exs</span>
+<span class="n">elm</span>
+<span class="n">emacs</span><span class="p">,</span> <span class="n">elisp</span><span class="p">,</span> <span class="n">emacs</span><span class="o">-</span><span class="n">lisp</span>
+<span class="n">erb</span>
+<span class="n">erl</span>
+<span class="n">erlang</span>
+<span class="n">evoque</span>
+<span class="n">extempore</span>
+<span class="n">ezhil</span>
+<span class="n">factor</span>
+<span class="n">fan</span>
+<span class="n">fancy</span><span class="p">,</span> <span class="n">fy</span>
+<span class="n">felix</span><span class="p">,</span> <span class="n">flx</span>
+<span class="n">fish</span><span class="p">,</span> <span class="n">fishshell</span>
+<span class="n">flatline</span>
+<span class="n">fortran</span>
+<span class="n">fortranfixed</span>
+<span class="n">foxpro</span><span class="p">,</span> <span class="n">vfp</span><span class="p">,</span> <span class="n">clipper</span><span class="p">,</span> <span class="n">xbase</span>
+<span class="n">fsharp</span>
+<span class="n">gap</span>
+<span class="n">gas</span><span class="p">,</span> <span class="n">asm</span>
+<span class="n">genshi</span><span class="p">,</span> <span class="n">kid</span><span class="p">,</span> <span class="n">xml</span><span class="o">+</span><span class="n">genshi</span><span class="p">,</span> <span class="n">xml</span><span class="o">+</span><span class="n">kid</span>
+<span class="n">genshitext</span>
+<span class="n">glsl</span>
+<span class="n">gnuplot</span>
+<span class="n">go</span>
+<span class="n">golo</span>
+<span class="n">gooddata</span><span class="o">-</span><span class="n">cl</span>
+<span class="n">gosu</span>
+<span class="n">groff</span><span class="p">,</span> <span class="n">nroff</span><span class="p">,</span> <span class="n">man</span>
+<span class="n">groovy</span>
+<span class="n">gst</span>
+<span class="n">haml</span>
+<span class="n">handlebars</span>
+<span class="n">haskell</span><span class="p">,</span> <span class="n">hs</span>
+<span class="n">haxeml</span><span class="p">,</span> <span class="n">hxml</span>
+<span class="n">hexdump</span>
+<span class="n">hsail</span><span class="p">,</span> <span class="n">hsa</span>
+<span class="n">html</span><span class="o">+</span><span class="n">cheetah</span><span class="p">,</span> <span class="n">html</span><span class="o">+</span><span class="n">spitfire</span><span class="p">,</span> <span class="n">htmlcheetah</span>
+<span class="n">html</span><span class="o">+</span><span class="n">django</span><span class="p">,</span> <span class="n">html</span><span class="o">+</span><span class="n">jinja</span><span class="p">,</span> <span class="n">htmldjango</span>
+<span class="n">html</span><span class="o">+</span><span class="n">evoque</span>
+<span class="n">html</span><span class="o">+</span><span class="n">genshi</span><span class="p">,</span> <span class="n">html</span><span class="o">+</span><span class="n">kid</span>
+<span class="n">html</span><span class="o">+</span><span class="n">handlebars</span>
+<span class="n">html</span><span class="o">+</span><span class="n">lasso</span>
+<span class="n">html</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">html</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">html</span><span class="o">+</span><span class="n">myghty</span>
+<span class="n">html</span><span class="o">+</span><span class="n">php</span>
+<span class="n">html</span><span class="o">+</span><span class="n">smarty</span>
+<span class="n">html</span><span class="o">+</span><span class="n">twig</span>
+<span class="n">html</span><span class="o">+</span><span class="n">velocity</span>
+<span class="n">html</span>
+<span class="n">http</span>
+<span class="n">hx</span><span class="p">,</span> <span class="n">haxe</span><span class="p">,</span> <span class="n">hxsl</span>
+<span class="n">hybris</span><span class="p">,</span> <span class="n">hy</span>
+<span class="n">hylang</span>
+<span class="n">i6t</span>
+<span class="n">idl</span>
+<span class="n">idris</span><span class="p">,</span> <span class="n">idr</span>
+<span class="n">iex</span>
+<span class="n">igor</span><span class="p">,</span> <span class="n">igorpro</span>
+<span class="n">inform6</span><span class="p">,</span> <span class="n">i6</span>
+<span class="n">inform7</span><span class="p">,</span> <span class="n">i7</span>
+<span class="n">ini</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">dosini</span>
+<span class="n">io</span>
+<span class="n">ioke</span><span class="p">,</span> <span class="n">ik</span>
+<span class="n">irc</span>
+<span class="n">isabelle</span>
+<span class="n">j</span>
+<span class="n">jade</span>
+<span class="n">jags</span>
+<span class="n">jasmin</span><span class="p">,</span> <span class="n">jasminxt</span>
+<span class="n">java</span>
+<span class="n">javascript</span><span class="o">+</span><span class="n">mozpreproc</span>
+<span class="n">jcl</span>
+<span class="n">jlcon</span>
+<span class="n">js</span><span class="o">+</span><span class="n">cheetah</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">cheetah</span><span class="p">,</span> <span class="n">js</span><span class="o">+</span><span class="n">spitfire</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">spitfire</span>
+<span class="n">js</span><span class="o">+</span><span class="n">django</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">django</span><span class="p">,</span> <span class="n">js</span><span class="o">+</span><span class="n">jinja</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">jinja</span>
+<span class="n">js</span><span class="o">+</span><span class="n">erb</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">erb</span><span class="p">,</span> <span class="n">js</span><span class="o">+</span><span class="n">ruby</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">ruby</span>
+<span class="n">js</span><span class="o">+</span><span class="n">genshitext</span><span class="p">,</span> <span class="n">js</span><span class="o">+</span><span class="n">genshi</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">genshitext</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">genshi</span>
+<span class="n">js</span><span class="o">+</span><span class="n">lasso</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">lasso</span>
+<span class="n">js</span><span class="o">+</span><span class="n">mako</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">js</span><span class="o">+</span><span class="n">mako</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">js</span><span class="o">+</span><span class="n">myghty</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">myghty</span>
+<span class="n">js</span><span class="o">+</span><span class="n">php</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">php</span>
+<span class="n">js</span><span class="o">+</span><span class="n">smarty</span><span class="p">,</span> <span class="n">javascript</span><span class="o">+</span><span class="n">smarty</span>
+<span class="n">js</span><span class="p">,</span> <span class="n">javascript</span>
+<span class="n">jsgf</span>
+<span class="n">json</span>
+<span class="n">jsonld</span><span class="p">,</span> <span class="n">json</span><span class="o">-</span><span class="n">ld</span>
+<span class="n">jsp</span>
+<span class="n">julia</span><span class="p">,</span> <span class="n">jl</span>
+<span class="n">kal</span>
+<span class="n">kconfig</span><span class="p">,</span> <span class="n">menuconfig</span><span class="p">,</span> <span class="n">linux</span><span class="o">-</span><span class="n">config</span><span class="p">,</span> <span class="n">kernel</span><span class="o">-</span><span class="n">config</span>
+<span class="n">koka</span>
+<span class="n">kotlin</span>
+<span class="n">lagda</span><span class="p">,</span> <span class="n">literate</span><span class="o">-</span><span class="n">agda</span>
+<span class="n">lasso</span><span class="p">,</span> <span class="n">lassoscript</span>
+<span class="n">lcry</span><span class="p">,</span> <span class="n">literate</span><span class="o">-</span><span class="n">cryptol</span><span class="p">,</span> <span class="n">lcryptol</span>
+<span class="n">lean</span>
+<span class="n">less</span>
+<span class="n">lhs</span><span class="p">,</span> <span class="n">literate</span><span class="o">-</span><span class="n">haskell</span><span class="p">,</span> <span class="n">lhaskell</span>
+<span class="n">lidr</span><span class="p">,</span> <span class="n">literate</span><span class="o">-</span><span class="n">idris</span><span class="p">,</span> <span class="n">lidris</span>
+<span class="n">lighty</span><span class="p">,</span> <span class="n">lighttpd</span>
+<span class="n">limbo</span>
+<span class="n">liquid</span>
+<span class="n">live</span><span class="o">-</span><span class="n">script</span><span class="p">,</span> <span class="n">livescript</span>
+<span class="n">llvm</span>
+<span class="n">logos</span>
+<span class="n">logtalk</span>
+<span class="n">lsl</span>
+<span class="n">lua</span>
+<span class="n">make</span><span class="p">,</span> <span class="n">makefile</span><span class="p">,</span> <span class="n">mf</span><span class="p">,</span> <span class="n">bsdmake</span>
+<span class="n">mako</span>
+<span class="n">mako</span>
+<span class="n">maql</span>
+<span class="n">mask</span>
+<span class="n">mason</span>
+<span class="n">mathematica</span><span class="p">,</span> <span class="n">mma</span><span class="p">,</span> <span class="n">nb</span>
+<span class="n">matlab</span>
+<span class="n">matlabsession</span>
+<span class="n">minid</span>
+<span class="n">modelica</span>
+<span class="n">modula2</span><span class="p">,</span> <span class="n">m2</span>
+<span class="n">monkey</span>
+<span class="n">moocode</span><span class="p">,</span> <span class="n">moo</span>
+<span class="n">moon</span><span class="p">,</span> <span class="n">moonscript</span>
+<span class="n">mozhashpreproc</span>
+<span class="n">mozpercentpreproc</span>
+<span class="n">mql</span><span class="p">,</span> <span class="n">mq4</span><span class="p">,</span> <span class="n">mq5</span><span class="p">,</span> <span class="n">mql4</span><span class="p">,</span> <span class="n">mql5</span>
+<span class="n">mscgen</span><span class="p">,</span> <span class="n">msc</span>
+<span class="n">mupad</span>
+<span class="n">mxml</span>
+<span class="n">myghty</span>
+<span class="n">mysql</span>
+<span class="n">nasm</span>
+<span class="n">ncl</span>
+<span class="n">nemerle</span>
+<span class="n">nesc</span>
+<span class="n">newlisp</span>
+<span class="n">newspeak</span>
+<span class="n">nginx</span>
+<span class="n">nimrod</span><span class="p">,</span> <span class="n">nim</span>
+<span class="n">nit</span>
+<span class="n">nixos</span><span class="p">,</span> <span class="n">nix</span>
+<span class="n">nsis</span><span class="p">,</span> <span class="n">nsi</span><span class="p">,</span> <span class="n">nsh</span>
+<span class="n">numpy</span>
+<span class="n">objdump</span><span class="o">-</span><span class="n">nasm</span>
+<span class="n">objdump</span>
+<span class="n">objective</span><span class="o">-</span><span class="n">c</span><span class="o">++</span><span class="p">,</span> <span class="n">objectivec</span><span class="o">++</span><span class="p">,</span> <span class="n">obj</span><span class="o">-</span><span class="n">c</span><span class="o">++</span><span class="p">,</span> <span class="n">objc</span><span class="o">++</span>
+<span class="n">objective</span><span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="n">objectivec</span><span class="p">,</span> <span class="n">obj</span><span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="n">objc</span>
+<span class="n">objective</span><span class="o">-</span><span class="n">j</span><span class="p">,</span> <span class="n">objectivej</span><span class="p">,</span> <span class="n">obj</span><span class="o">-</span><span class="n">j</span><span class="p">,</span> <span class="n">objj</span>
+<span class="n">ocaml</span>
+<span class="n">octave</span>
+<span class="n">odin</span>
+<span class="n">ooc</span>
+<span class="n">opa</span>
+<span class="n">openedge</span><span class="p">,</span> <span class="n">abl</span><span class="p">,</span> <span class="n">progress</span>
+<span class="n">pacmanconf</span>
+<span class="n">pan</span>
+<span class="n">parasail</span>
+<span class="n">pawn</span>
+<span class="n">perl</span><span class="p">,</span> <span class="n">pl</span>
+<span class="n">perl6</span><span class="p">,</span> <span class="n">pl6</span>
+<span class="n">php</span><span class="p">,</span> <span class="n">php3</span><span class="p">,</span> <span class="n">php4</span><span class="p">,</span> <span class="n">php5</span>
+<span class="n">pig</span>
+<span class="n">pike</span>
+<span class="n">pkgconfig</span>
+<span class="n">plpgsql</span>
+<span class="n">postgresql</span><span class="p">,</span> <span class="n">postgres</span>
+<span class="n">postscript</span><span class="p">,</span> <span class="n">postscr</span>
+<span class="n">pot</span><span class="p">,</span> <span class="n">po</span>
+<span class="n">pov</span>
+<span class="n">powershell</span><span class="p">,</span> <span class="n">posh</span><span class="p">,</span> <span class="n">ps1</span><span class="p">,</span> <span class="n">psm1</span>
+<span class="n">praat</span>
+<span class="n">prolog</span>
+<span class="n">properties</span><span class="p">,</span> <span class="n">jproperties</span>
+<span class="n">protobuf</span><span class="p">,</span> <span class="n">proto</span>
+<span class="n">ps1con</span>
+<span class="n">psql</span><span class="p">,</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">console</span><span class="p">,</span> <span class="n">postgres</span><span class="o">-</span><span class="n">console</span>
+<span class="n">puppet</span>
+<span class="n">py3tb</span>
+<span class="n">pycon</span>
+<span class="n">pypylog</span><span class="p">,</span> <span class="n">pypy</span>
+<span class="n">pytb</span>
+<span class="n">python</span><span class="p">,</span> <span class="n">py</span><span class="p">,</span> <span class="n">sage</span>
+<span class="n">python3</span><span class="p">,</span> <span class="n">py3</span>
+<span class="n">qbasic</span><span class="p">,</span> <span class="n">basic</span>
+<span class="n">qml</span><span class="p">,</span> <span class="n">qbs</span>
+<span class="n">qvto</span><span class="p">,</span> <span class="n">qvt</span>
+<span class="n">racket</span><span class="p">,</span> <span class="n">rkt</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">c</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">cpp</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">d</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">em</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">java</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">objc</span>
+<span class="n">ragel</span><span class="o">-</span><span class="n">ruby</span><span class="p">,</span> <span class="n">ragel</span><span class="o">-</span><span class="n">rb</span>
+<span class="n">ragel</span>
+<span class="n">raw</span>
+<span class="n">rb</span><span class="p">,</span> <span class="n">ruby</span><span class="p">,</span> <span class="n">duby</span>
+<span class="n">rbcon</span><span class="p">,</span> <span class="n">irb</span>
+<span class="n">rconsole</span><span class="p">,</span> <span class="n">rout</span>
+<span class="n">rd</span>
+<span class="n">rebol</span>
+<span class="n">red</span><span class="p">,</span> <span class="n">red</span><span class="o">/</span><span class="n">system</span>
+<span class="n">redcode</span>
+<span class="n">registry</span>
+<span class="n">resource</span><span class="p">,</span> <span class="n">resourcebundle</span>
+<span class="n">rexx</span><span class="p">,</span> <span class="n">arexx</span>
+<span class="n">rhtml</span><span class="p">,</span> <span class="n">html</span><span class="o">+</span><span class="n">erb</span><span class="p">,</span> <span class="n">html</span><span class="o">+</span><span class="n">ruby</span>
+<span class="n">roboconf</span><span class="o">-</span><span class="n">graph</span>
+<span class="n">roboconf</span><span class="o">-</span><span class="n">instances</span>
+<span class="n">robotframework</span>
+<span class="n">rql</span>
+<span class="n">rsl</span>
+<span class="n">rst</span><span class="p">,</span> <span class="n">rest</span><span class="p">,</span> <span class="n">restructuredtext</span>
+<span class="n">rts</span><span class="p">,</span> <span class="n">trafficscript</span>
+<span class="n">rust</span>
+<span class="n">sass</span>
+<span class="n">sc</span><span class="p">,</span> <span class="n">supercollider</span>
+<span class="n">scala</span>
+<span class="n">scaml</span>
+<span class="n">scheme</span><span class="p">,</span> <span class="n">scm</span>
+<span class="n">scilab</span>
+<span class="n">scss</span>
+<span class="n">shen</span>
+<span class="n">silver</span>
+<span class="n">slim</span>
+<span class="n">smali</span>
+<span class="n">smalltalk</span><span class="p">,</span> <span class="n">squeak</span><span class="p">,</span> <span class="n">st</span>
+<span class="n">smarty</span>
+<span class="n">sml</span>
+<span class="n">snobol</span>
+<span class="n">sourceslist</span><span class="p">,</span> <span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="p">,</span> <span class="n">debsources</span>
+<span class="n">sp</span>
+<span class="n">sparql</span>
+<span class="n">spec</span>
+<span class="n">splus</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">r</span>
+<span class="n">sql</span>
+<span class="n">sqlite3</span>
+<span class="n">squidconf</span><span class="p">,</span> <span class="n">squid</span><span class="o">.</span><span class="n">conf</span><span class="p">,</span> <span class="n">squid</span>
+<span class="n">ssp</span>
+<span class="n">stan</span>
+<span class="n">swift</span>
+<span class="n">swig</span>
+<span class="n">systemverilog</span><span class="p">,</span> <span class="n">sv</span>
+<span class="n">tads3</span>
+<span class="n">tap</span>
+<span class="n">tcl</span>
+<span class="n">tcsh</span><span class="p">,</span> <span class="n">csh</span>
+<span class="n">tcshcon</span>
+<span class="n">tea</span>
+<span class="n">termcap</span>
+<span class="n">terminfo</span>
+<span class="n">terraform</span><span class="p">,</span> <span class="n">tf</span>
+<span class="n">tex</span><span class="p">,</span> <span class="n">latex</span>
+<span class="n">text</span>
+<span class="n">thrift</span>
+<span class="n">todotxt</span>
+<span class="n">trac</span><span class="o">-</span><span class="n">wiki</span><span class="p">,</span> <span class="n">moin</span>
+<span class="n">treetop</span>
+<span class="n">ts</span><span class="p">,</span> <span class="n">typescript</span>
+<span class="n">turtle</span>
+<span class="n">twig</span>
+<span class="n">typoscript</span>
+<span class="n">typoscriptcssdata</span>
+<span class="n">typoscripthtmldata</span>
+<span class="n">urbiscript</span>
+<span class="n">vala</span><span class="p">,</span> <span class="n">vapi</span>
+<span class="n">vb</span><span class="o">.</span><span class="n">net</span><span class="p">,</span> <span class="n">vbnet</span>
+<span class="n">vcl</span>
+<span class="n">vclsnippets</span><span class="p">,</span> <span class="n">vclsnippet</span>
+<span class="n">vctreestatus</span>
+<span class="n">velocity</span>
+<span class="n">verilog</span><span class="p">,</span> <span class="n">v</span>
+<span class="n">vgl</span>
+<span class="n">vhdl</span>
+<span class="n">vim</span>
+<span class="n">wdiff</span>
+<span class="n">x10</span><span class="p">,</span> <span class="n">xten</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">cheetah</span><span class="p">,</span> <span class="n">xml</span><span class="o">+</span><span class="n">spitfire</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">django</span><span class="p">,</span> <span class="n">xml</span><span class="o">+</span><span class="n">jinja</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">erb</span><span class="p">,</span> <span class="n">xml</span><span class="o">+</span><span class="n">ruby</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">evoque</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">lasso</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">mako</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">myghty</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">php</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">smarty</span>
+<span class="n">xml</span><span class="o">+</span><span class="n">velocity</span>
+<span class="n">xml</span>
+<span class="n">xquery</span><span class="p">,</span> <span class="n">xqy</span><span class="p">,</span> <span class="n">xq</span><span class="p">,</span> <span class="n">xql</span><span class="p">,</span> <span class="n">xqm</span>
+<span class="n">xslt</span>
+<span class="n">xtend</span>
+<span class="n">xul</span><span class="o">+</span><span class="n">mozpreproc</span>
+<span class="n">yaml</span><span class="o">+</span><span class="n">jinja</span><span class="p">,</span> <span class="n">salt</span><span class="p">,</span> <span class="n">sls</span>
+<span class="n">yaml</span>
+<span class="n">zephir</span>
+</pre></div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

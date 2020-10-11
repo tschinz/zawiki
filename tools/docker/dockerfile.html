@@ -333,95 +333,95 @@
 </thead>
 <tbody>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">FROM</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>FROM ubuntu:18.04
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">ubuntu:18.04</span>
 </pre></div>
 </div>
 </td>
 <td><p>It will set the base image of the container.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">LABEL</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>LABEL <span class="nv">ENV</span><span class="o">=</span>”DEVELOPMENT”
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">LABEL</span> <span class="nv">ENV</span><span class="o">=</span>”DEVELOPMENT”
 </pre></div>
 </div>
 </td>
 <td><p>It is a key-value pair used to specify metadata information of the image.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">RUN</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RUN apt-get update
-RUN apt-get install tomcat
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">RUN</span> apt-get update
+<span class="k">RUN</span> apt-get install tomcat
 </pre></div>
 </div>
 </td>
 <td><p>It is used to execute the command on the base image and it will create a new layer.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">CMD</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CMD <span class="o">[</span>“java”, “-jar”, “app.jar”<span class="o">]</span>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span>CMD [“java”, “-jar”, “app.jar”]
 </pre></div>
 </div>
 </td>
 <td><p>It is used to set a command to execute first when the container starts.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">EXPOSE</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>EXPOSE <span class="m">8080</span>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">EXPOSE</span><span class="s"> 8080</span>
 </pre></div>
 </div>
 </td>
 <td><p>It will expose the port to access the container. Container will listen on this network port. We can access the output using this port.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">MAINTAINER</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>MAINTAINER maintainer@email.com
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">MAINTAINER</span><span class="s"> maintainer@email.com</span>
 </pre></div>
 </div>
 </td>
 <td><p>It will give the detail of the author who created this Docker image.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ENV</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ENV <span class="nv">DB_NAME</span><span class="o">=</span>”MySQL”
-ENV <span class="nv">DB_VERSION</span><span class="o">=</span>”8.0”
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">ENV</span> <span class="nv">DB_NAME</span><span class="o">=</span>”MySQL”
+<span class="k">ENV</span> <span class="nv">DB_VERSION</span><span class="o">=</span>”8.0”
 </pre></div>
 </div>
 </td>
 <td><p>It is used to set environment variables in the key-value pair. These variables are set during the image build and are available after container created.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">COPY</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>COPY /target/plantuml.jar plantuml.jar
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">COPY</span> /target/plantuml.jar plantuml.jar
 </pre></div>
 </div>
 </td>
 <td><p>It is used to copy local files to the container.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ADD file.tar.xz / .
-ADD http://url.com/git.git /usr/local/folder/
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">ADD</span> file.tar.xz / .
+<span class="k">ADD</span> http://url.com/git.git /usr/local/folder/
 </pre></div>
 </div>
 </td>
 <td><p>It works same as copy but having some more feature like we can extract local tar and add remote URL.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ENTRYPOINT <span class="o">[</span>“java”, “-jar”, “app.jar”<span class="o">]</span>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span>ENTRYPOINT [“java”, “-jar”, “app.jar”]
 </pre></div>
 </div>
 </td>
 <td><p>It is used to set the main command for the image. It works as same as <code class="docutils literal notranslate"><span class="pre">CMD</span></code> instruction. The only difference between <code class="docutils literal notranslate"><span class="pre">CMD</span></code> and <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code> is instructions are not overwritten in <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code>.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">VOLUME</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VOLUME /app/folder
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">VOLUME</span><span class="s"> /app/folder</span>
 </pre></div>
 </div>
 </td>
 <td><p>It will creates a mount point with the specified name.</p></td>
 </tr>
 <tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">USER</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>USER user
-USER admin
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">USER</span><span class="s"> user</span>
+<span class="k">USER</span><span class="s"> admin</span>
 </pre></div>
 </div>
 </td>
 <td><p>It will sets the user name and user group to use when running the image.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">WORKDIR</span></code></p></th>
-<td><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>WORKDIR /var/lib/
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">WORKDIR</span><span class="s"> /var/lib/</span>
 </pre></div>
 </div>
 </td>
@@ -431,7 +431,7 @@ USER admin
 </table>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">ubuntu:latest</span>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">ubuntu:latest</span>
 <span class="k">MAINTAINER</span><span class="s"> Prename Name &quot;user@email.com&quot;s</span>
 <span class="k">RUN</span> apt-get install -y software-properties-common python
 <span class="k">RUN</span> add-apt-repository ppa:chris-lea/node.js

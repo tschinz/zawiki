@@ -603,6 +603,8 @@ Code
 
 see also: https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html and https://pygments.org/languages/
 
+For all available lexer see: :doc:`pygment_lexer`
+
 .. code-block:: ReST
 
    .. code-block:: python
