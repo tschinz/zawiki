@@ -226,6 +226,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#hyper-v" class="nav-link">Hyper-V</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#bat-script" class="nav-link">Bat Script</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
@@ -285,6 +289,16 @@
 <div class="section" id="get-win-license-key">
 <h2>Get Win License Key<a class="headerlink" href="#get-win-license-key" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>wmic path softwarelicensingservice get OA3xOriginalProductKey
+</pre></div>
+</div>
+</div>
+<div class="section" id="hyper-v">
+<h2>Hyper-V<a class="headerlink" href="#hyper-v" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: enable</span>
+bcdedit /set hypervisorlaunchtype auto
+
+<span class="p">:</span><span class="c1">: disable</span>
+bcdedit /set hypervisorlaunchtype off
 </pre></div>
 </div>
 </div>

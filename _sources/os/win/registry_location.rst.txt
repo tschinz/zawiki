@@ -9,6 +9,14 @@ Login
 
    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 
+For Autologin use the following entries
+
+.. code-block:: bat
+
+   AutoAdminLogon = "1"
+   DefaultUserName = <Username>
+   DefaultPassword = <Password>
+
 DateTime
 ========
 

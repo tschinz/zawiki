@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Container &#8212; Zawiki</title>
+    <title>docker cmd &#8212; Zawiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Jupyter" href="../jupyter/index.html" />
-    <link rel="prev" title="docker cmd" href="container.html" />
+    <link rel="next" title="Dockerfile" href="dockerfile.html" />
+    <link rel="prev" title="Basics" href="basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -168,11 +168,15 @@
                     <ul>
                     
                         <li class="">
-                            <a href="container.html">docker cmd</a>
+                            <a href="basics.html">Basics</a>
                         </li>
                     
                         <li class="active">
-                            <a href="">Container</a>
+                            <a href="">docker cmd</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="dockerfile.html">Dockerfile</a>
                         </li>
                     
                     </ul>
@@ -268,9 +272,24 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#pull" class="nav-link">Pull</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#build" class="nav-link">Build</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#run" class="nav-link">Run</a>
+        </li>
     
     </ul>
 </nav>
@@ -292,8 +311,39 @@
               
               <div>
                 
-  <div class="section" id="container">
-<h1>Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="docker-cmd">
+<h1><cite>docker</cite> cmd<a class="headerlink" href="#docker-cmd" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pull">
+<h2>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
+<p>Get a docker image from dockerhub</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull Ubuntu
+</pre></div>
+</div>
+</div>
+<div class="section" id="build">
+<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<p>To build an image from the Dockerfile, simply run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t dockerfile .
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please mind the dot <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p>
+<p>As per the above command, Docker will start to build images automatically by reading the instructions from the Dockerfile saved in the current working directory.</p>
+</div>
+<p>If the Dockerfile is saved in somewhere else, you can mention its path using <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag like below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -f /path/to/a/Dockerfile .
+</pre></div>
+</div>
+</div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<p>Run a docker image already pulled or build can be run with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it dockerfile
+docker run -it -d -p <span class="m">8080</span>:8080 ubuntu
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/javascript">

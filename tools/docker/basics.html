@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jupyter &#8212; Zawiki</title>
+    <title>Basics &#8212; Zawiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Common Functions" href="common_functions.html" />
-    <link rel="prev" title="Dockerfile" href="../docker/dockerfile.html" />
+    <link rel="next" title="docker cmd" href="docker_cmd.html" />
+    <link rel="prev" title="Docker" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -162,38 +162,30 @@
             
           
             
-                <li class="">
-                    <a href="../docker/index.html">Docker</a>
+  
+                <li class="active">
+                    <a href="index.html">Docker</a>
+                    <ul>
+                    
+                        <li class="active">
+                            <a href="">Basics</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="docker_cmd.html">docker cmd</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="dockerfile.html">Dockerfile</a>
+                        </li>
+                    
+                    </ul>
                 </li>
             
           
             
-  
-                <li class="active">
-                    <a href="">Jupyter</a>
-                    <ul>
-                    
-                        <li class="">
-                            <a href="common_functions.html">Common Functions</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="convert.html">Jupyter Converts</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="general.html">General</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="install_plotly_dash.html">Plotly Dash</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="installation.html">Installation</a>
-                        </li>
-                    
-                    </ul>
+                <li class="">
+                    <a href="../jupyter/index.html">Jupyter</a>
                 </li>
             
           
@@ -280,9 +272,32 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#containers" class="nav-link">Containers</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#images" class="nav-link">Images</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#dockerfiles" class="nav-link">Dockerfiles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#volumes" class="nav-link">Volumes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#port-forwarding" class="nav-link">Port Forwarding</a>
+        </li>
     
     </ul>
 </nav>
@@ -290,7 +305,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/jupyter/index.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/tools/docker/basics.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -304,20 +319,36 @@
               
               <div>
                 
-  <div class="section" id="jupyter">
-<h1>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo39.svg"><img alt="../../_images/logo39.svg" src="../../_images/logo39.svg" width="300px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo34.svg"><img alt="../../_images/logo34.svg" src="../../_images/logo34.svg" width="70%" /></a>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common_functions.html">Common Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="convert.html">Jupyter Converts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_plotly_dash.html">Plotly Dash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-</ul>
+<div class="section" id="containers">
+<h2>Containers<a class="headerlink" href="#containers" title="Permalink to this headline">¶</a></h2>
+<p>Imagine you’d like run a command isolated from everything else on the system. It should only access exactly the resources it is allowed to (storage, CPU, memory), and does not know there is anything else on the machine. The process running inside a container thinks it’s the only one and only sees a barebones Linux distro the stuff which is described in the image.</p>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>An image, is a blueprint from which an arbitrary number of brand-new containers can be started. Images can’t change, but you can start a container from an image, perform operations in it and save another image based on the latest state of the container. No “currently running commands” are saved in an image. When you start a container it’s a bit like booting up a machine after it was powered down.</p>
+<p>It’s like a powered down computer (with software installed), which is ready to be executed with a single command. Only instead of starting the computer, you create a new one from scratch (container) which looks exactly like the one you chose (image).</p>
+<p>When starting a container from an image, you usually don’t rely on the defaults being right - you provide arguments to the command being executed, mount volumes (directories with data) with your own data and configurations and wire up the container to the network of the host in a way which suits you.</p>
+</div>
+<div class="section" id="dockerfiles">
+<h2>Dockerfiles<a class="headerlink" href="#dockerfiles" title="Permalink to this headline">¶</a></h2>
+<p>See also  <a class="reference internal" href="dockerfile.html"><span class="doc">Dockerfile</span></a></p>
+<p>A Dockerfile is a set of precise instructions, stating how to create a new Docker image, setting defaults for containers being run based on it and a bit more. In the best case it’s going to create the same image for anybody running it at any point in time.</p>
+<p>Dockerfiles can be seen as the instructions to set up a project - but in executable code. A script which installs the operating system, all necessary parts and makes sure that everything else is in place too.</p>
+<p>In a Dockerfile, you usually choose what image to take as the “starting point” for further operation (<code class="docutils literal notranslate"><span class="pre">FROM</span></code>), you can execute commands (starting containers from the image of the previous step, executing it, and saving the result as the most-recent image) (<code class="docutils literal notranslate"><span class="pre">RUN</span></code>) and copy local files into the new image (<code class="docutils literal notranslate"><span class="pre">COPY</span></code>). Usually, you also specify a default command to run (<code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code>) and the default arguments (<code class="docutils literal notranslate"><span class="pre">CMD</span></code>) when starting a container from this image.</p>
+</div>
+<div class="section" id="volumes">
+<h2>Volumes<a class="headerlink" href="#volumes" title="Permalink to this headline">¶</a></h2>
+<p>But having data persist is really useful. That’s where volumes come in. When starting a Docker container, you can specify that certain directories are mount points for either local directories (of the host machine), or for volumes. Data written to host-mounted directories is straightforward to understand (as you know where it is), volumes are for having persistent or shared data, but you don’t have to know anything about the host when using them. You can create a volume, Docker makes sure that it’s there and saved somewhere on the host system.</p>
+<p>When a container exits, the volumes it was using stick around. So if you start a second container, telling it to use the same volumes, it will have all the data of the previous one. You can manage containers using Docker commands (to remove them for example). Docker compose makes dealing with volumes even easier.</p>
+</div>
+<div class="section" id="port-forwarding">
+<h2>Port Forwarding<a class="headerlink" href="#port-forwarding" title="Permalink to this headline">¶</a></h2>
+<p>By default, a container is not accessible by other containers, nor from the outside world. However, you can tell Docker to expose a container port to a port of the host machine (either the 127.0.0.1 interface or an external one).</p>
 </div>
 </div>
 
