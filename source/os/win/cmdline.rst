@@ -11,6 +11,18 @@ Get Win License Key
 
    wmic path softwarelicensingservice get OA3xOriginalProductKey
 
+
+Hyper-V
+========
+
+.. code-block:: bat
+
+   :: enable
+   bcdedit /set hypervisorlaunchtype auto
+
+   :: disable
+   bcdedit /set hypervisorlaunchtype off
+
 ``Bat`` Script
 ==============
 

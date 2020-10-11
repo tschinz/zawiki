@@ -25,13 +25,21 @@ Additional Information
 * `Docker <https://www.docker.com/>`_ - Official Docker page
 * `Dockerhub <https://hub.docker.com/>`_ - For community docker container images
 
+Switch between Hyper-V and VirtualBox
+=====================================
+
+In order to "quickly" switch between them use the commands below. But a restart if necessary in any case.
+
+
+
 Docker for Windows and VirtualBox
 =================================
 
 Docker for Windows requires two Windows features activated:
 
-* `Hyper-V`
-* `Windows Hypervisor Plattform`
+* ``Hyper-V``
+* ``Virtual Machine Platform``
+* ``Windows Hypervisor Platform``
 
 .. figure:: img/windows_features.*
    :align: center
@@ -41,7 +49,7 @@ Once activate normal Virtualbox images don't work anymore because the default Ty
 Luckily since Virtualbox v6.0 you can select Hyper-V as default Hypervisor for any image.
 
 .. important::
-   When run Virtualbox image run under Hyper-V there is a significant performance penalty.
+   When run Virtualbox image run under Hyper-V there is a significant performance penalty. (practically unusable)
 
 .. figure:: img/virtualbox_settings.*
    :align: center
