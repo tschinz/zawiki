@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Overlays" href="overlays.html" />
+    <link rel="prev" title="Xilinx PYNQ-Z1" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../writing/index.html">Writing</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#hostname" class="nav-link">Hostname</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ip-address" class="nav-link">IP Address</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ethernet" class="nav-link">Ethernet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#wifi" class="nav-link">Wifi</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyter" class="nav-link">Jupyter</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#configuration" class="nav-link">Configuration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#jupyter-password" class="nav-link">Jupyter Password</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#service" class="nav-link">Service</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/hw/pynq-z1/general.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="general">
+<h1>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hostname">
+<h2>Hostname<a class="headerlink" href="#hostname" title="Permalink to this headline">¶</a></h2>
+<p>The default hostname is <code class="docutils literal notranslate"><span class="pre">pynq</span></code>. To change the hostname of the board use to following command and restart the board:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get current hostname</span>
+hostname
+<span class="c1"># Change hostname</span>
+pynq_hostname.sh &lt;NEW HOSTNAME&gt;
+<span class="c1"># restart</span>
+shutdown -r now
+</pre></div>
+</div>
+</div>
+<div class="section" id="ip-address">
+<h2>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this headline">¶</a></h2>
+<p>Get Current IP Address</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hostname -I
+</pre></div>
+</div>
+<div class="section" id="ethernet">
+<h3>Ethernet<a class="headerlink" href="#ethernet" title="Permalink to this headline">¶</a></h3>
+<p>Change Static IP Address</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/eth0
+</pre></div>
+</div>
+<p>For DHCP</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+
+<span class="n">auto</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">iface</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span> <span class="n">inet</span> <span class="n">dhcp</span>
+</pre></div>
+</div>
+<p>For new static IP</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">eth0</span>
+<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+
+<span class="n">auto</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">iface</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span> <span class="n">inet</span> <span class="n">static</span>
+<span class="n">address</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">ip</span><span class="o">-</span><span class="n">address</span><span class="o">&gt;</span>
+<span class="n">netmask</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">subnew</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wifi">
+<h3>Wifi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/wlan0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
+ <span class="n">wpa</span><span class="o">-</span><span class="n">ssid</span> <span class="o">&lt;</span><span class="n">ssid</span><span class="o">&gt;</span>
+ <span class="n">wpa</span><span class="o">-</span><span class="n">psk</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You can edit this file via a python cell in a notebook</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq.lib</span> <span class="kn">import</span> <span class="n">Wifi</span>
+<span class="n">port</span> <span class="o">=</span> <span class="n">Wifi</span><span class="p">()</span>
+<span class="n">port</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;wifiNetworkNameGoesHere&#39;</span><span class="p">,</span> <span class="s1">&#39;wifiNetworkPasswordGoesHere&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Activate and deactivate wifi if setup</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ifdown wlan0
+sudo ifup -v wlan0
+</pre></div>
+</div>
+<p>Check wifi connection</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iwconfig
+iw wlan0 info
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="jupyter">
+<h2>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter Configuration can be found at:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/root/.jupyter/jupyter_notebook_config.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="jupyter-password">
+<h3>Jupyter Password<a class="headerlink" href="#jupyter-password" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Password hash</span>
+<span class="kn">from</span> <span class="nn">IPython.lib</span> <span class="kn">import</span> <span class="n">passwd</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">(</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="mi">6</span><span class="n">c2164fc2b22</span><span class="p">:</span><span class="n">ed55ecf07fc0f985ab46561483c0e888e8964ae6</span>
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">jupyter_notebook_config.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set jupyter notebook password hash</span>
+<span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span><span class="sa">u</span><span class="s1">&#39;sha1:6c2164fc2b22:ed55ecf07fc0f985ab46561483c0e888e8964ae6&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="service">
+<h3>Service<a class="headerlink" href="#service" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter is started automatically by a <code class="docutils literal notranslate"><span class="pre">systemctl</span></code> service. The start script can be found at</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">start_jupyter</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo systemctl status jupyter.service
+sudo systemctl start jupyter.service
+sudo systemctl stop jupyter.service
+</pre></div>
+</div>
+<p>In case of problems the log file of <code class="docutils literal notranslate"><span class="pre">systemctl</span></code> can be access with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo journalctl -u jupyter.service
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">jupyter</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Overlays" href="overlays.html" />
+    <link rel="next" title="General" href="general.html" />
     <link rel="prev" title="Hardware" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -197,32 +197,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#hostname" class="nav-link">Hostname</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#ip-address" class="nav-link">IP Address</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#ethernet" class="nav-link">Ethernet</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#wifi" class="nav-link">Wifi</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#jupyter-password" class="nav-link">Jupyter Password</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
             <a href="#access" class="nav-link">Access</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
-            <a href="#id1" class="nav-link">Ethernet</a>
+            <a href="#ethernet" class="nav-link">Ethernet</a>
         </li>
     
         <li class="nav-item toc-entry toc-h4">
@@ -267,6 +245,7 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Content</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overlays.html">Overlays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pynq-package.html"><code class="docutils literal notranslate"><span class="pre">pynq</span></code> Package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
@@ -319,96 +298,9 @@ shutdown -r now
 <img alt="../../_images/pynqz1_setup.jpg" src="../../_images/pynqz1_setup.jpg" />
 </div>
 </div>
-<div class="section" id="hostname">
-<h3>Hostname<a class="headerlink" href="#hostname" title="Permalink to this headline">¶</a></h3>
-<p>The default hostname is <code class="docutils literal notranslate"><span class="pre">pynq</span></code>. To change the hostname of the board use to following command and restart the board:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get current hostname</span>
-hostname
-<span class="c1"># Change hostname</span>
-pynq_hostname.sh &lt;NEW HOSTNAME&gt;
-<span class="c1"># restart</span>
-shutdown -r now
-</pre></div>
-</div>
-</div>
-<div class="section" id="ip-address">
-<h3>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this headline">¶</a></h3>
-<p>Get Current IP Address</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hostname -I
-</pre></div>
-</div>
-<div class="section" id="ethernet">
-<h4>Ethernet<a class="headerlink" href="#ethernet" title="Permalink to this headline">¶</a></h4>
-<p>Change Static IP Address</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/eth0
-</pre></div>
-</div>
-<p>For DHCP</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">eth0</span>
-<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
-
-<span class="n">auto</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span>
-<span class="n">iface</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span> <span class="n">inet</span> <span class="n">dhcp</span>
-</pre></div>
-</div>
-<p>For new static IP</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">eth0</span>
-<span class="n">iface</span> <span class="n">eth0</span> <span class="n">inet</span> <span class="n">dhcp</span>
-
-<span class="n">auto</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span>
-<span class="n">iface</span> <span class="n">eth0</span><span class="p">:</span><span class="mi">1</span> <span class="n">inet</span> <span class="n">static</span>
-<span class="n">address</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">ip</span><span class="o">-</span><span class="n">address</span><span class="o">&gt;</span>
-<span class="n">netmask</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">subnew</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="wifi">
-<h4>Wifi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /etc/network/interfaces.d/wlan0
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iface</span> <span class="n">wlan0</span> <span class="n">inet</span> <span class="n">dhcp</span>
- <span class="n">wpa</span><span class="o">-</span><span class="n">ssid</span> <span class="o">&lt;</span><span class="n">ssid</span><span class="o">&gt;</span>
- <span class="n">wpa</span><span class="o">-</span><span class="n">psk</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>You can edit this file via a python cell in a notebook</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynq.lib</span> <span class="kn">import</span> <span class="n">Wifi</span>
-<span class="n">port</span> <span class="o">=</span> <span class="n">Wifi</span><span class="p">()</span>
-<span class="n">port</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;wifiNetworkNameGoesHere&#39;</span><span class="p">,</span> <span class="s1">&#39;wifiNetworkPasswordGoesHere&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Activate and deactivate wifi if setup</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ifdown wlan0
-sudo ifup -v wlan0
-</pre></div>
-</div>
-<p>Check wifi connection</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iwconfig
-iw wlan0 info
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="jupyter-password">
-<h3>Jupyter Password<a class="headerlink" href="#jupyter-password" title="Permalink to this headline">¶</a></h3>
-<p>Jupyter Configuration can be found at: <code class="docutils literal notranslate"><span class="pre">/root/.jupyter/jupyter_notebook_config.py</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Password hash</span>
-<span class="kn">from</span> <span class="nn">IPython.lib</span> <span class="kn">import</span> <span class="n">passwd</span>
-<span class="n">password</span> <span class="o">=</span> <span class="n">passwd</span><span class="p">(</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span>
-<span class="o">&gt;</span> <span class="mi">6</span><span class="n">c2164fc2b22</span><span class="p">:</span><span class="n">ed55ecf07fc0f985ab46561483c0e888e8964ae6</span>
-</pre></div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">jupyter_notebook_config.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set jupyter notebook password hash</span>
-<span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span><span class="sa">u</span><span class="s1">&#39;sha1:6c2164fc2b22:ed55ecf07fc0f985ab46561483c0e888e8964ae6&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="access">
 <h3>Access<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h3>
+<p>By default access is grated with the following account</p>
 <table class="table">
 <colgroup>
 <col style="width: 29%" />
@@ -426,8 +318,8 @@ iw wlan0 info
 </tr>
 </tbody>
 </table>
-<div class="section" id="id1">
-<h4>Ethernet<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="ethernet">
+<h4>Ethernet<a class="headerlink" href="#ethernet" title="Permalink to this headline">¶</a></h4>
 <p>There is Jupter and Jupyterlab installed it can be accessed by the browser</p>
 <ul class="simple">
 <li><p>Jupyter Notebooks <a class="reference external" href="http://192.168.2.99">http://192.168.2.99</a> or <a class="reference external" href="pynq.local">pynq.local</a></p></li>
