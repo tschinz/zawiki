@@ -41,9 +41,9 @@ Important Linux Commands
    # Restart
    shutdown -r now
 
-
 Xilinx Zynq FPGA
 ----------------
+
 The core of a PYNQ Board is a Xilinx ZYNQ-7000 SoC.
 
 * :zawiki_repo:`Zynq-7000 Soc Reference Manual <blob/master/source/boards/pynq-z1/docs/ug585-Zynq-7000-TRM.pdf>`
@@ -54,6 +54,7 @@ The core of a PYNQ Board is a Xilinx ZYNQ-7000 SoC.
 
 Start
 -----
+
 Program the `SDCard image <http://www.pynq.io/board.html>`_ with `Rufus <https://rufus.ie/>`_
 
 * **JP5** Power Selection  Set to USB
@@ -62,117 +63,10 @@ Program the `SDCard image <http://www.pynq.io/board.html>`_ with `Rufus <https:/
 .. figure:: img/pynqz1_setup.*
    :align: center
 
-
-Hostname
---------
-
-The default hostname is ``pynq``. To change the hostname of the board use to following command and restart the board:
-
-.. code-block:: bash
-
-   # Get current hostname
-   hostname
-   # Change hostname
-   pynq_hostname.sh <NEW HOSTNAME>
-   # restart
-   shutdown -r now
-
-IP Address
-----------
-
-Get Current IP Address
-
-.. code-block:: bash
-
-   hostname -I
-
-Ethernet
-^^^^^^^^
-
-Change Static IP Address
-
-.. code-block:: bash
-
-   vim /etc/network/interfaces.d/eth0
-
-For DHCP
-
-.. code-block::
-
-   auto eth0
-   iface eth0 inet dhcp
-
-   auto eth0:1
-   iface eth0:1 inet dhcp
-
-For new static IP
-
-.. code-block::
-
-   auto eth0
-   iface eth0 inet dhcp
-
-   auto eth0:1
-   iface eth0:1 inet static
-   address <new-ip-address>
-   netmask <new-subnew-mask>
-
-Wifi
-^^^^
-
-.. code-block:: bash
-
-   vim /etc/network/interfaces.d/wlan0
-
-.. code-block::
-
-   iface wlan0 inet dhcp
-    wpa-ssid <ssid>
-    wpa-psk <password>
-
-You can edit this file via a python cell in a notebook
-
-.. code-block:: python
-
-   from pynq.lib import Wifi
-   port = Wifi()
-   port.connect('wifiNetworkNameGoesHere', 'wifiNetworkPasswordGoesHere')
-
-Activate and deactivate wifi if setup
-
-.. code-block:: bash
-
-   sudo ifdown wlan0
-   sudo ifup -v wlan0
-
-Check wifi connection
-
-.. code-block:: bash
-
-   iwconfig
-   iw wlan0 info
-
-
-Jupyter Password
-----------------
-
-Jupyter Configuration can be found at: ``/root/.jupyter/jupyter_notebook_config.py``
-
-.. code-block:: python
-
-   # Create Password hash
-   from IPython.lib import passwd
-   password = passwd("secret")
-   > 6c2164fc2b22:ed55ecf07fc0f985ab46561483c0e888e8964ae6
-
-.. code-block:: python
-   :caption: jupyter_notebook_config.py
-
-   # Set jupyter notebook password hash
-   c.NotebookApp.password =u'sha1:6c2164fc2b22:ed55ecf07fc0f985ab46561483c0e888e8964ae6'
-
 Access
 ------
+
+By default access is grated with the following account
 
 +----------+------------+------------+
 | Hostname | User       | Password   |
@@ -190,6 +84,7 @@ There is Jupter and Jupyterlab installed it can be accessed by the browser
 
 USB
 ^^^
+
 USB Serial Terminal can be accessed via putta via the microUSB interface. Terminal Settings are:
 
   * Speed : ``115200 baud``
@@ -200,6 +95,7 @@ USB Serial Terminal can be accessed via putta via the microUSB interface. Termin
 
 Samba
 ^^^^^
+
 Samba, a file sharing service, is running on the board. This allows you to access the Pynq home area as a network drive, to transfer files to and from the board.
 
 .. code-block:: bash
