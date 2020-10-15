@@ -25,11 +25,33 @@ Additional Information
 * `Docker <https://www.docker.com/>`_ - Official Docker page
 * `Dockerhub <https://hub.docker.com/>`_ - For community docker container images
 
+Windows vs Linux Containers
+===========================
+
+You cannot run Linux and Windows container at the same time. You have to choose and switch between them.
+
+.. list-table::
+   :align: center
+
+   * - .. figure:: img/windows_containers.*
+
+     - .. figure:: img/linux_containers.*
+
+
 Switch between Hyper-V and VirtualBox
 =====================================
 
 In order to "quickly" switch between them use the commands below. But a restart if necessary in any case.
 
+.. code-block::
+   :caption: Hyper-V Disable
+
+   bcdedit /set hypervisorlaunchtype off
+
+.. code-block::
+   :caption: Hyper-V Enable
+
+   bcdedit /set hypervisorlaunchtype auto
 
 
 Docker for Windows and VirtualBox
