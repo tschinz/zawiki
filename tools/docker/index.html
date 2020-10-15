@@ -288,6 +288,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#windows-vs-linux-containers" class="nav-link">Windows vs Linux Containers</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#switch-between-hyper-v-and-virtualbox" class="nav-link">Switch between Hyper-V and VirtualBox</a>
         </li>
     
@@ -340,9 +344,42 @@
 <li><p><a class="reference external" href="https://hub.docker.com/">Dockerhub</a> - For community docker container images</p></li>
 </ul>
 </div>
+<div class="section" id="windows-vs-linux-containers">
+<h2>Windows vs Linux Containers<a class="headerlink" href="#windows-vs-linux-containers" title="Permalink to this headline">¶</a></h2>
+<p>You cannot run Linux and Windows container at the same time. You have to choose and switch between them.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-default">
+<img alt="../../_images/windows_containers.png" src="../../_images/windows_containers.png" />
+</div>
+</td>
+<td><div class="figure align-default">
+<img alt="../../_images/linux_containers.png" src="../../_images/linux_containers.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="switch-between-hyper-v-and-virtualbox">
 <h2>Switch between Hyper-V and VirtualBox<a class="headerlink" href="#switch-between-hyper-v-and-virtualbox" title="Permalink to this headline">¶</a></h2>
 <p>In order to “quickly” switch between them use the commands below. But a restart if necessary in any case.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Hyper-V Disable</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bcdedit</span> <span class="o">/</span><span class="nb">set</span> <span class="n">hypervisorlaunchtype</span> <span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Hyper-V Enable</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bcdedit</span> <span class="o">/</span><span class="nb">set</span> <span class="n">hypervisorlaunchtype</span> <span class="n">auto</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="docker-for-windows-and-virtualbox">
 <h2>Docker for Windows and VirtualBox<a class="headerlink" href="#docker-for-windows-and-virtualbox" title="Permalink to this headline">¶</a></h2>

@@ -280,6 +280,10 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#list" class="nav-link">List</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#pull" class="nav-link">Pull</a>
         </li>
     
@@ -313,10 +317,29 @@
                 
   <div class="section" id="docker-cmd">
 <h1><cite>docker</cite> cmd<a class="headerlink" href="#docker-cmd" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>List all currently existing docker images</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker images
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">output</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+docker101tutorial       latest              ef9eb5245be8        <span class="m">4</span> days ago          <span class="m">27</span>.5MB
+alpine/git              latest              94f8849864da        <span class="m">3</span> weeks ago         <span class="m">28</span>.4MB
+continuumio/anaconda3   latest              472a925c4385        <span class="m">7</span> weeks ago         <span class="m">2</span>.73GB
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="pull">
 <h2>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
 <p>Get a docker image from dockerhub</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull Ubuntu
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull &lt;containername&gt;:&lt;tag&gt;
+
+docker pull ubuntu:latest
+docker pull ubuntu:20.10
 </pre></div>
 </div>
 </div>
