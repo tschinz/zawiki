@@ -167,6 +167,7 @@ Create an empty environment
 .. code-block:: bash
 
    conda create -n <envname>
+   conda create -n <envname> python=3.6.5
 
 Rename
 ------
