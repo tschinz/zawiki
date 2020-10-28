@@ -1,0 +1,115 @@
+=========
+Mosquitto
+=========
+
+.. figure:: img/mosquitto.*
+   :align: center
+   :width: 40%
+
+Eclipse Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.
+
+The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.
+
+The Mosquitto project also provides a C library for implementing MQTT clients, and the very popular mosquitto_pub and mosquitto_sub command line MQTT clients.
+
+For more information see https://mosquitto.org
+
+Installation
+============
+
+.. code-block:: bash
+
+   sudo apt-get install mosquitto
+   sudo apt-get install mosquitto-clients
+
+Usage
+=====
+
+.. code-block:: bash
+
+   sudo service mosquitto stop
+
+.. code-block:: bash
+
+   sudo service mosquitto start
+
+Configuration
+=============
+
+Default configuration can be found at:
+
+.. code-block:: bash
+
+   /etc/mosquitto/mosquitto.conf
+
+Example config file can be found at:
+
+.. code-block:: bash
+
+   /usr/share/doc/mosquitto/examples/mosquitto.conf.example
+
+Custom config file needs to be placed at
+
+.. code-block:: bash
+sudo
+   /etc/mosquitto/conf.d/
+
+Password file
+=============
+
+Create a new password file
+
+.. code-block:: bash
+
+   # Create empty password file
+   touch /etc/mosquitto/mosquitto_passwd
+   # Fill password file
+   mosquitto_passwd -c /etc/mosquitto/mosquitto_passwd username password
+
+To add a new user to the existing password file use:
+
+.. code-block:: bash
+
+   mosquitto_passwd -b /etc/mosquitto/mosquitto_passwd username password
+
+For activating the passwordfile you need to create a custom config file ``/etc/mosquitto/conf.d/mosquitto.conf`` and att the following lines:
+
+.. code-block:: bash
+
+   allow_anonymous false
+   password_file /etc/mosquitto/mosquitto_passwd
+
+
+Python example
+==============
+
+Install the ``paho-mqtt`` library
+
+.. code-block:: bash
+
+   sudo pip3 install paho-mqtt
+
+.. code-block:: python
+
+   import paho.mqtt.client as mqtt
+
+   # connection callback
+   def on_connect(client, userdata, flags, rc):
+      print("Connected with result code " + str(rc))
+
+   # message received callback
+   def on_message(client, userdata, msg):
+      print(msg.topic + " " + str(msg.payload))
+      client.publish("/out", "received an input...")
+
+   # set up the client
+   client = mqtt.Client()
+   client.on_connect = on_connect
+   client.on_message = on_message
+   client.connect("mqtt.eclipse.org", 1883, 60) # address ip, port number, keep alive
+
+   # subscribe
+   client.subscribe("/in")
+
+   # process the MQTT business
+   client.loop_forever()
