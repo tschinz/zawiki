@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Power &#8212; Zawiki</title>
+    <title>WSL &#8212; Zawiki</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Registry" href="registry_location.html" />
-    <link rel="prev" title="Group Policies" href="group_policies.html" />
+    <link rel="next" title="Tools" href="../../tools/index.html" />
+    <link rel="prev" title="Registry" href="registry_location.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -177,16 +177,16 @@
                             <a href="group_policies.html">Group Policies</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="">Power</a>
+                        <li class="">
+                            <a href="power.html">Power</a>
                         </li>
                     
                         <li class="">
                             <a href="registry_location.html">Registry</a>
                         </li>
                     
-                        <li class="">
-                            <a href="wsl.html">WSL</a>
+                        <li class="active">
+                            <a href="">WSL</a>
                         </li>
                     
                     </ul>
@@ -226,11 +226,11 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#powercfg" class="nav-link">powercfg</a>
+            <a href="#additional-information" class="nav-link">Additional Information</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#dumppo" class="nav-link">´´dumppo´´</a>
+            <a href="#commands" class="nav-link">Commands</a>
         </li>
     
     </ul>
@@ -239,7 +239,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/win/power.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/win/wsl.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -253,61 +253,25 @@
               
               <div>
                 
-  <div class="section" id="power">
-<h1>Power<a class="headerlink" href="#power" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="powercfg">
-<h2><code class="docutils literal notranslate"><span class="pre">powercfg</span></code><a class="headerlink" href="#powercfg" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: List available powerstates</span>
-powercfg /devicequery /?
-
-<span class="p">:</span><span class="c1">: Lists devices be able to wake up the pc from sleep</span>
-powercfg /devicequery wake_programmable
-
-<span class="p">:</span><span class="c1">: Generates energy report</span>
-powercfg energy
-
-<span class="p">:</span><span class="c1">: Lists all available powerstates</span>
-powercfg -a
-
-<span class="p">:</span><span class="c1">: Last wakeup device</span>
-powercfg -lastwake
-
-<span class="p">:</span><span class="c1">: Turn of Hibernation (in admin console)</span>
-powercfg -H off
-</pre></div>
+  <div class="section" id="wsl">
+<h1>WSL<a class="headerlink" href="#wsl" title="Permalink to this headline">¶</a></h1>
+<p>WSL means Windows Subsystem for Linux.</p>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/">https://docs.microsoft.com/en-us/windows/wsl/</a></p></li>
+</ul>
 </div>
-</div>
-<div class="section" id="dumppo">
-<h2>´´dumppo´´<a class="headerlink" href="#dumppo" title="Permalink to this headline">¶</a></h2>
-<p>Basically there are 2 sleep states in Windows, S1 and S3. Most of the time all you have to do is set your BIOS sleep mode to “S3 only” and it should always use S3 sleep state.
-However you could also configure Windows to force S3 sleep state to ensure that your system saves maximum power.
-While I don’t have exact figures because each PC is different, I can tell you that S1 sleep state only saves a couple of watts of power but S3 on the other hand only uses a couple watts of power and thus saves quite alot more.</p>
-<p>Enter ´´dumppo admin´´ in a console to show the current state</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>dumppo admin
-</pre></div>
-</div>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>$dumppo admin
- Admin policy overrides
- Min sleep state......: S1
- Max sleep state......: S4 - hibernate
- Min video timeout....: 0
- Max video timeout....: -1
- Min spindown timeout.: 0
- Max spindown timeout.: -1
-</pre></div>
-</div>
-<p>Notice the minimum sleep state is S1 by default. Type the following command and press enter, “dumppo admin minsleep=S3”. You should now get the following information on the screen.</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>dumppo admin minsleep=S3
-</pre></div>
-</div>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span>dumppo admin minsleep=S3
- Admin policy overrides
- Min sleep state......: S3
- Max sleep state......: S4 - hibernate
- Min video timeout....: 0
- Max video timeout....: -1
- Min spindown timeout.: 0
- Max spindown timeout.: -1
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shows images available on wsl including version</span>
+wsl -l -v
+
+<span class="c1"># change wsl image to version 2</span>
+wsl --set-version &lt;distro-name&gt; <span class="m">2</span>
+
+<span class="c1"># set all new images to wsl version 2</span>
+wsl --set-default-version <span class="m">2</span>
 </pre></div>
 </div>
 </div>
