@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tools &#8212; Zawiki</title>
+    <title>Mosquitto &#8212; Zawiki</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Apache" href="apache.html" />
-    <link rel="prev" title="Scripts" href="../scripts/general.html" />
+    <link rel="next" title="Raid" href="raid.html" />
+    <link rel="prev" title="Let’s Encrypt" href="lets_encrypt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -162,7 +162,7 @@
                         </li>
                     
                         <li class="active">
-                            <a href="">Tools</a>
+                            <a href="index.html">Tools</a>
                         </li>
                     
                         <li class="">
@@ -218,9 +218,32 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#installation" class="nav-link">Installation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#usage" class="nav-link">Usage</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#configuration" class="nav-link">Configuration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#password-file" class="nav-link">Password file</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#python-example" class="nav-link">Python example</a>
+        </li>
     
     </ul>
 </nav>
@@ -228,7 +251,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/linux/tools/index.rst">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/os/linux/tools/mosquitto.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -242,27 +265,99 @@
               
               <div>
                 
-  <div class="section" id="tools">
-<h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="mosquitto">
+<h1>Mosquitto<a class="headerlink" href="#mosquitto" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../../_images/logo14.svg"><img alt="../../../_images/logo14.svg" src="../../../_images/logo14.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../../_images/mosquitto.svg"><img alt="../../../_images/mosquitto.svg" src="../../../_images/mosquitto.svg" width="40%" /></a>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hw_sensors.html">Hardware Sensors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lets_encrypt.html">Let’s Encrypt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mosquitto.html">Mosquitto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="raid.html">Raid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shairport.html">Shairport</a></li>
-<li class="toctree-l1"><a class="reference internal" href="subsonic.html">Subsonic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systemd.html">Systemd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim.html">VIM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vnc.html">VNC Remote Control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vpn.html">VPN Virtual Private Network</a></li>
-</ul>
+<p>Eclipse Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.</p>
+<p>The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.</p>
+<p>The Mosquitto project also provides a C library for implementing MQTT clients, and the very popular mosquitto_pub and mosquitto_sub command line MQTT clients.</p>
+<p>For more information see <a class="reference external" href="https://mosquitto.org">https://mosquitto.org</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo service mosquitto stop
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo service mosquitto start
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Default configuration can be found at:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/etc/mosquitto/mosquitto.conf
+</pre></div>
+</div>
+<p>Example config file can be found at:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/share/doc/mosquitto/examples/mosquitto.conf.example
+</pre></div>
+</div>
+<p>Custom config file needs to be placed at</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>sudo</dt><dd><p>/etc/mosquitto/conf.d/</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="password-file">
+<h2>Password file<a class="headerlink" href="#password-file" title="Permalink to this headline">¶</a></h2>
+<p>Create a new password file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create empty password file</span>
+touch /etc/mosquitto/mosquitto_passwd
+<span class="c1"># Fill password file</span>
+mosquitto_passwd -c /etc/mosquitto/mosquitto_passwd username password
+</pre></div>
+</div>
+<p>To add a new user to the existing password file use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mosquitto_passwd -b /etc/mosquitto/mosquitto_passwd username password
+</pre></div>
+</div>
+<p>For activating the passwordfile you need to create a custom config file <code class="docutils literal notranslate"><span class="pre">/etc/mosquitto/conf.d/mosquitto.conf</span></code> and att the following lines:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>allow_anonymous <span class="nb">false</span>
+password_file /etc/mosquitto/mosquitto_passwd
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-example">
+<h2>Python example<a class="headerlink" href="#python-example" title="Permalink to this headline">¶</a></h2>
+<p>Install the <code class="docutils literal notranslate"><span class="pre">paho-mqtt</span></code> library</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pip3 install paho-mqtt
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paho.mqtt.client</span> <span class="k">as</span> <span class="nn">mqtt</span>
+
+<span class="c1"># connection callback</span>
+<span class="k">def</span> <span class="nf">on_connect</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">userdata</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">rc</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connected with result code &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rc</span><span class="p">))</span>
+
+<span class="c1"># message received callback</span>
+<span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">userdata</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">topic</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">payload</span><span class="p">))</span>
+   <span class="n">client</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;/out&quot;</span><span class="p">,</span> <span class="s2">&quot;received an input...&quot;</span><span class="p">)</span>
+
+<span class="c1"># set up the client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">mqtt</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="n">client</span><span class="o">.</span><span class="n">on_connect</span> <span class="o">=</span> <span class="n">on_connect</span>
+<span class="n">client</span><span class="o">.</span><span class="n">on_message</span> <span class="o">=</span> <span class="n">on_message</span>
+<span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;mqtt.eclipse.org&quot;</span><span class="p">,</span> <span class="mi">1883</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span> <span class="c1"># address ip, port number, keep alive</span>
+
+<span class="c1"># subscribe</span>
+<span class="n">client</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;/in&quot;</span><span class="p">)</span>
+
+<span class="c1"># process the MQTT business</span>
+<span class="n">client</span><span class="o">.</span><span class="n">loop_forever</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 </div>
 
