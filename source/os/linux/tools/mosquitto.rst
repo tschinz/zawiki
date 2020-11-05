@@ -51,7 +51,7 @@ Example config file can be found at:
 Custom config file needs to be placed at
 
 .. code-block:: bash
-sudo
+
    /etc/mosquitto/conf.d/
 
 Password file
