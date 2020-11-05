@@ -45,7 +45,7 @@ A typical Dockerfile contains the following instructions.
 
      - It is used to execute the command on the base image and it will create a new layer.
    * - ``CMD``
-     - .. code-block:: dockerfile
+     - .. code-block::
 
           CMD [“java”, “-jar”, “app.jar”]
 
@@ -83,7 +83,7 @@ A typical Dockerfile contains the following instructions.
 
      - It works same as copy but having some more feature like we can extract local tar and add remote URL.
    * - ``ENTRYPOINT``
-     - .. code-block:: dockerfile
+     - .. code-block::
 
           ENTRYPOINT [“java”, “-jar”, “app.jar”]
 

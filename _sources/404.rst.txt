@@ -1,0 +1,10 @@
+:orphan:
+
+=======================
+This page was not found
+=======================
+
+.. figure:: img/404.png
+   :align: center
+   :alt: 404 Page not found
+   :width: 80%
