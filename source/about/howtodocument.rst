@@ -11,7 +11,7 @@ Every main section has its own folder structure and its own ``img/`` folder cont
 
 This documentation uses a recursive index tree: every folder have a special :download:`index.rst` file that tell sphinx witch file, and in what order put it in the documentation tree.
 
-If you don't have enough knowledge about ReStructuredText then you can also use the `pandoc translator <https://pandoc.org/try/>`_ or use the internal :doc:`Cheatsheet </writing/rst/cheatsheet>`
+If you don't have enough knowledge about ReStructuredText then you can also use the `pandoc translator <https://pandoc.org/try/>`_ or use the internal :doc:`Cheatsheet </multimedia/writing/rst/cheatsheet>`
 
 New Documentation Section
 =========================

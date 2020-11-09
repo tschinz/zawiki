@@ -195,6 +195,36 @@ Assign
    .. wavedrom::
 
       { assign:[
+        ["b3", "g3"],
+        ['a', ["=", "a"]],
+        [['tspan', {'text-decoration':'overline'},'a'], ["~", "a"]],
+        ["and", ["&", "a", "b"]],
+        ["nand", ["~&", "a", "b"]],
+        ["or", ["|", "a", "b"]],
+        ["nor", ["~|", "a", "b"]],
+        ["xor", ["^", "a", "b"]],
+        ["nxor", ["~^", "a", "b"]],
+      ]}
+
+.. code-block:: javascript
+
+   { assign:[
+     ["b3", "g3"],
+     ['a', ["=", "a"]],
+     [['tspan', {'text-decoration':'overline'},'a'], ["~", "a"]],
+     ["and", ["&", "a", "b"]],
+     ["nand", ["~&", "a", "b"]],
+     ["or", ["|", "a", "b"]],
+     ["nor", ["~|", "a", "b"]],
+     ["xor", ["^", "a", "b"]],
+     ["nxor", ["~^", "a", "b"]],
+   ]}
+
+.. only:: html or draft
+
+   .. wavedrom::
+
+      { assign:[
         ["out",
           ["|",
             ["&", ["~", "a"], "b"],

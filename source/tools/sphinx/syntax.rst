@@ -6,7 +6,7 @@ This is a small cheat sheet with the most used syntax either ReST or SPHINX espe
 
 For more information see also:
 
-* :doc:`/writing/rst/cheatsheet`
+* :doc:`/multimedia/writing/rst/cheatsheet`
 * :doc:`Python Docstrings </programming/python/docstring>`
 
 Module Documentation

@@ -17,7 +17,7 @@ Multimedia
   * :doc:`Pantuml Wiki </multimedia/pictures/plantuml>` and `Official Plantuml <https://plantuml.com/>`_ |linux| |mac| |win|
   * `Graphviz <https://graphviz.org/>`_ |linux| |mac| |win|
   * :doc:`Wavedrom Wiki </multimedia/pictures/wavedrom>` and `Official Wavedrom <https://wavedrom.com/>`_ |linux| |mac| |win|
-  * Latex :doc:`Wiki </writing/latex/index>` |linux| |mac| |win|
+  * Latex :doc:`Wiki </multimedia/writing/latex/index>` |linux| |mac| |win|
 
 Internet
 ========

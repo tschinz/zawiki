@@ -34,20 +34,15 @@
    programming/swift/index
    programming/licenses/index
 
+   computerscience/index
+   computerscience/datascience/index
+
    hw/index
    hw/pynq-z1/index
-
-   writing/latex/index
-   writing/rst/index
-   writing/md/index
-   writing/gitbook/index
 
    multimedia/index
    security/index
    about/index
-
-.. Not Fit for Latex
-   writing/emoji/index
 
 ====================================
 Welcome to Zawiki Knowledge Database
@@ -66,7 +61,7 @@ Site purpose and structure
 Getting started
 ---------------
 
-Want to try it for yourself? Then jump to the :doc:`getting started <about/getting_started>` page and have fun, but first you need to learn :doc:`ReStructured Text <writing/rst/cheatsheet>` !!!
+Want to try it for yourself? Then jump to the :doc:`getting started <about/getting_started>` page and have fun, but first you need to learn :doc:`ReStructured Text <multimedia/writing/rst/cheatsheet>` !!!
 
 You can view the content as a:
 
