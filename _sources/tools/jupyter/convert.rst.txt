@@ -55,7 +55,7 @@ Convert to html
 Convert to pdf
 --------------
 
-needs Latex installed see: :doc:`LaTeX </writing/latex/install>`
+needs Latex installed see: :doc:`LaTeX </multimedia/writing/latex/install>`
 
 .. code-block:: bash
 

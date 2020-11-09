@@ -19,8 +19,8 @@ This Repo is a collection of markdown and ReStructuredText pages. Here you can f
    os/index
    tools/index
    programming/index
+   computerscience/index
    hw/index
-   writing/index
    multimedia/index
    security/index
    about/index
@@ -31,7 +31,7 @@ Site purpose and structure
 Getting started
 ---------------
 
-Want to try it for yourself? Then jump to the :doc:`getting started <about/getting_started>` page and have fun, but first you need to learn :doc:`ReStructured Text <writing/rst/cheatsheet>` !!!
+Want to try it for yourself? Then jump to the :doc:`getting started <about/getting_started>` page and have fun, but first you need to learn :doc:`ReStructured Text <multimedia/writing/rst/cheatsheet>` !!!
 
 You can view the content as a:
 

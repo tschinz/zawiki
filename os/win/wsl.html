@@ -81,11 +81,11 @@
         </li>
         
         <li class="nav-item ">
-            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
         </li>
         
         <li class="nav-item ">
-            <a class="nav-link" href="../../writing/index.html">Writing</a>
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
         </li>
         
         <li class="nav-item ">
@@ -233,6 +233,10 @@
             <a href="#commands" class="nav-link">Commands</a>
         </li>
     
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#cmder" class="nav-link">Cmder</a>
+        </li>
+    
     </ul>
 </nav>
 
@@ -255,7 +259,12 @@
                 
   <div class="section" id="wsl">
 <h1>WSL<a class="headerlink" href="#wsl" title="Permalink to this headline">¶</a></h1>
-<p>WSL means Windows Subsystem for Linux.</p>
+<p>WSL means Windows Subsystem for Linux. There are two version available, this page is dedicated to <code class="docutils literal notranslate"><span class="pre">wsl2`</span></code>.</p>
+<p>Once wsl is installed new Linux distributions can be installed on the Windows Store.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/windows_store_ubuntu.png"><img alt="../../_images/windows_store_ubuntu.png" src="../../_images/windows_store_ubuntu.png" style="width: 30%;" /></a>
+</div>
+<p>In addition docker for windows also runs on <code class="docutils literal notranslate"><span class="pre">wsl2</span></code> see more informations <a class="reference internal" href="../../tools/docker/index.html"><span class="doc">Docker</span></a></p>
 <div class="section" id="additional-information">
 <h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -272,6 +281,25 @@ wsl --set-version &lt;distro-name&gt; <span class="m">2</span>
 
 <span class="c1"># set all new images to wsl version 2</span>
 wsl --set-default-version <span class="m">2</span>
+
+<span class="c1"># start linux shell</span>
+wsl
+
+<span class="c1"># start specific distributions</span>
+wsl --distribution Ubuntu-20.04
+</pre></div>
+</div>
+</div>
+<div class="section" id="cmder">
+<h2>Cmder<a class="headerlink" href="#cmder" title="Permalink to this headline">¶</a></h2>
+<p>wsl can be easily integrated into cmder.</p>
+<p>Settings <img alt="arrow-right" src="../../_images/arrow-right.svg" /> Startup <img alt="arrow-right" src="../../_images/arrow-right.svg" /> Tasks</p>
+<p>Task for open wsl shell</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>wsl -cur_console:pm:/mnt
+</pre></div>
+</div>
+<p>Task for open specific distribution</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>wsl --distribution Ubuntu-20.04 -cur_console:pm:/mnt
 </pre></div>
 </div>
 </div>

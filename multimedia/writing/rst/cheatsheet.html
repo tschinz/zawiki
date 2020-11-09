@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RST and Sphinx Cheatsheet &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/default.js"></script>
+    <script src="../../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Pygment Lexer" href="pygment_lexer.html" />
+    <link rel="prev" title="ReStructuredText" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../../index.html">
+    
+      <img src="../../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../../index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../../about/index.html">About</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://github.com/tschinz/config">Config repo<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+            
+  
+                <li class="active">
+                    <a href="../index.html">Writing</a>
+                    <ul>
+                    
+                        <li class="active">
+                            <a href="index.html">ReStructuredText</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="../md/index.html">Markdown</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="../gitbook/index.html">GitBook</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="../latex/index.html">LaTeX</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../../text/index.html">Text</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../../pictures/index.html">Pictures</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../../videos/index.html">Videos</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="../../audio/index.html">Audio</a>
+                </li>
+            
+          
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#table-of-content" class="nav-link">Table of content</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#titles" class="nav-link">Titles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#markup" class="nav-link">Markup</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#links" class="nav-link">Links</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#external-links" class="nav-link">External Links</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#internet" class="nav-link">Internet</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#other-repo-s" class="nav-link">Other Repo’s</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#other-sphinx-pages" class="nav-link">Other Sphinx Pages</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#internal-links" class="nav-link">Internal Links</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#link-to-titles" class="nav-link">Link to Titles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#internal-references" class="nav-link">Internal References</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#file-links" class="nav-link">File Links</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#images" class="nav-link">Images</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#image-placement" class="nav-link">Image Placement</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#side-by-side-images" class="nav-link">Side-by-Side Images</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#inline-images" class="nav-link">Inline Images</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#predefined-images" class="nav-link">Predefined Images</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#lists" class="nav-link">Lists</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#tables" class="nav-link">Tables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#code" class="nav-link">Code</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#infoboxes" class="nav-link">Infoboxes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#special-formatting" class="nav-link">Special Formatting</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#math" class="nav-link">Math</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#exclude" class="nav-link">Exclude</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#todo" class="nav-link">Todo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#graphviz" class="nav-link">GraphViz</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#wavedrom" class="nav-link">Wavedrom</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#timing-diagrams" class="nav-link">Timing Diagrams</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#register" class="nav-link">Register</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#plantuml" class="nav-link">PlantUML</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/multimedia/writing/rst/cheatsheet.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="rst-and-sphinx-cheatsheet">
+<h1>RST and Sphinx Cheatsheet<a class="headerlink" href="#rst-and-sphinx-cheatsheet" title="Permalink to this headline">¶</a></h1>
+<p>In this page you will get a quick overview about the most used syntax.</p>
+<div class="section" id="table-of-content">
+<h2>Table of content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
+<p>To include a table of content of all title in a page use</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> :local:
+</pre></div>
+</div>
+</div>
+<div class="section" id="titles">
+<h2>Titles<a class="headerlink" href="#titles" title="Permalink to this headline">¶</a></h2>
+<p>The lines have to be as long or longer than the text.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="gh">=============</span>
+<span class="gh">Section Title</span>
+<span class="gh">=============</span>
+
+<span class="gh">Titles</span>
+<span class="gh">======</span>
+
+<span class="gh">Paragraph</span>
+<span class="gh">---------</span>
+
+<span class="gh">Sub-Pragraph</span>
+<span class="gh">^^^^^^^^^^^^</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="markup">
+<h2>Markup<a class="headerlink" href="#markup" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">emphasis</span><span class="o">*</span>
+</pre></div>
+</div>
+</td>
+<td><p><em>emphasis</em></p></td>
+</tr>
+<tr class="row-even"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">strong</span> <span class="n">emphasis</span><span class="o">**</span>
+</pre></div>
+</div>
+</td>
+<td><p><strong>strong emphasis</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`interpreted text`
+</pre></div>
+</div>
+</td>
+<td><p>The rendering and meaning of interpreted text
+is domain- or application-dependent.</p></td>
+</tr>
+<tr class="row-even"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``inline literal``
+</pre></div>
+</div>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literal</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">markup</span><span class="p">:</span>
+</pre></div>
+</div>
+</td>
+<td><dl class="field-list simple">
+<dt class="field-odd">markup</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">quote</span> <span class="n">markup</span>
+</pre></div>
+</div>
+</td>
+<td><p>&gt; quote markup</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="external-links">
+<h3>External Links<a class="headerlink" href="#external-links" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="internet">
+<h4>Internet<a class="headerlink" href="#internet" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="s">`python </span><span class="si">&lt;http://www.python.org/&gt;</span><span class="s">`_</span>
+<span class="s">`&lt;http://www.python.org/&gt;`_</span>
+http://www.python.org/
+</pre></div>
+</div>
+<p><a class="reference external" href="http://www.python.org/">python</a></p>
+<p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
+<p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
+</div>
+<div class="section" id="other-repo-s">
+<h4>Other Repo’s<a class="headerlink" href="#other-repo-s" title="Permalink to this headline">¶</a></h4>
+<p>The plugin <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.extlinks</span></code> allows creating shortcuts</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extlinks</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;config_repo&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://github.com/tschinz/config/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s1">&#39;zawiki_repo&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://github.com/tschinz/zawiki/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+           <span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>:config_repo:<span class="nv">`jupyter folder &lt;tree/master/config/jupyter&gt;`</span>
+:config_repo:<span class="nv">`shell script &lt;blob/master/scripts/shell/christmas_tree.sh&gt;`</span>
+:zawiki_repo:<span class="nv">`zawiki link &lt;blob/master/source/conf.py&gt;`</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter folder</a>
+<a class="reference external" href="https://github.com/tschinz/config/blob/master/scripts/shell/christmas_tree.sh">shell script</a>
+<a class="reference external" href="https://github.com/tschinz/zawiki/blob/master/source/conf.py">conf.py file</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To access github files and folders you need to create the following link structure:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://">https://</a> + <code class="docutils literal notranslate"><span class="pre">github_repo_link</span></code> + <code class="docutils literal notranslate"><span class="pre">tree/master/</span></code> + <code class="docutils literal notranslate"><span class="pre">folder/location</span></code></p></li>
+<li><p><a class="reference external" href="https://">https://</a> + <code class="docutils literal notranslate"><span class="pre">github_repo_link</span></code> + <code class="docutils literal notranslate"><span class="pre">blob/master/</span></code> + <code class="docutils literal notranslate"><span class="pre">file/location.txt</span></code></p></li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Link to a pdf</strong></p>
+<p><a class="reference external" href="https://nbviewer.jupyter.org">https://nbviewer.jupyter.org</a> can be used to display a pdf from github without using the <code class="docutils literal notranslate"><span class="pre">:download</span></code> directive.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf
+
+<span class="na">:pdfviewer:</span><span class="nv">`github/tschinz/zawiki/blob/master/pdf/zawiki.pdf`</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf">https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf</a></p>
+<p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf">https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf</a></p>
+</div>
+</div>
+<div class="section" id="other-sphinx-pages">
+<h4>Other Sphinx Pages<a class="headerlink" href="#other-sphinx-pages" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>absolute link from root
+<a class="reference internal" href="../../../about/index.html"><span class="doc">About</span></a></p></li>
+<li><p>relative link from document location
+<a class="reference internal" href="../../../about/index.html"><span class="doc">About</span></a></p></li>
+</ul>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> absolute link from root
+  <span class="na">:doc:</span><span class="nv">`/about/index`</span>
+
+<span class="m">*</span> relative link from document location
+  <span class="na">:doc:</span><span class="nv">`../../../about/index`</span>
+</pre></div>
+</div>
+<p>In order to link to another subheader in another document you need to use <a class="reference internal" href="#internal-references"><span class="std std-ref">Internal References</span></a>.</p>
+<p>In the page to be jumped to add <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_ref_name:</span></code>, and then you can:</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`ref_name`</span>
+<span class="na">:ref:</span><span class="nv">`link title&lt;ref_name&gt;`</span>
+</pre></div>
+</div>
+<p>Like so:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../about/getting_started.html#sphinx-doc"><span class="std std-ref">How to use Sphinx Documentation</span></a></p></li>
+<li><p><a class="reference internal" href="../../../about/getting_started.html#sphinx-doc"><span class="std std-ref">Sphinx Doc Link</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="internal-links">
+<h3>Internal Links<a class="headerlink" href="#internal-links" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="link-to-titles">
+<h4>Link to Titles<a class="headerlink" href="#link-to-titles" title="Permalink to this headline">¶</a></h4>
+<p>Link to titles directly is done with the extension <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You need to add the <code class="docutils literal notranslate"><span class="pre">folder_name</span></code> and <code class="docutils literal notranslate"><span class="pre">subfolder(s)`_name</span></code> name as well as <code class="docutils literal notranslate"><span class="pre">file_name</span></code> without <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension in order to reference a section title.
+This avoids the duplicated label warning.</p>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`Displayname &lt;folder_name/subfolder_name/file_name/section_title&gt;`</span>
+</pre></div>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`Back to top &lt;multimedia/writing/rst/cheatsheet:RST and Sphinx Cheatsheet&gt;`</span>
+
+<span class="na">:ref:</span><span class="nv">`multimedia/writing/rst/cheatsheet:Images`</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="#rst-and-sphinx-cheatsheet"><span class="std std-ref">Back to top</span></a></p>
+<p><a class="reference internal" href="#images"><span class="std std-ref">Images</span></a></p>
+</div>
+<div class="section" id="internal-references">
+<span id="ref-point"></span><h4>Internal References<a class="headerlink" href="#internal-references" title="Permalink to this headline">¶</a></h4>
+<p>In any place of the document a reference point can be inserted and later refered to.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_ref-point:</span>
+
+see <span class="na">:ref:</span><span class="nv">`ref-point`</span>
+</pre></div>
+</div>
+<p>see <a class="reference internal" href="#ref-point"><span class="std std-ref">Internal References</span></a></p>
+</div>
+<div class="section" id="file-links">
+<h4>File Links<a class="headerlink" href="#file-links" title="Permalink to this headline">¶</a></h4>
+<p>To link to a file within the Sphinx file structure use the Role <code class="docutils literal notranslate"><span class="pre">:download:</span></code></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="na">:download:</span><span class="nv">`../../../programming/tcl_tk_do/docs/tcl-tk-manual.pdf`</span>
+
+<span class="na">:download:</span><span class="nv">`TCL/TK Manual &lt;/programming/tcl_tk_do/docs/tcl-tk-manual.pdf&gt;`</span>
+</pre></div>
+</div>
+<p><a class="reference download internal" download="" href="../../../_downloads/d9f3f9c755e8f4f89912ffed02ed7147/tcl-tk-manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">../../../programming/tcl_tk_do/docs/tcl-tk-manual.pdf</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/2d19cf4e1e732387ca325e65cc8ac7e7/tcl-tk-manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TCL/TK</span> <span class="pre">Manual</span></code></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /img/logo.*
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../../../_images/logo14.svg" src="../../../_images/logo14.svg" /></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Images should be either in <code class="docutils literal notranslate"><span class="pre">png</span></code> or <code class="docutils literal notranslate"><span class="pre">svg</span></code> format</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">*.svg</span></code> files the file ending needs to be changed from <code class="docutils literal notranslate"><span class="pre">svg</span></code> to <code class="docutils literal notranslate"><span class="pre">*</span></code>. That way for html svg is used and pdf or pn for the latex or pdf output.</p>
+</div>
+<div class="section" id="image-placement">
+<h3>Image Placement<a class="headerlink" href="#image-placement" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /img/logo.*
+   <span class="nc">:align:</span> left
+   <span class="nc">:width:</span> 100px
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /img/logo.*
+   <span class="nc">:align:</span> center
+   <span class="nc">:width:</span> 100px
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /img/logo.*
+   <span class="nc">:align:</span> right
+   <span class="nc">:width:</span> 100px
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /img/logo.*
+   <span class="nc">:align:</span> center
+   <span class="nc">:width:</span> 100px
+   <span class="nc">:height:</span> 100px
+   <span class="nc">:scale:</span> 50 %
+   <span class="nc">:alt:</span> this is the knowhow logo
+
+   Caption of figure
+</pre></div>
+</div>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../../../_images/logo14.svg"><img alt="../../../_images/logo14.svg" src="../../../_images/logo14.svg" width="100px" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/logo14.svg"><img alt="../../../_images/logo14.svg" src="../../../_images/logo14.svg" width="100px" /></a>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../_images/logo14.svg"><img alt="../../../_images/logo14.svg" src="../../../_images/logo14.svg" width="100px" /></a>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/logo14.svg"><img alt="this is the knowhow logo" height="50px" src="../../../_images/logo14.svg" width="50px" /></a>
+<p class="caption"><span class="caption-text">Caption of figure</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="side-by-side-images">
+<h3>Side-by-Side Images<a class="headerlink" href="#side-by-side-images" title="Permalink to this headline">¶</a></h3>
+<p>Images can be displayed side by side with the help of a list table</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+
+   <span class="m">*</span> - .. figure:: img/logo.*
+          <span class="nc">:align:</span> center
+          <span class="nc">:alt:</span> logo 1
+          <span class="nc">:width:</span> 200px
+
+          Logo Text 1
+
+     <span class="m">-</span> .. figure:: img/logo.*
+          <span class="nc">:align:</span> center
+          <span class="nc">:alt:</span> logo 2
+          <span class="nc">:width:</span> 200px
+
+          Logo Text 2
+
+     <span class="m">-</span> .. figure:: img/logo.*
+          <span class="nc">:align:</span> center
+          <span class="nc">:alt:</span> logo 3
+          <span class="nc">:width:</span> 200px
+
+          Logo Text 3
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/logo15.svg"><img alt="logo 1" src="../../../_images/logo15.svg" width="200px" /></a>
+<p class="caption"><span class="caption-text">Logo Text 1</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/logo15.svg"><img alt="logo 2" src="../../../_images/logo15.svg" width="200px" /></a>
+<p class="caption"><span class="caption-text">Logo Text 2</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/logo15.svg"><img alt="logo 3" src="../../../_images/logo15.svg" width="200px" /></a>
+<p class="caption"><span class="caption-text">Logo Text 3</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inline-images">
+<h3>Inline Images<a class="headerlink" href="#inline-images" title="Permalink to this headline">¶</a></h3>
+<p>For inline images to work, a substitution needs to be made</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|folder_icon|</span> <span class="ow">image</span><span class="p">::</span> /img/icons/folder.*
+
+After that the image |folder_icon| can be integrated inline.
+</pre></div>
+</div>
+<p>After that the image <img alt="folder_icon" src="../../../_images/folder.svg" /> can be integrated inline.</p>
+<div class="section" id="predefined-images">
+<h4>Predefined Images<a class="headerlink" href="#predefined-images" title="Permalink to this headline">¶</a></h4>
+<p>There are some predefined images in <a class="reference external" href="https://github.com/tschinz/zawiki/blob/master/source/conf.py">conf.py file</a></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>|folder|
+|file|
+|sign-check|
+|upload|
+|download|
+|expand|
+|minimize|
+|arrow-up|
+|arrow-down|
+|arrow-left|
+|arrow-right|
+|star5|
+|star4|
+|star3|
+|star2|
+|star1|
+|star|
+|en|
+|ch|
+|de|
+|china|
+|uk|
+|usa|
+|it|
+|jp|
+|fr|
+|linux|
+|mac|
+|win|
+|word|
+|excel|
+|onenote|
+|outlook|
+</pre></div>
+</div>
+<p><img alt="folder" src="../../../_images/folder.svg" />
+<img alt="file" src="../../../_images/file.svg" />
+<img alt="sign-check" src="../../../_images/success.svg" />
+<img alt="upload" src="../../../_images/upload.svg" />
+<img alt="download" src="../../../_images/download.svg" />
+<img alt="expand" src="../../../_images/expand.svg" />
+<img alt="minimize" src="../../../_images/minimize.svg" />
+<img alt="arrow-up" src="../../../_images/arrow-up.svg" />
+<img alt="arrow-down" src="../../../_images/arrow-down.svg" />
+<img alt="arrow-left" src="../../../_images/arrow-left.svg" />
+<img alt="arrow-right" src="../../../_images/arrow-right.svg" />
+<img alt="star5" src="../../../_images/star-5.svg" />
+<img alt="star4" src="../../../_images/star-4.svg" />
+<img alt="star3" src="../../../_images/star-3.svg" />
+<img alt="star2" src="../../../_images/star-2.svg" />
+<img alt="star1" src="../../../_images/star-1.svg" />
+<img alt="star" src="../../../_images/star.svg" />
+<img alt="en" src="../../../_images/uk.svg" />
+<img alt="ch" src="../../../_images/switzerland.svg" />
+<img alt="de" src="../../../_images/germany.svg" />
+<img alt="china" src="../../../_images/china.svg" />
+<img alt="uk" src="../../../_images/uk.svg" />
+<img alt="usa" src="../../../_images/usa.svg" />
+<img alt="it" src="../../../_images/italy.svg" />
+<img alt="jp" src="../../../_images/japan.svg" />
+<img alt="fr" src="../../../_images/france.svg" />
+<img alt="linux" src="../../../_images/linux.svg" />
+<img alt="mac" src="../../../_images/apple.svg" />
+<img alt="win" src="../../../_images/windows.svg" />
+<img alt="word" src="../../../_images/word.svg" />
+<img alt="excel" src="../../../_images/excel.svg" />
+<img alt="onenote" src="../../../_images/onenote.svg" />
+<img alt="outlook" src="../../../_images/outlook.svg" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> item 1
+
+  <span class="m">*</span> item 1.1
+  <span class="m">*</span> item 1.2
+
+<span class="m">*</span> item 2
+
+  <span class="m">*</span> item 2.1
+
+    <span class="m">*</span> item 2.1.1
+
+<span class="m">#.</span> auto enumerated list item 1
+<span class="m">#.</span> auto enumerated list item 1
+<span class="m">#.</span> auto enumerated list item 1
+<span class="m">#.</span> auto enumerated list item 1
+
+<span class="m">3.</span> enumerated list start with item 3
+<span class="m">#.</span> auto enumerated list item 4
+<span class="m">#.</span> auto enumerated list item 5
+<span class="m">#.</span> auto enumerated list item 6
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>item 1</p>
+<ul>
+<li><p>item 1.1</p></li>
+<li><p>item 1.2</p></li>
+</ul>
+</li>
+<li><p>item 2</p>
+<ul>
+<li><p>item 2.1</p>
+<ul>
+<li><p>item 2.1.1</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>auto enumerated list item 1</p></li>
+<li><p>auto enumerated list item 1</p></li>
+<li><p>auto enumerated list item 1</p></li>
+<li><p>auto enumerated list item 1</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>enumerated list start with item 3</p></li>
+<li><p>auto enumerated list item 4</p></li>
+<li><p>auto enumerated list item 5</p></li>
+<li><p>auto enumerated list item 6</p></li>
+</ol>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>+------------+------------+-----------+
+<span class="o">|</span> Header 1   | Header 2   | Header 3  |
++============+============+===========+
+<span class="o">|</span> body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+<span class="o">|</span> body row 2 | Cells may span columns.|
++------------+------------+-----------+
+<span class="o">|</span> body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+<span class="o">|</span> body row 4 |            | - blocks. |
++------------+------------+-----------+
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="2"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td rowspan="2"><ul class="simple">
+<li><p>Cells</p></li>
+<li><p>contain</p></li>
+<li><p>blocks.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>=====  =====  ======
+Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">:widths:</span> <span class="pre">auto</span></code> will adapt the columnwidth automatically</p>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+   <span class="nc">:header-rows:</span> 1
+   <span class="nc">:stub-columns:</span> 1
+   <span class="nc">:widths:</span> 1 1 2
+   <span class="nc">:align:</span> center
+
+   <span class="m">*</span> - Type
+     <span class="m">-</span> Literal
+     <span class="m">-</span> Description
+   <span class="m">*</span> - Boolean
+     <span class="m">-</span> true, false
+     -
+   <span class="m">*</span> - Int
+     <span class="m">-</span> 3, 0x32
+     <span class="m">-</span> 32 bits integer
+   <span class="m">*</span> - Float
+     <span class="m">-</span> 3.14f
+     <span class="m">-</span> 32 bits floating point
+   <span class="m">*</span> - Double
+     <span class="m">-</span> 3.14
+     <span class="m">-</span> 64 bits floating point
+   <span class="m">*</span> - String
+     <span class="m">-</span> &quot;Hello world&quot;
+     <span class="m">-</span> UTF-16 string
+</pre></div>
+</div>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Type</p></th>
+<th class="head"><p>Literal</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Boolean</p></th>
+<td><p>true, false</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Int</p></th>
+<td><p>3, 0x32</p></td>
+<td><p>32 bits integer</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Float</p></th>
+<td><p>3.14f</p></td>
+<td><p>32 bits floating point</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Double</p></th>
+<td><p>3.14</p></td>
+<td><p>64 bits floating point</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>String</p></th>
+<td><p>“Hello world”</p></td>
+<td><p>UTF-16 string</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">table</span><span class="p">::</span> Table caption
+
+   =====  =====  ======
+      Inputs     Output
+   ------------  ------
+     A      B    A or B
+   =====  =====  ======
+   False  False  False
+   =====  =====  ======
+</pre></div>
+</div>
+<table class="table" id="id5">
+<caption><span class="caption-text">Table caption</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>see also: <a class="reference external" href="https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html">https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html</a> and <a class="reference external" href="https://pygments.org/languages/">https://pygments.org/languages/</a></p>
+<p>For all available lexer see: <a class="reference internal" href="pygment_lexer.html"><span class="doc">Pygment Lexer</span></a></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
+
+   <span class="kn">import</span> <span class="nn">antigravity</span>
+
+   <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+       <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+   <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+       <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:linenos:</span>
+   <span class="nc">:caption:</span> Code Blocks can have captions.
+
+   import antigravity
+
+   def main():
+       antigravity.fly()
+   if __name__==&#39;__main__&#39;:
+       main()
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Code Blocks can have captions.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:linenos:</span>
+   <span class="nc">:lineno-start:</span> 10
+
+   import antigravity
+
+   def main():
+       antigravity.fly()
+   if __name__==&#39;__main__&#39;:
+       main()
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="infoboxes">
+<h2>Infoboxes<a class="headerlink" href="#infoboxes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+   This is a Note Box
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a Note Box</p>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span>
+   This is a Warning Box
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a Warning Box</p>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">important</span><span class="p">::</span>
+   This is a Important Box
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is a Important Box</p>
+</div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span>
+   This is a See Also Box
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>This is a See Also Box</p>
+</div>
+</div>
+<div class="section" id="special-formatting">
+<h2>Special Formatting<a class="headerlink" href="#special-formatting" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 2.5
+   The <span class="ge">*spam*</span> parameter.
+
+<span class="p">..</span> <span class="ow">versionchanged</span><span class="p">::</span> 2.5
+   Feature description
+
+<span class="p">..</span> <span class="ow">deprecated</span><span class="p">::</span> 3.1
+   Use <span class="na">:func:</span><span class="nv">`spam`</span> instead.
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.5: </span>The <em>spam</em> parameter.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.5: </span>Feature description</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.1: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">spam()</span></code> instead.</p>
+</div>
+</div>
+<div class="section" id="math">
+<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>Inline math <span class="na">:math:</span><span class="nv">`a^2 + b^2 = c^2`</span>.
+</pre></div>
+</div>
+<p>Inline math <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span>.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+   f(x) &amp;= x^2\\
+   g(x) &amp;= \frac{1}{x}\\
+   F(x) &amp;= \int^a_b \frac{1}{3}x^3
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) &amp;= x^2\\
+g(x) &amp;= \frac{1}{x}\\
+F(x) &amp;= \int^a_b \frac{1}{3}x^3\end{split}\]</div>
+</div>
+<div class="section" id="exclude">
+<h2>Exclude<a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h2>
+<p>In order to exclude some parts for a certain output use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">only::</span> <span class="pre">output</span></code> directive.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html
+<span class="p">..</span> <span class="ow">only</span><span class="p">::</span> draft
+<span class="p">..</span> <span class="ow">only</span><span class="p">::</span> latex
+<span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html or draft or latex
+<span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html and draft
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is needed for the all the <a class="reference internal" href="#wavedrom"><span class="std std-ref">Wavedrom</span></a> code</p>
+</div>
+</div>
+<div class="section" id="todo">
+<h2>Todo<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<p>If the extension <code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> is enabled and the variable <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> is set to True in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>,
+one can use the directive <code class="docutils literal notranslate"><span class="pre">todo</span></code> to write a todo task for a later completion.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">todo</span><span class="p">::</span>
+
+   <span class="p">(</span><span class="n">example</span><span class="p">)</span> <span class="n">This</span> <span class="n">section</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">completed</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Then use the directive <code class="docutils literal notranslate"><span class="pre">todolist</span></code> to list all todos within the documentation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">todolist</span><span class="p">::</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graphviz">
+<h2>GraphViz<a class="headerlink" href="#graphviz" title="Permalink to this headline">¶</a></h2>
+<p>Get more samples herer: <a class="reference external" href="https://graphviz.gitlab.io/gallery/">https://graphviz.gitlab.io/gallery/</a></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span>
+
+   digraph foo {
+      &quot;bar&quot; -&gt; &quot;baz&quot;;
+   }
+</pre></div>
+</div>
+<div class="graphviz"><img src="../../../_images/graphviz-c13816bec0f89a6fd3ac8f44f6070dd1c0713ccc.png" alt="digraph foo {
+   &quot;bar&quot; -&gt; &quot;baz&quot;;
+}" class="graphviz" /></div>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span>
+
+   digraph finite_state_machine {
+     rankdir=LR;
+     size=&quot;8,5&quot;
+     node [shape = doublecircle]; LR_0 LR_3 LR_4 LR_8;
+     node [shape = circle];
+     LR_0 -&gt; LR_2 [ label = &quot;SS(B)&quot; ];
+     LR_0 -&gt; LR_1 [ label = &quot;SS(S)&quot; ];
+     LR_1 -&gt; LR_3 [ label = &quot;S($end)&quot; ];
+     LR_2 -&gt; LR_6 [ label = &quot;SS(b)&quot; ];
+     LR_2 -&gt; LR_5 [ label = &quot;SS(a)&quot; ];
+     LR_2 -&gt; LR_4 [ label = &quot;S(A)&quot; ];
+     LR_5 -&gt; LR_7 [ label = &quot;S(b)&quot; ];
+     LR_5 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+     LR_6 -&gt; LR_6 [ label = &quot;S(b)&quot; ];
+     LR_6 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+     LR_7 -&gt; LR_8 [ label = &quot;S(b)&quot; ];
+     LR_7 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+     LR_8 -&gt; LR_6 [ label = &quot;S(b)&quot; ];
+     LR_8 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+   }
+</pre></div>
+</div>
+<div class="graphviz"><img src="../../../_images/graphviz-919135753461186ba1a68b471ebb700b0f795e4c.png" alt="digraph finite_state_machine {
+  rankdir=LR;
+  size=&quot;8,5&quot;
+  node [shape = doublecircle]; LR_0 LR_3 LR_4 LR_8;
+  node [shape = circle];
+  LR_0 -&gt; LR_2 [ label = &quot;SS(B)&quot; ];
+  LR_0 -&gt; LR_1 [ label = &quot;SS(S)&quot; ];
+  LR_1 -&gt; LR_3 [ label = &quot;S($end)&quot; ];
+  LR_2 -&gt; LR_6 [ label = &quot;SS(b)&quot; ];
+  LR_2 -&gt; LR_5 [ label = &quot;SS(a)&quot; ];
+  LR_2 -&gt; LR_4 [ label = &quot;S(A)&quot; ];
+  LR_5 -&gt; LR_7 [ label = &quot;S(b)&quot; ];
+  LR_5 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+  LR_6 -&gt; LR_6 [ label = &quot;S(b)&quot; ];
+  LR_6 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+  LR_7 -&gt; LR_8 [ label = &quot;S(b)&quot; ];
+  LR_7 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+  LR_8 -&gt; LR_6 [ label = &quot;S(b)&quot; ];
+  LR_8 -&gt; LR_5 [ label = &quot;S(a)&quot; ];
+}" class="graphviz" /></div>
+</div>
+<div class="section" id="wavedrom">
+<h2>Wavedrom<a class="headerlink" href="#wavedrom" title="Permalink to this headline">¶</a></h2>
+<p>For more information see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/wavedrom/wavedrom/wiki/WaveJSON">Wavedrom JSON Wiki</a></p></li>
+<li><p><a class="reference external" href="https://wavedrom.com/tutorial.html">Wavedrom Tutorial</a></p></li>
+</ul>
+<div class="section" id="timing-diagrams">
+<h3>Timing Diagrams<a class="headerlink" href="#timing-diagrams" title="Permalink to this headline">¶</a></h3>
+<p>This documentation makes use of the <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-wavedrom</span></code> plugin,
+So you can specify a timing diagram, or a register description with the <code class="docutils literal notranslate"><span class="pre">WaveJSON</span></code> syntax like so:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nx">wavedrom</span><span class="o">::</span>
+
+   <span class="p">{</span> <span class="s2">&quot;signal&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;pclk&quot;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;p.......&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Pclk&quot;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;P.......&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;nclk&quot;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;n.......&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Nclk&quot;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;N.......&#39;</span> <span class="p">},</span>
+      <span class="p">{},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s1">&#39;clk0&#39;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;phnlPHNL&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s1">&#39;clk1&#39;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;xhlhLHl.&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s1">&#39;clk2&#39;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;hpHplnLn&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s1">&#39;clk3&#39;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;nhNhplPl&#39;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s1">&#39;clk4&#39;</span><span class="p">,</span> <span class="s2">&quot;wave&quot;</span><span class="o">:</span> <span class="s1">&#39;xlh.L.Hx&#39;</span> <span class="p">},</span>
+   <span class="p">]}</span>
+</pre></div>
+</div>
+<p>and you get:</p>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{ "signal": [
+   { "name": "pclk", "wave": 'p.......' },
+   { "name": "Pclk", "wave": 'P.......' },
+   { "name": "nclk", "wave": 'n.......' },
+   { "name": "Nclk", "wave": 'N.......' },
+   {},
+   { "name": 'clk0', "wave": 'phnlPHNL' },
+   { "name": 'clk1', "wave": 'xhlhLHl.' },
+   { "name": 'clk2', "wave": 'hpHplnLn' },
+   { "name": 'clk3', "wave": 'nhNhplPl' },
+   { "name": 'clk4', "wave": 'xlh.L.Hx' },
+]}
+</script>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if you want the Wavedrom diagram to be present in the pdf export, you need to use the “non relaxed” JSON dialect.
+long story short, no javascript code and use <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> arround key value (Eg. <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code>).</p>
+</div>
+</div>
+<div class="section" id="register">
+<h3>Register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>
+<p>you can describe register mapping with the same syntax:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;reg&quot;</span><span class="o">:</span><span class="p">[</span>
+  <span class="p">{</span><span class="s2">&quot;bits&quot;</span><span class="o">:</span> <span class="mf">8</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;things&quot;</span><span class="p">},</span>
+  <span class="p">{</span><span class="s2">&quot;bits&quot;</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;stuff&quot;</span> <span class="p">},</span>
+  <span class="p">{</span><span class="s2">&quot;bits&quot;</span><span class="o">:</span> <span class="mf">6</span><span class="p">},</span>
+ <span class="p">],</span>
+ <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;bits&quot;</span><span class="o">:</span><span class="mf">16</span><span class="p">,</span><span class="s2">&quot;lanes&quot;</span><span class="o">:</span><span class="mf">1</span> <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+
+<div style="overflow-x:auto">
+<script type="WaveDrom">
+{"reg":[
+   {"bits": 8, "name": "things"},
+   {"bits": 2, "name": "stuff" },
+   {"bits": 6},
+  ],
+  "config": { "bits":16,"lanes":1 }
+}
+</script>
+</div>
+</div>
+</div>
+<div class="section" id="plantuml">
+<h2>PlantUML<a class="headerlink" href="#plantuml" title="Permalink to this headline">¶</a></h2>
+<p>This documentation makes use of the <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.plantuml</span></code> plugin, for more information see the <a class="reference external" href="https://pypi.org/project/sphinxcontrib-plantuml/">sphinxcontrib.plantuml plugin</a> and the <a class="reference external" href="https://plantuml.com/">PlantUML Webpage</a>.
+For a small Cheatsheet for PlantUML see <a class="reference external" href="https://ogom.github.io/draw_uml/plantuml/">https://ogom.github.io/draw_uml/plantuml/</a></p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   class Foo1 {
+     You can use
+     several lines
+<span class="cp">     ..</span>
+<span class="cp">     as you want</span>
+<span class="cp">     and group</span>
+<span class="cp">     ==</span>
+<span class="cp">     things together.</span>
+<span class="cp">     __</span>
+<span class="cp">     You can have as many groups</span>
+<span class="cp">     as you want</span>
+<span class="cp">     --</span>
+<span class="cp">     End of class</span>
+<span class="cp">   }</span>
+
+<span class="cp">   class User {</span>
+<span class="cp">     .. Simple Getter ..</span>
+<span class="cp">     + getName()</span>
+<span class="cp">     + getAddress()</span>
+<span class="cp">     .. Some setter ..</span>
+<span class="cp">     + setName()</span>
+<span class="cp">     __ private data __</span>
+<span class="cp">     int age</span>
+<span class="cp">     -- encrypted --</span>
+<span class="cp">     String password</span>
+<span class="cp">   }</span>
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="../../../_images/plantuml-f0b6649565cb53ec65ba4594a86f79cb1a26e17f.png" alt="class Foo1 {
+  You can use
+  several lines
+  ..
+  as you want
+  and group
+  ==
+  things together.
+  __
+  You can have as many groups
+  as you want
+  --
+  End of class
+}
+
+class User {
+  .. Simple Getter ..
+  + getName()
+  + getAddress()
+  .. Some setter ..
+  + setName()
+  __ private data __
+  int age
+  -- encrypted --
+  String password
+}"/>
+</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   Alice -&gt; Bob: Authentication Request
+   Bob --&gt; Alice: Authentication Response
+
+   Alice -&gt; Bob: Another authentication Request
+   Alice &lt;-- Bob: Another authentication Response
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="../../../_images/plantuml-a00116afd82ca9a2239955734af7c46307f1ae01.png" alt="Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: Another authentication Response"/>
+</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   actor actor
+   agent agent
+   artifact artifact
+   boundary boundary
+   card card
+   cloud cloud
+   component component
+   control control
+   database database
+   entity entity
+   file file
+   folder folder
+   frame frame
+   interface  interface
+   node node
+   package package
+   queue queue
+   stack stack
+   rectangle rectangle
+   storage storage
+   usecase usecase
+</pre></div>
+</div>
+<p class="plantuml">
+<img src="../../../_images/plantuml-9db945936c551affa9bfa95973d67c76043b399e.png" alt="actor actor
+agent agent
+artifact artifact
+boundary boundary
+card card
+cloud cloud
+component component
+control control
+database database
+entity entity
+file file
+folder folder
+frame frame
+interface  interface
+node node
+package package
+queue queue
+stack stack
+rectangle rectangle
+storage storage
+usecase usecase"/>
+</p>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.0.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
