@@ -276,6 +276,28 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#conda-environments" class="nav-link">Conda Environments</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#create" class="nav-link">Create</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#rename" class="nav-link">Rename</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#delete" class="nav-link">Delete</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#export" class="nav-link">Export</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#commands" class="nav-link">Commands</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
@@ -318,28 +340,6 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#conda-environemts" class="nav-link">Conda Environemts</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#create" class="nav-link">Create</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#rename" class="nav-link">Rename</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#delete" class="nav-link">Delete</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#export" class="nav-link">Export</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
             <a href="#conda-env-in-jupyter-lab" class="nav-link">Conda env in Jupyter lab</a>
         </li>
     
@@ -370,6 +370,42 @@ Therefore, when installing a package with <code class="docutils literal notransl
 You can be more explicit and activate the environment by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> in a terminal.</p>
 <p>To have a full in depth introduction to environment management with conda read the official docs:
 <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Manage Environments</a>.</p>
+<div class="section" id="conda-environments">
+<h2>Conda Environments<a class="headerlink" href="#conda-environments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create">
+<h3>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
+<p>Create an environment from file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f condaenv.yml
+</pre></div>
+</div>
+<p>Create an empty environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n &lt;envname&gt;
+conda create -n &lt;envname&gt; <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6.5
+</pre></div>
+</div>
+</div>
+<div class="section" id="rename">
+<h3>Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
+<p>You can’t! You need to clone the environment and give a new name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name &lt;new_envname&gt; --clone &lt;old_envname&gt;
+conda remove --name &lt;old_envname&gt; --all
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env remove --name &lt;envname&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="export">
+<h3>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env <span class="nb">export</span> &gt; condaenv.yml
+</pre></div>
+</div>
+<p>The file contains the parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code> at the end of the file which points to your local installation. This information can be ignored or removed from the file without any impact when creating a new environment on a different machine.</p>
+</div>
+</div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="update">
@@ -482,42 +518,6 @@ conda -n &lt;envname&gt; list
 <span class="c1"># Add ``conda-forge`` channel but with lowest priority:</span>
 <span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">append</span> <span class="n">channels</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
 </pre></div>
-</div>
-</div>
-<div class="section" id="conda-environemts">
-<h2>Conda Environemts<a class="headerlink" href="#conda-environemts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create">
-<h3>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
-<p>Create an environment from file</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f condaenv.yml
-</pre></div>
-</div>
-<p>Create an empty environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n &lt;envname&gt;
-conda create -n &lt;envname&gt; <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.6.5
-</pre></div>
-</div>
-</div>
-<div class="section" id="rename">
-<h3>Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
-<p>You can’t! You need to clone the environment and give a new name:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name &lt;new_envname&gt; --clone &lt;old_envname&gt;
-conda remove --name &lt;old_envname&gt; --all
-</pre></div>
-</div>
-</div>
-<div class="section" id="delete">
-<h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env remove --name &lt;envname&gt;
-</pre></div>
-</div>
-</div>
-<div class="section" id="export">
-<h3>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env <span class="nb">export</span> &gt; condaenv.yml
-</pre></div>
-</div>
-<p>The file contains the parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code> at the end of the file which points to your local installation. This information can be ignored or removed from the file without any impact when creating a new environment on a different machine.</p>
 </div>
 </div>
 <div class="section" id="conda-env-in-jupyter-lab">
