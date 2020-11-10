@@ -11,6 +11,51 @@ You can be more explicit and activate the environment by typing ``conda activate
 To have a full in depth introduction to environment management with conda read the official docs:
 `Manage Environments <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_.
 
+Conda Environments
+==================
+
+Create
+------
+
+Create an environment from file
+
+.. code-block:: bash
+
+   conda env create -f condaenv.yml
+
+Create an empty environment
+
+.. code-block:: bash
+
+   conda create -n <envname>
+   conda create -n <envname> python=3.6.5
+
+Rename
+------
+
+You can't! You need to clone the environment and give a new name:
+
+.. code-block:: bash
+
+   conda create --name <new_envname> --clone <old_envname>
+   conda remove --name <old_envname> --all
+
+Delete
+------
+
+.. code-block:: bash
+
+   conda env remove --name <envname>
+
+Export
+------
+
+.. code-block:: bash
+
+   conda env export > condaenv.yml
+
+The file contains the parameter ``prefix`` at the end of the file which points to your local installation. This information can be ignored or removed from the file without any impact when creating a new environment on a different machine.
+
 Commands
 ========
 
@@ -148,53 +193,6 @@ If you have a very fast SSD, you might increase the number of threads to shorten
 
    # Add ``conda-forge`` channel but with lowest priority:
    conda config --append channels conda-forge
-
-
-Conda Environemts
-=================
-
-Create
-------
-
-Create an environment from file
-
-.. code-block:: bash
-
-   conda env create -f condaenv.yml
-
-Create an empty environment
-
-.. code-block:: bash
-
-   conda create -n <envname>
-   conda create -n <envname> python=3.6.5
-
-Rename
-------
-
-You can't! You need to clone the environment and give a new name:
-
-.. code-block:: bash
-
-   conda create --name <new_envname> --clone <old_envname>
-   conda remove --name <old_envname> --all
-
-Delete
-------
-
-.. code-block:: bash
-
-   conda env remove --name <envname>
-
-Export
-------
-
-.. code-block:: bash
-
-   conda env export > condaenv.yml
-
-The file contains the parameter ``prefix`` at the end of the file which points to your local installation. This information can be ignored or removed from the file without any impact when creating a new environment on a different machine.
-
 
 Conda env in Jupyter lab
 ========================
