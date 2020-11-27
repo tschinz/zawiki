@@ -32,6 +32,7 @@ Begin
 
    base_directory="$(dirname "$(readlink -f "$0")")"
    pushd $base_directory
+   scriptname=`basename $0 .bash`
 
    SEPARATOR='--------------------------------------------------------------------------------'
    INDENT='  '
@@ -104,6 +105,16 @@ This is just a small incomplete list.
 +-------------------+---------------------------------------------------+
 | ``$LINENO``       | Return the current line number in the Bash script |
 +-------------------+---------------------------------------------------+
+
+Useful Variables
+----------------
+
+.. code-block:: bash
+
+   base_directory="$(dirname "$(readlink -f "$0")")"
+   base_directory_alt=`dirname ${BASH_SOURCE[0]}`
+   scriptname_with_ext=${0##*/}
+   scriptname_without_ext=`basename $0 .bash`
 
 Strings
 =======
@@ -204,7 +215,6 @@ Compare two values
      fi
    done
 
-
 For Loops
 =========
 
@@ -272,8 +282,32 @@ User Inputs
        # echo [$key] not empty
    fi
 
+Files & Folders
+================
+
+.. code-block:: bash
+   :caption: extract path, filename, extension
+
+   fpath=$(basename $fullpath)
+   fname=$(basename -- "$fullpath")
+   ext="${filename##*.}"
+   fname_withoutext="${filename%.*}"
+
+Check if file exists
+--------------------
+
+.. code-block:: bash
+   :caption: check if file exists
+
+   if test -f "$file"; then
+     echo "$file found"
+   else
+     echo "$file not found"$
+   fi
+
+
 Check and create folder
-=======================
+-----------------------
 
 .. code-block:: bash
    :caption: check and create folder
