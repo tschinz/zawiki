@@ -250,6 +250,10 @@
             <a href="#preexisting-special-variables" class="nav-link">Preexisting special variables</a>
         </li>
     
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#useful-variables" class="nav-link">Useful Variables</a>
+        </li>
+    
             </ul>
         </li>
     
@@ -288,7 +292,17 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#files-folders" class="nav-link">Files & Folders</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#check-if-file-exists" class="nav-link">Check if file exists</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#check-and-create-folder" class="nav-link">Check and create folder</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -352,6 +366,7 @@
 <h3>Begin<a class="headerlink" href="#begin" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">base_directory</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>dirname <span class="s2">&quot;</span><span class="k">$(</span>readlink -f <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
 <span class="nb">pushd</span> <span class="nv">$base_directory</span>
+<span class="nv">scriptname</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$0</span> .bash<span class="sb">`</span>
 
 <span class="nv">SEPARATOR</span><span class="o">=</span><span class="s1">&#39;--------------------------------------------------------------------------------&#39;</span>
 <span class="nv">INDENT</span><span class="o">=</span><span class="s1">&#39;  &#39;</span>
@@ -442,6 +457,15 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="useful-variables">
+<h3>Useful Variables<a class="headerlink" href="#useful-variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">base_directory</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>dirname <span class="s2">&quot;</span><span class="k">$(</span>readlink -f <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">base_directory_alt</span><span class="o">=</span><span class="sb">`</span>dirname <span class="si">${</span><span class="nv">BASH_SOURCE</span><span class="p">[0]</span><span class="si">}</span><span class="sb">`</span>
+<span class="nv">scriptname_with_ext</span><span class="o">=</span><span class="si">${</span><span class="nv">0</span><span class="p">##*/</span><span class="si">}</span>
+<span class="nv">scriptname_without_ext</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$0</span> .bash<span class="sb">`</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="strings">
@@ -610,10 +634,34 @@ stty <span class="nb">echo</span>
 </div>
 </div>
 </div>
-<div class="section" id="check-and-create-folder">
-<h2>Check and create folder<a class="headerlink" href="#check-and-create-folder" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="files-folders">
+<h2>Files &amp; Folders<a class="headerlink" href="#files-folders" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">extract path, filename, extension</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">fpath</span><span class="o">=</span><span class="k">$(</span>basename <span class="nv">$fullpath</span><span class="k">)</span>
+<span class="nv">fname</span><span class="o">=</span><span class="k">$(</span>basename -- <span class="s2">&quot;</span><span class="nv">$fullpath</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="nv">ext</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">fname_withoutext</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-if-file-exists">
+<h3>Check if file exists<a class="headerlink" href="#check-if-file-exists" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">check if file exists</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nb">test</span> -f <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2"> found&quot;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2"> not found&quot;</span>$
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="check-and-create-folder">
+<h3>Check and create folder<a class="headerlink" href="#check-and-create-folder" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;/folder/location&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   sudo mkdir /folder/location
 <span class="k">fi</span>
@@ -621,11 +669,12 @@ stty <span class="nb">echo</span>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="lockfile">
 <h2>Lockfile<a class="headerlink" href="#lockfile" title="Permalink to this headline">¶</a></h2>
 <p>Lockfiles you can wait until another process is finished.</p>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">check and create folder</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define path and lockfile</span>
 <span class="nv">lockDir</span><span class="o">=</span><span class="s2">&quot;/path/to/lock_files&quot;</span>
 <span class="nv">lockFilePath</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$lockDir</span><span class="s2">/lockfile.lock&quot;</span>
@@ -648,8 +697,8 @@ rm -f <span class="nv">$lockFilePath</span>
 </div>
 <div class="section" id="find">
 <h2>Find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">find samples</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">find samples</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find all in current location</span>
 find .
 
@@ -729,7 +778,7 @@ find . -name <span class="s2">&quot;*.mpeg&quot;</span> <span class="p">|</span>
   <div class="container">
     <p>
           &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.0.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
     </p>
   </div>
 </footer>
