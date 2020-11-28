@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structures &amp; Methods &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Control Flow" href="05_controlflow.html" />
+    <link rel="prev" title="Properties" href="03_properties.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#data-structures" class="nav-link">Data Structures</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#enums" class="nav-link">enums</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#struct" class="nav-link">struct</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#class" class="nav-link">class</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#creation" class="nav-link">Creation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#final" class="nav-link">Final</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#methods-func" class="nav-link">Methods func</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#internal-external-names" class="nav-link">Internal & External Names</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#override" class="nav-link">override</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#final-1" class="nav-link">final()</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#init-method" class="nav-link">init() Method</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#inherited-init" class="nav-link">Inherited init</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#required-init" class="nav-link">Required init</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#failable-init" class="nav-link">Failable `init``</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#objects" class="nav-link">Objects</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#creating-objects" class="nav-link">Creating Objects</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#anyobject" class="nav-link">AnyObject</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#convert-anyobject" class="nav-link">Convert AnyObject</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/swift/04_datastructures_methods.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="data-structures-methods">
+<h1>Data Structures &amp; Methods<a class="headerlink" href="#data-structures-methods" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-structures">
+<h2>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">enum</span></code> and <code class="docutils literal notranslate"><span class="pre">struct</span></code> are the basic building blocks of
+swift they have:</p>
+<ul class="simple">
+<li><p>Similar Syntax</p></li>
+<li><p>Can have Properties (<code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">let</span></code>), Methods (<code class="docutils literal notranslate"><span class="pre">func</span></code>)</p></li>
+<li><p>Can have initializer</p></li>
+<li><p>Only <code class="docutils literal notranslate"><span class="pre">class</span></code> has inheritance</p></li>
+<li><p>Only <code class="docutils literal notranslate"><span class="pre">class</span></code> has introspection and casting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> = Reference type, <code class="docutils literal notranslate"><span class="pre">enum</span></code> and <code class="docutils literal notranslate"><span class="pre">struct</span></code> = Value type</p></li>
+</ul>
+<div class="section" id="enums">
+<h3><code class="docutils literal notranslate"><span class="pre">enums</span></code><a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">enumTypeVar</span> <span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span> <span class="c1">// explicitly all Int&#39;s</span>
+    <span class="k">case</span> <span class="n">firstProperty</span>   <span class="p">=</span> <span class="mi">1</span>
+    <span class="k">case</span> <span class="n">secondProperty</span>  <span class="p">=</span> <span class="mi">2</span>
+<span class="p">}</span>
+<span class="n">vat</span> <span class="n">type</span> <span class="p">=</span> <span class="n">enumTypeVar</span><span class="p">.</span><span class="n">firstProperty</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="nc">Barcode</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">UPCA</span><span class="p">(</span><span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">,</span> <span class="nb">Int</span><span class="p">)</span>
+    <span class="k">case</span> <span class="n">QRCode</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="struct">
+<h3><code class="docutils literal notranslate"><span class="pre">struct</span></code><a class="headerlink" href="#struct" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">struct</span> <span class="nc">Resolution</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">width</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="kd">var</span> <span class="nv">height</span> <span class="p">=</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="class">
+<h3><code class="docutils literal notranslate"><span class="pre">class</span></code><a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="creation">
+<h4>Creation<a class="headerlink" href="#creation" title="Permalink to this headline">¶</a></h4>
+<p>```swift` class MyClass : OptionalSuperClass, OptionalProtocol1,
+OptionalProtocol2 { var myProperty : String var myOptionalProperty :
+String? // More Properties</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Only</span> <span class="n">need</span> <span class="n">override</span> <span class="k">if</span> <span class="n">subclassing</span>
+<span class="n">override</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">myProperty</span> <span class="o">=</span> <span class="s2">&quot;initValue&quot;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">More</span> <span class="n">methods</span>
+</pre></div>
+</div>
+<p>}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### Usage
+```swift
+var myClassObject = MyClass()
+println(&quot;\(myClassObject.myProperty)&quot;)          // &quot;initValue&quot;
+println(&quot;\(myClassObject.myOptionalProperty!)&quot;) // nil
+</pre></div>
+</div>
+</div>
+<div class="section" id="final">
+<h4><code class="docutils literal notranslate"><span class="pre">Final</span></code><a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h4>
+<p>With <code class="docutils literal notranslate"><span class="pre">Final</span></code> a <code class="docutils literal notranslate"><span class="pre">func</span></code>or <code class="docutils literal notranslate"><span class="pre">class</span></code> can’t be override. It will be
+the end of the line.</p>
+</div>
+</div>
+</div>
+<div class="section" id="methods-func">
+<h2>Methods <code class="docutils literal notranslate"><span class="pre">func</span></code><a class="headerlink" href="#methods-func" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="internal-external-names">
+<span id="id1"></span><h3>Internal &amp; External Names<a class="headerlink" href="#internal-external-names" title="Permalink to this headline">¶</a></h3>
+<p>Methods in swift can have internal and external names. The first
+parameter is a littel different, it should be consistent with the method
+name.</p>
+<ul class="simple">
+<li><p>First parameter has no external name but can be forced with <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p></li>
+<li><p>All other parameters need to have an external name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_</span></code> == “I don’t care”. An name can be eliminated</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>         <span class="c1">// return 0</span>
+
+<span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">){</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// returns a tuple (a,b) == (0,1)</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// error first param has no external name</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">doIt</span><span class="p">(</span><span class="n">externalName</span> <span class="n">InternalName</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">internalName</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">externalName</span><span class="p">:</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">doIt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>              <span class="c1">// Error no external name given</span>
+
+<span class="kd">func</span> <span class="nf">doIt</span><span class="p">(#</span><span class="n">InternalandImplicitExternalName</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">InternalandImplicitExternalName</span>
+<span class="p">}</span>
+<span class="n">doIt</span><span class="p">(</span><span class="n">InternalandImplicitExternalName</span><span class="p">:</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="override">
+<h3><code class="docutils literal notranslate"><span class="pre">override</span></code><a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h3>
+<p>A Method from a superclass can be override wiwth the keyword
+<code class="docutils literal notranslate"><span class="pre">override</span></code></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Classname</span> <span class="p">:</span> <span class="n">SuperClassName</span> <span class="p">{</span>
+    <span class="kr">override</span> <span class="n">doIt</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="final-1">
+<span id="id2"></span><h3><code class="docutils literal notranslate"><span class="pre">final()</span></code><a class="headerlink" href="#final-1" title="Permalink to this headline">¶</a></h3>
+<p>With <code class="docutils literal notranslate"><span class="pre">Final</span></code> a <code class="docutils literal notranslate"><span class="pre">func</span></code>or <code class="docutils literal notranslate"><span class="pre">class</span></code> can’t be override. It will be
+the end of the line.</p>
+</div>
+<div class="section" id="init-method">
+<span id="id3"></span><h3><code class="docutils literal notranslate"><span class="pre">init()</span></code> Method<a class="headerlink" href="#init-method" title="Permalink to this headline">¶</a></h3>
+<p>Two types of <code class="docutils literal notranslate"><span class="pre">init</span></code></p>
+<ul class="simple">
+<li><p>designated <code class="docutils literal notranslate"><span class="pre">init()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init()</span></code></p></li>
+</ul>
+<p><strong>Free Inits</strong></p>
+<ul class="simple">
+<li><p>If all Properties are initialized</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">struct</span></code>with no initializers will get a default <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+</ul>
+<p>What <strong>can</strong> be done in an <code class="docutils literal notranslate"><span class="pre">init</span></code>:</p>
+<ul class="simple">
+<li><p>Set or Reset properties values <code class="docutils literal notranslate"><span class="pre">var</span></code> and even <code class="docutils literal notranslate"><span class="pre">let</span></code></p></li>
+<li><p>Call other <code class="docutils literal notranslate"><span class="pre">init</span></code> methods <code class="docutils literal notranslate"><span class="pre">self.init()</span></code></p></li>
+<li><p>Call super classes <code class="docutils literal notranslate"><span class="pre">init</span></code> methods <code class="docutils literal notranslate"><span class="pre">super.init()</span></code></p></li>
+</ul>
+<p>What <strong>have to</strong> be done in an <code class="docutils literal notranslate"><span class="pre">init</span></code>:</p>
+<ul class="simple">
+<li><p>After <code class="docutils literal notranslate"><span class="pre">init()</span></code> all properties need to have an value (or <code class="docutils literal notranslate"><span class="pre">nil</span></code>)</p></li>
+<li><p>Designated <code class="docutils literal notranslate"><span class="pre">init</span></code> can only call designated init of its immediate
+superclass</p></li>
+<li><p>All <strong>own</strong> properties need to be initialized <strong>before</strong> using
+superclass <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+<li><p>The superclass <code class="docutils literal notranslate"><span class="pre">init</span></code> nedd to be called <strong>before</strong> inherited
+properties can ba assigned</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> can only call designated <code class="docutils literal notranslate"><span class="pre">init</span></code> in it’s own
+class</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> can call other <code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> but in the
+end a designated <code class="docutils literal notranslate"><span class="pre">init</span></code> must be called</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code> first call designated <code class="docutils literal notranslate"><span class="pre">init</span></code> before set any
+property value</p></li>
+</ul>
+<div class="section" id="inherited-init">
+<h4>Inherited <code class="docutils literal notranslate"><span class="pre">init</span></code><a class="headerlink" href="#inherited-init" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>If no <code class="docutils literal notranslate"><span class="pre">init</span></code> is implemented all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code> are inherited</p></li>
+<li><p>If you override all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code>, you’ll inherit all its
+<code class="docutils literal notranslate"><span class="pre">convenience</span> <span class="pre">init</span></code></p></li>
+<li><p>If you implement no <code class="docutils literal notranslate"><span class="pre">init</span></code>, you’ll inherit all superclass <code class="docutils literal notranslate"><span class="pre">init</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="required-init">
+<h4>Required <code class="docutils literal notranslate"><span class="pre">init</span></code><a class="headerlink" href="#required-init" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">class</span></code> can mark one or more <code class="docutils literal notranslate"><span class="pre">init</span></code> as required</p></li>
+</ul>
+</div>
+<div class="section" id="failable-init">
+<span id="id4"></span><h4>Failable `init``<a class="headerlink" href="#failable-init" title="Permalink to this headline">¶</a></h4>
+<p>Rare, it is a <code class="docutils literal notranslate"><span class="pre">init</span></code> which can return <code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">?(){</span>
+    <span class="c1">// might return nil</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="p">#</span> <span class="bp">UIImage</span> <span class="n">example</span>
+<span class="kd">let</span> <span class="nv">image</span> <span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;nonExistingName&quot;</span><span class="p">)</span> <span class="c1">// image is an Optional UIImage?</span>
+<span class="c1">// solution</span>
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">image</span><span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;nonExistingName&quot;</span><span class="p">){</span>
+    <span class="c1">// image was successfully created</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// couldn&#39;t create the image</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-objects">
+<h3>Creating Objects<a class="headerlink" href="#creating-objects" title="Permalink to this headline">¶</a></h3>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">init</span></code> via the type name</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">x</span> <span class="p">=</span> <span class="n">ClassName</span><span class="p">()</span>
+<span class="kd">let</span> <span class="nv">y</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">]()</span>
+</pre></div>
+</div>
+<p>Calling type methods (rare)</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">button</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">.</span><span class="n">buttonWithType</span><span class="p">(</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">System</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anyobject">
+<h3><code class="docutils literal notranslate"><span class="pre">AnyObject</span></code><a class="headerlink" href="#anyobject" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Special Type (it is a Protocol) used to compatibility with
+Objective-C-based API</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// As Properties</span>
+<span class="kd">var</span> <span class="nv">destinationViewController</span> <span class="p">:</span> <span class="nb">AnyObject</span>
+<span class="kd">var</span> <span class="nv">toolbarItems</span><span class="p">:</span> <span class="p">[</span><span class="nb">AnyObject</span><span class="p">]</span>
+
+<span class="c1">// As Arguments to functions</span>
+<span class="kd">func</span> <span class="nf">appendDigit</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">addConstraints</span><span class="p">(</span><span class="n">constraints</span><span class="p">:</span> <span class="p">[</span><span class="nb">AnyObject</span><span class="p">])</span>
+
+<span class="c1">// Return type of functions</span>
+<span class="kd">class</span> <span class="nc">func</span> <span class="n">buttonWithType</span><span class="p">(</span><span class="n">buttonType</span><span class="p">:</span> <span class="n">UIButtonType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">AnyObject</span>
+</pre></div>
+</div>
+<div class="section" id="convert-anyobject">
+<h4>Convert <code class="docutils literal notranslate"><span class="pre">AnyObject</span></code><a class="headerlink" href="#convert-anyobject" title="Permalink to this headline">¶</a></h4>
+<p><strong>Casting ``as`` or ``as?``</strong></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">destinationViewController</span><span class="p">:</span> <span class="nb">AnyObject</span>
+<span class="kd">let</span> <span class="nv">calcVC</span> <span class="p">=</span> <span class="n">destinationViewController</span> <span class="k">as</span> <span class="n">CalculatorViewVController</span>  <span class="c1">// could crash if not correct</span>
+
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">calcVC</span> <span class="p">=</span> <span class="n">destinationViewController</span> <span class="k">as</span><span class="p">?</span> <span class="n">CalculatorViewController</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Cast on the fly</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">button</span><span class="p">:</span> <span class="nb">AnyObject</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">.</span><span class="n">buttonWithTyoe</span><span class="p">(</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">System</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">title</span> <span class="p">=</span> <span class="p">(</span><span class="n">button</span> <span class="k">as</span> <span class="bp">UIButton</span><span class="p">).</span><span class="n">currentTitle</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

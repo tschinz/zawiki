@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testbench &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Time" href="time.html" />
+    <link rel="prev" title="RTL Synthesis" href="synthesis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#additional-documents" class="nav-link">Additional Documents</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#tests-severity" class="nav-link">Tests & Severity</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#stop-simulation" class="nav-link">Stop Simulation</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#clock-generation" class="nav-link">Clock generation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reset" class="nav-link">Reset</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#wait-statement" class="nav-link">Wait statement</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#strings" class="nav-link">Strings</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#simple-and-messy" class="nav-link">Simple and messy</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#complicated-and-pretty" class="nav-link">Complicated and pretty</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#put-string-into-line" class="nav-link">Put String into Line</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#get-string-from-line" class="nav-link">Get String from Line</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#shared-variables" class="nav-link">Shared Variables</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/vhdl/testbench.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="testbench">
+<h1>Testbench<a class="headerlink" href="#testbench" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/tb_dut.svg"><img alt="../../_images/tb_dut.svg" src="../../_images/tb_dut.svg" width="600px" /></a>
+</div>
+<div class="section" id="additional-documents">
+<h2>Additional Documents<a class="headerlink" href="#additional-documents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_subblock_verification.pdf">Synth Works Subbloc Verification</a></p></li>
+<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_testbench_techniques.pdf">Synth Works Testbench Techniques</a></p></li>
+</ul>
+</div>
+<div class="section" id="tests-severity">
+<h2>Tests &amp; Severity<a class="headerlink" href="#tests-severity" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">severity</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-- severity = note | warning | error | failure
+assert ( a = b )
+  report “a is not equal to b”
+severity note;
+</pre></div>
+</div>
+</div>
+<div class="section" id="stop-simulation">
+<h3>Stop Simulation<a class="headerlink" href="#stop-simulation" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">testbench stop</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">false</span> <span class="n">report</span> <span class="s">&quot;End of simulation&quot;</span> <span class="k">severity</span> <span class="n">failure</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clock-generation">
+<h2>Clock generation<a class="headerlink" href="#clock-generation" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">clock</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">constant</span> <span class="n">sys_CLK_freq</span>   <span class="o">:</span> <span class="n">real</span> <span class="o">:=</span> <span class="mi">150</span><span class="p">.</span><span class="mi">00</span><span class="n">E6</span><span class="p">;</span>
+<span class="k">constant</span> <span class="n">sys_CLK_period</span> <span class="o">:</span> <span class="kt">time</span> <span class="o">:=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">sys_CLK_freq</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span> <span class="n">sec</span><span class="p">;</span>
+
+<span class="k">signal</span> <span class="n">sys_CLK_int</span>      <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span> <span class="n">sys_CLK</span>          <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="c1">----------------------------</span>
+<span class="c1">-- Only signal</span>
+<span class="n">sys_CLK_int</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">sys_CLK</span>     <span class="o">&lt;=</span> <span class="k">transport</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">-- In a process</span>
+<span class="k">process</span>
+<span class="k">begin</span>
+    <span class="n">sys_CLK_int</span>    <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>   <span class="k">wait</span> <span class="k">for</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">sys_CLK_int</span>    <span class="o">&lt;=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span>   <span class="k">wait</span> <span class="k">for</span> <span class="n">sys_CLK_period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">process</span><span class="p">;</span>
+<span class="n">sys_CLK</span>     <span class="o">&lt;=</span> <span class="k">transport</span> <span class="n">sys_CLK_int</span> <span class="k">after</span> <span class="n">sys_CLK_period</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reset">
+<h2>Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">reset</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">tb_RESETn</span>   <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span> <span class="k">after</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span>
+               <span class="sc">&#39;1&#39;</span> <span class="k">after</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">sys_CLK_period</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wait-statement">
+<h2>Wait statement<a class="headerlink" href="#wait-statement" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Has to be in process without List of sensitivity</p></li>
+<li><p>Every process without a list of sensitivity need at least on wait statement.</p></li>
+</ul>
+</div></blockquote>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">wait</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="nc">wait_PROC</span><span class="o">:</span> <span class="k">process</span>
+    <span class="c1">-- wait for a given TIME</span>
+    <span class="k">wait</span> <span class="k">for</span> <span class="o">&lt;</span><span class="kt">time</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="c1">-- wait for an EVENT</span>
+    <span class="k">wait</span> <span class="k">on</span> <span class="o">&lt;</span><span class="k">signal</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="c1">-- wait until CONDITON (on event triggered)</span>
+    <span class="k">wait</span> <span class="k">until</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="c1">-- wait if signal hasn&#39;t the whished value</span>
+    <span class="k">if</span> <span class="k">not</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="k">then</span>
+      <span class="k">wait</span> <span class="k">until</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+
+    <span class="c1">-- wait FOREVER</span>
+    <span class="k">wait</span><span class="p">;</span>
+<span class="k">end</span> <span class="nc">wait_PROC</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">string</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Integer =&gt; String</span>
+<span class="n">string_sig</span> <span class="o">&lt;=</span> <span class="kt">integer</span><span class="na">&#39;image</span><span class="p">(</span><span class="n">integer_sig</span><span class="p">);</span>
+
+<span class="c1">-- String =&gt; Interger</span>
+<span class="n">integer_sig</span> <span class="o">&lt;=</span> <span class="kt">integer</span><span class="na">&#39;value</span><span class="p">(</span><span class="n">string_sig</span><span class="p">);</span>
+
+<span class="c1">-- String =&gt; Std_logic_vector</span>
+<span class="n">slv_sig</span> <span class="o">&lt;=</span> <span class="n">to_std_logic_vector</span><span class="p">(</span><span class="n">string_sig</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Characters</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lf</span> <span class="o">-</span> <span class="n">linefeed</span>
+<span class="n">ht</span> <span class="o">-</span> <span class="n">tabluator</span>
+</pre></div>
+</div>
+<div class="section" id="simple-and-messy">
+<h3>Simple and messy<a class="headerlink" href="#simple-and-messy" title="Permalink to this headline">¶</a></h3>
+<p>Make a string plenty wide enough. Then you can store each string in the appropriate slice of it.</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">string simple</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">toto</span><span class="o">:</span> <span class="kt">string</span><span class="p">(</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">80</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="p">&#39;</span> <span class="p">&#39;);</span>
+<span class="c1">-- plenty wide enough, and full of spaces</span>
+
+<span class="p">...</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span>
+    <span class="n">toto</span><span class="p">(</span><span class="n">t1</span><span class="na">&#39;range</span><span class="p">)</span> <span class="o">:=</span> <span class="n">t1</span><span class="p">;</span>
+<span class="k">else</span>
+    <span class="n">toto</span><span class="p">(</span><span class="n">t2</span><span class="na">&#39;range</span><span class="p">)</span> <span class="o">:=</span> <span class="n">t2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<p>This is quite horrible, though, because you have no easy way to find out how many characters of <code class="docutils literal notranslate"><span class="pre">toto</span></code> are in use at any given time.</p>
+</div>
+<div class="section" id="complicated-and-pretty">
+<h3>Complicated and pretty<a class="headerlink" href="#complicated-and-pretty" title="Permalink to this headline">¶</a></h3>
+<p>Make the string a variable of type <code class="docutils literal notranslate"><span class="pre">LINE</span></code>, from package <code class="docutils literal notranslate"><span class="pre">STD.TEXTIO</span></code>. Then you can copy any string into it using the <code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure:</p>
+<p><code class="docutils literal notranslate"><span class="pre">WRITE</span></code> procedure adds things to the end of the string stored in <code class="docutils literal notranslate"><span class="pre">toto</span></code>, so that it grows ever longer. The <code class="docutils literal notranslate"><span class="pre">DEALLOCATE</span></code> procedure eliminates the spaces used by the line variable.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Each line variable need to be deallocated at the end, otherwise the memory space will not be released.</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">string pretty 1</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">toto</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span> <span class="c1">-- initialised to empty!</span>
+<span class="p">...</span>
+<span class="k">if</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span> <span class="k">then</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">toto</span><span class="p">,</span> <span class="n">t1</span><span class="p">);</span>
+<span class="k">else</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">toto</span><span class="p">,</span> <span class="n">t2</span><span class="p">);</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<p>To reset it back to “empty” and free the memory, simply:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">string pretty 2</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="n">deallocate</span><span class="p">(</span><span class="n">toto</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="put-string-into-line">
+<h4>Put String into Line<a class="headerlink" href="#put-string-into-line" title="Permalink to this headline">¶</a></h4>
+<p>Copying any string into a line variable, having first cleared that variable:</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">string pretty 3</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">procedure</span> <span class="n">put</span><span class="p">(</span><span class="n">l</span><span class="o">:</span> <span class="k">inout</span> <span class="n">line</span><span class="p">;</span> <span class="n">s</span><span class="o">:</span> <span class="k">in</span> <span class="kt">string</span><span class="p">)</span> <span class="k">is</span>
+    <span class="k">begin</span>
+    <span class="n">deallocate</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-string-from-line">
+<h4>Get String from Line<a class="headerlink" href="#get-string-from-line" title="Permalink to this headline">¶</a></h4>
+<p>Given a variable.</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">string pretty 4</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">variable</span> <span class="n">l</span><span class="o">:</span> <span class="n">line</span><span class="p">;</span>
+<span class="k">variable</span> <span class="n">c</span><span class="o">:</span> <span class="kt">character</span><span class="p">;</span>
+<span class="k">variable</span> <span class="n">s</span><span class="o">:</span> <span class="kt">string</span><span class="p">(</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">80</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="p">&#39;</span> <span class="p">&#39;);</span>
+
+<span class="c1">-- put something into l</span>
+<span class="p">...</span>
+
+<span class="c1">-- take the whole string content</span>
+<span class="n">report</span> <span class="s">&quot;Message is &quot;</span> <span class="o">&amp;</span> <span class="n">l</span><span class="p">.</span><span class="k">all</span><span class="p">;</span>
+
+<span class="c1">-- take a slice of it, just like a string:</span>
+<span class="n">c</span> <span class="o">:=</span> <span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">s</span> <span class="o">:=</span> <span class="n">l</span><span class="p">.</span><span class="k">all</span><span class="p">;</span> <span class="p">(</span><span class="n">whole</span> <span class="n">line</span> <span class="k">to</span> <span class="kt">string</span><span class="p">)</span>
+
+<span class="c1">-- find its length:</span>
+<span class="k">if</span> <span class="n">l</span><span class="na">&#39;length</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="k">then</span>
+   <span class="p">...</span>
+<span class="k">end</span> <span class="k">if</span><span class="p">;</span>
+
+<span class="c1">-- write it to a file (such as the console):</span>
+<span class="n">writeline</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="c1">-- also clears l to empty</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="shared-variables">
+<h2>Shared Variables<a class="headerlink" href="#shared-variables" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">shared variables</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">architecture</span> <span class="nc">non_determinist</span> <span class="k">of</span> <span class="nc">example</span> <span class="k">is</span>
+
+    <span class="k">shared</span> <span class="k">variable</span> <span class="n">count</span> <span class="o">:</span> <span class="kt">integer</span><span class="p">;</span>
+
+<span class="k">begin</span>
+
+    <span class="n">p1</span> <span class="o">:</span> <span class="k">process</span>
+    <span class="k">begin</span>
+        <span class="n">count</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">wait</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">process</span> <span class="nc">p1</span><span class="p">;</span>
+
+    <span class="nc">p2</span><span class="o">:</span> <span class="k">process</span>
+    <span class="k">begin</span>
+        <span class="k">wait</span> <span class="mi">1</span> <span class="n">ps</span><span class="p">;</span>
+        <span class="n">count</span> <span class="o">:=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">wait</span><span class="p">;</span>
+    <span class="k">end</span> <span class="k">process</span> <span class="nc">p2</span><span class="p">;</span>
+<span class="k">end</span> <span class="k">architecture</span> <span class="nc">non_determinist</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

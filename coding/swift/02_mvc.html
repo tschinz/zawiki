@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Concepts &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Properties" href="03_properties.html" />
+    <link rel="prev" title="Basics" href="01_basics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#mvc" class="nav-link">MVC</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#view" class="nav-link">View</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#controller" class="nav-link">Controller</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#model" class="nav-link">Model</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#multiple-mvc" class="nav-link">Multiple MVC</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#uitabbarcontroller" class="nav-link">UITabBarController</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#uisplitviewcontroller" class="nav-link">UISplitViewController</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#navigationcontroller" class="nav-link">NavigationController</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#uiscrollview" class="nav-link">UIScrollView</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#zooming" class="nav-link">Zooming</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#accessing-sub-mvc-s" class="nav-link">Accessing Sub MVC’s</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#wiring-up-mvc-s" class="nav-link">Wiring up MVC’s</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#segues" class="nav-link">Segues</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#creating-segue" class="nav-link">Creating Segue</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#prepare-segue" class="nav-link">Prepare Segue</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#prevent-segue" class="nav-link">Prevent Segue</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#popover" class="nav-link">Popover</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#preparing-a-popover" class="nav-link">Preparing a Popover</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#popover-presentation-controller" class="nav-link">Popover Presentation Controller</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/swift/02_mvc.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="programming-concepts">
+<h1>Programming Concepts<a class="headerlink" href="#programming-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mvc">
+<h2>MVC<a class="headerlink" href="#mvc" title="Permalink to this headline">¶</a></h2>
+<p>MVC is a the abbreviation for Model view Controller. It is a
+Object-Oriented Design Pattern</p>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/mvc.svg"><img alt="../../_images/mvc.svg" src="../../_images/mvc.svg" width="500px" /></a>
+</div>
+</div></blockquote>
+<div class="section" id="view">
+<h3>View<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h3>
+<p>Is only in charge for the GUI. It is the slaves of the Controller. It
+has limited connection to the Controller</p>
+<ul class="simple">
+<li><p>action target - It can send an event to the Controller</p></li>
+<li><p>It can delegate actions, the Controller would be a delegate of the
+View</p></li>
+<li><p>It can get data from the controller</p></li>
+</ul>
+</div>
+<div class="section" id="controller">
+<h3>Controller<a class="headerlink" href="#controller" title="Permalink to this headline">¶</a></h3>
+<p>The Controller defines <strong>How</strong> you Model is presented to the User (UI
+Logic) Communicates to the View and the Model freely.</p>
+</div>
+<div class="section" id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<p>The Model is <strong>What</strong> your application is. It is here were all the
+algorithms etc. are implemented. It has limited communication to the
+Controller</p>
+<ul class="simple">
+<li><p>Notification &amp; KVO - It can “send out” informations and any body
+connected can “listen in”. KVO = Key-Value Observer</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="multiple-mvc">
+<h2>Multiple MVC<a class="headerlink" href="#multiple-mvc" title="Permalink to this headline">¶</a></h2>
+<p>For powerful apps multiple MVC’s needs to be put together</p>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/UINavigationController_mvc.svg"><img alt="../../_images/UINavigationController_mvc.svg" src="../../_images/UINavigationController_mvc.svg" width="500px" /></a>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>iOS provides some Controllers whose View is “other MVC’s”. Examples:</p>
+<ul>
+<li><p>UITabBarController</p></li>
+<li><p>UISplitViewController</p></li>
+<li><p>UINavigationController</p></li>
+<li><p>UIScrollView</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="uitabbarcontroller">
+<h3><code class="docutils literal notranslate"><span class="pre">UITabBarController</span></code><a class="headerlink" href="#uitabbarcontroller" title="Permalink to this headline">¶</a></h3>
+<p>Tab bar can replace top part of the Screen with a different MVC bundle
+(e.g. Health App)</p>
+</div>
+<div class="section" id="uisplitviewcontroller">
+<h3><code class="docutils literal notranslate"><span class="pre">UISplitViewController</span></code><a class="headerlink" href="#uisplitviewcontroller" title="Permalink to this headline">¶</a></h3>
+<p>Takes two MVC’s and puts them side by side (iPad only)</p>
+<ul class="simple">
+<li><p>Left MVC = Master</p></li>
+<li><p>Right MVC = Detail</p></li>
+</ul>
+<p>Landscape mode = Both MVC’s side by side Portrait mode = Only Detail
+view visible, Master view can be siped in from the left</p>
+<p>(e.g. Mail)</p>
+</div>
+<div class="section" id="navigationcontroller">
+<h3><code class="docutils literal notranslate"><span class="pre">NavigationController</span></code><a class="headerlink" href="#navigationcontroller" title="Permalink to this headline">¶</a></h3>
+<p>Can push and pop MVC’s off of a stack. The Top MVC is shown an with it
+the Titlebar and left and right button is placed. You can put a MVC into
+the NavigationController Stack or push them off. The Sub MVC’s are
+created and destroyed at that point.</p>
+<p>(e.g. Settings)</p>
+</div>
+<div class="section" id="uiscrollview">
+<h3><code class="docutils literal notranslate"><span class="pre">UIScrollView</span></code><a class="headerlink" href="#uiscrollview" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Set content size</p></li>
+<li><p>Add frames to the content area</p></li>
+<li><p>Reposition the view (the window of the screen inside the screen)</p></li>
+<li><p>Get area where you’re looking at (contentOffset.x &amp; y)</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">scrollView</span><span class="p">.</span><span class="n">contentSize</span> <span class="p">=</span> <span class="bp">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">2000</span><span class="p">)</span> <span class="c1">// size of the scroll view</span>
+<span class="c1">// Add logo with</span>
+<span class="n">logo</span><span class="p">.</span><span class="n">frame</span><span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">2700</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">180</span><span class="p">)</span>
+<span class="n">scrollView</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">logo</span><span class="p">)</span>
+<span class="c1">// Add another image to the view at a different location</span>
+<span class="n">aerial</span><span class="p">.</span><span class="n">frame</span> <span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">1600</span><span class="p">)</span>
+<span class="n">scrollView</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">aerial</span><span class="p">)</span>
+
+<span class="c1">// Scroll in program</span>
+<span class="kd">func</span> <span class="nf">scrollRectToVisible</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Other things which can be done in <code class="docutils literal notranslate"><span class="pre">scrollView</span></code></p>
+<ul class="simple">
+<li><p>Enable or disable scrolling</p></li>
+<li><p>Lock scrolling direction</p></li>
+<li><p>Style of scrolling indicator (<code class="docutils literal notranslate"><span class="pre">flashScrollIndicator</span></code>)</p></li>
+<li><p>Whether your actual content is inset from the content area
+(<code class="docutils literal notranslate"><span class="pre">contentInset</span></code> property)</p></li>
+</ul>
+<div class="section" id="zooming">
+<h4>Zooming<a class="headerlink" href="#zooming" title="Permalink to this headline">¶</a></h4>
+<p>All <code class="docutils literal notranslate"><span class="pre">UIView</span></code>’s have a property <code class="docutils literal notranslate"><span class="pre">transform</span></code> which is an affine
+transformation (<code class="docutils literal notranslate"><span class="pre">translate</span></code>, <code class="docutils literal notranslate"><span class="pre">scale</span></code>, <code class="docutils literal notranslate"><span class="pre">rotate</span></code>). Zooming is
+affecting the scroll view <code class="docutils literal notranslate"><span class="pre">contentSize</span></code> and <code class="docutils literal notranslate"><span class="pre">contentOffset</span></code>.</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// They needed to be set for enabling zoom</span>
+<span class="n">scrollView</span><span class="p">.</span><span class="n">minimumZoomScale</span> <span class="p">=</span> <span class="mf">0.5</span> <span class="c1">// min half of its normal size</span>
+<span class="n">scrollView</span><span class="p">.</span><span class="n">maximumZoomScale</span> <span class="p">=</span> <span class="mf">2.0</span> <span class="c1">// max double its normal size</span>
+
+<span class="c1">// Will not work without delegate</span>
+<span class="kd">func</span> <span class="nf">viewForZoomingInScrollView</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="bp">UIScrollView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">UIView</span>
+
+<span class="c1">// Zoom in program</span>
+<span class="kd">var</span> <span class="nv">zoomScale</span><span class="p">:</span> <span class="n">CGFloat</span>
+<span class="kd">func</span> <span class="nf">setZoomScale</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="c1">// Zoom to a different scale (in middle of screen)</span>
+<span class="kd">func</span> <span class="nf">zoomToRect</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>    <span class="c1">// Zoom to a rectangle (fill screen as much as possible)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-sub-mvc-s">
+<span id="id1"></span><h3>Accessing Sub MVC’s<a class="headerlink" href="#accessing-sub-mvc-s" title="Permalink to this headline">¶</a></h3>
+<p>You can access sub-MVC’s via the <code class="docutils literal notranslate"><span class="pre">viewControllers</span></code> property</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">viewControllers</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIViewController</span><span class="p">]</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span> <span class="c1">// possibly an optional</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>For a Tabbar they are ordered left to right, in the array.</p></li>
+<li><p>For a Split View, [0] is the master and [1] is the detail.</p></li>
+<li><p>For a NavigationController, [0] is the root and the rest are in order
+on the stack.</p></li>
+</ul>
+<p><strong>Get ahold of the NC, SVC, TBC</strong> Every <code class="docutils literal notranslate"><span class="pre">UIViewController</span></code> knows the
+SplitView, TabBar or Navigation Controller it is currently in. These are
+<code class="docutils literal notranslate"><span class="pre">UIViewController</span></code> properties:</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">tabBarController</span><span class="p">:</span> <span class="bp">UITabBarController</span><span class="p">?</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="nv">splitViewController</span><span class="p">:</span> <span class="bp">UISplitViewController</span><span class="p">?</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="nv">navigationController</span><span class="p">:</span> <span class="bp">UINavigationController</span><span class="p">?</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+<span class="c1">// for example, the get the detail of the split view controller your are in...</span>
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">detailVC</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">=</span> <span class="n">splitViewController</span><span class="p">?.</span><span class="n">viewControllers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wiring-up-mvc-s">
+<span id="id2"></span><h3>Wiring up MVC’s<a class="headerlink" href="#wiring-up-mvc-s" title="Permalink to this headline">¶</a></h3>
+<p>In Story board or Code but Storyboard is more common. For Storyboard</p>
+<ul class="simple">
+<li><p>Drag out a SplitViewController</p></li>
+<li><p>Ctrl drag from SplitViewController to the Master MVC</p></li>
+<li><p>Ctrl drag from SplitViewController to the Detail MVC</p></li>
+<li><p>Split View can only work on a Regular size device (iPhone is a
+compact device). Therefore t can’t display Master and Detail on the
+same screen. The master need to be Embed in a n Navigation Controller</p>
+<ul>
+<li><p>Select Master</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Editor-&gt;Embed</span> <span class="pre">In-&gt;NavigationController</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="segues">
+<h3>Segues<a class="headerlink" href="#segues" title="Permalink to this headline">¶</a></h3>
+<p>Seques are used that one MVC can cause appear another MVC. There are
+different kind of Segues</p>
+<ul class="simple">
+<li><p>Show Segue (will push NavigationCtonroller, else Modal)</p></li>
+<li><p>Show Detail Segue (will show in Detail of a SplitView or will push in
+a NavigationController)</p></li>
+<li><p>Modal Segue ( take over the entire screen while the MVC us up)</p></li>
+<li><p>Popover Segue () make the MVC appear in a little popover window</p></li>
+</ul>
+<p>Segue always creates new instances of MVC</p>
+<div class="section" id="creating-segue">
+<h4>Creating Segue<a class="headerlink" href="#creating-segue" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Ctrl drag from two View into each other</p></li>
+<li><p>Click on the Circle in the middle of the segue</p></li>
+<li><p>Choose an Identifier for the Segue from the Attribute Inspector</p></li>
+<li><p>Perform Segue in code, with the method from UIViewController. (Not
+often mosten made in Storyboard)</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">performSegueWithIdentifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">.</span> <span class="nb">String</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">?)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prepare-segue">
+<h4>Prepare Segue<a class="headerlink" href="#prepare-segue" title="Permalink to this headline">¶</a></h4>
+<p>Identifier are used for preparing for a Segue. A Segue creates a new MVC
+which is empty, it needs to be prepared with the correct content. A
+Segue passes two informations:</p>
+<ul class="simple">
+<li><p>The Identifier from the Storybaord</p></li>
+<li><p>The Controller of the MVC you are segueing to (which was just created
+for you)</p></li>
+<li><p>sender is the Object from the storyboard (e.g. UIButton) which caused
+the segue to happen.</p></li>
+</ul>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">prepareForSegue</span><span class="p">(</span><span class="n">segue</span><span class="p">:</span> <span class="n">UIStoryBoardSegue</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">identifier</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">identifier</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="s">&quot;Show Graph&quot;</span><span class="p">:</span>
+                <span class="c1">// beause it is anyObject it needs to be turned into the correct class</span>
+                <span class="k">if</span> <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destinationViewController</span> <span class="k">as</span><span class="p">?</span> <span class="n">MyController</span> <span class="p">{</span>
+                    <span class="n">vc</span><span class="p">.</span><span class="n">property1</span> <span class="p">=</span> <span class="p">...</span>
+                    <span class="n">vc</span><span class="p">.</span><span class="n">callMethodToSetUp</span><span class="p">(...)</span>
+                <span class="p">}</span>
+            <span class="k">default</span><span class="p">:</span> <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>!!! Important. While preparing an MVC its outlet are not set yet.</p>
+</div>
+<div class="section" id="prevent-segue">
+<h4>Prevent Segue<a class="headerlink" href="#prevent-segue" title="Permalink to this headline">¶</a></h4>
+<p>Preventing segue from happening. You need to implement</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">shouldPerfromSegueWithIdentifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="nb">String</span><span class="p">?,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="popover">
+<h3>Popover<a class="headerlink" href="#popover" title="Permalink to this headline">¶</a></h3>
+<p>A popover open en entire MVC. The rest of the screen is grayed out. The
+Pointer of the Popover points to the button created the Popover.</p>
+<ul class="simple">
+<li><p>Popover works with Segue as the other ViewControllers</p></li>
+<li><p>Preparing for a popover</p>
+<ul>
+<li><p>All segues are managed via a <code class="docutils literal notranslate"><span class="pre">UIPresentationController</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="preparing-a-popover">
+<h4>Preparing a Popover<a class="headerlink" href="#preparing-a-popover" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">prepareForSegue</span><span class="p">(</span><span class="n">segue</span><span class="p">:</span> <span class="n">UIStoryBoardSegue</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">identifier</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">identifier</span> <span class="p">{</span>
+            <span class="k">case</span><span class="p">:</span> <span class="s">&quot;Do something in a popover Segue&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destinationViewController</span> <span class="k">as</span><span class="p">?</span> <span class="n">MyController</span> <span class="p">{</span>
+                    <span class="c1">// get popover presentation controller</span>
+                    <span class="k">if</span> <span class="kd">let</span> <span class="nv">ppc</span> <span class="p">=</span> <span class="n">vc</span><span class="p">.</span><span class="n">popoverPresentationController</span> <span class="p">{</span>
+                        <span class="n">ppc</span><span class="p">.</span><span class="n">permittedArrowDirections</span> <span class="p">=</span> <span class="n">UIPopoverArrowDirection</span><span class="p">.</span><span class="nb">Any</span>
+                        <span class="n">ppc</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+                    <span class="p">}</span>
+                    <span class="c1">// more prepration here</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="popover-presentation-controller">
+<h4>Popover Presentation Controller<a class="headerlink" href="#popover-presentation-controller" title="Permalink to this headline">¶</a></h4>
+<p>The Popover Presentation Delegate (see code above) can manipulate and
+adapt the popover <strong>Adaptation</strong></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">adaptivePresentationStyleForPresentationContoller</span><span class="p">(</span><span class="bp">UIPresentationController</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UIModelPresentationStyle</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">UIModalPresentationStyle</span><span class="p">.</span><span class="n">None</span> <span class="c1">// default .FullScreen</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>FullScreen</strong></p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">presentationController</span><span class="p">(</span><span class="bp">UIPresentationController</span><span class="p">,</span> <span class="n">viewControllerForAdaptivePresentationStyle</span><span class="p">:</span> <span class="n">UIModalPresentationStyle</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">UIViewController</span><span class="p">?</span> <span class="p">{</span>
+    <span class="c1">// return a UIViewController to use (e.g. Wrap Navigation Controller around your MVC)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Size</strong> Popover should be the needed size of the containing MVC.</p>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">preferredContentSize</span><span class="p">:</span> <span class="bp">CGSize</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

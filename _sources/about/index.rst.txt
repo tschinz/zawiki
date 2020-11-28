@@ -26,6 +26,11 @@ Find me at
 * `Flickr <https://www.flickr.com/photos/tschinz/>`_
 * `Twitter @tschinz <https://twitter.com/tschinz>`_
 
+Config repo
+===========
+
+`Config Repo <https://github.com/tschinz/config>`_
+
 Todo
 ====
 General Todolist

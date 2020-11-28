@@ -24,62 +24,18 @@ Overview
    * - Resampling
      - .. figure:: img/bootstrap_resampling.png
    * - Subset Selection
+     -
    * - Shrinkage
+     -
    * - Dimension Reduction
+     -
    * - Nonlinear Models
+     -
    * - Tree-Based Methods
+     -
    * - Support Vector Machines
-
-
-Techniques
-==========
-
-Linear Regression
------------------
-
-.. figure:: img/regression.*
-   :align: center
-   :width: 60%
-
-Classification
---------------
-
-.. figure:: img/classification.*
-   :align: center
-   :width: 60%
-
-Resampling
-----------
-
-.. figure:: img/bootstrap_resampling.*
-   :align: center
-   :width: 60%
-
-Subset Selection
-----------------
-
-Shrinkage
----------
-
-Dimension Reduction
--------------------
-
-Nonlinear Models
-----------------
-
-Tree-Based Methods
-------------------
-
-Support Vector Machines
------------------------
-
-Unsupervised Learning
----------------------
-
-
-Analysis Problems
-=================
-
-.. figure:: img/ml_fitting.*
-   :align: center
-   :width: 80%
+     -
+   * - Unsupervised Learning
+     -
+   * - Analysis Problems
+     - .. figure:: img/ml_fitting.*

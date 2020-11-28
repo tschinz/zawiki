@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Syntax" href="syntax.html" />
+    <link rel="prev" title="Make" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#sphinx-makefile" class="nav-link">Sphinx Makefile</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#simple-c-c-project" class="nav-link">Simple C/C++ Project</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#c-c-project" class="nav-link">C/C++ Project</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/make/examples.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>In this section you can find some example Makefile which you can take and adapt to any needs.</p>
+<div class="section" id="sphinx-makefile">
+<h2>Sphinx Makefile<a class="headerlink" href="#sphinx-makefile" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">makefile sphinx</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># Makefile for Sphinx documentation</span>
+<span class="c">#</span>
+
+<span class="c"># You can set these variables from the command line.</span>
+<span class="nv">SPHINXOPTS</span>    <span class="o">=</span> -Dversion<span class="o">=</span><span class="k">$(</span>shell git describe --tags<span class="k">)</span>
+<span class="nv">SPHINXBUILD</span>   <span class="o">=</span> sphinx-build
+<span class="nv">SOURCEDIR</span>     <span class="o">=</span> <span class="nb">source</span>
+<span class="nv">BUILDDIR</span>      <span class="o">=</span> _build
+<span class="nv">OUTPUTDIR</span>     <span class="o">=</span> pdf
+<span class="nv">FILENAME</span>      <span class="o">=</span> zawiki
+<span class="c"># IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR</span>
+<span class="nv">IMAGEOBJS</span>     <span class="o">=</span> <span class="k">$(</span>sort <span class="k">$(</span>dir <span class="k">$(</span>wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*<span class="k">)))</span>
+<span class="nv">IMAGEDIRS</span>     <span class="o">=</span> <span class="k">$(</span>patsubst source/%/, %, <span class="k">$(</span>IMAGEOBJS<span class="k">))</span> <span class="c1"># remove source/ and last /</span>
+<span class="nv">IMAGEDIRS</span>    <span class="o">+=</span> img/icons
+<span class="c"># SVG to PDF conversion</span>
+<span class="nv">SVG2PDF</span>       <span class="o">=</span> inkscape
+<span class="nv">SVG2PDF_FLAGS</span> <span class="o">=</span> -C
+
+<span class="c"># Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.</span>
+<span class="nf">help</span><span class="o">:</span>
+    @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nb">help</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+
+<span class="c"># Pattern rule for converting SVG to PDF</span>
+<span class="nf">%.pdf </span><span class="o">:</span> %.<span class="n">svg</span>
+    <span class="k">$(</span>SVG2PDF<span class="k">)</span> <span class="k">$(</span>SVG2PDF_FLAGS<span class="k">)</span> -f $&lt; -A <span class="nv">$@</span>
+
+<span class="c"># Build a list of SVG files to convert to PDFs</span>
+<span class="nv">PDFs</span> <span class="o">:=</span> <span class="k">$(</span>foreach dir, <span class="k">$(</span>IMAGEDIRS<span class="k">)</span>, <span class="k">$(</span>patsubst %.svg,%.pdf,<span class="k">$(</span>wildcard <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/<span class="k">$(</span>dir<span class="k">)</span>/*.svg<span class="k">)))</span>
+
+<span class="c"># Make a rule to build the PDFs</span>
+<span class="nf">images-pdf</span><span class="o">:</span> <span class="k">$(</span><span class="nv">PDFs</span><span class="k">)</span>
+
+
+<span class="c"># Make a rule to build the images</span>
+<span class="nf">images</span><span class="o">:</span> <span class="n">images</span>-<span class="n">png</span>
+
+<span class="nf">clean-pdf</span><span class="o">:</span>
+    -rm <span class="k">$(</span>PDFs<span class="k">)</span>
+
+<span class="nf">clean-images</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">pdf</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">help</span> <span class="n">Makefile</span>
+
+<span class="c"># Catch-all target: route all unknown targets to Sphinx using the new</span>
+<span class="c"># &quot;make mode&quot; option.  $(O) is meant as a shortcut for $(SPHINXOPTS).</span>
+<span class="c">#%: Makefile</span>
+<span class="c">#   @$(SPHINXBUILD) -M $@ &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>
+<span class="nf">clean</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">images</span>
+    rm -rf <span class="k">$(</span>BUILDDIR<span class="k">)</span>/*
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>-<span class="n">quick</span>
+<span class="nf">clean-quick</span><span class="o">:</span>
+    rm -rf <span class="k">$(</span>BUILDDIR<span class="k">)</span>/*
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">html</span>
+<span class="nf">html</span><span class="o">:</span> <span class="c"># images-png</span>
+<span class="cp">    if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;</span>
+    cp <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index_html.rst <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index.rst
+    <span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+    @echo
+    @echo <span class="s2">&quot;Build finished. The HTML pages are in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/html.&quot;</span>
+<span class="c">    #mkdir -p $(OUTPUTDIR)/html/</span>
+<span class="c">    #cp -R $(BUILDDIR)/html/* $(OUTPUTDIR)</span>
+    @echo <span class="s2">&quot;html files copied; the html files are in </span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/html/.&quot;</span>
+
+
+    @echo <span class="s2">&quot;Build finished; now you can run &quot;</span>qcollectiongenerator<span class="s2">&quot; with the&quot;</span> <span class="se">\</span>
+          <span class="s2">&quot;.qhcp project file in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp, like this:&quot;</span>
+    @echo <span class="s2">&quot;# qcollectiongenerator </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp/Example.qhcp&quot;</span>
+    @echo <span class="s2">&quot;To view the help file:&quot;</span>
+    @echo <span class="s2">&quot;# assistant -collectionFile </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/qthelp/Example.qhc&quot;</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">latexpdf</span>
+<span class="nf">latexpdf</span><span class="o">:</span> <span class="n">images</span>-<span class="n">pdf</span>
+<span class="cp">    if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;</span>
+    cp <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index_latex.rst <span class="k">$(</span>SOURCEDIR<span class="k">)</span>/index.rst
+    <span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+    @echo <span class="s2">&quot;Running LaTeX files through pdflatex...&quot;</span>
+    <span class="k">$(</span>MAKE<span class="k">)</span> -C <span class="k">$(</span>BUILDDIR<span class="k">)</span>/latex all-pdf
+    @echo <span class="s2">&quot;xelatex finished; the PDF files are in </span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">/latex.&quot;</span>
+    mkdir -p <span class="k">$(</span>OUTPUTDIR<span class="k">)</span>/
+    cp <span class="k">$(</span>BUILDDIR<span class="k">)</span>/latex/<span class="k">$(</span>FILENAME<span class="k">)</span>.pdf <span class="k">$(</span>OUTPUTDIR<span class="k">)</span>/<span class="k">$(</span>FILENAME<span class="k">)</span>.pdf
+    @echo <span class="s2">&quot;pdf copied; the PDF files are in </span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/</span><span class="k">$(</span>FILENAME<span class="k">)</span><span class="s2">.pdf.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="simple-c-c-project">
+<h2>Simple C/C++ Project<a class="headerlink" href="#simple-c-c-project" title="Permalink to this headline">¶</a></h2>
+<p>Here a simple editable Makefile where only the standart stuff is used.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">makefile simple cpp</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="c"># check for host development system</span>
+<span class="nv">TOOLS</span> <span class="o">=</span> ../../bin
+
+<span class="c"># define access paths for tools</span>
+<span class="nv">CCP</span> <span class="o">=</span>  cpp
+<span class="nv">AS</span> <span class="o">=</span> <span class="k">$(</span>TOOLS<span class="k">)</span>/asm_hrms
+
+<span class="c"># define access path for header files and libraries</span>
+<span class="nv">INCDIRS</span> <span class="o">=</span> ../../include
+
+<span class="c"># list target files</span>
+<span class="nf">all</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">d</span> <span class="n">a</span>664<span class="n">_rx</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">bin</span>
+
+<span class="c"># produce Test Processor target files</span>
+<span class="nf">a664_rx.s</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">S</span> <span class="n">Makefile</span>
+    cpp -I <span class="k">$(</span>INCDIRS<span class="k">)</span> -o a664_rx.s a664_rx.S
+<span class="nf">a664_rx.d</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -d -o a664_rx.d a664_rx.s &gt; a664_rx.d.dis
+<span class="nf">a664_rx</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -o a664_rx a664_rx.s &gt; a664_rx.dis
+<span class="nf">a664_rx.bin</span><span class="o">:</span> <span class="n">a</span>664<span class="n">_rx</span>.<span class="n">s</span>
+    <span class="k">$(</span>AS<span class="k">)</span> -o a664_rx.bin a664_rx.s &gt; a664_rx.dis
+
+<span class="c"># clean up</span>
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f *.bin *~ *.dis *.bin *.s *.d a664_rx
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="c-c-project">
+<h2>C/C++ Project<a class="headerlink" href="#c-c-project" title="Permalink to this headline">¶</a></h2>
+<p>This is a C/C++ Project where as much make is used as possible.</p>
+<p>First you can see the C/C++ project files to the given Makefile</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">hellomake.c</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// call a function in another file</span>
+  <span class="n">myPrintHelloMake</span><span class="p">();</span>
+
+  <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">code</span> <span class="n">c</span> <span class="n">hellofunc</span><span class="p">.</span><span class="n">c</span><span class="o">&gt;</span>
+<span class="cp">#include</span>
+<span class="cp">#include</span>
+
+<span class="kt">void</span> <span class="n">myPrintHelloMake</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello makefiles!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">hellomake.h</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// example include file
+void myPrintHelloMake(void);
+&lt;/code&gt;
+
+Here the appropriate complete Makefile to the project above.
+&lt;code make Makefile&gt;
+CC=gcc
+CFLAGS=-I.
+DEPS = hellomake.h
+OBJ = hellomake.o hellofunc.o
+
+%.o: %.c $(DEPS)
+    $(CC) -c -o $@ $&lt; $(CFLAGS)
+
+hellomake: $(OBJ)
+    gcc -o $@ $^ $(CFLAGS)
+</pre></div>
+</div>
+</div>
+<p>or here the more complex project file</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">makefile cpp</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nv">IDIR</span> <span class="o">=</span>../include
+<span class="nv">CC</span><span class="o">=</span>gcc
+<span class="nv">CFLAGS</span><span class="o">=</span>-I<span class="k">$(</span>IDIR<span class="k">)</span>
+
+<span class="nv">ODIR</span><span class="o">=</span>obj
+<span class="nv">LDIR</span> <span class="o">=</span>../lib
+
+<span class="nv">LIBS</span><span class="o">=</span>-lm
+
+<span class="nv">_DEPS</span> <span class="o">=</span> hellomake.h
+<span class="nv">DEPS</span> <span class="o">=</span> <span class="k">$(</span>patsubst %,<span class="k">$(</span>IDIR<span class="k">)</span>/%,<span class="k">$(</span>_DEPS<span class="k">))</span>
+
+<span class="nv">_OBJ</span> <span class="o">=</span> hellomake.o hellofunc.o
+<span class="nv">OBJ</span> <span class="o">=</span> <span class="k">$(</span>patsubst %,<span class="k">$(</span>ODIR<span class="k">)</span>/%,<span class="k">$(</span>_OBJ<span class="k">))</span>
+
+
+<span class="nf">$(ODIR)/%.o</span><span class="o">:</span> %.<span class="n">c</span> <span class="k">$(</span><span class="nv">DEPS</span><span class="k">)</span>
+    <span class="k">$(</span>CC<span class="k">)</span> -c -o <span class="nv">$@</span> $&lt; <span class="k">$(</span>CFLAGS<span class="k">)</span>
+
+<span class="nf">hellomake</span><span class="o">:</span> <span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span>
+    gcc -o <span class="nv">$@</span> $^ <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="k">$(</span>LIBS<span class="k">)</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f <span class="k">$(</span>ODIR<span class="k">)</span>/*.o *~ core <span class="k">$(</span>INCDIR<span class="k">)</span>/*~
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

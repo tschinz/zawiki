@@ -14,5 +14,5 @@ Many icons on this pages are from `Flaticon <https://www.flaticon.com/>`_
 * By `Those Icons <https://www.flaticon.com/authors/those-icons>`_ from `Flaticon <https://www.flaticon.com/>`_
 * By `Flat Icons <https://www.flaticon.com/authors/flat-icons>`_ from `Flaticon <https://www.flaticon.com/>`_
 * By `Roundicons <https://www.flaticon.com/authors/roundicons>`_ from `Flaticon <https://www.flaticon.com/>`_
-
+* By `DinosoftLabs <https://www.flaticon.com/authors/dinosoftlabs>`_ from ` Flaticon <https://www.flaticon.com/>`_
 

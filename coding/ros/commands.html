@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commandline Commands &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Catkin Tools" href="catkin_tools.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#commandline-variables" class="nav-link">Commandline Variables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#useful-commands" class="nav-link">Useful commands</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ros-tools" class="nav-link">ROS tools</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#roscore" class="nav-link">roscore</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosversion" class="nav-link">rosversion</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosparam" class="nav-link">rosparam</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosnode" class="nav-link">rosnode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rostopic" class="nav-link">rostopic</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#roslaunch" class="nav-link">roslaunch</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosrun" class="nav-link">rosrun</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosservice" class="nav-link">rosservice</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosbag" class="nav-link">rosbag</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rosmsg" class="nav-link">rosmsg</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#other-commands" class="nav-link">Other Commands</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#catkin" class="nav-link">Catkin</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#create-package" class="nav-link">Create Package</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#build" class="nav-link">Build</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#install" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#python-modules" class="nav-link">Python modules</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#update-services-with-rqt" class="nav-link">Update services with RQT</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/ros/commands.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="commandline-commands">
+<h1>Commandline Commands<a class="headerlink" href="#commandline-commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="commandline-variables">
+<h2>Commandline Variables<a class="headerlink" href="#commandline-variables" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> $&lt;variable_name&gt;        <span class="c1"># To display value</span>
+
+ROS_DISTRO                   <span class="c1"># Distro name e.g. melodic</span>
+ROS_ETC_DIR                  <span class="c1">#</span>
+ROS_LISP_PACKAGE_DIRECTORIES <span class="c1"># common-lisp folder e.g. ~/catkin_ws/devel/share/common-lisp</span>
+ROS_HOSTNAME                 <span class="c1"># ros hostname e.g. localhost</span>
+ROS_MASTER_URI               <span class="c1"># ros master url e.g. http://localhost:11311</span>
+ROS_PACKAGE_PATH             <span class="c1"># package path&#39;s e.g. ~/catkin_ws/src:/opt/ros/$(ROS_DISTRO)/share</span>
+ROS_PYTHON_VERSION           <span class="c1"># python version 2 or 3 e.g. 2</span>
+ROS_ROOT                     <span class="c1"># ros installation e.g. /opt/ros/$(ROS_DISTRO)/share/ros</span>
+ROS_VERSION                  <span class="c1"># ros version 1 or 2 e.g. 1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="useful-commands">
+<h2>Useful commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ros-tools">
+<h3>ROS tools<a class="headerlink" href="#ros-tools" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="roscore">
+<h4><code class="docutils literal notranslate"><span class="pre">roscore</span></code><a class="headerlink" href="#roscore" title="Permalink to this headline">¶</a></h4>
+<p>Launch ROS <code class="docutils literal notranslate"><span class="pre">master</span></code> core</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosversion">
+<h4><code class="docutils literal notranslate"><span class="pre">rosversion</span></code><a class="headerlink" href="#rosversion" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosversion -d                             <span class="c1"># Print ROS distro name</span>
+rosversion &lt;package_name&gt;                 <span class="c1"># Print package vrosnode</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosparam">
+<h4><code class="docutils literal notranslate"><span class="pre">rosparam</span></code><a class="headerlink" href="#rosparam" title="Permalink to this headline">¶</a></h4>
+<p>Nodes use the parameter server to store and retrieve parameters at runtime.</p>
+<p><a class="reference external" href="http://wiki.ros.org/rosparam">http://wiki.ros.org/rosparam</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosparam list                             <span class="c1"># list parameter names</span>
+rosparam <span class="nb">set</span> /&lt;parameter_name&gt; &lt;value&gt;    <span class="c1"># set parameter</span>
+rosparam get /&lt;parameter_name&gt;            <span class="c1"># get parameter</span>
+rosparam delete /&lt;parameter_name&gt;         <span class="c1"># delete parameter</span>
+rosparam dump &lt;file&gt;                      <span class="c1"># dump parameter to file</span>
+rosparam load                             <span class="c1"># load parameter from file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosnode">
+<h4><code class="docutils literal notranslate"><span class="pre">rosnode</span></code><a class="headerlink" href="#rosnode" title="Permalink to this headline">¶</a></h4>
+<p>Work with <code class="docutils literal notranslate"><span class="pre">nodes</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosnode list                              <span class="c1"># list all nodes</span>
+rosnode ping /&lt;node_name&gt;                 <span class="c1"># check node connectivity</span>
+rosnode info /&lt;node_node&gt;                 <span class="c1"># print information about node</span>
+rosnode machine                           <span class="c1"># list nodes running on a particular machine</span>
+rosnode <span class="nb">kill</span> /&lt;node_name&gt;                 <span class="c1"># kill a running node</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rostopic">
+<h4><code class="docutils literal notranslate"><span class="pre">rostopic</span></code><a class="headerlink" href="#rostopic" title="Permalink to this headline">¶</a></h4>
+<p>Work with <code class="docutils literal notranslate"><span class="pre">topics</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic list                             <span class="c1"># list all topics</span>
+rostopic info /&lt;topic_name&gt;               <span class="c1"># print information about active topic</span>
+rostopic <span class="nb">echo</span> /&lt;topic_name&gt;               <span class="c1"># print messages to screen</span>
+rostopic pub /&lt;topic_name&gt; msg/MessageType <span class="s2">&quot;data:value&quot;</span> <span class="c1"># pubish data to topic</span>
+
+rostopic <span class="nb">type</span> /&lt;topic_name&gt;               <span class="c1"># print topic or field type</span>
+rostopic find &lt;type&gt;                      <span class="c1"># find topics by type</span>
+rostopic bw /&lt;topic_name&gt;                 <span class="c1"># display bandwidth used by topic</span>
+rostopic hz /&lt;topic_name&gt;                 <span class="c1"># display publishing rate of topic</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="roslaunch">
+<h4><code class="docutils literal notranslate"><span class="pre">roslaunch</span></code><a class="headerlink" href="#roslaunch" title="Permalink to this headline">¶</a></h4>
+<p>To start a launch file which can contain multiple <code class="docutils literal notranslate"><span class="pre">nodes</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch &lt;ros_pkg_name&gt; &lt;launch_file_name&gt; <span class="c1"># Launch ros launch file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosrun">
+<h4><code class="docutils literal notranslate"><span class="pre">rosrun</span></code><a class="headerlink" href="#rosrun" title="Permalink to this headline">¶</a></h4>
+<p>To run a <code class="docutils literal notranslate"><span class="pre">node</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun &lt;ros_pkg_name&gt; &lt;node_name&gt;         <span class="c1"># Start a ros node</span>
+rosrun &lt;PACKAGE_NAME&gt;&lt;NODE_NAME&gt; __name:<span class="o">=</span>&lt;INSTANCE_NAME&gt; <span class="c1"># Start another instance of a node, the parameter *INSTANCE_NAME* can be whatever you want, but it must be unique.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosservice">
+<h4><code class="docutils literal notranslate"><span class="pre">rosservice</span></code><a class="headerlink" href="#rosservice" title="Permalink to this headline">¶</a></h4>
+<p>Work with <code class="docutils literal notranslate"><span class="pre">services</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosservice list                           <span class="c1"># list active services</span>
+rosservice info &lt;service_name&gt;            <span class="c1"># print information about service</span>
+rosservice uri &lt;service_name&gt;             <span class="c1"># print service ROSRPC</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosbag">
+<h4><code class="docutils literal notranslate"><span class="pre">rosbag</span></code><a class="headerlink" href="#rosbag" title="Permalink to this headline">¶</a></h4>
+<p>ROS offers the possibility to record the data published on topics into <code class="docutils literal notranslate"><span class="pre">bag</span></code> files :</p>
+<ol class="arabic">
+<li><p>create a directory to store the bag files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/ mkdir ros_bag_files <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ros_bag_files
+</pre></div>
+</div>
+</li>
+<li><p>run the <em>record</em> command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag record -O &lt;bag_name&gt;.bag &lt;topic_name&gt; &lt;topic_name&gt;
+</pre></div>
+</div>
+</li>
+<li><p>play the bag file :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag play &lt;bag_name&gt;.bag
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Many options are available for the <em>rosbag</em> command, see <a class="reference external" href="http://wiki.ros.org/rosbag/Commandline">this page</a> for more details.</p>
+<p>Note : to play a bag with point clouds, it is required to have the following topics :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/cloud</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/tf_static</span></code></p></li>
+</ul>
+<p>The TF transformation is required, otherwise RViz can’t display the point clouds.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag record -O cloud.bag /cloud /tf_static
+...
+rosbag play cloud.bag
+</pre></div>
+</div>
+</div>
+<div class="section" id="rosmsg">
+<h4><code class="docutils literal notranslate"><span class="pre">rosmsg</span></code><a class="headerlink" href="#rosmsg" title="Permalink to this headline">¶</a></h4>
+<p>Display information about ros <code class="docutils literal notranslate"><span class="pre">messages</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosmsg list                     <span class="c1"># List all messages</span>
+rosmsg info &lt;message_name&gt;      <span class="c1"># Show message description</span>
+rosmsg package &lt;package_name&gt;   <span class="c1"># List messages in a package</span>
+rosmsg packages &lt;package_name&gt;  <span class="c1"># List packages that contain messages</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-commands">
+<h4>Other Commands<a class="headerlink" href="#other-commands" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd &lt;PKG_NAME&gt;                 <span class="c1"># move to the folder of the package</span>
+
+rosinstall &lt;PKG_NAME&gt;            <span class="c1"># install a ROS package</span>
+
+rosdep &lt;PKG_NAME                 <span class="c1"># install all the dependencies of a package</span>
+
+rqt                              <span class="c1"># tool with many plug-ins available such as topic publisher, service caller, …</span>
+
+rqt_graph                        <span class="c1"># display the connections between nodes</span>
+
+rviz                             <span class="c1"># launch the graphical tool to visualize robots, point clouds, …</span>
+
+view_frames                      <span class="c1"># create a PDFcalled ``frames.pdf`` with the TF frames that are active</span>
+evince frames.pdf                <span class="c1"># show with evince the generated frames.pdf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="catkin">
+<h3>Catkin<a class="headerlink" href="#catkin" title="Permalink to this headline">¶</a></h3>
+<p>More info:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/catkin/Tutorials">http://wiki.ros.org/catkin/Tutorials</a></p></li>
+</ul>
+<div class="section" id="create-package">
+<h4>Create Package<a class="headerlink" href="#create-package" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>new terminal</p></li>
+<li><p>navigate to the source folder of the catkin workspace : <code class="docutils literal notranslate"><span class="pre">.../catkin_ws/src</span></code></p></li>
+<li><p>run : <code class="docutils literal notranslate"><span class="pre">catkin_create_pkg</span> <span class="pre">&lt;PACKAGE_NAME&gt;</span> <span class="pre">&lt;DEPENDENCIES&gt;</span></code></p></li>
+<li><p>update both CMakeLists.txt and package.xml
+note : <em>run_depend</em> has to be replaced by the <em>exec_depend</em></p></li>
+<li><p>write source code in the source folder of the package :</p></li>
+<li><p>build the catkin workspace with the alias command : <code class="docutils literal notranslate"><span class="pre">cm</span></code></p></li>
+<li><p>launch the master as explained [here](ros-commands.md#roscore).</p></li>
+<li><p>now launch the node as explained [here](#roslaunch) and [here](rosrun).</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg &lt;PKG_NAME&gt; &lt;PKG_DEPENDENCIES&gt; <span class="c1"># create a package, must be called inside a catkin workspace</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build">
+<h4>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cm
+catkin_make                                     <span class="c1"># build the whole workspace</span>
+catkin_make &lt;PKG_NAME&gt;                          <span class="c1"># build a single package</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install">
+<h4>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_make install                             <span class="c1"># installs all executables</span>
+catkin_make install &lt;PKG_NAME&gt;                  <span class="c1"># installs single executables</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-modules">
+<h4>Python modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h4>
+<p>Tips :</p>
+<ul class="simple">
+<li><p>put the script in a folder called <em>scripts</em></p></li>
+<li><p>make sure to run <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">&lt;script_name&gt;.py</span></code> so that the script is recognized as an executable by ROS</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="update-services-with-rqt">
+<h2>Update services with RQT<a class="headerlink" href="#update-services-with-rqt" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>launch <em>RQT</em> from a new terminal : run <code class="docutils literal notranslate"><span class="pre">rqt</span></code></p></li>
+<li><p>Search for the plugin <em>Service Caller</em></p></li>
+<li><p>Choose the service that you want to update</p></li>
+<li><p>Fill the <em>expression</em> field with an expected parameter of this service</p></li>
+<li><p>Call the service and the response is displayed</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

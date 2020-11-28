@@ -7,7 +7,7 @@ This is a small cheat sheet with the most used syntax either ReST or SPHINX espe
 For more information see also:
 
 * :doc:`/multimedia/writing/rst/cheatsheet`
-* :doc:`Python Docstrings </programming/python/docstring>`
+* :doc:`Python Docstrings </coding/python/docstring>`
 
 Module Documentation
 ====================

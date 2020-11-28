@@ -208,13 +208,13 @@ To link to a file within the Sphinx file structure use the Role ``:download:``
 
 .. code:: ReST
 
-   :download:`../../../programming/tcl_tk_do/docs/tcl-tk-manual.pdf`
+   :download:`../../../coding/tcl_tk_do/docs/tcl-tk-manual.pdf`
 
-   :download:`TCL/TK Manual </programming/tcl_tk_do/docs/tcl-tk-manual.pdf>`
+   :download:`TCL/TK Manual </coding/tcl_tk_do/docs/tcl-tk-manual.pdf>`
 
-:download:`../../../programming/tcl_tk_do/docs/tcl-tk-manual.pdf`
+:download:`../../../coding/tcl_tk_do/docs/tcl-tk-manual.pdf`
 
-:download:`TCL/TK Manual </programming/tcl_tk_do/docs/tcl-tk-manual.pdf>`
+:download:`TCL/TK Manual </coding/tcl_tk_do/docs/tcl-tk-manual.pdf>`
 
 Images
 ======

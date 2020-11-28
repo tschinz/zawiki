@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDC Usage &#8212; Zawiki</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/default.js"></script>
+    <script src="../../_static/wavedrom.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Libraries" href="libraries.html" />
+    <link rel="prev" title="SDC Theory" href="intel_sdc_theory.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../os/index.html">OS</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../tools/index.html">Tools</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../index.html">Coding</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../hw/index.html">Hardware</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../security/index.html">Security</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        
+        
+      </ul>
+
+
+      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form>
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tschinz/zawiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#general" class="nav-link">General</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#collections" class="nav-link">Collections</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#priorities" class="nav-link">Priorities</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#clock-constraints" class="nav-link">Clock Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#clock" class="nav-link">Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#generated-clock" class="nav-link">Generated Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#derive-pll-clocks" class="nav-link">Derive PLL clocks</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#automatic-clock-detection-creation" class="nav-link">Automatic Clock Detection & Creation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fpga-uncertainties-jitter-clock-networks" class="nav-link">FPGA Uncertainties (jitter, clock networks)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#virtual-clock-example" class="nav-link">Virtual Clock example</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#gated-clock" class="nav-link">Gated Clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#input-constraints" class="nav-link">Input Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#combinatorial-without-ff" class="nav-link">Combinatorial (without FF)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronous-inputs" class="nav-link">Synchronous Inputs</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#source-synchronous" class="nav-link">Source Synchronous</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sdr" class="nav-link">SDR</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#center-aligned-clock" class="nav-link">Center Aligned Clock</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#direct-clocking" class="nav-link">Direct Clocking</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#pll-clocking" class="nav-link">PLL Clocking</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#edge-aligned-clock" class="nav-link">Edge Aligned Clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#data-input-constraints" class="nav-link">Data Input Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#t-co-relative-to-data" class="nav-link">T_{co} relative to data</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#t-co-relative-to-input-clock" class="nav-link">T_{co} relative to input clock</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#output-constraints" class="nav-link">Output Constraints</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronous-outputs" class="nav-link">Synchronous Outputs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#so-calculations" class="nav-link">SO Calculations</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#source-synchronous-outputs" class="nav-link">Source Synchronous Outputs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#sso-calculations" class="nav-link">SSO Calculations</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#false-path" class="nav-link">False Path</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#asynchronous-i-o-constraints" class="nav-link">Asynchronous I/O constraints</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#timing-exceptions-between-clock-domains" class="nav-link">Timing exceptions between clock domains</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#synchronisation-done-through-a-dual-clock-dc-fifo" class="nav-link">Synchronisation done through a dual-clock DC_FIFO</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#clock-groups" class="nav-link">Clock groups</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#multicycle-paths" class="nav-link">Multicycle Paths</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/zawiki/edit/master/source/coding/vhdl/intel_sdc_usage.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="sdc-usage">
+<h1>SDC Usage<a class="headerlink" href="#sdc-usage" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/intel_fpga.svg"><img alt="../../_images/intel_fpga.svg" src="../../_images/intel_fpga.svg" width="150px" /></a>
+</div>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
+<p>To find certain Cells, Pins, Nets or Ports Collections, there are Wildcard enabled search commands.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">get_clocks</span>
+<span class="nv">get_registers</span>
+<span class="nv">get_ports</span>
+<span class="nv">get_pins</span>
+<span class="nv">all_clocks</span>
+<span class="nv">all_registers</span>
+<span class="nv">all_input</span>
+<span class="nv">all_output</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="priorities">
+<h3>Priorities<a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Priority Order</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_false_path</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">set_clock_groups</span></code> <strong>High Priority</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_max_delay</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">set_min_delay</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_multicycle_path</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_clock</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">create_generated_clock</span></code> <strong>Low Priority</strong></p></li>
+</ul>
+</li>
+<li><p>Sequential execution, last command will be executed if same priority</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_input_delay</span></code> and <code class="docutils literal notranslate"><span class="pre">set_output_delay</span></code> are in addition and will not be overwritten be other sdc commands</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="clock-constraints">
+<h2>Clock Constraints<a class="headerlink" href="#clock-constraints" title="Permalink to this headline">¶</a></h2>
+<p>Two possible clocks: Clocks &amp; Generated Clocks</p>
+<div class="section" id="clock">
+<h3>Clock<a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h3>
+<p>Absolute or base clock (from Quartz internal or external)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_clock</span> <span class="p">[</span><span class="o">-</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span><span class="p">]</span>                  \\ <span class="c1"># clock name if not the same as signal_name</span>
+              <span class="o">-</span><span class="n">period</span> <span class="o">&lt;</span><span class="n">time_in_ns</span><span class="o">&gt;</span>                 \\ <span class="c1"># period in ns or &quot;frequence&quot; e.g. &quot;50mhz&quot;</span>
+             <span class="p">[</span><span class="o">-</span><span class="n">waveform</span> <span class="p">{</span><span class="o">&lt;</span><span class="n">rise_time</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">fall_time</span><span class="o">&gt;</span><span class="p">}]</span> \\ <span class="c1"># Duty cycle if non 50%</span>
+             <span class="p">[</span><span class="o">&lt;</span><span class="n">targets</span><span class="o">&gt;</span><span class="p">]</span>                           \\ <span class="c1"># Target ports or pins for clock settings</span>
+             <span class="p">[</span><span class="o">-</span><span class="n">add</span><span class="p">]</span>                                   <span class="c1"># Add clock to node with existing clock</span>
+</pre></div>
+</div>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">create_clock</span> <span class="o">-</span>name <span class="o">&lt;</span>sdc_clock_collection_name<span class="o">&gt;</span> <span class="o">-</span>period <span class="o">&lt;</span>period_in_ns<span class="o">&gt;</span> <span class="k">[</span><span class="nv">get_ports</span> <span class="o">&lt;</span>design_signal_name_wildcard<span class="o">&gt;</span><span class="k">]</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name ext_clk_50mhz <span class="o">-</span>period <span class="mf">20.0</span> <span class="k">[</span><span class="nv">get_ports</span> ext_clk<span class="k">]</span>
+<span class="nv">create_clock</span> <span class="o">-</span>period <span class="mf">10.0</span> <span class="o">-</span>waveform <span class="k">{</span><span class="nv">2.0</span> <span class="mf">8.0</span><span class="k">}</span> <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+<span class="nv">create_clock</span> <span class="o">-</span>period <span class="mi">10</span>MHz <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+<span class="nv">create_clock</span> <span class="o">-</span>period <span class="s2">&quot;10 MHz&quot;</span> <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generated-clock">
+<h3>Generated Clock<a class="headerlink" href="#generated-clock" title="Permalink to this headline">¶</a></h3>
+<p>Clocks derived from another clock (all other clocks) (PLL, clock divider, output clocks, ripple clocks)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_generated_clock</span> <span class="p">[</span><span class="o">-</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span><span class="p">]</span>         \\ <span class="n">name</span> <span class="ow">in</span> <span class="n">SDC</span> <span class="n">namespace</span>
+                        <span class="o">-</span><span class="n">source</span> <span class="o">&lt;</span><span class="n">master_pin</span><span class="o">&gt;</span>        \\ <span class="n">clock</span> <span class="n">derived</span> <span class="n">by</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">master_clock</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span><span class="p">]</span> \\
+                       <span class="p">[</span><span class="o">-</span><span class="n">divide_by</span> <span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="p">]</span>        \\ <span class="n">clock</span> <span class="n">divided</span> <span class="n">by</span> <span class="n">x</span> <span class="kn">from</span> <span class="nn">source</span> <span class="n">clock</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">multiply_by</span> <span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="p">]</span>      \\ <span class="n">clock</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="n">x</span> <span class="kn">from</span> <span class="nn">source</span> <span class="n">clock</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">duty_cycle</span> <span class="o">&lt;</span><span class="n">percent</span><span class="o">&gt;</span><span class="p">]</span>      \\ <span class="n">clock</span> <span class="n">duty</span> <span class="n">cycle</span> <span class="n">of</span> <span class="n">himself</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">invert</span><span class="p">]</span>                    \\ <span class="n">clock</span> <span class="ow">is</span> <span class="n">inverted</span> <span class="n">by</span> <span class="n">himself</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">phase</span> <span class="o">&lt;</span><span class="n">degrees</span><span class="o">&gt;</span><span class="p">]</span>           \\ <span class="n">clock</span> <span class="ow">is</span> <span class="n">phase</span> <span class="n">shifted</span> <span class="n">by</span> <span class="n">himself</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">edges</span> <span class="o">&lt;</span><span class="n">edge_list</span><span class="o">&gt;</span><span class="p">]</span>         \\ <span class="n">edges</span> <span class="n">only</span> <span class="n">on</span> <span class="n">certain</span> <span class="n">edges</span> <span class="kn">from</span> <span class="nn">source</span>
+                       <span class="p">[</span><span class="o">&lt;</span><span class="n">targets</span><span class="o">&gt;</span><span class="p">]</span>                  \\ <span class="n">generated</span> <span class="n">clock</span> <span class="n">pin</span><span class="o">/</span><span class="n">port</span>
+                       <span class="p">[</span><span class="o">-</span><span class="n">add</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">create_generated_clock</span> <span class="o">-</span>name clk_div <span class="o">-</span>source <span class="k">[</span><span class="nv">get_ports</span> CLK_IN<span class="k">]</span> <span class="o">-</span>divide_by <span class="mi">2</span> <span class="k">[</span><span class="nv">get_pins</span> inst<span class="o">|</span>q<span class="k">]</span>
+<span class="nv">create_generated_clock</span> <span class="o">-</span>name clk_div <span class="o">-</span>source <span class="k">[</span><span class="nv">get_ports</span> inst<span class="o">|</span>clk<span class="k">]</span> <span class="o">-</span>divide_by <span class="mi">2</span> <span class="k">[</span><span class="nv">get_registers</span> inst<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="derive-pll-clocks">
+<h3>Derive PLL clocks<a class="headerlink" href="#derive-pll-clocks" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derived_pll_clocks</span>                       \\ <span class="c1"># Altera specific for all PLL generated clocks</span>
+                   <span class="p">[</span><span class="o">-</span><span class="n">create_base_clocks</span><span class="p">]</span> \\ <span class="c1"># generate create_clock constants for PLL input clocks</span>
+                   <span class="p">[</span><span class="o">-</span><span class="n">use_net_name</span><span class="p">]</span>          <span class="c1"># use net names as clock names</span>
+<span class="c1"># Substitute would be to create all generated clocks manually</span>
+</pre></div>
+</div>
+<p>Quartus can do the substitution automatically with the expand option enabled. No Altera specific commands used.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">tcl</span><span class="o">:</span> write_sdc <span class="o">-</span>expand
+</pre></div>
+</div>
+</div>
+<div class="section" id="automatic-clock-detection-creation">
+<h3>Automatic Clock Detection &amp; Creation<a class="headerlink" href="#automatic-clock-detection-creation" title="Permalink to this headline">¶</a></h3>
+<p>Not to use for final design. Default clock used = 1GHz.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derive_clocks</span> <span class="p">[</span><span class="o">-</span><span class="n">period</span> <span class="o">&lt;</span><span class="n">time_in_ns</span><span class="o">&gt;</span><span class="p">]</span>   <span class="c1"># same use as with create_clock</span>
+              <span class="p">[</span><span class="o">-</span><span class="n">waveform</span> <span class="p">{</span><span class="o">&lt;</span><span class="n">rise_time</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">fall_time</span><span class="o">&gt;</span><span class="p">}]</span> <span class="c1"># same use as with create_clock</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fpga-uncertainties-jitter-clock-networks">
+<h3>FPGA Uncertainties (jitter, clock networks)<a class="headerlink" href="#fpga-uncertainties-jitter-clock-networks" title="Permalink to this headline">¶</a></h3>
+<p>3 Types of uncertainties:</p>
+<ul class="simple">
+<li><p>Intra-clock transfer : Transfer within single clock domain within FPGA</p></li>
+<li><p>Inter-clock transfer : Transfer within different clock domains within FPGA</p></li>
+<li><p>I/O interface clock transfer : Transfer between I/O port and internal design registers</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derive_clock_uncertainty</span>              <span class="c1"># Altera specific</span>
+                         <span class="p">[</span><span class="o">-</span><span class="n">overwrite</span><span class="p">]</span> <span class="c1"># overwrites any existing uncertainty constraints</span>
+                         <span class="p">[</span><span class="o">-</span><span class="n">add</span><span class="p">]</span>       <span class="c1"># adds derived uncertainty to existing constraints</span>
+
+<span class="c1"># For Feedback clock, (feedback_clk_pcb = data_clk_pcb + data_pcb + $T_{co}\_ASSP$</span>
+<span class="n">set_clock_latency</span> <span class="p">[</span><span class="o">-</span><span class="n">late</span><span class="p">]</span>  <span class="c1"># max clock latency in case of feedback clock</span>
+                  <span class="p">[</span><span class="o">-</span><span class="n">early</span><span class="p">]</span> <span class="c1"># min clock latency in case of feedback clock</span>
+                  <span class="o">&lt;</span><span class="n">target</span><span class="o">&gt;</span> <span class="c1"># [get_clocks feedback_clk_in]</span>
+
+<span class="n">set_clock_uncertainty</span> <span class="p">[</span><span class="o">-</span><span class="n">setup</span> <span class="o">|</span> <span class="o">-</span><span class="n">hold</span><span class="p">]</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">fall_from</span> <span class="o">&lt;</span><span class="n">fall_from_clock</span><span class="o">&gt;</span><span class="p">]</span> <span class="c1"># uncertainty added only on falling_edge from source clock</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">fall_to</span> <span class="o">&lt;</span><span class="n">fall_to_clock</span><span class="o">&gt;</span><span class="p">]</span>     <span class="c1"># uncertainty added only on falling_edge from destination clock</span>
+                      <span class="p">[</span><span class="o">-</span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">from_clock</span><span class="o">&gt;</span><span class="p">]</span>           <span class="c1"># uncertainty added to transfer within single clock domain</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">rise_from</span> <span class="o">&lt;</span><span class="n">rise_from_clock</span><span class="o">&gt;</span><span class="p">]</span> <span class="c1"># uncertainty added only on rising_edge from source clock</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">rise_to</span> <span class="o">&lt;</span><span class="n">rise_to_clock</span><span class="o">&gt;</span><span class="p">]</span>     <span class="c1"># uncertainty added only on rising_edge from destination clock</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">to</span> <span class="o">&lt;</span><span class="n">to_clock</span><span class="o">&gt;</span><span class="p">]</span>               <span class="c1"># uncertainty added to transfer within single clock domain</span>
+                      <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="virtual-clock-example">
+<h3>Virtual Clock example<a class="headerlink" href="#virtual-clock-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">create_clock</span> <span class="o">-</span>period <span class="mi">10</span> <span class="o">-</span>name clk_in <span class="k">[</span><span class="nv">get_ports</span> <span class="k">{</span><span class="nv">clk_in</span><span class="k">}]</span>
+<span class="nv">create_clock</span> <span class="o">-</span>period <span class="mi">10</span> <span class="o">-</span>name virt_clk_in
+<span class="nv">set_input_delay</span> <span class="o">-</span>clock <span class="k">[</span><span class="nv">get_clocks</span> <span class="k">{</span><span class="nv">virt_clk_in</span><span class="k">}]</span> <span class="o">-</span>max <span class="mi">2</span> <span class="k">[</span><span class="nv">get_ports</span> <span class="k">{</span><span class="nv">data_in</span><span class="k">}]</span>
+<span class="nv">set_input_delay</span> <span class="o">-</span>clock <span class="k">[</span><span class="nv">get_clocks</span> <span class="k">{</span><span class="nv">virt_clk_in</span><span class="k">}]</span> <span class="o">-</span>min <span class="mi">2</span> <span class="k">[</span><span class="nv">get_ports</span> <span class="k">{</span><span class="nv">data_in</span><span class="k">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gated-clock">
+<h3>Gated Clock<a class="headerlink" href="#gated-clock" title="Permalink to this headline">¶</a></h3>
+<p>An AND enable on the clock can serve to eliminate power consumption. All flip-flops use no energy without clock. But it violates synchronous design rules. It also uses a new Global Clock path for the Gated Clock.</p>
+</div>
+</div>
+<div class="section" id="input-constraints">
+<h2>Input Constraints<a class="headerlink" href="#input-constraints" title="Permalink to this headline">¶</a></h2>
+<p>2 Types of Combinatorial Interfaces and Synchronous Inputs.</p>
+<div class="section" id="combinatorial-without-ff">
+<h3>Combinatorial (without FF)<a class="headerlink" href="#combinatorial-without-ff" title="Permalink to this headline">¶</a></h3>
+<p>Absolute maximum and minimum time between points.
+Signals traversing FPGA and internal signals</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_max_delay</span> <span class="p">[</span><span class="o">-</span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span> \\
+              <span class="p">[</span><span class="o">-</span><span class="n">to</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>   \\
+              <span class="p">[</span><span class="o">-</span><span class="n">through</span><span class="p">]</span>      \\
+              <span class="o">&lt;</span><span class="n">delay</span><span class="o">&gt;</span>
+<span class="n">set_min_delay</span> <span class="p">[</span><span class="o">-</span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span> \\
+              <span class="p">[</span><span class="o">-</span><span class="n">to</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>   \\
+              <span class="p">[</span><span class="o">-</span><span class="n">through</span><span class="p">]</span>      \\
+              <span class="o">&lt;</span><span class="n">delay</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">set_max_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in1<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">5.0</span>
+<span class="nv">set_max_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in2<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">7.5</span>
+<span class="nv">set_max_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in3<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">9.0</span>
+
+<span class="nv">set_min_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in1<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">1.0</span>
+<span class="nv">set_min_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in2<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">2.0</span>
+<span class="nv">set_min_delay</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_ports</span> in3<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_ports</span> out<span class="o">*</span><span class="k">]</span> <span class="mf">3.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="synchronous-inputs">
+<h3>Synchronous Inputs<a class="headerlink" href="#synchronous-inputs" title="Permalink to this headline">¶</a></h3>
+<p>Synchronous Inputs where one external clock is used between multiple devices.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_input_delay</span> <span class="p">[</span><span class="o">-</span><span class="nb">max</span><span class="p">]</span> \\ <span class="c1"># max time to arrive and still meet Tsu (input setup time)</span>
+                <span class="p">[</span><span class="o">-</span><span class="nb">min</span><span class="p">]</span>    <span class="c1"># min time to stay active and still meet Th (input hold time)</span>
+</pre></div>
+</div>
+<p><strong>Calculations</strong></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}input\_delay\_max = Data\_trace_{max} - Board\_clock\_skew_{min} + T_{co_{max}}\\input\_delay\_min = Data\_trace_{min} - Boardclockskew_{max} + T_{co_{min}}\end{aligned}\end{align} \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_input_delay</span> <span class="o">-</span><span class="n">clock</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span>        <span class="c1"># Clock driving source (external)</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">clock_fall</span><span class="p">]</span>              <span class="c1"># input signal was launched on falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">rise</span> <span class="o">|</span> <span class="o">-</span><span class="n">fall</span><span class="p">]</span>            <span class="c1"># input delay value  is for rising or falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="nb">max</span> <span class="o">|</span> <span class="o">-</span><span class="nb">min</span><span class="p">]</span>              <span class="c1"># must specify both max and min</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">add_delay</span><span class="p">]</span>               <span class="c1"># multiple constraints on single input</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">source_latency_included</span><span class="p">]</span> <span class="c1">#</span>
+                <span class="o">&lt;</span><span class="n">delay_value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">targets</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="source-synchronous">
+<h2>Source Synchronous<a class="headerlink" href="#source-synchronous" title="Permalink to this headline">¶</a></h2>
+<p>Source Synchronous Interfaces where the FPGA reads a clock which is used created by an other device.
+Clock and Data send at the same time.</p>
+<ul class="simple">
+<li><p>Single Data Rate (SDR)</p></li>
+<li><p>Doube Data Rate (DDR)</p></li>
+<li><p>Quatriple Data Rate (QDR)</p></li>
+<li><p>High Speed SPI4.2</p></li>
+</ul>
+<div class="section" id="sdr">
+<h3>SDR<a class="headerlink" href="#sdr" title="Permalink to this headline">¶</a></h3>
+<p>e.g. MII, SPI</p>
+<div class="section" id="center-aligned-clock">
+<h4>Center Aligned Clock<a class="headerlink" href="#center-aligned-clock" title="Permalink to this headline">¶</a></h4>
+<p>Data transitions not in phase with clock, clock is in the middle of the data change. Can directly be used without shift.</p>
+</div>
+<div class="section" id="direct-clocking">
+<h4>Direct Clocking<a class="headerlink" href="#direct-clocking" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Virtual Clock which create the data on other device</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name virt_clk_in <span class="o">-</span>period <span class="mf">8.000</span>
+
+<span class="c"># Received Clock but Center aligned which means 180° shifted (no phase command only waveform).</span>
+<span class="c"># Allows to shift clock by half a period</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name clk_in period <span class="mf">8.000</span> <span class="o">-</span>waveform <span class="k">{</span><span class="nv">4.0</span> <span class="mf">8.0</span><span class="k">}</span> <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pll-clocking">
+<h4>PLL Clocking<a class="headerlink" href="#pll-clocking" title="Permalink to this headline">¶</a></h4>
+<p>Add PLL clocking or DLL to add shift to have the same input delay between data and clock. Needed for High speed (&gt;125MHz)</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Virtual Clock which create the data on other device</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name virt_clk_in <span class="o">-</span>period <span class="mf">8.000</span>
+
+<span class="c"># Received Clock but Center aligned which means 180° shifted (no phase command only waveform).</span>
+<span class="c"># Allows to shift clock by half a period</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name clk_in <span class="o">-</span>period <span class="mf">8.000</span> <span class="o">-</span>waveform <span class="k">{</span><span class="nv">4.0</span> <span class="mf">8.0</span><span class="k">}</span> <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+
+<span class="nv">derive_pll_clocks</span>
+<span class="c"># or</span>
+<span class="nv">create_generated_clocks</span> <span class="o">-</span>name int_clk <span class="o">-</span>source <span class="k">[</span><span class="nv">get_pins</span> PLL<span class="o">|</span>clk<span class="k">[</span><span class="nv">0</span><span class="k">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="edge-aligned-clock">
+<h4>Edge Aligned Clock<a class="headerlink" href="#edge-aligned-clock" title="Permalink to this headline">¶</a></h4>
+<p>Data transitions at the same time at the clock. <strong>Clock need to be shifted 180°</strong></p>
+<p>** PLL Clocking **</p>
+<p>Add PLL clocking or DLL to add shift to have the same input delay between data and clock. Needed for High speed (&gt;125MHz)</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Virtual Clock which create the data on other device</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name virt_clk_in <span class="o">-</span>period <span class="mf">8.000</span>
+
+<span class="c"># Received Clock Edge Aligned therefor no need to shift</span>
+<span class="nv">create_clock</span> <span class="o">-</span>name clk_in <span class="o">-</span>period <span class="mf">8.000</span> <span class="k">[</span><span class="nv">get_ports</span> clk_in<span class="k">]</span>
+
+<span class="nv">derive_pll_clocks</span>
+<span class="c"># or</span>
+<span class="nv">create_generated_clocks</span> <span class="o">-</span>name int_clk <span class="o">-</span>source <span class="k">[</span><span class="nv">get_pins</span> PLL<span class="o">|</span>clk<span class="k">[</span><span class="nv">0</span><span class="k">]]</span> <span class="o">-</span>phase <span class="mi">180</span> <span class="k">[</span><span class="nv">get_pins</span> PLL_clk<span class="k">[</span><span class="nv">0</span><span class="k">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="data-input-constraints">
+<h3>Data Input Constraints<a class="headerlink" href="#data-input-constraints" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="t-co-relative-to-data">
+<h4><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to data<a class="headerlink" href="#t-co-relative-to-data" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># create input delays</span>
+<span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemax</span> <span class="o">+</span> <span class="nv">$tcomax</span> <span class="o">-</span> <span class="nv">$clk_tracemin</span><span class="k">]</span>
+<span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemin</span> <span class="o">+</span> <span class="nv">$tcomin</span> <span class="o">-</span> <span class="nv">$clk_tracemax</span><span class="k">]</span>
+
+<span class="c"># input constraints</span>
+<span class="nv">set_input_delay</span> <span class="o">-</span>max <span class="nv">$in_max_dly</span> <span class="o">-</span>clock virt_clk_in <span class="k">[</span><span class="nv">get_ports</span> data_in<span class="k">]</span>
+<span class="nv">set_input_delay</span> <span class="o">-</span>min <span class="nv">$in_min_dly</span> <span class="o">-</span>clock virt_clk_in <span class="k">[</span><span class="nv">get_ports</span> data_in<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="t-co-relative-to-input-clock">
+<h4><span class="math notranslate nohighlight">\(T_{co}\)</span> relative to input clock<a class="headerlink" href="#t-co-relative-to-input-clock" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># create input delays</span>
+<span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemax</span> <span class="o">+</span> <span class="nv">$tco_datamax</span> <span class="o">-</span> <span class="nv">$tco_clkmin</span> <span class="o">-</span> <span class="nv">$clk_tracemin</span><span class="k">]</span>
+<span class="k">set</span> in_max_dly <span class="k">[expr</span> <span class="nv">$data_tracemin</span> <span class="o">+</span> <span class="nv">$tco_datamin</span> <span class="o">-</span> <span class="nv">$tco_clkmax</span> <span class="o">-</span> <span class="nv">$clk_tracemax</span><span class="k">]</span>
+
+<span class="c"># input constraints</span>
+<span class="nv">set_input_delay</span> <span class="o">-</span>max <span class="nv">$in_max_dly</span> <span class="o">-</span>clock virt_clk_in <span class="k">[</span><span class="nv">get_ports</span> data_in<span class="k">]</span>
+<span class="nv">set_input_delay</span> <span class="o">-</span>min <span class="nv">$in_min_dly</span> <span class="o">-</span>clock virt_clk_in <span class="k">[</span><span class="nv">get_ports</span> data_in<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="output-constraints">
+<h2>Output Constraints<a class="headerlink" href="#output-constraints" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="synchronous-outputs">
+<h3>Synchronous Outputs<a class="headerlink" href="#synchronous-outputs" title="Permalink to this headline">¶</a></h3>
+<p>Synchronous Outputs where one external clock is used between multiple devices.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_output_delay</span> <span class="p">[</span><span class="o">-</span><span class="nb">max</span><span class="p">]</span> \\ <span class="c1"># max time to arrive and still meet other devices Tsu (input setup time)</span>
+                 <span class="p">[</span><span class="o">-</span><span class="nb">min</span><span class="p">]</span>    <span class="c1"># min time to stay active and still meet other devices Th (input hold time)</span>
+</pre></div>
+</div>
+<div class="section" id="so-calculations">
+<h4>SO Calculations<a class="headerlink" href="#so-calculations" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>output_delay_max = Data_trace_{max} - Board_clock_skew_{min} + T_{su}
+output_delay_max = (T_{data_pcb_{max}} + T_{cl}) - (T_{clk2_{min}} - T_{clk1_ext_{max}}) + T_{su}
+output_delay_min = Data_trace_{min} - Board_clock_skew_{max} + T_{h}
+output_delay_min = (T_{data_pcb_{min}} + T_{cl}) - (T_{clk2_{max}} - T_{clk1_ext{min}}) + T_{h}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_output_delay</span> <span class="o">-</span><span class="n">clock</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span>        <span class="c1"># Clock driving source (external)</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">clock_fall</span><span class="p">]</span>              <span class="c1"># input signal was launched on falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">rise</span> <span class="o">|</span> <span class="o">-</span><span class="n">fall</span><span class="p">]</span>            <span class="c1"># input delay value  is for rising or falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="nb">max</span> <span class="o">|</span> <span class="o">-</span><span class="nb">min</span><span class="p">]</span>              <span class="c1"># must specify both max and min</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">add_delay</span><span class="p">]</span>               <span class="c1"># multiple constraints on single input</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">source_latency_included</span><span class="p">]</span> <span class="c1">#</span>
+                <span class="o">&lt;</span><span class="n">delay_value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">targets</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="source-synchronous-outputs">
+<h3>Source Synchronous Outputs<a class="headerlink" href="#source-synchronous-outputs" title="Permalink to this headline">¶</a></h3>
+<p>Source Synchronous Outputs where the FPGA generates a clock which is used further in an other device.
+Clock and Data send at the same time.</p>
+<ul class="simple">
+<li><p>Single Data Rate (SDR)</p></li>
+<li><p>Doube Data Rate (DDR)</p></li>
+<li><p>Quatriple Data Rate (QDR)</p></li>
+<li><p>High Speed SPI4.2</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_output_delay</span> <span class="p">[</span><span class="o">-</span><span class="nb">max</span><span class="p">]</span> \\ <span class="c1"># max time to arrive and still meet other devices Tsu (input setup time)</span>
+                 <span class="p">[</span><span class="o">-</span><span class="nb">min</span><span class="p">]</span>    <span class="c1"># min time to stay active and still meet other devices Th (input hold time)</span>
+</pre></div>
+</div>
+<div class="section" id="sso-calculations">
+<h4>SSO Calculations<a class="headerlink" href="#sso-calculations" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>output_delay_max = Data_trace_{max} - Clock_trace_{min} + T_{su}
+output_delay_min = Data_trace_{min} - Clock_trace_{max} + T_{h}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_output_delay</span> <span class="o">-</span><span class="n">clock</span> <span class="o">&lt;</span><span class="n">clock_name</span><span class="o">&gt;</span>        <span class="c1"># Clock driving source (external)</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">clock_fall</span><span class="p">]</span>              <span class="c1"># input signal was launched on falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">rise</span> <span class="o">|</span> <span class="o">-</span><span class="n">fall</span><span class="p">]</span>            <span class="c1"># input delay value  is for rising or falling edge</span>
+                <span class="p">[</span><span class="o">-</span><span class="nb">max</span> <span class="o">|</span> <span class="o">-</span><span class="nb">min</span><span class="p">]</span>              <span class="c1"># must specify both max and min</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">add_delay</span><span class="p">]</span>               <span class="c1"># multiple constraints on single input</span>
+                <span class="p">[</span><span class="o">-</span><span class="n">source_latency_included</span><span class="p">]</span> <span class="c1">#</span>
+                <span class="o">&lt;</span><span class="n">delay_value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">targets</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="false-path">
+<h2>False Path<a class="headerlink" href="#false-path" title="Permalink to this headline">¶</a></h2>
+<p>2 Types of False Path:</p>
+<ul class="simple">
+<li><p>Logic-based: Not relevant circuit operation (static, quasi-static)</p></li>
+<li><p>Timing-based: Path intentionally not analysed (bridging async clock domain using synchronizer circuits)</p></li>
+</ul>
+<p>2 Methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_false_path</span></code>: disable timing analysation for a certain path or collection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_clock_group</span></code>: don’t look at clock domain crossing between one, or mor clocks</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_false_path</span> <span class="p">[</span><span class="o">-</span><span class="n">fall_from</span> <span class="o">&lt;</span><span class="n">clocks</span><span class="o">&gt;</span><span class="p">]</span> <span class="c1"># no analysis falling edge on launch clock</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">rise_from</span> <span class="o">&lt;</span><span class="n">clocks</span><span class="o">&gt;</span><span class="p">]</span> <span class="c1"># no analysis rising edge on launch clock</span>
+               <span class="p">[</span><span class="o">-</span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>       <span class="c1"># use specific source node</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">through</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>    <span class="c1">#</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">to</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>         <span class="c1"># use specific target node</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">fall_to</span> <span class="o">&lt;</span><span class="n">clock</span><span class="o">&gt;</span><span class="p">]</span>    <span class="c1"># no analysis falling edge on latch clock</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">rise_to</span> <span class="o">&lt;</span><span class="n">clock</span><span class="o">&gt;</span><span class="p">]</span>    <span class="c1"># no analysis rising edge on latch clock</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">setup</span><span class="p">]</span>              <span class="c1"># no setup / recovery analysis</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">hold</span><span class="p">]</span>               <span class="c1"># no hold / removal analysis</span>
+
+<span class="n">set_clock_groups</span> <span class="p">[</span><span class="o">-</span><span class="n">asynchronous</span><span class="p">]</span> <span class="c1"># no phase relationship, but active at the same time</span>
+                 <span class="p">[</span><span class="o">-</span><span class="n">exclusive</span><span class="p">]</span>    <span class="c1"># clocks are not active at the same time (muxed)</span>
+</pre></div>
+</div>
+<div class="section" id="asynchronous-i-o-constraints">
+<h3>Asynchronous I/O constraints<a class="headerlink" href="#asynchronous-i-o-constraints" title="Permalink to this headline">¶</a></h3>
+<p>Path to ignore by the Timing Analyzer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_false_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">[</span><span class="n">get_ports</span> <span class="n">ext_rst_n</span><span class="p">]</span> <span class="c1"># input</span>
+<span class="n">set_false_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">[</span><span class="n">get_ports</span> <span class="n">button</span><span class="o">*</span><span class="p">]</span>   <span class="c1"># input</span>
+
+<span class="n">set_false_path</span> <span class="o">-</span><span class="n">to</span> <span class="p">[</span><span class="n">get_ports</span> <span class="n">led</span><span class="o">*</span><span class="p">]</span>        <span class="c1"># output</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timing-exceptions-between-clock-domains">
+<h3>Timing exceptions between clock domains<a class="headerlink" href="#timing-exceptions-between-clock-domains" title="Permalink to this headline">¶</a></h3>
+<p>Path to ignore by the Timing Analyzer. Clock domain crossing if double FF synchronisation.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_pins</span> reg1<span class="o">|</span>clk<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_pins</span> reg2<span class="o">|</span>d<span class="k">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="synchronisation-done-through-a-dual-clock-dc-fifo">
+<h3>Synchronisation done through a dual-clock DC_FIFO<a class="headerlink" href="#synchronisation-done-through-a-dual-clock-dc-fifo" title="Permalink to this headline">¶</a></h3>
+<p>Path to ignore by the Timing Analyzer.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">[</span><span class="nv">get_clocks</span> ext_clk50mhz<span class="k">]</span> <span class="o">-</span>to <span class="k">[</span><span class="nv">get_clocks</span> <span class="k">{</span><span class="nv">i_PLL</span><span class="o">|</span>altpll_component<span class="o">|</span>auto_generated<span class="o">|</span>pll1<span class="o">|</span> clk<span class="k">[</span><span class="nv">0</span><span class="k">]}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clock-groups">
+<h3>Clock groups<a class="headerlink" href="#clock-groups" title="Permalink to this headline">¶</a></h3>
+<p><strong>Muxed clocks</strong></p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># clocks are separate, no cross domain analyzation</span>
+<span class="nv">set_clock_groups</span> <span class="o">-</span>exclusive <span class="o">-</span>group <span class="k">{</span><span class="nv">clk_100</span><span class="k">}</span> <span class="o">-</span>group <span class="k">{</span><span class="nv">clk_66</span><span class="k">}</span>
+
+<span class="c"># same as</span>
+<span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">{</span><span class="nv">get_clocks</span> clk_100<span class="k">}</span> <span class="o">-</span>to <span class="k">{</span><span class="nv">get_clocks</span> clk_66
+<span class="nv">set_false_path</span> <span class="o">-</span>from <span class="k">{</span><span class="nv">get_clocks</span> clk_66<span class="k">}</span>  <span class="o">-</span>to <span class="k">{</span><span class="nv">get_clocks</span> clk_100<span class="k">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="multicycle-paths">
+<h2>Multicycle Paths<a class="headerlink" href="#multicycle-paths" title="Permalink to this headline">¶</a></h2>
+<p>If a signal is slow and not sampled every clock edge. 2 Types possible:</p>
+<ul class="simple">
+<li><p>Clock enable signal not every time</p>
+<ul>
+<li><p>Should be avoided and replaced by pipeline FlipFlops to cut logic path.</p></li>
+</ul>
+</li>
+<li><p>2 shifted clocks between 2 registers</p>
+<ul>
+<li><p>TimeQuest can used the false Latch edge, Multicycle for correct this setting</p></li>
+</ul>
+</li>
+</ul>
+<p>How To:</p>
+<ul class="simple">
+<li><p>Determine Launch to Latch relationship</p>
+<ul>
+<li><p>With help of the TimeQuest Waveforms</p></li>
+</ul>
+</li>
+<li><p>Fix Setup (because Hold changes with setup)</p></li>
+<li><p>Fix Hold</p></li>
+</ul>
+<p>Open Window</p>
+<ul class="simple">
+<li><p>start setup increment = edges before on source clock</p></li>
+<li><p>end setup increment = edge after on destination clock</p></li>
+<li><p>start hold increment = edges after on source clock</p></li>
+<li><p>end hold increment = edge before on destination clock</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_multicycle_path</span> <span class="p">[</span><span class="o">-</span><span class="n">start</span> <span class="o">|</span> <span class="o">-</span><span class="n">end</span><span class="p">]</span>      <span class="c1"># start = change launch clock | end = change latch clock</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">setup</span> <span class="o">|</span> <span class="o">-</span><span class="n">hold</span><span class="p">]</span>     <span class="c1"># setup hold edge</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">fall_from</span> <span class="o">&lt;</span><span class="n">clock</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">rise_from</span> <span class="o">&lt;</span><span class="n">clock</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="kn">from</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">through</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">to</span> <span class="o">&lt;</span><span class="n">names</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">fall_to</span> <span class="o">&lt;</span><span class="n">clocks</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">rise_to</span> <span class="o">&lt;</span><span class="n">clocks</span><span class="o">&gt;</span><span class="p">]</span>
+                    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 cycles for signal (case clock enable)</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">setup</span> <span class="mi">2</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">hold</span>  <span class="mi">1</span> <span class="c1"># 1 + **1** clock before setup</span>
+
+<span class="c1"># default 1 cycle signal (case clock enable)</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">setup</span> <span class="mi">1</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">hold</span>  <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 cycles for signal (case shifted clock)</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">setup</span> <span class="mi">2</span>
+<span class="n">set_multicycle_path</span> <span class="o">-</span><span class="kn">from</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg1</span><span class="o">|</span><span class="n">clk</span><span class="p">}</span> <span class="o">-</span><span class="n">to</span> <span class="p">{</span><span class="n">get_pins</span> <span class="n">reg2</span><span class="o">|</span><span class="n">d</span><span class="p">}</span> <span class="o">-</span><span class="n">hold</span>  <span class="mi">0</span> <span class="c1"># 1 clock before setup</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-20699788-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2004-2020, tschinz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

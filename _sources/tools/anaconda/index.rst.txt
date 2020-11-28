@@ -21,7 +21,7 @@ Anaconda is a complete python package with comes with many features:
 
 * :doc:`/tools/jupyter/index`
 * :doc:`/tools/anaconda/conda`
-* :doc:`/programming/python/pip_general`
+* :doc:`/coding/python/pip_general`
 * Environments
 * Support Win / Linux / Mac
 

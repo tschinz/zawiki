@@ -103,12 +103,12 @@ Split screen
 Search
 ------
 
-:doc:`Regex </programming/regex/index>`
+:doc:`Regex </coding/regex/index>`
 
 +------------------------+--------------------------------------------------------------+
 | Command                | Description                                                  |
 +========================+==============================================================+
-| ``/<regex>``           | Search for a :doc:`Regex </programming/regex/index>` pattern |
+| ``/<regex>``           | Search for a :doc:`Regex </coding/regex/index>` pattern |
 +------------------------+--------------------------------------------------------------+
 | ``:noh``               | Stop Highlight search results                                |
 +------------------------+--------------------------------------------------------------+
@@ -141,7 +141,7 @@ Replace
 +------------------------------+----------------------------------------------------------------------+
 | Command                      | Description                                                          |
 +==============================+======================================================================+
-| ``:%s/<regex>/replacer/cmd`` | Replace :doc:`Regex </programming/regex/index>` search with replacer |
+| ``:%s/<regex>/replacer/cmd`` | Replace :doc:`Regex </coding/regex/index>` search with replacer |
 +------------------------------+----------------------------------------------------------------------+
 | ``:%s/foo/bar/g``            | replace foo with bar auto                                            |
 +------------------------------+----------------------------------------------------------------------+
