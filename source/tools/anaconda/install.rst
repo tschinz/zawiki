@@ -21,7 +21,7 @@ See the dedicated jupyter pages for more information about jupyter: :doc:`/tools
 PIP
 ===
 
-See the dedicated pip page for more information about pip install :doc:`/programming/python/pip_general`
+See the dedicated pip page for more information about pip install :doc:`/coding/python/pip_general`
 
 Conda Environment Setup
 =======================

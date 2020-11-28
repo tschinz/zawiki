@@ -21,18 +21,18 @@
    tools/virtualbox/index
    tools/bittorrent/index
 
-   programming/ahk/index
-   programming/python/index
-   programming/regex/index
-   programming/vhdl/index
-   programming/tcl_tk_do/index
-   programming/spinal/index
-   programming/scala/index
-   programming/c_cpp/index
-   programming/make/index
-   programming/ros/index
-   programming/swift/index
-   programming/licenses/index
+   coding/ahk/index
+   coding/python/index
+   coding/regex/index
+   coding/vhdl/index
+   coding/tcl_tk_do/index
+   coding/spinal/index
+   coding/scala/index
+   coding/c_cpp/index
+   coding/make/index
+   coding/ros/index
+   coding/swift/index
+   coding/licenses/index
 
    computerscience/index
    computerscience/datascience/index
@@ -44,22 +44,19 @@
    security/index
    about/index
 
-====================================
-Welcome to Zawiki Knowledge Database
-====================================
+==================
+Welcome to Z-Notes
+==================
 
 .. figure:: img/logo-icon.*
    :align: center
    :alt: Site Logo
    :width: 150px
 
-This Repo is a collection of markdown and ReStructuredText pages. Here you can find various informations about topics I've always forget. This pages let me help to remember less but know more.
-
-Site purpose and structure
-==========================
+This webpage is a collection of Markdown and ReStructuredText pages. Here you can find various informations about topics I always forget. These pages help me to remember less, but to know more.
 
 Getting started
----------------
+===============
 
 Want to try it for yourself? Then jump to the :doc:`getting started <about/getting_started>` page and have fun, but first you need to learn :doc:`ReStructured Text <multimedia/writing/rst/cheatsheet>` !!!
 
@@ -69,9 +66,12 @@ You can view the content as a:
 * `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/pdf/zawiki.pdf>`_
 * :zawiki_repo:`Repo <>`
 
-Known Issues / TODOs
---------------------
+Known Issues
+============
 
 See also the `github issues <https://github.com/tschinz/zawiki/issues>`_ page
+
+TODO's
+======
 
 .. todolist::

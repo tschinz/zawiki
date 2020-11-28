@@ -10,7 +10,7 @@ Check out also:
 
   * :doc:`/tools/jupyter/index`
   * :doc:`/tools/anaconda/conda`
-  * :doc:`/programming/python/pip_general`
+  * :doc:`/coding/python/pip_general`
 
 
 Admin

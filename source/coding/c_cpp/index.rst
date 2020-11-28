@@ -34,8 +34,8 @@ C++ ist eine von der ISO standardisierte höhere Programmiersprache. Sie wurde a
 PDF
 ---
 
-* :pdfviewer:`C Reference <github/tschinz/zawiki/blob/master/source/programming/c_cpp/docs/c_reference.pdf>`
-* :pdfviewer:`Cpp Essentials <github/tschinz/zawiki/blob/master/source/programming/c_cpp/docs/cpp_essentials.pdf>`
+* :pdfviewer:`C Reference <github/tschinz/zawiki/blob/master/source/coding/c_cpp/docs/c_reference.pdf>`
+* :pdfviewer:`Cpp Essentials <github/tschinz/zawiki/blob/master/source/coding/c_cpp/docs/cpp_essentials.pdf>`
 
 Links
 -----

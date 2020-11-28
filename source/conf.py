@@ -23,7 +23,7 @@ try:
 except:
   VERSION = 'v0.0'
 
-project = 'Zawiki'
+project = 'Z-Notes'
 copyright = f"2004-{datetime.now().year}, tschinz"
 author = AUTHOR
 
@@ -198,7 +198,7 @@ latex_logo = 'img/logo.pdf'
 # -- Options for pydata-sphinx-theme -----------------------------------------
 html_theme_options = {
   "external_links": [
-      {"name": "Config repo", "url": "https://github.com/tschinz/config"},
+      #{"name": "Config repo", "url": "https://github.com/tschinz/config"},
   ],
   "google_analytics_id": "UA-20699788-1",
   "github_url": "https://github.com/tschinz/zawiki",

@@ -2,7 +2,7 @@
 Data Types
 ==========
 
-For scala types see :doc:`/programming/scala/index`
+For scala types see :doc:`/coding/scala/index`
 
 Spinal
 ======

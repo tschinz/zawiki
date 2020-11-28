@@ -244,7 +244,7 @@ The result size of an operation
 Functions
 =========
 
-Functions are reusable pieces of code. A function cannot consume simulation time and has only one return parameter. See also :ref:`programming/vhdl/syntax:Procedure`
+Functions are reusable pieces of code. A function cannot consume simulation time and has only one return parameter. See also :ref:`coding/vhdl/syntax:Procedure`
 
 .. code-block:: vhdl
    :caption: parity
@@ -298,7 +298,7 @@ Resize
 Procedure
 =========
 
-A procedure allows to reuse a piece of code. It has to be written in a package or between the process and it's beginning. A procedure can consume simulation time and can have as many in, out or inout signals/variables as wished. See also :ref:`programming/vhdl/syntax:Functions`
+A procedure allows to reuse a piece of code. It has to be written in a package or between the process and it's beginning. A procedure can consume simulation time and can have as many in, out or inout signals/variables as wished. See also :ref:`coding/vhdl/syntax:Functions`
 
 If in the parameter list is a parameter without signal in front, it means that it has to assigned to a direct value or a variable. Mostly signals are used if as the interface and variables are used to give input- or output data.
 
@@ -338,7 +338,7 @@ Signal
 Attributes
 ----------
 
-More Attributes can be found at: :doc:`/programming/vhdl/attributes`
+More Attributes can be found at: :doc:`/coding/vhdl/attributes`
 
 +---------------------+------------------------------------------+--------------------+
 | Attribute           | Decription                               | Example            |

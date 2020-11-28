@@ -25,7 +25,7 @@ Though its primary use is as described above, make is not restricted to just cre
 PDF
 ---
 
-* :pdfviewer:`Gnu Make Manual <github/tschinz/zawiki/blob/master/source/programming/make/docs/gnu_make_manual.pdf>`
+* :pdfviewer:`Gnu Make Manual <github/tschinz/zawiki/blob/master/source/coding/make/docs/gnu_make_manual.pdf>`
 
 Links
 -----

@@ -1,6 +1,6 @@
-============
-Programming
-============
+======
+Coding
+======
 
 .. figure:: img/logo.*
    :align: center

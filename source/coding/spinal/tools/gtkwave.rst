@@ -2,7 +2,7 @@
 GtkWave
 =======
 
-* Cheatsheet :pdfviewer:`GTKWave 3.3 Wave Analyzer User's Guide <github/tschinz/zawiki/source/programming/spinal/tools/docs/gtkwave.pdf`
+* Cheatsheet :pdfviewer:`GTKWave 3.3 Wave Analyzer User's Guide <github/tschinz/zawiki/source/coding/spinal/tools/docs/gtkwave.pdf`
 
 Manual Reload
 =============
