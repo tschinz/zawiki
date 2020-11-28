@@ -92,7 +92,7 @@ The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the
 
 .. code-block::
 
-   λ cowsay Answer to everything is 42
+   $ cowsay Answer to everything is 42
     ____________________________
    < Answer to everything is 42 >
     ----------------------------
@@ -102,7 +102,7 @@ The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the
                    ||----w |
                    ||     ||
 
-   λ cowsay -f sheep Answer to everything is 42
+   $ cowsay -f sheep Answer to everything is 42
     ____________________________
    < Answer to everything is 42 >
     ----------------------------
@@ -115,7 +115,7 @@ The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the
               `YY~~~~YY'
                ||    ||
 
-   λ cowsay -f bud-frogs Answer to everything is 42
+   $ cowsay -f bud-frogs Answer to everything is 42
     ____________________________
    < Answer to everything is 42 >
     ----------------------------
@@ -127,7 +127,7 @@ The linux tool cowsay allows to dynamically create ASCII-Art. Install it via the
              \__|\ |    (-___-)        | /|__/
              '  '--'    ==`-'==        '--'  '
 
-   λ cowsay -f ghostbusters Answer to everything is 42
+   $ cowsay -f ghostbusters Answer to everything is 42
     ____________________________
    < Answer to everything is 42 >
     ----------------------------

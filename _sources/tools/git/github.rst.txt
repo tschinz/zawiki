@@ -15,7 +15,7 @@ General
 
    repo:<repo-name>
    repo:cheatsheet
-   repo:tschinz/zawiki
+   repo:tschinz/znotes
 
 Files
 -----

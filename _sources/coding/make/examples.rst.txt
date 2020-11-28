@@ -20,7 +20,7 @@ Sphinx Makefile
    SOURCEDIR     = source
    BUILDDIR      = _build
    OUTPUTDIR     = pdf
-   FILENAME      = zawiki
+   FILENAME      = znotes
    # IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
    IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*)))
    IMAGEDIRS     = $(patsubst source/%/, %, $(IMAGEOBJS)) # remove source/ and last /

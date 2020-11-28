@@ -6,7 +6,7 @@ PlantUml
    :align: center
    :width: 150px
 
-* :pdfviewer:`PlantUML Reference Guide <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
+* :pdfviewer:`PlantUML Reference Guide <github/tschinz/znotes/blob/master/source/multimedia/pictures/docs/PlantUML_Language_Reference_Guide_en.pdf>`
 * `PlantUML Webpage <https://plantuml.com/>`_
 * `PlantUML Ashley Doc <https://plantuml-documentation.readthedocs.io/en/latest/>`_
 * `PlantText Webpage <https://planttext.com/>`_

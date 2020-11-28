@@ -6,7 +6,7 @@ Wavedrom
    :align: center
    :width: 150px
 
-* :pdfviewer:`Wavedrom Paper <github/tschinz/zawiki/blob/master/source/multimedia/pictures/docs/SNUG2016_WaveDrom.pdf>`
+* :pdfviewer:`Wavedrom Paper <github/tschinz/znotes/blob/master/source/multimedia/pictures/docs/SNUG2016_WaveDrom.pdf>`
 
 Timing Diagrams
 ===============

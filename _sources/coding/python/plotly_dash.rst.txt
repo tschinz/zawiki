@@ -55,7 +55,7 @@ To start the Dash locally just run the main python scripts
 
 .. code-block:: bash
 
-   λ python app.py
+   $ python app.py
      * Serving Flask app "app" (lazy loading)
      * Environment: production
      WARNING: This is a development server. Do not use it in a production deployment.

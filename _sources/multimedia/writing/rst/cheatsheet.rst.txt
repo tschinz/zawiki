@@ -91,18 +91,18 @@ The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
 .. code-block:: python
 
    extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
-               'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None)
+               'znotes_repo': ('https://github.com/tschinz/znotes/%s', None)
               }
 
 .. code-block:: ReST
 
    :config_repo:`jupyter folder <tree/master/config/jupyter>`
    :config_repo:`shell script <blob/master/scripts/shell/christmas_tree.sh>`
-   :zawiki_repo:`zawiki link <blob/master/source/conf.py>`
+   :znotes_repo:`znotes link <blob/master/source/conf.py>`
 
 :config_repo:`jupyter folder <tree/master/config/jupyter>`
 :config_repo:`shell script <blob/master/scripts/shell/christmas_tree.sh>`
-:zawiki_repo:`conf.py file <blob/master/source/conf.py>`
+:znotes_repo:`conf.py file <blob/master/source/conf.py>`
 
 .. note::
 
@@ -119,13 +119,13 @@ The plugin ``'sphinx.ext.extlinks`` allows creating shortcuts
 
    .. code-block:: ReST
 
-      https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf
+      https://nbviewer.jupyter.org/github/tschinz/znotes/blob/master/pdf/znotes.pdf
 
-      :pdfviewer:`github/tschinz/zawiki/blob/master/pdf/zawiki.pdf`
+      :pdfviewer:`github/tschinz/znotes/blob/master/pdf/znotes.pdf`
 
-   https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf
+   https://nbviewer.jupyter.org/github/tschinz/znotes/blob/master/pdf/znotes.pdf
 
-   :pdfviewer:`github/tschinz/zawiki/blob/master/pdf/zawiki.pdf`
+   :pdfviewer:`github/tschinz/znotes/blob/master/pdf/znotes.pdf`
 
 Other Sphinx Pages
 ^^^^^^^^^^^^^^^^^^
@@ -348,7 +348,7 @@ After that the image |folder_icon| can be integrated inline.
 Predefined Images
 ^^^^^^^^^^^^^^^^^
 
-There are some predefined images in :zawiki_repo:`conf.py file <blob/master/source/conf.py>`
+There are some predefined images in :znotes_repo:`conf.py file <blob/master/source/conf.py>`
 
 .. code-block:: ReST
 

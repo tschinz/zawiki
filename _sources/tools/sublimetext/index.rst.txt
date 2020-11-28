@@ -17,7 +17,7 @@ SublimeText
 Useful Links
 ============
 
-* :pdfviewer:`Shortcut Cheatsheet <github/tschinz/zawiki/blob/master/source/tools/sublimetext/docs/sublimecheatsheet.pdf>`
+* :pdfviewer:`Shortcut Cheatsheet <github/tschinz/znotes/blob/master/source/tools/sublimetext/docs/sublimecheatsheet.pdf>`
 * :config_repo:`My Settings Backup <tree/master/config/sublimetext>`
 
 Console

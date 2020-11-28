@@ -41,7 +41,7 @@ General Todolist
 
 .. todo::
 
-   Missing pages from original Zawiki
+   Missing pages from original znotes
 
 .. todo::
 

@@ -14,9 +14,9 @@ Nmap ("Network Mapper") is a free and open source (license) utility for network 
 Nmap Cheat Sheets
 =================
 
-* :pdfviewer:`Nmap Basics.pdf <github/tschinz/zawiki/source/tools/nmap/docs/romelsan_nmap-basics.pdf`
-* :pdfviewer:`SANS Nmap Cheatsheet v1.0 <github/tschinz/zawiki/source/tools/nmap/docs/NmapCheatSheetv1.0.pdf`
-* :pdfviewer:`See Security Technologies Nmap Cheatsheet v1.0 <github/tschinz/zawiki/source/tools/nmap/docs/nmapcheatsheet.pdf`
+* :pdfviewer:`Nmap Basics.pdf <github/tschinz/znotes/source/tools/nmap/docs/romelsan_nmap-basics.pdf`
+* :pdfviewer:`SANS Nmap Cheatsheet v1.0 <github/tschinz/znotes/source/tools/nmap/docs/NmapCheatSheetv1.0.pdf`
+* :pdfviewer:`See Security Technologies Nmap Cheatsheet v1.0 <github/tschinz/znotes/source/tools/nmap/docs/nmapcheatsheet.pdf`
 
 Commands
 ========

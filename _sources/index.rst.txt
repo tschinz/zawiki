@@ -32,14 +32,14 @@ Want to try it for yourself? Then jump to the :doc:`getting started <about/getti
 
 You can view the content as a:
 
-* :zawiki_page:`Webpage <>`
-* `PDF <https://nbviewer.jupyter.org/github/tschinz/zawiki/blob/master/pdf/zawiki.pdf>`_
-* :zawiki_repo:`Repo <>`
+* :znotes_page:`Webpage <>`
+* `PDF <https://nbviewer.jupyter.org/github/tschinz/znotes/blob/master/pdf/znotes.pdf>`_
+* :znotes_repo:`Repo <>`
 
 Known Issues
 ============
 
-See also the `github issues <https://github.com/tschinz/zawiki/issues>`_ page.
+See also the `github issues <https://github.com/tschinz/znotes/issues>`_ page.
 
 TODO's
 ======
