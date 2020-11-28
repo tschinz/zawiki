@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
-  <img src="./source/img/logo.svg" alt="Zawiki Logo" width="250">
+  <img src="./source/img/logo.svg" alt="Z-Notes Logo" width="250">
   <br>
-  Zawiki Knowledge Database
+  Z-Notes Knowledge Database
   <br>
 </h1>
 

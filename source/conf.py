@@ -69,8 +69,8 @@ extensions = [
 
 # external Links
 extlinks = {'config_repo': ('https://github.com/tschinz/config/%s', None),
-            'zawiki_repo': ('https://github.com/tschinz/zawiki/%s', None),
-            'zawiki_page': ('http://tschinz.github.io/zawiki/%s', None),
+            'znotes_repo': ('https://github.com/tschinz/znotes/%s', None),
+            'znotes_page': ('http://tschinz.github.io/znotes/%s', None),
             'pdfviewer': ('https://nbviewer.jupyter.org/%s', None),
             }
 
@@ -144,16 +144,16 @@ copybutton_image_path = 'img/copybutton.svg'
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-#latex_engine = 'xelatex'
-#latex_elements = {
+latex_engine = 'xelatex'
+latex_elements = {
 #    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
 #    'printindex': r'\footnotesize\raggedright\printindex',
 #
-#    'papersize': 'a4paper',
+    'papersize': 'a4paper',
 #
-#    'pointsize': '10pt',
-#    'extraclassoptions': 'onecolumn,oneside',
-#    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
+    'pointsize': '10pt',
+    'extraclassoptions': 'onecolumn,oneside',
+    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
 #
 #    'inputenc': '',
 #    'fncychap': '',
@@ -182,13 +182,13 @@ copybutton_image_path = 'img/copybutton.svg'
 #    # Latex figure (float) alignment
 #    #
 #    'figure_align': 'htbp',
-#}
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'zawiki.tex', 'Zawiki',
+    (master_doc, 'z-notes.tex', 'Z-Notes',
       AUTHOR, 'manual'),
 ]
 
@@ -201,7 +201,7 @@ html_theme_options = {
       #{"name": "Config repo", "url": "https://github.com/tschinz/config"},
   ],
   "google_analytics_id": "UA-20699788-1",
-  "github_url": "https://github.com/tschinz/zawiki",
+  "github_url": "https://github.com/tschinz/znotes",
   "twitter_url": "https://twitter.com/tschinz",
   "show_prev_next": False,
   "search_bar_position": "navbar", #"sidebar"
@@ -214,13 +214,13 @@ html_context = {
     #    '_static/css/copy_button.css',      # override copybutton on code-block
     #],
     "github_user": "tschinz",
-    "github_repo": "zawiki",
+    "github_repo": "znotes",
     "github_version": "master",
     "doc_path": "source",
 }
 
 html_logo = 'img/logo.svg'
-html_title = 'Zawiki'
+html_title = 'Z-Notes'
 # This is a temporary fix for wavedrom
 offline_skin_js_path = "_static/js/default.js"
 offline_wavedrom_js_path = "_static/js/wavedrom.min.js"

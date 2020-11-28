@@ -7,7 +7,7 @@ SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = _build
 OUTPUTDIR     = html
-FILENAME      = zawiki
+FILENAME      = znotes
 # IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
 IMAGEOBJS     = $(sort $(dir $(wildcard source/img/* source/*/img/* source/*/*/img/* source/*/*/*/img/* source/*/*/*/*/img/*)))
 IMAGEDIRS     = $(patsubst source/%/, %, $(IMAGEOBJS)) # remove source/ and last /
@@ -26,11 +26,11 @@ help:
 
 # Pattern rule for converting SVG to PDF
 %.pdf : %.svg
-	$(SVG2PDF) $(SVG2PDF_FLAGS) -f $< -A $@
+	$(SVG2PDF) $(SVG2PDF_FLAGS) -o $@ $<
 
 # Pattern rule for converting SVG to PNG
 %.png : %.svg
-	$(SVG2PNG) $(SVG2PNG_FLAGS) -f $< -e $@
+	$(SVG2PNG) $(SVG2PNG_FLAGS) -o $@ $<
 
 # Build a list of SVG files to convert to PDFs
 PDFs := $(foreach dir, $(IMAGEDIRS), $(patsubst %.svg,%.pdf,$(wildcard $(SOURCEDIR)/$(dir)/*.svg)))

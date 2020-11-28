@@ -64,4 +64,4 @@ Check installation
 Configuration
 =============
 
-see :zawiki_repo:`zawiki conf.py <blob/master/source/conf.py>`
+see :znotes_repo:`znotes conf.py <blob/master/source/conf.py>`

@@ -30,13 +30,13 @@ As last remark I want to thank Corthay Francois for his VHDL Summary and HTML fi
 PDF
 ---
 
-* :pdfviewer:`ESA VHDL Modelling Guide <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/esa_vhdl_modellingguide.pdf>`
-* :pdfviewer:`Synth Works Fixed & Float <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_fixed_float.pdf>`
-* :pdfviewer:`Synth Works Math Tricks <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_math_tricks.pdf>`
-* :pdfviewer:`Synth Works Verification <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_subblock_verification.pdf>`
-* :pdfviewer:`Synth Works VHDL 2008 End of Verbosity <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/synthworks_vhdl_2008end_of_verbosity.pdf>`
-* :pdfviewer:`Short Guide CoF <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/vhdl_syntax_cof.pdf>`
-* :pdfviewer:`EPFL VHDL Script <github/tschinz/zawiki/blob/master/source/coding/vhdl/docs/Intro_VHDL_v2.0_notes.pdf>`
+* :pdfviewer:`ESA VHDL Modelling Guide <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/esa_vhdl_modellingguide.pdf>`
+* :pdfviewer:`Synth Works Fixed & Float <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/synthworks_fixed_float.pdf>`
+* :pdfviewer:`Synth Works Math Tricks <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/synthworks_math_tricks.pdf>`
+* :pdfviewer:`Synth Works Verification <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/synthworks_subblock_verification.pdf>`
+* :pdfviewer:`Synth Works VHDL 2008 End of Verbosity <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/synthworks_vhdl_2008end_of_verbosity.pdf>`
+* :pdfviewer:`Short Guide CoF <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/vhdl_syntax_cof.pdf>`
+* :pdfviewer:`EPFL VHDL Script <github/tschinz/znotes/blob/master/source/coding/vhdl/docs/Intro_VHDL_v2.0_notes.pdf>`
 
 Links
 ------

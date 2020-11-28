@@ -33,7 +33,7 @@ df
 .. code-block:: bash
    :caption: df example
 
-   λ df -h
+   $ df -h
    Filesystem      Size  Used Avail Use% Mounted on
    udev            7.8G     0  7.8G   0% /dev
    tmpfs           1.6G   12M  1.6G   1% /run
@@ -60,7 +60,7 @@ fdisk
 .. code-block:: bash
    :caption: fdisk example
 
-   λ sudo fdisk -l
+   $ sudo fdisk -l
 
    Disk /dev/sda: 1.8 TiB, 2000398934016 bytes, 3907029168 sectors
    Units: sectors of 1 * 512 = 512 bytes
@@ -110,7 +110,7 @@ lsblk
 .. code-block:: bash
    :caption: lsblk example 2
 
-   λ lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,STATE,MODEL,UUID
+   $ lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,STATE,MODEL,UUID
    NAME     SIZE TYPE MOUNTPOINT      STATE   MODEL            UUID
    loop1   96.6M loop /snap/core/9804
    loop2     13M loop /snap/dmd/102
