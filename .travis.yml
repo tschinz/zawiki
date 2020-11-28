@@ -23,8 +23,8 @@ install:
   - pip install -U recommonmark
   - pip install -U sphinxemoji
   - pip install -U sphinx-copybutton
-  - pip install -U nbsphinx
-  - pip install -U jupyter_sphinx
+  #- pip install -U nbsphinx
+  #- pip install -U jupyter_sphinx
   - pip install -U sphinx-panels
   - pip install -U sphinx-autobuild
   - pip install -U sphinx-notfound-page

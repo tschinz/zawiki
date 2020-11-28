@@ -162,7 +162,7 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 .PHONY: latex
-latex: images-pdf
+latex: # images-pdf
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -172,7 +172,7 @@ latex: images-pdf
 				"(use \`make latexpdf' here to do that automatically)."
 
 .PHONY: latexpdf
-latexpdf: images-pdf
+latexpdf: # images-pdf
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_latex.rst $(SOURCEDIR)/index.rst
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -184,7 +184,7 @@ latexpdf: images-pdf
 	@echo "pdf copied; the PDF files are in $(OUTPUTDIR)/$(FILENAME).pdf."
 
 .PHONY: latexpdfja
-latexpdfja: images-pdf
+latexpdfja: # images-pdf
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Running LaTeX files through platex and dvipdfmx..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf-ja

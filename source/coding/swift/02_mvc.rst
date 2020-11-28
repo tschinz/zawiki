@@ -44,10 +44,6 @@ Multiple MVC
 
 For powerful apps multiple MVC's needs to be put together
 
-   .. figure:: img/UINavigationController_mvc.*
-      :align: center
-      :width: 500px
-
 -  iOS provides some Controllers whose View is "other MVC's". Examples:
 
    -  UITabBarController

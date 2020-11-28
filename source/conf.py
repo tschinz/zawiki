@@ -53,6 +53,7 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinxcontrib.wavedrom",
     "sphinxcontrib.plantuml",
+    "sphinx.ext.imgconverter",
     #"jupyter_sphinx",
     "recommonmark",
     "sphinx_copybutton",
@@ -144,16 +145,16 @@ copybutton_image_path = 'img/copybutton.svg'
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-latex_engine = 'xelatex'
-latex_elements = {
+#latex_engine = 'xelatex'
+#latex_elements = {
 #    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
 #    'printindex': r'\footnotesize\raggedright\printindex',
 #
-    'papersize': 'a4paper',
+#    'papersize': 'a4paper',
 #
-    'pointsize': '10pt',
-    'extraclassoptions': 'onecolumn,oneside',
-    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
+#    'pointsize': '10pt',
+#    'extraclassoptions': 'onecolumn,oneside',
+#    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
 #
 #    'inputenc': '',
 #    'fncychap': '',
@@ -182,7 +183,7 @@ latex_elements = {
 #    # Latex figure (float) alignment
 #    #
 #    'figure_align': 'htbp',
-}
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
@@ -192,7 +193,7 @@ latex_documents = [
       AUTHOR, 'manual'),
 ]
 
-latex_logo = 'img/logo.pdf'
+latex_logo = 'img/znotes-logo.pdf'
 
 # -- Extension configuration -------------------------------------------------
 # -- Options for pydata-sphinx-theme -----------------------------------------
