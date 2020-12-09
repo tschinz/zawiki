@@ -145,7 +145,7 @@ copybutton_image_path = 'img/copybutton.svg'
 # html_sidebars = {}
 
 # -- Options for LaTeX output ------------------------------------------------
-#latex_engine = 'xelatex'
+latex_engine = 'xelatex'
 #latex_elements = {
 #    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
 #    'printindex': r'\footnotesize\raggedright\printindex',

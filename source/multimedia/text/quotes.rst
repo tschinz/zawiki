@@ -167,5 +167,52 @@ Inspirational Quotes
    * - Lieber haben und nicht brauchen als brachen und nicht haben
 
        *Stefan*
+   * - Das Beste Hoffen und das schlimmste Erwarten
+
+       *Unknown*
+   * - Speak only if you improve silence
+
+       *Mahatma Gandhi*
+   * - We can never proof we are right we can only proove that we are wrong.
+
+       *Richard Feynman*
+
+   * - Ist so, weil so.
+
+       *Silvan*
+
+   * - I could if I would, I wont so I dont.
+
+       *Silvan*
+   * - Forever travelling the universe,
+       forever investigating the cosmos,
+       forever reaching the stars.
+       #MessageToVoyager
+
+       *Silvan*
+   * - Goldmine is like a whole in the ground with a liar at the top
+
+       *Mark Twain*
+   * - Though human ingenuity may make various inventions, it will never devise an invention more beautiful, more simple, more direct than does Nature; because in her inventions nothing is lacking and nothing is superfluous.
+
+       *Leonadro DaVinci*
+   * - Firest they ignore you, then they laugh at you, then they fight you, then you win.
+
+       *Mahatma Gandhi*
+
+   * - Pay attention to your thoughts, because they become words.
+       Pay attention to your words, because they become actions.
+       Pay attention to your actions, because they become habits.
+       Pay attention to your habits, because they become your character.
+       Pay attention to your character, because it is your fate.
+       *Thalmud*
+
+   * - Toleranz ist die Erkenntnis, das es keinen Sinn hat, sich aufzuregen
+
+       *Unknown*
+
+
+
+
 
 

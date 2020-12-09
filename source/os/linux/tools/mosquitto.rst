@@ -83,6 +83,8 @@ For activating the passwordfile you need to create a custom config file ``/etc/m
 Python example
 ==============
 
+More informations at http://www.steves-internet-guide.com/client-connections-python-mqtt/
+
 Install the ``paho-mqtt`` library
 
 .. code-block:: bash
@@ -113,3 +115,17 @@ Install the ``paho-mqtt`` library
 
    # process the MQTT business
    client.loop_forever()
+
+Paho Return Codes
+-----------------
+
+Connection Return Codes
+
+* ``0``: Connection successful
+* ``1``: Connection refused – incorrect protocol version
+* ``2``: Connection refused – invalid client identifier
+* ``3``: Connection refused – server unavailable
+* ``4``: Connection refused – bad username or password
+* ``5``: Connection refused – not authorised
+* ``6``-``255``: Currently unused.
+
