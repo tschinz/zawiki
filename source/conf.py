@@ -55,7 +55,7 @@ extensions = [
     "sphinxcontrib.plantuml",
     "sphinx.ext.imgconverter",
     #"jupyter_sphinx",
-    "recommonmark",
+    #"recommonmark",
     "sphinx_copybutton",
     "sphinxemoji.sphinxemoji",
     "notfound.extension",
@@ -87,8 +87,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.md']
-# source_suffix = '.rst'
+#source_suffix = ['.rst', '.md']
+source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
