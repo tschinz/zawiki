@@ -1,4 +1,4 @@
-name: Build Sphinx to Github Pages
+name: Build Sphinx to Github Pages two
 
 # Controls when the action will run.
 on:
@@ -53,5 +53,4 @@ jobs:
         sudo apt-get install -y default-jdk
     - name: make html
       run: |
-        $CONDA/bin/conda activate
         make html
