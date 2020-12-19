@@ -1,6 +1,27 @@
 # Makefile for Sphinx documentation
 #
 
+PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+PROJECT_NAME = uspml
+PYTHON_INTERPRETER = python
+CONDA_ENV_FILE = condaenv.yml
+CONDA_ENV_NAME = znotes-env
+
+ifeq (,$(shell where conda))
+HAS_CONDA=False
+else
+HAS_CONDA=True
+SEARCH_ENV=$(shell conda.bat info --envs | grep $(CONDA_ENV_NAME))
+FOUND_ENV_NAME = $(word 1, $(notdir $(SEARCH_ENV)))
+# check if conda environment is active
+ifneq ($(CONDA_DEFAULT_ENV),$(FOUND_ENV_NAME))
+	CONDA_ACTIVATE := source $$(conda.bat info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME)
+else
+    CONDA_ACTIVATE := true
+endif
+endif
+
+
 # You can set these variables from the command line.
 SPHINXOPTS    = -Dversion=$(shell git describe --tags)
 SPHINXBUILD   = sphinx-build
@@ -72,6 +93,7 @@ clean-quick:
 
 .PHONY: index
 index:
+	chmod +x source/_static/jar/plantuml.jar
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
 
