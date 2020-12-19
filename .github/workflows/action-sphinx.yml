@@ -51,7 +51,7 @@ jobs:
         sudo dpkg --configure -a
         mkdir -p /usr/share/man/man1
         sudo apt-get install -y default-jdk
-    - name: build sphinx 🔧
+    - name: Build sphinx 🔧
       run: |
         make html
     - name: Deploy 🚀
@@ -59,5 +59,5 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: _build # The folder the action should deploy.
+        FOLDER: _build/html # The folder the action should deploy.
         CLEAN: true # Automatically remove deleted files from the deploy branch
