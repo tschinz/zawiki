@@ -56,4 +56,9 @@ jobs:
         make html
     - name: publish
       run: |
-        make html
+        cp -r docs/_build/html/* gh-pages/
+        cd gh-pages
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Update documentation" -a || true
