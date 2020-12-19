@@ -31,6 +31,7 @@ jobs:
         sudo dpkg --configure -a
         mkdir -p /usr/share/man/man1
         sudo apt-get install -y default-jdk
-    - name: Lint with flake8
+    - name: make html
       run: |
-        $CONDA/bin/conda make html
+        $CONDA/bin/conda activate
+        make html
