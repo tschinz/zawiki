@@ -25,12 +25,12 @@ jobs:
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         $CONDA/bin/conda env update --file condaenv.yml --name base
-        #sudo apt-get install -y graphviz
-        #sudo apt-get install -y inkscape
+        sudo apt-get install -y graphviz
+        sudo apt-get install -y inkscape
         #sudo apt-get install -y texlive-full
-        #sudo dpkg --configure -a
-        #mkdir -p /usr/share/man/man1
-        #sudo apt-get install -y default-jdk
+        sudo dpkg --configure -a
+        mkdir -p /usr/share/man/man1
+        sudo apt-get install -y default-jdk
     - name: Lint with flake8
       run: |
         $CONDA/bin/conda make html
