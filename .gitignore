@@ -7,3 +7,4 @@ _build/*
 source/index.rst
 public/*
 !public/pdf
+*.pyc

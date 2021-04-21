@@ -58,6 +58,12 @@ extensions = [
     "tag",
 ]
 
+# shinx panels config
+panels_add_bootstrap_css = False
+
+html_css_files = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+panels_add_fontawesome_latex = True
+
 # emoij style
 #sphinxemoji_style = 'twemoji'
 
