@@ -15,11 +15,12 @@ import sys
 import subprocess
 from datetime import datetime
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.append(os.path.abspath('_exts'))
 
 # -- Project information -----------------------------------------------------
 AUTHOR='tschinz'
 try:
-  VERSION = subprocess.check_output(["git", "describe"]).decode('UTF-8')
+  VERSION = subprocess.check_output(["git", "describe", "--always"]).decode('UTF-8')
 except:
   VERSION = 'v0.0'
 
@@ -39,11 +40,6 @@ release = VERSION
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    #"sphinx.ext.autodoc",
-    #"sphinx.ext.autosummary",
-    #"sphinx.ext.doctest",
-    #"sphinx.ext.intersphinx",
-    #"sphinx.ext.coverage",
     "sphinx.ext.mathjax",
     "sphinx.ext.ifconfig",
     "sphinx.ext.graphviz",
@@ -54,15 +50,12 @@ extensions = [
     "sphinxcontrib.wavedrom",
     "sphinxcontrib.plantuml",
     "sphinx.ext.imgconverter",
-    #"jupyter_sphinx",
-    #"recommonmark",
     "sphinx_copybutton",
     "sphinxemoji.sphinxemoji",
     "notfound.extension",
-    #"nbsphinx",
-    #"matplotlib.sphinxext.plot_directive",
-    #"IPython.sphinxext.ipython_console_highlighting",
-    #"IPython.sphinxext.ipython_directive",
+    "sphinx_panels",
+    "button",
+    "tag",
 ]
 
 # emoij style
@@ -130,6 +123,12 @@ html_favicon = 'img/favicon.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_style = 'css/theme_overrides.css'
+
+html_css_files = [
+    'css/custom.css',
+]
 
 # Copybutton image path
 copybutton_image_path = 'img/copybutton.svg'
@@ -205,10 +204,21 @@ html_theme_options = {
   "github_url": "https://github.com/tschinz/znotes",
   "twitter_url": "https://twitter.com/tschinz",
   "show_prev_next": False,
-  "search_bar_position": "navbar", #"sidebar"
+  "collapse_navigation": True, # default
+  "navigation_depth": 4, # default
+  "navigation_with_keys": True, # default
+  #"search_bar_position": "navbar", #"sidebar"
   "search_bar_text": "Don't panic, search",
   "use_edit_page_button": True,
+  "page_sidebar_items": ["page-toc", "edit-this-page"],
+  "footer_items": ["navbar-logo", "copyright", "version"],
+  #"navbar_end": ["navbar-icon-links.html", "search-field.html"] # searchbar in top
 }
+
+html_sidebars = {
+    "**": ["search-field", "sidebar-nav-bs"]
+}
+
 html_context = {
     #'css_files': [
     #    '_static/css/theme_overrides.css',  # override wide tables in RTD theme

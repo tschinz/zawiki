@@ -17,18 +17,6 @@ dependencies:
   - wincertstore=0.2=py38_0
   - zlib=1.2.11=h62dcd97_4
   - pip:
-    - git==2.23.0=h6bb4b03_0
-    - certifi==2020.12.5=py38haa95532_0
-    - setuptools==51.0.0=py38haa95532_2
-    - openssl==1.1.1i=h2bbff1b_0
-    - wincertstore==0.2=py38_0
-    - sqlite==3.33.0=h2a8f88b_0
-    - python==3.8.5=h5fd99cc_1
-    - vc==14.2=h21ff451_1
-    - ca-certificates==2020.12.8=haa95532_0
-    - pip==20.3.3=py38haa95532_0
-    - zlib==1.2.11=h62dcd97_4
-    - vs2015_runtime==14.27.29016=h5e58377_2
     - alabaster==0.7.12
     - argon2-cffi==20.1.0
     - async-generator==1.10
@@ -36,6 +24,7 @@ dependencies:
     - attrs==20.3.0
     - babel==2.9.0
     - backcall==0.2.0
+    - beautifulsoup4==4.9.3
     - bleach==3.2.1
     - cairocffi==1.2.0
     - cairosvg==2.5.0
@@ -78,7 +67,7 @@ dependencies:
     - prometheus-client==0.9.0
     - prompt-toolkit==3.0.8
     - pycparser==2.20
-    - pydata-sphinx-theme==0.4.1
+    - pydata-sphinx-theme==0.6.1
     - pygments==2.7.2
     - pyparsing==2.4.7
     - pyrsistent==0.17.3
@@ -87,21 +76,22 @@ dependencies:
     - pywin32==300
     - pywinpty==0.5.7
     - pyzmq==20.0.0
-    - recommonmark==0.6.0
+    - recommonmark==0.7.1
     - requests==2.25.0
     - send2trash==1.5.0
     - six==1.15.0
     - snowballstemmer==2.0.0
-    - sphinx==3.3.1
-    - sphinx-autobuild==2020.9.1
+    - soupsieve==2.2.1
+    - sphinx==3.5.4
+    - sphinx-autobuild==2021.3.14
     - sphinx-copybutton==0.3.1
-    - sphinx-notfound-page==0.5
+    - sphinx-notfound-page==0.6
     - sphinx-panels==0.5.2
     - sphinxcontrib-applehelp==1.0.2
     - sphinxcontrib-devhelp==1.0.2
     - sphinxcontrib-htmlhelp==1.0.3
     - sphinxcontrib-jsmath==1.0.1
-    - sphinxcontrib-plantuml==0.19
+    - sphinxcontrib-plantuml==0.20.1
     - sphinxcontrib-qthelp==1.0.3
     - sphinxcontrib-serializinghtml==1.1.4
     - sphinxcontrib-wavedrom==2.1.1

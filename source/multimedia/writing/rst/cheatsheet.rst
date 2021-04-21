@@ -1070,3 +1070,97 @@ For a small Cheatsheet for PlantUML see https://ogom.github.io/draw_uml/plantuml
    rectangle rectangle
    storage storage
    usecase usecase
+
+Icons
+=====
+
+One can add font-awesome icons like this: :fa:`check`
+
+.. code-block:: ReST
+
+   :fa:`check`
+
+Find your icons at https://fontawesome.com/v4.7.0/icons/.
+
+Buttons
+=======
+
+.. code-block:: rst
+
+   .. button:: Documentation
+      :class: btn-large-square fa fa-book btn-hover-blue
+      :link: #
+
+   .. button:: GitLab
+      :class: btn-large-square fa fa-gitlab btn-hover-red
+      :link: #
+
+
+.. button:: Documentation
+   :class: btn-large-square fa fa-book btn-hover-blue
+   :link: #
+
+.. button:: GitLab
+   :class: btn-large-square fa fa-gitlab btn-hover-red
+   :link: #
+
+.. note:: The button link opens a new browser page.
+
+Panels
+======
+
+.. code-block:: rst
+
+   .. panels::
+      :container: container-lg pb-3
+      :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
+
+      panel1
+      ---
+      panel2
+      ---
+      panel3
+      ---
+      :column: col-lg-12 p-2
+
+      Header
+      ^^^^^^
+
+      panel4
+
+
+.. panels::
+   :container: container-lg pb-3
+   :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
+
+   panel1
+   ---
+   panel2
+   ---
+   panel3
+   ---
+   :column: col-lg-12 p-2
+
+   Header
+   ^^^^^^
+
+   panel4
+
+
+Thanks to `sphinx-panels <https://sphinx-panels.readthedocs.io/>`_ extension.
+
+Tags
+====
+For each page corresponding tags should be used, see :doc:`/about/tags` for all currently used tags.
+
+
+.. code-block:: rst
+
+   :tag:`RST`
+   :tag:`ReST`
+   :tag:`Sphinx`
+
+
+:tag:`ReST`
+:tag:`RST`
+:tag:`Sphinx`
