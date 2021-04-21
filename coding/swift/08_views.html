@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Views &#8212; Z-Notes</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,10 +20,6 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,18 +27,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/default.js"></script>
     <script src="../../_static/wavedrom.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -49,84 +44,112 @@
     <link rel="prev" title="UI Elements" href="081_uielements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../../index.html">
     
-      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../os/index.html">OS</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../tools/index.html">Tools</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../index.html">Coding</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../hw/index.html">Hardware</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../security/index.html">Security</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../about/index.html">About</a>
-        </li>
-        
-        
-      </ul>
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.svg" class="logo" alt="logo">
+</a>
 
 
-      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
-</form>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../os/index.html">
+  OS
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tschinz/znotes" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../tools/index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../multimedia/index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -134,153 +157,241 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_mvc.html">
+   Programming Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_properties.html">
+   Properties
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_datastructures_methods.html">
+   Data Structures &amp; Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_controlflow.html">
+   Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_multithreading.html">
+   Multithreading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_nsclasses.html">
+   NS Classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="081_uielements.html">
+   UI Elements
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Views
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_other.html">
+   Other
+  </a>
+ </li>
+</ul>
 
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
+  </div>
+</nav>
+            </div>
+            
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#initializing-uiview" class="nav-link">Initializing UIView</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#view-s-coordinate-system" class="nav-link">View’s Coordinate System</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#creating-a-view" class="nav-link">Creating a View</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#view-transparency" class="nav-link">View transparency</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#hide-a-view" class="nav-link">Hide a view</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#custom-view" class="nav-link">Custom View</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#drawing" class="nav-link">Drawing</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#drawing-text" class="nav-link">Drawing Text</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#drawing-images" class="nav-link">Drawing Images</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#bound-change-uiviewcontentmode" class="nav-link">Bound change UIViewContentMode</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#uibezierpath" class="nav-link">UIBezierPath</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#uicolor" class="nav-link">UIColor</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#uifont" class="nav-link">UIFont</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#coordinate-system" class="nav-link">Coordinate System</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#data-structures" class="nav-link">Data Structures</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#connection-to-storyboard" class="nav-link">Connection to storyboard</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#autolayout" class="nav-link">Autolayout</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#autorotation" class="nav-link">Autorotation</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#size-classes" class="nav-link">Size Classes</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#gestures" class="nav-link">Gestures</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#add-a-gesture-recognizer-to-a-view" class="nav-link">Add a Gesture recognizer (to a View)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#handling-a-gesture" class="nav-link">Handling a Gesture</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#possible-gestures" class="nav-link">Possible Gestures</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#view-controller" class="nav-link">View Controller</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-    </ul>
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#initializing-uiview">
+   Initializing UIView
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#view-s-coordinate-system">
+   View’s Coordinate System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-view">
+   Creating a View
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#view-transparency">
+   View transparency
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hide-a-view">
+   Hide a view
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-view">
+   Custom View
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing">
+   Drawing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drawing-text">
+     Drawing Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drawing-images">
+     Drawing Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bound-change-uiviewcontentmode">
+     Bound change
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       UIViewContentMode
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uibezierpath">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       UIBezierPath
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uicolor">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UIColor
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uifont">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UIFont
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinate-system">
+   Coordinate System
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structures">
+     Data Structures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-to-storyboard">
+   Connection to storyboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autolayout">
+   Autolayout
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#autorotation">
+     Autorotation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size-classes">
+     Size Classes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gestures">
+   Gestures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-gesture-recognizer-to-a-view">
+     Add a Gesture recognizer (to a View)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#handling-a-gesture">
+     Handling a Gesture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#possible-gestures">
+     Possible Gestures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#view-controller">
+     View Controller
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
+              
+              <div class="toc-item">
+                
 
 <div class="tocsection editthispage">
     <a href="https://github.com/tschinz/znotes/edit/master/source/coding/swift/08_views.rst">
@@ -288,10 +399,15 @@
     </a>
 </div>
 
+              </div>
               
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -313,14 +429,14 @@ status bar). But normally you never interact with it.</p>
 </div>
 <div class="section" id="initializing-uiview">
 <h2>Initializing UIView<a class="headerlink" href="#initializing-uiview" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">)</span>  <span class="c1">// init of UIView created in code</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">init</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">)</span>  <span class="c1">// init of UIView created in code</span>
 <span class="kd">init</span><span class="p">(</span><span class="n">coder</span><span class="p">:</span> <span class="bp">NSCoder</span><span class="p">)</span> <span class="c1">// init of UIView comes out of storyboard</span>
 </pre></div>
 </div>
 <p>If you need an initializer set them <strong>both</strong></p>
 <div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{...}</span>
 
-<span class="kr">override</span> <span class="kd">init</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span><span class="bp">CGRect</span><span class="p">)</span> <span class="p">{</span>            <span class="c1">// a designated init</span>
+<span class="kr">override</span> <span class="kd">init</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span><span class="n">CGRect</span><span class="p">)</span> <span class="p">{</span>            <span class="c1">// a designated init</span>
     <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">)</span>
     <span class="n">setup</span><span class="p">()</span>
 <span class="p">}</span>
@@ -345,14 +461,14 @@ status bar). But normally you never interact with it.</p>
 <ul class="simple">
 <li><p>Boundaries is where drawings happen</p></li>
 </ul>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="bp">CGRect</span> <span class="c1">// a vies internal drawing space&#39;s origin and size</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">bounds</span><span class="p">:</span> <span class="n">CGRect</span> <span class="c1">// a vies internal drawing space&#39;s origin and size</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>The UIView location</p></li>
 </ul>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">center</span><span class="p">:</span> <span class="bp">CGPoint</span> <span class="c1">// center of a UIView in its superview&#39;s coordinate system</span>
-<span class="kd">var</span> <span class="nv">frame</span> <span class="p">:</span> <span class="bp">CGRect</span>  <span class="c1">// the rect containing a UIview in its superview&#39;s coordinate system</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">center</span><span class="p">:</span> <span class="n">CGPoint</span> <span class="c1">// center of a UIView in its superview&#39;s coordinate system</span>
+<span class="kd">var</span> <span class="nv">frame</span> <span class="p">:</span> <span class="n">CGRect</span>  <span class="c1">// the rect containing a UIview in its superview&#39;s coordinate system</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -373,7 +489,7 @@ status bar). But normally you never interact with it.</p>
 <li><p>User <code class="docutils literal notranslate"><span class="pre">Identity</span> <span class="pre">Inspector</span></code> to changes it’s class to your sublcass</p></li>
 </ul>
 <p><strong>In Code</strong> Assuming this code is in the UIViewController</p>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">labelRect</span> <span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">20</span> <span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">50</span><span class="p">)</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">labelRect</span> <span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">20</span> <span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">50</span><span class="p">)</span>
 <span class="kd">let</span> <span class="nv">label</span> <span class="p">=</span> <span class="bp">UILabel</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">labelRect</span><span class="p">)</span> <span class="c1">// UILabel is a sublcass of UIView</span>
 <span class="n">label</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&quot;Hello&quot;</span>
 <span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
@@ -405,14 +521,14 @@ on screen</p>
 <li><p>If touch events need to be handeled differently</p></li>
 </ul>
 <p>To create just create a UIView subclass and override drawRect.</p>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">drawRect</span><span class="p">(</span><span class="n">regionThatNeedsToBeDrawn</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">)</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">drawRect</span><span class="p">(</span><span class="n">regionThatNeedsToBeDrawn</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p><strong>Never</strong> call drawRect, if a View needs to be redraw use:</p></li>
 </ul>
 <div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">setNeedsDisplay</span><span class="p">()</span>
-<span class="n">setNeedsDisplayinRect</span><span class="p">(</span><span class="n">regionThatNeedsToBeDrawn</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">)</span>
+<span class="n">setNeedsDisplayinRect</span><span class="p">(</span><span class="n">regionThatNeedsToBeDrawn</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -426,7 +542,7 @@ on screen</p>
 <div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// Immutable</span>
 <span class="kd">let</span> <span class="nv">text</span> <span class="p">=</span> <span class="bp">NSAttributedString</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">)</span>
 <span class="n">text</span><span class="p">.</span><span class="n">drawAtPoint</span><span class="p">(</span><span class="n">aCGPoint</span><span class="p">)</span>
-<span class="kd">let</span> <span class="nv">textSize</span><span class="p">:</span> <span class="bp">CGSize</span> <span class="p">=</span> <span class="n">text</span><span class="p">.</span><span class="n">size</span> <span class="c1">// space used for the string</span>
+<span class="kd">let</span> <span class="nv">textSize</span><span class="p">:</span> <span class="n">CGSize</span> <span class="p">=</span> <span class="n">text</span><span class="p">.</span><span class="n">size</span> <span class="c1">// space used for the string</span>
 <span class="c1">// Mutable</span>
 <span class="kd">let</span> <span class="nv">mutableText</span> <span class="p">=</span> <span class="bp">NSMutableAttributedString</span><span class="p">(</span><span class="s">&quot;some String&quot;</span><span class="p">)</span>
 
@@ -486,9 +602,9 @@ managed by Images.xcassets)</p></li>
 <div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create</span>
 <span class="kd">let</span> <span class="nv">path</span> <span class="p">=</span> <span class="bp">UIBezierPath</span><span class="p">()</span>
 <span class="c1">// Move, add line or arcs to the path</span>
-<span class="n">path</span><span class="p">.</span><span class="n">moveToPoint</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span> <span class="c1">// assume screen is 160x250</span>
-<span class="n">path</span><span class="p">.</span><span class="n">addLineToPoint</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
-<span class="n">path</span><span class="p">.</span><span class="n">addLineToPoint</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
+<span class="n">path</span><span class="p">.</span><span class="n">moveToPoint</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span> <span class="c1">// assume screen is 160x250</span>
+<span class="n">path</span><span class="p">.</span><span class="n">addLineToPoint</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
+<span class="n">path</span><span class="p">.</span><span class="n">addLineToPoint</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
 <span class="c1">// Close path to start point</span>
 <span class="n">path</span><span class="p">.</span><span class="n">closePath</span><span class="p">()</span>
 <span class="c1">// Set attributes and stroke / fill</span>
@@ -510,7 +626,7 @@ managed by Images.xcassets)</p></li>
 </pre></div>
 </div>
 <p><strong>HitDetection</strong> For HitDetection a path must be closed</p>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">containsPoint</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="c1">// tells whether a point is inside a path</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">containsPoint</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="c1">// tells whether a point is inside a path</span>
 </pre></div>
 </div>
 </div>
@@ -560,22 +676,22 @@ managed by Images.xcassets)</p></li>
 <span class="n">point</span><span class="p">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">20.0</span>
 
 <span class="c1">// CGSize = struct with two CGFloats in width and height</span>
-<span class="kd">var</span> <span class="nv">size</span> <span class="p">=</span> <span class="bp">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nv">size</span> <span class="p">=</span> <span class="n">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">)</span>
 <span class="n">size</span><span class="p">.</span><span class="n">width</span>  <span class="o">+=</span> <span class="mf">42.5</span>
 <span class="n">size</span><span class="p">.</span><span class="n">height</span> <span class="o">+=</span> <span class="mi">75</span>
 
 <span class="c1">// CGRect = CGPoint and CGSize</span>
-<span class="kd">struct</span> <span class="bp">CGRect</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nv">origin</span><span class="p">:</span> <span class="bp">CGPoint</span>
-    <span class="kd">var</span> <span class="nv">size</span>  <span class="p">:</span> <span class="bp">CGSize</span>
+<span class="kd">struct</span> <span class="nc">CGRect</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">origin</span><span class="p">:</span> <span class="n">CGPoint</span>
+    <span class="kd">var</span> <span class="nv">size</span>  <span class="p">:</span> <span class="n">CGSize</span>
 <span class="p">}</span>
-<span class="kd">let</span> <span class="nv">rect</span> <span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="n">aCGPoint</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">aCGSize</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">rect</span> <span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">origin</span><span class="p">:</span> <span class="n">aCGPoint</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">aCGSize</span><span class="p">)</span>
 <span class="c1">// Other CGRect properties and methods</span>
 <span class="kd">var</span> <span class="nv">minx</span><span class="p">:</span> <span class="n">CGFloat</span>          <span class="c1">// left edge</span>
 <span class="kd">var</span> <span class="nv">midY</span><span class="p">:</span> <span class="n">CGFloat</span>          <span class="c1">// midpoint vertically</span>
-<span class="n">intersects</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="c1">// does CGRect intersect with otehr one?</span>
-<span class="n">intersect</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span>          <span class="c1">// clip the CGRect to the intersection wit hthe other one</span>
-<span class="bp">contains</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>  <span class="c1">// does CGRect contain the given CGPoint?</span>
+<span class="n">intersects</span><span class="p">(</span><span class="n">CGRect</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="c1">// does CGRect intersect with otehr one?</span>
+<span class="n">intersect</span><span class="p">(</span><span class="n">CGRect</span><span class="p">)</span>          <span class="c1">// clip the CGRect to the intersection wit hthe other one</span>
+<span class="bp">contains</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>  <span class="c1">// does CGRect contain the given CGPoint?</span>
 <span class="c1">//.. and many more</span>
 </pre></div>
 </div>
@@ -671,9 +787,9 @@ necessarily by the <code class="docutils literal notranslate"><span class="pre">
 <li><p>A handler for a gesture needs gesture-specific information</p></li>
 <li><p>For Example, <code class="docutils literal notranslate"><span class="pre">UIPanGestureRecognizer</span></code> provides 3 methods</p></li>
 </ul>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">translationInView</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">CGPoint</span> <span class="c1">// cumulative since start of recognize</span>
-<span class="kd">func</span> <span class="nf">velocityInView</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">CGPoint</span>    <span class="c1">// how fast the finger is moving (points/s)</span>
-<span class="kd">func</span> <span class="nf">setTranslation</span><span class="p">(</span><span class="n">translation</span><span class="p">:</span> <span class="bp">CGPoint</span><span class="p">,</span> <span class="n">inView</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="c1">// allows to reset translation, you end up getting incremental translation</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">translationInView</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">CGPoint</span> <span class="c1">// cumulative since start of recognize</span>
+<span class="kd">func</span> <span class="nf">velocityInView</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">CGPoint</span>    <span class="c1">// how fast the finger is moving (points/s)</span>
+<span class="kd">func</span> <span class="nf">setTranslation</span><span class="p">(</span><span class="n">translation</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">,</span> <span class="n">inView</span><span class="p">:</span> <span class="bp">UIView</span><span class="p">)</span> <span class="c1">// allows to reset translation, you end up getting incremental translation</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -793,7 +909,7 @@ functions can be called alot.</p></li>
 <ul class="simple">
 <li><p>Autolayout is the same as bound change (see above)</p></li>
 </ul>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">viewWillTransitionToSize</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="bp">CGSize</span><span class="p">,</span> <span class="n">withTransitionCoordinator</span><span class="p">:</span> <span class="n">UIViewControllerTransistionCoordinator</span><span class="p">)</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">viewWillTransitionToSize</span><span class="p">(</span><span class="n">size</span><span class="p">:</span> <span class="n">CGSize</span><span class="p">,</span> <span class="n">withTransitionCoordinator</span><span class="p">:</span> <span class="n">UIViewControllerTransistionCoordinator</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -830,9 +946,8 @@ method before it’s outlets are set.</p></li>
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
@@ -847,10 +962,19 @@ method before it’s outlets are set.</p></li>
     <!-- End Google Analytics -->
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

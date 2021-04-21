@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attributes &#8212; Z-Notes</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,10 +20,6 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,18 +27,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/default.js"></script>
     <script src="../../_static/wavedrom.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -49,84 +44,112 @@
     <link rel="prev" title="VHDL" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../../index.html">
     
-      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../os/index.html">OS</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../tools/index.html">Tools</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../index.html">Coding</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../hw/index.html">Hardware</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../security/index.html">Security</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../about/index.html">About</a>
-        </li>
-        
-        
-      </ul>
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.svg" class="logo" alt="logo">
+</a>
 
 
-      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
-</form>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../os/index.html">
+  OS
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tschinz/znotes" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../tools/index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../multimedia/index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -134,229 +157,493 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Attributes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conversion.html">
+   Conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples.html">
+   Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file.html">
+   File
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="guidelines.html">
+   Programming Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intel_sdc.html">
+   SDC Constraints
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intel_sdc_theory.html">
+   SDC Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intel_sdc_usage.html">
+   SDC Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="libraries.html">
+   Libraries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="osvvm.html">
+   OSVVM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simulation.html">
+   Simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="syntax.html">
+   Syntax
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="synthesis.html">
+   RTL Synthesis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testbench.html">
+   Testbench
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="time.html">
+   Time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="xilinx_ucf.html">
+   Xilinx UCF Constraints
+  </a>
+ </li>
+</ul>
 
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
+  </div>
+</nav>
+            </div>
+            
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predefined-attributes">
+   Predefined attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#value-kind-attributes">
+     Value kind attributes
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#predefined-attributes" class="nav-link">Predefined attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#value-kind-attributes" class="nav-link">Value kind attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#left" class="nav-link">'left</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#right" class="nav-link">'right</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#high" class="nav-link">'high</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#low" class="nav-link">'low</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#length" class="nav-link">'length</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#ascending" class="nav-link">'ascending</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#structure-behaviour" class="nav-link">'structure & 'behaviour</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#simple-name-instance-name-path-name" class="nav-link">'simple_name & 'instance_name & 'path_name</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#function-kind-attributes-1" class="nav-link">Function kind attributes 1</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#pos-value" class="nav-link">'pos(value)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#val-value" class="nav-link">'val(value)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#succ-value" class="nav-link">'succ(value)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#pred-value" class="nav-link">'pred(value)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#leftof-value" class="nav-link">'leftof(value)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#rightof-value" class="nav-link">'rightof(value)</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#function-kind-array-attributes" class="nav-link">Function kind array attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#id1" class="nav-link">'left()</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#id2" class="nav-link">'right()</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#id3" class="nav-link">'high()</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#id4" class="nav-link">'low()</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#event" class="nav-link">'event</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#active" class="nav-link">'active</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#last-event" class="nav-link">'last_event</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#last-value" class="nav-link">'last_value</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#last-active" class="nav-link">'last_active</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#function-kind-attributes-2" class="nav-link">Function kind attributes 2</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#image" class="nav-link">'image</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#value" class="nav-link">'value</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#signal-kind-attributes" class="nav-link">Signal kind attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#delayed-time" class="nav-link">'delayed(time)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#stable-time" class="nav-link">'stable(time)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#quite-time" class="nav-link">'quite(time)</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#transaction" class="nav-link">'transaction</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#type-kind-attributes" class="nav-link">Type kind attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#base" class="nav-link">'base</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#range-kind-attributes" class="nav-link">Range kind attributes</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#range" class="nav-link">'range</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#reverse-range" class="nav-link">'reverse_range</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#custom-attributes" class="nav-link">Custom attributes</a>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#left">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'left
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#right">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'right
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#high">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'high
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#low">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'low
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#length">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'length
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ascending">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'ascending
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#structure-behaviour">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'structure
+        </span>
+       </code>
+       &amp;
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'behaviour
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simple-name-instance-name-path-name">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'simple_name
+        </span>
+       </code>
+       &amp;
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'instance_name
+        </span>
+       </code>
+       &amp;
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'path_name
+        </span>
+       </code>
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-kind-attributes-1">
+     Function kind attributes 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pos-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'pos(value)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#val-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'val(value)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#succ-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'succ(value)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pred-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'pred(value)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#leftof-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'leftof(value)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rightof-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'rightof(value)
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-kind-array-attributes">
+     Function kind array attributes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'left()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'right()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'high()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'low()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#event">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'event
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#active">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'active
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#last-event">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'last_event
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#last-value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'last_value
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#last-active">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'last_active
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-kind-attributes-2">
+     Function kind attributes 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'image
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#value">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'value
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#signal-kind-attributes">
+     Signal kind attributes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#delayed-time">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'delayed(time)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stable-time">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'stable(time)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quite-time">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'quite(time)
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transaction">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'transaction
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-kind-attributes">
+     Type kind attributes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#base">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'base
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range-kind-attributes">
+     Range kind attributes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#range">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'range
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reverse-range">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'reverse_range
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-attributes">
+   Custom attributes
+  </a>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
+              
+              <div class="toc-item">
+                
 
 <div class="tocsection editthispage">
     <a href="https://github.com/tschinz/znotes/edit/master/source/coding/vhdl/attributes.rst">
@@ -364,10 +651,15 @@
     </a>
 </div>
 
+              </div>
               
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -835,9 +1127,8 @@ end process;
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
@@ -852,10 +1143,19 @@ end process;
     <!-- End Google Analytics -->
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

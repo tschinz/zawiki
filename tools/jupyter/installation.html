@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Installation &#8212; Z-Notes</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,10 +20,6 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,18 +27,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/default.js"></script>
     <script src="../../_static/wavedrom.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -49,84 +44,112 @@
     <link rel="prev" title="Plotly Dash" href="install_plotly_dash.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../../index.html">
     
-      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../os/index.html">OS</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="../index.html">Tools</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../coding/index.html">Coding</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../hw/index.html">Hardware</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../security/index.html">Security</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../about/index.html">About</a>
-        </li>
-        
-        
-      </ul>
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.svg" class="logo" alt="logo">
+</a>
 
 
-      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
-</form>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../os/index.html">
+  OS
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tschinz/znotes" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../coding/index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../multimedia/index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -134,217 +157,380 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Tools
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../git/index.html">
+   Git
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/commands.html">
+     Git Commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/flow.html">
+     Git Flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/general.html">
+     Git General
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/github.html">
+     Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/gitignore.html">
+     .gitignore
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/submodules.html">
+     Git Submodules
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../anaconda/index.html">
+   Anaconda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anaconda/conda.html">
+     Conda
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../anaconda/install.html">
+     Install
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../docker/index.html">
+   Docker
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../docker/basics.html">
+     Basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../docker/docker_cmd.html">
+     <cite>
+      docker
+     </cite>
+     cmd
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../docker/dockerfile.html">
+     Dockerfile
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Jupyter
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="common_functions.html">
+     Common Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="convert.html">
+     Jupyter Converts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="general.html">
+     General
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install_plotly_dash.html">
+     Plotly Dash
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../heroku/index.html">
+   Heroku
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pandoc/index.html">
+   Pandoc
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sphinx/index.html">
+   Sphinx Documentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sphinx/syntax.html">
+     Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../jetbrains/index.html">
+   JetBrains IDE
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jetbrains/intellij_idea.html">
+     Intellij IDEA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jetbrains/pycharm.html">
+     PyCharm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sublimetext/index.html">
+   SublimeText
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sublimetext/plugins.html">
+     Packages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sublimetext/settings.html">
+     Settings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../virtualbox/index.html">
+   VirtualBox
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../virtualbox/intro.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mentor/index.html">
+   Mentor EDA
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mentor/install.html">
+     Install Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bittorrent/index.html">
+   Bittorrent
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bittorrent/creating_torrent.html">
+     Creating a Torrent
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nmap/index.html">
+   NMap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useful_tools/useful_tools.html">
+   Useful Tools
+  </a>
+ </li>
+</ul>
 
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-          
+  </div>
+</nav>
+            </div>
             
-                <li class="">
-                    <a href="../git/index.html">Git</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../anaconda/index.html">Anaconda</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../docker/index.html">Docker</a>
-                </li>
-            
-          
-            
-  
-                <li class="active">
-                    <a href="index.html">Jupyter</a>
-                    <ul>
-                    
-                        <li class="">
-                            <a href="common_functions.html">Common Functions</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="convert.html">Jupyter Converts</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="general.html">General</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="install_plotly_dash.html">Plotly Dash</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="">Installation</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../heroku/index.html">Heroku</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../pandoc/index.html">Pandoc</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../sphinx/index.html">Sphinx Documentation</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../jetbrains/index.html">JetBrains IDE</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../sublimetext/index.html">SublimeText</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../virtualbox/index.html">VirtualBox</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../mentor/index.html">Mentor EDA</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../bittorrent/index.html">Bittorrent</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../nmap/index.html">NMap</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../useful_tools/useful_tools.html">Useful Tools</a>
-                </li>
-            
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#my-extension-list" class="nav-link">My Extension list</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#ide-features" class="nav-link">IDE Features</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#all-in-one-install" class="nav-link">All in one install</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#add-install-r-to-jupyter" class="nav-link">Add install R to jupyter</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#add-install-pandoc-and-inkscape-to-conda" class="nav-link">Add install pandoc and inkscape to conda</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#install-python-additional-stuff" class="nav-link">Install Python Additional Stuff</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#graphviz" class="nav-link">Graphviz</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#install-python-libraries" class="nav-link">Install python Libraries</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#problems" class="nav-link">Problems</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#anaconda-navigator-not-starting" class="nav-link">Anaconda Navigator not starting</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#install-plotly-and-plotly-express" class="nav-link">Install Plotly and Plotly Express</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#better-pdf-export" class="nav-link">Better PDF Export</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#enable-https" class="nav-link">Enable HTTPS</a>
-        </li>
-    
-    </ul>
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#my-extension-list">
+   My Extension list
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ide-features">
+     IDE Features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#all-in-one-install">
+     All in one install
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-install-r-to-jupyter">
+     Add install R to jupyter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-install-pandoc-and-inkscape-to-conda">
+     Add install pandoc and inkscape to conda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-python-additional-stuff">
+   Install Python Additional Stuff
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphviz">
+     Graphviz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-python-libraries">
+     Install python Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problems">
+   Problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anaconda-navigator-not-starting">
+     Anaconda Navigator not starting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-plotly-and-plotly-express">
+   Install Plotly and Plotly Express
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#better-pdf-export">
+   Better PDF Export
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enable-https">
+   Enable HTTPS
+  </a>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
+              
+              <div class="toc-item">
+                
 
 <div class="tocsection editthispage">
     <a href="https://github.com/tschinz/znotes/edit/master/source/tools/jupyter/installation.rst">
@@ -352,10 +538,15 @@
     </a>
 </div>
 
+              </div>
               
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -366,19 +557,19 @@
 <p>see also <a class="reference external" href="https://github.com/tschinz/config/tree/master/config/jupyter">jupyter config</a></p>
 <div class="section" id="my-extension-list">
 <h2>My Extension list<a class="headerlink" href="#my-extension-list" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @jupyterlab/statusbar-extension
 jupyter labextension install @jupyterlab/plotly-extension
 jupyter labextension install @jupyterlab/toc
@@ -402,10 +593,10 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager
 <li><p>the ability to set breakpoints intuitively, next to the line of interest</p></li>
 <li><p>flags to indicate where the current execution has stopped</p></li>
 </ul>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install nbdev
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install nbdev
 conda install xeus-python -c conda-forge
 pip install jupyter_server
 jupyter labextension install @jupyterlab/debugger
@@ -414,7 +605,7 @@ jupyter labextension install @jupyterlab/debugger
 </div>
 <div class="section" id="all-in-one-install">
 <h3>All in one install<a class="headerlink" href="#all-in-one-install" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8 jupyterlab_hidecode @lckr/jupyterlab_variableinspector @jupyter-widgets/jupyterlab-manager
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/statusbar-extension @jupyterlab/plotly-extension @jupyterlab/toc @deathbeds/jupyterlab_graphviz @ryantam626/jupyterlab_sublime jupyter-matplotlib @mflevine/jupyterlab_html jupyterlab-drawio jupyterlab-flake8 jupyterlab_hidecode @lckr/jupyterlab_variableinspector @jupyter-widgets/jupyterlab-manager
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -426,8 +617,8 @@ jupyter labextension install @jupyterlab/debugger
 </div>
 <div class="section" id="add-install-pandoc-and-inkscape-to-conda">
 <h3>Add install pandoc and inkscape to conda<a class="headerlink" href="#add-install-pandoc-and-inkscape-to-conda" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>conda install -c conda-forge pandoc
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>conda install -c conda-forge pandoc
 conda install -c conda-forge inkscape
 </pre></div>
 </td></tr></table></div>
@@ -445,14 +636,14 @@ put Graphviz/bin in your <code class="docutils literal notranslate"><span class=
 </div>
 <div class="section" id="install-python-libraries">
 <h3>Install python Libraries<a class="headerlink" href="#install-python-libraries" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install pixiedust
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip install pixiedust
 pip install SchemDraw
 pip install nbwavedrom
 pip install flake8
@@ -473,47 +664,47 @@ pip install sty
 <div class="section" id="anaconda-navigator-not-starting">
 <h3>Anaconda Navigator not starting<a class="headerlink" href="#anaconda-navigator-not-starting" title="Permalink to this headline">¶</a></h3>
 <p>When starting anaconda-navigator produces the follwowing error.</p>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ anaconda-navigator.exe
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ anaconda-navigator.exe
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">202</span>, in &lt;module&gt;
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">202</span>, <span class="k">in</span> &lt;module&gt;
     from PySide import __version__ as PYSIDE_VERSION  <span class="c1"># analysis:ignore</span>
 ModuleNotFoundError: No module named <span class="s1">&#39;PySide&#39;</span>
 
 During handling of the above exception, another exception occurred:
 
 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\Scripts\anaconda-navigator-script.py&quot;</span>, line <span class="m">6</span>, in &lt;module&gt;
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\Scripts\anaconda-navigator-script.py&quot;</span>, line <span class="m">6</span>, <span class="k">in</span> &lt;module&gt;
     from anaconda_navigator.app.main import main
-  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\app\main.py&quot;</span>, line <span class="m">22</span>, in &lt;module&gt;
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\app\main.py&quot;</span>, line <span class="m">22</span>, <span class="k">in</span> &lt;module&gt;
     from anaconda_navigator.utils.conda import is_conda_available
-  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\utils\__init__.py&quot;</span>, line <span class="m">15</span>, in &lt;module&gt;
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\anaconda_navigator\utils\__init__.py&quot;</span>, line <span class="m">15</span>, <span class="k">in</span> &lt;module&gt;
     from qtpy.QtGui import QIcon
-  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">208</span>, in &lt;module&gt;
+  File <span class="s2">&quot;c:\Users\silvan.zahno\AppData\Local\Continuum\anaconda3\lib\site-packages\qtpy\__init__.py&quot;</span>, line <span class="m">208</span>, <span class="k">in</span> &lt;module&gt;
     raise PythonQtError<span class="o">(</span><span class="s1">&#39;No Qt bindings could be found&#39;</span><span class="o">)</span>
 qtpy.PythonQtError: No Qt bindings could be found
 </pre></div>
 </td></tr></table></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip uninstall PyQt5
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>pip uninstall PyQt5
 conda update conda
 conda update anaconda-navigator
 anaconda-navigator.exe
@@ -529,9 +720,9 @@ anaconda-navigator.exe
 </div>
 <div class="section" id="better-pdf-export">
 <h2>Better PDF Export<a class="headerlink" href="#better-pdf-export" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo apt-get install texlive-xetex
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo apt-get install texlive-xetex
 pip install jupyter_contrib_nbextensions
 pip install cite2c
 </pre></div>
@@ -594,9 +785,8 @@ chmod <span class="m">444</span> jupyter/certs/ssl.cert.pem
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
@@ -611,10 +801,19 @@ chmod <span class="m">444</span> jupyter/certs/ssl.cert.pem
     <!-- End Google Analytics -->
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

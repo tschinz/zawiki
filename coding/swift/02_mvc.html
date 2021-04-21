@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Concepts &#8212; Z-Notes</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,10 +20,6 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,18 +27,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/default.js"></script>
     <script src="../../_static/wavedrom.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -49,84 +44,112 @@
     <link rel="prev" title="Basics" href="01_basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../../index.html">
     
-      <img src="../../_static/logo.svg" class="logo" alt="logo" />
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../os/index.html">OS</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../tools/index.html">Tools</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../index.html">Coding</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../computerscience/index.html">Computerscience</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../hw/index.html">Hardware</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../multimedia/index.html">Multimedia</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../security/index.html">Security</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../about/index.html">About</a>
-        </li>
-        
-        
-      </ul>
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logo.svg" class="logo" alt="logo">
+</a>
 
 
-      <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
-</form>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../os/index.html">
+  OS
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tschinz/znotes" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../tools/index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../multimedia/index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -134,135 +157,217 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Programming Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_properties.html">
+   Properties
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_datastructures_methods.html">
+   Data Structures &amp; Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_controlflow.html">
+   Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_multithreading.html">
+   Multithreading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_nsclasses.html">
+   NS Classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="081_uielements.html">
+   UI Elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_views.html">
+   Views
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_other.html">
+   Other
+  </a>
+ </li>
+</ul>
 
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
+  </div>
+</nav>
+            </div>
+            
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mvc">
+   MVC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#view">
+     View
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controller">
+     Controller
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model">
+     Model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-mvc">
+   Multiple MVC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uitabbarcontroller">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       UITabBarController
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uisplitviewcontroller">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       UISplitViewController
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navigationcontroller">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NavigationController
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uiscrollview">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       UIScrollView
+      </span>
+     </code>
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#mvc" class="nav-link">MVC</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#view" class="nav-link">View</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#controller" class="nav-link">Controller</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#model" class="nav-link">Model</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#multiple-mvc" class="nav-link">Multiple MVC</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#uitabbarcontroller" class="nav-link">UITabBarController</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#uisplitviewcontroller" class="nav-link">UISplitViewController</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#navigationcontroller" class="nav-link">NavigationController</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#uiscrollview" class="nav-link">UIScrollView</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#zooming" class="nav-link">Zooming</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#accessing-sub-mvc-s" class="nav-link">Accessing Sub MVC’s</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#wiring-up-mvc-s" class="nav-link">Wiring up MVC’s</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#segues" class="nav-link">Segues</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#creating-segue" class="nav-link">Creating Segue</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#prepare-segue" class="nav-link">Prepare Segue</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#prevent-segue" class="nav-link">Prevent Segue</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#popover" class="nav-link">Popover</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#preparing-a-popover" class="nav-link">Preparing a Popover</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#popover-presentation-controller" class="nav-link">Popover Presentation Controller</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zooming">
+       Zooming
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accessing-sub-mvc-s">
+     Accessing Sub MVC’s
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wiring-up-mvc-s">
+     Wiring up MVC’s
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#segues">
+     Segues
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-segue">
+       Creating Segue
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prepare-segue">
+       Prepare Segue
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#prevent-segue">
+       Prevent Segue
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#popover">
+     Popover
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#preparing-a-popover">
+       Preparing a Popover
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#popover-presentation-controller">
+       Popover Presentation Controller
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
+              
+              <div class="toc-item">
+                
 
 <div class="tocsection editthispage">
     <a href="https://github.com/tschinz/znotes/edit/master/source/coding/swift/02_mvc.rst">
@@ -270,10 +375,15 @@
     </a>
 </div>
 
+              </div>
               
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -362,16 +472,16 @@ created and destroyed at that point.</p>
 <li><p>Reposition the view (the window of the screen inside the screen)</p></li>
 <li><p>Get area where you’re looking at (contentOffset.x &amp; y)</p></li>
 </ul>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">scrollView</span><span class="p">.</span><span class="n">contentSize</span> <span class="p">=</span> <span class="bp">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">2000</span><span class="p">)</span> <span class="c1">// size of the scroll view</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">scrollView</span><span class="p">.</span><span class="n">contentSize</span> <span class="p">=</span> <span class="n">CGSize</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">2000</span><span class="p">)</span> <span class="c1">// size of the scroll view</span>
 <span class="c1">// Add logo with</span>
-<span class="n">logo</span><span class="p">.</span><span class="n">frame</span><span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">2700</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">180</span><span class="p">)</span>
+<span class="n">logo</span><span class="p">.</span><span class="n">frame</span><span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">2700</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">180</span><span class="p">)</span>
 <span class="n">scrollView</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">logo</span><span class="p">)</span>
 <span class="c1">// Add another image to the view at a different location</span>
-<span class="n">aerial</span><span class="p">.</span><span class="n">frame</span> <span class="p">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">1600</span><span class="p">)</span>
+<span class="n">aerial</span><span class="p">.</span><span class="n">frame</span> <span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="mi">1600</span><span class="p">)</span>
 <span class="n">scrollView</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">aerial</span><span class="p">)</span>
 
 <span class="c1">// Scroll in program</span>
-<span class="kd">func</span> <span class="nf">scrollRectToVisible</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">scrollRectToVisible</span><span class="p">(</span><span class="n">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Other things which can be done in <code class="docutils literal notranslate"><span class="pre">scrollView</span></code></p>
@@ -397,7 +507,7 @@ affecting the scroll view <code class="docutils literal notranslate"><span class
 <span class="c1">// Zoom in program</span>
 <span class="kd">var</span> <span class="nv">zoomScale</span><span class="p">:</span> <span class="n">CGFloat</span>
 <span class="kd">func</span> <span class="nf">setZoomScale</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="c1">// Zoom to a different scale (in middle of screen)</span>
-<span class="kd">func</span> <span class="nf">zoomToRect</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>    <span class="c1">// Zoom to a rectangle (fill screen as much as possible)</span>
+<span class="kd">func</span> <span class="nf">zoomToRect</span><span class="p">(</span><span class="n">CGRect</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span>    <span class="c1">// Zoom to a rectangle (fill screen as much as possible)</span>
 </pre></div>
 </div>
 </div>
@@ -552,7 +662,7 @@ adapt the popover <strong>Adaptation</strong></p>
 </pre></div>
 </div>
 <p><strong>Size</strong> Popover should be the needed size of the containing MVC.</p>
-<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">preferredContentSize</span><span class="p">:</span> <span class="bp">CGSize</span>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nv">preferredContentSize</span><span class="p">:</span> <span class="n">CGSize</span>
 </pre></div>
 </div>
 </div>
@@ -575,9 +685,8 @@ adapt the popover <strong>Adaptation</strong></p>
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
@@ -592,10 +701,19 @@ adapt the popover <strong>Adaptation</strong></p>
     <!-- End Google Analytics -->
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>

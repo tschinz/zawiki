@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RST and Sphinx Cheatsheet &#8212; Z-Notes</title>
     
-  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,10 +20,6 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -30,13 +27,12 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/default.js"></script>
@@ -49,84 +45,112 @@
     <link rel="prev" title="ReStructuredText" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
-<div class="container-xl">
+    <div class="container-fluid" id="banner"></div>
 
-    <a class="navbar-brand" href="../../../index.html">
     
-      <img src="../../../_static/logo.svg" class="logo" alt="logo" />
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
     
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    
 
-    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
-      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-        
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../os/index.html">OS</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../tools/index.html">Tools</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../coding/index.html">Coding</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../computerscience/index.html">Computerscience</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../hw/index.html">Hardware</a>
-        </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="../../index.html">Multimedia</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../security/index.html">Security</a>
-        </li>
-        
-        <li class="nav-item ">
-            <a class="nav-link" href="../../../about/index.html">About</a>
-        </li>
-        
-        
-      </ul>
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logo.svg" class="logo" alt="logo">
+</a>
 
 
-      <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
-</form>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../os/index.html">
+  OS
+ </a>
+</li>
 
-      <ul class="navbar-nav">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tschinz/znotes" target="_blank" rel="noopener">
-              <span><i class="fab fa-github-square"></i></span>
-            </a>
-          </li>
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/tschinz" target="_blank" rel="noopener">
-              <span><i class="fab fa-twitter-square"></i></span>
-            </a>
-          </li>
-        
-      </ul>
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../tools/index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../coding/index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
     </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
     </nav>
     
@@ -134,233 +158,399 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Writing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     ReStructuredText
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       RST and Sphinx Cheatsheet
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pygment_lexer.html">
+       Pygment Lexer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../md/index.html">
+     Markdown
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../md/md_github.html">
+       Github Markdown
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitbook/index.html">
+     GitBook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../latex/index.html">
+     LaTeX
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../latex/install.html">
+       Installation LaTeX
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../text/index.html">
+   Text
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../text/books.html">
+     Book Review
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../text/fileheaders.html">
+     File Headers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../text/fonts.html">
+     Fonts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../text/programmer_jokes.html">
+     Programmer Jokes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../text/quotes.html">
+     Inspirational Quotes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../pictures/index.html">
+   Pictures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pictures/ascii_art.html">
+     ASCII Art
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pictures/graphviz.html">
+     Graphviz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pictures/icons.html">
+     Icons
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pictures/plantuml.html">
+     PlantUml
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../pictures/wavedrom.html">
+     Wavedrom
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../pictures/emoji/index.html">
+     Emoji
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../pictures/emoji/all.html">
+       All Emoji
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../pictures/emoji/curated.html">
+       Curated Emoji
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../videos/index.html">
+   Videos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../videos/resolutions.html">
+     Resolutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../audio/index.html">
+   Audio
+  </a>
+ </li>
+</ul>
 
-    <div class="bd-toc-item active">
-    
-  
-    <ul class="nav bd-sidenav">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          
+  </div>
+</nav>
+            </div>
             
-  
-                <li class="active">
-                    <a href="../index.html">Writing</a>
-                    <ul>
-                    
-                        <li class="active">
-                            <a href="index.html">ReStructuredText</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="../md/index.html">Markdown</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="../gitbook/index.html">GitBook</a>
-                        </li>
-                    
-                        <li class="">
-                            <a href="../latex/index.html">LaTeX</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../../text/index.html">Text</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../../pictures/index.html">Pictures</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../../videos/index.html">Videos</a>
-                </li>
-            
-          
-            
-                <li class="">
-                    <a href="../../audio/index.html">Audio</a>
-                </li>
-            
-          
-        
-        
-        
-        
-        
-        
-      </ul>
-  
-  </nav>
-          </div>
           
 
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
               
+              <div class="toc-item">
+                
 <div class="tocsection onthispage pt-5 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-content">
+   Table of content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titles">
+   Titles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markup">
+   Markup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#links">
+   Links
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#external-links">
+     External Links
+    </a>
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#table-of-content" class="nav-link">Table of content</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#titles" class="nav-link">Titles</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#markup" class="nav-link">Markup</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#links" class="nav-link">Links</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#external-links" class="nav-link">External Links</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#internet" class="nav-link">Internet</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#other-repo-s" class="nav-link">Other Repo’s</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#other-sphinx-pages" class="nav-link">Other Sphinx Pages</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#internal-links" class="nav-link">Internal Links</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#link-to-titles" class="nav-link">Link to Titles</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#internal-references" class="nav-link">Internal References</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#file-links" class="nav-link">File Links</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#images" class="nav-link">Images</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#image-placement" class="nav-link">Image Placement</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#side-by-side-images" class="nav-link">Side-by-Side Images</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#inline-images" class="nav-link">Inline Images</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#predefined-images" class="nav-link">Predefined Images</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#lists" class="nav-link">Lists</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#tables" class="nav-link">Tables</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#code" class="nav-link">Code</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#infoboxes" class="nav-link">Infoboxes</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#special-formatting" class="nav-link">Special Formatting</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#math" class="nav-link">Math</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#exclude" class="nav-link">Exclude</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#todo" class="nav-link">Todo</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#graphviz" class="nav-link">GraphViz</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#wavedrom" class="nav-link">Wavedrom</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#timing-diagrams" class="nav-link">Timing Diagrams</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#register" class="nav-link">Register</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#plantuml" class="nav-link">PlantUML</a>
-        </li>
-    
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#internet">
+       Internet
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#other-repo-s">
+       Other Repo’s
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#other-sphinx-pages">
+       Other Sphinx Pages
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internal-links">
+     Internal Links
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#link-to-titles">
+       Link to Titles
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#internal-references">
+       Internal References
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#file-links">
+       File Links
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images">
+   Images
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-placement">
+     Image Placement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-by-side-images">
+     Side-by-Side Images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inline-images">
+     Inline Images
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#predefined-images">
+       Predefined Images
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code">
+   Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#infoboxes">
+   Infoboxes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-formatting">
+   Special Formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math">
+   Math
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exclude">
+   Exclude
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   Todo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphviz">
+   GraphViz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wavedrom">
+   Wavedrom
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timing-diagrams">
+     Timing Diagrams
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#register">
+     Register
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plantuml">
+   PlantUML
+  </a>
+ </li>
+</ul>
+
 </nav>
-
-
+              </div>
+              
+              <div class="toc-item">
+                
 
 <div class="tocsection editthispage">
     <a href="https://github.com/tschinz/znotes/edit/master/source/multimedia/writing/rst/cheatsheet.rst">
@@ -368,10 +558,15 @@
     </a>
 </div>
 
+              </div>
               
+            
           </div>
           
 
+          
+          
+            
           
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
@@ -576,7 +771,7 @@ see <span class="na">:ref:</span><span class="nv">`ref-point`</span>
 <span class="na">:download:</span><span class="nv">`TCL/TK Manual &lt;/coding/tcl_tk_do/docs/tcl-tk-manual.pdf&gt;`</span>
 </pre></div>
 </div>
-<p><a class="reference download internal" download="" href="../../../_downloads/6cf1e7ad5c0c0c35b8bcb84095ced694/tcl-tk-manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">../../../coding/tcl_tk_do/docs/tcl-tk-manual.pdf</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/db24d8fbda4f6f6265b59be7fdac4f52/tcl-tk-manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">../../../coding/tcl_tk_do/docs/tcl-tk-manual.pdf</span></code></a></p>
 <p><a class="reference download internal" download="" href="../../../_downloads/db24d8fbda4f6f6265b59be7fdac4f52/tcl-tk-manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TCL/TK</span> <span class="pre">Manual</span></code></a></p>
 </div>
 </div>
@@ -1055,12 +1250,12 @@ True   True   True
 </div>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">Code Blocks can have captions.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
@@ -1081,12 +1276,12 @@ True   True   True
        main()
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">antigravity</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">antigravity</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
@@ -1478,9 +1673,8 @@ usecase usecase"/>
 
       </div>
     </div>
-
     
-  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
@@ -1495,10 +1689,19 @@ usecase usecase"/>
     <!-- End Google Analytics -->
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
-    <p>
-          &copy; Copyright 2004-2020, tschinz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
-    </p>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
   </div>
 </footer>
   </body>
