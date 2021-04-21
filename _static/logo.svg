@@ -8,13 +8,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="452.62448mm"
-   height="121.60329mm"
-   viewBox="0 0 452.62448 121.60329"
+   width="98.481529mm"
+   height="26.45833mm"
+   viewBox="0 0 98.481529 26.458331"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="z-logo.svg">
+   sodipodi:docname="logo.svg">
   <defs
      id="defs2">
     <clipPath
@@ -368,9 +368,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.41094358"
-     inkscape:cx="-58.522198"
-     inkscape:cy="-289.57256"
+     inkscape:zoom="0.48249893"
+     inkscape:cx="-58.522191"
+     inkscape:cy="-289.57258"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -396,10 +396,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-47.965115,-55.412074)">
+     transform="translate(-47.965113,-55.412079)">
     <g
        id="g2488"
-       transform="matrix(0.04696486,0,0,-0.04696486,-34.819374,255.99993)">
+       transform="matrix(0.01021857,0,0,-0.01021857,29.952942,99.055796)">
       <g
          id="g2490">
         <g
@@ -575,14 +575,14 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:126.169px;line-height:125%;font-family:'Bell MT';-inkscape-font-specification:'Bell MT';letter-spacing:-2.55524px;word-spacing:0px;fill:#000000;stroke:#000000;stroke-width:7.27901px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="168.79893"
-       y="155.42671"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.4517px;line-height:125%;font-family:'Bell MT';-inkscape-font-specification:'Bell MT';letter-spacing:-0.555967px;word-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1.58376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="74.256027"
+       y="77.173164"
        id="text1280"><tspan
          sodipodi:role="line"
          id="tspan1278"
-         x="168.79893"
-         y="155.42671"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bell MT';-inkscape-font-specification:'Bell MT';fill:#000000;stroke-width:7.27901px">-Notes</tspan></text>
+         x="74.256027"
+         y="77.173164"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bell MT';-inkscape-font-specification:'Bell MT';fill:#000000;stroke-width:1.58376px">-Notes</tspan></text>
   </g>
 </svg>
