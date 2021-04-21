@@ -1,6 +1,3 @@
-.icon .logo {
-  width: 100px !important;
-}
 
 .shadow {
   /* border: 1px solid #e2e2e2; */
@@ -90,16 +87,6 @@
   margin-bottom: 10px;
 }
 
-.icon-spl::before {
-  background-image: url(../images/spl-icon.svg);
-}
-
-.icon-constellium::before {
-  background-image: url(../images/constellium-icon.svg);
-}
-
-.icon-hevslib::before {
-  background-image: url(../images/hevslib-icon.svg);
 }
 
 .search-tag,

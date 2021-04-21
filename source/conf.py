@@ -131,7 +131,7 @@ html_css_files = [
 ]
 
 # Copybutton image path
-copybutton_image_path = 'img/copybutton.svg'
+#copybutton_image_path = 'img/copybutton.svg'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
