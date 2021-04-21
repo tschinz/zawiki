@@ -22,27 +22,15 @@ Sphinx Requirements
 
         sudo apt-get install build-essential
 
-* Python 3
+* Anaconda
 
-   * `Python <https://www.python.org/downloads/>`_
    * `Anaconda <https://www.anaconda.com/distribution/>`_
 
-* Python Modules (can be installed with pipenv)
+* Install Conda environment from :download:`condaenv.yml </../condaenv.yml>`
 
   .. code-block:: bash
 
-     pip install sphinx
-     pip install sphinx-rtd-theme
-     pip install pydata-sphinx-theme
-     pip install sphinxcontrib-wavedrom
-     pip install sphinxcontrib-plantuml
-     pip install recommonmark
-     pip install sphinxemoji
-     pip install sphinx-copybutton
-     pip install nbsphinx
-     pip install jupyter_sphinx
-     pip install sphinx-autobuild
-
+     conda env create -f condaenv.yml
 
 * Latex Tools (only for latex build)
 
@@ -82,46 +70,13 @@ Without pipenv
 
 * Install requirements see: :ref:`about/getting_started:Sphinx Requirements`
 * ``cd`` to the git folder
+* activate conda environment
+
+  .. code-block:: bash
+
+     conda activate znotes-env
+
 * Generate the desired output
-
-  .. code-block:: bash
-
-     make               # list all the available output format
-     make help          # list all the available output format
-
-     make html          # for html
-     make latex         # for latex
-     make latexpdf      # for latex (will require latexpdf installed)
-
-     make clean         # cleans all generated file, TODO before commiting
-     make clean-images  # cleans all autogerated png and pdf files
-
-     make livehtml      # start a local webserver and watch files change
-     make openhtml      # open the generated index.html in browser
-
-With pipenv
------------
-
-* Install requirements :ref:`about/getting_started:Sphinx Requirements`
-* Create a virtual environment with pipenv (will use the Pipfile for installing the necessary packages)
-
-  .. code-block:: bash
-
-     pipenv install
-
-* then you can build the documentation
-
-  .. code-block:: bash
-
-     pipenv run make html
-
-* if you want run ``make`` multiple times, prepone ``pipenv run`` on each command can be annoying, you can spawn a subshell with
-
-  .. code-block:: bash
-
-     pipenv shell
-
-* and then you can use ``make`` the usual way
 
   .. code-block:: bash
 
@@ -167,10 +122,10 @@ Before performing a commit the following steps are required:
 
      make clean
 
-* Commit and push the changes :ref:`SPL Knowhow CI <about/getting_started:Continuous Integration(CI)>`
+* Commit and push the changes :ref:`SPL Knowhow CI <about/getting_started:Continuous Integration (CI)>`
 
-Continuous Integration(CI)
-==========================
+Continuous Integration (CI)
+===========================
 
-The :download:`.travis.yml </../.travis.yml>` will run on each ``master`` commit and create a ``_build/`` folder which will be pushed onto the branch gh-pages and consequently be used by github to displayed static html pages.
+The CI is done with Github Actions with the file :download:`action-sphinx.yml </../.github/workflows/action-sphinx.yml>` will run on each ``master`` commit and create a ``_build/`` folder which will be pushed onto the branch gh-pages and consequently be used by github to displayed static html pages.
 
