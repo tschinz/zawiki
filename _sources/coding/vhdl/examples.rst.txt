@@ -348,3 +348,6 @@ Generics
 | ``o_u_noise``     | ``[g_W-1:0]``  | uniform distribution output |
 +-------------------+----------------+-----------------------------+
 
+:tag:`coding`
+:tag:`vhdl`
+:tag:`examples`

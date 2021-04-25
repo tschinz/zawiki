@@ -88,3 +88,7 @@ Each topic has a reference frame. This means that each message being published o
 Documentation about frames and transformations can be found there :
 
 * `tf2 <http://wiki.ros.org/tf2>`_
+
+:tag:`coding`
+:tag:`ros`
+:tag:`tf2`

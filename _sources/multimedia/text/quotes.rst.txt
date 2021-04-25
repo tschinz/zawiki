@@ -211,8 +211,6 @@ Inspirational Quotes
 
        *Unknown*
 
-
-
-
-
-
+:tag:`multimedia`
+:tag:`text`
+:tag:`quotes`

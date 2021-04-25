@@ -16,3 +16,7 @@ Branches
    :width: 500px
 
    Git Flow
+
+:tag:`tools`
+:tag:`git`
+:tag:`gitflow`

@@ -127,3 +127,6 @@ Process manager
 
    ps -amcwwwxo "command %mem %cpu" | grep -v grep | head -13
 
+:tag:`os`
+:tag:`mac`
+:tag:`geektool`

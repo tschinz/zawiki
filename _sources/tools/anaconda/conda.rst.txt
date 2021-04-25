@@ -213,3 +213,7 @@ It is recommanded to add the kernel manually and give an explicit name. To do so
 .. code-block::
 
    python -m ipykernel install --user --name=<envname>
+
+:tag:`tools`
+:tag:`anaconda`
+:tag:`conda`

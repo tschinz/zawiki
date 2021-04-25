@@ -242,3 +242,5 @@ View is ``UITableView``.
 
 .. |image2| image:: img/uitablecell_types.png
 
+:tag:`coding`
+:tag:`swift`

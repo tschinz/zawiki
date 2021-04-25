@@ -59,3 +59,8 @@ bracketed paste mode enabled addes characters on paste
    echo 'printf "\e[?2004l"' >> ~/.bashrc
    echo 'bracketed mode fix' >> ~/.zshrc
    echo 'printf "\e[?2004l"' >> ~/.zshrc
+
+:tag:`os`
+:tag:`linux`
+:tag:`ubuntu`
+:tag:`problems`

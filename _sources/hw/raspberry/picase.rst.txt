@@ -29,3 +29,6 @@ Safe Shutdown
 .. code-block:: bash
 
    wget -O - "https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/install.sh" | sudo bash
+
+:tag:`raspberry pi`
+:tag:`picase`

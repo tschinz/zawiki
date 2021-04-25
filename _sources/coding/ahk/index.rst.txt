@@ -29,3 +29,6 @@ Links
 
 * `AHK Official Webpage <http://www.autohotkey.com/>`_
 * `AHK Tutorial <http://www.autohotkey.com/docs/Tutorial.htm>`_
+
+:tag:`coding`
+:tag:`ahk`

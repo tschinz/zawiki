@@ -9,3 +9,7 @@ Icons
 
 * `Flaticons <https://www.flaticon.com/>`_
 * `Picons <https://github.com/tschinz/pIcon>`_
+
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`icons`

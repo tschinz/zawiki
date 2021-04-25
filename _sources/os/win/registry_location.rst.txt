@@ -76,3 +76,7 @@ Taskbar Transparency
 
    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced
      :: UseOLEDTaskbarTransparency => DWORD 32bit => 1
+
+:tag:`os`
+:tag:`windows`
+:tag:`registry`

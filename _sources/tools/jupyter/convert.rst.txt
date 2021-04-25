@@ -97,3 +97,7 @@ Little Mix of everything
 
    # combine pdfs with cpdf
    cpdf Chapter1.pdf Chapter2.pdf -o Ebook.pdf
+
+:tag:`tools`
+:tag:`jupyter`
+:tag:`convert`

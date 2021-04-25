@@ -78,5 +78,6 @@ QNN MO
 
    sudo pip3 install git+https://github.com/Xilinx/QNN-MO-PYNQ.git
 
-
-
+:tag:`hardware`
+:tag:`pynq-z1`
+:tag:`overlay`

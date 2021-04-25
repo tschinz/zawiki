@@ -313,3 +313,7 @@ IP Reusability
 * Testbench and reference designs are available for use with the core. This is a "nice to have" feature that provides new users an easy way to get started with a design.
 * IP cores, example designs and test benches can be simulated in company simulators. Users should be able to run the scripts and see the basic functionality of the design.
 * Release notes detail all supported devices, FPGA device families, and versions of the EDA tools used on the design.
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`guidelines`

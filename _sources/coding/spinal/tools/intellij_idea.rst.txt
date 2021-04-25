@@ -39,3 +39,8 @@ Rebuild all sbt projects
 When external IP change or libraries change you need to force a reimport of all svbt project.
 
 ``View`` -> ``Tool Window`` -> ``sbt`` -> ``Reimport all sbt projects``.
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`tools`
+:tag:`intellij`

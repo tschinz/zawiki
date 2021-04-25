@@ -67,3 +67,7 @@ It is important to know the common used display, video and image resolutions.
 +----------+---------------+---------------------+----------------+
 | 18M      | 3:2           | 5184 × 3456         | Canon 600D     |
 +----------+---------------+---------------------+----------------+
+
+:tag:`multimedia`
+:tag:`video`
+:tag:`resolutions`

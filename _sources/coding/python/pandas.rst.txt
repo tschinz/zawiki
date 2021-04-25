@@ -280,3 +280,7 @@ Iterate over row indices
 
   for idx, row in df[:2].iterrows():
     print(idx,row)
+
+:tag:`coding`
+:tag:`python`
+:tag:`pandas`

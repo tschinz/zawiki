@@ -124,3 +124,7 @@ In case of the Reset it should be synchron to the clock even when its use asynch
    elsif rising_edge(clk) then
      q <= d;
    end if;
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`sdc`

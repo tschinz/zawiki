@@ -167,3 +167,7 @@ Workflow
 
    # Run environment for project
    pipenv run <command>
+
+:tag:`coding`
+:tag:`python`
+:tag:`pipenv`

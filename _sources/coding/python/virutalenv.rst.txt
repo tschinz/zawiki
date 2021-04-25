@@ -81,3 +81,7 @@ venv
 -----
 
 A package shipped with Python 3, which you can run using ``python3 -m venv``. It serves the same purpose as ``virtualenv``, but only has a subset of its features. ``virtualenv`` continues to be more popular than ``venv``, especially since the former supports both Python 2 and 3.
+
+:tag:`coding`
+:tag:`python`
+:tag:`virtualenvironment`

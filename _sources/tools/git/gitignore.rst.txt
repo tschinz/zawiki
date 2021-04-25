@@ -21,3 +21,7 @@ Gitignore entries
    !build/file.txt # except the given file
 
    **/Entity/*~    # some subfolder name
+
+:tag:`tools`
+:tag:`git`
+:tag:`gitignore`

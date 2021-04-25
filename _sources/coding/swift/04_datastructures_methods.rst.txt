@@ -277,3 +277,5 @@ Cast on the fly
    let button: AnyObject = UIButton.buttonWithTyoe(UIButtonType.System)
    let title = (button as UIButton).currentTitle
 
+:tag:`coding`
+:tag:`swift`

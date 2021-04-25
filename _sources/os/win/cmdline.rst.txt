@@ -187,3 +187,6 @@ General
    icacls *.* /grant:r everyone:f /t /c /q
    popd
 
+:tag:`os`
+:tag:`windows`
+:tag:`commandline`

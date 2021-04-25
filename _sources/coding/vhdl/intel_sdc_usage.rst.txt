@@ -517,3 +517,7 @@ Open Window
    # 2 cycles for signal (case shifted clock)
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -setup 2
    set_multicycle_path -from {get_pins reg1|clk} -to {get_pins reg2|d} -hold  0 # 1 clock before setup
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`sdc`

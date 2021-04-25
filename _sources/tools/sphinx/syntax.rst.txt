@@ -105,3 +105,7 @@ References
 .. code-block:: ReST
 
    :meth:`~matplotlib.backend_bases.FigureCanvasBase.mpl_connect`
+
+:tag:`tools`
+:tag:`sphinx`
+:tag:`syntax`

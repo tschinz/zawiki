@@ -61,3 +61,7 @@ Run a docker image already pulled or build can be run with:
 
    docker run -it dockerfile
    docker run -it -d -p 8080:8080 ubuntu
+
+:tag:`tools`
+:tag:`docker`
+:tag:`commandline`

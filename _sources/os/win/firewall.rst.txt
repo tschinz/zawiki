@@ -10,3 +10,7 @@ Ff FTP Port is used for SSH connections disable ``Statefulftp`` in the Windows f
 .. code-block:: bat
 
    netsh advfirewall set global statefulftp disable
+
+:tag:`os`
+:tag:`windows`
+:tag:`firewall`

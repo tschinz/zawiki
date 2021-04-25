@@ -215,3 +215,6 @@ Concatenation
    mylist = ['Swiss', 'Germany', 'France', 'Italy']
    print separator.join(mylist)
 
+:tag:`coding`
+:tag:`python`
+:tag:`methods`

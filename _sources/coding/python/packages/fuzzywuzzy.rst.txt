@@ -49,3 +49,8 @@ Process
 
    process.extractOne("cowboys", choices)
    # ("Dallas Cowboys", 90)
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`fuzzywuzzy`

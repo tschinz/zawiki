@@ -156,3 +156,8 @@ Save and close the file. Restart the web server to password protect all content 
 To confirm that your content is protected, try to access your restricted content in a web browser. You should be presented with a username and password prompt.
 
 If you enter the correct credentials, you will be allowed to access the content. If you enter the wrong credentials or hit "Cancel", you will see the "Unauthorized" error page:
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`apache`

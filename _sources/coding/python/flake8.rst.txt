@@ -41,3 +41,7 @@ see my config :config_repo:`.flake8 <blob/master/.flake8>`
        old,
        build,
        dist
+
+:tag:`coding`
+:tag:`python`
+:tag:`flake8`

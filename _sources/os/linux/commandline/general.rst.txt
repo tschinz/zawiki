@@ -16,3 +16,7 @@ SSH relia
 .. code-block:: bash
 
    ssh -p 2222 -L 5900:localhost:5900 -L 19999:localhost:19999 zas@relia.zapto.org
+
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`

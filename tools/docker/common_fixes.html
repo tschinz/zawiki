@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VirtualBox &#8212; Z-Notes</title>
+    <title>Common Fixes &#8212; Z-Notes</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -43,8 +43,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="intro.html" />
-    <link rel="prev" title="Settings" href="../sublimetext/settings.html" />
+    <link rel="next" title="docker cmd" href="docker_cmd.html" />
+    <link rel="prev" title="Basics" href="basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -183,10 +183,40 @@
    Anaconda
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../docker/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Docker
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics.html">
+     Basics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Common Fixes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docker_cmd.html">
+     <cite>
+      docker
+     </cite>
+     cmd
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dockerfile.html">
+     Dockerfile
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../jupyter/index.html">
@@ -218,22 +248,10 @@
    SublimeText
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../virtualbox/index.html">
    VirtualBox
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro.html">
-     Introduction
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../mentor/index.html">
@@ -276,45 +294,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#links">
-   Links
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-commands">
-   Useful Commands
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-uuid-of-a-virtualdisk">
-     Change UUID of a VirtualDisk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-virtualdisk">
-     Clone VirtualDisk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shrink-dynamic-image">
-     Shrink dynamic image
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resize-virtualdisk">
-     Resize VirtualDisk
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-to-shared-folder">
-   Access to shared folder
+  <a class="reference internal nav-link" href="#port-already-in-use">
+   Port already in use
   </a>
  </li>
 </ul>
@@ -326,7 +307,7 @@
                 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/znotes/edit/master/source/tools/virtualbox/index.rst">
+    <a href="https://github.com/tschinz/znotes/edit/master/source/tools/docker/common_fixes.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -345,65 +326,26 @@
               
               <div>
                 
-  <div class="section" id="virtualbox">
-<h1>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo51.svg"><img alt="../../_images/logo51.svg" src="../../_images/logo51.svg" width="150px" /></a>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-</ul>
-</div>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Oracle VM VirtualBox is an x86 virtualization software package. VirtualBox is installed on an existing host operating system as an application; this host application allows additional guest operating systems, each known as a Guest OS, to be loaded and run, each with its own virtual environment.
-Supported host operating systems include Linux, Mac OS X, Windows XP, Windows Vista, Windows 7, Solaris, and OpenSolaris; there is also a port to FreeBSD. Supported guest operating systems include versions and derivations of Windows, Linux, BSD, OS/2, Solaris and others.</p>
-</div>
-<div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.virtualbox.org/">Virtualbox Official Webpage</a></p></li>
-</ul>
-</div>
-<div class="section" id="useful-commands">
-<h2>Useful Commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="change-uuid-of-a-virtualdisk">
-<h3>Change UUID of a VirtualDisk<a class="headerlink" href="#change-uuid-of-a-virtualdisk" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VBoxManage internalcommands sethduuid copiedfile.vdi
+  <div class="section" id="common-fixes">
+<h1>Common Fixes<a class="headerlink" href="#common-fixes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="port-already-in-use">
+<h2>Port already in use<a class="headerlink" href="#port-already-in-use" title="Permalink to this headline">¶</a></h2>
+<p>If docker complains that the port can not be bound and is already in use</p>
+<p>check if the port already used</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>netstat -aon
 </pre></div>
 </div>
-</div>
-<div class="section" id="clone-virtualdisk">
-<h3>Clone VirtualDisk<a class="headerlink" href="#clone-virtualdisk" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VBoxManage clonevdi /path/to/existing.vdi new.vdi
+<p>check if the port is exluded</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>netsh int ipv4 show excludedportrange <span class="nv">protocol</span><span class="o">=</span>tcp
 </pre></div>
 </div>
-</div>
-<div class="section" id="shrink-dynamic-image">
-<h3>Shrink dynamic image<a class="headerlink" href="#shrink-dynamic-image" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VBoxManage modifyvdi vm_hd.vdi compact
-</pre></div>
-</div>
-</div>
-<div class="section" id="resize-virtualdisk">
-<h3>Resize VirtualDisk<a class="headerlink" href="#resize-virtualdisk" title="Permalink to this headline">¶</a></h3>
-<p>After resizing the harddisk file it, the partition needs to be resized to in gparted for Linux of Disk Management in Windows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
-VBoxManage modifyhd pentaho_vm.vdi --resize <span class="m">40000</span> <span class="c1"># resize to 40GB</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="access-to-shared-folder">
-<h2>Access to shared folder<a class="headerlink" href="#access-to-shared-folder" title="Permalink to this headline">¶</a></h2>
-<p>In order to access a shared folder in the guest os you need to add the user to the group <code class="docutils literal notranslate"><span class="pre">vboxsf</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo adduser <span class="nv">$USER</span> vboxsf
+<p>cleanup all network devices</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>netcfg -d
 </pre></div>
 </div>
 <p><a class="search-tag reference external" href="/search.html?q=tools&amp;check_keywords=yes&amp;area=default">tools</a>
-<a class="search-tag reference external" href="/search.html?q=virtualbox&amp;check_keywords=yes&amp;area=default">virtualbox</a></p>
+<a class="search-tag reference external" href="/search.html?q=docker&amp;check_keywords=yes&amp;area=default">docker</a>
+<a class="search-tag reference external" href="/search.html?q=fix&amp;check_keywords=yes&amp;area=default">fix</a></p>
 </div>
 </div>
 

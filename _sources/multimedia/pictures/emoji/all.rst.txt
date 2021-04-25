@@ -876,3 +876,7 @@ Symbols
    * - |:small_blue_diamond:| ``|:small_blue_diamond:|``
      - |:small_orange_diamond:| ``|:small_orange_diamond:|``
      - |:small_red_triangle:| ``|:small_red_triangle:|``
+
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`emoji`

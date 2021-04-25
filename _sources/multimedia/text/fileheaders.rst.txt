@@ -178,3 +178,6 @@ File Headers
 
    // need a coffee to fix this.
 
+:tag:`multimedia`
+:tag:`text`
+:tag:`fileheaders`

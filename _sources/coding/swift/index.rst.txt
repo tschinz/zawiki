@@ -36,3 +36,6 @@ Some Swift helppages
 * Mohammad Hossein Mojtahedi `Gitbook Cheat Sheet <https://www.gitbook.com/book/mhm5000/swift-cheat-sheet/>`_
 * Paul Hegary `Standford iTunesU Class <http://news.stanford.edu/news/2011/november/itunes-apps-class-111511.html>`_
 * Wayland Bishopo `Swift Algorithms and Data Structures <http://waynewbishop.com/swift>`_
+
+:tag:`coding`
+:tag:`swift`

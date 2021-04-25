@@ -23,3 +23,8 @@ Renew Certificates
 
    # Restart Webserver Service
    sudo service apache2 start
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`lets encrypt`

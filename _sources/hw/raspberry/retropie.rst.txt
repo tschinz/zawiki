@@ -151,3 +151,6 @@ Todo After Install
 16. Copy all Roms to location ``~/Retropie/roms/``
 
 17. Restart System
+
+:tag:`raspberry pi`
+:tag:`retropie`

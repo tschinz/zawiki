@@ -225,3 +225,7 @@ Wipe Disk
 
    # use /dev/random to write Zeros on entire disk§
    sudo dd if=/dev/urandom of=/dev/sdX bs=10M
+
+:tag:`os`
+:tag:`linux`
+:tag:`filesystem`

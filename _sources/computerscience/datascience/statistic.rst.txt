@@ -39,3 +39,6 @@ Overview
      -
    * - Analysis Problems
      - .. figure:: img/ml_fitting.*
+
+:tag:`data science`
+:tag:`statistics`

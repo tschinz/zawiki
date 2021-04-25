@@ -351,3 +351,7 @@ Internal Signals
     val register = Reg(UInt(width bits)) init(0) simPublic()
     // or
     dut.counter.simPublic()
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`syntax`

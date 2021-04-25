@@ -395,3 +395,7 @@ Class
 
        def _private_without_docstring(self):
            pass
+
+:tag:`coding`
+:tag:`python`
+:tag:`docstring`

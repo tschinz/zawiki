@@ -35,3 +35,6 @@ Settings
 My sublimetext settings can be found in the Config Repo :config_repo:`my settings backup <tree/master/config/sublimetext>`.
 
 * :doc:`SublimeText Settings Wiki </tools/sublimetext/settings>`
+
+:tag:`tools`
+:tag:`sublimetext`

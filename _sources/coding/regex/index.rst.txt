@@ -165,3 +165,6 @@ Example Patterns
    ([A-Za-Z0-9-]+)           # Letter, numbers and hyphens
    (\d{1,2}\/\d{1,2}\/\d{4}) # Date (e.g. 31/3/2006)
    ([^\s]+(?=\.(jpg|gif|png))\.\2) # jpg, gif or png image
+
+:tag:`coding`
+:tag:`regex`

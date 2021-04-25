@@ -83,4 +83,5 @@ Once a image is launched a new icon in the iconbar appears (tortoise with a V)
    :align: center
    :width: 40%
 
-
+:tag:`tools`
+:tag:`docker`

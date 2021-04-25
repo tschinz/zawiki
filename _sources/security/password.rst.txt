@@ -114,3 +114,6 @@ Links
 
 * `Wikipedia article about password <http://en.wikipedia.org/wiki/Password>`_
 * `Helpful article <http://aktuell.de.selfhtml.org/artikel/gedanken/passwort/>`_
+
+:tag:`security`
+:tag:`passwords`

@@ -82,3 +82,8 @@ Example
    #     "message": "success",
    #     "timestamp": 1583170890
    # }
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`requests`

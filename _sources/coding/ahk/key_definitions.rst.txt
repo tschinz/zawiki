@@ -36,3 +36,6 @@ Alt Key in the example
    Sleep 0
    KeyWait Alt  ; This prevents the keyboard's auto-repeat feature from interfering.
    return
+
+:tag:`coding`
+:tag:`ahk`

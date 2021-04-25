@@ -156,3 +156,6 @@ Is using ``protocols``. How Views can talking back (blind communication)
 
 The View is now hooked up to the Controller and knows nothing. It can
 remain generic and reusable
+
+:tag:`coding`
+:tag:`swift`

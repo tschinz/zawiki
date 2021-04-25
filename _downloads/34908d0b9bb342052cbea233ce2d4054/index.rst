@@ -46,3 +46,5 @@ General Todolist
 .. todo::
 
    missing links to config repo
+
+:tag:`about`

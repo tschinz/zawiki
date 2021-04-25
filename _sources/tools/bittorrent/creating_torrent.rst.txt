@@ -68,3 +68,7 @@ To find your external ip address goto: `https://www.ip-adress.com/ <https://www.
 .. figure:: img/qbittorrent_private_torrent.*
    :align: center
    :width: 70%
+
+:tag:`tools`
+:tag:`torrent`
+:tag:`bittorrent`

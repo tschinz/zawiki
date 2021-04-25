@@ -221,3 +221,6 @@ Merge
    # Merge the two branches
    git merge dev_branch_1
 
+:tag:`tools`
+:tag:`git`
+:tag:`commandline`

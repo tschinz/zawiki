@@ -45,3 +45,7 @@ Additional Informations
     * `Hitachi LiDaR ROS Driver <https://wiki.ros.org/hls_lfom_tof_driver>`_
 
   * `ROS Installation <https://wiki.ros.org/melodic/Installation/Ubuntu>`_
+
+:tag:`os`
+:tag:`linux`
+:tag:`ubuntu`

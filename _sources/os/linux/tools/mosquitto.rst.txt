@@ -129,3 +129,7 @@ Connection Return Codes
 * ``5``: Connection refused – not authorised
 * ``6``-``255``: Currently unused.
 
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`mosquitto`

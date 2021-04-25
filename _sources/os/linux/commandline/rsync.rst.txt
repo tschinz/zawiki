@@ -39,3 +39,8 @@ Synchronizing directories local and remotely
       --exclude <PATTERN> = exclude file or folder \\
       --exclude-from <file> = exclude list defined in file
       --dry-run = show what would have been done
+
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`rsync`

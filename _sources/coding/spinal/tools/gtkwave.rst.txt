@@ -17,3 +17,8 @@ Afterwards the reload command can be executed
 .. code-block:: bash
 
    gconftool-2 --type string --set /com.geda.gtkwave/0/reload 0
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`tools`
+:tag:`gtkwave`

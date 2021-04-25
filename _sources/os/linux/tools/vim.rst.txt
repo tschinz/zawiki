@@ -273,3 +273,8 @@ Execute a console command. Vim will be halted and the console from within Vim wa
    set nofoldenable
 
 Download my :config_repo:`.vimrc <blob/master/config/linux/server/.vimrc>`
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`vim`

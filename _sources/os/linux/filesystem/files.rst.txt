@@ -13,3 +13,8 @@ Important Files
    /etc/ssh/sshd.config   # SSH config file
    ~.bashrc               # bash shell init scripts
    ~.zshrc                # zsh shell init scripts
+
+:tag:`os`
+:tag:`linux`
+:tag:`filesystem`
+:tag:`files`

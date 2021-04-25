@@ -107,3 +107,6 @@ Once the correct repo is selected define if the app should be deployed now manua
 
    Heroku select deploy method
 
+:tag:`coding`
+:tag:`python`
+:tag:`plotly dash`

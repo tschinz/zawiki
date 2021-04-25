@@ -123,3 +123,7 @@ Open ``etc/fstab`` file and add a new entry . See also :ref:`config_files_fstab`
    # read / write access
    //SERVER/shares /MOUNTPOINT smbfs username=samba_user,password=samba_pass,uid=this_user,gid=this_group 0 0
 
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`samba`

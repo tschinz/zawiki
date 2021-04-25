@@ -674,3 +674,7 @@ Timing Diagram
    @10
    EN is low
    @enduml
+
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`plantuml`

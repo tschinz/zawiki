@@ -191,3 +191,7 @@ User Data
 
 Variable data
 
+:tag:`os`
+:tag:`linux`
+:tag:`filesystem`
+:tag:`folders`

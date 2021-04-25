@@ -31,3 +31,6 @@ There are many Bittorrent clients out there. The most common in my case are
 * `qBittorrent <https://www.qbittorrent.org/>`_ |linux| |mac| |win|
 
 I prefer uTorrent for downlaods only and qBittorrent for creating Bittorrent because it has an integrated Bittorrent Tracker.
+
+:tag:`tools`
+:tag:`torrent`

@@ -324,3 +324,6 @@ Range is also enumerable
 .. code:: swift
 
    for in 24...42 {}
+
+:tag:`coding`
+:tag:`swift`

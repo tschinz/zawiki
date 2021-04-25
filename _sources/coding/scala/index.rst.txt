@@ -304,3 +304,6 @@ The same is possible for functions:
 
    def doSomething[T <: Shape](shape: T): Something = { shape.getArea() }
 
+:tag:`coding`
+:tag:`scala`
+:tag:`syntax`

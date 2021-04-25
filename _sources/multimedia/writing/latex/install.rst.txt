@@ -128,3 +128,8 @@ Manual Package Windows
   .. code-block:: bash
 
      texhash
+
+:tag:`multimedia`
+:tag:`writing`
+:tag:`latex`
+:tag:`installation`

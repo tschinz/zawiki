@@ -39,3 +39,8 @@ Finding a machine on your local subnet using DHCP.
 
    # Finding ssh server in ip range 192.168.0-192.168.0.255
    sudo apr-scan --interface=eth0 --localnet | grep aa:bb:cc:dd:ee:ff
+
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`network`

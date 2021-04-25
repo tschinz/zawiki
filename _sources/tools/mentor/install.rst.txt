@@ -153,3 +153,7 @@ For the HEVS license add the following lines to ``/etc/profile``
    #
    export PATH=$PATH:/usr/opt/HDS/bin:/usr/opt/Modelsim/modeltech/bin:/usr/opt/Xilinx/ISE_DS/ISE/bin/lin64/
    export LM_LICENSE_FILE=$LM_LICENSE_FILE:27001@mentorlm.hevs.ch:2100@xilinxlm.hevs.ch:1717@dl-srv69.admin.hes-so.ch
+
+:tag:`tools`
+:tag:`mentor`
+:tag:`installation`

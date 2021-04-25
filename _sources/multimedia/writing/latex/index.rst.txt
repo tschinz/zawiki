@@ -35,3 +35,7 @@ Convert ``*.svg`` images with inkscape to ``*.pdf`` and ``*.pdf_tex``
 .. code-block:: bash
 
    inkscape -D -z --file=image.svg --export-pdf=image.pdf --export-latex
+
+:tag:`multimedia`
+:tag:`writing`
+:tag:`latex`

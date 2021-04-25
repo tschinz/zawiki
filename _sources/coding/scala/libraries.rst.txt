@@ -33,3 +33,7 @@ Libraries
 
    println(s"Start cordicPipelinedSim Simulation: ${Calendar.getInstance().getTime()}")
    println(s"End cordicPipelinedSim Simulation: ${Calendar.getInstance().getTime()}")
+
+:tag:`coding`
+:tag:`scala`
+:tag:`libraries`

@@ -18,3 +18,6 @@ Download
 Download the latest **Tor Browser Bundle** from the Tor Webpage
 
   * `Tor Bundle Download <https://www.torproject.org/download/>`_
+
+:tag:`security`
+:tag:`tor`

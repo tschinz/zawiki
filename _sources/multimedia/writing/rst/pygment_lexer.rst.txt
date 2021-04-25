@@ -424,3 +424,8 @@ List of all pygment lexer available:
    yaml+jinja, salt, sls
    yaml
    zephir
+
+:tag:`multimedia`
+:tag:`writing`
+:tag:`rst`
+:tag:`pygment`

@@ -80,3 +80,6 @@ Write the contents
 ------------------
 
 That's it, now you can add all you want in the new section ``section`` and all pages will show up in the documentation automatically.
+
+:tag:`sphinx`
+:tag:`how to`

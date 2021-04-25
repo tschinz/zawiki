@@ -98,3 +98,7 @@ State Machines
      PWRFail                -> "3v3_PWRFail" [ label = "not(1v1) or not(1v5) or not(2v5)" ];
      "3v3_PWRFail"            -> Idle [ label = "PWR_Ready" ];
    }
+
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`graphviz`

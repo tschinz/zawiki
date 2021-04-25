@@ -94,3 +94,6 @@ Philosophy
 .. _ROS Rviz: ros-rviz.md
 .. _ROS Books Summary: ros-books-summary.md
 .. _Lidar Driver: ros-lidar-driver.md
+
+:tag:`coding`
+:tag:`ros`

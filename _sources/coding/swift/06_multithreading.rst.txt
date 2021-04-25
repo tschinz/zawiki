@@ -128,3 +128,6 @@ In the above example the UI code has been dispatched back to the main
 queue. But understand that the code might run **MINUTES** after the
 request is fired off. The user might have long ago given up on whatever
 was being fetched.
+
+:tag:`coding`
+:tag:`swift`

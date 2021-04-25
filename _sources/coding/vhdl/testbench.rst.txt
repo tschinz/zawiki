@@ -234,3 +234,7 @@ Shared Variables
            wait;
        end process p2;
    end architecture non_determinist;
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`testbench`

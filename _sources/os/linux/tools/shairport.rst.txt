@@ -83,3 +83,8 @@ Just copy the script you need to the init.d directory.
 .. code-block:: bash
 
    sudo cp scripts/debian/init.d/shairport /etc/init.d/
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`shairport`

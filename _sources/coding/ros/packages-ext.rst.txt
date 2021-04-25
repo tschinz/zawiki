@@ -233,3 +233,7 @@ QR code readers
 * http://wiki.ros.org/zbar_ros
 * https://github.com/mdrwiega/qr_detector
 * http://wiki.ros.org/visp_auto_tracker
+
+:tag:`coding`
+:tag:`ros`
+:tag:`packages`

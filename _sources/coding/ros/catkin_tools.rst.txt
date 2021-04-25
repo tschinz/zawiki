@@ -192,3 +192,7 @@ disabled or removed:
 .. code-block:: bash
 
    catkin clean --orphans
+
+:tag:`coding`
+:tag:`ros`
+:tag:`catkin`

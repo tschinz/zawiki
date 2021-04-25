@@ -40,4 +40,6 @@ Netlist Terminology
 | Port   | Top-level I/O               |
 +--------+-----------------------------+
 
-
+:tag:`coding`
+:tag:`vhdl`
+:tag:`sdc`

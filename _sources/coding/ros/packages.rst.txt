@@ -383,3 +383,7 @@ Get a parameter in C++ with
   .. code-block:: cpp
 
      ros::NodeHandle("~")
+
+:tag:`coding`
+:tag:`ros`
+:tag:`packages`

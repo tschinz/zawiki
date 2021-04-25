@@ -142,3 +142,6 @@ In case of problems the log file of ``systemctl`` can be access with the followi
 .. code-block::
 
    /var/log/jupyter.log
+
+:tag:`hardware`
+:tag:`pynq-z1`

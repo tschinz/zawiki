@@ -159,3 +159,7 @@ String Format Mini Language
    #  | 0x   1E61 | 0x0001E61 | 0x1E61 |
    #  | 0x   22B8 | 0x00022B8 | 0x22B8 |
    #  | 0x   270F | 0x000270F | 0x270F |
+
+:tag:`coding`
+:tag:`python`
+:tag:`print`

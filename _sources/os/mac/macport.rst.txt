@@ -24,3 +24,7 @@ Useful Macports
 * putty
 * tightvnc
 * ...
+
+:tag:`os`
+:tag:`mac`
+:tag:`macport`

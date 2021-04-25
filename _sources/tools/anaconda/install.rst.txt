@@ -96,3 +96,7 @@ Install requirements for Kite
 
    pip install jupyter-kite
    jupyter labextension install "@kiteco/jupyterlab-kite"
+
+:tag:`tools`
+:tag:`anaconda`
+:tag:`installation`

@@ -136,3 +136,7 @@ Resampling
 .. code-block:: python
 
    weekly_summary.resample('W').mean()
+
+:tag:`coding`
+:tag:`python`
+:tag:`datetime`

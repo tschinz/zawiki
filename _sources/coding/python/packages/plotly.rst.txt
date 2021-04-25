@@ -10,3 +10,8 @@ Plotly
 
 * `Documentation Python <https://plotly.com/python/>`_
 * `Sample gallery <https://plotly.com/python/>`_
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`plotly`

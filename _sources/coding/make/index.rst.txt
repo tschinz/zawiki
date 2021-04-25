@@ -33,3 +33,5 @@ Links
   * `Gnu Make Manual <http://www.gnu.org/software/hello/manual/make/index.html>`_
   * `O'Reilly Freebook Section Makefile <http://www.oreilly.de/german/freebooks/rlinux3ger/ch133.html>`_
 
+:tag:`coding`
+:tag:`make`

@@ -117,3 +117,8 @@ Launch simulation
   .. code-block:: tcl
 
      # Launch Simulation <Y|N y|n>
+
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`simulation`

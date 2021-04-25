@@ -15,3 +15,7 @@ Fonts
 * `Fire Code <https://github.com/tonsky/FiraCode>`_
 * `Operator Mono <https://www.typography.com/blog/introducing-operator>`_
 * `Font Awesome <https://fontawesome.com/>`_
+
+:tag:`multimedia`
+:tag:`text`
+:tag:`fonts`

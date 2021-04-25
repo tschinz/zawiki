@@ -474,3 +474,6 @@ Floating Point Types
 
 TODO
 
+:tag:`coding`
+:tag:`vhdl`
+:tag:`syntax`

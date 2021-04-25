@@ -211,3 +211,6 @@ Like the Pi Zero, it also has:
 * HAT-compatible 40-pin header
 * Composite video and reset headers
 * CSI camera connector
+
+:tag:`hardware`
+:tag:`raspberry pi`

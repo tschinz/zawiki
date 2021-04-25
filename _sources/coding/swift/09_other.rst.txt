@@ -33,3 +33,5 @@ Global Functions working with ``Array``, ``Dictionary``, ``String``
    let reversed: Array = reverse(aCollection) // remembers that String in a collection
    let backwardsString = String(reverse(s))   //
 
+:tag:`coding`
+:tag:`swift`

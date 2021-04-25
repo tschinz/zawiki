@@ -106,3 +106,6 @@ Supend a script via Hotkey
 
    f1::suspend
 
+:tag:`coding`
+:tag:`ahk`
+:tag:`ticks`

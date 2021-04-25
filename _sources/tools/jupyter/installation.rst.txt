@@ -203,3 +203,6 @@ Once CA certificate is trusted on the device, all certificates signed with it wi
 
 Alternatively, you can specify paths to key and certificate in `Jupyter configuration file <http://jupyter-notebook.readthedocs.io/en/latest/public_server.html#running-a-public-notebook-server>`_.
 
+:tag:`tools`
+:tag:`jupyter`
+:tag:`installation`

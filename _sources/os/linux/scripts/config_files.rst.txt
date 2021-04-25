@@ -143,3 +143,7 @@ There’s a file called /etc/fstab in your Linux system. Learn what its contents
    # external WD Passport 1TB Harddisk on /dev/sde1
    UUID=20F605D47F5FE7AC                     /media/zas_media  ntfs    nofail,nobootwait 0       0
 
+:tag:`os`
+:tag:`linux`
+:tag:`scripts`
+:tag:`config`

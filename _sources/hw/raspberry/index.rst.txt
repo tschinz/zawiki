@@ -22,3 +22,5 @@ Additional Informations
 * `RaspberryPi Documentation <https://www.raspberrypi.org/documentation/>`_
 * `RetroPie Webpage <https://retropie.org.uk/>`_
 * `RetroPie Documentation <https://retropie.org.uk//docs>`_
+
+:tag:`raspberry pi`

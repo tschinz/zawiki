@@ -158,3 +158,7 @@ The Crontab entry will be a simple script call
 
    * * * * * /location/to/script.bash
 
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`crontab`

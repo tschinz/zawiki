@@ -53,3 +53,8 @@ On MacOs
    diskutil list                              # get disk info
    diskutil unmountDisk /dev/diskX            # unmount disk
    dd if=/location/of/image.iso of=/dev/diskX bs=1m conv=noerror,sync # copy image to usb stick
+
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`dd`
