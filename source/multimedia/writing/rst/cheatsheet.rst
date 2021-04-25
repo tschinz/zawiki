@@ -1160,7 +1160,7 @@ For each page corresponding tags should be used, see :doc:`/about/tags` for all 
    :tag:`ReST`
    :tag:`Sphinx`
 
-
-:tag:`ReST`
-:tag:`RST`
-:tag:`Sphinx`
+:tag:`multimedia`
+:tag:`writing`
+:tag:`rst`
+:tag:`sphinx`

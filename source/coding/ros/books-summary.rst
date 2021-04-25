@@ -84,3 +84,7 @@ OpenCV
 
 * `Effective_Robotics_Programming_with_ROS_3E.pdf <https://gitlab.hevs.ch/SPL/spl-docs/raw/master/source/ros/books/Effective_Robotics_Programming_with_ROS_3E.pdf>`_ page 359
 * `Mastering_ROS_for_Robotics_Programming.pdf <https://gitlab.hevs.ch/SPL/spl-docs/raw/master/source/ros/books/Mastering_ROS_for_Robotics_Programming.pdf>`_ page 250
+
+:tag:`coding`
+:tag:`ros`
+:tag:`books`

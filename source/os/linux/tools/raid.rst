@@ -96,3 +96,7 @@ Links
 * `MDADM Wikipedia article <http://en.wikipedia.org/wiki/Mdadm>`_
 * `Official mdadm webpage <http://neil.brown.name/blog/mdadm>`_
 
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`raid`

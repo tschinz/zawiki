@@ -11,3 +11,7 @@ The layout is accordingly to the Mac Retina Book Swiss keyboard.
    :width: 700px
 
    Mac keyboard swiss layout
+
+:tag:`os`
+:tag:`mac`
+:tag:`keyboard`

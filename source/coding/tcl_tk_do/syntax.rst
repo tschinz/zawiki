@@ -329,3 +329,7 @@ Read Signals
    :caption: signals.do
 
    examine /bloc/signal_name
+
+:tag:`coding`
+:tag:`tcl-tk`
+:tag:`syntax`

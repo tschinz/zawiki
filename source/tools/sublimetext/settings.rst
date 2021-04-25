@@ -204,3 +204,7 @@ Custom Plugin Run Multiple commands
 
        for command in commands:
          self.exec_command(command)
+
+:tag:`tools`
+:tag:`sublimetext`
+:tag:`settings`

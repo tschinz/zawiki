@@ -69,3 +69,8 @@ Perhaps the file ``/etc/mpd.conf`` will be overwritten on each restart. As a bad
 .. code-block:: bash
 
    chattr +i /etc/mpd.conf
+
+:tag:`os`
+:tag:`linux`
+:tag:`raspberry pi`
+:tag:`runeaudio`

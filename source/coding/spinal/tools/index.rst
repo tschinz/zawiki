@@ -71,3 +71,7 @@ Additional
 ----------
 
 * `MYSYS2 <https://www.msys2.org/>`_ for windows only
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`tools`

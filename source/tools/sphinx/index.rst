@@ -65,3 +65,6 @@ Configuration
 =============
 
 see :znotes_repo:`znotes conf.py <blob/master/source/conf.py>`
+
+:tag:`tools`
+:tag:`sphinx`

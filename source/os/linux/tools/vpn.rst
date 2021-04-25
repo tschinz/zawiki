@@ -124,3 +124,8 @@ See the print screens to how to setup the VPN incoming connection on Windows 7.
    :width: 300px
 
    Uncheck user default gateway
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`vpn`

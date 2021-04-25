@@ -96,3 +96,6 @@ Confirm that Libraries are loaded with
 .. code-block:: python
 
    globals()
+
+:tag:`tools`
+:tag:`jupyter`

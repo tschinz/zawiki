@@ -91,3 +91,7 @@ Clock generation
      clk_int <= not clk_int after clkPeriod/2;
      clk     <= transport clk_int after clkPeriod*9/10;
    end test;
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`time`

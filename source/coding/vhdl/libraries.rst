@@ -58,3 +58,7 @@ Synopsys
 * :config_repo:`blob/master/scripts/vhdl/libraries/synopsys/arithmetic.vhd`
 * :config_repo:`blob/master/scripts/vhdl/libraries/synopsys/attributes.vhd`
 * :config_repo:`blob/master/scripts/vhdl/libraries/synopsys/types.vhd`
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`libraries`

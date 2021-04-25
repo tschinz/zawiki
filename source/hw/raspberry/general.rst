@@ -19,3 +19,4 @@ Raspiconfig
 
    sudo raspi-config
 
+:tag:`raspberry pi`

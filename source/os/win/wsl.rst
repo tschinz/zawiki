@@ -56,3 +56,6 @@ Task for open specific distribution
 
    wsl --distribution Ubuntu-20.04 -cur_console:pm:/mnt
 
+:tag:`os`
+:tag:`windows`
+:tag:`wsl`

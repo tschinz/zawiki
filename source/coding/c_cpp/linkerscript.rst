@@ -97,3 +97,7 @@ Compilation & Linking & Objcopy
 
    objcopy -O srec exe.out exe.srec
    pause
+
+:tag:`coding`
+:tag:`linkerscript`
+:tag:`c++`

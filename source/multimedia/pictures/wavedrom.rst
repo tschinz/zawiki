@@ -376,3 +376,7 @@ Registers
     ],
     config: {hspace:750, bits:32, lanes:4, compact: true}
    }
+
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`wavedrom`

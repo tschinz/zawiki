@@ -27,3 +27,6 @@ Anaconda is a complete python package with comes with many features:
 
 * `Anaconda Download <https://www.continuum.io/downloads>`_
 * `Conda Docs <http://conda.pydata.org/>`_
+
+:tag:`tools`
+:tag:`anaconda`

@@ -29,3 +29,6 @@ Links
 
 * `Wikibook Tcl Programming <http://en.wikibooks.org/wiki/Programming:Tcl>`_ |en|
 * `Tcl Developper eXchange - Documentation <http://www.tcl.tk/doc/>`_ |en|
+
+:tag:`coding`
+:tag:`tcl-tk`

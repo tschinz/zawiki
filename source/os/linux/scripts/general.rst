@@ -391,3 +391,7 @@ Samples
 .. code-block:: bash
 
    DIR="$( cd "$( dirname "$0" )" && pwd )" # get dir of executed file
+
+:tag:`os`
+:tag:`linux`
+:tag:`scripts`

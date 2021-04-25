@@ -16,3 +16,8 @@ Dash empowers teams to build data science and ML apps that put the power of Pyth
 
 
 See also :doc:`../plotly_dash`
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`plotly dash`

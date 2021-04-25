@@ -263,3 +263,7 @@ Resize Signed
    signal sv_2 : signed(4 downto 0);
    ...
    sv_1 <= conv_signed(sv_2,sv_1'length);
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`conversion`

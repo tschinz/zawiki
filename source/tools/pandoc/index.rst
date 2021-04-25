@@ -73,3 +73,7 @@ Linux
 .. code-block:: bash
 
   --template=<template>.latex
+
+:tag:`tools`
+:tag:`pandoc`
+:tag:`commandline`

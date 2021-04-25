@@ -103,3 +103,6 @@ Samba, a file sharing service, is running on the board. This allows you to acces
    \\192.168.2.99\xilinx
    # or
    \\pynq.local\xilinx
+
+:tag:`hardware`
+:tag:`pynq-z1`

@@ -151,3 +151,7 @@ The code below writes is used to writing a file. It writes binary values from 00
    end behaviour;
 
 :config_repo:`write_file.vhd <blob/master/scripts/vhdl/file_io/write_file.vhd>`
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`file`

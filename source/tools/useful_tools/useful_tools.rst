@@ -61,3 +61,5 @@ Programming
   * Intellij IDEA :doc:`Wiki </coding/spinal/tools/intellij_idea>` |linux| |mac| |win|
   * Intellij PyCharm |linux| |mac| |win|
   * SpinalHDL :doc:`Wiki </coding/spinal/index>` |linux| |mac| |win|
+
+:tag:`tools`

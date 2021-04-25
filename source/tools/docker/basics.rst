@@ -42,3 +42,6 @@ Port Forwarding
 ===============
 
 By default, a container is not accessible by other containers, nor from the outside world. However, you can tell Docker to expose a container port to a port of the host machine (either the 127.0.0.1 interface or an external one).
+
+:tag:`tools`
+:tag:`docker`

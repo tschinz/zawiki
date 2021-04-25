@@ -14,3 +14,6 @@ Emoji
 
    *
 
+:tag:`multimedia`
+:tag:`pictures`
+:tag:`emoji`

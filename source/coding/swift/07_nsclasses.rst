@@ -34,3 +34,6 @@ Used to save/restore/transmit raw data.
 
 NSUserDefaults
 ==============
+
+:tag:`coding`
+:tag:`swift`

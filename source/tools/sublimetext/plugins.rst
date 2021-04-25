@@ -58,3 +58,7 @@ Alignment
    }
 
 ``Ctrl + Alt + a``
+
+:tag:`tools`
+:tag:`sublimetext`
+:tag:`plugins`

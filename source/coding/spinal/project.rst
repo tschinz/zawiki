@@ -122,3 +122,7 @@ Need to be in the ``ext/`` folder
 .. code-block:: bash
 
    git submodule add -b <branch> <url> ext
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`project`

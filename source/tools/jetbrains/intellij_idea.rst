@@ -11,3 +11,6 @@ Intellij IDEA
 
 `Intellij IDEA <https://www.jetbrains.com/idea/>`_ is a general IDE can be used for any language, but mainly used for Java. See also :doc:`/coding/spinal/tools/intellij_idea` for Spinal specific use case
 
+:tag:`tools`
+:tag:`intellij`
+:tag:`idea`

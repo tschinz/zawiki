@@ -46,3 +46,6 @@ Community
 * `Gitter Channel <https://gitter.im/SpinalHDL/SpinalHDL>`_
 * `Issues <https://github.com/SpinalHDL/SpinalHDL/issues>`_
 * `Email <spinalhdl@gmail.com>`_
+
+:tag:`coding`
+:tag:`spinalhdl`

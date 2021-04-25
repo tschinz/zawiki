@@ -155,3 +155,7 @@ But this should not be applied in all cases. For example: in a Fifo, it doesn't 
    class Fifo[T <: Data](dataType: T, depth: Int) extends Component {
 
    }
+
+:tag:`coding`
+:tag:`scala`
+:tag:`conventions`

@@ -164,3 +164,7 @@ Messages
 .. figure:: img/ros-messages-1.*
    :align: center
    :alt: ROS Message Example
+
+:tag:`coding`
+:tag:`ros`
+:tag:`basics`

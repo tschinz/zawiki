@@ -24,3 +24,5 @@ Mentor Graphics is a company by Siemens and creator of two VHDL Design Tools:
 
 More information about the software can be found on the `SupportNet <https://support.sw.siemens.com>`_
 
+:tag:`tools`
+:tag:`mentor`

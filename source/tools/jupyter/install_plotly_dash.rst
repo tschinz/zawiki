@@ -62,3 +62,7 @@ Install Dash DAQ
 .. code-block:: bash
 
    pip install dash_daq
+
+:tag:`tools`
+:tag:`jupyter`
+:tag:`plotly dash`

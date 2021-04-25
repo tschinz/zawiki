@@ -214,3 +214,8 @@ or here the more complex project file
 
    clean:
        rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
+
+:tag:`coding`
+:tag:`make`
+:tag:`makefile`
+:tag:`examples`

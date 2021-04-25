@@ -61,3 +61,10 @@ Start Service on boot
 .. code-block:: bash
 
    systemctl enable jupyterlab
+
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`systemd`
+:tag:`systemctl`

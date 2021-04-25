@@ -129,3 +129,5 @@ Continuous Integration (CI)
 
 The CI is done with Github Actions with the file :download:`action-sphinx.yml </../.github/workflows/action-sphinx.yml>` will run on each ``master`` commit and create a ``_build/`` folder which will be pushed onto the branch gh-pages and consequently be used by github to displayed static html pages.
 
+:tag:`sphinx`
+:tag:`getting started`

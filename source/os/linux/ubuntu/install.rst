@@ -247,3 +247,8 @@ Lightweight Image Viewer
    sudo add-apt-repository ppa:jurplel/qview
    sudo apt update
    sudo apt install qview
+
+:tag:`os`
+:tag:`linux`
+:tag:`ubuntu`
+:tag:`installation`

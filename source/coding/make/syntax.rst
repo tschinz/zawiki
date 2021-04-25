@@ -165,3 +165,8 @@ Specialsigns
    first part of command \   # Command split
    second part of command \  # into multiple
    third part of command     # lines
+
+:tag:`coding`
+:tag:`make`
+:tag:`makefile`
+:tag:`syntax`

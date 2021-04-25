@@ -34,3 +34,8 @@ Open Image
   im.show()
   print(im.format, im.size, im.mode)
   # JPEG (1920, 1357) RGB
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`pillow`

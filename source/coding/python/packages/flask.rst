@@ -36,3 +36,8 @@ Minimal Example
    @app.route('/')
    def hello_world():
        return 'Hello, World!'
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`flask`

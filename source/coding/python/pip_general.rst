@@ -91,3 +91,7 @@ Install ``requirements.txt``
 .. code-block:: bash
 
    pip install -r requirements.txt
+
+:tag:`coding`
+:tag:`python`
+:tag:`pip`

@@ -53,3 +53,8 @@ There are also gui available for all desktop environments.
 
 * Gnome: ``sudo apt-get install sensors-applet``
 * KDE: Build in Widget
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`hwsensors`

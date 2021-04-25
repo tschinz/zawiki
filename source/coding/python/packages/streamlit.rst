@@ -52,3 +52,8 @@ In order to cache parts of the website, functions which are not needed to be ree
    @st.cache(persist=True)
    def someTimeconsumingFunction():
      sleep(100)
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`streamlit`

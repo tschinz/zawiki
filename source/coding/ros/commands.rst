@@ -249,3 +249,7 @@ Update services with RQT
 #.  Choose the service that you want to update
 #.  Fill the *expression* field with an expected parameter of this service
 #.  Call the service and the response is displayed
+
+:tag:`coding`
+:tag:`ros`
+:tag:`commands`

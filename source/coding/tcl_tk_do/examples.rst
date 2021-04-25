@@ -54,3 +54,7 @@ Calculate Simulation time
 :config_repo:`run_sim.do <blob/master/scripts/tcl_do/calc_simtime.do>`
 
 This scripts allows to measure the simulation time
+
+:tag:`coding`
+:tag:`tcl-tk`
+:tag:`examples`

@@ -544,3 +544,7 @@ Once the attribute has been declared and given a name, it can be referenced as n
    attribute enum_encoding of statevalue: type is "000 001 011 010 110";
 
 Custom attributes are a convenient "back door" feature of VHDL, and design tool vendors have created many such attributes to give you more control over the synthesis and simulation process. For detailed information about custom attributes, refer to your design tool documentation.
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`attributes`

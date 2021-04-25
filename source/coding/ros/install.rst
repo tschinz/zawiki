@@ -207,3 +207,6 @@ ROS Test
 
    roscore
 
+:tag:`coding`
+:tag:`ros`
+:tag:`installation`

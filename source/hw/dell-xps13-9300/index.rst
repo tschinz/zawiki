@@ -45,3 +45,6 @@ Additional Informations
 .. figure:: img/dell-xps-13-9300-2.*
    :align: center
    :width: 80%
+
+:tag:`hardware`
+:tag:`dell xps`

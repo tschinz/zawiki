@@ -143,3 +143,7 @@ Hardware Debug Tools Windows
 ----------------------------
 
 * Install `OpenOCD <http://www.freddiechopin.info/en/download/category/4-openocd>`_ for JTAG debugging.
+
+:tag:`coding`
+:tag:`spinalhdl`
+:tag:`installation`

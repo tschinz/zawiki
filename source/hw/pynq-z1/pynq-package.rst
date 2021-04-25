@@ -34,3 +34,5 @@ Sub-packages:
   * ``pynq.lib`` - Contains sub-packages with drivers for for PMOD, Arduino and Logictools PYNQ Libraries, and drivers for various communication controllers (GPIO, DMA, Video, Audio, etc.)
   * ``pynq.pl_server`` - Contains sub-packages for PL server to work across multiple devices. It also includes the overlay metadata parsers (e.g., tcl, hwh)
 
+:tag:`hardware`
+:tag:`pynq-z1`

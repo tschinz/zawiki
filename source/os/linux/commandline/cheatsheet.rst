@@ -470,3 +470,8 @@ For these command you have to use either the PW or already bash started
    scp user@host:/directory/sourceFile targetFile
    scp -R user@host:/directory/sourceFolder targetFolder
    scp -P port user@host:/directory/sourceFolder targetFolder
+
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`cheatsheet`

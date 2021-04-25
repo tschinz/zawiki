@@ -183,3 +183,8 @@ Putty
           :width: 200px
 
           Putty Tunnel config
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`vnc`

@@ -78,3 +78,8 @@ Example
 .. figure:: img/colorama_demo.*
    :align: center
    :width: 60%
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`colorama`

@@ -94,3 +94,6 @@ Biography
 - `Leonardo Da Vinci - Walter Isaacson <https://books.google.ch/books?id=OBGEDgAAQBAJ>`_ |uk| |star4|
 - `Elon Musk - Alex Whitestone <https://books.google.ch/books?id=E_XlAQAACAAJ>`_ |uk| |star2|
 
+:tag:`multimedia`
+:tag:`text`
+:tag:`books`

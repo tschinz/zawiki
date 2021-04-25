@@ -73,3 +73,9 @@ in jupyter
 .. figure:: img/tqdm-jupyter-2.*
    :align: center
    :width: 70%
+
+:tag:`coding`
+:tag:`python`
+:tag:`packages`
+:tag:`tqdm`
+

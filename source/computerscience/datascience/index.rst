@@ -54,3 +54,6 @@ Data Sources
      -  .. figure:: img/kaggle.*
            :width: 100px
      - World
+
+:tag:`datascience`
+:tag:`data`

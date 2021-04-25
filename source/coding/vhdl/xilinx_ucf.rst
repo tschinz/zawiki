@@ -251,3 +251,7 @@ To specify the ``FROM:TO`` (multi-cycle) constraint for this method, define:
    :width: 600px
 
    Multi-Cycle Path
+
+:tag:`coding`
+:tag:`vhdl`
+:tag:`ucf`

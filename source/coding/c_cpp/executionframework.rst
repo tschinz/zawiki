@@ -87,3 +87,6 @@ Informs the observer that something of interest happened to its Subject (called 
 
    virtual void update ( Subject * pSubject = 0 ) = 0 ;
 
+:tag:`coding`
+:tag:`c++`
+:tag:`execution framework`

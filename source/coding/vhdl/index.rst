@@ -49,3 +49,6 @@ Links
 * `Open cores - Free VHDL/Verilog IP's <http://opencores.org>`_
 * `VHDL Guru Blog <http://vhdlguru.blogspot.com>`_
 * `Synth Works <http://synthworks.com/>`_
+
+:tag:`coding`
+:tag:`vhdl`

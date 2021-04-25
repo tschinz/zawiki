@@ -797,3 +797,7 @@ Is called if the ``len()`` function is used
 .. code-block:: python
 
    __len__(self)
+
+:tag:`coding`
+:tag:`python`
+:tag:`syntax`

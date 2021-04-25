@@ -45,3 +45,6 @@ Links
 * `Wikibooks C Programmierung <http://de.wikibooks.org/wiki/C-Programmierung>`_ |de|
 * `Wikibooks C++ Programmierung <http://de.wikibooks.org/wiki/C%2B%2B-Programmierung>`_ |de|
 * `C++ Reference/Guide/Tutorial <http://www.cplusplus.com>`_ |en|
+
+:tag:`coding`
+:tag:`c++`

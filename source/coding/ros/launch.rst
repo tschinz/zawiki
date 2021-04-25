@@ -262,3 +262,7 @@ Then you can call it directly in the launch file by adding :
        args="-d <PATH_TO_FILE>/<CONFIG_NAME>.rviz"/>
 
 This will open Rviz with the saved configuration when the *launch* file is launched.
+
+:tag:`coding`
+:tag:`ros`
+:tag:`launch`

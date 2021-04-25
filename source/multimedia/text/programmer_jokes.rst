@@ -166,3 +166,7 @@ To be or not to be
 .. figure:: img/2b_or_not_2b.*
    :align: center
    :width: 500px
+
+:tag:`multimedia`
+:tag:`text`
+:tag:`jokes`

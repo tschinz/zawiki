@@ -44,3 +44,5 @@ After resizing the harddisk file it, the partition needs to be resized to in gpa
    VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
    VBoxManage modifyhd pentaho_vm.vdi --resize 40000 # resize to 40GB
 
+:tag:`tools`
+:tag:`virtualbox`

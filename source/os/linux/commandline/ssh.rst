@@ -101,3 +101,7 @@ How to setup ssh with rsa keys
    # Append key to file authorized_keys
    cat ~/.ssh/*.pub | ssh admin@server.machine.com -p <portnumber> 'umask 077; cat >>.ssh/authorized_keys'
 
+:tag:`os`
+:tag:`linux`
+:tag:`commandline`
+:tag:`ssh`

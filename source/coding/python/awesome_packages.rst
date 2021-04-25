@@ -26,3 +26,6 @@ Awesome Packages
 * :doc:`packages/plotly` - Open source graphic library
 * :doc:`packages/streamlit` - Data science web framework
 
+:tag:`coding`
+:tag:`python`
+:tag:`packages`

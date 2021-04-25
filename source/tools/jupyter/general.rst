@@ -80,3 +80,7 @@ Troubleshoot
 .. code-block:: bash
 
    jupyter troubleshoot
+
+:tag:`tools`
+:tag:`jupyter`
+:tag:`commandline`

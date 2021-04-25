@@ -66,3 +66,6 @@ In order to access a shared folder in the guest os you need to add the user to t
 .. code-block:: bash
 
    sudo adduser $USER vboxsf
+
+:tag:`tools`
+:tag:`virtualbox`

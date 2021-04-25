@@ -315,3 +315,7 @@ Center window
        size =  self.geometry()
        self.move((screen.width()-size.width())/2, (screen.height()-size.height())/2)
    # END win_center
+
+:tag:`coding`
+:tag:`python`
+:tag:`pyqt4`

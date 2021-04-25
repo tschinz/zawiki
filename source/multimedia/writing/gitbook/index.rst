@@ -69,3 +69,6 @@ Links
 * `GitBook Documentation <https://docs.gitbook.com/>`_
 * `Tschinz Gitbook Swift Cheatsheet <https://github.com/tschinz/swift_cheat_sheet>`_
 
+:tag:`multimedia`
+:tag:`writing`
+:tag:`gitbook`

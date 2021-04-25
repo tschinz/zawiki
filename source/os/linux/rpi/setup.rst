@@ -196,3 +196,8 @@ I2C
    sudo apt-get install python-smbus # SMBus support
    sudo apt-get install i2c-tools    # I2C support
    sudo i2cdetect -y 0               # Detect I2C on RPi v2
+
+:tag:`os`
+:tag:`linux`
+:tag:`raspberry pi`
+:tag:`setup`

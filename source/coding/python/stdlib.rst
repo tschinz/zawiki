@@ -215,3 +215,7 @@ random
 
    range(0, 21, 2)             # e.g. [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
    random.randrange(0, 21, 2)  # e.g. 10
+
+:tag:`coding`
+:tag:`python`
+:tag:`stdlib`

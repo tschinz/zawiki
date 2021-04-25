@@ -64,3 +64,7 @@ Notice the minimum sleep state is S1 by default. Type the following command and 
     Max video timeout....: -1
     Min spindown timeout.: 0
     Max spindown timeout.: -1
+
+:tag:`os`
+:tag:`windows`
+:tag:`power`

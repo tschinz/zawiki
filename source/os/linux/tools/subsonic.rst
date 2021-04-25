@@ -158,3 +158,8 @@ Restart the subsonic service
      sudo service madsonic restart
 
 Once Music is played in jukebox mode the audio is not available anymore to other programs. To cut this restart sub/madsonic as above shown.
+
+:tag:`os`
+:tag:`linux`
+:tag:`tools`
+:tag:`subsonic`

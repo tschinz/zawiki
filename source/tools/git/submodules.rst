@@ -41,3 +41,7 @@ Move Submodule
 .. code-block:: bash
 
    git mv a b
+
+:tag:`tools`
+:tag:`git`
+:tag:`submodules`

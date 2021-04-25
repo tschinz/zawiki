@@ -14,3 +14,6 @@ Audio
       :caption: Content
 
 .. comment      *
+
+:tag:`multimedia`
+:tag:`audio`

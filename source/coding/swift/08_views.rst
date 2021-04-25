@@ -567,3 +567,5 @@ View Controller
 
 .. |Size Classes| image:: img/size_classes.svg
 
+:tag:`coding`
+:tag:`swift`
