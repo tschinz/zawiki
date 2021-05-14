@@ -334,145 +334,145 @@
 <h3>Bool<a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h3>
 <p>Spinal Bool as <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Bool</span>
-<span class="k">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Bool</span>
+<span class="kd">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Bool</span><span class="p">(</span><span class="nc">True</span><span class="p">)</span>
 
 <span class="c1">// Assignments</span>
 <span class="n">x</span> <span class="o">:=</span> <span class="nc">False</span>
 
 <span class="c1">// Operators</span>
 <span class="o">!</span><span class="n">x</span>             <span class="c1">// not</span>
-<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>          <span class="c1">// and</span>
+<span class="n">x</span> <span class="n">&amp;</span> <span class="n">y</span>          <span class="c1">// and</span>
 <span class="n">x</span> <span class="o">|</span> <span class="n">y</span>          <span class="c1">// or</span>
-<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>          <span class="c1">// xor</span>
+<span class="n">x</span> <span class="n">^</span> <span class="n">y</span>          <span class="c1">// xor</span>
 <span class="n">x</span> <span class="o">##</span> <span class="n">y</span>         <span class="c1">// concatenate x is high xy is low</span>
-<span class="n">x</span><span class="o">.</span><span class="n">set</span>
-<span class="n">x</span><span class="o">.</span><span class="n">clear</span>
-<span class="n">x</span><span class="o">.</span><span class="n">setWhen</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">clearWhen</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">set</span>
+<span class="n">x</span><span class="p">.</span><span class="n">clear</span>
+<span class="n">x</span><span class="p">.</span><span class="n">setWhen</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">clearWhen</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
 
 <span class="c1">// Edge detection</span>
-<span class="n">x</span><span class="o">.</span><span class="n">edge</span>          <span class="c1">// True if state change</span>
-<span class="n">x</span><span class="o">.</span><span class="n">rise</span>          <span class="c1">// True if rising edge</span>
-<span class="n">x</span><span class="o">.</span><span class="n">fall</span>          <span class="c1">// True if falling edge</span>
-<span class="n">x</span><span class="o">.</span><span class="n">edges</span>         <span class="c1">// returns a bundle (rise, fall, toggle)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">edge</span>          <span class="c1">// True if state change</span>
+<span class="n">x</span><span class="p">.</span><span class="n">rise</span>          <span class="c1">// True if rising edge</span>
+<span class="n">x</span><span class="p">.</span><span class="n">fall</span>          <span class="c1">// True if falling edge</span>
+<span class="n">x</span><span class="p">.</span><span class="n">edges</span>         <span class="c1">// returns a bundle (rise, fall, toggle)</span>
 
 <span class="n">x</span> <span class="o">===</span> <span class="n">y</span>         <span class="c1">// comparison True equality</span>
 <span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>         <span class="c1">// comparison True Inequality</span>
 
 <span class="c1">// Typecast</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Bits(w(x) bits)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// UInt(w(x) bits)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span><span class="o">(</span><span class="n">bitCount</span><span class="o">)</span> <span class="c1">// SInt(w(x) bits)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// UInt(bitCount bits)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span><span class="o">(</span><span class="n">bitCount</span><span class="o">)</span> <span class="c1">// Bits(bitCount bits)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBits</span>           <span class="c1">// Bits(w(x) bits)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asUInt</span>           <span class="c1">// UInt(w(x) bits)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asUInt</span><span class="p">(</span><span class="n">bitCount</span><span class="p">)</span> <span class="c1">// SInt(w(x) bits)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asSInt</span>           <span class="c1">// UInt(bitCount bits)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asSInt</span><span class="p">(</span><span class="n">bitCount</span><span class="p">)</span> <span class="c1">// Bits(bitCount bits)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="bits">
 <h3>Bits<a class="headerlink" href="#bits" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Bits</span><span class="o">()</span>
-<span class="k">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="n">B</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">,</span> <span class="o">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">5</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">B</span><span class="s">&quot;101&quot;</span><span class="o">,</span> <span class="mi">4</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Bits</span><span class="p">()</span>
+<span class="kd">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Bits</span><span class="p">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">B</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">B</span><span class="p">(</span><span class="mi">8</span> <span class="n">bits</span><span class="p">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">B</span><span class="p">(</span><span class="mi">8</span> <span class="n">bits</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">B</span><span class="s">&quot;101&quot;</span><span class="p">,</span> <span class="mi">4</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="p">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="p">)</span>
 
 <span class="c1">// Assignments</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0xFF&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;dhFF&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0d255&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0o377&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0b11111111&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">B</span><span class="s">&quot;8&#39;0b1111_1111&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;dhFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;0o377&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;0b11111111&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">B</span><span class="s">&quot;8&#39;0b1111_1111&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="p">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="p">)</span>
 
 <span class="c1">// Operators</span>
 <span class="o">~</span><span class="n">x</span>                 <span class="c1">// bitwise not</span>
-<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
+<span class="n">x</span> <span class="n">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
 <span class="n">x</span> <span class="o">|</span> <span class="n">y</span>              <span class="c1">// bitwise or</span>
-<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
-<span class="n">x</span><span class="o">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
-<span class="n">x</span><span class="o">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
-<span class="n">x</span><span class="o">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
+<span class="n">x</span> <span class="n">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
+<span class="n">x</span><span class="p">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
+<span class="n">x</span><span class="p">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
+<span class="n">x</span><span class="p">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
 <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span>             <span class="c1">// Logical shift right</span>
 <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">y</span>             <span class="c1">// Logical shift left</span>
-<span class="n">x</span><span class="o">.</span><span class="n">rotateLeft</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>    <span class="c1">// Logical left rotation</span>
-<span class="n">x</span><span class="o">.</span><span class="n">rotateRight</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>   <span class="c1">// Logical right rotation</span>
-<span class="n">x</span><span class="o">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">rotateLeft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>    <span class="c1">// Logical left rotation</span>
+<span class="n">x</span><span class="p">.</span><span class="n">rotateRight</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>   <span class="c1">// Logical right rotation</span>
+<span class="n">x</span><span class="p">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
 <span class="n">x</span> <span class="o">##</span> <span class="n">y</span>             <span class="c1">// concatenate x high y low</span>
 
 <span class="n">x</span> <span class="o">===</span> <span class="n">y</span>            <span class="c1">// comparison True equality</span>
 <span class="n">x</span> <span class="o">=/=</span> <span class="n">y</span>            <span class="c1">// comparison True Inequality</span>
 
 <span class="c1">// Typecast</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
-<span class="n">B</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to Bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
+<span class="nc">B</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>               <span class="c1">// Cast Data to Bits</span>
 
 <span class="c1">// Bit Access</span>
-<span class="n">x</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>               <span class="c1">// R/W one bit</span>
-<span class="n">x</span><span class="o">(</span><span class="n">hi</span><span class="o">,</span><span class="n">lo</span><span class="o">)</span>           <span class="c1">// R/W range</span>
-<span class="n">x</span><span class="o">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span>      <span class="c1">// R/W range</span>
+<span class="n">x</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>               <span class="c1">// R/W one bit</span>
+<span class="n">x</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span><span class="n">lo</span><span class="p">)</span>           <span class="c1">// R/W range</span>
+<span class="n">x</span><span class="p">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="p">)</span>      <span class="c1">// R/W range</span>
 
 <span class="c1">// Misc</span>
-<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
-<span class="n">x</span><span class="o">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
-<span class="n">x</span><span class="o">.</span><span class="n">low</span>              <span class="c1">// return lower bound</span>
-<span class="n">x</span><span class="o">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resize</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resizeLeft</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
+<span class="n">x</span><span class="p">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
+<span class="n">x</span><span class="p">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
+<span class="n">x</span><span class="p">.</span><span class="n">low</span>              <span class="c1">// return lower bound</span>
+<span class="n">x</span><span class="p">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resizeLeft</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="uint-sint">
 <h3>UInt &amp; SInt<a class="headerlink" href="#uint-sint" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">SInt</span><span class="o">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="n">U</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">y</span> <span class="o">=</span> <span class="n">S</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">UInt</span><span class="p">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">SInt</span><span class="p">(</span><span class="mi">32</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">U</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">S</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="p">)</span>
 
 <span class="c1">// Assignments</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="o">)</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0xFF&quot;</span>
-<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0xFF&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0d255&quot;</span>
-<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0d255&quot;</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="n">U</span><span class="s">&quot;8&#39;0o377&quot;</span>
-<span class="n">y</span> <span class="o">:=</span> <span class="n">S</span><span class="s">&quot;8&#39;0o0000_0001&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">U</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="nc">S</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span> <span class="nc">Bits</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">U</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="nc">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">U</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="nc">S</span><span class="s">&quot;8&#39;0xFF&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">U</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="nc">S</span><span class="s">&quot;8&#39;0d255&quot;</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="nc">U</span><span class="s">&quot;8&#39;0o377&quot;</span>
+<span class="n">y</span> <span class="o">:=</span> <span class="nc">S</span><span class="s">&quot;8&#39;0o0000_0001&quot;</span>
 <span class="n">x</span> <span class="o">:=</span> <span class="mi">2</span>   <span class="c1">// scala types can be used</span>
 <span class="n">y</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">2</span>  <span class="c1">// scala types can be used</span>
 
-<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">)</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="n">range</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">)</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="o">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
-<span class="n">x</span> <span class="o">:=</span> <span class="o">((</span><span class="mi">4</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="o">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="p">(</span><span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">range</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="p">(</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">:=</span> <span class="p">((</span><span class="mi">4</span> <span class="n">downto</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="n">default</span> <span class="o">-&gt;</span> <span class="kc">false</span><span class="p">)</span>
 
 <span class="c1">// Operators</span>
 <span class="o">~</span><span class="n">x</span>                 <span class="c1">// bitwise not</span>
-<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
+<span class="n">x</span> <span class="n">&amp;</span> <span class="n">y</span>              <span class="c1">// bitwise and</span>
 <span class="n">x</span> <span class="o">|</span> <span class="n">y</span>              <span class="c1">// bitwise or</span>
-<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
-<span class="n">x</span><span class="o">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
-<span class="n">x</span><span class="o">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
-<span class="n">x</span><span class="o">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
+<span class="n">x</span> <span class="n">^</span> <span class="n">y</span>              <span class="c1">// bitwise xor</span>
+<span class="n">x</span><span class="p">.</span><span class="n">xorR</span>             <span class="c1">// xor of all bits of x</span>
+<span class="n">x</span><span class="p">.</span><span class="n">orR</span>              <span class="c1">// or of all bits of x</span>
+<span class="n">x</span><span class="p">.</span><span class="n">andR</span>             <span class="c1">// and of all bits of x</span>
 <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span>             <span class="c1">// Logical shift right</span>
 <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">y</span>             <span class="c1">// Logical shift left</span>
-<span class="n">x</span><span class="o">.</span><span class="n">rotateLeft</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>    <span class="c1">// Logical left rotation</span>
-<span class="n">x</span><span class="o">.</span><span class="n">rotateRight</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>   <span class="c1">// Logical right rotation</span>
-<span class="n">x</span><span class="o">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">rotateLeft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>    <span class="c1">// Logical left rotation</span>
+<span class="n">x</span><span class="p">.</span><span class="n">rotateRight</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>   <span class="c1">// Logical right rotation</span>
+<span class="n">x</span><span class="p">.</span><span class="n">clearAll</span>         <span class="c1">// clear all bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">setAll</span>           <span class="c1">// set all bits</span>
 <span class="n">x</span> <span class="o">##</span> <span class="n">y</span>             <span class="c1">// concatenate x high and low y</span>
 
 <span class="c1">// Arithmetic</span>
@@ -495,36 +495,36 @@
 <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>             <span class="c1">// True by less than or equal</span>
 
 <span class="c1">// Typecast</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
-<span class="n">S</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to SInt</span>
-<span class="n">U</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>               <span class="c1">// Cast Data to UInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBits</span>           <span class="c1">// Binary cast to Bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asUInt</span>           <span class="c1">// Binary cast to UInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asSInt</span>           <span class="c1">// Binary cast to SInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBools</span>          <span class="c1">// Cast to an array of Bools</span>
+<span class="nc">S</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>               <span class="c1">// Cast Data to SInt</span>
+<span class="nc">U</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>               <span class="c1">// Cast Data to UInt</span>
 
 <span class="c1">// Bit Access</span>
-<span class="n">x</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>               <span class="c1">// R/W one bit</span>
-<span class="n">x</span><span class="o">(</span><span class="n">offset</span><span class="o">,</span> <span class="n">width</span><span class="o">)</span>   <span class="c1">// R/W bitfield</span>
-<span class="n">x</span><span class="o">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="o">)</span>      <span class="c1">// R/W range</span>
+<span class="n">x</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>               <span class="c1">// R/W one bit</span>
+<span class="n">x</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>   <span class="c1">// R/W bitfield</span>
+<span class="n">x</span><span class="p">(</span><span class="mi">2</span> <span class="n">downto</span> <span class="mi">1</span><span class="p">)</span>      <span class="c1">// R/W range</span>
 
 <span class="c1">// Misc</span>
-<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
-<span class="n">x</span><span class="o">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
-<span class="n">x</span><span class="o">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
-<span class="n">x</span><span class="o">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resize</span><span class="o">(</span><span class="n">y</span><span class="o">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
-<span class="n">x</span><span class="o">.</span><span class="n">resizeLeft</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
-<span class="n">x</span><span class="o">.</span><span class="n">expand</span>           <span class="c1">// return x with 1 bit expanded</span>
+<span class="n">x</span><span class="p">.</span><span class="n">getWidth</span>         <span class="c1">// return bitsize if bus</span>
+<span class="n">x</span><span class="p">.</span><span class="n">range</span>            <span class="c1">// return (x.high downto 0)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">high</span>             <span class="c1">// return upper bound</span>
+<span class="n">x</span><span class="p">.</span><span class="n">msb</span>              <span class="c1">// return msb bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">lsb</span>              <span class="c1">// return lsb bits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">getWidth</span>         <span class="c1">// return number of bites</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>        <span class="c1">// return a resized copy (filled with Zero if needed)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resized</span>          <span class="c1">// return a version of x which can be resized as needed</span>
+<span class="n">x</span><span class="p">.</span><span class="n">resizeLeft</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    <span class="c1">// resize keeping MSB as MSB</span>
+<span class="n">x</span><span class="p">.</span><span class="n">expand</span>           <span class="c1">// return x with 1 bit expanded</span>
 
 <span class="c1">// UInt Special</span>
-<span class="n">x</span><span class="o">.</span><span class="n">twoComplement</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span> <span class="c1">//enable, disable 2-complement</span>
+<span class="n">x</span><span class="p">.</span><span class="n">twoComplement</span><span class="p">(</span><span class="nc">True</span><span class="p">)</span> <span class="c1">//enable, disable 2-complement</span>
 
 <span class="c1">// SInt Special</span>
-<span class="n">y</span><span class="o">.</span><span class="n">abs</span>               <span class="c1">// return UInt is SInt</span>
-<span class="n">y</span><span class="o">.</span><span class="n">sign</span>              <span class="c1">// return most significant bit</span>
+<span class="n">y</span><span class="p">.</span><span class="n">abs</span>               <span class="c1">// return UInt is SInt</span>
+<span class="n">y</span><span class="p">.</span><span class="n">sign</span>              <span class="c1">// return most significant bit</span>
 </pre></div>
 </div>
 </div>
@@ -532,17 +532,17 @@
 <h3>Vec<a class="headerlink" href="#vec" title="Permalink to this headline">¶</a></h3>
 <p>Vector are scala array like</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Instances</span>
-<span class="k">val</span> <span class="n">w</span> <span class="o">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">),</span><span class="mi">2</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Bool</span><span class="o">,</span><span class="mi">2</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Reg</span><span class="o">(</span><span class="nc">Bool</span><span class="o">)</span> <span class="n">init</span><span class="o">(</span><span class="nc">False</span><span class="o">),</span> <span class="mi">2</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">z</span> <span class="o">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">Reg</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">))</span> <span class="n">init</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="mi">10</span><span class="o">)</span>
+<span class="kd">val</span> <span class="n">w</span> <span class="o">=</span> <span class="nc">Vec</span><span class="p">(</span><span class="nc">SInt</span><span class="p">(</span><span class="mi">8</span> <span class="n">bits</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Vec</span><span class="p">(</span><span class="nc">Bool</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">y</span> <span class="o">=</span> <span class="nc">Vec</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bool</span><span class="p">)</span> <span class="n">init</span><span class="p">(</span><span class="nc">False</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="kd">val</span> <span class="n">z</span> <span class="o">=</span> <span class="nc">Vec</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">SInt</span><span class="p">(</span><span class="mi">8</span> <span class="n">bits</span><span class="p">))</span> <span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="c1">// Assignments</span>
-<span class="n">x</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">2</span>
-<span class="n">x</span><span class="o">.</span><span class="n">head</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(0)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">last</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(size-1)</span>
+<span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">:=</span> <span class="mi">2</span>
+<span class="n">x</span><span class="p">.</span><span class="n">head</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(0)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">last</span> <span class="o">:=</span> <span class="mi">2</span>       <span class="c1">// x(size-1)</span>
 
-<span class="n">x</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span> <span class="o">:=</span> <span class="mi">0</span><span class="o">)</span> <span class="c1">// map on a vector (assign all elements with value 0)</span>
+<span class="n">x</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">_</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// map on a vector (assign all elements with value 0)</span>
 
 <span class="c1">// Comparison</span>
 <span class="n">x</span> <span class="o">===</span> <span class="n">y</span>             <span class="c1">// True by equality</span>
@@ -551,13 +551,13 @@
 <span class="n">boolvar</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">===</span> <span class="n">y</span>  <span class="c1">// Compare all elements</span>
 
 <span class="c1">// Typecast</span>
-<span class="n">x</span><span class="o">.</span><span class="n">asBits</span>            <span class="c1">// Combines all elements to a big bits</span>
-<span class="k">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="nc">SInt</span><span class="o">(</span><span class="mi">8</span><span class="n">bits</span><span class="o">,</span><span class="mi">2</span><span class="o">)</span>
-<span class="n">myBits_16bits</span> <span class="o">:=</span> <span class="n">vec</span><span class="o">.</span><span class="n">asBits</span>
+<span class="n">x</span><span class="p">.</span><span class="n">asBits</span>            <span class="c1">// Combines all elements to a big bits</span>
+<span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Vec</span><span class="p">(</span><span class="nc">SInt</span><span class="p">(</span><span class="mi">8</span><span class="n">bits</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">myBits_16bits</span> <span class="o">:=</span> <span class="n">vec</span><span class="p">.</span><span class="n">asBits</span>
 
 <span class="c1">// Misc</span>
-<span class="n">x</span><span class="o">.</span><span class="n">getBitsWidth</span>      <span class="c1">// Get width of all elements combined</span>
-<span class="n">println</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="n">getBitsWidth</span><span class="o">)</span> <span class="c1">// 16</span>
+<span class="n">x</span><span class="p">.</span><span class="n">getBitsWidth</span>      <span class="c1">// Get width of all elements combined</span>
+<span class="n">println</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">getBitsWidth</span><span class="p">)</span> <span class="c1">// 16</span>
 </pre></div>
 </div>
 </div>
@@ -566,37 +566,37 @@
 <h2>Conversions<a class="headerlink" href="#conversions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="spinal-spinal">
 <h3>Spinal &lt;-&gt; Spinal<a class="headerlink" href="#spinal-spinal" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Long</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">val</span> <span class="n">intVar</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">.</span><span class="n">toInt</span>
-<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Floa</span> <span class="kt">tscala</span> <span class="kt">types</span><span class="o">=</span> <span class="mf">1.0</span>
-<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0e6</span>
-<span class="k">val</span> <span class="n">doubleVar</span> <span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">100</span><span class="n">e6</span>
-<span class="k">val</span> <span class="nc">BigDecimal</span> <span class="k">:</span> <span class="kt">BigDecimal</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mf">1.0e6</span><span class="o">)</span>
-<span class="k">val</span> <span class="nc">BigDecimal</span> <span class="k">:</span> <span class="kt">BigInt</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mf">1.0e6</span><span class="o">).</span><span class="n">toBigInt</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span> <span class="n">intVar</span> <span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">val</span> <span class="n">intVar</span> <span class="p">:</span> <span class="nc">Long</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">val</span> <span class="n">intVar</span> <span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">.</span><span class="n">toInt</span>
+<span class="kd">val</span> <span class="n">doubleVar</span> <span class="p">:</span> <span class="nc">Floa</span> <span class="n">tscala</span> <span class="n">types</span><span class="o">=</span> <span class="mf">1.0</span>
+<span class="kd">val</span> <span class="n">doubleVar</span> <span class="p">:</span> <span class="nc">Double</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="kd">val</span> <span class="n">doubleVar</span> <span class="p">:</span> <span class="nc">Double</span> <span class="o">=</span> <span class="mf">1.0e6</span>
+<span class="kd">val</span> <span class="n">doubleVar</span> <span class="p">:</span> <span class="nc">Double</span> <span class="o">=</span> <span class="mf">100e6</span>
+<span class="kd">val</span> <span class="nc">BigDecimal</span> <span class="p">:</span> <span class="nc">BigDecimal</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="p">(</span><span class="mf">1.0e6</span><span class="p">)</span>
+<span class="kd">val</span> <span class="nc">BigDecimal</span> <span class="p">:</span> <span class="nc">BigInt</span> <span class="o">=</span> <span class="nc">BigDecimal</span><span class="p">(</span><span class="mf">1.0e6</span><span class="p">).</span><span class="n">toBigInt</span>
 
-<span class="nc">BigDecimal</span><span class="o">().</span><span class="n">toBigInt</span>
-<span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">10</span><span class="n">e6</span><span class="o">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="p">().</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="p">(</span><span class="mf">10e6</span><span class="p">).</span><span class="n">toBigInt</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="scala-scala">
 <h3>Scala &lt;-&gt; Scala<a class="headerlink" href="#scala-scala" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Can be done with any type</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toByte</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toShort</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toInt</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toLong</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toFloat</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toDouble</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toChar</span>
-<span class="n">x</span><span class="o">.</span><span class="n">toString</span><span class="o">()</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toByte</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toShort</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toInt</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toLong</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toFloat</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toDouble</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toChar</span>
+<span class="n">x</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
 
 <span class="c1">// Spinal uses BigInt many times</span>
-<span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">2</span><span class="n">e42</span><span class="o">).</span><span class="n">toBigInt</span>
-<span class="nc">BigDecimal</span><span class="o">(</span><span class="n">x_Int</span><span class="o">).</span><span class="n">toBigInt</span>
-<span class="nc">BigDecimal</span><span class="o">(</span><span class="n">x_Double</span><span class="o">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="p">(</span><span class="mf">2e42</span><span class="p">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="p">(</span><span class="n">x_Int</span><span class="p">).</span><span class="n">toBigInt</span>
+<span class="nc">BigDecimal</span><span class="p">(</span><span class="n">x_Double</span><span class="p">).</span><span class="n">toBigInt</span>
 </pre></div>
 </div>
 </div>
@@ -608,37 +608,37 @@
 </div>
 <div class="section" id="spinal-scala">
 <h3>Spinal &lt;- Scala<a class="headerlink" href="#spinal-scala" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">x_UInt</span> <span class="o">:=</span> <span class="n">U</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">2</span> <span class="n">bits</span><span class="o">)</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">U</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span> <span class="n">bits</span><span class="p">)</span>
 <span class="n">x_UInt</span> <span class="o">:=</span> <span class="mi">2</span>
-<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigInt</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigDecimal</span><span class="o">(</span><span class="mi">10</span><span class="n">e42</span><span class="o">).</span><span class="n">toBigInt</span>
+<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigInt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x_UInt</span> <span class="o">:=</span> <span class="nc">BigDecimal</span><span class="p">(</span><span class="mf">10e42</span><span class="p">).</span><span class="n">toBigInt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="input-outputs">
 <h2>Input &amp; Outputs<a class="headerlink" href="#input-outputs" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">io</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-   <span class="k">val</span> <span class="n">testMode</span>      <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">inValue</span>       <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">4</span> <span class="n">bits</span><span class="o">)</span> <span class="n">default</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">loadValue</span>     <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">en</span>            <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">step</span>          <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bits</span><span class="o">)</span> <span class="n">default</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">reset</span>         <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">False</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">up_nDown</span>      <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="o">()</span> <span class="n">default</span><span class="o">(</span><span class="nc">True</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">overflowValue</span> <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="n">bits</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">count</span>         <span class="o">=</span> <span class="n">out</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="n">bits</span><span class="o">)</span>
-   <span class="k">val</span> <span class="n">trigger</span>       <span class="o">=</span> <span class="n">out</span> <span class="nc">Bool</span>
- <span class="o">}</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span> <span class="n">io</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Bundle</span> <span class="p">{</span>
+   <span class="kd">val</span> <span class="n">testMode</span>      <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="p">()</span> <span class="n">default</span><span class="p">(</span><span class="nc">False</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">inValue</span>       <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span> <span class="n">bits</span><span class="p">)</span> <span class="n">default</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">loadValue</span>     <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="p">()</span> <span class="n">default</span><span class="p">(</span><span class="nc">False</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">en</span>            <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="p">()</span> <span class="n">default</span><span class="p">(</span><span class="nc">False</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">step</span>          <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span> <span class="n">bits</span><span class="p">)</span> <span class="n">default</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">reset</span>         <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="p">()</span> <span class="n">default</span><span class="p">(</span><span class="nc">False</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">up_nDown</span>      <span class="o">=</span> <span class="n">in</span> <span class="nc">Bool</span><span class="p">()</span> <span class="n">default</span><span class="p">(</span><span class="nc">True</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">overflowValue</span> <span class="o">=</span> <span class="n">in</span> <span class="nc">UInt</span><span class="p">(</span><span class="n">width</span> <span class="n">bits</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">count</span>         <span class="o">=</span> <span class="n">out</span> <span class="nc">UInt</span><span class="p">(</span><span class="n">width</span> <span class="n">bits</span><span class="p">)</span>
+   <span class="kd">val</span> <span class="n">trigger</span>       <span class="o">=</span> <span class="n">out</span> <span class="nc">Bool</span>
+ <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="internal-signals">
 <h2>Internal Signals<a class="headerlink" href="#internal-signals" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-Scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Access internal signals in simulation</span>
-<span class="k">val</span> <span class="n">register</span> <span class="o">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="n">bits</span><span class="o">))</span> <span class="n">init</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="n">simPublic</span><span class="o">()</span>
+<span class="kd">val</span> <span class="n">register</span> <span class="o">=</span> <span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="n">width</span> <span class="n">bits</span><span class="p">))</span> <span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="n">simPublic</span><span class="p">()</span>
 <span class="c1">// or</span>
-<span class="n">dut</span><span class="o">.</span><span class="n">counter</span><span class="o">.</span><span class="n">simPublic</span><span class="o">()</span>
+<span class="n">dut</span><span class="p">.</span><span class="n">counter</span><span class="p">.</span><span class="n">simPublic</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><a class="search-tag reference external" href="/search.html?q=coding&amp;check_keywords=yes&amp;area=default">coding</a>
@@ -662,21 +662,20 @@
 
       </div>
     </div>
-    
+  
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-
-    
-    <!-- Google Analytics -->
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-20699788-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
-    <footer class="footer mt-5 mt-md-0">
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-20699788-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

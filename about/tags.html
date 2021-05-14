@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-Notes Tags &#8212; Z-Notes</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/default.js"></script>
+    <script src="../_static/wavedrom.min.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="License" href="license.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../os/index.html">
+  OS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../tools/index.html">
+  Tools
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding/index.html">
+  Coding
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../computerscience/index.html">
+  Computerscience
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../hw/index.html">
+  Hardware
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multimedia/index.html">
+  Multimedia
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../security/index.html">
+  Security
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  About
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/tschinz/znotes" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/tschinz" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="credits.html">
+   Credits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   How to use Sphinx Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="howtodocument.html">
+   HACK this documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="license.html">
+   License
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Z-Notes Tags
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/tschinz/znotes/edit/master/source/about/tags.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="z-notes-tags">
+<h1>Z-Notes Tags<a class="headerlink" href="#z-notes-tags" title="Permalink to this headline">¶</a></h1>
+<p>Tags used for Z-Notes</p>
+<p><a class="search-tag reference external" href="/search.html?q=about&amp;check_keywords=yes&amp;area=default">about</a>
+<a class="search-tag reference external" href="/search.html?q=ahk&amp;check_keywords=yes&amp;area=default">ahk</a>
+<a class="search-tag reference external" href="/search.html?q=anaconda&amp;check_keywords=yes&amp;area=default">anaconda</a>
+<a class="search-tag reference external" href="/search.html?q=apache&amp;check_keywords=yes&amp;area=default">apache</a>
+<a class="search-tag reference external" href="/search.html?q=asciiart&amp;check_keywords=yes&amp;area=default">asciiart</a>
+<a class="search-tag reference external" href="/search.html?q=attributes&amp;check_keywords=yes&amp;area=default">attributes</a>
+<a class="search-tag reference external" href="/search.html?q=audio&amp;check_keywords=yes&amp;area=default">audio</a>
+<a class="search-tag reference external" href="/search.html?q=basics&amp;check_keywords=yes&amp;area=default">basics</a>
+<a class="search-tag reference external" href="/search.html?q=bittorrent&amp;check_keywords=yes&amp;area=default">bittorrent</a>
+<a class="search-tag reference external" href="/search.html?q=books&amp;check_keywords=yes&amp;area=default">books</a>
+<a class="search-tag reference external" href="/search.html?q=c++&amp;check_keywords=yes&amp;area=default">c++</a>
+<a class="search-tag reference external" href="/search.html?q=catkin&amp;check_keywords=yes&amp;area=default">catkin</a>
+<a class="search-tag reference external" href="/search.html?q=cheatsheet&amp;check_keywords=yes&amp;area=default">cheatsheet</a>
+<a class="search-tag reference external" href="/search.html?q=coding&amp;check_keywords=yes&amp;area=default">coding</a>
+<a class="search-tag reference external" href="/search.html?q=colorama&amp;check_keywords=yes&amp;area=default">colorama</a>
+<a class="search-tag reference external" href="/search.html?q=commandline&amp;check_keywords=yes&amp;area=default">commandline</a>
+<a class="search-tag reference external" href="/search.html?q=commands&amp;check_keywords=yes&amp;area=default">commands</a>
+<a class="search-tag reference external" href="/search.html?q=conda&amp;check_keywords=yes&amp;area=default">conda</a>
+<a class="search-tag reference external" href="/search.html?q=config&amp;check_keywords=yes&amp;area=default">config</a>
+<a class="search-tag reference external" href="/search.html?q=conventions&amp;check_keywords=yes&amp;area=default">conventions</a>
+<a class="search-tag reference external" href="/search.html?q=conversion&amp;check_keywords=yes&amp;area=default">conversion</a>
+<a class="search-tag reference external" href="/search.html?q=convert&amp;check_keywords=yes&amp;area=default">convert</a>
+<a class="search-tag reference external" href="/search.html?q=credits&amp;check_keywords=yes&amp;area=default">credits</a>
+<a class="search-tag reference external" href="/search.html?q=crontab&amp;check_keywords=yes&amp;area=default">crontab</a>
+<a class="search-tag reference external" href="/search.html?q=data science&amp;check_keywords=yes&amp;area=default">data science</a>
+<a class="search-tag reference external" href="/search.html?q=data&amp;check_keywords=yes&amp;area=default">data</a>
+<a class="search-tag reference external" href="/search.html?q=datascience&amp;check_keywords=yes&amp;area=default">datascience</a>
+<a class="search-tag reference external" href="/search.html?q=datetime&amp;check_keywords=yes&amp;area=default">datetime</a>
+<a class="search-tag reference external" href="/search.html?q=dd&amp;check_keywords=yes&amp;area=default">dd</a>
+<a class="search-tag reference external" href="/search.html?q=dell xps&amp;check_keywords=yes&amp;area=default">dell xps</a>
+<a class="search-tag reference external" href="/search.html?q=docker&amp;check_keywords=yes&amp;area=default">docker</a>
+<a class="search-tag reference external" href="/search.html?q=dockerfile&amp;check_keywords=yes&amp;area=default">dockerfile</a>
+<a class="search-tag reference external" href="/search.html?q=docstring&amp;check_keywords=yes&amp;area=default">docstring</a>
+<a class="search-tag reference external" href="/search.html?q=emoji&amp;check_keywords=yes&amp;area=default">emoji</a>
+<a class="search-tag reference external" href="/search.html?q=examples&amp;check_keywords=yes&amp;area=default">examples</a>
+<a class="search-tag reference external" href="/search.html?q=execution framework&amp;check_keywords=yes&amp;area=default">execution framework</a>
+<a class="search-tag reference external" href="/search.html?q=file&amp;check_keywords=yes&amp;area=default">file</a>
+<a class="search-tag reference external" href="/search.html?q=fileheaders&amp;check_keywords=yes&amp;area=default">fileheaders</a>
+<a class="search-tag reference external" href="/search.html?q=files&amp;check_keywords=yes&amp;area=default">files</a>
+<a class="search-tag reference external" href="/search.html?q=filesystem&amp;check_keywords=yes&amp;area=default">filesystem</a>
+<a class="search-tag reference external" href="/search.html?q=firewall&amp;check_keywords=yes&amp;area=default">firewall</a>
+<a class="search-tag reference external" href="/search.html?q=fix&amp;check_keywords=yes&amp;area=default">fix</a>
+<a class="search-tag reference external" href="/search.html?q=flake8&amp;check_keywords=yes&amp;area=default">flake8</a>
+<a class="search-tag reference external" href="/search.html?q=flask&amp;check_keywords=yes&amp;area=default">flask</a>
+<a class="search-tag reference external" href="/search.html?q=folders&amp;check_keywords=yes&amp;area=default">folders</a>
+<a class="search-tag reference external" href="/search.html?q=fonts&amp;check_keywords=yes&amp;area=default">fonts</a>
+<a class="search-tag reference external" href="/search.html?q=fpga&amp;check_keywords=yes&amp;area=default">fpga</a>
+<a class="search-tag reference external" href="/search.html?q=fuzzywuzzy&amp;check_keywords=yes&amp;area=default">fuzzywuzzy</a>
+<a class="search-tag reference external" href="/search.html?q=geektool&amp;check_keywords=yes&amp;area=default">geektool</a>
+<a class="search-tag reference external" href="/search.html?q=getting started&amp;check_keywords=yes&amp;area=default">getting started</a>
+<a class="search-tag reference external" href="/search.html?q=git&amp;check_keywords=yes&amp;area=default">git</a>
+<a class="search-tag reference external" href="/search.html?q=gitbook&amp;check_keywords=yes&amp;area=default">gitbook</a>
+<a class="search-tag reference external" href="/search.html?q=gitflow&amp;check_keywords=yes&amp;area=default">gitflow</a>
+<a class="search-tag reference external" href="/search.html?q=github&amp;check_keywords=yes&amp;area=default">github</a>
+<a class="search-tag reference external" href="/search.html?q=gitignore&amp;check_keywords=yes&amp;area=default">gitignore</a>
+<a class="search-tag reference external" href="/search.html?q=gnupg&amp;check_keywords=yes&amp;area=default">gnupg</a>
+<a class="search-tag reference external" href="/search.html?q=graphviz&amp;check_keywords=yes&amp;area=default">graphviz</a>
+<a class="search-tag reference external" href="/search.html?q=group policies&amp;check_keywords=yes&amp;area=default">group policies</a>
+<a class="search-tag reference external" href="/search.html?q=gtkwave&amp;check_keywords=yes&amp;area=default">gtkwave</a>
+<a class="search-tag reference external" href="/search.html?q=guidelines&amp;check_keywords=yes&amp;area=default">guidelines</a>
+<a class="search-tag reference external" href="/search.html?q=hardware&amp;check_keywords=yes&amp;area=default">hardware</a>
+<a class="search-tag reference external" href="/search.html?q=heroku&amp;check_keywords=yes&amp;area=default">heroku</a>
+<a class="search-tag reference external" href="/search.html?q=how to&amp;check_keywords=yes&amp;area=default">how to</a>
+<a class="search-tag reference external" href="/search.html?q=hwsensors&amp;check_keywords=yes&amp;area=default">hwsensors</a>
+<a class="search-tag reference external" href="/search.html?q=icons&amp;check_keywords=yes&amp;area=default">icons</a>
+<a class="search-tag reference external" href="/search.html?q=idea&amp;check_keywords=yes&amp;area=default">idea</a>
+<a class="search-tag reference external" href="/search.html?q=installation&amp;check_keywords=yes&amp;area=default">installation</a>
+<a class="search-tag reference external" href="/search.html?q=intellij&amp;check_keywords=yes&amp;area=default">intellij</a>
+<a class="search-tag reference external" href="/search.html?q=jokes&amp;check_keywords=yes&amp;area=default">jokes</a>
+<a class="search-tag reference external" href="/search.html?q=jupyter&amp;check_keywords=yes&amp;area=default">jupyter</a>
+<a class="search-tag reference external" href="/search.html?q=keyboard&amp;check_keywords=yes&amp;area=default">keyboard</a>
+<a class="search-tag reference external" href="/search.html?q=latex&amp;check_keywords=yes&amp;area=default">latex</a>
+<a class="search-tag reference external" href="/search.html?q=launch&amp;check_keywords=yes&amp;area=default">launch</a>
+<a class="search-tag reference external" href="/search.html?q=lets encrypt&amp;check_keywords=yes&amp;area=default">lets encrypt</a>
+<a class="search-tag reference external" href="/search.html?q=libraries&amp;check_keywords=yes&amp;area=default">libraries</a>
+<a class="search-tag reference external" href="/search.html?q=license&amp;check_keywords=yes&amp;area=default">license</a>
+<a class="search-tag reference external" href="/search.html?q=lidar&amp;check_keywords=yes&amp;area=default">lidar</a>
+<a class="search-tag reference external" href="/search.html?q=linkerscript&amp;check_keywords=yes&amp;area=default">linkerscript</a>
+<a class="search-tag reference external" href="/search.html?q=linux&amp;check_keywords=yes&amp;area=default">linux</a>
+<a class="search-tag reference external" href="/search.html?q=mac&amp;check_keywords=yes&amp;area=default">mac</a>
+<a class="search-tag reference external" href="/search.html?q=macport&amp;check_keywords=yes&amp;area=default">macport</a>
+<a class="search-tag reference external" href="/search.html?q=make&amp;check_keywords=yes&amp;area=default">make</a>
+<a class="search-tag reference external" href="/search.html?q=makefile&amp;check_keywords=yes&amp;area=default">makefile</a>
+<a class="search-tag reference external" href="/search.html?q=markdown&amp;check_keywords=yes&amp;area=default">markdown</a>
+<a class="search-tag reference external" href="/search.html?q=mentor&amp;check_keywords=yes&amp;area=default">mentor</a>
+<a class="search-tag reference external" href="/search.html?q=methods&amp;check_keywords=yes&amp;area=default">methods</a>
+<a class="search-tag reference external" href="/search.html?q=mosquitto&amp;check_keywords=yes&amp;area=default">mosquitto</a>
+<a class="search-tag reference external" href="/search.html?q=multimedia&amp;check_keywords=yes&amp;area=default">multimedia</a>
+<a class="search-tag reference external" href="/search.html?q=mvc&amp;check_keywords=yes&amp;area=default">mvc</a>
+<a class="search-tag reference external" href="/search.html?q=network&amp;check_keywords=yes&amp;area=default">network</a>
+<a class="search-tag reference external" href="/search.html?q=nmap&amp;check_keywords=yes&amp;area=default">nmap</a>
+<a class="search-tag reference external" href="/search.html?q=os&amp;check_keywords=yes&amp;area=default">os</a>
+<a class="search-tag reference external" href="/search.html?q=osvvm&amp;check_keywords=yes&amp;area=default">osvvm</a>
+<a class="search-tag reference external" href="/search.html?q=overlay&amp;check_keywords=yes&amp;area=default">overlay</a>
+<a class="search-tag reference external" href="/search.html?q=packages&amp;check_keywords=yes&amp;area=default">packages</a>
+<a class="search-tag reference external" href="/search.html?q=pandas&amp;check_keywords=yes&amp;area=default">pandas</a>
+<a class="search-tag reference external" href="/search.html?q=pandoc&amp;check_keywords=yes&amp;area=default">pandoc</a>
+<a class="search-tag reference external" href="/search.html?q=passwords&amp;check_keywords=yes&amp;area=default">passwords</a>
+<a class="search-tag reference external" href="/search.html?q=picase&amp;check_keywords=yes&amp;area=default">picase</a>
+<a class="search-tag reference external" href="/search.html?q=pictures&amp;check_keywords=yes&amp;area=default">pictures</a>
+<a class="search-tag reference external" href="/search.html?q=pillow&amp;check_keywords=yes&amp;area=default">pillow</a>
+<a class="search-tag reference external" href="/search.html?q=pip&amp;check_keywords=yes&amp;area=default">pip</a>
+<a class="search-tag reference external" href="/search.html?q=pipenv&amp;check_keywords=yes&amp;area=default">pipenv</a>
+<a class="search-tag reference external" href="/search.html?q=plantuml&amp;check_keywords=yes&amp;area=default">plantuml</a>
+<a class="search-tag reference external" href="/search.html?q=plotly dash&amp;check_keywords=yes&amp;area=default">plotly dash</a>
+<a class="search-tag reference external" href="/search.html?q=plotly&amp;check_keywords=yes&amp;area=default">plotly</a>
+<a class="search-tag reference external" href="/search.html?q=plugins&amp;check_keywords=yes&amp;area=default">plugins</a>
+<a class="search-tag reference external" href="/search.html?q=power&amp;check_keywords=yes&amp;area=default">power</a>
+<a class="search-tag reference external" href="/search.html?q=print&amp;check_keywords=yes&amp;area=default">print</a>
+<a class="search-tag reference external" href="/search.html?q=problems&amp;check_keywords=yes&amp;area=default">problems</a>
+<a class="search-tag reference external" href="/search.html?q=project&amp;check_keywords=yes&amp;area=default">project</a>
+<a class="search-tag reference external" href="/search.html?q=pycharm&amp;check_keywords=yes&amp;area=default">pycharm</a>
+<a class="search-tag reference external" href="/search.html?q=pygment&amp;check_keywords=yes&amp;area=default">pygment</a>
+<a class="search-tag reference external" href="/search.html?q=pynq-z1&amp;check_keywords=yes&amp;area=default">pynq-z1</a>
+<a class="search-tag reference external" href="/search.html?q=pyqt4&amp;check_keywords=yes&amp;area=default">pyqt4</a>
+<a class="search-tag reference external" href="/search.html?q=python&amp;check_keywords=yes&amp;area=default">python</a>
+<a class="search-tag reference external" href="/search.html?q=quotes&amp;check_keywords=yes&amp;area=default">quotes</a>
+<a class="search-tag reference external" href="/search.html?q=raid&amp;check_keywords=yes&amp;area=default">raid</a>
+<a class="search-tag reference external" href="/search.html?q=raspberry pi&amp;check_keywords=yes&amp;area=default">raspberry pi</a>
+<a class="search-tag reference external" href="/search.html?q=regex&amp;check_keywords=yes&amp;area=default">regex</a>
+<a class="search-tag reference external" href="/search.html?q=registry&amp;check_keywords=yes&amp;area=default">registry</a>
+<a class="search-tag reference external" href="/search.html?q=requests&amp;check_keywords=yes&amp;area=default">requests</a>
+<a class="search-tag reference external" href="/search.html?q=resolutions&amp;check_keywords=yes&amp;area=default">resolutions</a>
+<a class="search-tag reference external" href="/search.html?q=ReST&amp;check_keywords=yes&amp;area=default">ReST</a>
+<a class="search-tag reference external" href="/search.html?q=retropie&amp;check_keywords=yes&amp;area=default">retropie</a>
+<a class="search-tag reference external" href="/search.html?q=ros&amp;check_keywords=yes&amp;area=default">ros</a>
+<a class="search-tag reference external" href="/search.html?q=RST&amp;check_keywords=yes&amp;area=default">RST</a>
+<a class="search-tag reference external" href="/search.html?q=rst&amp;check_keywords=yes&amp;area=default">rst</a>
+<a class="search-tag reference external" href="/search.html?q=rsync&amp;check_keywords=yes&amp;area=default">rsync</a>
+<a class="search-tag reference external" href="/search.html?q=runeaudio&amp;check_keywords=yes&amp;area=default">runeaudio</a>
+<a class="search-tag reference external" href="/search.html?q=rviz&amp;check_keywords=yes&amp;area=default">rviz</a>
+<a class="search-tag reference external" href="/search.html?q=samba&amp;check_keywords=yes&amp;area=default">samba</a>
+<a class="search-tag reference external" href="/search.html?q=scala&amp;check_keywords=yes&amp;area=default">scala</a>
+<a class="search-tag reference external" href="/search.html?q=scripts&amp;check_keywords=yes&amp;area=default">scripts</a>
+<a class="search-tag reference external" href="/search.html?q=sdc&amp;check_keywords=yes&amp;area=default">sdc</a>
+<a class="search-tag reference external" href="/search.html?q=security&amp;check_keywords=yes&amp;area=default">security</a>
+<a class="search-tag reference external" href="/search.html?q=settings&amp;check_keywords=yes&amp;area=default">settings</a>
+<a class="search-tag reference external" href="/search.html?q=setup&amp;check_keywords=yes&amp;area=default">setup</a>
+<a class="search-tag reference external" href="/search.html?q=shairport&amp;check_keywords=yes&amp;area=default">shairport</a>
+<a class="search-tag reference external" href="/search.html?q=simulation&amp;check_keywords=yes&amp;area=default">simulation</a>
+<a class="search-tag reference external" href="/search.html?q=sphinx&amp;check_keywords=yes&amp;area=default">sphinx</a>
+<a class="search-tag reference external" href="/search.html?q=Sphinx&amp;check_keywords=yes&amp;area=default">Sphinx</a>
+<a class="search-tag reference external" href="/search.html?q=spinalhdl&amp;check_keywords=yes&amp;area=default">spinalhdl</a>
+<a class="search-tag reference external" href="/search.html?q=ssh&amp;check_keywords=yes&amp;area=default">ssh</a>
+<a class="search-tag reference external" href="/search.html?q=statistics&amp;check_keywords=yes&amp;area=default">statistics</a>
+<a class="search-tag reference external" href="/search.html?q=stdlib&amp;check_keywords=yes&amp;area=default">stdlib</a>
+<a class="search-tag reference external" href="/search.html?q=streamlit&amp;check_keywords=yes&amp;area=default">streamlit</a>
+<a class="search-tag reference external" href="/search.html?q=sublimetext&amp;check_keywords=yes&amp;area=default">sublimetext</a>
+<a class="search-tag reference external" href="/search.html?q=submodules&amp;check_keywords=yes&amp;area=default">submodules</a>
+<a class="search-tag reference external" href="/search.html?q=subsonic&amp;check_keywords=yes&amp;area=default">subsonic</a>
+<a class="search-tag reference external" href="/search.html?q=swift&amp;check_keywords=yes&amp;area=default">swift</a>
+<a class="search-tag reference external" href="/search.html?q=syntax&amp;check_keywords=yes&amp;area=default">syntax</a>
+<a class="search-tag reference external" href="/search.html?q=synthesis&amp;check_keywords=yes&amp;area=default">synthesis</a>
+<a class="search-tag reference external" href="/search.html?q=systemctl&amp;check_keywords=yes&amp;area=default">systemctl</a>
+<a class="search-tag reference external" href="/search.html?q=systemd&amp;check_keywords=yes&amp;area=default">systemd</a>
+<a class="search-tag reference external" href="/search.html?q=tcl-tk&amp;check_keywords=yes&amp;area=default">tcl-tk</a>
+<a class="search-tag reference external" href="/search.html?q=testbench&amp;check_keywords=yes&amp;area=default">testbench</a>
+<a class="search-tag reference external" href="/search.html?q=text&amp;check_keywords=yes&amp;area=default">text</a>
+<a class="search-tag reference external" href="/search.html?q=tf2&amp;check_keywords=yes&amp;area=default">tf2</a>
+<a class="search-tag reference external" href="/search.html?q=ticks&amp;check_keywords=yes&amp;area=default">ticks</a>
+<a class="search-tag reference external" href="/search.html?q=time&amp;check_keywords=yes&amp;area=default">time</a>
+<a class="search-tag reference external" href="/search.html?q=tools&amp;check_keywords=yes&amp;area=default">tools</a>
+<a class="search-tag reference external" href="/search.html?q=tor&amp;check_keywords=yes&amp;area=default">tor</a>
+<a class="search-tag reference external" href="/search.html?q=torrent&amp;check_keywords=yes&amp;area=default">torrent</a>
+<a class="search-tag reference external" href="/search.html?q=tqdm&amp;check_keywords=yes&amp;area=default">tqdm</a>
+<a class="search-tag reference external" href="/search.html?q=ubuntu&amp;check_keywords=yes&amp;area=default">ubuntu</a>
+<a class="search-tag reference external" href="/search.html?q=ucf&amp;check_keywords=yes&amp;area=default">ucf</a>
+<a class="search-tag reference external" href="/search.html?q=vhdl&amp;check_keywords=yes&amp;area=default">vhdl</a>
+<a class="search-tag reference external" href="/search.html?q=video&amp;check_keywords=yes&amp;area=default">video</a>
+<a class="search-tag reference external" href="/search.html?q=vim&amp;check_keywords=yes&amp;area=default">vim</a>
+<a class="search-tag reference external" href="/search.html?q=virtualbox&amp;check_keywords=yes&amp;area=default">virtualbox</a>
+<a class="search-tag reference external" href="/search.html?q=virtualenvironment&amp;check_keywords=yes&amp;area=default">virtualenvironment</a>
+<a class="search-tag reference external" href="/search.html?q=vnc&amp;check_keywords=yes&amp;area=default">vnc</a>
+<a class="search-tag reference external" href="/search.html?q=vpn&amp;check_keywords=yes&amp;area=default">vpn</a>
+<a class="search-tag reference external" href="/search.html?q=wavedrom&amp;check_keywords=yes&amp;area=default">wavedrom</a>
+<a class="search-tag reference external" href="/search.html?q=windows&amp;check_keywords=yes&amp;area=default">windows</a>
+<a class="search-tag reference external" href="/search.html?q=writing&amp;check_keywords=yes&amp;area=default">writing</a>
+<a class="search-tag reference external" href="/search.html?q=wsl&amp;check_keywords=yes&amp;area=default">wsl</a></p>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-20699788-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.svg" class="logo" alt="logo">
+</a>
+
+
+    </div>
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2004-2021, tschinz.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <!-- This will display the version of the docs -->
+
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

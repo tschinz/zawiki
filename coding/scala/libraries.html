@@ -262,18 +262,18 @@
 <h1>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="scala-math">
 <h2><code class="docutils literal notranslate"><span class="pre">scala.math._</span></code><a class="headerlink" href="#scala-math" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">scala.math._</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">scala</span><span class="p">.</span><span class="nn">math</span><span class="p">.</span><span class="n">_</span>
 
-<span class="n">pow</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">16</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span>  <span class="c1">// 2^(16-1)</span>
+<span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">// 2^(16-1)</span>
 <span class="nc">Pi</span>           <span class="c1">// 3.1415</span>
-<span class="n">atan</span><span class="o">()</span>
-<span class="n">sin</span><span class="o">()</span>
+<span class="n">atan</span><span class="p">()</span>
+<span class="n">sin</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="scala-sys-process">
 <h2><code class="docutils literal notranslate"><span class="pre">scala.sys.process._</span></code><a class="headerlink" href="#scala-sys-process" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">scala.sys.process._</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">scala</span><span class="p">.</span><span class="nn">sys</span><span class="p">.</span><span class="nn">process</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;ls -la&quot;</span>
 <span class="n">cmd</span><span class="o">!</span>
@@ -282,10 +282,10 @@
 </div>
 <div class="section" id="java-util-calendar">
 <h2><code class="docutils literal notranslate"><span class="pre">java.util.Calendar</span></code><a class="headerlink" href="#java-util-calendar" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">java.util.Calendar</span>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">java</span><span class="p">.</span><span class="nn">util</span><span class="p">.</span><span class="nc">Calendar</span>
 
-<span class="n">println</span><span class="o">(</span><span class="s">s&quot;Start cordicPipelinedSim Simulation: </span><span class="si">${</span><span class="nc">Calendar</span><span class="o">.</span><span class="n">getInstance</span><span class="o">().</span><span class="n">getTime</span><span class="o">()</span><span class="si">}</span><span class="s">&quot;</span><span class="o">)</span>
-<span class="n">println</span><span class="o">(</span><span class="s">s&quot;End cordicPipelinedSim Simulation: </span><span class="si">${</span><span class="nc">Calendar</span><span class="o">.</span><span class="n">getInstance</span><span class="o">().</span><span class="n">getTime</span><span class="o">()</span><span class="si">}</span><span class="s">&quot;</span><span class="o">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">s&quot;Start cordicPipelinedSim Simulation: </span><span class="si">${</span><span class="nc">Calendar</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getTime</span><span class="p">()</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">s&quot;End cordicPipelinedSim Simulation: </span><span class="si">${</span><span class="nc">Calendar</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getTime</span><span class="p">()</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><a class="search-tag reference external" href="/search.html?q=coding&amp;check_keywords=yes&amp;area=default">coding</a>
@@ -309,21 +309,20 @@
 
       </div>
     </div>
-    
+  
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-
-    
-    <!-- Google Analytics -->
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-20699788-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
-    <footer class="footer mt-5 mt-md-0">
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-20699788-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

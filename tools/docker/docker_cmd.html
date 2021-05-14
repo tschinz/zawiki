@@ -294,8 +294,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#list">
-   List
+  <a class="reference internal nav-link" href="#images">
+   Images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -307,10 +307,32 @@
   <a class="reference internal nav-link" href="#build">
    Build
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-dangling-images">
+     Remove dangling images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-images-and-containers">
+   List images and containers
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#run">
    Run
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stop-an-remove-a-container">
+   Stop an remove a container
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exec">
+   Exec
   </a>
  </li>
 </ul>
@@ -343,13 +365,20 @@
                 
   <div class="section" id="docker-cmd">
 <h1><cite>docker</cite> cmd<a class="headerlink" href="#docker-cmd" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="list">
-<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
-<p>List all currently existing docker images</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker images
-</pre></div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id1">
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<dl class="std option">
+<dt id="cmdoption-docker-arg-images">
+<code class="sig-name descname"><span class="pre">images</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-docker-arg-images" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all currently existing docker images</p>
+</dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">docker images</span>
+</pre></div></div><div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">output</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
 docker101tutorial       latest              ef9eb5245be8        <span class="m">4</span> days ago          <span class="m">27</span>.5MB
@@ -361,18 +390,31 @@ continuumio/anaconda3   latest              472a925c4385        <span class="m">
 </div>
 <div class="section" id="pull">
 <h2>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
-<p>Get a docker image from dockerhub</p>
+<dl class="std option">
+<dt id="cmdoption-docker-arg-pull">
+<code class="sig-name descname"><span class="pre">pull</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;containername&gt;:&lt;tag&gt;</span></code><a class="headerlink" href="#cmdoption-docker-arg-pull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a docker image from dockerhub</p>
+</dd></dl>
+
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull &lt;containername&gt;:&lt;tag&gt;
 
 docker pull ubuntu:latest
 docker pull ubuntu:20.10
+docker pull ubuntu
 </pre></div>
 </div>
 </div>
 <div class="section" id="build">
 <h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
-<p>To build an image from the Dockerfile, simply run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t dockerfile .
+<dl class="std option">
+<dt id="cmdoption-docker-arg-build">
+<code class="sig-name descname"><span class="pre">build</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;imageName&gt;</span></code><a class="headerlink" href="#cmdoption-docker-arg-build" title="Permalink to this definition">¶</a></dt>
+<dd><p>To build an image from a Dockerfile</p>
+</dd></dl>
+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t &lt;repoName&gt;/&lt;imageName&gt;:&lt;tagName&gt; .
+
+docker build -t local/app:latest .
 </pre></div>
 </div>
 <div class="admonition note">
@@ -380,16 +422,123 @@ docker pull ubuntu:20.10
 <p>Please mind the dot <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end.</p>
 <p>As per the above command, Docker will start to build images automatically by reading the instructions from the Dockerfile saved in the current working directory.</p>
 </div>
-<p>If the Dockerfile is saved in somewhere else, you can mention its path using <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag like below.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -f /path/to/a/Dockerfile .
+<dl class="std option">
+<dt id="cmdoption-docker-build-t">
+<code class="sig-name descname"><span class="pre">-t</span></code><code class="sig-prename descclassname"> <span class="pre">[&lt;repoName&gt;/]&lt;imageName&gt;[:&lt;tagName&gt;]</span></code><a class="headerlink" href="#cmdoption-docker-build-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>build docker with a given name.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-build-f">
+<code class="sig-name descname"><span class="pre">-f</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;path/to/dockerfile&gt;</span></code><a class="headerlink" href="#cmdoption-docker-build-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>using dockerfile located at a different location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker build -f &lt;/path/to/a/Dockerfile&gt; .</span>
+</pre></div></div></dd></dl>
+
+<div class="section" id="remove-dangling-images">
+<h3>Remove dangling images<a class="headerlink" href="#remove-dangling-images" title="Permalink to this headline">¶</a></h3>
+<p>Docker images consist of multiple layers.
+Dangling images, are layers that have no relationship to any tagged images.
+They no longer serve a purpose and consume disk space.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker rmi <span class="k">$(</span>docker images -f <span class="nv">dangling</span><span class="o">=</span><span class="nb">true</span> -q<span class="k">)</span></span>
+</pre></div></div><p>On Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">FOR /f <span class="s2">&quot;tokens=*&quot;</span> %i IN <span class="o">(</span><span class="s1">&#39;docker images -f &quot;dangling=true&quot; -q&#39;</span><span class="o">)</span> DO docker rmi -f %i</span>
+</pre></div></div></div>
+</div>
+<div class="section" id="list-images-and-containers">
+<h2>List images and containers<a class="headerlink" href="#list-images-and-containers" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker image ls</span>
+<span class="prompt1">docker container ls</span>
+<span class="prompt1">docker container ls -a</span>
+</pre></div></div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code> shows all containers with stopped ones.</p>
+</div>
+<p>To remove all stopped containers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker container prune</span>
+</pre></div></div></div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
+<dl class="std option">
+<dt id="cmdoption-docker-arg-run">
+<code class="sig-name descname"><span class="pre">run</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;imagename&gt;</span></code><a class="headerlink" href="#cmdoption-docker-arg-run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a docker image already pulled or build.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-it">
+<code class="sig-name descname"><span class="pre">-it</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-docker-run-it" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run docker in interactive mode</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it ubuntu
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-d">
+<code class="sig-name descname"><span class="pre">-d</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-docker-run-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run docker in deamonized</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it -d ubuntu
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-v">
+<code class="sig-name descname"><span class="pre">-v</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;hostPath&gt;:&lt;containerPath&gt;</span></code><a class="headerlink" href="#cmdoption-docker-run-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link host folder to container folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Windows</span>
+docker run -v //c/data:/data ubuntu
+<span class="c1"># Linux</span>
+docker run -v /data:/data    ubuntu
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-p">
+<code class="sig-name descname"><span class="pre">-p</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;hostPort&gt;:&lt;containerPort&gt;</span></code><a class="headerlink" href="#cmdoption-docker-run-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forwared container port to host port</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -p <span class="m">8080</span>:80 ubuntu
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-name">
+<code class="sig-name descname"><span class="pre">--name</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;containername&gt;</span></code><a class="headerlink" href="#cmdoption-docker-run-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the <code class="docutils literal notranslate"><span class="pre">--name</span></code> flag to give the container a name. Otherwise it is generated randomly.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-docker-run-entrypoint">
+<code class="sig-name descname"><span class="pre">--entrypoint</span></code><code class="sig-prename descclassname"><span class="pre">=&lt;command&gt;</span></code><a class="headerlink" href="#cmdoption-docker-run-entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>overwrite the CMD command within the dockerfile.</p>
+</dd></dl>
+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Bypass the ENTRYPOINT and run a bash shell
+
+docker run -it --entrypoint<span class="o">=</span>/bin/bash myimage -i
 </pre></div>
 </div>
 </div>
-<div class="section" id="run">
-<h2>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h2>
-<p>Run a docker image already pulled or build can be run with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it dockerfile
-docker run -it -d -p <span class="m">8080</span>:8080 ubuntu
+<div class="section" id="stop-an-remove-a-container">
+<h2>Stop an remove a container<a class="headerlink" href="#stop-an-remove-a-container" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker container stop &lt;container-name or container-id&gt;</span>
+<span class="prompt1">docker container rm &lt;container-name or container-id&gt;</span>
+</pre></div></div><p>Remove a container while running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">docker container rm -f &lt;container-name or container-id&gt;</span>
+</pre></div></div></div>
+<div class="section" id="exec">
+<h2>Exec<a class="headerlink" href="#exec" title="Permalink to this headline">¶</a></h2>
+<dl class="std option">
+<dt id="cmdoption-docker-arg-exec">
+<code class="sig-name descname"><span class="pre">exec</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;imagename&gt;</span> <span class="pre">&lt;command&gt;</span></code><a class="headerlink" href="#cmdoption-docker-arg-exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a command inside the docker image</p>
+</dd></dl>
+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it &lt;dockername&gt; &lt;command&gt;
+docker <span class="nb">exec</span> -it ubuntu bash
 </pre></div>
 </div>
 <p><a class="search-tag reference external" href="/search.html?q=tools&amp;check_keywords=yes&amp;area=default">tools</a>
@@ -413,21 +562,20 @@ docker run -it -d -p <span class="m">8080</span>:8080 ubuntu
 
       </div>
     </div>
-    
+  
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-
-    
-    <!-- Google Analytics -->
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-20699788-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
-    <footer class="footer mt-5 mt-md-0">
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-20699788-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

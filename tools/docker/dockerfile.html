@@ -297,10 +297,25 @@
   <a class="reference internal nav-link" href="#instructions">
    Instructions
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
+    <a class="reference internal nav-link" href="#small">
+     Small
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-with-pip">
+     Python with pip
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-with-wheels">
+     Python with wheels
     </a>
    </li>
   </ul>
@@ -370,7 +385,14 @@
 </td>
 <td><p>It is a key-value pair used to specify metadata information of the image.</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">RUN</span></code></p></th>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">MAINTAINER</span></code></p></th>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">MAINTAINER</span><span class="s"> maintainer@email.com</span>
+</pre></div>
+</div>
+</td>
+<td><p>It will give the detail of the author who created this Docker image.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">RUN</span></code></p></th>
 <td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">RUN</span> apt-get update
 <span class="k">RUN</span> apt-get install tomcat
 </pre></div>
@@ -378,26 +400,20 @@
 </td>
 <td><p>It is used to execute the command on the base image and it will create a new layer.</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">CMD</span></code></p></th>
-<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CMD [“java”, “-jar”, “app.jar”]
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">COPY</span></code></p></th>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">COPY</span> /target/plantuml.jar plantuml.jar
 </pre></div>
 </div>
 </td>
-<td><p>It is used to set a command to execute first when the container starts.</p></td>
+<td><p>It is used to copy local files to the container.</p></td>
 </tr>
-<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">EXPOSE</span></code></p></th>
-<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">EXPOSE</span><span class="s"> 8080</span>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code></p></th>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">ADD</span> file.tar.xz / .
+<span class="k">ADD</span> http://url.com/git.git /usr/local/folder/
 </pre></div>
 </div>
 </td>
-<td><p>It will expose the port to access the container. Container will listen on this network port. We can access the output using this port.</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">MAINTAINER</span></code></p></th>
-<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">MAINTAINER</span><span class="s"> maintainer@email.com</span>
-</pre></div>
-</div>
-</td>
-<td><p>It will give the detail of the author who created this Docker image.</p></td>
+<td><p>It works same as copy but having some more feature like we can extract local tar and add remote URL.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ENV</span></code></p></th>
 <td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">ENV</span> <span class="nv">DB_NAME</span><span class="o">=</span>”MySQL”
@@ -407,27 +423,12 @@
 </td>
 <td><p>It is used to set environment variables in the key-value pair. These variables are set during the image build and are available after container created.</p></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">COPY</span></code></p></th>
-<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">COPY</span> /target/plantuml.jar plantuml.jar
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">EXPOSE</span></code></p></th>
+<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">EXPOSE</span><span class="s"> 8080</span>
 </pre></div>
 </div>
 </td>
-<td><p>It is used to copy local files to the container.</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code></p></th>
-<td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">ADD</span> file.tar.xz / .
-<span class="k">ADD</span> http://url.com/git.git /usr/local/folder/
-</pre></div>
-</div>
-</td>
-<td><p>It works same as copy but having some more feature like we can extract local tar and add remote URL.</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code></p></th>
-<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ENTRYPOINT [“java”, “-jar”, “app.jar”]
-</pre></div>
-</div>
-</td>
-<td><p>It is used to set the main command for the image. It works as same as <code class="docutils literal notranslate"><span class="pre">CMD</span></code> instruction. The only difference between <code class="docutils literal notranslate"><span class="pre">CMD</span></code> and <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code> is instructions are not overwritten in <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code>.</p></td>
+<td><p>It will expose the port to access the container. Container will listen on this network port. We can access the output using this port.</p></td>
 </tr>
 <tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">VOLUME</span></code></p></th>
 <td><div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">VOLUME</span><span class="s"> /app/folder</span>
@@ -451,10 +452,28 @@
 </td>
 <td><p>It will set the working directory. It will create the directory if not present.</p></td>
 </tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">CMD</span></code></p></th>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CMD [“java”, “-jar”, “app.jar”]
+</pre></div>
+</div>
+</td>
+<td><p>It is used to set a command to execute first when the container starts.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code></p></th>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ENTRYPOINT [“java”, “-jar”, “app.jar”]
+</pre></div>
+</div>
+</td>
+<td><p>It is used to set the main command for the image. It works as same as <code class="docutils literal notranslate"><span class="pre">CMD</span></code> instruction. The only difference between <code class="docutils literal notranslate"><span class="pre">CMD</span></code> and <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code> is instructions are not overwritten in <code class="docutils literal notranslate"><span class="pre">ENTRYPOINT</span></code>.</p></td>
+</tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="small">
+<h3>Small<a class="headerlink" href="#small" title="Permalink to this headline">¶</a></h3>
+<p>Example of a small dockerfile for a javascript webapplication.</p>
 <div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">ubuntu:latest</span>
 <span class="k">MAINTAINER</span><span class="s"> Prename Name &quot;user@email.com&quot;s</span>
 <span class="k">RUN</span> apt-get install -y software-properties-common python
@@ -466,6 +485,133 @@
 <span class="k">ADD</span> app.js /var/www/app.js
 <span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;/usr/bin/node&quot;</span><span class="p">,</span> <span class="s2">&quot;/var/www/app.js&quot;</span><span class="p">]</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="python-with-pip">
+<h3>Python with pip<a class="headerlink" href="#python-with-pip" title="Permalink to this headline">¶</a></h3>
+<p>Example of a dockerized python application. All modules are installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.
+In addition crontab and a docker entryfile is used.</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">python:3.8-slim-buster</span> <span class="k">AS</span> <span class="s">runtime-image</span>
+<span class="k">MAINTAINER</span><span class="s"> tschinz</span>
+
+<span class="c"># Update and install git</span>
+<span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y --no-install-recommends git cron libcurl4-openssl-dev libssl-dev build-essential
+
+<span class="c"># Create and install crontab</span>
+<span class="k">COPY</span> docker/crontab /etc/cron.d/crontab
+<span class="k">RUN</span> chmod <span class="m">0644</span> /etc/cron.d/crontab
+<span class="k">RUN</span> /usr/bin/crontab /etc/cron.d/crontab
+
+<span class="k">ARG</span> <span class="nv">dest</span><span class="o">=</span>/usr/src/app
+
+<span class="c"># Create the application directories</span>
+<span class="k">RUN</span> mkdir <span class="nv">$dest</span>
+<span class="k">WORKDIR</span><span class="s"> $dest</span>
+<span class="k">RUN</span> mkdir ./src
+<span class="k">RUN</span> mkdir /data
+
+<span class="c"># Copy the rest of the codebase into the image</span>
+<span class="k">COPY</span> src/ ./src
+<span class="k">COPY</span> index.py .
+<span class="k">COPY</span> docker/requirements.txt /tmp/
+
+<span class="c"># Install python environment</span>
+<span class="k">RUN</span> pip install -r /tmp/requirements.txt
+
+<span class="c">## set environment variables</span>
+
+<span class="c"># Keeps Python from generating .pyc files in the container</span>
+<span class="k">ENV</span> <span class="nv">PYTHONDONTWRITEBYTECODE</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c"># Turns off buffering for easier container logging</span>
+<span class="k">ENV</span> <span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c"># Run command once at startup</span>
+<span class="c">#CMD [&quot;python&quot;, &quot;/usr/src/app/index.py&quot;, &quot;-av&quot;, &quot;-o&quot;, &quot;/data&quot;]</span>
+<span class="c"># Dummy command to keep container in foreground and running</span>
+<span class="c">#CMD [&quot;tail&quot;, &quot;-f&quot;, &quot;/dev/null&quot;]</span>
+
+<span class="c"># Setup entrypoint.sh</span>
+<span class="k">COPY</span> docker/docker-entrypoint.sh /
+<span class="k">RUN</span> chmod +x /docker-entrypoint.sh
+<span class="k">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/docker-entrypoint.sh&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-with-wheels">
+<h3>Python with wheels<a class="headerlink" href="#python-with-wheels" title="Permalink to this headline">¶</a></h3>
+<p>Example of a dockerized python application. This dockerfiles describes a two stage build. In the first state a wheel executable of the python application is created. In the second the wheels are used to create the docker image.
+In addition crontab and a docker entryfile is used.</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c">########## 1st Stage ##########</span>
+<span class="k">FROM</span> <span class="s">python:3.8-slim-buster</span> <span class="k">AS</span> <span class="s">build-image</span>
+
+<span class="c"># Update and install git</span>
+<span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y --no-install-recommends libcurl4-openssl-dev libssl-dev build-essential
+
+<span class="c"># instead of installing, create wheels</span>
+<span class="k">RUN</span> pip3 install --upgrade pip
+<span class="k">COPY</span> setup.py ./tmp
+<span class="k">COPY</span> src/ ./tmp/src
+<span class="k">RUN</span> pip3 wheel --wheel-dir<span class="o">=</span>/tmp/wheels ./tmp
+
+<span class="c">########## 2nd Stage ##########</span>
+<span class="k">FROM</span> <span class="s">python:3.8-slim-buster</span> <span class="k">AS</span> <span class="s">runtime-image</span>
+<span class="k">MAINTAINER</span><span class="s"> tschinz</span>
+
+<span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y --no-install-recommends cron libcurl4-openssl-dev libssl-dev
+
+<span class="c"># Create and install crontab</span>
+<span class="k">COPY</span> docker/crontab /etc/cron.d/crontab
+<span class="k">RUN</span> chmod <span class="m">0644</span> /etc/cron.d/crontab
+<span class="k">RUN</span> /usr/bin/crontab /etc/cron.d/crontab
+
+<span class="k">ARG</span> <span class="nv">dest</span><span class="o">=</span>/usr/src/app
+
+<span class="c">## copy wheels from build image and install packages from wheels</span>
+<span class="k">COPY</span> --from<span class="o">=</span>build-image /tmp/wheels /tmp/wheels
+
+<span class="c">## Get all wheels and install them. We had to use &#39;--no-deps&#39; for our &#39;src&#39; package because</span>
+<span class="c">## this latter needs git to install all its dependencies.</span>
+<span class="k">RUN</span> <span class="nv">WHEELS</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> /tmp/wheels<span class="p">;</span> ls -1 *.whl <span class="p">|</span> grep -v src <span class="p">|</span> awk -F - <span class="s1">&#39;{ gsub(&quot;_&quot;, &quot;-&quot;, $1); print $1 }&#39;</span> <span class="p">|</span> uniq<span class="k">)</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    pip3 install --no-index --find-links<span class="o">=</span>/tmp/wheels <span class="nv">$WHEELS</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    pip3 install --no-index --find-links<span class="o">=</span>/tmp/wheels src --no-deps
+
+<span class="k">RUN</span> rm -rf /tmp/wheels
+
+<span class="c"># Create the application directories</span>
+<span class="k">RUN</span> mkdir /data
+<span class="k">RUN</span> mkdir <span class="nv">$dest</span>
+<span class="k">WORKDIR</span><span class="s"> $dest</span>
+
+<span class="c"># Copy the rest of the codebase into the image</span>
+<span class="k">COPY</span> index.py .
+
+<span class="c">## set environment variables</span>
+
+<span class="c"># Keeps Python from generating .pyc files in the container</span>
+<span class="k">ENV</span> <span class="nv">PYTHONDONTWRITEBYTECODE</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c"># Turns off buffering for easier container logging</span>
+<span class="k">ENV</span> <span class="nv">PYTHONUNBUFFERED</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c"># Run command once at startup</span>
+<span class="c">#CMD [&quot;python&quot;, &quot;/usr/src/app/index.py&quot;, &quot;-av&quot;, &quot;-o&quot;, &quot;/data&quot;]</span>
+<span class="c"># Dummy command to keep container in foreground and running</span>
+<span class="c">#CMD [&quot;tail&quot;, &quot;-f&quot;, &quot;/dev/null&quot;]</span>
+
+<span class="c"># Setup entrypoint.sh</span>
+<span class="k">COPY</span> docker/docker-entrypoint.sh /
+<span class="k">RUN</span> chmod +x /docker-entrypoint.sh
+<span class="k">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/docker-entrypoint.sh&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>docker entryfile needs to have linux line endings <code class="docutils literal notranslate"><span class="pre">LF</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>crontab file needs to have an empty line at the end.</p>
 </div>
 <p><a class="search-tag reference external" href="/search.html?q=tools&amp;check_keywords=yes&amp;area=default">tools</a>
 <a class="search-tag reference external" href="/search.html?q=docker&amp;check_keywords=yes&amp;area=default">docker</a>
@@ -489,21 +635,20 @@
 
       </div>
     </div>
-    
+  
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-
-    
-    <!-- Google Analytics -->
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-20699788-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
-    <footer class="footer mt-5 mt-md-0">
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-20699788-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

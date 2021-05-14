@@ -25,7 +25,7 @@ Copy ``modelsim*.aol`` to ``~/Downloads/``
 
 Options:
 
-.. code-block:: raw
+.. code-block::
    :caption: Target location
 
    /usr/opt/Modelsim
@@ -102,7 +102,7 @@ Copy ``HDS_*.exe`` to ``~/Downloads/``
 
 Options:
 
-.. code-block:: raw
+.. code-block::
    :caption: Target location
 
    /usr/opt/HDS
