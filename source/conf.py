@@ -54,6 +54,7 @@ extensions = [
     "sphinxemoji.sphinxemoji",
     "notfound.extension",
     "sphinx_panels",
+    'sphinx-prompt',
     "button",
     "tag",
 ]

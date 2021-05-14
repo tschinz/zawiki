@@ -99,7 +99,7 @@ index:
 
 .PHONY: html
 html: index # images-png
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
@@ -111,46 +111,46 @@ publichtml: index html
 
 .PHONY: livehtml
 livehtml: index
-	sphinx-autobuild --port 0 --open-browser -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
+	@$(CONDA_ACTIVATE); sphinx-autobuild --port 0 --open-browser -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
 
 .PHONY: openhtml
 openhtml:
-	python -c "import os;os.system('start $(BUILDDIR)/html/index.html')"
+	@$(CONDA_ACTIVATE); python -c "import os;os.system('start $(BUILDDIR)/html/index.html')"
 
 .PHONY: dirhtml
 dirhtml:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 .PHONY: singlehtml
 singlehtml:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
 
 .PHONY: pickle
 pickle:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can process the pickle files."
 
 .PHONY: json
 json:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can process the JSON files."
 
 .PHONY: htmlhelp
 htmlhelp:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
 				".hhp project file in $(BUILDDIR)/htmlhelp."
 
 .PHONY: qthelp
 qthelp:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 				".qhcp project file in $(BUILDDIR)/qthelp, like this:"
@@ -160,7 +160,7 @@ qthelp:
 
 .PHONY: applehelp
 applehelp:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The help book is in $(BUILDDIR)/applehelp."
 	@echo "N.B. You won't be able to view it unless you put it in" \
@@ -169,7 +169,7 @@ applehelp:
 
 .PHONY: devhelp
 devhelp:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
@@ -179,7 +179,7 @@ devhelp:
 
 .PHONY: epub
 epub:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
@@ -187,7 +187,7 @@ epub:
 latex: # images-pdf
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
@@ -197,7 +197,7 @@ latex: # images-pdf
 latexpdf: # images-pdf
 	if [ -a $(SOURCEDIR)/index.rst ]; then rm $(SOURCEDIR)/index.rst; fi;
 	cp $(SOURCEDIR)/index_latex.rst $(SOURCEDIR)/index.rst
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "xelatex finished; the PDF files are in $(BUILDDIR)/latex."
@@ -207,26 +207,26 @@ latexpdf: # images-pdf
 
 .PHONY: latexpdfja
 latexpdfja: # images-pdf
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Running LaTeX files through platex and dvipdfmx..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf-ja
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 
 .PHONY: text
 text:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The text files are in $(BUILDDIR)/text."
 
 .PHONY: man
 man:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
 
 .PHONY: texinfo
 texinfo:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
 	@echo "Run \`make' in that directory to run these through makeinfo" \
@@ -234,50 +234,50 @@ texinfo:
 
 .PHONY: info
 info:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Running Texinfo files through makeinfo..."
 	make -C $(BUILDDIR)/texinfo info
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
 
 .PHONY: gettext
 gettext:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 
 .PHONY: changes
 changes:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "The overview file is in $(BUILDDIR)/changes."
 
 .PHONY: linkcheck
 linkcheck:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 				"or in $(BUILDDIR)/linkcheck/output.txt."
 
 .PHONY: doctest
 doctest:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Testing of doctests in the sources finished, look at the " \
 				"results in $(BUILDDIR)/doctest/output.txt."
 
 .PHONY: coverage
 coverage:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo "Testing of coverage in the sources finished, look at the " \
 				"results in $(BUILDDIR)/coverage/python.txt."
 
 .PHONY: xml
 xml:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The XML files are in $(BUILDDIR)/xml."
 
 .PHONY: pseudoxml
 pseudoxml:
-	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(CONDA_ACTIVATE); $(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
