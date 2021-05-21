@@ -16,3 +16,4 @@ Writing
    md/index
    gitbook/index
    latex/index
+   latin/index
