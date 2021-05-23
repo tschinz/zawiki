@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WSL &#8212; Z-Notes</title>
+    <title>Unraid &#8212; Z-Notes</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -43,8 +43,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tools" href="../../tools/index.html" />
-    <link rel="prev" title="Registry" href="registry_location.html" />
+    <link rel="next" title="Mac" href="../mac/index.html" />
+    <link rel="prev" title="Folders" href="../linux/filesystem/folders.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -178,8 +178,8 @@
    Linux
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../unraid/index.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Unraid
   </a>
  </li>
@@ -188,47 +188,10 @@
    Mac
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../win/index.html">
    Windows
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="cmdline.html">
-     Commandline
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="firewall.html">
-     Firewall
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="group_policies.html">
-     Group Policies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="power.html">
-     Power
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="registry_location.html">
-     Registry
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     WSL
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -251,19 +214,21 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional Information
+  <a class="reference internal nav-link" href="#tips-and-tricks">
+   Tips and Tricks
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#commands">
-   Commands
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cmder">
-   Cmder
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-vm-icons">
+     Custom VM Icons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notifications-for-userscripts">
+     Notifications for userscripts
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -274,7 +239,7 @@
                 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/znotes/edit/master/source/os/win/wsl.rst">
+    <a href="https://github.com/tschinz/znotes/edit/master/source/os/unraid/index.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -293,54 +258,31 @@
               
               <div>
                 
-  <div class="section" id="wsl">
-<h1>WSL<a class="headerlink" href="#wsl" title="Permalink to this headline">¶</a></h1>
-<p>WSL means Windows Subsystem for Linux. There are two version available, this page is dedicated to <code class="docutils literal notranslate"><span class="pre">wsl2`</span></code>.</p>
-<p>Once wsl is installed new Linux distributions can be installed on the Windows Store.</p>
+  <div class="section" id="unraid">
+<h1>Unraid<a class="headerlink" href="#unraid" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/windows_store_ubuntu.png"><img alt="../../_images/windows_store_ubuntu.png" src="../../_images/windows_store_ubuntu.png" style="width: 30%;" /></a>
+<a class="reference internal image-reference" href="../../_images/logo39.svg"><img alt="../../_images/logo39.svg" src="../../_images/logo39.svg" width="150px" /></a>
 </div>
-<p>In addition docker for windows also runs on <code class="docutils literal notranslate"><span class="pre">wsl2</span></code> see more informations <a class="reference internal" href="../../tools/docker/index.html"><span class="doc">Docker</span></a></p>
-<div class="section" id="additional-information">
-<h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p>Unraid OS allows sophisticated media aficionados, gamers, and other intensive data-users to have ultimate control over their data, media, applications, and desktops, using just about any combination of hardware.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/">https://docs.microsoft.com/en-us/windows/wsl/</a></p></li>
+<li><p><a class="reference external" href="https://wiki.unraid.net/Documentation">Unraid Documentation</a></p></li>
 </ul>
-</div>
-<div class="section" id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shows images available on wsl including version</span>
-wsl -l -v
-
-<span class="c1"># change wsl image to version 2</span>
-wsl --set-version &lt;distro-name&gt; <span class="m">2</span>
-
-<span class="c1"># set all new images to wsl version 2</span>
-wsl --set-default-version <span class="m">2</span>
-
-<span class="c1"># start linux shell</span>
-wsl
-
-<span class="c1"># start specific distributions</span>
-wsl --distribution Ubuntu-20.04
+<div class="section" id="tips-and-tricks">
+<h2>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="custom-vm-icons">
+<h3>Custom VM Icons<a class="headerlink" href="#custom-vm-icons" title="Permalink to this headline">¶</a></h3>
+<p>Custom VM icon images can be stored at</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/local/emhttp/plugins/dynamix.vm.manager/templates/images
 </pre></div>
 </div>
 </div>
-<div class="section" id="cmder">
-<h2>Cmder<a class="headerlink" href="#cmder" title="Permalink to this headline">¶</a></h2>
-<p>wsl can be easily integrated into cmder.</p>
-<p>Settings <img alt="arrow-right" src="../../_images/arrow-right.svg" /> Startup <img alt="arrow-right" src="../../_images/arrow-right.svg" /> Tasks</p>
-<p>Task for open wsl shell</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>wsl -cur_console:pm:/mnt
+<div class="section" id="notifications-for-userscripts">
+<h3>Notifications for userscripts<a class="headerlink" href="#notifications-for-userscripts" title="Permalink to this headline">¶</a></h3>
+<p>As configured will sent emails, telegram messages or webGUI notifications.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/local/emhttp/webGui/scripts/notify -i <span class="o">[</span>normal<span class="p">|</span>warning<span class="p">|</span>alert<span class="o">]</span> -s <span class="s2">&quot;&lt;notification&gt;&quot;</span> -d <span class="s2">&quot;&lt;description&gt;&quot;</span>
 </pre></div>
 </div>
-<p>Task for open specific distribution</p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>wsl --distribution Ubuntu-20.04 -cur_console:pm:/mnt
-</pre></div>
 </div>
-<p><a class="search-tag reference external" href="/search.html?q=os&amp;check_keywords=yes&amp;area=default">os</a>
-<a class="search-tag reference external" href="/search.html?q=windows&amp;check_keywords=yes&amp;area=default">windows</a>
-<a class="search-tag reference external" href="/search.html?q=wsl&amp;check_keywords=yes&amp;area=default">wsl</a></p>
 </div>
 </div>
 

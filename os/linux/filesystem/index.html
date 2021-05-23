@@ -233,6 +233,11 @@
   </ul>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../unraid/index.html">
+   Unraid
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../mac/index.html">
    Mac
   </a>
@@ -287,11 +292,21 @@
        lsblk
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#blkid">
+       blkid
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#parted">
      Parted
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#partition-table-and-formatting">
+     Partition Table and formatting
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -462,12 +477,43 @@ sdd      <span class="m">3</span>.7T disk                 running Rugged USB-C
 </div>
 </div>
 </div>
+<div class="section" id="blkid">
+<h4>blkid<a class="headerlink" href="#blkid" title="Permalink to this headline">¶</a></h4>
+<p>Can help getting the disk label as well as UUID.</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">blkid</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>blkid
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">blkid example 1</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo blkdid
+/dev/loop0: <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;squashfs&quot;</span>
+/dev/loop1: <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;squashfs&quot;</span>
+/dev/sda1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;LACIE_4TB&quot;</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;88fdbcc0-809a-48c7-bdda-d75cd5f79bb4&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span> <span class="nv">PARTLABEL</span><span class="o">=</span><span class="s2">&quot;LACIE_4TB&quot;</span> <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;1951a976-0553-4e41-babf-0669c4f72abc&quot;</span>
+/dev/sdb1: <span class="nv">LABEL_FATBOOT</span><span class="o">=</span><span class="s2">&quot;UNRAID&quot;</span> <span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;UNRAID&quot;</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;2732-64F5&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;512&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;vfat&quot;</span>
+/dev/nvme1n1p1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;e8a4f1eb-9c45-4788-acd3-983bc648c190&quot;</span> <span class="nv">UUID_SUB</span><span class="o">=</span><span class="s2">&quot;23295689-1a38-4733-ae64-99f20365e737&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;btrfs&quot;</span>
+/dev/nvme0n1p1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;e8a4f1eb-9c45-4788-acd3-983bc648c190&quot;</span> <span class="nv">UUID_SUB</span><span class="o">=</span><span class="s2">&quot;29bc6eff-23cf-47eb-a034-a636a7eaf126&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;btrfs&quot;</span>
+/dev/sdd1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;3f43c35a-5efe-4a87-a3ae-51569bdbb6c9&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;512&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;xfs&quot;</span> <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;45fe7ed1-a032-4dfc-8733-bb4539703d0c&quot;</span>
+/dev/sde1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;21e3222c-f905-4c37-b4ef-885a4eb20c0e&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;512&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;xfs&quot;</span> <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;3e51cf36-79a9-4766-bdef-91cee3b24a40&quot;</span>
+/dev/sdf1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;4bfaa2ae-bcd8-4ad0-a177-5ac8de82f05a&quot;</span> <span class="nv">UUID_SUB</span><span class="o">=</span><span class="s2">&quot;b997b622-2292-4efc-8417-98a237206802&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;btrfs&quot;</span>
+/dev/md1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;21e3222c-f905-4c37-b4ef-885a4eb20c0e&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;512&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;xfs&quot;</span>
+/dev/md2: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;3f43c35a-5efe-4a87-a3ae-51569bdbb6c9&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;512&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;xfs&quot;</span>
+/dev/loop2: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;3192fb1a-5f2f-46b9-81c7-b4a70ffd2d1f&quot;</span> <span class="nv">UUID_SUB</span><span class="o">=</span><span class="s2">&quot;d96394e4-3eee-4e48-8516-0831e05d5701&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;btrfs&quot;</span>
+/dev/loop3: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;f6fab2f6-1061-47a7-b930-072a0db7b77b&quot;</span> <span class="nv">UUID_SUB</span><span class="o">=</span><span class="s2">&quot;7a2f7129-4e27-4f5f-8ca5-43ec4e904a5e&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;btrfs&quot;</span>
+/dev/sdc1: <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;a4bf5ca2-9c51-4e9a-aa7f-668788558417&quot;</span>
+/dev/sdg1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;WDPASSPORT_1TB&quot;</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;2741496b-5e41-428f-b704-ca09c13921c5&quot;</span> <span class="nv">BLOCK_SIZE</span><span class="o">=</span><span class="s2">&quot;4096&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span> <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;27461b98-01&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="parted">
 <h3>Parted<a class="headerlink" href="#parted" title="Permalink to this headline">¶</a></h3>
 <p>Parted is a commandline tool which allows to add, modify, delete</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">parted</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">parted</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create partition tables</span>
 <span class="c1"># GPT</span>
 sudo parted /dev/sda mklabel gpt
@@ -483,8 +529,8 @@ mkfs /dev/sda1
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">parted server</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">parted server</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ parted
 
 <span class="o">(</span>parted<span class="o">)</span> unit MiB
@@ -548,11 +594,50 @@ mkfs /dev/sda1
 </tbody>
 </table>
 </div>
+<div class="section" id="partition-table-and-formatting">
+<h3>Partition Table and formatting<a class="headerlink" href="#partition-table-and-formatting" title="Permalink to this headline">¶</a></h3>
+<p>fdisk helps creating the partition table</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">partitiontable</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unmount the drive safely</span>
+sync
+umount /dev/sdb1
+
+<span class="c1"># Prepare the drive</span>
+fdisk /dev/sdb
+
+<span class="c1"># delete filesystem on disk</span>
+d
+
+<span class="c1"># create new partition</span>
+n
+
+<span class="c1"># create primary partitions</span>
+p
+
+<span class="c1"># partition number</span>
+<span class="m">1</span>
+
+<span class="c1"># set type, blocksize, start and end</span>
+<span class="o">(</span>use defaults<span class="o">)</span>
+
+<span class="c1"># write changes to disk</span>
+w
+
+<span class="c1"># Create Filesystem</span>
+mkfs.ext4 /dev/sdb1
+
+<span class="c1"># Mount the new formatted drive</span>
+mnt /dev/sdb1 /mnt/use/ext/
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="mounting">
 <h3>Mounting<a class="headerlink" href="#mounting" title="Permalink to this headline">¶</a></h3>
 <p>For permanent mount see: <a class="reference internal" href="../scripts/config_files.html#config-files-fstab"><span class="std std-ref">/etc/fstab</span></a></p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">mounting</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">mounting</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo vim /etc/fstab             <span class="c1"># To edit default mount drives</span>
 sudo fdisk -l           <span class="c1"># Drive info</span>
 ls -l /dev/disk/by-uuid         <span class="c1"># get Drive UUID&#39;s</span>
@@ -571,12 +656,12 @@ mount -U &lt;UUID&gt;                 <span class="c1"># mount drive according t
 </div>
 <div class="section" id="wipe-disk">
 <h3>Wipe Disk<a class="headerlink" href="#wipe-disk" title="Permalink to this headline">¶</a></h3>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">wipe disk</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">wipe disk</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># unmount disk</span>
 sudo umount /dev/sdXY -l
 
-<span class="c1"># use /dev/random to write Zeros on entire disk§</span>
+<span class="c1"># use /dev/random to write Zeros on entire disk</span>
 sudo dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>/dev/sdX <span class="nv">bs</span><span class="o">=</span>10M
 </pre></div>
 </div>

@@ -13,5 +13,6 @@ OS
    :caption: Operating Systems
 
    linux/index
+   unraid/index
    mac/index
    win/index
