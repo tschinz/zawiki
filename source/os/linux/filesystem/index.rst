@@ -125,6 +125,36 @@ lsblk
    sdd      3.7T disk                 running Rugged USB-C
    └─sdd1   3.7T part                                          88fdbcc0-809a-48c7-bdda-d75cd5f79bb4
 
+blkid
+^^^^^
+
+Can help getting the disk label as well as UUID.
+
+.. code-block:: bash
+   :caption: blkid
+
+   blkid
+
+.. code-block:: bash
+   :caption: blkid example 1
+
+   sudo blkdid
+   /dev/loop0: TYPE="squashfs"
+   /dev/loop1: TYPE="squashfs"
+   /dev/sda1: LABEL="LACIE_4TB" UUID="88fdbcc0-809a-48c7-bdda-d75cd5f79bb4" BLOCK_SIZE="4096" TYPE="ext4" PARTLABEL="LACIE_4TB" PARTUUID="1951a976-0553-4e41-babf-0669c4f72abc"
+   /dev/sdb1: LABEL_FATBOOT="UNRAID" LABEL="UNRAID" UUID="2732-64F5" BLOCK_SIZE="512" TYPE="vfat"
+   /dev/nvme1n1p1: UUID="e8a4f1eb-9c45-4788-acd3-983bc648c190" UUID_SUB="23295689-1a38-4733-ae64-99f20365e737" BLOCK_SIZE="4096" TYPE="btrfs"
+   /dev/nvme0n1p1: UUID="e8a4f1eb-9c45-4788-acd3-983bc648c190" UUID_SUB="29bc6eff-23cf-47eb-a034-a636a7eaf126" BLOCK_SIZE="4096" TYPE="btrfs"
+   /dev/sdd1: UUID="3f43c35a-5efe-4a87-a3ae-51569bdbb6c9" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="45fe7ed1-a032-4dfc-8733-bb4539703d0c"
+   /dev/sde1: UUID="21e3222c-f905-4c37-b4ef-885a4eb20c0e" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="3e51cf36-79a9-4766-bdef-91cee3b24a40"
+   /dev/sdf1: UUID="4bfaa2ae-bcd8-4ad0-a177-5ac8de82f05a" UUID_SUB="b997b622-2292-4efc-8417-98a237206802" BLOCK_SIZE="4096" TYPE="btrfs"
+   /dev/md1: UUID="21e3222c-f905-4c37-b4ef-885a4eb20c0e" BLOCK_SIZE="512" TYPE="xfs"
+   /dev/md2: UUID="3f43c35a-5efe-4a87-a3ae-51569bdbb6c9" BLOCK_SIZE="512" TYPE="xfs"
+   /dev/loop2: UUID="3192fb1a-5f2f-46b9-81c7-b4a70ffd2d1f" UUID_SUB="d96394e4-3eee-4e48-8516-0831e05d5701" BLOCK_SIZE="4096" TYPE="btrfs"
+   /dev/loop3: UUID="f6fab2f6-1061-47a7-b930-072a0db7b77b" UUID_SUB="7a2f7129-4e27-4f5f-8ca5-43ec4e904a5e" BLOCK_SIZE="4096" TYPE="btrfs"
+   /dev/sdc1: PARTUUID="a4bf5ca2-9c51-4e9a-aa7f-668788558417"
+   /dev/sdg1: LABEL="WDPASSPORT_1TB" UUID="2741496b-5e41-428f-b704-ca09c13921c5" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="27461b98-01"
+
 Parted
 ------
 
@@ -193,6 +223,46 @@ Parted is a commandline tool which allows to add, modify, delete
    * - ``mkswap -L <mystring> /dev/<partition>``
      - Create a swap filesystem, with label ``<mystring>``, on partition ``/dev/<partition>``, where ``<partition>`` is something like ``sda1`` or ``sda2`` or ``sdb1``
 
+
+Partition Table and formatting
+------------------------------
+
+fdisk helps creating the partition table
+
+.. code-block:: bash
+   :caption: partitiontable
+
+   # Unmount the drive safely
+   sync
+   umount /dev/sdb1
+
+   # Prepare the drive
+   fdisk /dev/sdb
+
+   # delete filesystem on disk
+   d
+
+   # create new partition
+   n
+
+   # create primary partitions
+   p
+
+   # partition number
+   1
+
+   # set type, blocksize, start and end
+   (use defaults)
+
+   # write changes to disk
+   w
+
+   # Create Filesystem
+   mkfs.ext4 /dev/sdb1
+
+   # Mount the new formatted drive
+   mnt /dev/sdb1 /mnt/use/ext/
+
 Mounting
 --------
 
@@ -223,7 +293,7 @@ Wipe Disk
    # unmount disk
    sudo umount /dev/sdXY -l
 
-   # use /dev/random to write Zeros on entire disk§
+   # use /dev/random to write Zeros on entire disk
    sudo dd if=/dev/urandom of=/dev/sdX bs=10M
 
 :tag:`os`
