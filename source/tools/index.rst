@@ -18,6 +18,7 @@ Tools
    jupyter/index
    heroku/index
    pandoc/index
+   pihole/index
    sphinx/index
    jetbrains/index
    sublimetext/index
