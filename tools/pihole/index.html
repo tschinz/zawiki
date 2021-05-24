@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SublimeText &#8212; Z-Notes</title>
+    <title>Pihole &#8212; Z-Notes</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -43,8 +43,6 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Packages" href="plugins.html" />
-    <link rel="prev" title="PyCharm" href="../jetbrains/pycharm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -84,7 +82,7 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../index.html">
   Tools
  </a>
@@ -167,101 +165,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Don't panic, search" aria-label="Don't panic, search" autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption">
- <span class="caption-text">
-  Tools
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/index.html">
-   Git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../anaconda/index.html">
-   Anaconda
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../docker/index.html">
-   Docker
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../jupyter/index.html">
-   Jupyter
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../heroku/index.html">
-   Heroku
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../pandoc/index.html">
-   Pandoc
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sphinx/index.html">
-   Sphinx Documentation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../jetbrains/index.html">
-   JetBrains IDE
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   SublimeText
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plugins.html">
-     Packages
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="settings.html">
-     Settings
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../virtualbox/index.html">
-   VirtualBox
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../mentor/index.html">
-   Mentor EDA
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../bittorrent/index.html">
-   Bittorrent
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../nmap/index.html">
-   NMap
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../useful_tools/useful_tools.html">
-   Useful Tools
-  </a>
- </li>
-</ul>
-
+    
   </div>
 </nav>
             </div>
@@ -281,19 +185,36 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-links">
-   Useful Links
+  <a class="reference internal nav-link" href="#commands">
+   Commands
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#console">
-   Console
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#settings">
-   Settings
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-password">
+     Change password
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-gravity-db">
+     Update
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       gravity.db
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-gravity-db">
+     Modify
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       gravity.db
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -304,7 +225,7 @@
                 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/tschinz/znotes/edit/master/source/tools/sublimetext/index.rst">
+    <a href="https://github.com/tschinz/znotes/edit/master/source/tools/pihole/index.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -323,40 +244,42 @@
               
               <div>
                 
-  <div class="section" id="sublimetext">
-<h1>SublimeText<a class="headerlink" href="#sublimetext" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pihole">
+<h1>Pihole<a class="headerlink" href="#pihole" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/logo52.svg"><img alt="../../_images/logo52.svg" src="../../_images/logo52.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/logo51.svg"><img alt="../../_images/logo51.svg" src="../../_images/logo51.svg" width="150px" /></a>
 </div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="plugins.html">Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
-</ul>
+<p><a class="reference external" href="https://pi-hole.net/">Pi-Hole</a> is a system for network-wide adblocking. It replaces the DNS server and apps are by default network-wide banned.</p>
+<p>Very good blocklist from <a class="reference external" href="https://firebog.net/">Firebog</a></p>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<p>For more informations see <a class="reference external" href="https://docs.pi-hole.net/core/pihole-command/">here</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pihole <span class="nb">enable</span>
+pihole restartdns
+</pre></div>
 </div>
-<div class="section" id="useful-links">
-<h2>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://nbviewer.jupyter.org/github/tschinz/znotes/blob/master/source/tools/sublimetext/docs/sublimecheatsheet.pdf">Shortcut Cheatsheet</a></p></li>
-<li><p><a class="reference external" href="https://github.com/tschinz/config/tree/master/config/sublimetext">My Settings Backup</a></p></li>
-</ul>
-</div>
-<div class="section" id="console">
-<h2>Console<a class="headerlink" href="#console" title="Permalink to this headline">¶</a></h2>
-<p>If you have problem figuring out what shortcut command is active, Then open the console <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">c</span></code> or and type the following command. Then your will see all executed commands in the console.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sublime</span><span class="o">.</span><span class="n">log_commands</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<div class="section" id="change-password">
+<h3>Change password<a class="headerlink" href="#change-password" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pihole -a -p
 </pre></div>
 </div>
 </div>
-<div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<p>My sublimetext settings can be found in the Config Repo <a class="reference external" href="https://github.com/tschinz/config/tree/master/config/sublimetext">my settings backup</a>.</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="settings.html"><span class="doc">SublimeText Settings Wiki</span></a></p></li>
-</ul>
-<p><a class="search-tag reference external" href="/search.html?q=tools&amp;check_keywords=yes&amp;area=default">tools</a>
-<a class="search-tag reference external" href="/search.html?q=sublimetext&amp;check_keywords=yes&amp;area=default">sublimetext</a></p>
+<div class="section" id="update-gravity-db">
+<h3>Update <code class="docutils literal notranslate"><span class="pre">gravity.db</span></code><a class="headerlink" href="#update-gravity-db" title="Permalink to this headline">¶</a></h3>
+<p>Update gravity db from blocklists</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pihole -g
+</pre></div>
+</div>
+</div>
+<div class="section" id="modify-gravity-db">
+<h3>Modify <code class="docutils literal notranslate"><span class="pre">gravity.db</span></code><a class="headerlink" href="#modify-gravity-db" title="Permalink to this headline">¶</a></h3>
+<p>For more informations see <a class="reference external" href="https://docs.pi-hole.net/database/gravity/">here</a></p>
+<p>Delete <strong>all</strong> <code class="docutils literal notranslate"><span class="pre">exact</span></code> blacklist entries</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo sqlite3 /etc/pihole/gravity.db <span class="s2">&quot;delete from domainlist where type=1;&quot;</span>
+</pre></div>
+</div>
+<p>Other examples are found <a class="reference external" href="https://docs.pi-hole.net/database/gravity/example/">here</a></p>
+</div>
 </div>
 </div>
 
