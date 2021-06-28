@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -473,37 +473,23 @@ sudo service madsonic restart
 <p>Create the following file</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">audioDevList.java</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">javax.sound.sampled.*</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">audioDevList</span><span class="p">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>
-
-    <span class="c1">// Get and display a list of available mixers.</span>
-
-    <span class="n">Mixer</span><span class="p">.</span><span class="na">Info</span><span class="o">[]</span> <span class="n">mixerInfo</span> <span class="o">=</span> <span class="n">AudioSystem</span><span class="p">.</span><span class="na">getMixerInfo</span><span class="p">();</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Available mixers:&quot;</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="n">mixerInfo</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">cnt</span><span class="o">++</span><span class="p">){</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mixerInfo</span><span class="o">[</span><span class="n">cnt</span><span class="o">]</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">java.io.*</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">javax.sound.sampled.*</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">audioDevList</span><span class="p">{</span>
+<span class="linenos"> 5</span>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1">// Get and display a list of available mixers.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="n">Mixer</span><span class="p">.</span><span class="na">Info</span><span class="o">[]</span> <span class="n">mixerInfo</span> <span class="o">=</span> <span class="n">AudioSystem</span><span class="p">.</span><span class="na">getMixerInfo</span><span class="p">();</span>
+<span class="linenos">10</span>    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Available mixers:&quot;</span><span class="p">);</span>
+<span class="linenos">11</span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="n">mixerInfo</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">cnt</span><span class="o">++</span><span class="p">){</span>
+<span class="linenos">12</span>      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mixerInfo</span><span class="o">[</span><span class="n">cnt</span><span class="o">]</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="linenos">13</span>    <span class="p">}</span>
+<span class="linenos">14</span>  <span class="p">}</span>
+<span class="linenos">15</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>And then run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>javac audioDevList.java

@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -424,25 +424,17 @@
 <p>Under <code class="docutils literal notranslate"><span class="pre">global</span></code> add the following lines or uncomment them in your file <code class="docutils literal notranslate"><span class="pre">etc/samba/smb.conf</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">/etc/samba/smb.conf</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">[</span>global<span class="o">]</span>
-        <span class="c1"># Permission on newly created files and folders</span>
-        create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0644</span>
-        directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0755</span>
-
-        <span class="c1"># add user security</span>
-        <span class="nv">security</span> <span class="o">=</span> user
-        encrypt <span class="nv">passwords</span> <span class="o">=</span> <span class="nb">true</span>
-        map to <span class="nv">guest</span> <span class="o">=</span> bad user
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="o">[</span>global<span class="o">]</span>
+<span class="linenos">2</span>        <span class="c1"># Permission on newly created files and folders</span>
+<span class="linenos">3</span>        create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0644</span>
+<span class="linenos">4</span>        directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0755</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span>        <span class="c1"># add user security</span>
+<span class="linenos">7</span>        <span class="nv">security</span> <span class="o">=</span> user
+<span class="linenos">8</span>        encrypt <span class="nv">passwords</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="linenos">9</span>        map to <span class="nv">guest</span> <span class="o">=</span> bad user
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="user">

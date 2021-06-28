@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -329,21 +329,15 @@
 </div>
 <div class="section" id="base-tools-linux">
 <h3>Base Tools Linux<a class="headerlink" href="#base-tools-linux" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo apt install -y git make autoconf g++ flex bison
-sudo apt install -y openjdk-8-jdk
-sudo apt install -y scala
-<span class="nb">echo</span> <span class="s2">&quot;deb https://dl.bintray.com/sbt/debian /&quot;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/sbt.list
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
-sudo apt update -y
-sudo apt install -y sbt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo apt install -y git make autoconf g++ flex bison
+<span class="linenos">2</span>sudo apt install -y openjdk-8-jdk
+<span class="linenos">3</span>sudo apt install -y scala
+<span class="linenos">4</span><span class="nb">echo</span> <span class="s2">&quot;deb https://dl.bintray.com/sbt/debian /&quot;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/sbt.list
+<span class="linenos">5</span>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+<span class="linenos">6</span>sudo apt update -y
+<span class="linenos">7</span>sudo apt install -y sbt
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="ide-linux">
 <h3>IDE Linux<a class="headerlink" href="#ide-linux" title="Permalink to this headline">¶</a></h3>
@@ -353,29 +347,19 @@ sudo apt install -y sbt
 </div>
 <div class="section" id="simulation-linux">
 <h3>Simulation Linux<a class="headerlink" href="#simulation-linux" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
-git clone http://git.veripool.org/git/verilator
-<span class="nb">unset</span> VERILATOR_ROOT
-<span class="nb">cd</span> verilator
-git pull        <span class="c1"># Make sure we&#39;re up-to-date</span>
-git checkout verilator_3_916
-autoconf        <span class="c1"># Create ./configure script</span>
-./configure
-make -j<span class="k">$(</span>nproc<span class="k">)</span>
-sudo make install
-sudo apt install -y gconf2 gtkwave
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">cd</span> ~
+<span class="linenos"> 2</span>git clone http://git.veripool.org/git/verilator
+<span class="linenos"> 3</span><span class="nb">unset</span> VERILATOR_ROOT
+<span class="linenos"> 4</span><span class="nb">cd</span> verilator
+<span class="linenos"> 5</span>git pull        <span class="c1"># Make sure we&#39;re up-to-date</span>
+<span class="linenos"> 6</span>git checkout verilator_3_916
+<span class="linenos"> 7</span>autoconf        <span class="c1"># Create ./configure script</span>
+<span class="linenos"> 8</span>./configure
+<span class="linenos"> 9</span>make -j<span class="k">$(</span>nproc<span class="k">)</span>
+<span class="linenos">10</span>sudo make install
+<span class="linenos">11</span>sudo apt install -y gconf2 gtkwave
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="hardware-debug-tools-linux">
 <h3>Hardware Debug Tools Linux<a class="headerlink" href="#hardware-debug-tools-linux" title="Permalink to this headline">¶</a></h3>
@@ -396,41 +380,25 @@ sudo mv /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv
 </div>
 <div class="section" id="optional-dev-tools-linux">
 <h3>Optional Dev Tools Linux<a class="headerlink" href="#optional-dev-tools-linux" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Install default tools&quot;</span>
-sudo apt install -y zsh
-sudo chsh -s /bin/zsh <span class="nv">$USER</span>
-<span class="nb">cd</span> ~/Downloads
-sh -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
-
-sudo apt install -y yakuake krusader
-
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg <span class="p">|</span> sudo apt-key add -
-sudo apt install apt-transport-https
-<span class="nb">echo</span> <span class="s2">&quot;deb https://download.sublimetext.com/ apt/stable/&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt update
-sudo apt install -y sublime-text sublime-merge
-
-sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
-sudo apt update
-sudo apt install -y fsearch-trunk
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">echo</span> <span class="s2">&quot;Install default tools&quot;</span>
+<span class="linenos"> 2</span>sudo apt install -y zsh
+<span class="linenos"> 3</span>sudo chsh -s /bin/zsh <span class="nv">$USER</span>
+<span class="linenos"> 4</span><span class="nb">cd</span> ~/Downloads
+<span class="linenos"> 5</span>sh -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>sudo apt install -y yakuake krusader
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg <span class="p">|</span> sudo apt-key add -
+<span class="linenos">10</span>sudo apt install apt-transport-https
+<span class="linenos">11</span><span class="nb">echo</span> <span class="s2">&quot;deb https://download.sublimetext.com/ apt/stable/&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sublime-text.list
+<span class="linenos">12</span>sudo apt update
+<span class="linenos">13</span>sudo apt install -y sublime-text sublime-merge
+<span class="linenos">14</span>
+<span class="linenos">15</span>sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
+<span class="linenos">16</span>sudo apt update
+<span class="linenos">17</span>sudo apt install -y fsearch-trunk
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="windows">
@@ -462,25 +430,17 @@ sudo apt install -y fsearch-trunk
 <li><p>Install verilator from minGW packet manager</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Verilator Installation</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>pacman -Syuu
-
-<span class="c1"># Close the MSYS2 shell once you&#39;re asked to</span>
-pacman -Syuu
-pacman -S --needed base-devel mingw-w64-x86_64-toolchain <span class="se">\</span>
-              git flex<span class="se">\</span>
-              mingw-w64-x86_64-cmake
-
-pacman -S mingw-w64-x86_64-verilator
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>pacman -Syuu
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="c1"># Close the MSYS2 shell once you&#39;re asked to</span>
+<span class="linenos">4</span>pacman -Syuu
+<span class="linenos">5</span>pacman -S --needed base-devel mingw-w64-x86_64-toolchain <span class="se">\</span>
+<span class="linenos">6</span>              git flex<span class="se">\</span>
+<span class="linenos">7</span>              mingw-w64-x86_64-cmake
+<span class="linenos">8</span>
+<span class="linenos">9</span>pacman -S mingw-w64-x86_64-verilator
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </li>
 <li><p>ADD MSYS2 <code class="docutils literal notranslate"><span class="pre">C:\msys64\usr\bin;C:\msys64\mingw64\bin</span></code> to your Environment Variable <code class="docutils literal notranslate"><span class="pre">Path</span></code>.</p></li>

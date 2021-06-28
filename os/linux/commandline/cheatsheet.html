@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -730,6 +730,10 @@ ps -ax <span class="p">|</span> grep name                <span class="c1"># sear
 <div class="literal-block-wrapper docutils container" id="id8">
 <div class="code-block-caption"><span class="caption-text">general</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uname -a                           <span class="c1"># Distribution &amp; Kernel informations</span>
+cat /etc/os-release                <span class="c1"># General OS Informations</span>
+id -i &lt;username&gt;                   <span class="c1"># Get UID</span>
+id -u &lt;username&gt;                   <span class="c1"># Get GID</span>
+
 whereis <span class="nb">command</span>                    <span class="c1"># returns location of command</span>
 
 mkdir /existing/path/dirname       <span class="c1"># creates a directory</span>
@@ -750,6 +754,13 @@ cp -R source/path dest./path       <span class="c1"># copy directory with conten
 cp -R --preserve<span class="o">=</span>mode,ownership,timestamp  source/path dest/path
                                    <span class="c1"># copy with preserving owner and permission and time</span>
 
+<span class="c1"># File</span>
+touch /path/to/file                <span class="c1"># creates emtpy file or updates timestamp</span>
+<span class="nb">echo</span> <span class="s2">&quot;&lt;text&gt;&quot;</span> &gt; /path/to/file      <span class="c1"># creates file with content &lt;text&gt;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&lt;text&gt;&quot;</span> &gt;&gt; /path/to/file     <span class="c1"># append &lt;text&gt; to file</span>
+<span class="nb">echo</span> <span class="s2">&quot;&lt;text&gt;&quot;</span> <span class="p">|</span> tee -a ~/.zshrc ~/.bashrs <span class="c1"># appends to multiple files</span>
+
+<span class="c1"># Disk info</span>
 df                                 <span class="c1"># show disk sizes</span>
 df -H                              <span class="c1"># show disk sizes in KB, MB, GB</span>
 

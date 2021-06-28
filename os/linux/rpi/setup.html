@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -409,50 +409,34 @@
 <h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">/etc/network/interfaces</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>auto lo
-
-iface lo inet loopback
-iface eth0 inet dhcp
-
-allow-hotplug wlan0
-auto wlan0
-
-
-iface wlan0 inet dhcp
-        wpa-ssid <span class="s2">&quot;ssid&quot;</span>
-        wpa-psk <span class="s2">&quot;password&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>auto lo
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>iface lo inet loopback
+<span class="linenos"> 4</span>iface eth0 inet dhcp
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>allow-hotplug wlan0
+<span class="linenos"> 7</span>auto wlan0
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>iface wlan0 inet dhcp
+<span class="linenos">11</span>        wpa-ssid <span class="s2">&quot;ssid&quot;</span>
+<span class="linenos">12</span>        wpa-psk <span class="s2">&quot;password&quot;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="for-static-ip-address">
 <h3>For static IP address<a class="headerlink" href="#for-static-ip-address" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">/etc/network/interfaces</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>iface eth0 inet static
-address &lt;static-ip&gt;
-netmask <span class="m">255</span>.255.255.0
-network <span class="m">192</span>.168.0.0
-broadcast <span class="m">192</span>.168.0.255
-gateway <span class="m">192</span>.168.0.1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>iface eth0 inet static
+<span class="linenos">2</span>address &lt;static-ip&gt;
+<span class="linenos">3</span>netmask <span class="m">255</span>.255.255.0
+<span class="linenos">4</span>network <span class="m">192</span>.168.0.0
+<span class="linenos">5</span>broadcast <span class="m">192</span>.168.0.255
+<span class="linenos">6</span>gateway <span class="m">192</span>.168.0.1
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>

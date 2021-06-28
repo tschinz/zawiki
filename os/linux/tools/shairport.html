@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -385,48 +385,31 @@ sudo make install
 </pre></div>
 </div>
 <p>Identify your audio output device</p>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>x@z:~$ aplay -l
-**** List of PLAYBACK Hardware Devices ****
-card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">0</span>: ALC892 Analog <span class="o">[</span>ALC892 Analog<span class="o">]</span>
-  Subdevices: <span class="m">1</span>/1
-  Subdevice <span class="c1">#0: subdevice #0</span>
-card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">1</span>: ALC892 Digital <span class="o">[</span>ALC892 Digital<span class="o">]</span>
-  Subdevices: <span class="m">1</span>/1
-  Subdevice <span class="c1">#0: subdevice #0</span>
-card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">3</span>: HDMI <span class="m">0</span> <span class="o">[</span>HDMI <span class="m">0</span><span class="o">]</span>
-  Subdevices: <span class="m">1</span>/1
-  Subdevice <span class="c1">#0: subdevice #0</span>
-card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">7</span>: HDMI <span class="m">1</span> <span class="o">[</span>HDMI <span class="m">1</span><span class="o">]</span>
-  Subdevices: <span class="m">1</span>/1
-  Subdevice <span class="c1">#0: subdevice #0</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>x@z:~$ aplay -l
+<span class="linenos"> 2</span>**** List of PLAYBACK Hardware Devices ****
+<span class="linenos"> 3</span>card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">0</span>: ALC892 Analog <span class="o">[</span>ALC892 Analog<span class="o">]</span>
+<span class="linenos"> 4</span>  Subdevices: <span class="m">1</span>/1
+<span class="linenos"> 5</span>  Subdevice <span class="c1">#0: subdevice #0</span>
+<span class="linenos"> 6</span>card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">1</span>: ALC892 Digital <span class="o">[</span>ALC892 Digital<span class="o">]</span>
+<span class="linenos"> 7</span>  Subdevices: <span class="m">1</span>/1
+<span class="linenos"> 8</span>  Subdevice <span class="c1">#0: subdevice #0</span>
+<span class="linenos"> 9</span>card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">3</span>: HDMI <span class="m">0</span> <span class="o">[</span>HDMI <span class="m">0</span><span class="o">]</span>
+<span class="linenos">10</span>  Subdevices: <span class="m">1</span>/1
+<span class="linenos">11</span>  Subdevice <span class="c1">#0: subdevice #0</span>
+<span class="linenos">12</span>card <span class="m">0</span>: PCH <span class="o">[</span>HDA Intel PCH<span class="o">]</span>, device <span class="m">7</span>: HDMI <span class="m">1</span> <span class="o">[</span>HDMI <span class="m">1</span><span class="o">]</span>
+<span class="linenos">13</span>  Subdevices: <span class="m">1</span>/1
+<span class="linenos">14</span>  Subdevice <span class="c1">#0: subdevice #0</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Setup the firewall
 I use <code class="docutils literal notranslate"><span class="pre">ufw</span></code> to do this:</p>
-<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">3689</span> proto tcp
-sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">5353</span>
-sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">5000</span>:5005 proto tcp
-sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">6000</span>:6005 proto udp
-sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">35000</span>:65535 proto udp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">3689</span> proto tcp
+<span class="linenos">2</span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">5353</span>
+<span class="linenos">3</span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">5000</span>:5005 proto tcp
+<span class="linenos">4</span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">6000</span>:6005 proto udp
+<span class="linenos">5</span>sudo ufw allow from <span class="m">192</span>.168.1.1/16 to any port <span class="m">35000</span>:65535 proto udp
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="run-shairport">
 <h2>Run Shairport<a class="headerlink" href="#run-shairport" title="Permalink to this headline">¶</a></h2>

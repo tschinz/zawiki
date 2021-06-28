@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/theme_overrides.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
@@ -32,7 +32,7 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -768,103 +768,56 @@ find . -name <span class="s2">&quot;.*.swp&quot;</span> <span class="p">|</span>
 <h2>.vimrc<a class="headerlink" href="#vimrc" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">.vimrc</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>set nocp
-
-set autoindent
-set backspace=2
-set backup
-set hidden
-set history=500
-set hlsearch
-set incsearch
-set listchars=precedes:$,extends:$,tab:&gt;-,trail:.,eol:&lt;
-&quot; Line numbers &quot;
-set number
-set printheader=%&lt;%F%=Seite\ %N
-set ruler
-set shiftwidth=2
-set showcmd
-set showmatch
-set showmode
-set sidescroll=5
-set smartcase
-set smartindent
-set softtabstop=2
-set spelllang=de,en
-set spellsuggest=double,10
-set statusline=%&lt;%f\ %h%m%r%=%([%{Tlist_Get_Tagname_By_Line()}]%)\ #%n\ %-14.(%l/%L,%c%V%)\ %P
-set tabstop=2
-&quot; set textwidth=75 &quot;
-set title
-set wildmenu
-set wildmode=list:longest,full
-
-&quot; Use Windows Clipboard &quot;
-if has(&quot;win32&quot;)
-    set clipboard=unnamed
-endif
-
-&quot; Syntax Highlighting &quot;
-syntax on
-
-&quot; Filename Detection
-filetype on
-filetype indent on
-filetype plugin on
-
-&quot; Folding
-&quot;syntax sync fromstart
-set foldmethod=indent
-set nofoldenable
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>set nocp
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>set autoindent
+<span class="linenos"> 4</span>set backspace=2
+<span class="linenos"> 5</span>set backup
+<span class="linenos"> 6</span>set hidden
+<span class="linenos"> 7</span>set history=500
+<span class="linenos"> 8</span>set hlsearch
+<span class="linenos"> 9</span>set incsearch
+<span class="linenos">10</span>set listchars=precedes:$,extends:$,tab:&gt;-,trail:.,eol:&lt;
+<span class="linenos">11</span>&quot; Line numbers &quot;
+<span class="linenos">12</span>set number
+<span class="linenos">13</span>set printheader=%&lt;%F%=Seite\ %N
+<span class="linenos">14</span>set ruler
+<span class="linenos">15</span>set shiftwidth=2
+<span class="linenos">16</span>set showcmd
+<span class="linenos">17</span>set showmatch
+<span class="linenos">18</span>set showmode
+<span class="linenos">19</span>set sidescroll=5
+<span class="linenos">20</span>set smartcase
+<span class="linenos">21</span>set smartindent
+<span class="linenos">22</span>set softtabstop=2
+<span class="linenos">23</span>set spelllang=de,en
+<span class="linenos">24</span>set spellsuggest=double,10
+<span class="linenos">25</span>set statusline=%&lt;%f\ %h%m%r%=%([%{Tlist_Get_Tagname_By_Line()}]%)\ #%n\ %-14.(%l/%L,%c%V%)\ %P
+<span class="linenos">26</span>set tabstop=2
+<span class="linenos">27</span>&quot; set textwidth=75 &quot;
+<span class="linenos">28</span>set title
+<span class="linenos">29</span>set wildmenu
+<span class="linenos">30</span>set wildmode=list:longest,full
+<span class="linenos">31</span>
+<span class="linenos">32</span>&quot; Use Windows Clipboard &quot;
+<span class="linenos">33</span>if has(&quot;win32&quot;)
+<span class="linenos">34</span>    set clipboard=unnamed
+<span class="linenos">35</span>endif
+<span class="linenos">36</span>
+<span class="linenos">37</span>&quot; Syntax Highlighting &quot;
+<span class="linenos">38</span>syntax on
+<span class="linenos">39</span>
+<span class="linenos">40</span>&quot; Filename Detection
+<span class="linenos">41</span>filetype on
+<span class="linenos">42</span>filetype indent on
+<span class="linenos">43</span>filetype plugin on
+<span class="linenos">44</span>
+<span class="linenos">45</span>&quot; Folding
+<span class="linenos">46</span>&quot;syntax sync fromstart
+<span class="linenos">47</span>set foldmethod=indent
+<span class="linenos">48</span>set nofoldenable
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>Download my <a class="reference external" href="https://github.com/tschinz/config/blob/master/config/linux/server/.vimrc">.vimrc</a></p>
 <p><a class="search-tag reference external" href="/search.html?q=os&amp;check_keywords=yes&amp;area=default">os</a>

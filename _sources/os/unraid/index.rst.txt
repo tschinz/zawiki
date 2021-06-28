@@ -32,3 +32,13 @@ As configured will sent emails, telegram messages or webGUI notifications.
 .. code-block:: bash
 
    /usr/local/emhttp/webGui/scripts/notify -i [normal|warning|alert] -s "<notification>" -d "<description>"
+
+Log file
+========
+
+To check the logfile size try find problem with the followign two commands:width
+
+.. code-block:: bash
+
+   df -h /var/log
+   du -sm /var/log/*
