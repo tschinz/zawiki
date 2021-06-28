@@ -188,6 +188,10 @@ General
    :caption: general
 
    uname -a                           # Distribution & Kernel informations
+   cat /etc/os-release                # General OS Informations
+   id -i <username>                   # Get UID
+   id -u <username>                   # Get GID
+
    whereis command                    # returns location of command
 
    mkdir /existing/path/dirname       # creates a directory
@@ -208,6 +212,13 @@ General
    cp -R --preserve=mode,ownership,timestamp  source/path dest/path
                                       # copy with preserving owner and permission and time
 
+   # File
+   touch /path/to/file                # creates emtpy file or updates timestamp
+   echo "<text>" > /path/to/file      # creates file with content <text>
+   echo "<text>" >> /path/to/file     # append <text> to file
+   echo "<text>" | tee -a ~/.zshrc ~/.bashrs # appends to multiple files
+
+   # Disk info
    df                                 # show disk sizes
    df -H                              # show disk sizes in KB, MB, GB
 

@@ -282,6 +282,18 @@ User Inputs
        # echo [$key] not empty
    fi
 
+Ask yes or no question with select
+
+.. code-block:: bash
+
+   select yn in "y" "n"; do
+       case $yn in
+           y ) install_license=true;;
+           n ) install_license=false;;
+       esac
+   done
+
+
 Files & Folders
 ================
 
